@@ -22,7 +22,7 @@ domReady(function() {
     const transliterate = window.slugify;
 
     // Текущие параметры
-    let currentCompetition = 'rfs/rus'; // Фиксированное значение по умолчанию
+    let currentCompetition = 'rfs/rus'; // Фиксированное значение
     let currentDiscipline = 'shortboard';
     let currentGender = 'men';
 
@@ -61,7 +61,7 @@ domReady(function() {
         const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
         const initials = (surname[0] || '') + (firstName[0] || '');
         const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-        // Исправленный путь с учетом competition
+        // Исправленный путь к аватаркам
         const avatarPath = `../../img/avatars/${currentCompetition}/${currentDiscipline}/${avatarSlug}.jpg`;
 
         const yearCells = years.map(year => {
@@ -151,8 +151,11 @@ domReady(function() {
     }
 
     async function loadData(discipline, gender) {
-        // Добавляем currentCompetition в путь
+        // Исправленный путь к данным
         const path = `${JSON_BASE_PATH}${currentCompetition}/${discipline}/${gender}.json?t=${Date.now()}`;
+
+        console.log("Loading data from:", path); // Добавим логирование
+
         try {
             const response = await fetch(path);
             if (!response.ok) {
