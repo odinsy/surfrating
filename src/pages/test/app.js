@@ -22,6 +22,7 @@ domReady(function() {
     const transliterate = window.slugify;
 
     // Текущие параметры
+    let currentCompetition = 'rfs/rus'; // Фиксированное значение по умолчанию
     let currentDiscipline = 'shortboard';
     let currentGender = 'men';
 
@@ -60,7 +61,8 @@ domReady(function() {
         const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
         const initials = (surname[0] || '') + (firstName[0] || '');
         const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-        const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
+        // Исправленный путь с учетом competition
+        const avatarPath = `../../img/avatars/${currentCompetition}/${currentDiscipline}/${avatarSlug}.jpg`;
 
         const yearCells = years.map(year => {
             const yearData = athlete.years?.[year];
@@ -149,7 +151,8 @@ domReady(function() {
     }
 
     async function loadData(discipline, gender) {
-        const path = `${JSON_BASE_PATH}${discipline}/${gender}.json?t=${Date.now()}`;
+        // Добавляем currentCompetition в путь
+        const path = `${JSON_BASE_PATH}${currentCompetition}/${discipline}/${gender}.json?t=${Date.now()}`;
         try {
             const response = await fetch(path);
             if (!response.ok) {
@@ -179,7 +182,7 @@ domReady(function() {
                 document.getElementById('ranking-table-container').innerHTML = `
                     <div class="error-message">
                         <p>Нет данных для отображения</p>
-                        <p>Проверьте путь: ${JSON_BASE_PATH}${discipline}/${gender}.json</p>
+                        <p>Проверьте путь: ${JSON_BASE_PATH}${currentCompetition}/${discipline}/${gender}.json</p>
                     </div>
                 `;
                 return;
