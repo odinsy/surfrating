@@ -56,7 +56,7 @@ domReady(function() {
         const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
         const initials = (surname[0] || '') + (firstName[0] || '');
         const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-        const avatarPath = `../../img/avatars/${currentSport}/${currentDiscipline}/${avatarSlug}.jpg`;
+        const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
 
         const yearCells = years.map(year => {
             const yearData = athlete.years?.[year];
