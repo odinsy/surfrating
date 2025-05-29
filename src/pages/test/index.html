@@ -16,32 +16,32 @@
             </div> -->
 
             <nav class="header-nav">
-                <div class="sport-competition-menu">
-                    <button class="sport-menu-btn header-nav-link">
-                        Рейтинг ▼
+                <div class="rankings-menu">
+                    <button class="rankings-menu-btn">
+                        Рейтинг
+                        <span class="dropdown-arrow">▼</span>
                     </button>
-                    <div class="sports-dropdown-menu">
-                        <!-- Серфинг -->
-                        <div class="sport-group" data-sport="surfing">
-                            <div class="sport-header">
-                                <span class="sport-icon">🏄</span>
-                                Серфинг
+                    <div class="rankings-dropdown">
+                        <div class="menu-wrap">
+                            <div class="menu-column">
+                                <a href="#" class="menu-item" data-discipline="shortboard">
+                                    <span class="item-icon">🏄</span>
+                                    <span class="item-title">Короткая доска</span>
+                                </a>
+                                <a href="#" class="menu-item" data-discipline="longboard">
+                                    <span class="item-icon">🏄‍♂️</span>
+                                    <span class="item-title">Длинная доска</span>
+                                </a>
                             </div>
-                            <div class="competitions-submenu">
-                                <a href="#" class="competition-item" data-discipline="shortboard" data-competition="rfs/rus">Короткая доска</a>
-                                <a href="#" class="competition-item" data-discipline="longboard" data-competition="rfs/rus">Длинная доска</a>
-                            </div>
-                        </div>
-
-                        <!-- Вейксерфинг -->
-                        <div class="sport-group" data-sport="wakesurfing">
-                            <div class="sport-header">
-                                <span class="sport-icon">🌊</span>
-                                Вейксерфинг
-                            </div>
-                            <div class="competitions-submenu">
-                                <a href="#" class="competition-item" data-discipline="wakesurfing" data-competition="rfs/rus">Вейксерфинг</a>
-                                <a href="#" class="competition-item" data-discipline="wakeskim" data-competition="rfs/rus">Вейкским</a>
+                            <div class="menu-column">
+                                <a href="#" class="menu-item" data-discipline="wakesurfing">
+                                    <span class="item-icon">🌊</span>
+                                    <span class="item-title">Вейксерфинг</span>
+                                </a>
+                                <a href="#" class="menu-item" data-discipline="wakeskim">
+                                    <span class="item-icon">🌊</span>
+                                    <span class="item-title">Вейкским</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -51,13 +51,6 @@
     </header>
 
     <div class="container">
-        <div class="controls">
-            <div class="gender-switch">
-                <button class="gender-btn active" data-gender="men">Мужчины</button>
-                <button class="gender-btn" data-gender="women">Женщины</button>
-            </div>
-        </div>
-
         <div id="ranking-table-container"></div>
     </div>
 

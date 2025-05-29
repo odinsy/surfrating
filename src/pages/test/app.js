@@ -22,20 +22,24 @@ domReady(function() {
     const transliterate = window.slugify;
 
     // Текущие параметры
-    let currentSport = 'surfing';
     let currentDiscipline = 'shortboard';
-    let currentCompetition = 'rfs/rus';
+    let currentGender = 'men';
 
     // Основная инициализация
     const urlParams = new URLSearchParams(window.location.search);
-    const initialSport = urlParams.get('sport') || 'surfing';
     const initialDiscipline = urlParams.get('discipline') || 'shortboard';
-    const initialCompetition = urlParams.get('competition') || 'rfs/rus';
     const initialGender = urlParams.get('gender') || 'men';
 
-    currentSport = initialSport;
     currentDiscipline = initialDiscipline;
-    currentCompetition = initialCompetition;
+    currentGender = initialGender;
+
+    // Названия дисциплин
+    const DISCIPLINE_NAMES = {
+        'shortboard': 'Короткая доска',
+        'longboard': 'Длинная доска',
+        'wakesurfing': 'Вейксерфинг',
+        'wakeskim': 'Вейкским'
+    };
 
     function getYearsRange(data) {
         if (!data.athletes) return [];
@@ -45,7 +49,6 @@ domReady(function() {
                 Object.keys(athlete.years).forEach(year => years.add(year));
             }
         });
-        // Исправленный порядок: по возрастанию (старые слева, новые справа)
         return Array.from(years).sort((a, b) => a - b);
     }
 
@@ -54,7 +57,7 @@ domReady(function() {
             ? `${athlete.best_result.place} в ${athlete.best_result.year}`
             : 'Нет данных';
 
-      const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
+        const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
         const initials = (surname[0] || '') + (firstName[0] || '');
         const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
         const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
@@ -96,7 +99,7 @@ domReady(function() {
                                  alt="${athlete.name}"
                                  onerror="this.style.display='none';
                                           this.nextElementSibling.style.display='flex'">
-                            <div class="avatar-fallback">${initials}</div>
+                            <div class="avatar-fallback">${initials || '?'}</div>
                         </div>
                         <div>
                             <div class="athlete-name">${athlete.name}</div>
@@ -145,8 +148,8 @@ domReady(function() {
         `;
     }
 
-    async function loadData(sport, competition, discipline, gender) {
-        const path = `${JSON_BASE_PATH}${sport}/${competition}/${discipline}/${gender}.json?t=${Date.now()}`;
+    async function loadData(discipline, gender) {
+        const path = `${JSON_BASE_PATH}${discipline}/${gender}.json?t=${Date.now()}`;
         try {
             const response = await fetch(path);
             if (!response.ok) {
@@ -160,25 +163,23 @@ domReady(function() {
         }
     }
 
-    async function updateTable(sport, competition, discipline, gender) {
+    async function updateTable(discipline, gender) {
         document.getElementById('ranking-table-container').innerHTML = `
             <div style="padding: 20px; background: white; border-radius: 8px; margin-top: 20px;">
                 <h3>Загрузка данных...</h3>
-                <p>Спорт: ${sport}</p>
-                <p>Дисциплина: ${discipline}</p>
-                <p>Соревнование: ${competition}</p>
-                <p>Пол: ${gender}</p>
+                <p>Дисциплина: ${DISCIPLINE_NAMES[discipline] || discipline}</p>
+                <p>Пол: ${gender === 'men' ? 'Мужчины' : 'Женщины'}</p>
             </div>
         `;
 
         try {
-            const data = await loadData(sport, competition, discipline, gender);
+            const data = await loadData(discipline, gender);
 
             if (!data || !data.athletes || data.athletes.length === 0) {
                 document.getElementById('ranking-table-container').innerHTML = `
                     <div class="error-message">
                         <p>Нет данных для отображения</p>
-                        <p>Проверьте путь: ${JSON_BASE_PATH}${sport}/${competition}/${discipline}/${gender}.json</p>
+                        <p>Проверьте путь: ${JSON_BASE_PATH}${discipline}/${gender}.json</p>
                     </div>
                 `;
                 return;
@@ -186,6 +187,13 @@ domReady(function() {
 
             const years = getYearsRange(data);
             const tableHTML = `
+                <div class="table-header">
+                    <div class="discipline-title">${DISCIPLINE_NAMES[discipline] || discipline}</div>
+                    <div class="gender-switch">
+                        <button class="gender-btn ${gender === 'men' ? 'active' : ''}" data-gender="men">Мужчины</button>
+                        <button class="gender-btn ${gender === 'women' ? 'active' : ''}" data-gender="women">Женщины</button>
+                    </div>
+                </div>
                 <table class="ranking-table">
                     <thead>
                         <tr>
@@ -203,6 +211,17 @@ domReady(function() {
             `;
 
             document.getElementById('ranking-table-container').innerHTML = tableHTML;
+
+            // Добавляем обработчики для кнопок переключения пола
+            document.querySelectorAll('.gender-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentGender = this.dataset.gender;
+                    updateURL();
+                    updateTable(currentDiscipline, currentGender);
+                });
+            });
         } catch (error) {
             console.error('Error updating table:', error);
             document.getElementById('ranking-table-container').innerHTML = `
@@ -216,46 +235,21 @@ domReady(function() {
 
     function updateURL() {
         const url = new URL(window.location);
-        url.searchParams.set('sport', currentSport);
         url.searchParams.set('discipline', currentDiscipline);
-        url.searchParams.set('competition', currentCompetition);
-        url.searchParams.set('gender', document.querySelector('.gender-btn.active').dataset.gender);
+        url.searchParams.set('gender', currentGender);
         window.history.replaceState(null, '', url);
     }
 
-    // Установка активной кнопки пола
-    const genderBtnActive = document.querySelector(`.gender-btn[data-gender="${initialGender}"]`);
-    if (genderBtnActive) {
-        document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
-        genderBtnActive.classList.add('active');
-    }
-
-    // Обработчики событий
-    // 1. Для кнопок переключения пола
-    document.querySelectorAll('.gender-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            updateURL();
-            updateTable(currentSport, currentCompetition, currentDiscipline, this.dataset.gender);
-        });
-    });
-
-    // 2. Для выпадающего меню соревнований
-    document.querySelectorAll('.competition-item').forEach(item => {
+    // Обработчики событий для меню дисциплин
+    document.querySelectorAll('.menu-item').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
-
-            currentSport = this.closest('.sport-group').dataset.sport;
             currentDiscipline = this.dataset.discipline;
-            currentCompetition = this.dataset.competition;
-
             updateURL();
-            const gender = document.querySelector('.gender-btn.active').dataset.gender;
-            updateTable(currentSport, currentCompetition, currentDiscipline, gender);
+            updateTable(currentDiscipline, currentGender);
         });
     });
 
     // Первоначальная загрузка таблицы
-    updateTable(currentSport, currentCompetition, currentDiscipline, initialGender);
+    updateTable(currentDiscipline, currentGender);
 });

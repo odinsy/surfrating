@@ -9,6 +9,7 @@ body {
     background: #f5f6f7;
     padding: 15px;
     font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
 /* ===== HEADER STRUCTURE ===== */
@@ -46,26 +47,36 @@ body {
     width: auto;
 }
 
-/* ===== MULTI-LEVEL DROPDOWN MENU ===== */
-.sport-competition-menu {
+/* ===== RANKINGS MENU ===== */
+.rankings-menu {
     position: relative;
     display: inline-block;
 }
 
-.sport-menu-btn {
+.rankings-menu-btn {
     display: flex;
     align-items: center;
-    gap: 5px;
-    background: none;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.15);
     border: none;
-    color: rgba(255,255,255,0.9);
+    color: white;
     font-weight: 600;
-    font-size: 0.95em;
+    font-size: 1em;
     cursor: pointer;
-    padding: 8px 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
 }
 
-.sports-dropdown-menu {
+.rankings-menu-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.dropdown-arrow {
+    font-size: 0.8em;
+}
+
+.rankings-dropdown {
     display: none;
     position: absolute;
     top: 100%;
@@ -75,179 +86,52 @@ body {
     border-radius: 12px;
     padding: 20px;
     z-index: 1001;
-    min-width: 280px;
-    margin-top: 8px;
-    flex-direction: row;
+    min-width: 500px;
+    margin-top: 10px;
+}
+
+.rankings-menu:hover .rankings-dropdown {
+    display: block;
+}
+
+.menu-wrap {
+    display: flex;
     gap: 30px;
 }
 
-.sport-competition-menu:hover .sports-dropdown-menu {
-    display: flex;
-}
-
-.sport-group {
+.menu-column {
+    flex: 1;
     min-width: 200px;
-    padding-right: 20px;
-    position: relative;
 }
 
-.sport-group:not(:last-child) {
-    border-right: 1px solid #f0f4ff;
-}
-
-.sport-header {
+.menu-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-weight: 700;
-    color: #112D4E;
-    font-size: 1.1em;
-    padding: 8px 15px;
-    border-radius: 6px;
-    transition: all 0.3s;
-    cursor: default;
-}
-
-.competitions-submenu {
-    display: none;
-    position: absolute;
-    top: -10px;
-    left: calc(100% + 5px);
-    background: white;
-    border-radius: 12px;
-    box-shadow: 15px 15px 30px rgba(0,0,0,0.12);
-    padding: 15px;
-    min-width: 220px;
-    z-index: 1002;
-    flex-direction: column;
-}
-
-.sport-group:hover .competitions-submenu {
-    display: flex;
-    animation: fadeIn 0.3s ease;
-}
-
-/* Невидимая область для плавного перехода */
-.sport-group::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -15px;
-    width: 20px;
-    height: 100%;
-    background: transparent;
-    z-index: 1003;
-}
-
-.competition-item {
-    display: block;
+    gap: 15px;
     padding: 12px 15px;
     color: #112D4E;
     text-decoration: none;
     font-weight: 500;
-    border-radius: 6px;
-    transition: all 0.2s;
-    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    margin-bottom: 8px;
     background: rgba(17,45,78,0.05);
-    white-space: nowrap;
-    text-align: left;
 }
 
-.competition-item:hover {
+.menu-item:hover {
     background: #3F72AF;
     color: white;
     transform: translateX(5px);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateX(10px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-/* Sport icons */
-.sport-icon {
-    font-size: 1.4em;
-    width: 30px;
+.item-icon {
+    font-size: 1.8em;
+    width: 40px;
     text-align: center;
 }
 
-/* ===== MAIN NAVIGATION ===== */
-.header-nav {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    position: relative;
-    min-width: 0;
-}
-
-.header-nav-link {
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95em;
-    position: relative;
-    padding: 8px 15px;
-    transition: all 0.3s;
-}
-
-.header-nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-    width: calc(100% - 30px);
-    height: 3px;
-    background: #fff;
-    transform: scaleX(0);
-    transition: transform 0.3s;
-    transform-origin: left;
-}
-
-.header-nav-link:hover,
-.header-nav-link.active {
-    color: white;
-}
-
-.header-nav-link:hover::after,
-.header-nav-link.active::after {
-    transform: scaleX(1);
-}
-
-/* Controls adjustment */
-.controls {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 15px;
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.gender-switch {
-    display: flex;
-    gap: 8px;
-    background: #f0f4ff;
-    border-radius: 6px;
-    padding: 4px;
-    width: 100%;
-}
-
-.gender-btn {
-    flex: 1;
-    padding: 8px 12px;
-    white-space: nowrap;
-    border: none;
-    background: transparent;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 0.95em;
-}
-
-.gender-btn.active {
-    background: #112D4E;
-    color: white;
+.item-title {
+    font-size: 1.1em;
     font-weight: 600;
 }
 
@@ -259,12 +143,55 @@ body {
     width: 100%;
 }
 
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.discipline-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #112D4E;
+}
+
+.gender-switch {
+    display: flex;
+    gap: 5px;
+    background: #f0f4ff;
+    border-radius: 30px;
+    padding: 4px;
+}
+
+.gender-btn {
+    padding: 8px 20px;
+    white-space: nowrap;
+    border: none;
+    background: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+.gender-btn.active {
+    background: #112D4E;
+    color: white;
+}
+
 .ranking-table {
     width: 100%;
     border-collapse: collapse;
     background: white;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    border-radius: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     overflow: hidden;
 }
 
@@ -495,30 +422,13 @@ body {
         margin-top: 140px;
     }
 
-    .sports-dropdown-menu {
-        flex-direction: column;
+    .rankings-dropdown {
+        min-width: 400px;
+        padding: 15px;
+    }
+
+    .menu-wrap {
         gap: 15px;
-    }
-
-    .sport-group {
-        padding-right: 0;
-        border-right: none !important;
-        border-bottom: 1px solid #f0f4ff;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-    }
-
-    .sport-group:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
-    .competitions-submenu {
-        position: static;
-        box-shadow: none;
-        margin-top: 10px;
-        padding: 0;
     }
 }
 
@@ -528,10 +438,11 @@ body {
         gap: 10px;
     }
 
-    .sports-dropdown-menu {
+    .rankings-dropdown {
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
+        width: 95%;
+        min-width: unset;
     }
 
     .container {
@@ -547,15 +458,40 @@ body {
         width: 280px;
     }
 
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
     .gender-switch {
-        max-width: 300px;
-        margin: 0 auto;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 600px) {
+    .rankings-dropdown {
+        min-width: 300px;
+    }
+
+    .menu-wrap {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-column {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .header-logo {
         height: 30px;
+    }
+
+    .rankings-menu-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
     }
 
     .container {
@@ -587,7 +523,7 @@ body {
     }
 
     .gender-btn {
-        padding: 6px 10px;
+        padding: 6px 15px;
         font-size: 0.85em;
     }
 }
