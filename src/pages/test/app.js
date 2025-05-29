@@ -8,13 +8,11 @@ const DISCIPLINE_OPTIONS = {
     surfing: [
         { value: 'shortboard', label: 'Короткая доска' },
         { value: 'longboard', label: 'Длинная доска' },
+    ],
+    wakesurfing: [
         { value: 'wakesurfing', label: 'Вейксерфинг' },
         { value: 'wakeskim', label: 'Вейкским' }
     ]
-    // wakesurfing: [
-    //     { value: 'wakesurfing', label: 'Вейксерфинг' },
-    //     { value: 'wakeskim', label: 'Вейкским' }
-    // ]
 };
 
 function updateDisciplineOptions(sport) {
