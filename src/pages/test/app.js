@@ -200,9 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
     currentCompetition = initialCompetition;
 
     document.getElementById('sport-select').value = currentSport;
-
     updateDisciplineOptions(currentSport);
 
+    // Установка активной кнопки пола из URL
+    const genderBtn = document.querySelector(`.gender-btn[data-gender="${gender}"]`);
+    if (genderBtn) {
+        document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+        genderBtn.classList.add('active');
+    }
+
+    // Обработчики событий
     document.getElementById('sport-select').addEventListener('change', function() {
         currentSport = this.value;
         updateDisciplineOptions(currentSport);
@@ -216,6 +223,17 @@ document.addEventListener('DOMContentLoaded', () => {
         updateURL();
         const gender = document.querySelector('.gender-btn.active').dataset.gender;
         updateTable(currentSport, currentCompetition, this.value, gender);
+    });
+
+    // Обработчик для кнопок переключения пола
+    document.querySelectorAll('.gender-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            updateURL();
+            const category = document.getElementById('discipline-select').value;
+            updateTable(currentSport, currentCompetition, category, this.dataset.gender);
+        });
     });
 
     document.querySelectorAll('.dropdown-item[data-competition]').forEach(item => {
