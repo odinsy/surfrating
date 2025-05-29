@@ -6,6 +6,17 @@ function domReady(fn) {
     }
 }
 
+// Глобальные функции для тултипов
+window.showTooltip = function(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'block';
+}
+
+window.hideTooltip = function(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'none';
+}
+
 domReady(function() {
     const JSON_BASE_PATH = '../../data/rankings/';
     const transliterate = window.slugify;
@@ -25,22 +36,6 @@ domReady(function() {
     currentSport = initialSport;
     currentDiscipline = initialDiscipline;
     currentCompetition = initialCompetition;
-
-    // Обновляем текст кнопки меню
-    function updateSportMenuButton() {
-        const disciplineName = getDisciplineName(currentDiscipline);
-        document.querySelector('.sport-menu-btn').innerHTML = `${disciplineName} ▼`;
-    }
-
-    function getDisciplineName(discipline) {
-        const names = {
-            'shortboard': 'Короткая доска',
-            'longboard': 'Длинная доска',
-            'wakesurfing': 'Вейксерфинг',
-            'wakeskim': 'Вейкским'
-        };
-        return names[discipline] || 'Рейтинг';
-    }
 
     function getYearsRange(data) {
         if (!data.athletes) return [];
@@ -218,16 +213,6 @@ domReady(function() {
         }
     }
 
-    function showTooltip(id) {
-        const tooltip = document.getElementById(id);
-        if (tooltip) tooltip.style.display = 'block';
-    }
-
-    function hideTooltip(id) {
-        const tooltip = document.getElementById(id);
-        if (tooltip) tooltip.style.display = 'none';
-    }
-
     function updateURL() {
         const url = new URL(window.location);
         url.searchParams.set('sport', currentSport);
@@ -236,9 +221,6 @@ domReady(function() {
         url.searchParams.set('gender', document.querySelector('.gender-btn.active').dataset.gender);
         window.history.replaceState(null, '', url);
     }
-
-    // Инициализация кнопки меню
-    updateSportMenuButton();
 
     // Установка активной кнопки пола
     const genderBtnActive = document.querySelector(`.gender-btn[data-gender="${initialGender}"]`);
@@ -266,9 +248,6 @@ domReady(function() {
             currentSport = this.closest('.sport-group').dataset.sport;
             currentDiscipline = this.dataset.discipline;
             currentCompetition = this.dataset.competition;
-
-            // Обновляем кнопку меню
-            updateSportMenuButton();
 
             updateURL();
             const gender = document.querySelector('.gender-btn.active').dataset.gender;
