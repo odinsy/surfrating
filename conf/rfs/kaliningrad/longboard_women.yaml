@@ -1,0 +1,6 @@
+input_paths:
+  - data/rfs/competitions/kaliningrad/longboard/longboard-women-*.csv
+
+output:
+  filename: processed/rankings/rfs/kaliningrad/longboard/women.csv
+  top5_filename: processed/rankings/rfs/kaliningrad/top5/longboard/women.csv

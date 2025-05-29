@@ -1,0 +1,6 @@
+input_paths:
+  - "data/rfs/competitions/rus/longboard/longboard_men_*.csv"
+
+output:
+  filename: processed/rankings/rfs/rus/longboard/men.csv
+  top5_filename: processed/rankings/rfs/rus/longboard/top5/men.csv

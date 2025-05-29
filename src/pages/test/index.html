@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полный рейтинг спортсменов</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="global-header">
+        <div class="header-content">
+            <a href="//topheats.ru" class="header-brand">
+                <img src="../../img/th-white-logo-min.png" alt="TopHeats" class="header-logo">
+            </a>
+
+            <nav class="header-nav">
+              <div class="dropdown">
+                  <a href="#" class="header-nav-link active">Рейтинг</a>
+                  <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item" data-competition="rus">Чемпионат России</a>
+                      <a href="#" class="dropdown-item" data-competition="kaliningrad">Чемпионат Калининградской области</a>
+                      <a href="#" class="dropdown-item">Балтийский серф-контест</a>
+                  </div>
+              </div>
+                <a href="../trends/index.html" class="header-nav-link">Статистика</a>
+            </nav>
+
+            <div class="header-controls">
+                <div class="header-title-block">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <select id="discipline-select" class="discipline-select">
+                <option value="shortboard">Короткая доска</option>
+                <option value="longboard">Длинная доска</option>
+            </select>
+
+            <div class="gender-switch">
+                <button class="gender-btn active" data-gender="men">Мужчины</button>
+                <button class="gender-btn" data-gender="women">Женщины</button>
+            </div>
+        </div>
+
+        <div id="ranking-table-container"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/transliteration@2.3.5/dist/browser/bundle.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

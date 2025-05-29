@@ -1,0 +1,93 @@
+# config.yaml
+
+scoring_system: wsl_cs
+current_year: 2024
+top_n: 100
+allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024]
+
+input_paths:
+  # - "data/rfs/competitions/shortboard/shortboard_men_*.csv"
+
+output:
+  # filename: processed/rankings/shortboard_men.csv
+
+  translate_columns: false
+  columns:
+    - Rank
+    - Name
+    - Sport Rank
+    - Birthday
+    - Region
+    - Category
+    - YearScores
+    - Total Points
+
+sorting:
+  enabled: true
+
+bonuses:
+  decay:
+    enabled: true
+    factor: 0.8
+
+  participant_factor:
+    enabled: true
+    rules:
+      - min: 1
+        max: 5
+        factor: 0.5
+      - min: 6
+        max: 8
+        factor: 0.75
+      - min: 9
+        max: "inf"
+        factor: 1.0
+
+  rank:
+    enabled: false
+    values:
+      МС: 80
+      КМС: 50
+      "1 разряд": 30
+      "2 разряд": 20
+      "3 разряд": 10
+      "": 0
+
+  participation:
+    enabled: false
+    points: 50
+
+wildcard:
+  top_n: 16               # Максимальный рейтинг для отбора
+  min_participations: 2   # Минимальное количество участий
+  last_years_period: 3    # За последние N лет
+  min_best_place: 3       # Лучший результат за карьеру
+
+  ranking_file: processed/rankings/shortboard_men.csv
+  output_file: processed/wildcard/shortboard_men.csv
+
+  # ranking_file: processed/rankings/shortboard_women.csv
+  # output_file: processed/wildcard/shortboard_women.csv
+
+  # ranking_file: processed/rankings/longboard_women.csv
+  # output_file: processed/wildcard/longboard_women.csv
+
+  # ranking_file: processed/rankings/longboard_men.csv
+  # output_file: processed/wildcard/longboard_men.csv
+
+trends:
+  input_ranking_file: processed/rankings/shortboard_men.csv
+  output_general_file: processed/trends/general_shortboard_men_stats.csv
+  output_detailed_file: processed/trends/detailed_shortboard_men_stats.csv
+
+  # input_ranking_file: processed/rankings/longboard_men.csv
+  # output_general_file: processed/trends/general_longboard_men_stats.csv
+  # output_detailed_file: processed/trends/detailed_longboard_men_stats.csv
+
+  # input_ranking_file: processed/rankings/longboard_women.csv
+  # output_general_file: processed/trends/general_longboard_women_stats.csv
+  # output_detailed_file: processed/trends/detailed_longboard_women_stats.csv
+
+  # input_ranking_file: processed/rankings/shortboard_women.csv
+  # output_general_file: processed/trends/general_shortboard_women_stats.csv
+  # output_detailed_file: processed/trends/detailed_shortboard_women_stats.csv

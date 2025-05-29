@@ -1,0 +1,22 @@
+:root {
+    /* Цвета */
+    --primary-color: #112D4E;
+    --secondary-color: #3F72AF;
+    --accent-color: #1a237e;
+    --light-bg: #f5f6f7;
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: rgba(255,255,255,0.9);
+
+    /* Тени */
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+    --shadow-lg: 0 12px 24px rgba(0,0,0,0.15);
+
+    /* Размеры */
+    --header-height: 60px;
+    --mobile-menu-width: 280px;
+
+    /* Переходы */
+    --transition: all 0.3s ease;
+}

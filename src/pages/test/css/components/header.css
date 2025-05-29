@@ -1,0 +1,92 @@
+.global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    z-index: 1000;
+    padding: 12px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-title-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-title-block h1 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.header-nav {
+    display: flex;
+    gap: 35px;
+    margin-left: 40px;
+    flex: 1;
+    align-items: center;
+    position: relative;
+}
+
+.header-nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    position: relative;
+    padding: 8px 0;
+    transition: var(--transition);
+}
+
+.header-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.3s;
+}
+
+.header-nav-link:hover {
+    color: white;
+}
+
+.header-nav-link:hover::after,
+.header-nav-link.active::after {
+    width: 100%;
+}
+
+.header-nav-link.active {
+    color: white;
+}

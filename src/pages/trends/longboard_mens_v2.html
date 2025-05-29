@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Анализ возрастного тренда</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-gradient"></script>
+    <style>
+        :root {
+            --main-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+
+        .dashboard {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-family: 'Segoe UI', system-ui;
+        }
+
+        .chart-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .main-title {
+            color: var(--main-color);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .meta-info {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        canvas {
+            transition: transform 0.3s ease;
+        }
+
+        canvas:hover {
+            transform: scale(1.01);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="chart-header">
+            <h1 class="main-title">📊 Динамика возраста спортсменов</h1>
+            <div class="meta-info">
+                <div>🏄 Дисциплина: Длинная доска</div>
+                <div>👥 Категория: Мужчины</div>
+            </div>
+        </div>
+        <canvas id="ageTrendChart"></canvas>
+    </div>
+
+<script>
+    // Конфигурация анимации
+    Chart.defaults.animation.duration = 2000;
+    Chart.defaults.animation.easing = 'easeOutQuart';
+
+    fetch('../../data/trends/general_longboard_men_stats.csv')
+        .then(response => response.text())
+        .then(csvData => {
+            const data = csvData.split('\n').slice(1).map(row => {
+                const [year, total, newbies, percent, avgAge] = row.split(',');
+                return {
+                    year: year.trim(),
+                    avgAge: parseFloat(avgAge),
+                    newbies: parseInt(newbies)
+                };
+            }).filter(item => item.year && !isNaN(item.avgAge));
+
+            const ctx = document.getElementById('ageTrendChart').getContext('2d');
+
+            // Создание градиента
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, 'rgba(46, 134, 222, 0.4)');
+            gradient.addColorStop(1, 'rgba(46, 134, 222, 0.01)');
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.year),
+                    datasets: [{
+                        label: 'Средний возраст',
+                        data: data.map(d => d.avgAge),
+                        borderColor: '#2e86de',
+                        backgroundColor: gradient,
+                        borderWidth: 4,
+                        tension: 0.4,
+                        pointStyle: 'rectRot',
+                        pointRadius: 7,
+                        pointHoverRadius: 10,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#2e86de',
+                        fill: true,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Новые участники',
+                        data: data.map(d => d.newbies),
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.3,
+                        type: 'bar',
+                        yAxisID: 'y1',
+                        borderRadius: 6,
+                        hoverBackgroundColor: '#e74c3c'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: { size: 14 },
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(44, 62, 80, 0.95)',
+                            titleFont: { size: 16 },
+                            bodyFont: { size: 14 },
+                            footerFont: { size: 12 },
+                            padding: 12,
+                            cornerRadius: 8,
+                            displayColors: true,
+                            callbacks: {
+                                label: (context) => {
+                                    const label = context.dataset.label || '';
+                                    return ` ${label}: ${context.raw}${context.dataset.type === 'bar' ? ' чел.' : ' лет'}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            title: {
+                                display: true,
+                                text: 'Год',
+                                font: { size: 14, weight: '600' }
+                            }
+                        },
+                        y: {
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Возраст (лет)',
+                                font: { size: 14, weight: '600' }
+                            },
+                            min: 20,
+                            max: 40,
+                            grid: { color: 'rgba(0,0,0,0.05)' }
+                        },
+                        y1: {
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Новые участники',
+                                font: { size: 14, weight: '600' }
+                            },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Ошибка:', error));
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+input_paths:
+  - data/rfs/competitions/kaliningrad/shortboard/*shortboard-men-*.csv
+
+output:
+  filename: processed/rankings/rfs/kaliningrad/shortboard/men.csv
+  top5_filename: processed/rankings/rfs/kaliningrad/top5/shortboard/men.csv
