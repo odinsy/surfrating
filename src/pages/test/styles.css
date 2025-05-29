@@ -33,7 +33,7 @@ body {
 .header-brand {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
 
 .header-logo {
@@ -102,6 +102,42 @@ body {
 
 .header-nav-link.active {
     color: white;
+}
+
+
+.sport-switch {
+    display: flex;
+    background: rgba(255,255,255,0.15);
+    border-radius: 30px;
+    padding: 4px;
+}
+
+.sport-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.3s;
+}
+
+.sport-btn.active {
+    background: white;
+    color: #112D4E;
+    font-weight: 600;
+}
+
+.sport-icon {
+    font-size: 1.2em;
+}
+
+.sport-label {
+    white-space: nowrap;
 }
 
 .container {
@@ -509,6 +545,19 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header-brand {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sport-switch {
+        margin-left: auto;
+    }
+
+    .sport-label {
+        display: none;
+    }
+  
     .header-content {
         flex-direction: column;
         gap: 15px;
