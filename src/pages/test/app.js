@@ -1,6 +1,7 @@
-const JSON_BASE_PATH = '../../processed/rankings/wakesurfing/';
+const JSON_BASE_PATH = '../../data/rankings/';
 const transliterate = window.slugify;
 
+let currentSport = 'surfing';
 let currentCompetition = 'rfs/rus';
 
 function getYearsRange(data) {
@@ -112,8 +113,8 @@ function createAthleteRow(athlete, years) {
     `;
 }
 
-async function loadData(competition, category, gender) {
-    const path = `${JSON_BASE_PATH}${competition}/${category}/${gender}.json?t=${Date.now()}`;
+async function loadData(sport, competition, category, gender) {
+    const path = `${JSON_BASE_PATH}${sport}/${competition}/${category}/${gender}.json?t=${Date.now()}`;
     try {
         const response = await fetch(path);
         return await response.json();
@@ -165,44 +166,49 @@ function hideTooltip(id) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const initialCategory = urlParams.get('category') || 'wakesurfing';
-    const [category, gender] = initialCategory.split('/');
+    const initialSport = urlParams.get('sport') || 'surfing'; // Новый параметр
+    const initialCompetition = urlParams.get('competition') || 'rfs/rus';
+    const initialCategory = urlParams.get('category') || 'shortboard_men';
+    const [category, gender] = initialCategory.split('_');
 
-    // Инициализация элементов управления
-    document.getElementById('discipline-select').value = category;
-    document.querySelector(`.gender-btn[data-gender="${gender}"]`).classList.add('active');
+    // Инициализация переменных
+    currentSport = initialSport;
+    currentCompetition = initialCompetition;
 
-    // Обработчики событий для дисциплины и пола
-    document.getElementById('discipline-select').addEventListener('change', (e) => {
+    // Установка активного элемента для спорта
+    document.getElementById('sport-select').value = currentSport;
+
+    // Обработчик для смены вида спорта
+    document.getElementById('sport-select').addEventListener('change', function() {
+        currentSport = this.value;
+        updateURL();
+        const category = document.getElementById('discipline-select').value;
         const gender = document.querySelector('.gender-btn.active').dataset.gender;
-        updateTable(currentCompetition, e.target.value, gender);
+        updateTable(currentSport, currentCompetition, category, gender);
     });
 
-    document.querySelectorAll('.gender-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const category = document.getElementById('discipline-select').value;
-            updateTable(currentCompetition, category, btn.dataset.gender);
-        });
-    });
-
+    // Обновление выпадающего меню соревнований
     document.querySelectorAll('.dropdown-item[data-competition]').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
-            const competition = this.dataset.competition;
-            currentCompetition = competition;
-
-            // Обновляем активный класс
-            document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
-            this.classList.add('active');
-
-            // Обновляем таблицу
+            currentCompetition = this.dataset.competition;
+            updateURL();
             const category = document.getElementById('discipline-select').value;
             const gender = document.querySelector('.gender-btn.active').dataset.gender;
-            updateTable(competition, category, gender);
+            updateTable(currentSport, currentCompetition, category, gender);
         });
     });
 
-    updateTable(currentCompetition, category, gender);
+    // Обновленный вызов функции
+    updateTable(currentSport, currentCompetition, category, gender);
 });
+
+function updateURL() {
+    const url = new URL(window.location);
+    const category = document.getElementById('discipline-select').value;
+    const gender = document.querySelector('.gender-btn.active').dataset.gender;
+    url.searchParams.set('sport', currentSport);
+    url.searchParams.set('competition', currentCompetition);
+    url.searchParams.set('category', `${category}_${gender}`);
+    window.history.replaceState(null, '', url);
+}

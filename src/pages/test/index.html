@@ -18,8 +18,11 @@
                     <a href="#" class="header-nav-link active">Рейтинг</a>
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item" data-competition="rfs/rus">Чемпионат России</a>
+                        <a href="#" class="dropdown-item" data-competition="rfs/kaliningrad">Чемпионат Калининградской области</a>
+                        <a href="#" class="dropdown-item" data-competition="coldwater">Балтийский серф-контест</a>
                     </div>
                 </div>
+                <a href="../trends/index.html" class="header-nav-link">Статистика</a>
             </nav>
 
             <div class="header-controls">
@@ -31,9 +34,14 @@
 
     <div class="container">
         <div class="controls">
+            <select id="sport-select" class="sport-select">
+                <option value="surfing">Серфинг</option>
+            </select>
             <select id="discipline-select" class="discipline-select">
+                <option value="shortboard">Короткая доска</option>
+                <option value="longboard">Длинная доска</option>
                 <option value="wakesurfing">Вейксерфинг</option>
-                <option value="wakeskim">Вейкским</option>
+
             </select>
 
             <div class="gender-switch">
