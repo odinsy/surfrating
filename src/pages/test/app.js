@@ -18,7 +18,7 @@ window.hideTooltip = function(id) {
 }
 
 domReady(function() {
-    const JSON_BASE_PATH = '../../data/rankings/surfing/';
+    const JSON_BASE_PATH = '../../data/rankings/';
     const transliterate = window.slugify;
 
     // Текущие параметры
