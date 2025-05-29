@@ -7,7 +7,7 @@ let currentCompetition = 'rfs/rus';
 const DISCIPLINE_OPTIONS = {
     surfing: [
         { value: 'shortboard', label: 'Короткая доска' },
-        { value: 'longboard', label: 'Длинная доска' },
+        { value: 'longboard', label: 'Длинная доска' }
     ],
     wakesurfing: [
         { value: 'wakesurfing', label: 'Вейксерфинг' },
@@ -17,8 +17,12 @@ const DISCIPLINE_OPTIONS = {
 
 function updateDisciplineOptions(sport) {
     const select = document.getElementById('discipline-select');
-    select.innerHTML = '';
+    if (!select) {
+        console.error('discipline-select element not found');
+        return;
+    }
 
+    select.innerHTML = '';
     DISCIPLINE_OPTIONS[sport].forEach(option => {
         const opt = document.createElement('option');
         opt.value = option.value;
@@ -29,7 +33,6 @@ function updateDisciplineOptions(sport) {
 
 function getYearsRange(data) {
     if (!data.athletes) return [];
-
     const years = new Set();
     data.athletes.forEach(athlete => {
         if (athlete.years) {
@@ -47,7 +50,7 @@ function createAthleteRow(athlete, years) {
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
     const initials = (surname[0] || '') + (firstName[0] || '');
     const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-    const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
+    const avatarPath = `../../img/avatars/${currentSport}/${avatarSlug}.jpg`;
 
     const yearCells = years.map(year => {
         const yearData = athlete.years?.[year];
@@ -187,87 +190,6 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialSport = urlParams.get('sport') || 'surfing';
-    const initialCompetition = urlParams.get('competition') || 'rfs/rus';
-    const initialCategory = urlParams.get('category') || 'shortboard_men';
-    const [category, gender] = initialCategory.split('_');
-
-    currentSport = initialSport;
-    currentCompetition = initialCompetition;
-
-    // Устанавливаем активный вид спорта
-    document.querySelectorAll('.sport-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.dataset.sport === currentSport) {
-            btn.classList.add('active');
-        }
-    });
-
-    updateDisciplineOptions(currentSport);
-
-    // Обработчики событий
-    document.querySelectorAll('.sport-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            currentSport = this.dataset.sport;
-            document.querySelectorAll('.sport-btn').forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            updateDisciplineOptions(currentSport);
-            updateURL();
-            const category = document.getElementById('discipline-select').value;
-            const gender = document.querySelector('.gender-btn.active').dataset.gender;
-            updateTable(currentSport, currentCompetition, category, gender);
-        });
-    });
-    // Установка активной кнопки пола из URL
-    const genderBtn = document.querySelector(`.gender-btn[data-gender="${gender}"]`);
-    if (genderBtn) {
-        document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
-        genderBtn.classList.add('active');
-    }
-
-    // Обработчики событий
-    document.getElementById('sport-select').addEventListener('change', function() {
-        currentSport = this.value;
-        updateDisciplineOptions(currentSport);
-        updateURL();
-        const category = document.getElementById('discipline-select').value;
-        const gender = document.querySelector('.gender-btn.active').dataset.gender;
-        updateTable(currentSport, currentCompetition, category, gender);
-    });
-
-    document.getElementById('discipline-select').addEventListener('change', function() {
-        updateURL();
-        const gender = document.querySelector('.gender-btn.active').dataset.gender;
-        updateTable(currentSport, currentCompetition, this.value, gender);
-    });
-
-    // Обработчик для кнопок переключения пола
-    document.querySelectorAll('.gender-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            updateURL();
-            const category = document.getElementById('discipline-select').value;
-            updateTable(currentSport, currentCompetition, category, this.dataset.gender);
-        });
-    });
-
-    document.querySelectorAll('.dropdown-item[data-competition]').forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            currentCompetition = this.dataset.competition;
-            updateURL();
-            const category = document.getElementById('discipline-select').value;
-            const gender = document.querySelector('.gender-btn.active').dataset.gender;
-            updateTable(currentSport, currentCompetition, category, gender);
-        });
-    });
-
-    updateTable(currentSport, currentCompetition, category, gender);
-});
-
 function updateURL() {
     const url = new URL(window.location);
     const categorySelect = document.getElementById('discipline-select');
@@ -283,3 +205,86 @@ function updateURL() {
     url.searchParams.set('competition', currentCompetition);
     window.history.replaceState(null, '', url);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialSport = urlParams.get('sport') || 'surfing';
+    const initialCompetition = urlParams.get('competition') || 'rfs/rus';
+    const initialCategory = urlParams.get('category') || 'shortboard_men';
+    const [category, gender] = initialCategory.split('_');
+
+    currentSport = initialSport;
+    currentCompetition = initialCompetition;
+
+    // Установка активного вида спорта
+    document.querySelectorAll('.sport-btn').forEach(btn => {
+        if (btn.dataset.sport === currentSport) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // Инициализация селектора дисциплин
+    updateDisciplineOptions(currentSport);
+
+    // Установка активной кнопки пола
+    const genderBtn = document.querySelector(`.gender-btn[data-gender="${gender}"]`);
+    if (genderBtn) {
+        document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+        genderBtn.classList.add('active');
+    }
+
+    // Обработчики событий
+    // 1. Для кнопок выбора вида спорта
+    document.querySelectorAll('.sport-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            currentSport = this.dataset.sport;
+            document.querySelectorAll('.sport-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            updateDisciplineOptions(currentSport);
+            updateURL();
+
+            const category = document.getElementById('discipline-select').value;
+            const gender = document.querySelector('.gender-btn.active').dataset.gender;
+            updateTable(currentSport, currentCompetition, category, gender);
+        });
+    });
+
+    // 2. Для селектора дисциплин
+    const disciplineSelect = document.getElementById('discipline-select');
+    if (disciplineSelect) {
+        disciplineSelect.addEventListener('change', function() {
+            updateURL();
+            const gender = document.querySelector('.gender-btn.active').dataset.gender;
+            updateTable(currentSport, currentCompetition, this.value, gender);
+        });
+    }
+
+    // 3. Для кнопок переключения пола
+    document.querySelectorAll('.gender-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            updateURL();
+            const category = document.getElementById('discipline-select').value;
+            updateTable(currentSport, currentCompetition, category, this.dataset.gender);
+        });
+    });
+
+    // 4. Для выпадающего меню соревнований
+    document.querySelectorAll('.dropdown-item[data-competition]').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            currentCompetition = this.dataset.competition;
+            updateURL();
+            const category = document.getElementById('discipline-select').value;
+            const gender = document.querySelector('.gender-btn.active').dataset.gender;
+            updateTable(currentSport, currentCompetition, category, gender);
+        });
+    });
+
+    // Первоначальная загрузка таблицы
+    updateTable(currentSport, currentCompetition, category, gender);
+});

@@ -36,6 +36,10 @@ body {
     gap: 25px;
 }
 
+.header-logo-link {
+    display: flex;
+}
+
 .header-logo {
     height: 40px;
     width: auto;
@@ -104,6 +108,12 @@ body {
     color: white;
 }
 
+.sport-selector {
+    display: flex;
+    background: rgba(255,255,255,0.15);
+    border-radius: 30px;
+    padding: 4px;
+}
 
 .sport-switch {
     display: flex;
@@ -557,7 +567,7 @@ body {
     .sport-label {
         display: none;
     }
-  
+
     .header-content {
         flex-direction: column;
         gap: 15px;
