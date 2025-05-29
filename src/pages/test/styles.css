@@ -330,20 +330,22 @@ body {
     object-fit: cover;
 }
 
-.athlete-avatar .avatar-fallback {
+.avatar-fallback {
     position: absolute;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
-    background: #112D4E;
     color: white;
     font-weight: 600;
     font-size: 0.8em;
-    border-radius: 50%;
+}
+
+.athlete-avatar img[data-error] + .avatar-fallback {
+    display: flex;
 }
 
 .name-cell:hover .tooltip-item {

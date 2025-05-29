@@ -1,6 +1,6 @@
 input_paths:
-  - data/rfs/competitions/kaliningrad/longboard/longboard-men-*.csv
+  - data/rfs/surfing/kaliningrad/longboard/longboard-men-*.csv
 
 output:
-  filename: processed/rankings/rfs/kaliningrad/longboard/men.csv
-  top5_filename: processed/rankings/rfs/kaliningrad/top5/longboard/men.csv
+  filename: processed/rankings/surfing/rfs/kaliningrad/longboard/men.csv
+  top5_filename: processed/rankings/surfing/rfs/kaliningrad/top5/longboard/men.csv

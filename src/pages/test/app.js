@@ -15,15 +15,6 @@ function getYearsRange(data) {
     return Array.from(years).sort((a, b) => a - b);
 }
 
-async function checkAvatarExists(url) {
-    try {
-        const response = await fetch(url, { method: 'HEAD' });
-        return response.ok;
-    } catch (error) {
-        return false;
-    }
-}
-
 function createAthleteRow(athlete, years) {
     const bestResult = athlete.best_result
         ? `${athlete.best_result.place} в ${athlete.best_result.year}`
@@ -33,20 +24,6 @@ function createAthleteRow(athlete, years) {
     const initials = (surname[0] || '') + (firstName[0] || '');
     const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
     const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
-
-    const avatarExists = await checkAvatarExists(avatarPath);
-
-    let avatarHTML;
-    if (avatarExists) {
-        avatarHTML = `
-            <img src="${avatarPath}" alt="${athlete.name}"
-                 onerror="this.style.display='none';
-                          this.nextElementSibling.style.display='flex'">
-            <div class="avatar-fallback" style="display: none">${initials}</div>
-        `;
-    } else {
-        avatarHTML = `<div class="avatar-fallback">${initials}</div>`;
-    }
 
     const yearCells = years.map(year => {
         const yearData = athlete.years?.[year];
@@ -81,7 +58,11 @@ function createAthleteRow(athlete, years) {
             <td class="name-cell">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
-                        ${avatarHTML}
+                        <img src="${avatarPath}"
+                             alt="${athlete.name}"
+                             onerror="this.style.display='none';
+                                      this.nextElementSibling.style.display='flex'">
+                        <div class="avatar-fallback">${initials}</div>
                     </div>
                     <div>
                         <div class="athlete-name">${athlete.name}</div>
@@ -152,12 +133,6 @@ async function updateTable(competition, category, gender) {
     }
 
     const years = getYearsRange(data);
-    const athleteRows = [];
-
-    for (const athlete of data.athletes) {
-        athleteRows.push(await createAthleteRow(athlete, years));
-    }
-
     const tableHTML = `
         <table class="ranking-table">
             <thead>
@@ -170,7 +145,7 @@ async function updateTable(competition, category, gender) {
                 </tr>
             </thead>
             <tbody>
-                ${athleteRows.join('')}
+                ${data.athletes.map(a => createAthleteRow(a, years)).join('')}
             </tbody>
         </table>
     `;
