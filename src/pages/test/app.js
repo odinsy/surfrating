@@ -7,7 +7,7 @@ let currentCompetition = 'rfs/rus';
 const DISCIPLINE_OPTIONS = {
     surfing: [
         { value: 'shortboard', label: 'Короткая доска' },
-        { value: 'longboard', label: 'Длинная доска' }
+        { value: 'longboard', label: 'Длинная доска' },
         { value: 'wakesurfing', label: 'Вейксерфинг' },
         { value: 'wakeskim', label: 'Вейкским' }
     ]
@@ -149,7 +149,7 @@ async function loadData(sport, competition, category, gender) {
     }
 }
 
-async function updateTable(competition, category, gender) {
+async function updateTable(sport, competition, category, gender) {
     const data = await loadData(sport, competition, category, gender);
 
     if (!data || !data.athletes) {
@@ -191,7 +191,7 @@ function hideTooltip(id) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const initialSport = urlParams.get('sport') || 'surfing'; // Новый параметр
+    const initialSport = urlParams.get('sport') || 'surfing';
     const initialCompetition = urlParams.get('competition') || 'rfs/rus';
     const initialCategory = urlParams.get('category') || 'shortboard_men';
     const [category, gender] = initialCategory.split('_');
@@ -201,6 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('sport-select').value = currentSport;
 
+    updateDisciplineOptions(currentSport);
+
     document.getElementById('sport-select').addEventListener('change', function() {
         currentSport = this.value;
         updateDisciplineOptions(currentSport);
@@ -209,6 +211,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const gender = document.querySelector('.gender-btn.active').dataset.gender;
         updateTable(currentSport, currentCompetition, category, gender);
     });
+
+    document.getElementById('discipline-select').addEventListener('change', function() {
+        updateURL();
+        const gender = document.querySelector('.gender-btn.active').dataset.gender;
+        updateTable(currentSport, currentCompetition, this.value, gender);
+    });
+
     document.querySelectorAll('.dropdown-item[data-competition]').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
