@@ -10,16 +10,21 @@ body {
     padding: 15px;
 }
 
+/* ===== HEADER STRUCTURE ===== */
 .global-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 40px;
     background: #112D4E;
-    z-index: 1000;
-    padding: 12px 0;
+    z-index: 1100;
+    padding: 15px 0; /* Увеличенный отступ */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+    height: 45px; /* Увеличенная высота */
+    width: auto;
 }
 
 .header-content {
@@ -35,11 +40,6 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.header-logo {
-    height: 40px;
-    width: auto;
 }
 
 .header-controls {
@@ -108,7 +108,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     width: 100%;
     margin-top: 60px;
     overflow: visible;
@@ -537,7 +537,7 @@ body {
     }
 
     .container {
-        margin-top: 140px;
+        margin-top: 120px;
     }
 
     .controls {
@@ -662,6 +662,12 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        margin-top: 140px; /* Адаптация для мобильных */
+    }
+}
+
 @media (max-width: 480px) {
     .header-title-block h1 {
         font-size: 1.2em;
@@ -680,6 +686,10 @@ body {
         font-size: 0.85em;
     }
 
+    .container {
+        margin-top: 160px; /* Адаптация для маленьких экранов */
+    }
+  
     .tooltip-item {
         display: none !important;
     }
