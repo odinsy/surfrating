@@ -1,4 +1,4 @@
-const JSON_BASE_PATH = '../../data/rankings/';
+const JSON_BASE_PATH = '../../processed/rankings/wakesurfing/';
 const transliterate = window.slugify;
 
 let currentCompetition = 'rfs/rus';
@@ -165,8 +165,8 @@ function hideTooltip(id) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const initialCategory = urlParams.get('category') || 'shortboard_men';
-    const [category, gender] = initialCategory.split('_');
+    const initialCategory = urlParams.get('category') || 'wakesurfing';
+    const [category, gender] = initialCategory.split('/');
 
     // Инициализация элементов управления
     document.getElementById('discipline-select').value = category;

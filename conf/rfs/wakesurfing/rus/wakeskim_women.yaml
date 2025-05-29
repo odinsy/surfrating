@@ -1,0 +1,6 @@
+input_paths:
+  - data/rfs/wakesurfing/rus/wakeskim/wakeskim_women_*.csv
+
+output:
+  filename: processed/rankings/wakesurfing/rfs/rus/wakeskim/women.csv
+  top5_filename: processed/rankings/wakesurfing/rfs/rus/wakeskim/top5_women.csv
