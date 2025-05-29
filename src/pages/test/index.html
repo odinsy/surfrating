@@ -9,46 +9,49 @@
 <body>
     <header class="global-header">
         <div class="header-content">
-            <!-- <div class="header-brand">
+            <div class="header-brand">
                 <a href="//topheats.ru" class="header-logo-link">
                     <img src="../../img/th-white-logo-min.png" alt="TopHeats" class="header-logo">
                 </a>
-            </div> -->
+            </div>
 
             <nav class="header-nav">
-                <!-- Комбинированное меню спорта и соревнований -->
-                <div class="dropdown sport-competition-menu">
+                <div class="sport-competition-menu">
                     <button class="sport-menu-btn header-nav-link">
                         Рейтинг ▼
                     </button>
-                    <div class="dropdown-menu">
+                    <div class="sports-dropdown-menu">
                         <!-- Серфинг -->
                         <div class="sport-group" data-sport="surfing">
-                            <div class="sport-header">Серфинг</div>
-                            <a href="#" class="dropdown-item competition-item" data-competition="rfs/rus">Чемпионат России</a>
-                            <a href="#" class="dropdown-item competition-item" data-competition="rfs/kaliningrad">Чемпионат Калининградской области</a>
-                            <a href="#" class="dropdown-item competition-item" data-competition="coldwater">Балтийский серф-контест</a>
+                            <div class="sport-header">
+                                <span class="sport-icon">🏄</span>
+                                Серфинг
+                            </div>
+                            <div class="competitions-submenu">
+                                <a href="#" class="competition-item" data-discipline="shortboard" data-competition="rfs/rus">Короткая доска</a>
+                                <a href="#" class="competition-item" data-discipline="longboard" data-competition="rfs/rus">Длинная доска</a>
+                            </div>
                         </div>
 
                         <!-- Вейксерфинг -->
                         <div class="sport-group" data-sport="wakesurfing">
-                            <div class="sport-header">Вейксерфинг</div>
-                            <a href="#" class="dropdown-item competition-item" data-competition="rfs/rus">Чемпионат России</a>
+                            <div class="sport-header">
+                                <span class="sport-icon">🌊</span>
+                                Вейксерфинг
+                            </div>
+                            <div class="competitions-submenu">
+                                <a href="#" class="competition-item" data-discipline="wakesurfing" data-competition="rfs/rus">Вейксерфинг</a>
+                                <a href="#" class="competition-item" data-discipline="wakeskim" data-competition="rfs/rus">Вейкским</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </nav>
-
-            <div class="header-controls"></div>
         </div>
     </header>
 
     <div class="container">
         <div class="controls">
-            <select id="discipline-select" class="discipline-select">
-                <!-- Опции будут заполняться динамически -->
-            </select>
-
             <div class="gender-switch">
                 <button class="gender-btn active" data-gender="men">Мужчины</button>
                 <button class="gender-btn" data-gender="women">Женщины</button>

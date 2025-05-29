@@ -1,15 +1,17 @@
+/* ===== RESET & BASE STYLES ===== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
     background: #f5f6f7;
     padding: 15px;
+    font-family: 'Arial', sans-serif;
 }
 
+/* ===== HEADER STRUCTURE ===== */
 .global-header {
     position: fixed;
     top: 0;
@@ -39,24 +41,15 @@ body {
     flex-shrink: 0;
 }
 
-.header-logo-link {
-    display: flex;
-}
-
 .header-logo {
     height: 35px;
     width: auto;
 }
 
-.header-controls {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-
+/* ===== MULTI-LEVEL DROPDOWN MENU ===== */
 .sport-competition-menu {
     position: relative;
+    display: inline-block;
 }
 
 .sport-menu-btn {
@@ -72,101 +65,101 @@ body {
     padding: 8px 15px;
 }
 
-.sport-menu-btn:hover {
-    color: white;
-}
-
-.dropdown-menu {
+.sports-dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    padding: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    border-radius: 12px;
+    padding: 20px;
     z-index: 1001;
-    min-width: 240px;
+    min-width: 280px;
     margin-top: 8px;
+    flex-direction: row;
+    gap: 30px;
 }
 
-.sport-competition-menu:hover .dropdown-menu {
-    display: block;
+.sport-competition-menu:hover .sports-dropdown-menu {
+    display: flex;
 }
 
 .sport-group {
-    margin-bottom: 15px;
+    min-width: 200px;
+    padding-right: 20px;
+    position: relative;
 }
 
-.sport-group:last-child {
-    margin-bottom: 0;
+.sport-group:not(:last-child) {
+    border-right: 1px solid #f0f4ff;
 }
 
 .sport-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-weight: 700;
     color: #112D4E;
-    margin-bottom: 8px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.competitions-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.12);
+    padding: 15px;
+    min-width: 220px;
+    z-index: 1002;
+    flex-direction: column;
+}
+
+.sport-group:hover .competitions-submenu {
+    display: flex;
+    animation: fadeIn 0.3s ease;
 }
 
 .competition-item {
     display: block;
-    padding: 8px 12px;
+    padding: 12px 15px;
     color: #112D4E;
     text-decoration: none;
     font-weight: 500;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: all 0.2s;
     margin-bottom: 5px;
     background: rgba(17,45,78,0.05);
+    white-space: nowrap;
     text-align: left;
 }
 
 .competition-item:hover {
     background: #3F72AF;
     color: white;
-    transform: translateX(4px);
+    transform: translateX(5px);
 }
 
-.sport-selector {
-    display: flex;
-    background: rgba(255,255,255,0.15);
-    border-radius: 30px;
-    padding: 4px;
-    overflow: hidden;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-.sport-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border-radius: 30px;
-    background: transparent;
-    color: rgba(255,255,255,0.9);
-    border: none;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: all 0.3s;
-    white-space: nowrap;
-}
-
-.sport-btn.active {
-    background: white;
-    color: #112D4E;
-    font-weight: 600;
-}
-
+/* Sport icons */
 .sport-icon {
-    font-size: 1.1em;
+    font-size: 1.4em;
+    width: 30px;
+    text-align: center;
 }
 
-.sport-label {
-    white-space: nowrap;
-}
-
-/* Header Navigation */
+/* ===== MAIN NAVIGATION ===== */
 .header-nav {
     display: flex;
     flex-grow: 1;
@@ -175,119 +168,48 @@ body {
     min-width: 0;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
 .header-nav-link {
     color: rgba(255,255,255,0.9);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95em;
     position: relative;
-    padding: 8px 0;
+    padding: 8px 15px;
     transition: all 0.3s;
-    display: inline-block;
 }
 
 .header-nav-link::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 0;
+    left: 15px;
+    width: calc(100% - 30px);
     height: 3px;
     background: #fff;
-    transition: width 0.3s;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
 }
 
-.header-nav-link:hover {
+.header-nav-link:hover,
+.header-nav-link.active {
     color: white;
 }
 
 .header-nav-link:hover::after,
 .header-nav-link.active::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
-.header-nav-link.active {
-    color: white;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    padding: 12px;
-    z-index: 1001;
-    min-width: 220px;
-    margin-top: 8px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.dropdown-item {
-    padding: 10px 16px;
-    color: #112D4E;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: all 0.2s;
-    background: rgba(17,45,78,0.05);
-    text-align: center;
-    white-space: nowrap;
-}
-
-.dropdown-item:hover {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
-}
-
-.dropdown-item.active {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 80px auto 30px;
-    padding: 0 15px;
-    width: 100%;
-    overflow: visible;
-}
-
+/* Controls adjustment */
 .controls {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
+    justify-content: flex-end;
     margin-bottom: 15px;
     background: white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.discipline-select {
-    width: 240px;
-    padding: 10px 15px;
-    border: 2px solid #112D4E;
-    border-radius: 6px;
-    font-size: 1em;
-    transition: all 0.3s;
-    background: white;
 }
 
 .gender-switch {
@@ -296,7 +218,6 @@ body {
     background: #f0f4ff;
     border-radius: 6px;
     padding: 5px;
-    flex-grow: 1;
 }
 
 .gender-btn {
@@ -316,32 +237,28 @@ body {
     font-weight: 600;
 }
 
-.ranking-table {
-    border-collapse: separate;
-    overflow: hidden;
+/* ===== TABLE STYLES ===== */
+.container {
+    max-width: 1200px;
+    margin: 80px auto 30px;
+    padding: 0 15px;
     width: 100%;
+}
+
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
     background: white;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    position: relative;
-    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .ranking-table th,
 .ranking-table td {
-    padding: 10px 12px;
+    padding: 12px 15px;
     text-align: center;
     border-bottom: 1px solid #eee;
-    vertical-align: middle;
-}
-
-.ranking-table th:first-child,
-.ranking-table td:first-child {
-    width: 60px;
-    min-width: 60px;
-    padding: 8px 4px !important;
-    color: #3F72AF;
-    font-weight: 800;
-    font-size: 1em;
 }
 
 .ranking-table th {
@@ -349,60 +266,56 @@ body {
     color: white;
     font-weight: 600;
     height: 48px;
-    padding: 8px 12px !important;
-    text-align: center;
 }
 
-.ranking-table th:nth-child(2) {
-    text-align: left !important;
-    padding-left: 16px !important;
+.ranking-table tbody tr {
+    transition: background 0.2s;
 }
 
-.ranking-table tr:hover {
+.ranking-table tbody tr:hover {
     background: #f8f9ff;
 }
 
-.ranking-table tr.top-athlete {
+.ranking-table tbody tr.top-athlete {
     background: #f0f4ff;
+}
+
+.ranking-table th:first-child,
+.ranking-table td:first-child {
+    width: 60px;
+    color: #3F72AF;
+    font-weight: 800;
 }
 
 .ranking-table th:first-child {
     color: white;
-    font-weight: 600;
-    font-size: 1em;
-}
-
-.ranking-table thead tr th:first-child {
-    border-top-left-radius: 8px;
-}
-
-.ranking-table thead tr th:last-child {
-    border-top-right-radius: 8px;
-}
-
-.ranking-table tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 8px;
-}
-
-.ranking-table tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 8px;
-}
-
-#ranking-table-container .error-message {
-    text-align: center;
-    padding: 40px;
-    color: #666;
-    font-size: 1.2em;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .name-cell {
-    position: relative;
-    cursor: pointer;
     text-align: left !important;
-    padding: 8px 12px !important;
+    cursor: pointer;
+    position: relative;
+}
+
+.avatar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.athlete-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #112D4E;
+}
+
+.athlete-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .athlete-name {
@@ -420,105 +333,17 @@ body {
 .year-points {
     color: #3F72AF;
     font-weight: 600;
-    position: relative;
-}
-
-.custom-tooltip {
-    display: none;
-    position: absolute;
-    background: #ffffff;
-    color: #112D4E;
-    padding: 8px;
-    border-radius: 6px;
-    min-width: 160px;
-    z-index: 1002;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transform: translateX(-50%);
-    left: 50%;
-    top: calc(100% + 8px);
-    font-size: 0.9em;
-}
-/* Стили для структурированных тултипов */
-.tooltip-event {
-    padding: 4px 0;
-}
-
-.tooltip-event:last-child {
-    border-bottom: none;
-}
-
-.event-title {
-    font-weight: 600;
-    color: #3F72AF;
-    margin-bottom: 2px;
-}
-
-.event-detail {
-    color: #666;
-    font-size: 0.85em;
-}
-
-.best-tooltip[data-tooltip]:hover::after {
-    max-width: 200px;
 }
 
 .total-points {
     color: #3F72AF;
     font-weight: 800;
     font-size: 1.1em;
-    padding-right: 20px !important;
 }
 
-.avatar-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.athlete-avatar {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    overflow: hidden;
-    background: #112D4E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.athlete-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.avatar-fallback {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 600;
-    font-size: 0.8em;
-}
-
-.athlete-avatar img[data-error] + .avatar-fallback {
-    display: flex;
-}
-
-.name-cell:hover .tooltip-item {
-    opacity: 1;
-    visibility: visible;
-}
-
+/* ===== TOOLTIPS ===== */
 .tooltip-item {
+    display: none;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -529,9 +354,9 @@ body {
     border-radius: 12px;
     box-shadow: 0 12px 24px rgba(0,0,0,0.15);
     z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.name-cell:hover .tooltip-item {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -541,7 +366,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
 }
 
 .tooltip-meta {
@@ -611,95 +435,60 @@ body {
     align-items: center;
     gap: 8px;
     transition: opacity 0.3s;
-    position: relative;
-    padding-left: 28px;
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .global-header {
-        padding: 8px 0;
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 900px) {
+    .container {
+        margin-top: 140px;
     }
 
+    .sports-dropdown-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sport-group {
+        padding-right: 0;
+        border-right: none !important;
+        border-bottom: 1px solid #f0f4ff;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .sport-group:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .competitions-submenu {
+        position: static;
+        box-shadow: none;
+        margin-top: 10px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
     .header-content {
         flex-direction: column;
         gap: 10px;
-        padding: 0 10px;
     }
 
-    .header-brand {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .header-controls {
-        order: 2;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .sport-selector {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .header-nav {
-        order: 3;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .dropdown {
-        width: 100%;
-        text-align: center;
-    }
-
-    .header-nav-link {
-        display: block;
-        padding: 10px 0;
-    }
-
-    .dropdown-menu {
-        position: static;
-        width: 100%;
-        margin-top: 5px;
-        box-shadow: none;
-        display: none;
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: flex;
+    .sports-dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
     }
 
     .container {
         margin-top: 160px;
-        padding: 0 10px;
-    }
-
-    .controls {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px;
-        margin-bottom: 10px;
-    }
-
-    .discipline-select,
-    .gender-switch {
-        width: 100%;
-    }
-
-    .gender-switch {
-        order: 1;
-    }
-
-    .discipline-select {
-        order: 2;
     }
 
     .ranking-table {
-        min-width: 100%;
-        overflow-x: auto;
         display: block;
+        overflow-x: auto;
     }
 
     .ranking-table th:nth-child(3),
@@ -710,31 +499,6 @@ body {
     .tooltip-item {
         width: 280px;
     }
-
-    .sport-label {
-        display: inline;
-    }
-
-    .sport-competition-menu {
-        width: 100%;
-        text-align: center;
-    }
-
-    .sport-menu-btn {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .dropdown-menu {
-        position: static;
-        width: 100%;
-        margin-top: 5px;
-        box-shadow: none;
-    }
-
-    .sport-group {
-        margin-bottom: 10px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -742,30 +506,24 @@ body {
         height: 30px;
     }
 
-    .sport-btn {
-        padding: 6px 10px;
-        font-size: 0.85em;
-    }
-
-    .sport-icon {
-        font-size: 1em;
-    }
-
     .container {
-        margin-top: 190px;
+        margin-top: 180px;
     }
 
-    .athlete-name {
+    .ranking-table th,
+    .ranking-table td {
+        padding: 10px 8px;
         font-size: 0.9em;
-    }
-
-    .athlete-region {
-        font-size: 0.8em;
     }
 
     .tooltip-item {
         width: 250px;
         padding: 15px;
+    }
+
+    .tooltip-avatar {
+        width: 80px;
+        height: 80px;
     }
 
     .tooltip-name {
