@@ -9,35 +9,37 @@
 <body>
     <header class="global-header">
         <div class="header-content">
-            <!-- <div class="header-brand">
+            <div class="header-brand">
                 <a href="//topheats.ru" class="header-logo-link">
                     <img src="../../img/th-white-logo-min.png" alt="TopHeats" class="header-logo">
                 </a>
-            </div> -->
-
-            <div class="header-controls">
-                <div class="sport-selector">
-                    <button class="sport-btn active" data-sport="surfing">
-                        <span class="sport-icon">🏄</span>
-                        <span class="sport-label">Серфинг</span>
-                    </button>
-                    <button class="sport-btn" data-sport="wakesurfing">
-                        <span class="sport-icon">🌊</span>
-                        <span class="sport-label">Вейксерфинг</span>
-                    </button>
-                </div>
             </div>
 
-            <!-- <nav class="header-nav">
-                <div class="dropdown">
-                    <a href="#" class="header-nav-link active">Рейтинг</a>
+            <nav class="header-nav">
+                <!-- Комбинированное меню спорта и соревнований -->
+                <div class="dropdown sport-competition-menu">
+                    <button class="sport-menu-btn header-nav-link">
+                        Рейтинг ▼
+                    </button>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-competition="rfs/rus">Чемпионат России</a>
-                        <a href="#" class="dropdown-item" data-competition="rfs/kaliningrad">Чемпионат Калининградской области</a>
-                        <a href="#" class="dropdown-item" data-competition="coldwater">Балтийский серф-контест</a>
+                        <!-- Серфинг -->
+                        <div class="sport-group" data-sport="surfing">
+                            <div class="sport-header">Серфинг</div>
+                            <a href="#" class="dropdown-item competition-item" data-competition="rfs/rus">Чемпионат России</a>
+                            <a href="#" class="dropdown-item competition-item" data-competition="rfs/kaliningrad">Чемпионат Калининградской области</a>
+                            <a href="#" class="dropdown-item competition-item" data-competition="coldwater">Балтийский серф-контест</a>
+                        </div>
+
+                        <!-- Вейксерфинг -->
+                        <div class="sport-group" data-sport="wakesurfing">
+                            <div class="sport-header">Вейксерфинг</div>
+                            <a href="#" class="dropdown-item competition-item" data-competition="rfs/rus">Чемпионат России</a>
+                        </div>
                     </div>
                 </div>
-            </nav> -->
+            </nav>
+
+            <div class="header-controls"></div>
         </div>
     </header>
 

@@ -54,6 +54,81 @@ body {
     flex-shrink: 0;
 }
 
+
+.sport-competition-menu {
+    position: relative;
+}
+
+.sport-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+    font-size: 0.95em;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+
+.sport-menu-btn:hover {
+    color: white;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 15px;
+    z-index: 1001;
+    min-width: 240px;
+    margin-top: 8px;
+}
+
+.sport-competition-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.sport-group {
+    margin-bottom: 15px;
+}
+
+.sport-group:last-child {
+    margin-bottom: 0;
+}
+
+.sport-header {
+    font-weight: 700;
+    color: #112D4E;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.competition-item {
+    display: block;
+    padding: 8px 12px;
+    color: #112D4E;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s;
+    margin-bottom: 5px;
+    background: rgba(17,45,78,0.05);
+    text-align: left;
+}
+
+.competition-item:hover {
+    background: #3F72AF;
+    color: white;
+    transform: translateX(4px);
+}
+
 .sport-selector {
     display: flex;
     background: rgba(255,255,255,0.15);
@@ -638,6 +713,27 @@ body {
 
     .sport-label {
         display: inline;
+    }
+
+    .sport-competition-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sport-menu-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        margin-top: 5px;
+        box-shadow: none;
+    }
+
+    .sport-group {
+        margin-bottom: 10px;
     }
 }
 
