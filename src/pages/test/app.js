@@ -94,10 +94,10 @@ domReady(function() {
                 <td class="name-cell">
                     <div class="avatar-wrapper">
                         <div class="athlete-avatar">
-                            // <img src="${avatarPath}"
-                            //      alt="${athlete.name}"
-                            //      onerror="this.style.display='none';
-                            //               this.nextElementSibling.style.display='flex'">
+                            <img src="${avatarPath}"
+                                 alt="${athlete.name}"
+                                 onerror="this.style.display='none';
+                                          this.nextElementSibling.style.display='flex'">
                             <div class="avatar-fallback">${initials}</div>
                         </div>
                         <div>
