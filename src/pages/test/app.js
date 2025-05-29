@@ -1,14 +1,27 @@
 const JSON_BASE_PATH = '../../data/rankings/';
 const transliterate = window.slugify;
 
-let currentCompetition = 'rus';
+let currentCompetition = 'rfs/rus';
 
 function getYearsRange(data) {
+    if (!data.athletes) return [];
+
     const years = new Set();
     data.athletes.forEach(athlete => {
-        Object.keys(athlete.years || {}).forEach(year => years.add(year));
+        if (athlete.years) {
+            Object.keys(athlete.years).forEach(year => years.add(year));
+        }
     });
     return Array.from(years).sort((a, b) => a - b);
+}
+
+async function checkAvatarExists(url) {
+    try {
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+    } catch (error) {
+        return false;
+    }
 }
 
 function createAthleteRow(athlete, years) {
@@ -21,8 +34,22 @@ function createAthleteRow(athlete, years) {
     const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
     const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
 
+    const avatarExists = await checkAvatarExists(avatarPath);
+
+    let avatarHTML;
+    if (avatarExists) {
+        avatarHTML = `
+            <img src="${avatarPath}" alt="${athlete.name}"
+                 onerror="this.style.display='none';
+                          this.nextElementSibling.style.display='flex'">
+            <div class="avatar-fallback" style="display: none">${initials}</div>
+        `;
+    } else {
+        avatarHTML = `<div class="avatar-fallback">${initials}</div>`;
+    }
+
     const yearCells = years.map(year => {
-        const yearData = athlete.years[year];
+        const yearData = athlete.years?.[year];
         const events = yearData?.events || [];
         const tooltipId = `tooltip-${athlete.rank}-${year}`;
 
@@ -54,11 +81,7 @@ function createAthleteRow(athlete, years) {
             <td class="name-cell">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
-                        <img src="${avatarPath}"
-                             alt="${athlete.name}"
-                             onerror="this.style.display='none';
-                                      this.nextElementSibling.style.display='flex'">
-                        <div class="avatar-fallback">${initials}</div>
+                        ${avatarHTML}
                     </div>
                     <div>
                         <div class="athlete-name">${athlete.name}</div>
@@ -109,18 +132,31 @@ function createAthleteRow(athlete, years) {
 }
 
 async function loadData(competition, category, gender) {
-    const path = `${JSON_BASE_PATH}${competition}/${category}_${gender}.json?t=${Date.now()}`;
+    const path = `${JSON_BASE_PATH}${competition}/${category}/${gender}.json?t=${Date.now()}`;
     try {
         const response = await fetch(path);
         return await response.json();
-    } catch {
+    } catch (error) {
+        console.error('Error loading data:', error);
         return { headers: [], athletes: [] };
     }
 }
 
 async function updateTable(competition, category, gender) {
     const data = await loadData(competition, category, gender);
+
+    if (!data || !data.athletes) {
+        console.error('No data available');
+        document.getElementById('ranking-table-container').innerHTML = '<p>Нет данных для отображения</p>';
+        return;
+    }
+
     const years = getYearsRange(data);
+    const athleteRows = [];
+
+    for (const athlete of data.athletes) {
+        athleteRows.push(await createAthleteRow(athlete, years));
+    }
 
     const tableHTML = `
         <table class="ranking-table">
@@ -134,7 +170,7 @@ async function updateTable(competition, category, gender) {
                 </tr>
             </thead>
             <tbody>
-                ${data.athletes.map(a => createAthleteRow(a, years)).join('')}
+                ${athleteRows.join('')}
             </tbody>
         </table>
     `;
@@ -176,7 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Обработчики для выбора соревнования
     document.querySelectorAll('.dropdown-item[data-competition]').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
@@ -194,6 +229,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Первая загрузка
     updateTable(currentCompetition, category, gender);
 });
