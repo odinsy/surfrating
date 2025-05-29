@@ -45,7 +45,8 @@ domReady(function() {
                 Object.keys(athlete.years).forEach(year => years.add(year));
             }
         });
-        return Array.from(years).sort((a, b) => b - a); // Сортировка от нового к старому
+        // Исправленный порядок: по возрастанию (старые слева, новые справа)
+        return Array.from(years).sort((a, b) => a - b);
     }
 
     function createAthleteRow(athlete, years) {
@@ -53,7 +54,7 @@ domReady(function() {
             ? `${athlete.best_result.place} в ${athlete.best_result.year}`
             : 'Нет данных';
 
-        const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
+      const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
         const initials = (surname[0] || '') + (firstName[0] || '');
         const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
         const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
