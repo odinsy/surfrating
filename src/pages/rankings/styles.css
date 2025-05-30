@@ -484,7 +484,7 @@ body {
     border-radius: 4px;
     transition: all 0.2s;
     background: rgba(17,45,78,0.05);
-    text-align: center;
+    text-align: start;
     white-space: nowrap;
 }
 
@@ -689,7 +689,7 @@ body {
     .container {
         margin-top: 160px; /* Адаптация для маленьких экранов */
     }
-  
+
     .tooltip-item {
         display: none !important;
     }
