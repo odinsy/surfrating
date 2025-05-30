@@ -58,7 +58,7 @@ function getYearsRange(data) {
     return Array.from(years).sort((a, b) => b - a);
 }
 
-function createAthleteRow(athlete, years) {
+function createAthleteRow(athlete, years, displayRank) {
     const bestResult = athlete.best_result
         ? `${athlete.best_result.place} в ${athlete.best_result.year}`
         : 'Нет данных';
@@ -96,8 +96,8 @@ function createAthleteRow(athlete, years) {
     }).join('');
 
     return `
-        <tr class="${athlete.rank <= 10 ? 'top-athlete' : ''}">
-            <td>${athlete.rank}</td>
+        <tr class="${displayRank <= 10 ? 'top-athlete' : ''}">
+            <td>${displayRank}</td>
             <td class="name-cell">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
@@ -253,6 +253,28 @@ function renderTable() {
         yearsToShow = [currentYear];
     }
 
+    // Создаем копию спортсменов для сортировки
+    let athletes = [...currentData.athletes];
+
+    // Сортируем по выбранному году
+    if (currentYear !== 'all') {
+        athletes.sort((a, b) => {
+            // Получаем результаты за выбранный год
+            const aYearData = a.years?.[currentYear];
+            const bYearData = b.years?.[currentYear];
+
+            // Если у одного есть данные за год, а у другого нет
+            if (aYearData && !bYearData) return -1;
+            if (!aYearData && bYearData) return 1;
+
+            // Если у обоих нет данных за год, сохраняем исходный порядок
+            if (!aYearData && !bYearData) return 0;
+
+            // Сравниваем по сумме очков за год
+            return bYearData.year_total_points - aYearData.year_total_points;
+        });
+    }
+
     const tableHTML = `
         <table class="ranking-table">
             <thead>
@@ -265,7 +287,11 @@ function renderTable() {
                 </tr>
             </thead>
             <tbody>
-                ${currentData.athletes.map(a => createAthleteRow(a, yearsToShow)).join('')}
+                ${athletes.map((athlete, index) => {
+                    // Для выбранного года используем новую позицию в сортировке
+                    const displayRank = currentYear === 'all' ? athlete.rank : index + 1;
+                    return createAthleteRow(athlete, yearsToShow, displayRank);
+                }).join('')}
             </tbody>
         </table>
     `;
