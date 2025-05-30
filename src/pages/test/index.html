@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полный рейтинг спортсменов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="global-header">
+        <div class="header-content">
+            <nav class="header-nav">
+                <div class="dropdown">
+                    <a href="#" class="header-nav-link active">Рейтинг</a>
+                    <div class="dropdown-menu">
+                        <!-- Выбор дисциплины -->
+                        <div class="dropdown-section">
+                            <div class="dropdown-section-title">Дисциплина</div>
+                            <a href="#" class="dropdown-item" data-discipline="shortboard">Короткая доска</a>
+                            <a href="#" class="dropdown-item" data-discipline="longboard">Длинная доска</a>
+                            <a href="#" class="dropdown-item" data-discipline="wakesurfing">Вейксерфинг</a>
+                            <a href="#" class="dropdown-item" data-discipline="wakeskim">Вейкским</a>
+                        </div>
+
+                        <!-- Выбор соревнований (будет обновляться динамически) -->
+                        <div class="dropdown-section">
+                            <div class="dropdown-section-title">Соревнование</div>
+                            <div id="competition-dropdown"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <!-- Селектор соревнований -->
+            <select id="competition-select" class="competition-select">
+                <!-- Будет заполняться динамически -->
+            </select>
+
+            <!-- Селектор года -->
+            <select id="year-select" class="year-select">
+                <option value="all">Все года</option>
+                <!-- Года будут заполняться динамически -->
+            </select>
+
+            <div class="gender-switch">
+                <button class="gender-btn active" data-gender="men">Мужчины</button>
+                <button class="gender-btn" data-gender="women">Женщины</button>
+            </div>
+        </div>
+
+        <div id="ranking-table-container"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/transliteration@2.3.5/dist/browser/bundle.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
