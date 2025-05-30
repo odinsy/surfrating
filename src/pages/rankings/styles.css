@@ -10,15 +10,21 @@ body {
     padding: 15px;
 }
 
+/* ===== HEADER STRUCTURE ===== */
 .global-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background: #112D4E;
-    z-index: 1000;
-    padding: 12px 0;
+    z-index: 1100;
+    padding: 15px 0; /* Увеличенный отступ */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+    height: 60px; /* Увеличенная высота */
+    width: auto;
 }
 
 .header-content {
@@ -34,11 +40,6 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.header-logo {
-    height: 40px;
-    width: auto;
 }
 
 .header-controls {
@@ -66,8 +67,8 @@ body {
     gap: 35px;
     margin-left: 40px;
     flex: 1;
-    align-items: center; /* Добавлено */
-    position: relative; /* Добавлено */
+    align-items: center;
+    position: relative;
 }
 
 .header-nav-link {
@@ -107,7 +108,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     width: 100%;
     margin-top: 60px;
     overflow: visible;
@@ -119,7 +120,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .discipline-select {
@@ -483,7 +484,7 @@ body {
     border-radius: 4px;
     transition: all 0.2s;
     background: rgba(17,45,78,0.05);
-    text-align: center;
+    text-align: start;
     white-space: nowrap;
 }
 
@@ -536,7 +537,7 @@ body {
     }
 
     .container {
-        margin-top: 140px;
+        margin-top: 120px;
     }
 
     .controls {
@@ -661,6 +662,12 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        margin-top: 140px; /* Адаптация для мобильных */
+    }
+}
+
 @media (max-width: 480px) {
     .header-title-block h1 {
         font-size: 1.2em;
@@ -677,6 +684,10 @@ body {
 
     .header-nav-link {
         font-size: 0.85em;
+    }
+
+    .container {
+        margin-top: 160px; /* Адаптация для маленьких экранов */
     }
 
     .tooltip-item {

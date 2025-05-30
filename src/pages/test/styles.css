@@ -10,15 +10,21 @@ body {
     padding: 15px;
 }
 
+/* ===== HEADER STRUCTURE ===== */
 .global-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background: #112D4E;
-    z-index: 1000;
-    padding: 12px 0;
+    z-index: 1100;
+    padding: 15px 0; /* Увеличенный отступ */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+    height: 60px; /* Увеличенная высота */
+    width: auto;
 }
 
 .header-content {
@@ -34,11 +40,6 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.header-logo {
-    height: 40px;
-    width: auto;
 }
 
 .header-controls {
@@ -66,8 +67,8 @@ body {
     gap: 35px;
     margin-left: 40px;
     flex: 1;
-    align-items: center; /* Добавлено */
-    position: relative; /* Добавлено */
+    align-items: center;
+    position: relative;
 }
 
 .header-nav-link {
@@ -107,7 +108,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     width: 100%;
     margin-top: 60px;
     overflow: visible;
@@ -119,7 +120,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .discipline-select {
@@ -207,7 +208,6 @@ body {
     font-size: 1em;
 }
 
-/* Радиусы скругления */
 .ranking-table thead tr th:first-child {
     border-top-left-radius: 8px;
 }
@@ -222,6 +222,16 @@ body {
 
 .ranking-table tbody tr:last-child td:last-child {
     border-bottom-right-radius: 8px;
+}
+
+#ranking-table-container .error-message {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.2em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .name-cell {
@@ -474,7 +484,7 @@ body {
     border-radius: 4px;
     transition: all 0.2s;
     background: rgba(17,45,78,0.05);
-    text-align: center;
+    text-align: start;
     white-space: nowrap;
 }
 
@@ -527,7 +537,7 @@ body {
     }
 
     .container {
-        margin-top: 140px;
+        margin-top: 120px;
     }
 
     .controls {
@@ -626,11 +636,35 @@ body {
 
     .dropdown-menu {
         position: static;
-        display: none !important;
+        display: flex !important;
+        flex-direction: column;
+        box-shadow: none;
+        background: transparent;
+        padding: 8px 0;
+    }
+
+    .dropdown-item {
+        background: rgba(255,255,255,0.15);
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .dropdown-item.active {
+        background: rgba(255,255,255,0.3);
     }
 
     .dropdown:hover .dropdown-menu {
         display: none !important;
+    }
+
+    #ranking-table-container .error-message {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 140px; /* Адаптация для мобильных */
     }
 }
 
@@ -652,11 +686,67 @@ body {
         font-size: 0.85em;
     }
 
+    .container {
+        margin-top: 160px; /* Адаптация для маленьких экранов */
+    }
+
     .tooltip-item {
         display: none !important;
     }
 
     .tooltip-name {
         font-size: 1em;
+    }
+
+    .dropdown-item {
+        font-size: 0.85em;
+        padding: 8px 12px;
+    }
+}
+
+
+/* Добавленные стили */
+.dropdown-section {
+    margin-bottom: 12px;
+}
+
+.dropdown-section-title {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #112D4E;
+    margin-bottom: 6px;
+    padding-left: 8px;
+}
+
+.discipline-select,
+.competition-select,
+.year-select {
+    width: 240px;
+    padding: 10px 15px;
+    border: 2px solid #112D4E;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .discipline-select,
+    .competition-select,
+    .year-select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .gender-switch {
+        width: 100%;
     }
 }

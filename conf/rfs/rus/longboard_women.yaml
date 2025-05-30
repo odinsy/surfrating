@@ -1,6 +1,0 @@
-input_paths:
-  - "data/rfs/competitions/rus/longboard/longboard_women_*.csv"
-
-output:
-  filename: processed/rankings/rfs/rus/longboard/women.csv
-  top5_filename: processed/rankings/rfs/rus/longboard/top5/women.csv

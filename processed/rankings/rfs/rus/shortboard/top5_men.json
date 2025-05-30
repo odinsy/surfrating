@@ -1,0 +1,740 @@
+{
+  "headers": [
+    "Rank",
+    "Name",
+    "Sport Rank",
+    "Birthday",
+    "Region",
+    "Category",
+    "2017",
+    "2018",
+    "2019",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "Total Points"
+  ],
+  "athletes": [
+    {
+      "name": "Авдеев Никита",
+      "rank": 1,
+      "birthday": 2000,
+      "region": "Камчатский край",
+      "category": "мужчины",
+      "sport_rank": "МС",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2024",
+        "place": 1,
+        "points": 10000
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 2621,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 1,
+              "points": 2621,
+              "group": "main",
+              "participants_count": 20
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 6400,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 1,
+              "points": 6400,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 3994,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 2,
+              "points": 3994,
+              "group": "main",
+              "participants_count": 25
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 3277,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 1,
+              "points": 3277,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 26292
+    },
+    {
+      "name": "Исаков Евгений",
+      "rank": 2,
+      "birthday": 1983,
+      "region": "Калининградская область",
+      "category": "мужчины",
+      "sport_rank": "МС",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2023",
+        "place": 2,
+        "points": 6240
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 1244,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 5,
+              "points": 1244,
+              "group": "main",
+              "participants_count": 20
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 3894,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 3,
+              "points": 3894,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 1700,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 9,
+              "points": 1700,
+              "group": "main",
+              "participants_count": 25
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 10,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        },
+        "2017": {
+          "year_total_points": 1636,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 2,
+              "points": 1636,
+              "group": "main",
+              "participants_count": 16
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 6240,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 2,
+              "points": 6240,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        }
+      },
+      "total_points": 18034
+    },
+    {
+      "name": "Зылев Даниил",
+      "rank": 3,
+      "birthday": 1982,
+      "region": "Москва",
+      "category": "мужчины",
+      "sport_rank": "2",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2023",
+        "place": 3,
+        "points": 4868
+      },
+      "years": {
+        "2022": {
+          "year_total_points": 3037,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 6,
+              "points": 3037,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 1700,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 11,
+              "points": 1700,
+              "group": "main",
+              "participants_count": 25
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 1994,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 3,
+              "points": 1994,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 4868,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 3,
+              "points": 4868,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        }
+      },
+      "total_points": 16344
+    },
+    {
+      "name": "Какурин Эльдар",
+      "rank": 4,
+      "birthday": 1983,
+      "region": "Москва",
+      "category": "мужчины",
+      "sport_rank": "2",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2023",
+        "place": 1,
+        "points": 8000
+      },
+      "years": {
+        "2022": {
+          "year_total_points": 2125,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 14,
+              "points": 2125,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 7,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        },
+        "2017": {
+          "year_total_points": 995,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 7,
+              "points": 995,
+              "group": "main",
+              "participants_count": 16
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 8000,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 1,
+              "points": 8000,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        }
+      },
+      "total_points": 15865
+    },
+    {
+      "name": "Павликов Константин",
+      "rank": 5,
+      "birthday": 1984,
+      "region": "Санкт-Петербург",
+      "category": "мужчины",
+      "sport_rank": "1",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2023",
+        "place": 4,
+        "points": 4548
+      },
+      "years": {
+        "2022": {
+          "year_total_points": 2125,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 13,
+              "points": 2125,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 1700,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 10,
+              "points": 1700,
+              "group": "main",
+              "participants_count": 25
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 8,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 1088,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 9,
+              "points": 1088,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2017": {
+          "year_total_points": 995,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 8,
+              "points": 995,
+              "group": "main",
+              "participants_count": 16
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 4548,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 4,
+              "points": 4548,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        }
+      },
+      "total_points": 15201
+    },
+    {
+      "name": "Волков Егор",
+      "rank": 6,
+      "birthday": 2000,
+      "region": "Санкт-Петербург",
+      "category": "мужчины",
+      "sport_rank": "КМС",
+      "last_year": 2022,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2021",
+        "place": 1,
+        "points": 5120
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 1490,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 4,
+              "points": 1490,
+              "group": "main",
+              "participants_count": 20
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 4992,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 2,
+              "points": 4992,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 5120,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 1,
+              "points": 5120,
+              "group": "main",
+              "participants_count": 25
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 2556,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 2,
+              "points": 2556,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 14158
+    },
+    {
+      "name": "Расшиваев Сергей",
+      "rank": 7,
+      "birthday": 1984,
+      "region": "Санкт-Петербург",
+      "category": "мужчины",
+      "sport_rank": "3",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2017",
+        "place": 1,
+        "points": 2097
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 2045,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 2,
+              "points": 2045,
+              "group": "main",
+              "participants_count": 20
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 3037,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 5,
+              "points": 3037,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 1700,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 14,
+              "points": 1700,
+              "group": "main",
+              "participants_count": 25
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 12,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 1863,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 4,
+              "points": 1863,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2017": {
+          "year_total_points": 2097,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 1,
+              "points": 2097,
+              "group": "main",
+              "participants_count": 16
+            }
+          ]
+        }
+      },
+      "total_points": 14062
+    },
+    {
+      "name": "Суворов Алексей",
+      "rank": 8,
+      "birthday": 1986,
+      "region": "Приморский край",
+      "category": "мужчины",
+      "sport_rank": "2",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2023",
+        "place": 6,
+        "points": 3796
+      },
+      "years": {
+        "2022": {
+          "year_total_points": 1216,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 17,
+              "points": 1216,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 973,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 17,
+              "points": 973,
+              "group": "main",
+              "participants_count": 25
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 13,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 3796,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 6,
+              "points": 3796,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        }
+      },
+      "total_points": 9305
+    },
+    {
+      "name": "Старков Андрей",
+      "rank": 9,
+      "birthday": 1985,
+      "region": "Москва",
+      "category": "мужчины",
+      "sport_rank": "3",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2021",
+        "place": 6,
+        "points": 2429
+      },
+      "years": {
+        "2022": {
+          "year_total_points": 3037,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 8,
+              "points": 3037,
+              "group": "main",
+              "participants_count": 26
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 2429,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 6,
+              "points": 2429,
+              "group": "main",
+              "participants_count": 25
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 0,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": "DNS",
+              "points": 0,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 3796,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 8,
+              "points": 3796,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        }
+      },
+      "total_points": 9262
+    },
+    {
+      "name": "Яковлев Денис",
+      "rank": 10,
+      "birthday": 1979,
+      "region": "Краснодарский край",
+      "category": "мужчины",
+      "sport_rank": "2",
+      "last_year": 2024,
+      "best_result": {
+        "event": "Чемпионат России",
+        "year": "2024",
+        "place": 2,
+        "points": 7800
+      },
+      "years": {
+        "2024": {
+          "year_total_points": 7800,
+          "events": [
+            {
+              "name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 27
+            }
+          ]
+        }
+      },
+      "total_points": 7800
+    }
+  ]
+}
