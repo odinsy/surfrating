@@ -19,13 +19,14 @@ const DISCIPLINE_CONFIG = {
     wakesurfing: {
         name: "Вейксерфинг",
         competitions: {
-            'rfs/fo': 'Чемпионат Федеральных округов'
+            'rfs/rus': 'Чемпионат России',
+            'rfs/cfo': 'Чемпионат Федеральных округов'
         }
     },
     wakeskim: {
         name: "Вейкским",
         competitions: {
-            'rfs/fo': 'Чемпионат Федеральных округов'
+            'rfs/cfo': 'Чемпионат Федеральных округов'
         }
     }
 };
