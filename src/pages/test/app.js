@@ -155,14 +155,14 @@ function createAthleteRow(athlete, years, displayRank) {
     `;
 }
 
-async function loadData(competition, category, gender) {
-    const path = `${JSON_BASE_PATH}${competition}/${category}/${gender}.json?t=${Date.now()}`;
+async function loadData(competition, discipline, gender) {
+    const path = `${JSON_BASE_PATH}${competition}/${discipline}/${gender}.json?t=${Date.now()}`;
     try {
         const response = await fetch(path);
         return await response.json();
     } catch (error) {
         console.error('Error loading data:', error);
-        return { headers: [], athletes: [] };
+        return null;
     }
 }
 
@@ -209,70 +209,41 @@ function updateCompetitionsSelect() {
     }
 }
 
-function updateYearSelect() {
+function updateYearSelect(data) {
     const yearSelect = document.getElementById('year-select');
-    yearSelect.innerHTML = '';
+    yearSelect.innerHTML = '<option value="all">Все года</option>';
 
-    // Опция "Все года"
-    const allOption = document.createElement('option');
-    allOption.value = 'all';
-    allOption.textContent = 'Все года';
-    allOption.selected = currentYear === 'all';
-    yearSelect.appendChild(allOption);
-
-    if (currentData) {
-        const years = getYearsRange(currentData);
+    if (data && data.year_rankings) {
+        const years = Object.keys(data.year_rankings).sort().reverse();
         years.forEach(year => {
             const option = document.createElement('option');
             option.value = year;
             option.textContent = year;
-            if (year === currentYear) {
-                option.selected = true;
-            }
             yearSelect.appendChild(option);
         });
     }
 }
-
 async function loadDataAndUpdateTable() {
     currentData = await loadData(currentCompetition, currentDiscipline, currentGender);
     updateYearSelect();
     renderTable();
 }
 
-function renderTable() {
-    if (!currentData || !currentData.athletes) {
+function renderTable(data) {
+    if (!data || !data.year_rankings || !data.overall_ranking) {
         document.getElementById('ranking-table-container').innerHTML = '<p>Нет данных для отображения</p>';
         return;
     }
 
-    let yearsToShow = [];
-    if (currentYear === 'all') {
-        yearsToShow = getYearsRange(currentData).sort((a, b) => a - b); // Старые -> новые
-    } else {
-        yearsToShow = [currentYear];
-    }
+    let athletes = [];
+    const years = Object.keys(data.year_rankings).sort().reverse();
 
-    // Создаем копию спортсменов для сортировки
-    let athletes = [...currentData.athletes];
-
-    // Сортируем по выбранному году
-    if (currentYear !== 'all') {
-        athletes.sort((a, b) => {
-            // Получаем результаты за выбранный год
-            const aYearData = a.years?.[currentYear];
-            const bYearData = b.years?.[currentYear];
-
-            // Если у одного есть данные за год, а у другого нет
-            if (aYearData && !bYearData) return -1;
-            if (!aYearData && bYearData) return 1;
-
-            // Если у обоих нет данных за год, сохраняем исходный порядок
-            if (!aYearData && !bYearData) return 0;
-
-            // Сравниваем по сумме очков за год
-            return bYearData.year_total_points - aYearData.year_total_points;
-        });
+    if (currentYear === "all") {
+        // Отображаем общий рейтинг
+        athletes = data.overall_ranking;
+    } else if (data.year_rankings[currentYear]) {
+        // Отображаем рейтинг за конкретный год
+        athletes = data.year_rankings[currentYear].athletes;
     }
 
     const tableHTML = `
@@ -280,18 +251,30 @@ function renderTable() {
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Best</th>
-                    ${yearsToShow.map(year => `<th>${year}</th>`).join('')}
-                    <th>Total</th>
+                    <th>Спортсмен</th>
+                    <th>Регион</th>
+                    <th>${currentYear === "all" ? "Общие очки" : "Очки за год"}</th>
+                    ${currentYear === "all" ? "" : `<th>Общие очки</th>`}
                 </tr>
             </thead>
             <tbody>
-                ${athletes.map((athlete, index) => {
-                    // Для выбранного года используем новую позицию в сортировке
-                    const displayRank = currentYear === 'all' ? athlete.rank : index + 1;
-                    return createAthleteRow(athlete, yearsToShow, displayRank);
-                }).join('')}
+                ${athletes.map(athlete => `
+                    <tr class="${athlete.rank <= 10 ? 'top-athlete' : ''}">
+                        <td>${athlete.rank}</td>
+                        <td class="name-cell">
+                            <div class="athlete-name">${athlete.name}</div>
+                        </td>
+                        <td>${currentYear === "all" ? athlete.region : ""}</td>
+                        <td class="total-points">${
+                            currentYear === "all"
+                                ? athlete.total_points
+                                : athlete.year_points
+                        }</td>
+                        ${currentYear === "all" ? "" : `
+                            <td class="total-points">${athlete.total_points}</td>
+                        `}
+                    </tr>
+                `).join('')}
             </tbody>
         </table>
     `;
@@ -329,45 +312,58 @@ async function updateTable(competition, category, gender) {
     document.getElementById('ranking-table-container').innerHTML = tableHTML;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Инициализация элементов
-    updateCompetitionsDropdown();
-    updateCompetitionsSelect();
+document.addEventListener('DOMContentLoaded', async () => {
+    const data = await loadData(currentCompetition, currentDiscipline, currentGender);
+    if (data) {
+        updateYearSelect(data);
+        renderTable(data);
+    }
 
-    // Обработчики событий
-    document.getElementById('competition-select').addEventListener('change', function() {
-        currentCompetition = this.value;
-        loadDataAndUpdateTable();
-    });
-
+    // Обработчик изменения года
     document.getElementById('year-select').addEventListener('change', function() {
         currentYear = this.value;
-        renderTable();
+        renderTable(data);
+    });
+
+    // Обработчики для других элементов управления
+    document.getElementById('discipline-select').addEventListener('change', async function() {
+        currentDiscipline = this.value;
+        const newData = await loadData(currentCompetition, currentDiscipline, currentGender);
+        if (newData) {
+            updateYearSelect(newData);
+            renderTable(newData);
+        }
     });
 
     document.querySelectorAll('.gender-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', async function() {
             document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             currentGender = this.dataset.gender;
-            loadDataAndUpdateTable();
+            const newData = await loadData(currentCompetition, currentDiscipline, currentGender);
+            if (newData) {
+                updateYearSelect(newData);
+                renderTable(newData);
+            }
         });
     });
 
-    // Обработчики для выбора дисциплины
-    document.querySelectorAll('.dropdown-item[data-discipline]').forEach(item => {
-        item.addEventListener('click', function(e) {
+    // Обработчики для выбора соревнований
+    document.querySelectorAll('.dropdown-item[data-competition]').forEach(item => {
+        item.addEventListener('click', async function(e) {
             e.preventDefault();
-            currentDiscipline = this.dataset.discipline;
-            currentCompetition = Object.keys(DISCIPLINE_CONFIG[currentDiscipline].competitions)[0];
+            currentCompetition = this.dataset.competition;
 
-            // Обновление UI
-            updateCompetitionsDropdown();
-            updateCompetitionsSelect();
-            loadDataAndUpdateTable();
+            // Обновляем активный класс
+            document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+
+            // Обновляем таблицу
+            const newData = await loadData(currentCompetition, currentDiscipline, currentGender);
+            if (newData) {
+                updateYearSelect(newData);
+                renderTable(newData);
+            }
         });
     });
-
-    // Первоначальная загрузка данных
-    loadDataAndUpdateTable();
 });

@@ -500,6 +500,21 @@ body {
     transform: translateX(4px);
 }
 
+/* Добавить в конец файла */
+.ranking-table td, .ranking-table th {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.ranking-table .name-cell {
+    text-align: left;
+}
+
+.total-points {
+    font-weight: bold;
+    color: #112D4E;
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
