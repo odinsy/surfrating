@@ -23,7 +23,7 @@ body {
 }
 
 .header-logo {
-    height: 45px; /* Увеличенная высота */
+    height: 60px; /* Увеличенная высота */
     width: auto;
 }
 
@@ -67,8 +67,8 @@ body {
     gap: 35px;
     margin-left: 40px;
     flex: 1;
-    align-items: center; /* Добавлено */
-    position: relative; /* Добавлено */
+    align-items: center;
+    position: relative;
 }
 
 .header-nav-link {
@@ -120,7 +120,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .discipline-select {
