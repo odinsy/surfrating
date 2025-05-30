@@ -2,5 +2,5 @@ input_paths:
   - data/rfs/surfing/kaliningrad/longboard/longboard-women-*.csv
 
 output:
-  filename: processed/rankings/surfing/rfs/kaliningrad/longboard/women.csv
-  top5_filename: processed/rankings/surfing/rfs/kaliningrad/longboard/top5_women.csv
+  filename: output/rankings/surfing/rfs/kaliningrad/longboard/women.csv
+  top5_filename: output/rankings/surfing/rfs/kaliningrad/longboard/top5_women.csv

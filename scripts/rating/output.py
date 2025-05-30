@@ -1,5 +1,7 @@
 import csv
 import json
+from datetime import datetime
+from collections import defaultdict
 from pathlib import Path
 from typing import List, Dict
 
@@ -83,6 +85,58 @@ def save_to_json(results: List[Dict], headers: List[str], config: Dict, output_f
             'athletes': json_athletes
         }, f, ensure_ascii=False, indent=2)
 
+def save_ranking_json(results: List[Dict], config: Dict, output_filename: str = None) -> None:
+    transformed = {
+        "discipline": config.get("discipline", "unknown"),
+        "gender": config.get("gender", "unknown"),
+        "last_updated": datetime.now().isoformat(),
+        "year_rankings": {},
+        "overall_ranking": []
+    }
+
+    year_athletes = defaultdict(list)
+    for athlete in results:
+        overall_entry = {
+            "rank": athlete["rank"],
+            "name": athlete["name"],
+            "region": athlete["region"],
+            "sport_rank": athlete["sport_rank"],
+            "birthday": athlete["birthday"],
+            "total_points": athlete["total_points"],
+            "best_result": athlete.get("best_result", {}),
+            "last_year": athlete["last_year"],
+            "years_participated": list(athlete["years"].keys())
+        }
+        transformed["overall_ranking"].append(overall_entry)
+
+        for year, year_data in athlete.get("years", {}).items():
+            year_entry = {
+                "name": athlete["name"],
+                "year_points": year_data["year_total_points"],
+                "total_points": athlete["total_points"],
+                "events": year_data["events"]
+            }
+            year_athletes[year].append(year_entry)
+
+    for year, athletes in year_athletes.items():
+        athletes.sort(key=lambda x: x["year_points"], reverse=True)
+
+        current_rank = 1
+        prev_points = None
+        for i, athlete in enumerate(athletes):
+            if athlete["year_points"] != prev_points:
+                current_rank = i + 1
+            athlete["rank"] = current_rank
+            prev_points = athlete["year_points"]
+
+        transformed["year_rankings"][year] = {"athletes": athletes}
+
+    if not output_filename:
+        output_filename = f"{config['discipline']}_{config['gender']}.json"
+
+    with open(output_filename, "w", encoding="utf-8") as f:
+        json.dump(transformed, f, ensure_ascii=False, indent=2)
+
 def print_to_console(results: List[Dict], headers: List[str], years: List[int], config: Dict) -> None:
     print(','.join(map(str, headers)))
     for athlete in results[:config['top_n']]:
@@ -97,6 +151,7 @@ def generate_output(results: List[Dict], config: Dict) -> None:
 
     save_to_csv(results, headers, years, config)
     save_to_json(results, headers, config)
+    save_ranking_json(results, config, config["output"].get("ranking_json"))
     print_to_console(results, headers, years, config)
 
     if 'top5_filename' in config['output']:
