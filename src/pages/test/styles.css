@@ -105,6 +105,18 @@ body {
     color: white;
 }
 
+.dropdown-section {
+    margin-bottom: 12px;
+}
+
+.dropdown-section-title {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #112D4E;
+    margin-bottom: 6px;
+    padding-left: 8px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -114,13 +126,24 @@ body {
     overflow: visible;
 }
 
+.discipline-select,
+.competition-select,
+.year-select {
+    width: 240px;
+    padding: 10px 15px;
+    border: 2px solid #112D4E;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
 .controls {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .discipline-select {
@@ -717,40 +740,6 @@ body {
         font-size: 0.85em;
         padding: 8px 12px;
     }
-}
-
-
-/* Добавленные стили */
-.dropdown-section {
-    margin-bottom: 12px;
-}
-
-.dropdown-section-title {
-    font-weight: 600;
-    font-size: 0.9em;
-    color: #112D4E;
-    margin-bottom: 6px;
-    padding-left: 8px;
-}
-
-.discipline-select,
-.competition-select,
-.year-select {
-    width: 240px;
-    padding: 10px 15px;
-    border: 2px solid #112D4E;
-    border-radius: 6px;
-    font-size: 1em;
-    transition: all 0.3s;
-    margin-right: 10px;
-}
-
-.controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
