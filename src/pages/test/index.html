@@ -3,94 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рейтинг серфингистов</title>
+    <title>Рейтинг серфингистов России</title>
     <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <el-container>
             <el-header class="header">
-                <h1>Рейтинг серфингистов</h1>
+                <div class="header-top">
+                    <h1>Рейтинг серфингистов</h1>
+                    <div class="gender-tabs">
+                        <div
+                            class="gender-tab"
+                            :class="{ active: selectedGender === 'men' }"
+                            @click="selectedGender = 'men'"
+                        >
+                            Мужчины
+                        </div>
+                        <div
+                            class="gender-tab"
+                            :class="{ active: selectedGender === 'women' }"
+                            @click="selectedGender = 'women'"
+                        >
+                            Женщины
+                        </div>
+                    </div>
+                </div>
+
                 <div class="controls">
-                    <el-select v-model="selectedDiscipline" placeholder="Дисциплина">
-                        <el-option
-                            v-for="item in disciplines"
-                            :key="item.value"
-                            :label="item.label"
-                            :value="item.value">
-                        </el-option>
-                    </el-select>
+                    <div class="control-group">
+                        <label>Дисциплина</label>
+                        <el-select v-model="selectedDiscipline" class="wider-select">
+                            <el-option
+                                v-for="item in disciplines"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value"
+                            />
+                        </el-select>
+                    </div>
 
-                    <el-select v-model="selectedRegion" placeholder="Регион">
-                        <el-option
-                            v-for="item in regions"
-                            :key="item.value"
-                            :label="item.label"
-                            :value="item.value">
-                        </el-option>
-                    </el-select>
-
-                    <el-radio-group v-model="selectedGender">
-                        <el-radio label="men">Мужчины</el-radio>
-                        <el-radio label="women">Женщины</el-radio>
-                    </el-radio-group>
+                    <div class="control-group">
+                        <label>Регион</label>
+                        <el-select v-model="selectedRegion">
+                            <el-option
+                                v-for="item in regions"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value"
+                            />
+                        </el-select>
+                    </div>
                 </div>
             </el-header>
 
-            <el-main>
-                <el-tabs v-model="activeTab">
-                    <el-tab-pane label="Годовой рейтинг" name="year">
-                        <div class="year-selector">
-                            <el-select v-model="selectedYear" placeholder="Выберите год">
-                                <el-option
-                                    v-for="year in availableYears"
-                                    :key="year"
-                                    :label="year"
-                                    :value="year">
-                                </el-option>
-                            </el-select>
-                        </div>
+            <el-main class="main-content">
+                <div class="view-switcher">
+                    <div
+                        class="view-tab"
+                        :class="{ active: activeTab === 'year' }"
+                        @click="activeTab = 'year'"
+                    >
+                        Годовой рейтинг
+                    </div>
+                    <div
+                        class="view-tab"
+                        :class="{ active: activeTab === 'overall' }"
+                        @click="activeTab = 'overall'"
+                    >
+                        Общий рейтинг
+                    </div>
+                </div>
 
-                        <el-table :data="currentYearData" stripe>
-                            <el-table-column prop="rank" label="Место" width="100"></el-table-column>
-                            <el-table-column prop="name" label="Имя"></el-table-column>
-                            <el-table-column prop="year_points" label="Очки за год" width="120"></el-table-column>
-                            <el-table-column prop="total_points" label="Всего очков" width="120"></el-table-column>
-                            <el-table-column label="Соревнования">
-                                <template #default="scope">
-                                    <el-popover
-                                        placement="right"
-                                        width="300"
-                                        trigger="click">
-                                        <template #reference>
-                                            <el-button>Показать ({{ scope.row.events.length }})</el-button>
-                                        </template>
-                                        <div v-for="event in scope.row.events" :key="event.name">
-                                            <p><strong>{{ event.name }}</strong></p>
-                                            <p>Место: {{ event.place }}, Очки: {{ event.points }}</p>
-                                        </div>
-                                    </el-popover>
-                                </template>
-                            </el-table-column>
-                        </el-table>
-                    </el-tab-pane>
+                <div v-if="activeTab === 'year'" class="year-selector">
+                    <el-select v-model="selectedYear">
+                        <el-option
+                            v-for="year in availableYears"
+                            :key="year"
+                            :label="year"
+                            :value="year"
+                        />
+                    </el-select>
+                </div>
 
-                    <el-tab-pane label="Общий рейтинг" name="overall">
-                        <el-table :data="overallRanking" stripe>
-                            <el-table-column prop="rank" label="Место" width="100"></el-table-column>
-                            <el-table-column prop="name" label="Имя"></el-table-column>
-                            <el-table-column prop="region" label="Регион"></el-table-column>
-                            <el-table-column prop="sport_rank" label="Разряд" width="120"></el-table-column>
-                            <el-table-column prop="total_points" label="Всего очков" width="120"></el-table-column>
-                            <el-table-column label="Лучший результат">
-                                <template #default="scope">
-                                    {{ scope.row.best_result.event }} ({{ scope.row.best_result.place }} место)
+                <div class="athlete-count" v-if="currentYearData.length">
+                    Всего атлетов: {{ currentYearData.length }}
+                </div>
+
+                <el-table
+                    :data="activeTab === 'year' ? currentYearData : overallRanking"
+                    stripe
+                    class="ranking-table"
+                    v-loading="loading"
+                >
+                    <el-table-column prop="rank" label="Место" width="90" fixed="left"/>
+                    <el-table-column prop="name" label="Имя" width="220" fixed="left">
+                        <template #default="scope">
+                            <div class="athlete-name">
+                                <div class="athlete-photo"></div>
+                                {{ scope.row.name }}
+                            </div>
+                        </template>
+                    </el-table-column>
+                    <el-table-column prop="region" label="Регион" v-if="activeTab === 'overall'"/>
+                    <el-table-column prop="sport_rank" label="Разряд" width="120" v-if="activeTab === 'overall'"/>
+
+                    <el-table-column
+                        :label="activeTab === 'year' ? 'Очки за год' : 'Всего очков'"
+                        width="140"
+                        align="right"
+                    >
+                        <template #default="scope">
+                            <strong>{{ scope.row[activeTab === 'year' ? 'year_points' : 'total_points'] }}</strong>
+                        </template>
+                    </el-table-column>
+
+                    <el-table-column v-if="activeTab === 'overall'" label="Лучший результат">
+                        <template #default="scope">
+                            {{ scope.row.best_result.event }} ({{ scope.row.best_result.place }} место)
+                        </template>
+                    </el-table-column>
+
+                    <el-table-column v-if="activeTab === 'year'" label="Соревнования" width="160">
+                        <template #default="scope">
+                            <el-popover
+                                placement="left"
+                                width="300"
+                                trigger="click"
+                            >
+                                <template #reference>
+                                    <el-button class="events-button">
+                                        {{ scope.row.events.length }} соревнований
+                                    </el-button>
                                 </template>
-                            </el-table-column>
-                        </el-table>
-                    </el-tab-pane>
-                </el-tabs>
+                                <div v-for="(event, idx) in scope.row.events" :key="idx" class="event-item">
+                                    <div class="event-name">{{ event.name }}</div>
+                                    <div class="event-details">
+                                        <span class="event-place">{{ event.place }}-е место</span>
+                                        <span class="event-points">{{ event.points }} очков</span>
+                                    </div>
+                                </div>
+                            </el-popover>
+                        </template>
+                    </el-table-column>
+                </el-table>
             </el-main>
         </el-container>
     </div>
