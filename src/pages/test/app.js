@@ -26,6 +26,7 @@ const DISCIPLINE_CONFIG = {
     wakeskim: {
         name: "Вейкским",
         competitions: {
+            'rfs/rus': 'Чемпионат России',
             'rfs/cfo': 'Чемпионат Федеральных округов'
         }
     }
@@ -247,49 +248,28 @@ function renderTable(data) {
     const container = document.getElementById('ranking-table-container');
     if (!container) return;
 
-    if (!data || !data.year_rankings || !data.overall_ranking) {
+    if (!data || !data.athletes) {
         container.innerHTML = '<p>Нет данных для отображения</p>';
         return;
     }
 
-    let athletes = [];
-    const years = Object.keys(data.year_rankings).sort().reverse();
+    // Получаем список годов
+    const years = getYearsRange(data);
 
-    if (currentYear === "all") {
-        athletes = data.overall_ranking;
-    } else if (data.year_rankings[currentYear]) {
-        athletes = data.year_rankings[currentYear].athletes;
-    }
-
+    // Создаем таблицу с годами
     const tableHTML = `
         <table class="ranking-table">
             <thead>
                 <tr>
                     <th>#</th>
                     <th>Спортсмен</th>
-                    <th>Регион</th>
-                    <th>${currentYear === "all" ? "Общие очки" : "Очки за год"}</th>
-                    ${currentYear === "all" ? "" : `<th>Общие очки</th>`}
+                    <th>Лучший результат</th>
+                    ${years.map(year => `<th>${year}</th>`).join('')}
+                    <th>Итог</th>
                 </tr>
             </thead>
             <tbody>
-                ${athletes.map(athlete => `
-                    <tr class="${athlete.rank <= 10 ? 'top-athlete' : ''}">
-                        <td>${athlete.rank}</td>
-                        <td class="name-cell">
-                            <div class="athlete-name">${athlete.name}</div>
-                        </td>
-                        <td>${athlete.region}</td>
-                        <td class="total-points">${
-                            currentYear === "all"
-                                ? athlete.total_points
-                                : athlete.year_points
-                        }</td>
-                        ${currentYear === "all" ? "" : `
-                            <td class="total-points">${athlete.total_points}</td>
-                        `}
-                    </tr>
-                `).join('')}
+                ${data.athletes.map(athlete => createAthleteRow(athlete, years, athlete.rank)).join('')}
             </tbody>
         </table>
     `;
