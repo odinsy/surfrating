@@ -12,6 +12,3 @@ kaliningrad:
 
 wake:
 	python3 ./scripts/rating/rating.py --config conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml | column -t -s ','
-
-skim:
-	python3 ./scripts/rating/rating.py --config conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml | column -t -s ','
