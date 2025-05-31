@@ -11,7 +11,7 @@ createApp({
         const rankingData = ref(null);
         const loading = ref(false);
 
-        const JSON_BASE_PATH = '../../data/rankings/';
+        const JSON_BASE_PATH = '../../data/rankings/rfs';
 
         // Константные данные
         const disciplines = [
