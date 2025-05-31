@@ -3,230 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Полный рейтинг спортсменов</title>
-    <!-- Подключение Element Plus CSS -->
+    <title>Рейтинг серфингистов</title>
     <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <el-container>
-            <!-- Шапка сайта -->
-            <el-header class="global-header">
-                <div class="header-content">
-                    <!-- Логотип (закомментирован в оригинале) -->
-                    <!-- <a href="//topheats.ru" class="header-brand">
-                        <img src="../../img/th-white-logo-min.png" alt="TopHeats" class="header-logo">
-                    </a> -->
+            <el-header class="header">
+                <h1>Рейтинг серфингистов</h1>
+                <div class="controls">
+                    <el-select v-model="selectedDiscipline" placeholder="Дисциплина">
+                        <el-option
+                            v-for="item in disciplines"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value">
+                        </el-option>
+                    </el-select>
 
-                    <!-- Навигация с использованием Element Plus -->
-                    <el-menu
-                        mode="horizontal"
-                        background-color="#112D4E"
-                        text-color="#fff"
-                        active-text-color="#ffd04b"
-                        class="header-nav"
-                        :default-active="currentCompetition">
-                        <el-sub-menu index="competitions-menu">
-                            <template #title>
-                                <span class="header-nav-link">Рейтинг</span>
-                            </template>
-                            <el-menu-item
-                                v-for="comp in competitions"
-                                :key="comp.value"
-                                :index="comp.value"
-                                @click="handleCompetitionChange(comp.value)"
-                                :class="{ 'is-active': currentCompetition === comp.value }">
-                                {{ comp.label }}
-                            </el-menu-item>
-                        </el-sub-menu>
-                        <!-- Дополнительные пункты меню -->
-                        <!-- <el-menu-item index="trends">
-                            <a href="../trends/index.html" class="header-nav-link">Статистика</a>
-                        </el-menu-item> -->
-                    </el-menu>
+                    <el-select v-model="selectedRegion" placeholder="Регион">
+                        <el-option
+                            v-for="item in regions"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value">
+                        </el-option>
+                    </el-select>
 
-                    <div class="header-controls">
-                        <div class="header-title-block"></div>
-                    </div>
+                    <el-radio-group v-model="selectedGender">
+                        <el-radio label="men">Мужчины</el-radio>
+                        <el-radio label="women">Женщины</el-radio>
+                    </el-radio-group>
                 </div>
             </el-header>
 
-            <!-- Основное содержимое -->
-            <el-main class="container">
-                <!-- Элементы управления -->
-                <div class="controls">
-                    <el-select
-                        v-model="currentCategory"
-                        @change="handleCategoryChange"
-                        class="discipline-select"
-                        placeholder="Выберите дисциплину">
-                        <el-option value="shortboard" label="Короткая доска" />
-                        <el-option value="longboard" label="Длинная доска" />
-                        <el-option value="wakesurfing" label="Вейксерфинг" />
-                        <el-option value="wakeskim" label="Вейкским" />
-                    </el-select>
+            <el-main>
+                <el-tabs v-model="activeTab">
+                    <el-tab-pane label="Годовой рейтинг" name="year">
+                        <div class="year-selector">
+                            <el-select v-model="selectedYear" placeholder="Выберите год">
+                                <el-option
+                                    v-for="year in availableYears"
+                                    :key="year"
+                                    :label="year"
+                                    :value="year">
+                                </el-option>
+                            </el-select>
+                        </div>
 
-                    <el-radio-group
-                        v-model="currentGender"
-                        @change="handleGenderChange"
-                        class="gender-switch">
-                        <el-radio-button label="men">Мужчины</el-radio-button>
-                        <el-radio-button label="women">Женщины</el-radio-button>
-                    </el-radio-group>
-                </div>
-
-                <!-- Контейнер таблицы -->
-                <div class="table-container">
-                    <!-- Состояние загрузки -->
-                    <div v-if="isLoading" class="loading-overlay">
-                        <el-icon class="is-loading" :size="50" color="#112D4E">
-                            <Loading />
-                        </el-icon>
-                    </div>
-
-                    <!-- Сообщение об ошибке -->
-                    <div v-if="errorMessage" class="error-message">
-                        {{ errorMessage }}
-                    </div>
-
-                    <!-- Таблица с данными -->
-                    <el-table
-                        v-if="!errorMessage && tableData.athletes.length > 0"
-                        :data="tableData.athletes"
-                        class="ranking-table"
-                        style="width: 100%"
-                        :row-class-name="rowClassName"
-                        empty-text="Нет данных для отображения">
-
-                        <!-- Колонка с рангом -->
-                        <el-table-column
-                            prop="rank"
-                            label="#"
-                            width="60"
-                            align="center">
-                            <template #default="{ row }">
-                                <span class="rank-cell">{{ row.rank }}</span>
-                            </template>
-                        </el-table-column>
-
-                        <!-- Колонка с именем спортсмена -->
-                        <el-table-column
-                            label="Name"
-                            min-width="220">
-                            <template #default="{ row }">
-                                <div class="name-cell">
-                                    <div class="avatar-wrapper">
-                                        <div class="athlete-avatar">
-                                            <img
-                                                :src="getAthleteAvatar(row)"
-                                                :alt="row.name"
-                                                @error="handleImageError">
-                                            <div class="avatar-fallback">{{ getAthleteInitials(row) }}</div>
+                        <el-table :data="currentYearData" stripe>
+                            <el-table-column prop="rank" label="Место" width="100"></el-table-column>
+                            <el-table-column prop="name" label="Имя"></el-table-column>
+                            <el-table-column prop="year_points" label="Очки за год" width="120"></el-table-column>
+                            <el-table-column prop="total_points" label="Всего очков" width="120"></el-table-column>
+                            <el-table-column label="Соревнования">
+                                <template #default="scope">
+                                    <el-popover
+                                        placement="right"
+                                        width="300"
+                                        trigger="click">
+                                        <template #reference>
+                                            <el-button>Показать ({{ scope.row.events.length }})</el-button>
+                                        </template>
+                                        <div v-for="event in scope.row.events" :key="event.name">
+                                            <p><strong>{{ event.name }}</strong></p>
+                                            <p>Место: {{ event.place }}, Очки: {{ event.points }}</p>
                                         </div>
-                                        <div>
-                                            <div class="athlete-name">{{ row.name }}</div>
-                                            <div class="athlete-region">{{ row.region }}</div>
-                                        </div>
-                                    </div>
+                                    </el-popover>
+                                </template>
+                            </el-table-column>
+                        </el-table>
+                    </el-tab-pane>
 
-                                    <!-- Всплывающая подсказка -->
-                                    <div class="tooltip-item">
-                                        <div class="tooltip-header">
-                                            <div class="tooltip-meta">
-                                                <div class="tooltip-name">{{ row.name }}</div>
-                                                <div class="tooltip-region">{{ row.region }}</div>
-                                            </div>
-                                            <img
-                                                :src="getAthleteAvatar(row)"
-                                                class="tooltip-avatar"
-                                                :alt="row.name"
-                                                @error="handleTooltipImageError">
-                                        </div>
-
-                                        <div class="tooltip-stats">
-                                            <div class="tooltip-stat">
-                                                <div class="tooltip-value">#{{ row.rank }}</div>
-                                                <div class="tooltip-label">Ранк</div>
-                                            </div>
-                                            <div class="tooltip-stat">
-                                                <div class="tooltip-value">{{ row.sport_rank || '—' }}</div>
-                                                <div class="tooltip-label">Разряд</div>
-                                            </div>
-                                            <div class="tooltip-stat">
-                                                <div class="tooltip-value">{{ getBestResult(row) }}</div>
-                                                <div class="tooltip-label">Лучший результат</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="tooltip-social">
-                                            <a href="https://topheats.ru" target="_blank">topheats.ru</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </template>
-                        </el-table-column>
-
-                        <!-- Колонка с лучшим результатом -->
-                        <el-table-column
-                            label="Best"
-                            width="130"
-                            align="center">
-                            <template #default="{ row }">
-                                <div class="best-tooltip" :data-tooltip="row.best_result?.event || 'Нет данных'">
-                                    {{ getBestResult(row) }}
-                                </div>
-                            </template>
-                        </el-table-column>
-
-                        <!-- Колонки с результатами по годам -->
-                        <el-table-column
-                            v-for="year in years"
-                            :key="year"
-                            :label="year"
-                            width="90"
-                            align="center">
-                            <template #default="{ row }">
-                                <div class="year-points"
-                                    @mouseenter="showYearTooltip(row, year)"
-                                    @mouseleave="hideYearTooltip(row, year)">
-                                    {{ row.years?.[year]?.year_total_points || '—' }}
-
-                                    <!-- Тултип с деталями событий -->
-                                    <div v-if="row.years?.[year]?.events"
-                                        class="custom-tooltip"
-                                        :id="`tooltip-${row.rank}-${year}`"
-                                        style="display: none">
-                                        <div v-for="event in row.years[year].events"
-                                            :key="event.name"
-                                            class="tooltip-event">
-                                            <div class="event-title">{{ event.name }} {{ year }}</div>
-                                            <div class="event-detail">Место: {{ event.place }}</div>
-                                            <div class="event-detail">Очки: {{ event.points }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </template>
-                        </el-table-column>
-
-                        <!-- Колонка с общим количеством очков -->
-                        <el-table-column
-                            prop="total_points"
-                            label="Total"
-                            width="100"
-                            align="right">
-                            <template #default="{ row }">
-                                <div class="total-points">{{ row.total_points }}</div>
-                            </template>
-                        </el-table-column>
-                    </el-table>
-                </div>
+                    <el-tab-pane label="Общий рейтинг" name="overall">
+                        <el-table :data="overallRanking" stripe>
+                            <el-table-column prop="rank" label="Место" width="100"></el-table-column>
+                            <el-table-column prop="name" label="Имя"></el-table-column>
+                            <el-table-column prop="region" label="Регион"></el-table-column>
+                            <el-table-column prop="sport_rank" label="Разряд" width="120"></el-table-column>
+                            <el-table-column prop="total_points" label="Всего очков" width="120"></el-table-column>
+                            <el-table-column label="Лучший результат">
+                                <template #default="scope">
+                                    {{ scope.row.best_result.event }} ({{ scope.row.best_result.place }} место)
+                                </template>
+                            </el-table-column>
+                        </el-table>
+                    </el-tab-pane>
+                </el-tabs>
             </el-main>
         </el-container>
     </div>
 
-    <!-- Подключение скриптов -->
-    <script src="https://cdn.jsdelivr.net/npm/transliteration@2.3.5/dist/browser/bundle.umd.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/element-plus/dist/index.full.js"></script>
     <script src="app.js"></script>
