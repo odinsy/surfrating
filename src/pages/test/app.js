@@ -156,7 +156,7 @@ function createAthleteRow(athlete, years, displayRank) {
 }
 
 async function loadData(competition, discipline, gender) {
-    const path = `${JSON_BASE_PATH}${competition}/${discipline}ranking_${gender}.json?t=${Date.now()}`;
+    const path = `${JSON_BASE_PATH}${competition}/${discipline}/ranking_${gender}.json?t=${Date.now()}`;
     try {
         const response = await fetch(path);
         return await response.json();
