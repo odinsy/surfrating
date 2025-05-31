@@ -11,6 +11,8 @@ createApp({
         const rankingData = ref(null);
         const loading = ref(false);
 
+        const JSON_BASE_PATH = '../../data/rankings/';
+
         // Константные данные
         const disciplines = [
             { value: 'shortboard', label: 'Шортборд' },
@@ -23,6 +25,8 @@ createApp({
             { value: 'rus', label: 'Россия' },
             { value: 'kaliningrad', label: 'Калининград' }
         ];
+
+
 
         // Доступные годы (вычисляется динамически)
         const availableYears = computed(() => {
@@ -45,9 +49,9 @@ createApp({
         // Путь к данным
         const dataPath = computed(() => {
             if (selectedRegion.value === 'rus') {
-                return `data/rankings/rus/${selectedDiscipline.value}/ranking_${selectedGender.value}.json`;
+                return `${JSON_BASE_PATH}/rus/${selectedDiscipline.value}/ranking_${selectedGender.value}.json`;
             }
-            return `data/rankings/kaliningrad/${selectedDiscipline.value}/${selectedGender.value}.json`;
+            return `${JSON_BASE_PATH}/kaliningrad/${selectedDiscipline.value}/${selectedGender.value}.json`;
         });
 
         // Загрузка данных
