@@ -45,9 +45,9 @@ createApp({
         // Путь к данным
         const dataPath = computed(() => {
             if (selectedRegion.value === 'rus') {
-                return `data/rankings/rus/${selectedDiscipline.value}/ranking_${selectedGender.value}.json`;
+                return `../../data/rankings/rfs/rus/${selectedDiscipline.value}/ranking_${selectedGender.value}.json`;
             }
-            return `data/rankings/kaliningrad/${selectedDiscipline.value}/${selectedGender.value}.json`;
+            return `../../data/rankings/rfs/kaliningrad/${selectedDiscipline.value}/${selectedGender.value}.json`;
         });
 
         // Загрузка данных
