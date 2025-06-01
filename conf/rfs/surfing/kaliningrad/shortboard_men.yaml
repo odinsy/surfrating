@@ -1,6 +1,11 @@
+---
+discipline: "shortboard"
+gender: "men"
+
 input_paths:
   - data/rfs/surfing/kaliningrad/shortboard/*shortboard-men-*.csv
 
 output:
-  filename: output/rankings/surfing/rfs/kaliningrad/shortboard/men.csv
-  top5_filename: output/rankings/surfing/rfs/kaliningrad/shortboard/top5_men.csv
+  filename: output/rankings/rfs/kaliningrad/shortboard/men.csv
+  top5_filename: output/rankings/rfs/kaliningrad/shortboard/top5_men.csv
+  ranking_json: output/rankings/rfs/kaliningrad/shortboard/ranking_men.json
