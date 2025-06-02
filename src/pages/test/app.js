@@ -54,6 +54,7 @@ const app = Vue.createApp({
             const path = `${JSON_BASE_PATH}${competition}/${category}/ranking_${gender}.json?t=${Date.now()}`;
             try {
                 const response = await fetch(path);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 return await response.json();
             } catch (error) {
                 console.error('Error loading data:', error);
@@ -61,7 +62,7 @@ const app = Vue.createApp({
             }
         },
         getYearsRange(data) {
-            if (!data.rankings.year_rankings) return [];
+            if (!data.rankings?.year_rankings) return [];
             const years = new Set(Object.keys(data.rankings.year_rankings));
             return Array.from(years).sort((a, b) => a - b);
         },
@@ -83,25 +84,25 @@ const app = Vue.createApp({
                         yearsData[year] = athleteInYear ? {
                             year_total_points: athleteInYear.year_points,
                             events: athleteInYear.events
-                        } : {};
+                        } : { year_total_points: 0, events: [] };
                     });
                 } else {
                     const athleteInYear = data.rankings.year_rankings?.[this.currentYear]?.athletes.find(a => a.name === athlete.name);
                     yearsData[this.currentYear] = athleteInYear ? {
                         year_total_points: athleteInYear.year_points,
                         events: athleteInYear.events
-                    } : {};
-                };
+                    } : { year_total_points: 0, events: [] };
+                }
 
                 return {
                     rank: athlete.rank,
                     name: athlete.name,
-                    sportRank: athlete.sport_rank,
+                    sport_rank: athlete.sport_rank,
                     birthday: athlete.birthday,
                     region: athlete.region,
                     category: athlete.category,
                     total_points: athlete.total_points || 0,
-                    bestResult,
+                    best_result: bestResult,
                     initials,
                     avatarPath,
                     years: yearsData
@@ -110,7 +111,10 @@ const app = Vue.createApp({
         },
         async updateTable() {
             const data = await this.loadData(this.currentCompetition, this.currentDiscipline, this.currentGender);
-            this.headers = data.headers || [];
+            // Add 'Best Result' to headers if not present
+            this.headers = data.headers.includes('Best Result')
+                ? data.headers
+                : [...data.headers.filter(h => h !== 'Total Points'), 'Best Result', 'Total Points'];
             this.years = this.currentYear === 'all' ? this.getYearsRange(data) : [this.currentYear];
             this.tableData = this.prepareTableData(data);
         },
@@ -134,6 +138,7 @@ const app = Vue.createApp({
                 'Birthday': 'birthday',
                 'Region': 'region',
                 'Category': 'category',
+                'Best Result': 'best_result',
                 'Total Points': 'total_points'
             };
             if (!propMap[header]) {
@@ -147,9 +152,10 @@ const app = Vue.createApp({
         },
         getColumnWidth(header) {
             if (header === 'Name') return '300';
+            if (header === 'Best Result') return '150';
             if (header === 'Rank') return '60';
-            if (header === 'Total Points') return '100';
-            if (this.isYearHeader(header)) return '100';
+            if (header === 'Total Points') return '120'; // Increased from 100
+            if (this.isYearHeader(header)) return '60'; // Increased from 100
             return '120';
         },
         getTooltipContent(row) {
@@ -168,7 +174,7 @@ const app = Vue.createApp({
                             <div class="tooltip-label">Ранк</div>
                         </div>
                         <div class="tooltip-stat">
-                            <div class="tooltip-value">${row.sportRank || '—'}</div>
+                            <div class="tooltip-value">${row.sport_rank || '—'}</div>
                             <div class="tooltip-label">Разряд</div>
                         </div>
                         <div class="tooltip-stat">

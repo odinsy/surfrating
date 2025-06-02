@@ -17,7 +17,7 @@
             <el-header class="global-header">
                 <div class="header-content">
                     <div class="header-brand">
-                        <el-dropdown trigger="click">
+\                        <el-dropdown trigger="click">
                             <span class="el-dropdown-link header-title-block">
                                 <h1>Рейтинг</h1>
                                 <i class="el-icon-arrow-down el-icon--right"></i>
@@ -75,7 +75,7 @@
                         :key="header"
                         :prop="headerToProp(header)"
                         :label="header"
-                        :align="header === 'Name' ? 'left' : 'center'"
+                        :align="header === 'Name' || header === 'Best Result' ? 'left' : 'center'"
                         :min-width="getColumnWidth(header)"
                         :sortable="['Rank', 'Total Points'].includes(header)">
                         <template #default="{ row }" v-if="header === 'Rank'">
@@ -112,6 +112,9 @@
                         <template #default="{ row }" v-if="header === 'Category'">
                             <span>{{ row.category || '—' }}</span>
                         </template>
+                        <template #default="{ row }" v-if="header === 'Best Result'">
+                            <span>{{ row.best_result || '—' }}</span>
+                        </template>
                         <template #default="{ row }" v-if="isYearHeader(header)">
                             <el-tooltip
                                 v-if="row.years?.[header]?.events?.length"
@@ -125,7 +128,7 @@
                             <span v-else class="year-points">{{ row.years?.[header]?.year_total_points || '—' }}</span>
                         </template>
                         <template #default="{ row }" v-if="header === 'Total Points'">
-                            <span class="total-points">{{ row.total_points }}</span>
+                            <span class="total-points">{{ row.total_points || '—' }}</span>
                         </template>
                     </el-table-column>
                 </el-table>

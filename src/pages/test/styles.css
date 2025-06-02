@@ -130,12 +130,21 @@ body {
 .ranking-table {
     background: white;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.el-table {
+    table-layout: auto; /* Allow columns to adjust based on content */
 }
 
 .el-table th, .el-table td {
     padding: 10px 12px;
     text-align: center;
     border-bottom: 1px solid #eee;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
 }
 
 .el-table th:first-child, .el-table td:first-child {
@@ -393,6 +402,7 @@ body {
         margin: 0 auto;
     }
 
+    /* Show only Rank, Name, and Total Points on mobile */
     .el-table th:not(:nth-child(-n+2)):not(:last-child),
     .el-table td:not(:nth-child(-n+2)):not(:last-child) {
         display: none;
