@@ -50,7 +50,7 @@ const app = Vue.createApp({
     },
     methods: {
         async loadData(competition, category, gender) {
-            const path = `${JSON_BASE_PATH}${competition}/${category}/${gender}.json?t=${Date.now()}`;
+            const path = `${JSON_BASE_PATH}${competition}/${category}/ranking_${gender}.json?t=${Date.now()}`;
             try {
                 const response = await fetch(path);
                 return await response.json();
