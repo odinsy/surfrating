@@ -155,7 +155,7 @@ const app = Vue.createApp({
             if (header === 'Best Result') return '150';
             if (header === 'Rank') return '60';
             if (header === 'Total Points') return '120'; // Increased from 100
-            if (this.isYearHeader(header)) return '60'; // Increased from 100
+            if (this.isYearHeader(header)) return '80'; // Increased from 100
             return '120';
         },
         getTooltipContent(row) {
