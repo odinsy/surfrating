@@ -175,6 +175,27 @@
             box-shadow: 0 0 0 3px rgba(0, 119, 200, 0.1);
         }
 
+        /* Loading State */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
         /* Ranking Table */
         .ranking-section {
             margin-bottom: 40px;
@@ -256,6 +277,11 @@
             font-size: 0.9rem;
         }
 
+        .event-details {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
         /* Footer */
         footer {
             background: var(--secondary-color);
@@ -308,6 +334,54 @@
             .ranking-table th,
             .ranking-table td {
                 padding: 12px 10px;
+            }
+
+            .ranking-table tr {
+                display: grid;
+                grid-template-columns: 50px 1fr 1fr;
+                grid-template-rows: auto auto;
+                border-bottom: 1px solid var(--border-color);
+                padding: 10px;
+            }
+
+            .ranking-table th:not(:first-child),
+            .ranking-table td:not(:first-child) {
+                display: block;
+            }
+
+            .ranking-table th:first-child,
+            .ranking-table td:first-child {
+                grid-row: 1 / span 2;
+                align-self: center;
+            }
+
+            .ranking-table th:nth-child(2),
+            .ranking-table td:nth-child(2) {
+                grid-column: 2 / span 2;
+            }
+
+            .ranking-table th:nth-child(3),
+            .ranking-table td:nth-child(3) {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            .ranking-table th:nth-child(4),
+            .ranking-table td:nth-child(4) {
+                grid-column: 3;
+                grid-row: 2;
+            }
+
+            .ranking-table th:nth-child(5),
+            .ranking-table td:nth-child(5) {
+                grid-column: 2;
+                grid-row: 3;
+            }
+
+            .ranking-table th:nth-child(6),
+            .ranking-table td:nth-child(6) {
+                grid-column: 3;
+                grid-row: 3;
             }
         }
     </style>
@@ -378,7 +452,10 @@
             <div class="section-header">
                 <h2 class="section-title">Рейтинг спортсменов</h2>
             </div>
-            <table class="ranking-table">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+            </div>
+            <table class="ranking-table" style="display: none;">
                 <thead>
                     <tr>
                         <th>Ранг</th>
@@ -406,7 +483,7 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Обновление данных</h3>
                     <div class="update-info">
-                        <p>Данные обновлены: <strong>03.06.2025</strong></p>
+                        <p>Данные обновлены: <strong id="last-updated">-</strong></p>
                         <p>Источник: база данных Росспорта</p>
                     </div>
                 </div>
@@ -419,92 +496,28 @@
         const JSON_BASE_PATH = '../../data/rankings/';
         let currentCompetition = 'rfs/rus';
 
-        // Пример данных (в реальном приложении будут загружаться из JSON)
-        const mockAthletes = [
-            {
-                rank: 1,
-                name: "athlete_2168d1525c29",
-                region: "Калининградская область",
-                sport_rank: "МС",
-                points: 21770,
-                events: 3
+        // Маппинг событий по дисциплинам
+        const eventMapping = {
+            longboard: {
+                'rus': 'Чемпионат России',
+                'region': 'Чемпионат Калининградской области'
             },
-            {
-                rank: 2,
-                name: "athlete_5497fad18184",
-                region: "Санкт-Петербург",
-                sport_rank: "2",
-                points: 18230,
-                events: 3
+            shortboard: {
+                'rus': 'Чемпионат России',
+                'region': 'Чемпионат Калининградской области'
             },
-            {
-                rank: 3,
-                name: "athlete_e7d14d33c817",
-                region: "Приморский край",
-                sport_rank: "КМС",
-                points: 18065,
-                events: 3
+            wakesurfing: {
+                'rus': 'Чемпионат России',
+                'federal': 'Чемпионат федеральных округов'
             },
-            {
-                rank: 4,
-                name: "athlete_01051ccf23bf",
-                region: "Санкт-Петербург",
-                sport_rank: "МС",
-                points: 17800,
-                events: 2
-            },
-            {
-                rank: 5,
-                name: "athlete_5ddb0b65ba73",
-                region: "Калининградская область",
-                sport_rank: "1",
-                points: 14150,
-                events: 3
+            wakeskim: {
+                'rus': 'Чемпионат России',
+                'federal': 'Чемпионат федеральных округов'
             }
-        ];
+        };
 
-        const wakesurfingAthletes = [
-            {
-                rank: 1,
-                name: "athlete_5630607e1ed6",
-                region: "Московская область",
-                sport_rank: "MC",
-                points: 21685,
-                events: 2
-            },
-            {
-                rank: 2,
-                name: "athlete_e9a79204fa19",
-                region: "Москва",
-                sport_rank: "КМС",
-                points: 17800,
-                events: 2
-            },
-            {
-                rank: 3,
-                name: "athlete_6e106bda6dda",
-                region: "Москва",
-                sport_rank: "1",
-                points: 16085,
-                events: 1
-            },
-            {
-                rank: 4,
-                name: "athlete_c3ebe9783799",
-                region: "Самарская область",
-                sport_rank: "2",
-                points: 12810,
-                events: 2
-            },
-            {
-                rank: 5,
-                name: "athlete_d3bee9092934",
-                region: "Саратовская область",
-                sport_rank: "2",
-                points: 10830,
-                events: 1
-            }
-        ];
+        // Кэш загруженных данных
+        const dataCache = {};
 
         // DOM элементы
         const disciplineBtn = document.querySelector('.discipline-btn');
@@ -513,7 +526,10 @@
         const eventSelect = document.getElementById('event-select');
         const yearSelect = document.getElementById('year-select');
         const rankingBody = document.getElementById('ranking-body');
+        const rankingTable = document.querySelector('.ranking-table');
+        const loadingElement = document.getElementById('loading');
         const sectionTitle = document.querySelector('.section-title');
+        const lastUpdatedElement = document.getElementById('last-updated');
 
         // Обработчики событий
         disciplineBtn.addEventListener('click', () => {
@@ -535,17 +551,19 @@
                 dropdownMenu.classList.remove('show');
 
                 // Обновляем данные в зависимости от дисциплины
-                updateRankingTable(discipline);
                 updateEventSelector(discipline);
+                loadAndDisplayData(discipline, 'men');
             });
         });
 
         eventSelect.addEventListener('change', () => {
-            updateRankingTable();
+            const discipline = getCurrentDiscipline();
+            loadAndDisplayData(discipline, 'men');
         });
 
         yearSelect.addEventListener('change', () => {
-            updateRankingTable();
+            const discipline = getCurrentDiscipline();
+            loadAndDisplayData(discipline, 'men');
         });
 
         // Закрытие dropdown при клике вне его
@@ -555,34 +573,156 @@
             }
         });
 
-        // Функция обновления таблицы рейтинга
-        function updateRankingTable(discipline = 'longboard') {
-            // В реальном приложении здесь будет загрузка данных из JSON
-            const athletes = discipline === 'wakesurfing' || discipline === 'wakeskim' ?
-                wakesurfingAthletes : mockAthletes;
+        // Функция загрузки данных
+        async function loadData(competition, category, gender) {
+            const cacheKey = `${competition}/${category}/${gender}`;
+
+            // Проверяем кэш
+            if (dataCache[cacheKey]) {
+                return dataCache[cacheKey];
+            }
+
+            try {
+                // Показываем индикатор загрузки
+                loadingElement.style.display = 'flex';
+                rankingTable.style.display = 'none';
+
+                // Формируем путь к данным
+                const path = `${JSON_BASE_PATH}${competition}/${category}/${gender}.json?t=${Date.now()}`;
+
+                // Загружаем данные
+                const response = await fetch(path);
+                if (!response.ok) {
+                    throw new Error(`Ошибка загрузки данных: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Сохраняем в кэш
+                dataCache[cacheKey] = data;
+
+                return data;
+            } catch (error) {
+                console.error('Ошибка загрузки данных:', error);
+                return null;
+            }
+        }
+
+        // Функция отображения данных
+        function displayRankingData(data) {
+            if (!data) {
+                rankingBody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 20px;">Не удалось загрузить данные</td></tr>`;
+                loadingElement.style.display = 'none';
+                rankingTable.style.display = 'table';
+                return;
+            }
+
+            // Обновляем дату последнего обновления
+            lastUpdatedElement.textContent = formatDate(data.last_updated);
+
+            // Получаем выбранные параметры
+            const year = yearSelect.value;
+            const eventKey = eventSelect.value;
+
+            // Определяем, какие данные отображать
+            let athletes = [];
+            let titleSuffix = "";
+
+            if (year === 'all') {
+                // Общий рейтинг
+                athletes = data.overall_ranking;
+                titleSuffix = "Общий рейтинг";
+            } else {
+                // Годовой рейтинг
+                const yearData = data.year_rankings[year];
+                if (yearData) {
+                    if (eventKey === 'all') {
+                        // Все события за год
+                        athletes = yearData.athletes;
+                        titleSuffix = `Годовой рейтинг за ${year} год`;
+                    } else {
+                        // Конкретное событие
+                        const eventName = eventMapping[data.discipline][eventKey];
+                        if (eventName) {
+                            athletes = yearData.athletes
+                                .filter(athlete =>
+                                    athlete.events.some(event => event.event_name === eventName)
+                                )
+                                .map(athlete => {
+                                    const event = athlete.events.find(e => e.event_name === eventName);
+                                    return {
+                                        ...athlete,
+                                        eventPlace: event.place,
+                                        participantsCount: event.participants_count
+                                    };
+                                })
+                                .sort((a, b) => a.eventPlace - b.eventPlace);
+
+                            titleSuffix = `${eventName} ${year} года`;
+                        } else {
+                            athletes = yearData.athletes;
+                            titleSuffix = `Годовой рейтинг за ${year} год`;
+                        }
+                    }
+                }
+            }
 
             // Обновляем заголовок
-            sectionTitle.textContent = `Рейтинг спортсменов (${getDisciplineName(discipline)})`;
+            sectionTitle.textContent = `Рейтинг спортсменов (${getDisciplineName(data.discipline)}) - ${titleSuffix}`;
 
             // Очищаем таблицу
             rankingBody.innerHTML = '';
 
             // Заполняем таблицу данными
-            athletes.forEach(athlete => {
-                const row = document.createElement('tr');
-                row.classList.add(`rank-${athlete.rank}`);
+            if (athletes.length === 0) {
+                rankingBody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 20px;">Нет данных для отображения</td></tr>`;
+            } else {
+                athletes.forEach(athlete => {
+                    const row = document.createElement('tr');
+                    if (athlete.rank <= 3) {
+                        row.classList.add(`rank-${athlete.rank}`);
+                    }
 
-                row.innerHTML = `
-                    <td class="rank-cell">${athlete.rank}</td>
-                    <td>${athlete.name}</td>
-                    <td class="region-cell">${athlete.region}</td>
-                    <td>${athlete.sport_rank}</td>
-                    <td class="points-cell">${athlete.points.toLocaleString()}</td>
-                    <td>${athlete.events}</td>
-                `;
+                    // Форматируем информацию о событии
+                    let eventInfo = "";
+                    if (year === 'all') {
+                        // Для общего рейтинга
+                        eventInfo = `${athlete.years_participated.length} лет участия`;
+                    } else if (eventKey === 'all') {
+                        // Для годового рейтинга
+                        const eventCount = athlete.events?.length || 0;
+                        eventInfo = `${eventCount} событий`;
+                    } else {
+                        // Для конкретного события
+                        eventInfo = `${athlete.eventPlace} место (${athlete.participantsCount} участников)`;
+                    }
 
-                rankingBody.appendChild(row);
-            });
+                    // Форматируем очки
+                    const points = year === 'all' ? athlete.total_points :
+                                  (eventKey === 'all' ? athlete.year_points : athlete.year_points);
+
+                    row.innerHTML = `
+                        <td class="rank-cell">${athlete.rank}</td>
+                        <td>${athlete.name}</td>
+                        <td class="region-cell">${athlete.region}</td>
+                        <td>${athlete.sport_rank}</td>
+                        <td class="points-cell">${points.toLocaleString()}</td>
+                        <td class="event-details">${eventInfo}</td>
+                    `;
+
+                    rankingBody.appendChild(row);
+                });
+            }
+
+            // Скрываем индикатор загрузки и показываем таблицу
+            loadingElement.style.display = 'none';
+            rankingTable.style.display = 'table';
+        }
+
+        // Функция загрузки и отображения данных
+        async function loadAndDisplayData(discipline, gender) {
+            const data = await loadData('rfs/rus', discipline, gender);
+            displayRankingData(data);
         }
 
         // Функция обновления селектора соревнований
@@ -593,22 +733,23 @@
             }
 
             // Добавляем опции в зависимости от дисциплины
-            if (discipline === 'longboard' || discipline === 'shortboard') {
-                addOption(eventSelect, 'region', 'Чемпионат Калининградской области');
-            } else if (discipline === 'wakesurfing' || discipline === 'wakeskim') {
-                addOption(eventSelect, 'federal', 'Чемпионат Федеральных округов');
+            const events = eventMapping[discipline];
+            if (events) {
+                for (const [key, value] of Object.entries(events)) {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = value;
+                    eventSelect.appendChild(option);
+                }
             }
         }
 
-        // Вспомогательная функция для добавления опции
-        function addOption(select, value, text) {
-            const option = document.createElement('option');
-            option.value = value;
-            option.textContent = text;
-            select.appendChild(option);
+        // Вспомогательные функции
+        function getCurrentDiscipline() {
+            const activeItem = document.querySelector('.dropdown-item.active');
+            return activeItem ? activeItem.getAttribute('data-discipline') : 'longboard';
         }
 
-        // Получение читаемого названия дисциплины
         function getDisciplineName(discipline) {
             switch(discipline) {
                 case 'longboard': return 'Длинная доска';
@@ -619,9 +760,21 @@
             }
         }
 
+        function formatDate(dateString) {
+            if (!dateString) return '-';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('ru-RU', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+        }
+
         // Инициализация при загрузке
         document.addEventListener('DOMContentLoaded', () => {
-            updateRankingTable();
+            const discipline = getCurrentDiscipline();
+            updateEventSelector(discipline);
+            loadAndDisplayData(discipline, 'men');
         });
     </script>
 </body>
