@@ -7,6 +7,6 @@ input_paths:
 
 output:
   filename: output/rankings/rfs/rus/shortboard/men.csv
-  top5_filename: output/rankings/rfs/rus/shortboard/top5_men.csv
+  top5_filename: output/rankings/rfs/rus/shortboard/t5_ranking_men.csv
   ranking_json: output/rankings/rfs/rus/shortboard/ranking_men.json
   events_json: output/rankings/rfs/rus/shortboard/events_men.json
