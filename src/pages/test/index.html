@@ -3,139 +3,626 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рейтинг спортсменов</title>
-    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-    <script src="https://unpkg.com/element-plus/dist/index.full.js"></script>
-    <script src="https://unpkg.com/slugify@1.6.6/slugify.js"></script>
+    <title>Рейтинг спортсменов по серфингу</title>
+    <style>
+        :root {
+            --primary-color: #0077c8;
+            --secondary-color: #003366;
+            --accent-color: #ff9900;
+            --light-bg: #f8f9fa;
+            --border-color: #dee2e6;
+            --text-color: #333;
+            --text-light: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .discipline-selector {
+            position: relative;
+        }
+
+        .discipline-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .discipline-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .dropdown-icon {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            width: 250px;
+            z-index: 100;
+            display: none;
+            overflow: hidden;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+
+        .dropdown-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-item:hover {
+            background: var(--light-bg);
+        }
+
+        .dropdown-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .dropdown-icon-item {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Controls Section */
+        .controls {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .controls-content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .selector {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .selector label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .selector select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: white;
+            font-size: 1rem;
+            color: var(--text-color);
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 12px;
+            cursor: pointer;
+        }
+
+        .selector select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 119, 200, 0.1);
+        }
+
+        /* Ranking Table */
+        .ranking-section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .ranking-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .ranking-table th {
+            background: var(--secondary-color);
+            color: white;
+            text-align: left;
+            padding: 16px 20px;
+            font-weight: 500;
+        }
+
+        .ranking-table td {
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ranking-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .ranking-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .ranking-table tr:hover {
+            background-color: #f0f8ff;
+        }
+
+        .rank-cell {
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-align: center;
+            width: 60px;
+        }
+
+        .rank-1 {
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+
+        .rank-2 {
+            background-color: rgba(192, 192, 192, 0.1);
+        }
+
+        .rank-3 {
+            background-color: rgba(205, 127, 50, 0.1);
+        }
+
+        .points-cell {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .region-cell {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 30px 0;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-title {
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .update-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .controls-content {
+                flex-direction: column;
+            }
+
+            .ranking-table {
+                font-size: 0.9rem;
+            }
+
+            .ranking-table th,
+            .ranking-table td {
+                padding: 12px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
-        <el-container>
-            <!-- Header -->
-            <el-header class="global-header">
-                <div class="header-content">
-                    <div class="header-brand">
-\                        <el-dropdown trigger="click">
-                            <span class="el-dropdown-link header-title-block">
-                                <h1>Рейтинг</h1>
-                                <i class="el-icon-arrow-down el-icon--right"></i>
-                            </span>
-                            <template #dropdown>
-                                <el-dropdown-menu>
-                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'shortboard' }" @click="changeDiscipline('shortboard')">Короткая доска</el-dropdown-item>
-                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'longboard' }" @click="changeDiscipline('longboard')">Длинная доска</el-dropdown-item>
-                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'wakesurfing' }" @click="changeDiscipline('wakesurfing')">Вейксерфинг</el-dropdown-item>
-                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'wakeskim' }" @click="changeDiscipline('wakeskim')">Вейкским</el-dropdown-item>
-                                </el-dropdown-menu>
-                            </template>
-                        </el-dropdown>
-                    </div>
-                    <nav class="header-nav">
-                        <a href="#" class="header-nav-link active">Рейтинг</a>
-                        <a href="#" class="header-nav-link">События</a>
-                        <a href="#" class="header-nav-link">Спортсмены</a>
-                    </nav>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🏄‍♂️</span>
+                    <span>Рейтинг спортсменов</span>
                 </div>
-            </el-header>
-
-            <!-- Main Content -->
-            <el-main class="container">
-                <div class="controls">
-                    <el-select v-model="currentCompetition" placeholder="Выберите соревнование" class="discipline-select">
-                        <el-option
-                            v-for="comp in competitions[currentDiscipline]"
-                            :key="comp.value"
-                            :label="comp.label"
-                            :value="comp.value">
-                        </el-option>
-                    </el-select>
-                    <el-select v-model="currentYear" placeholder="Выберите год" class="discipline-select">
-                        <el-option label="Все годы" value="all"></el-option>
-                        <el-option
-                            v-for="year in years"
-                            :key="year"
-                            :label="year"
-                            :value="year">
-                        </el-option>
-                    </el-select>
-                    <div class="gender-switch">
-                        <el-button :class="{ 'active': currentGender === 'men' }" @click="changeGender('men')">Мужчины</el-button>
-                        <el-button :class="{ 'active': currentGender === 'women' }" @click="changeGender('women')">Женщины</el-button>
+                <div class="discipline-selector">
+                    <button class="discipline-btn">
+                        Длинная доска
+                        <span class="dropdown-icon">▼</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item active" data-discipline="longboard">
+                            <span class="dropdown-icon-item">🏄‍♂️</span>
+                            Длинная доска
+                        </div>
+                        <div class="dropdown-item" data-discipline="shortboard">
+                            <span class="dropdown-icon-item">🏄‍♂️</span>
+                            Короткая доска
+                        </div>
+                        <div class="dropdown-item" data-discipline="wakesurfing">
+                            <span class="dropdown-icon-item">🌊</span>
+                            Вейксерфинг
+                        </div>
+                        <div class="dropdown-item" data-discipline="wakeskim">
+                            <span class="dropdown-icon-item">💨</span>
+                            Вейкским
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </header>
 
-                <el-table
-                    :data="tableData"
-                    class="ranking-table"
-                    :default-sort="{ prop: 'rank', order: 'ascending' }">
-                    <el-table-column
-                        v-for="(header, index) in headers"
-                        :key="header"
-                        :prop="headerToProp(header)"
-                        :label="header"
-                        :align="header === 'Name' || header === 'Best Result' ? 'left' : 'center'"
-                        :min-width="getColumnWidth(header)"
-                        :sortable="['Rank', 'Total Points'].includes(header)">
-                        <template #default="{ row }" v-if="header === 'Rank'">
-                            <span>{{ row.rank }}</span>
-                        </template>
-                        <template #default="{ row }" v-if="header === 'Name'">
-                            <el-tooltip
-                                :raw-content="true"
-                                :content="getTooltipContent(row)"
-                                placement="bottom"
-                                effect="light"
-                                :show-after="200">
-                                <div class="avatar-wrapper">
-                                    <div class="athlete-avatar">
-                                        <img :src="row.avatarPath" :alt="row.name" @error="handleImageError($event)">
-                                        <div class="avatar-fallback">{{ row.initials }}</div>
-                                    </div>
-                                    <div>
-                                        <div class="athlete-name">{{ row.name }}</div>
-                                        <div class="athlete-region">{{ row.region }}</div>
-                                    </div>
-                                </div>
-                            </el-tooltip>
-                        </template>
-                        <template #default="{ row }" v-if="header === 'Sport Rank'">
-                            <span>{{ row.sport_rank || '—' }}</span>
-                        </template>
-                        <template #default="{ row }" v-if="header === 'Birthday'">
-                            <span>{{ row.birthday }}</span>
-                        </template>
-                        <template #default="{ row }" v-if="header === 'Region'">
-                            <span>{{ row.region }}</span>
-                        </template>
-                        <template #default="{ row }" v-if="header === 'Category'">
-                            <span>{{ row.category || '—' }}</span>
-                        </template>
-                        <template #default="{ row }" v-if="header === 'Best Result'">
-                            <span>{{ row.best_result || '—' }}</span>
-                        </template>
-                        <template #default="{ row }" v-if="isYearHeader(header)">
-                            <el-tooltip
-                                v-if="row.years?.[header]?.events?.length"
-                                :raw-content="true"
-                                :content="getYearTooltipContent(row, header)"
-                                placement="top"
-                                effect="light"
-                                :show-after="200">
-                                <span class="year-points">{{ row.years?.[header]?.year_total_points || '—' }}</span>
-                            </el-tooltip>
-                            <span v-else class="year-points">{{ row.years?.[header]?.year_total_points || '—' }}</span>
-                        </template>
-                        <template #default="{ row }" v-if="header === 'Total Points'">
-                            <span class="total-points">{{ row.total_points || '—' }}</span>
-                        </template>
-                    </el-table-column>
-                </el-table>
-            </el-main>
-        </el-container>
+    <div class="controls">
+        <div class="container">
+            <div class="controls-content">
+                <div class="selector">
+                    <label for="event-select">Соревнование</label>
+                    <select id="event-select">
+                        <option value="all">Все соревнования</option>
+                        <option value="rus">Чемпионат России</option>
+                        <option value="region">Чемпионат Калининградской области</option>
+                        <option value="federal">Чемпионат Федеральных округов</option>
+                    </select>
+                </div>
+                <div class="selector">
+                    <label for="year-select">Год</label>
+                    <select id="year-select">
+                        <option value="all">Все года</option>
+                        <option value="2024" selected>2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="app.js"></script>
+    <main class="container">
+        <section class="ranking-section">
+            <div class="section-header">
+                <h2 class="section-title">Рейтинг спортсменов</h2>
+            </div>
+            <table class="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Ранг</th>
+                        <th>Спортсмен</th>
+                        <th>Регион</th>
+                        <th>Разряд</th>
+                        <th>Очки</th>
+                        <th>Соревнования</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <!-- Данные будут загружены через JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Российская Федерация Серфинга</h3>
+                    <p>Официальный рейтинг спортсменов по различным дисциплинам серфинга.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Обновление данных</h3>
+                    <div class="update-info">
+                        <p>Данные обновлены: <strong>03.06.2025</strong></p>
+                        <p>Источник: база данных Росспорта</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Константы и данные
+        const JSON_BASE_PATH = '../../data/rankings/';
+        let currentCompetition = 'rfs/rus';
+
+        // Пример данных (в реальном приложении будут загружаться из JSON)
+        const mockAthletes = [
+            {
+                rank: 1,
+                name: "athlete_2168d1525c29",
+                region: "Калининградская область",
+                sport_rank: "МС",
+                points: 21770,
+                events: 3
+            },
+            {
+                rank: 2,
+                name: "athlete_5497fad18184",
+                region: "Санкт-Петербург",
+                sport_rank: "2",
+                points: 18230,
+                events: 3
+            },
+            {
+                rank: 3,
+                name: "athlete_e7d14d33c817",
+                region: "Приморский край",
+                sport_rank: "КМС",
+                points: 18065,
+                events: 3
+            },
+            {
+                rank: 4,
+                name: "athlete_01051ccf23bf",
+                region: "Санкт-Петербург",
+                sport_rank: "МС",
+                points: 17800,
+                events: 2
+            },
+            {
+                rank: 5,
+                name: "athlete_5ddb0b65ba73",
+                region: "Калининградская область",
+                sport_rank: "1",
+                points: 14150,
+                events: 3
+            }
+        ];
+
+        const wakesurfingAthletes = [
+            {
+                rank: 1,
+                name: "athlete_5630607e1ed6",
+                region: "Московская область",
+                sport_rank: "MC",
+                points: 21685,
+                events: 2
+            },
+            {
+                rank: 2,
+                name: "athlete_e9a79204fa19",
+                region: "Москва",
+                sport_rank: "КМС",
+                points: 17800,
+                events: 2
+            },
+            {
+                rank: 3,
+                name: "athlete_6e106bda6dda",
+                region: "Москва",
+                sport_rank: "1",
+                points: 16085,
+                events: 1
+            },
+            {
+                rank: 4,
+                name: "athlete_c3ebe9783799",
+                region: "Самарская область",
+                sport_rank: "2",
+                points: 12810,
+                events: 2
+            },
+            {
+                rank: 5,
+                name: "athlete_d3bee9092934",
+                region: "Саратовская область",
+                sport_rank: "2",
+                points: 10830,
+                events: 1
+            }
+        ];
+
+        // DOM элементы
+        const disciplineBtn = document.querySelector('.discipline-btn');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const disciplineItems = document.querySelectorAll('.dropdown-item');
+        const eventSelect = document.getElementById('event-select');
+        const yearSelect = document.getElementById('year-select');
+        const rankingBody = document.getElementById('ranking-body');
+        const sectionTitle = document.querySelector('.section-title');
+
+        // Обработчики событий
+        disciplineBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        disciplineItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const discipline = item.getAttribute('data-discipline');
+
+                // Обновляем активный элемент
+                disciplineItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                // Обновляем текст кнопки
+                disciplineBtn.innerHTML = `${item.textContent} <span class="dropdown-icon">▼</span>`;
+
+                // Закрываем меню
+                dropdownMenu.classList.remove('show');
+
+                // Обновляем данные в зависимости от дисциплины
+                updateRankingTable(discipline);
+                updateEventSelector(discipline);
+            });
+        });
+
+        eventSelect.addEventListener('change', () => {
+            updateRankingTable();
+        });
+
+        yearSelect.addEventListener('change', () => {
+            updateRankingTable();
+        });
+
+        // Закрытие dropdown при клике вне его
+        document.addEventListener('click', (e) => {
+            if (!disciplineBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+        // Функция обновления таблицы рейтинга
+        function updateRankingTable(discipline = 'longboard') {
+            // В реальном приложении здесь будет загрузка данных из JSON
+            const athletes = discipline === 'wakesurfing' || discipline === 'wakeskim' ?
+                wakesurfingAthletes : mockAthletes;
+
+            // Обновляем заголовок
+            sectionTitle.textContent = `Рейтинг спортсменов (${getDisciplineName(discipline)})`;
+
+            // Очищаем таблицу
+            rankingBody.innerHTML = '';
+
+            // Заполняем таблицу данными
+            athletes.forEach(athlete => {
+                const row = document.createElement('tr');
+                row.classList.add(`rank-${athlete.rank}`);
+
+                row.innerHTML = `
+                    <td class="rank-cell">${athlete.rank}</td>
+                    <td>${athlete.name}</td>
+                    <td class="region-cell">${athlete.region}</td>
+                    <td>${athlete.sport_rank}</td>
+                    <td class="points-cell">${athlete.points.toLocaleString()}</td>
+                    <td>${athlete.events}</td>
+                `;
+
+                rankingBody.appendChild(row);
+            });
+        }
+
+        // Функция обновления селектора соревнований
+        function updateEventSelector(discipline) {
+            // Очищаем текущие опции
+            while (eventSelect.options.length > 1) {
+                eventSelect.remove(1);
+            }
+
+            // Добавляем опции в зависимости от дисциплины
+            if (discipline === 'longboard' || discipline === 'shortboard') {
+                addOption(eventSelect, 'region', 'Чемпионат Калининградской области');
+            } else if (discipline === 'wakesurfing' || discipline === 'wakeskim') {
+                addOption(eventSelect, 'federal', 'Чемпионат Федеральных округов');
+            }
+        }
+
+        // Вспомогательная функция для добавления опции
+        function addOption(select, value, text) {
+            const option = document.createElement('option');
+            option.value = value;
+            option.textContent = text;
+            select.appendChild(option);
+        }
+
+        // Получение читаемого названия дисциплины
+        function getDisciplineName(discipline) {
+            switch(discipline) {
+                case 'longboard': return 'Длинная доска';
+                case 'shortboard': return 'Короткая доска';
+                case 'wakesurfing': return 'Вейксерфинг';
+                case 'wakeskim': return 'Вейкским';
+                default: return 'Длинная доска';
+            }
+        }
+
+        // Инициализация при загрузке
+        document.addEventListener('DOMContentLoaded', () => {
+            updateRankingTable();
+        });
+    </script>
 </body>
 </html>
