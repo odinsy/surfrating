@@ -94,12 +94,19 @@ const app = Vue.createApp({
                 }
 
                 return {
-                    ...athlete,
+                    rank: athlete.rank,
+                    name: athlete.name,
+                    sportRank: athlete.sport_rank,
+                    birthday: athlete.birthday,
+                    region: athlete.region,
+                    category: athlete.category,
+                    total_points: athlete.total_points || 0,
                     bestResult,
                     initials,
                     avatarPath,
                     years: yearsData
                 };
+              };
             });
         },
         async updateTable() {
@@ -120,10 +127,21 @@ const app = Vue.createApp({
             event.target.nextElementSibling.style.display = 'flex';
         },
         headerToProp(header) {
-            if (header === 'Sport Rank') return 'sport_rank';
-            if (header === 'Total Points') return 'total_points';
             if (this.isYearHeader(header)) return header;
-            return header.toLowerCase();
+            const propMap = {
+                'Rank': 'rank',
+                'Name': 'name',
+                'Sport Rank': 'sport_rank',
+                'Birthday': 'birthday',
+                'Region': 'region',
+                'Category': 'category',
+                'Total Points': 'total_points'
+            };
+            if (!propMap[header]) {
+                console.warn(`No property mapping found for header: ${header}`);
+                return undefined;
+            }
+            return propMap[header];
         },
         isYearHeader(header) {
             return /^\d{4}$/.test(header);
@@ -151,7 +169,7 @@ const app = Vue.createApp({
                             <div class="tooltip-label">Ранк</div>
                         </div>
                         <div class="tooltip-stat">
-                            <div class="tooltip-value">${row.sport_rank || '—'}</div>
+                            <div class="tooltip-value">${row.sportRank || '—'}</div>
                             <div class="tooltip-label">Разряд</div>
                         </div>
                         <div class="tooltip-stat">
