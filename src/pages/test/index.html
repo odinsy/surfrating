@@ -588,7 +588,7 @@
                 rankingTable.style.display = 'none';
 
                 // Формируем путь к данным
-                const path = `${JSON_BASE_PATH}${competition}/${category}/${gender}.json?t=${Date.now()}`;
+                const path = `${JSON_BASE_PATH}${competition}/${category}/ranking_${gender}.json?t=${Date.now()}`;
 
                 // Загружаем данные
                 const response = await fetch(path);
