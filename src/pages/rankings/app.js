@@ -34,7 +34,7 @@ function createAthleteRow(athlete, years) {
             ? `<div class="custom-tooltip" id="${tooltipId}">
                 ${events.map(e => `
                     <div class="tooltip-event">
-                        <div class="event-title">${e.name} ${year}</div>
+                        <div class="event-title">${e.event_name} ${year}</div>
                         <div class="event-detail">Место: ${e.place}</div>
                         <div class="event-detail">Очки: ${e.points}</div>
                     </div>
