@@ -70,79 +70,64 @@
                     :data="tableData"
                     class="ranking-table"
                     :default-sort="{ prop: 'rank', order: 'ascending' }">
-                    <el-table-column prop="rank" label="#" width="60" align="center"></el-table-column>
-                    <el-table-column prop="name" label="Name" min-width="300">
-                        <template #default="{ row }">
-                            <div class="avatar-wrapper">
-                                <div class="athlete-avatar">
-                                    <img :src="row.avatarPath" :alt="row.name" @error="handleImageError($event)">
-                                    <div class="avatar-fallback">{{ row.initials }}</div>
-                                </div>
-                                <div>
-                                    <div class="athlete-name">{{ row.name }}</div>
-                                    <div class="athlete-region">{{ row.region }}</div>
-                                </div>
-                            </div>
+                    <el-table-column
+                        v-for="(header, index) in headers"
+                        :key="header"
+                        :prop="headerToProp(header)"
+                        :label="header"
+                        :align="header === 'Name' ? 'left' : 'center'"
+                        :min-width="getColumnWidth(header)"
+                        :sortable="['Rank', 'Total Points'].includes(header)">
+                        <template #default="{ row }" v-if="header === 'Rank'">
+                            <span>{{ row.rank }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Name'">
                             <el-tooltip
+                                :raw-content="true"
                                 :content="getTooltipContent(row)"
                                 placement="bottom"
                                 effect="light"
                                 :show-after="200">
-                                <div class="tooltip-item">
-                                    <div class="tooltip-header">
-                                        <div class="tooltip-meta">
-                                            <div class="tooltip-name">{{ row.name }}</div>
-                                            <div class="tooltip-region">{{ row.region }}</div>
-                                        </div>
-                                        <img :src="row.avatarPath" class="tooltip-avatar" :alt="row.name" @error="handleImageError($event)">
+                                <div class="avatar-wrapper">
+                                    <div class="athlete-avatar">
+                                        <img :src="row.avatarPath" :alt="row.name" @error="handleImageError($event)">
+                                        <div class="avatar-fallback">{{ row.initials }}</div>
                                     </div>
-                                    <div class="tooltip-stats">
-                                        <div class="tooltip-stat">
-                                            <div class="tooltip-value">#{{ row.rank }}</div>
-                                            <div class="tooltip-label">Ранк</div>
-                                        </div>
-                                        <div class="tooltip-stat">
-                                            <div class="tooltip-value">{{ row.sport_rank || '—' }}</div>
-                                            <div class="tooltip-label">Разряд</div>
-                                        </div>
-                                        <div class="tooltip-stat">
-                                            <div class="tooltip-value">{{ row.bestResult }}</div>
-                                            <div class="tooltip-label">Лучший результат</div>
-                                        </div>
-                                    </div>
-                                    <div class="tooltip-social">
-                                        <a href="https://topheats.ru" target="_blank">topheats.ru</a>
+                                    <div>
+                                        <div class="athlete-name">{{ row.name }}</div>
+                                        <div class="athlete-region">{{ row.region }}</div>
                                     </div>
                                 </div>
                             </el-tooltip>
                         </template>
-                    </el-table-column>
-                    <el-table-column prop="bestResult" label="Best" align="center">
-                        <template #default="{ row }">
-                            <el-tooltip :content="row.best_result?.event || 'Нет данных'" placement="top" effect="light">
-                                <span>{{ row.bestResult }}</span>
-                            </el-tooltip>
+                        <template #default="{ row }" v-if="header === 'Sport Rank'">
+                            <span>{{ row.sport_rank || '—' }}</span>
                         </template>
-                    </el-table-column>
-                    <el-table-column
-                        v-for="year in years"
-                        :key="year"
-                        :label="year"
-                        align="center"
-                        min-width="100">
-                        <template #default="{ row }">
+                        <template #default="{ row }" v-if="header === 'Birthday'">
+                            <span>{{ row.birthday }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Region'">
+                            <span>{{ row.region }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Category'">
+                            <span>{{ row.category || '—' }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="isYearHeader(header)">
                             <el-tooltip
-                                :content="getYearTooltipContent(row, year)"
+                                v-if="row.years?.[header]?.events?.length"
+                                :raw-content="true"
+                                :content="getYearTooltipContent(row, header)"
                                 placement="top"
                                 effect="light"
-                                :show-after="200"
-                                v-if="row.years?.[year]?.events?.length">
-                                <span>{{ row.years?.[year]?.year_total_points || '—' }}</span>
+                                :show-after="200">
+                                <span class="year-points">{{ row.years?.[header]?.year_total_points || '—' }}</span>
                             </el-tooltip>
-                            <span v-else>{{ row.years?.[year]?.year_total_points || '—' }}</span>
+                            <span v-else class="year-points">{{ row.years?.[header]?.year_total_points || '—' }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Total Points'">
+                            <span class="total-points">{{ row.total_points }}</span>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="total_points" label="Total" align="center" width="100"></el-table-column>
                 </el-table>
             </el-main>
         </el-container>

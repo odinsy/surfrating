@@ -244,11 +244,20 @@ body {
     font-size: 0.8em;
 }
 
+.el-tooltip__popper {
+    background: #ffffff;
+    color: #112D4E;
+    padding: 8px;
+    border-radius: 6px;
+    min-width: 160px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 0.9em;
+}
+
 .tooltip-item {
     width: 320px;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .tooltip-header {
@@ -322,6 +331,27 @@ body {
     font-size: 0.9em;
 }
 
+.custom-tooltip {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tooltip-event {
+    padding: 4px 0;
+}
+
+.event-title {
+    font-weight: 600;
+    color: #003087;
+    margin-bottom: 2px;
+}
+
+.event-detail {
+    color: #666;
+    font-size: 0.85em;
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -363,7 +393,8 @@ body {
         margin: 0 auto;
     }
 
-    .el-table th:nth-child(3), .el-table td:nth-child(3) {
+    .el-table th:not(:nth-child(-n+2)):not(:last-child),
+    .el-table td:not(:nth-child(-n+2)):not(:last-child) {
         display: none;
     }
 
@@ -374,6 +405,10 @@ body {
 
     .avatar-fallback {
         font-size: 0.7em;
+    }
+
+    .el-tooltip__popper {
+        display: none !important;
     }
 }
 

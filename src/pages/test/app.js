@@ -4,11 +4,12 @@ const transliterate = window.slugify;
 const app = Vue.createApp({
     data() {
         return {
-            currentDiscipline: 'shortboard',
+            currentDiscipline: 'longboard',
             currentCompetition: 'rfs/rus',
             currentGender: 'men',
             currentYear: 'all',
             years: [],
+            headers: [],
             tableData: [],
             competitions: {
                 shortboard: [
@@ -56,17 +57,16 @@ const app = Vue.createApp({
                 return await response.json();
             } catch (error) {
                 console.error('Error loading data:', error);
-                return { headers: [], athletes: [], year_rankings: {} };
+                return { headers: [], rankings: { year_rankings: {}, overall_ranking: [] } };
             }
         },
         getYearsRange(data) {
-            if (!data.year_rankings) return [];
-            const years = new Set();
-            Object.keys(data.year_rankings).forEach(year => years.add(year));
+            if (!data.rankings.year_rankings) return [];
+            const years = new Set(Object.keys(data.rankings.year_rankings));
             return Array.from(years).sort((a, b) => a - b);
         },
         prepareTableData(data) {
-            return data.overall_ranking.map(athlete => {
+            return data.rankings.overall_ranking.map(athlete => {
                 const bestResult = athlete.best_result
                     ? `${athlete.best_result.place} в ${athlete.best_result.year}`
                     : 'Нет данных';
@@ -78,15 +78,15 @@ const app = Vue.createApp({
 
                 const yearsData = {};
                 if (this.currentYear === 'all') {
-                    data.year_rankings && Object.keys(data.year_rankings).forEach(year => {
-                        const athleteInYear = data.year_rankings[year].athletes.find(a => a.name === athlete.name);
+                    data.rankings.year_rankings && Object.keys(data.rankings.year_rankings).forEach(year => {
+                        const athleteInYear = data.rankings.year_rankings[year].athletes.find(a => a.name === athlete.name);
                         yearsData[year] = athleteInYear ? {
                             year_total_points: athleteInYear.year_points,
                             events: athleteInYear.events
                         } : {};
                     });
                 } else {
-                    const athleteInYear = data.year_rankings?.[this.currentYear]?.athletes.find(a => a.name === athlete.name);
+                    const athleteInYear = data.rankings.year_rankings?.[this.currentYear]?.athletes.find(a => a.name === athlete.name);
                     yearsData[this.currentYear] = athleteInYear ? {
                         year_total_points: athleteInYear.year_points,
                         events: athleteInYear.events
@@ -104,6 +104,7 @@ const app = Vue.createApp({
         },
         async updateTable() {
             const data = await this.loadData(this.currentCompetition, this.currentDiscipline, this.currentGender);
+            this.headers = data.headers || [];
             this.years = this.currentYear === 'all' ? this.getYearsRange(data) : [this.currentYear];
             this.tableData = this.prepareTableData(data);
         },
@@ -117,6 +118,22 @@ const app = Vue.createApp({
         handleImageError(event) {
             event.target.style.display = 'none';
             event.target.nextElementSibling.style.display = 'flex';
+        },
+        headerToProp(header) {
+            if (header === 'Sport Rank') return 'sport_rank';
+            if (header === 'Total Points') return 'total_points';
+            if (this.isYearHeader(header)) return header;
+            return header.toLowerCase();
+        },
+        isYearHeader(header) {
+            return /^\d{4}$/.test(header);
+        },
+        getColumnWidth(header) {
+            if (header === 'Name') return '300';
+            if (header === 'Rank') return '60';
+            if (header === 'Total Points') return '100';
+            if (this.isYearHeader(header)) return '100';
+            return '120';
         },
         getTooltipContent(row) {
             return `
@@ -152,18 +169,22 @@ const app = Vue.createApp({
             const yearData = row.years?.[year];
             const events = yearData?.events || [];
             if (!events.length) return '';
-            return events.map(e => `
-                <div class="tooltip-event">
-                    <div class="event-title">${e.name} ${year}</div>
-                    <div class="event-detail">Место: ${e.place}</div>
-                    <div class="event-detail">Очки: ${e.points}</div>
+            return `
+                <div class="custom-tooltip">
+                    ${events.map(e => `
+                        <div class="tooltip-event">
+                            <div class="event-title">${e.name} ${year}</div>
+                            <div class="event-detail">Место: ${e.place}</div>
+                            <div class="event-detail">Очки: ${e.points}</div>
+                        </div>
+                    `).join('')}
                 </div>
-            `).join('');
+            `;
         }
     },
     mounted() {
         const urlParams = new URLSearchParams(window.location.search);
-        const initialCategory = urlParams.get('category') || 'shortboard_men';
+        const initialCategory = urlParams.get('category') || 'longboard_men';
         const [discipline, gender] = initialCategory.split('_');
         this.currentDiscipline = discipline;
         this.currentGender = gender;
