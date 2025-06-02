@@ -101,7 +101,7 @@ def save_to_json(results: List[Dict], headers: List[str], config: Dict, output_f
             'athletes': json_athletes
         }, f, ensure_ascii=False, indent=2)
 
-def save_ranking_json(results: List[Dict], headers: List[str], config: Dict, output_filename: str = None) -> None:
+def save_ranking_json(results: List[Dict], config: Dict, output_filename: str = None) -> None:
     output_path = _resolve_output_path(
         output_filename,
         config,
@@ -111,7 +111,7 @@ def save_ranking_json(results: List[Dict], headers: List[str], config: Dict, out
     transformed = {
         "discipline": config.get("discipline", "unknown"),
         "gender": config.get("gender", "unknown"),
-        "last_updated": datetime.now().isoformat(),
+        "last_updated": datetime.now().date().isoformat(),
         "year_rankings": {},
         "overall_ranking": []
     }
@@ -154,10 +154,7 @@ def save_ranking_json(results: List[Dict], headers: List[str], config: Dict, out
         transformed["year_rankings"][year] = {"athletes": athletes}
 
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump({
-            'headers': headers,
-            'rankings': transformed
-        }, f, ensure_ascii=False, indent=2)
+        json.dump(transformed, f, ensure_ascii=False, indent=2)
 
 def print_to_console(results: List[Dict], headers: List[str], years: List[int], config: Dict) -> None:
     print(','.join(map(str, headers)))
@@ -173,7 +170,7 @@ def generate_output(results: List[Dict], config: Dict) -> None:
 
     save_to_csv(results, headers, years, config)
     save_to_json(results, headers, config)
-    save_ranking_json(results, headers, config)
+    save_ranking_json(results, config)
     print_to_console(results, headers, years, config)
 
     if 'top5_filename' in config['output']:
@@ -182,5 +179,5 @@ def generate_output(results: List[Dict], config: Dict) -> None:
         json_path = Path(csv_path).with_suffix('.json')
 
         save_to_csv(top5, headers, years, config, csv_path)
-        save_to_json(top5, headers, config, json_path)
+        save_ranking_json(top5, config, json_path)
         print_to_console(top5, headers, years, config)
