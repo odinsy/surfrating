@@ -106,9 +106,8 @@ const app = Vue.createApp({
                     avatarPath,
                     years: yearsData
                 };
-              };
-            });
-        },
+              });
+            };
         async updateTable() {
             const data = await this.loadData(this.currentCompetition, this.currentDiscipline, this.currentGender);
             this.headers = data.headers || [];
