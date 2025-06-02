@@ -1,429 +1,301 @@
 {
-  "headers": [
-    "Rank",
-    "Name",
-    "Sport Rank",
-    "Birthday",
-    "Region",
-    "Category",
-    "2022",
-    "2024",
-    "Total Points"
-  ],
-  "athletes": [
-    {
-      "name": "Данилов Сергей",
-      "rank": 1,
-      "birthday": 1978,
-      "region": "Московская область",
-      "category": "мужчины",
-      "sport_rank": "МС",
-      "last_year": 2024,
-      "best_result": {
-        "event": "Чемпионат России",
-        "year": "2022",
-        "place": 1,
-        "points": 10000
-      },
-      "years": {
-        "2022": {
-          "year_total_points": 10000,
+  "discipline": "wakeskim",
+  "gender": "men",
+  "last_updated": "2025-06-03",
+  "year_rankings": {
+    "2022": {
+      "athletes": [
+        {
+          "name": "Данилов Сергей",
+          "region": "Московская область",
+          "sport_rank": "МС",
+          "birthday": 1978,
+          "year_points": 10000,
+          "total_points": 23885,
           "events": [
             {
-              "name": "Чемпионат России",
+              "event_name": "Чемпионат России",
               "place": 1,
               "points": 10000,
               "group": "main",
               "participants_count": 13
             }
-          ]
+          ],
+          "rank": 1
         },
-        "2024": {
-          "year_total_points": 13885,
+        {
+          "name": "Ревун Илья",
+          "region": "Москва",
+          "sport_rank": "КМС",
+          "birthday": 1979,
+          "year_points": 7800,
+          "total_points": 18230,
           "events": [
             {
-              "name": "Чемпионат России",
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 13
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "name": "Иванов Виталий",
+          "region": "Москва",
+          "sport_rank": "КМС",
+          "birthday": 1985,
+          "year_points": 5685,
+          "total_points": 18230,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 13
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "name": "Прошин Игорь",
+          "region": "Московская область",
+          "sport_rank": "2",
+          "birthday": 1988,
+          "year_points": 4745,
+          "total_points": 12810,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 13
+            }
+          ],
+          "rank": 4
+        }
+      ]
+    },
+    "2024": {
+      "athletes": [
+        {
+          "name": "Данилов Сергей",
+          "region": "Московская область",
+          "sport_rank": "МС",
+          "birthday": 1978,
+          "year_points": 13885,
+          "total_points": 23885,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
               "place": 2,
               "points": 7800,
               "group": "main",
               "participants_count": 18
             },
             {
-              "name": "Чемпионат федеральных округов",
+              "event_name": "Чемпионат федеральных округов",
               "place": 3,
               "points": 6085,
               "group": "main",
               "participants_count": 7
             }
-          ]
-        }
-      },
-      "total_points": 23885
-    },
-    {
-      "name": "Иванов Виталий",
-      "rank": 2,
-      "birthday": 1985,
-      "region": "Москва",
-      "category": "мужчины",
-      "sport_rank": "КМС",
-      "last_year": 2024,
-      "best_result": {
-        "event": "Чемпионат федеральных округов",
-        "year": "2024",
-        "place": 2,
-        "points": 7800
-      },
-      "years": {
-        "2022": {
-          "year_total_points": 5685,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 13
-            }
-          ]
+          ],
+          "rank": 1
         },
-        "2024": {
-          "year_total_points": 12545,
+        {
+          "name": "Иванов Виталий",
+          "region": "Москва",
+          "sport_rank": "КМС",
+          "birthday": 1985,
+          "year_points": 12545,
+          "total_points": 18230,
           "events": [
             {
-              "name": "Чемпионат России",
+              "event_name": "Чемпионат России",
               "place": 5,
               "points": 4745,
               "group": "main",
               "participants_count": 18
             },
             {
-              "name": "Чемпионат федеральных округов",
+              "event_name": "Чемпионат федеральных округов",
               "place": 2,
               "points": 7800,
               "group": "main",
               "participants_count": 7
             }
-          ]
-        }
-      },
-      "total_points": 18230
-    },
-    {
-      "name": "Ревун Илья",
-      "rank": 3,
-      "birthday": 1979,
-      "region": "Москва",
-      "category": "мужчины",
-      "sport_rank": "КМС",
-      "last_year": 2024,
-      "best_result": {
-        "event": "Чемпионат России",
-        "year": "2022",
-        "place": 2,
-        "points": 7800
-      },
-      "years": {
-        "2022": {
-          "year_total_points": 7800,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 13
-            }
-          ]
+          ],
+          "rank": 2
         },
-        "2024": {
-          "year_total_points": 10430,
+        {
+          "name": "Ревун Илья",
+          "region": "Москва",
+          "sport_rank": "КМС",
+          "birthday": 1979,
+          "year_points": 10430,
+          "total_points": 18230,
           "events": [
             {
-              "name": "Чемпионат России",
+              "event_name": "Чемпионат России",
               "place": 6,
               "points": 4745,
               "group": "main",
               "participants_count": 18
             },
             {
-              "name": "Чемпионат федеральных округов",
+              "event_name": "Чемпионат федеральных округов",
               "place": 4,
               "points": 5685,
               "group": "main",
               "participants_count": 7
             }
-          ]
+          ],
+          "rank": 3
+        },
+        {
+          "name": "Кап Даниил",
+          "region": "Саратовская область",
+          "sport_rank": "3",
+          "birthday": 2004,
+          "year_points": 10000,
+          "total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 18
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "name": "Прошин Игорь",
+          "region": "Московская область",
+          "sport_rank": "2",
+          "birthday": 1988,
+          "year_points": 8065,
+          "total_points": 12810,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 9,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 18
+            },
+            {
+              "event_name": "Чемпионат федеральных округов",
+              "place": 5,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 7
+            }
+          ],
+          "rank": 5
         }
+      ]
+    }
+  },
+  "overall_ranking": [
+    {
+      "rank": 1,
+      "name": "Данилов Сергей",
+      "region": "Московская область",
+      "sport_rank": "МС",
+      "birthday": 1978,
+      "total_points": 23885,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2022",
+        "place": 1,
+        "points": 10000
       },
-      "total_points": 18230
+      "last_year": 2024,
+      "years_participated": [
+        2022,
+        2024
+      ]
     },
     {
-      "name": "Прошин Игорь",
-      "rank": 4,
-      "birthday": 1988,
-      "region": "Московская область",
-      "category": "мужчины",
-      "sport_rank": "2",
-      "last_year": 2024,
+      "rank": 2,
+      "name": "Иванов Виталий",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birthday": 1985,
+      "total_points": 18230,
       "best_result": {
-        "event": "Чемпионат федеральных округов",
-        "year": "2024",
+        "event_name": "Чемпионат федеральных округов",
+        "event_year": "2024",
+        "place": 2,
+        "points": 7800
+      },
+      "last_year": 2024,
+      "years_participated": [
+        2022,
+        2024
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Ревун Илья",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birthday": 1979,
+      "total_points": 18230,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2022",
+        "place": 2,
+        "points": 7800
+      },
+      "last_year": 2024,
+      "years_participated": [
+        2022,
+        2024
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Прошин Игорь",
+      "region": "Московская область",
+      "sport_rank": "2",
+      "birthday": 1988,
+      "total_points": 12810,
+      "best_result": {
+        "event_name": "Чемпионат федеральных округов",
+        "event_year": "2024",
         "place": 5,
         "points": 4745
       },
-      "years": {
-        "2022": {
-          "year_total_points": 4745,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 13
-            }
-          ]
-        },
-        "2024": {
-          "year_total_points": 8065,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 9,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 18
-            },
-            {
-              "name": "Чемпионат федеральных округов",
-              "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 7
-            }
-          ]
-        }
-      },
-      "total_points": 12810
+      "last_year": 2024,
+      "years_participated": [
+        2022,
+        2024
+      ]
     },
     {
-      "name": "Кап Даниил",
       "rank": 5,
-      "birthday": 2004,
+      "name": "Кап Даниил",
       "region": "Саратовская область",
-      "category": "мужчины",
       "sport_rank": "3",
-      "last_year": 2024,
+      "birthday": 2004,
+      "total_points": 10000,
       "best_result": {
-        "event": "Чемпионат России",
-        "year": "2024",
+        "event_name": "Чемпионат России",
+        "event_year": "2024",
         "place": 1,
         "points": 10000
       },
-      "years": {
-        "2024": {
-          "year_total_points": 10000,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 18
-            }
-          ]
-        }
-      },
-      "total_points": 10000
-    },
-    {
-      "name": "Кац Даниил",
-      "rank": 6,
-      "birthday": 2004,
-      "region": "Саратовская область",
-      "category": "мужчины",
-      "sport_rank": "2",
       "last_year": 2024,
-      "best_result": {
-        "event": "Чемпионат федеральных округов",
-        "year": "2024",
-        "place": 1,
-        "points": 10000
-      },
-      "years": {
-        "2024": {
-          "year_total_points": 10000,
-          "events": [
-            {
-              "name": "Чемпионат федеральных округов",
-              "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 7
-            }
-          ]
-        }
-      },
-      "total_points": 10000
-    },
-    {
-      "name": "Горданов Степан",
-      "rank": 7,
-      "birthday": 1992,
-      "region": "Москва",
-      "category": "мужчины",
-      "sport_rank": "1",
-      "last_year": 2024,
-      "best_result": {
-        "event": "Чемпионат России",
-        "year": "2024",
-        "place": 3,
-        "points": 6085
-      },
-      "years": {
-        "2022": {
-          "year_total_points": 3320,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 11,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 13
-            }
-          ]
-        },
-        "2024": {
-          "year_total_points": 6085,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 18
-            }
-          ]
-        }
-      },
-      "total_points": 9405
-    },
-    {
-      "name": "Шамаханов Никита",
-      "rank": 8,
-      "birthday": 1992,
-      "region": "Санкт-Петербург",
-      "category": "мужчины",
-      "sport_rank": "КМС",
-      "last_year": 2024,
-      "best_result": {
-        "event": "Чемпионат России",
-        "year": "2024",
-        "place": 4,
-        "points": 5685
-      },
-      "years": {
-        "2022": {
-          "year_total_points": 3320,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 9,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 13
-            }
-          ]
-        },
-        "2024": {
-          "year_total_points": 5685,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 18
-            }
-          ]
-        }
-      },
-      "total_points": 9005
-    },
-    {
-      "name": "Коваленко Сергей",
-      "rank": 9,
-      "birthday": 1993,
-      "region": "Волгоградская область",
-      "category": "мужчины",
-      "sport_rank": "3",
-      "last_year": 2024,
-      "best_result": {
-        "event": "Чемпионат федеральных округов",
-        "year": "2024",
-        "place": 6,
-        "points": 4745
-      },
-      "years": {
-        "2024": {
-          "year_total_points": 8065,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 11,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 18
-            },
-            {
-              "name": "Чемпионат федеральных округов",
-              "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 7
-            }
-          ]
-        }
-      },
-      "total_points": 8065
-    },
-    {
-      "name": "Андронов Евгений",
-      "rank": 10,
-      "birthday": 0,
-      "region": "Московская область",
-      "category": "мужчины",
-      "sport_rank": "3",
-      "last_year": 2024,
-      "best_result": {
-        "event": "Чемпионат федеральных округов",
-        "year": "2024",
-        "place": 7,
-        "points": 4745
-      },
-      "years": {
-        "2024": {
-          "year_total_points": 8065,
-          "events": [
-            {
-              "name": "Чемпионат России",
-              "place": 12,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 18
-            },
-            {
-              "name": "Чемпионат федеральных округов",
-              "place": 7,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 7
-            }
-          ]
-        }
-      },
-      "total_points": 8065
+      "years_participated": [
+        2024
+      ]
     }
   ]
 }
