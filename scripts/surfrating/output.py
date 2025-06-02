@@ -4,6 +4,7 @@ from datetime import datetime
 from collections import defaultdict
 from pathlib import Path
 from typing import List, Dict, Optional, Union
+from anonymization import apply_anonymization
 
 def _resolve_output_path(
     output_filename: Optional[str],
@@ -155,6 +156,8 @@ def save_ranking_json(results: List[Dict], config: Dict, output_filename: str = 
             prev_points = athlete["year_points"]
 
         transformed["year_rankings"][year] = {"athletes": athletes}
+
+    transformed = apply_anonymization(transformed, config)
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(transformed, f, ensure_ascii=False, indent=2)
