@@ -19,7 +19,7 @@ const app = Vue.createApp({
                     { value: 'rfs/rus', label: 'Чемпионат России' },
                     { value: 'rfs/kaliningrad', label: 'Чемпионат Калининградской области' }
                 ],
-                wakesurf: [
+                wakesurfing: [
                     { value: 'rfs/rus', label: 'Чемпионат России' },
                     { value: 'rfs/federal', label: 'Чемпионат Федеральных округов' }
                 ],

@@ -17,7 +17,6 @@
             <el-header class="global-header">
                 <div class="header-content">
                     <div class="header-brand">
-                        <img src="https://via.placeholder.com/120x60?text=Logo" class="header-logo" alt="Logo">
                         <el-dropdown trigger="click">
                             <span class="el-dropdown-link header-title-block">
                                 <h1>Рейтинг</h1>
@@ -27,7 +26,7 @@
                                 <el-dropdown-menu>
                                     <el-dropdown-item :class="{ 'active': currentDiscipline === 'shortboard' }" @click="changeDiscipline('shortboard')">Короткая доска</el-dropdown-item>
                                     <el-dropdown-item :class="{ 'active': currentDiscipline === 'longboard' }" @click="changeDiscipline('longboard')">Длинная доска</el-dropdown-item>
-                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'wakesurf' }" @click="changeDiscipline('wakesurf')">Вейксерфинг</el-dropdown-item>
+                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'wakesurfing' }" @click="changeDiscipline('wakesurfing')">Вейксерфинг</el-dropdown-item>
                                     <el-dropdown-item :class="{ 'active': currentDiscipline === 'wakeskim' }" @click="changeDiscipline('wakeskim')">Вейкским</el-dropdown-item>
                                 </el-dropdown-menu>
                             </template>
