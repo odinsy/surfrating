@@ -575,7 +575,7 @@
 
         // Функция загрузки данных
         async function loadData(competition, category, gender) {
-            const cacheKey = `${competition}/${category}/${gender}`;
+            const cacheKey = `${competition}/${category}/ranking_${gender}`;
 
             // Проверяем кэш
             if (dataCache[cacheKey]) {
