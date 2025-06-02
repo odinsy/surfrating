@@ -66,7 +66,7 @@ def process_year_points(year: int, event_data: Dict, config: Dict) -> Dict:
 
         year_info['year_total_points'] += points
         year_info['events'].append({
-            'name': event_name,
+            'event_name': event_name,
             'place': int(place) if place.isdigit() else place,
             'points': points,
             'group': group,
@@ -113,7 +113,7 @@ def process_athletes(data: Dict, config: Dict) -> List[Dict]:
             for event in year_info['events']:
                 all_events.append({
                     **event,
-                    'year': int(year)
+                    'event_year': int(year)
                 })
 
         if all_events:
@@ -122,14 +122,14 @@ def process_athletes(data: Dict, config: Dict) -> List[Dict]:
             if numeric_events:
                 best_event = min(
                     numeric_events,
-                    key=lambda x: (x['place'], -x['year'], -x['points'])
+                    key=lambda x: (x['place'], -x['event_year'], -x['points'])
                 )
             else:
                 best_event = max(all_events, key=lambda x: x['points'])
 
             entry['best_result'] = {
-                'event': best_event['name'],
-                'year': str(best_event['year']),
+                'event_name': best_event['event_name'],
+                'event_year': str(best_event['event_year']),
                 'place': best_event['place'],
                 'points': best_event['points']
             }
@@ -144,6 +144,6 @@ def process_athletes(data: Dict, config: Dict) -> List[Dict]:
             x['best_result']['place'] if x['best_result'] and isinstance(x['best_result']['place'], int) else 9999,
             -x['last_year'],
             # Добавляем дополнительный ключ для стабильной сортировки
-            -int(x['best_result']['year']) if x['best_result'] and x['best_result'].get('year') else 0
+            -int(x['best_result']['event_year']) if x['best_result'] and x['best_result'].get('event_year') else 0
         ))
     return sorted(results, key=lambda x: -x['total_points'])

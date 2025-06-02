@@ -134,6 +134,9 @@ def save_ranking_json(results: List[Dict], config: Dict, output_filename: str = 
         for year, year_data in athlete.get("years", {}).items():
             year_entry = {
                 "name": athlete["name"],
+                "region": athlete["region"],
+                "sport_rank": athlete["sport_rank"],
+                "birthday": athlete["birthday"],
                 "year_points": year_data["year_total_points"],
                 "total_points": athlete["total_points"],
                 "events": year_data["events"]
@@ -174,7 +177,7 @@ def generate_output(results: List[Dict], config: Dict) -> None:
     print_to_console(results, headers, years, config)
 
     if 'top5_filename' in config['output']:
-        top5 = results[:10]
+        top5 = results[:5]
         csv_path = config['output']['top5_filename']
         json_path = Path(csv_path).with_suffix('.json')
 

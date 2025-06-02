@@ -19,9 +19,9 @@ def extract_year(date_str: str) -> int:
 def parse_events(config: dict) -> dict:
     """Парсит информацию о соревнованиях и участниках из CSV файлов"""
     events_info = defaultdict(lambda: {
-        'year': None,
+        'event_year': None,
         'event_name': None,
-        'location': None,
+        'event_location': None,
         'sport_type': None,
         'discipline': None,
         'category': None,
@@ -32,9 +32,16 @@ def parse_events(config: dict) -> dict:
     })
 
     required_columns = [
-        'Год', 'Событие', 'Место проведения',
-        'Вид спорта', 'Дисциплина', 'Категория',
-        'ФИО', 'Место', 'Регион', 'Год рождения'
+        'Год',
+        'Событие',
+        'Место проведения',
+        'Вид спорта',
+        'Дисциплина',
+        'Категория',
+        'ФИО',
+        'Место',
+        'Регион',
+        'Год рождения'
     ]
 
     for pattern in config['input_paths']:
@@ -42,13 +49,11 @@ def parse_events(config: dict) -> dict:
             with open(file_path, 'r', encoding='utf-8') as f:
                 reader = csv.DictReader(f)
 
-                # Проверка наличия обязательных колонок
                 if not all(col in reader.fieldnames for col in required_columns):
                     print(f"Пропущен файл {file_path}: отсутствуют необходимые колонки")
                     continue
 
                 for row in reader:
-                    # Создаем ключ события
                     event_key = (
                         row['Год'],
                         row['Событие'],
@@ -58,12 +63,11 @@ def parse_events(config: dict) -> dict:
                         row['Категория']
                     )
 
-                    # Обновляем информацию о соревновании
                     event = events_info[event_key]
                     event.update({
-                        'year': row['Год'],
+                        'event_year': row['Год'],
                         'event_name': row['Событие'],
-                        'location': row['Место проведения'],
+                        'event_location': row['Место проведения'],
                         'sport_type': row['Вид спорта'],
                         'discipline': row['Дисциплина'],
                         'category': row['Категория']
@@ -95,7 +99,7 @@ def save_events_json(events_info: dict, output_path: str) -> None:
     # Преобразуем в список и сортируем
     events_list = sorted(
         events_info.values(),
-        key=lambda x: (x['year'], x['event_name'])
+        key=lambda x: (x['event_year'], x['event_name'])
     )
 
     # Создаем директорию если нужно
