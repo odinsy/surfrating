@@ -3,7 +3,25 @@ import json
 from datetime import datetime
 from collections import defaultdict
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional, Union
+
+def _resolve_output_path(
+    output_filename: Optional[str],
+    config: Dict,
+    key: Optional[str] = None,
+    default_suffix: Optional[str] = None
+) -> Path:
+    """Обрабатывает пути для выходных файлов с учетом конфигурации"""
+    if output_filename:
+        path = Path(output_filename)
+    elif key:
+        path = Path(config['output'][key])
+    else:
+        csv_path = Path(config['output']['filename'])
+        path = csv_path.with_suffix(default_suffix) if default_suffix else csv_path
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    return path
 
 def prepare_headers_and_years(results: List[Dict], config: Dict) -> tuple:
     years = sorted({y for a in results for y in a['years']})
@@ -39,9 +57,7 @@ def prepare_row_data(athlete: Dict, years: List[int]) -> list:
     ]
 
 def save_to_csv(results: List[Dict], headers: List[str], years: List[int], config: Dict, output_filename: str = None) -> None:
-    output_filename = output_filename or config['output']['filename']
-    output_path = Path(output_filename)
-    output_path.parent.mkdir(exist_ok=True)
+    output_path = _resolve_output_path(output_filename, config)
 
     with open(output_path, 'w', encoding='utf-8', newline='') as f:
         writer = csv.writer(f)
@@ -52,10 +68,11 @@ def save_to_csv(results: List[Dict], headers: List[str], years: List[int], confi
             writer.writerow(row)
 
 def save_to_json(results: List[Dict], headers: List[str], config: Dict, output_filename: str = None) -> None:
-    if output_filename:
-        json_path = Path(output_filename)
-    else:
-        json_path = Path(config['output']['filename']).with_suffix('.json')
+    output_path = _resolve_output_path(
+        output_filename,
+        config,
+        default_suffix='.json'
+    )
 
     json_athletes = []
     for athlete in results:
@@ -78,14 +95,19 @@ def save_to_json(results: List[Dict], headers: List[str], config: Dict, output_f
         }
         json_athletes.append(json_athlete)
 
-    json_path.parent.mkdir(exist_ok=True, parents=True)
-    with open(json_path, 'w', encoding='utf-8') as f:
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump({
             'headers': headers,
             'athletes': json_athletes
         }, f, ensure_ascii=False, indent=2)
 
-def save_ranking_json(results: List[Dict], config: Dict, output_filename: str = None) -> None:
+def save_ranking_json(results: List[Dict], headers: List[str], config: Dict, output_filename: str = None) -> None:
+    output_path = _resolve_output_path(
+        output_filename,
+        config,
+        key='ranking_json'
+    )
+
     transformed = {
         "discipline": config.get("discipline", "unknown"),
         "gender": config.get("gender", "unknown"),
@@ -131,11 +153,11 @@ def save_ranking_json(results: List[Dict], config: Dict, output_filename: str = 
 
         transformed["year_rankings"][year] = {"athletes": athletes}
 
-    if not output_filename:
-        output_filename = f"{config['discipline']}_{config['gender']}.json"
-
-    with open(output_filename, "w", encoding="utf-8") as f:
-        json.dump(transformed, f, ensure_ascii=False, indent=2)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump({
+            'headers': headers,
+            'rankings': transformed
+        }, f, ensure_ascii=False, indent=2)
 
 def print_to_console(results: List[Dict], headers: List[str], years: List[int], config: Dict) -> None:
     print(','.join(map(str, headers)))
@@ -151,7 +173,7 @@ def generate_output(results: List[Dict], config: Dict) -> None:
 
     save_to_csv(results, headers, years, config)
     save_to_json(results, headers, config)
-    save_ranking_json(results, config, config["output"].get("ranking_json"))
+    save_ranking_json(results, headers, config)
     print_to_console(results, headers, years, config)
 
     if 'top5_filename' in config['output']:
