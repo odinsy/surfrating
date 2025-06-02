@@ -1,6 +1,12 @@
+---
+discipline: "longboard"
+gender: "men"
+
 input_paths:
-  - "data/rfs/surfing/rus/longboard/longboard_men_*.csv"
+  - data/rfs/surfing/rus/longboard/longboard_men_*.csv
 
 output:
-  filename: processed/rankings/surfing/rfs/rus/longboard/men.csv
-  top5_filename: processed/rankings/surfing/rfs/rus/longboard/top5_men.csv
+  filename: output/rankings/rfs/rus/longboard/men.csv
+  top5_filename: output/rankings/rfs/rus/longboard/t5_ranking_men.csv
+  ranking_json: output/rankings/rfs/rus/longboard/ranking_men.json
+  events_json: output/rankings/rfs/rus/longboard/events_men.json

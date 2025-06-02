@@ -3,59 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Полный рейтинг спортсменов</title>
+    <title>Рейтинг спортсменов</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/element-plus/dist/index.full.js"></script>
+    <script src="https://unpkg.com/slugify@1.6.6/slugify.js"></script>
 </head>
 <body>
-    <header class="global-header">
-        <div class="header-content">
-            <nav class="header-nav">
-                <div class="dropdown">
-                    <a href="#" class="header-nav-link active">Дисциплина</a>
-                    <div class="dropdown-menu">
-                        <!-- Выбор дисциплины -->
-                        <div class="dropdown-section">
-                            <div class="dropdown-section-title">Дисциплина</div>
-                            <a href="#" class="dropdown-item" data-discipline="shortboard">Короткая доска</a>
-                            <a href="#" class="dropdown-item" data-discipline="longboard">Длинная доска</a>
-                            <a href="#" class="dropdown-item" data-discipline="wakesurfing">Вейксерфинг</a>
-                            <a href="#" class="dropdown-item" data-discipline="wakeskim">Вейкским</a>
-                        </div>
+    <div id="app">
+        <el-container>
+            <!-- Header -->
+            <el-header class="global-header">
+                <div class="header-content">
+                    <div class="header-brand">
+\                        <el-dropdown trigger="click">
+                            <span class="el-dropdown-link header-title-block">
+                                <h1>Рейтинг</h1>
+                                <i class="el-icon-arrow-down el-icon--right"></i>
+                            </span>
+                            <template #dropdown>
+                                <el-dropdown-menu>
+                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'shortboard' }" @click="changeDiscipline('shortboard')">Короткая доска</el-dropdown-item>
+                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'longboard' }" @click="changeDiscipline('longboard')">Длинная доска</el-dropdown-item>
+                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'wakesurfing' }" @click="changeDiscipline('wakesurfing')">Вейксерфинг</el-dropdown-item>
+                                    <el-dropdown-item :class="{ 'active': currentDiscipline === 'wakeskim' }" @click="changeDiscipline('wakeskim')">Вейкским</el-dropdown-item>
+                                </el-dropdown-menu>
+                            </template>
+                        </el-dropdown>
+                    </div>
+                    <nav class="header-nav">
+                        <a href="#" class="header-nav-link active">Рейтинг</a>
+                        <a href="#" class="header-nav-link">События</a>
+                        <a href="#" class="header-nav-link">Спортсмены</a>
+                    </nav>
+                </div>
+            </el-header>
 
-                        <!-- Выбор соревнований (будет обновляться динамически) -->
-                        <div class="dropdown-section">
-                            <div class="dropdown-section-title">Соревнование</div>
-                            <div id="competition-dropdown"></div>
-                        </div>
+            <!-- Main Content -->
+            <el-main class="container">
+                <div class="controls">
+                    <el-select v-model="currentCompetition" placeholder="Выберите соревнование" class="discipline-select">
+                        <el-option
+                            v-for="comp in competitions[currentDiscipline]"
+                            :key="comp.value"
+                            :label="comp.label"
+                            :value="comp.value">
+                        </el-option>
+                    </el-select>
+                    <el-select v-model="currentYear" placeholder="Выберите год" class="discipline-select">
+                        <el-option label="Все годы" value="all"></el-option>
+                        <el-option
+                            v-for="year in years"
+                            :key="year"
+                            :label="year"
+                            :value="year">
+                        </el-option>
+                    </el-select>
+                    <div class="gender-switch">
+                        <el-button :class="{ 'active': currentGender === 'men' }" @click="changeGender('men')">Мужчины</el-button>
+                        <el-button :class="{ 'active': currentGender === 'women' }" @click="changeGender('women')">Женщины</el-button>
                     </div>
                 </div>
-            </nav>
-        </div>
-    </header>
 
-    <div class="container">
-        <div class="controls">
-            <!-- Селектор соревнований -->
-            <select id="competition-select" class="competition-select">
-                <!-- Будет заполняться динамически -->
-            </select>
-
-            <!-- Селектор года -->
-            <select id="year-select" class="year-select">
-                <option value="all">Все года</option>
-                <!-- Года будут заполняться динамически -->
-            </select>
-
-            <div class="gender-switch">
-                <button class="gender-btn active" data-gender="men">Мужчины</button>
-                <button class="gender-btn" data-gender="women">Женщины</button>
-            </div>
-        </div>
-
-        <div id="ranking-table-container"></div>
+                <el-table
+                    :data="tableData"
+                    class="ranking-table"
+                    :default-sort="{ prop: 'rank', order: 'ascending' }">
+                    <el-table-column
+                        v-for="(header, index) in headers"
+                        :key="header"
+                        :prop="headerToProp(header)"
+                        :label="header"
+                        :align="header === 'Name' || header === 'Best Result' ? 'left' : 'center'"
+                        :min-width="getColumnWidth(header)"
+                        :sortable="['Rank', 'Total Points'].includes(header)">
+                        <template #default="{ row }" v-if="header === 'Rank'">
+                            <span>{{ row.rank }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Name'">
+                            <el-tooltip
+                                :raw-content="true"
+                                :content="getTooltipContent(row)"
+                                placement="bottom"
+                                effect="light"
+                                :show-after="200">
+                                <div class="avatar-wrapper">
+                                    <div class="athlete-avatar">
+                                        <img :src="row.avatarPath" :alt="row.name" @error="handleImageError($event)">
+                                        <div class="avatar-fallback">{{ row.initials }}</div>
+                                    </div>
+                                    <div>
+                                        <div class="athlete-name">{{ row.name }}</div>
+                                        <div class="athlete-region">{{ row.region }}</div>
+                                    </div>
+                                </div>
+                            </el-tooltip>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Sport Rank'">
+                            <span>{{ row.sport_rank || '—' }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Birthday'">
+                            <span>{{ row.birthday }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Region'">
+                            <span>{{ row.region }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Category'">
+                            <span>{{ row.category || '—' }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Best Result'">
+                            <span>{{ row.best_result || '—' }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="isYearHeader(header)">
+                            <el-tooltip
+                                v-if="row.years?.[header]?.events?.length"
+                                :raw-content="true"
+                                :content="getYearTooltipContent(row, header)"
+                                placement="top"
+                                effect="light"
+                                :show-after="200">
+                                <span class="year-points">{{ row.years?.[header]?.year_total_points || '—' }}</span>
+                            </el-tooltip>
+                            <span v-else class="year-points">{{ row.years?.[header]?.year_total_points || '—' }}</span>
+                        </template>
+                        <template #default="{ row }" v-if="header === 'Total Points'">
+                            <span class="total-points">{{ row.total_points || '—' }}</span>
+                        </template>
+                    </el-table-column>
+                </el-table>
+            </el-main>
+        </el-container>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/transliteration@2.3.5/dist/browser/bundle.umd.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -2,5 +2,5 @@ input_paths:
   - "data/rfs/surfing/shortboard/shortboard_men_*.csv"
 
 output:
-  filename: processed/rankings/surfing/rus/shortboard_men.csv
-  top5_filename: processed/rankings/surfing/rus/top5/shortboard_men.csv
+  filename: output/rankings/surfing/rus/shortboard_men.csv
+  top5_filename: output/rankings/surfing/rus/top5/shortboard_men.csv

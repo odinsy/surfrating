@@ -1,6 +1,11 @@
+---
+discipline: "wakeskim"
+gender: "men"
+
 input_paths:
   - data/rfs/wakesurfing/rus/wakeskim/wakeskim_men_*.csv
 
 output:
-  filename: processed/rankings/wakesurfing/rfs/rus/wakeskim/men.csv
-  top5_filename: processed/rankings/wakesurfing/rfs/rus/wakeskim/top5_men.csv
+  filename: output/rankings/rfs/rus/wakeskim/men.csv
+  top5_filename: output/rankings/rfs/rus/wakeskim/top5_men.csv
+  ranking_json: output/rankings/rfs/rus/wakeskim/ranking_men.json

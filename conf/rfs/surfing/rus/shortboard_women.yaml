@@ -1,6 +1,12 @@
+---
+discipline: "shortboard"
+gender: "women"
+
 input_paths:
-  - "data/rfs/surfing/rus/shortboard/shortboard_women_*.csv"
+  - data/rfs/surfing/rus/shortboard/shortboard_women_*.csv
 
 output:
-  filename: processed/rankings/surfing/rfs/rus/shortboard/women.csv
-  top5_filename: processed/rankings/surfing/rfs/rus/shortboard/top5_women.csv
+  filename: output/rankings/rfs/rus/shortboard/women.csv
+  top5_filename: output/rankings/rfs/rus/shortboard/t5_ranking_women.csv
+  ranking_json: output/rankings/rfs/rus/shortboard/ranking_women.json
+  events_json: output/rankings/rfs/rus/shortboard/events_women.json

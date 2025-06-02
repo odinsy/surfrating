@@ -23,10 +23,14 @@ def setup_arg_parser() -> argparse.Namespace:
 
 def main():
     try:
-        args = setup_arg_parser()
-        config = load_config(args.config)
-        data = parse_files(config)
+        args    = setup_arg_parser()
+        config  = load_config(args.config)
+        data    = parse_files(config)
         results = process_athletes(data, config)
+
+        for idx, athlete in enumerate(results, 1):
+            athlete["rank"] = idx
+
         generate_output(results, config)
 
     except Exception as e:

@@ -10,20 +10,19 @@ body {
     padding: 15px;
 }
 
-/* ===== HEADER STRUCTURE ===== */
 .global-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: #112D4E;
+    background: #003087;
     z-index: 1100;
-    padding: 15px 0; /* Увеличенный отступ */
+    padding: 15px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .header-logo {
-    height: 60px; /* Увеличенная высота */
+    height: 60px;
     width: auto;
 }
 
@@ -42,18 +41,6 @@ body {
     gap: 15px;
 }
 
-.header-controls {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.header-title-block {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 .header-title-block h1 {
     color: white;
     font-size: 1.5em;
@@ -61,14 +48,12 @@ body {
     white-space: nowrap;
 }
 
-/* Header Navigation */
 .header-nav {
     display: flex;
     gap: 35px;
     margin-left: 40px;
     flex: 1;
     align-items: center;
-    position: relative;
 }
 
 .header-nav-link {
@@ -92,44 +77,40 @@ body {
     transition: width 0.3s;
 }
 
-.header-nav-link:hover {
+.header-nav-link:hover, .header-nav-link.active {
     color: white;
 }
 
-.header-nav-link:hover::after,
-.header-nav-link.active::after {
+.header-nav-link:hover::after, .header-nav-link.active::after {
     width: 100%;
 }
 
-.header-nav-link.active {
+.el-dropdown-link {
+    cursor: pointer;
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    width: 100%;
-    margin-top: 60px;
+    margin-top: 90px;
     overflow: visible;
 }
 
 .controls {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .discipline-select {
     width: 240px;
-    padding: 10px 15px;
-    border: 2px solid #112D4E;
-    border-radius: 6px;
-    font-size: 1em;
-    transition: all 0.3s;
 }
 
 .gender-switch {
@@ -139,106 +120,76 @@ body {
     border-radius: 6px;
     padding: 5px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    flex-grow: 1;
 }
 
-.gender-btn {
-    flex: 1;
-    padding: 10px 15px;
-    white-space: nowrap;
-}
-
-.gender-btn.active {
-    background: #112D4E;
+.el-button.active {
+    background: #003087;
     color: white;
 }
 
 .ranking-table {
-    border-collapse: separate;
-    overflow: hidden;
-    width: 100%;
     background: white;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    position: relative;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
 }
 
-.ranking-table th,
-.ranking-table td {
+.el-table {
+    table-layout: auto; /* Allow columns to adjust based on content */
+}
+
+.el-table th, .el-table td {
     padding: 10px 12px;
     text-align: center;
     border-bottom: 1px solid #eee;
-    vertical-align: middle;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
 }
 
-.ranking-table th:first-child,
-.ranking-table td:first-child {
-    width: 60px;
-    min-width: 60px;
-    padding: 8px 4px !important;
-    color: #3F72AF;
+.el-table th:first-child, .el-table td:first-child {
+    color: #003087;
     font-weight: 800;
     font-size: 1em;
 }
 
-.ranking-table th {
-    background: #112D4E;
+.el-table th {
+    background: #003087;
     color: white;
     font-weight: 600;
-    height: 48px;
-    padding: 8px 12px !important;
-    text-align: center;
 }
 
-.ranking-table th:nth-child(2) {
+.el-table th:nth-child(2) {
     text-align: left !important;
-    padding-left: 16px !important;
 }
 
-.ranking-table tr:hover {
+.el-table tr:hover {
     background: #f8f9ff;
 }
 
-.ranking-table tr.top-athlete {
+.el-table tr.top-athlete {
     background: #f0f4ff;
 }
 
-.ranking-table th:first-child {
-    color: white;
-    font-weight: 600;
-    font-size: 1em;
-}
-
-.ranking-table thead tr th:first-child {
+.el-table__header th:first-child {
     border-top-left-radius: 8px;
 }
 
-.ranking-table thead tr th:last-child {
+.el-table__header th:last-child {
     border-top-right-radius: 8px;
 }
 
-.ranking-table tbody tr:last-child td:first-child {
+.el-table__body tr:last-child td:first-child {
     border-bottom-left-radius: 8px;
 }
 
-.ranking-table tbody tr:last-child td:last-child {
+.el-table__body tr:last-child td:last-child {
     border-bottom-right-radius: 8px;
 }
 
-#ranking-table-container .error-message {
-    text-align: center;
-    padding: 40px;
-    color: #666;
-    font-size: 1.2em;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
 .name-cell {
-    position: relative;
     cursor: pointer;
     text-align: left !important;
-    padding: 8px 12px !important;
 }
 
 .athlete-name {
@@ -254,56 +205,14 @@ body {
 }
 
 .year-points {
-    color: #3F72AF;
+    color: #003087;
     font-weight: 600;
-    position: relative;
-}
-
-.custom-tooltip {
-    display: none;
-    position: absolute;
-    background: #ffffff;
-    color: #112D4E;
-    padding: 8px;
-    border-radius: 6px;
-    min-width: 160px;
-    z-index: 1002;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transform: translateX(-50%);
-    left: 50%;
-    top: calc(100% + 8px);
-    font-size: 0.9em;
-}
-/* Стили для структурированных тултипов */
-.tooltip-event {
-    padding: 4px 0;
-}
-
-.tooltip-event:last-child {
-    border-bottom: none;
-}
-
-.event-title {
-    font-weight: 600;
-    color: #3F72AF;
-    margin-bottom: 2px;
-}
-
-.event-detail {
-    color: #666;
-    font-size: 0.85em;
-}
-
-.best-tooltip[data-tooltip]:hover::after {
-    max-width: 200px;
 }
 
 .total-points {
-    color: #3F72AF;
+    color: #003087;
     font-weight: 800;
     font-size: 1.1em;
-    padding-right: 20px !important;
 }
 
 .avatar-wrapper {
@@ -317,9 +226,8 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    flex-shrink: 0;
     overflow: hidden;
-    background: #112D4E;
+    background: #003087;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -345,39 +253,26 @@ body {
     font-size: 0.8em;
 }
 
-.athlete-avatar img[data-error] + .avatar-fallback {
-    display: flex;
-}
-
-.name-cell:hover .tooltip-item {
-    opacity: 1;
-    visibility: visible;
+.el-tooltip__popper {
+    background: #ffffff;
+    color: #112D4E;
+    padding: 8px;
+    border-radius: 6px;
+    min-width: 160px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 0.9em;
 }
 
 .tooltip-item {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translate(-50%, 100%);
-    background: white;
     width: 320px;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 }
 
 .tooltip-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
 }
 
 .tooltip-meta {
@@ -388,7 +283,7 @@ body {
 .tooltip-name {
     font-size: 1.4em;
     font-weight: 700;
-    color: #1a237e;
+    color: #003087;
     margin-bottom: 4px;
 }
 
@@ -422,7 +317,7 @@ body {
 
 .tooltip-value {
     font-size: 1.1em;
-    color: #112D4E;
+    color: #003087;
     font-weight: 600;
     margin-bottom: 4px;
 }
@@ -439,65 +334,31 @@ body {
 }
 
 .tooltip-social a {
-    color: #112D4E;
+    color: #003087;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9em;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: opacity 0.3s;
-    position: relative;
-    padding-left: 28px;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    padding: 12px;
-    z-index: 1001;
-    min-width: 220px;
-    margin-top: 8px;
-}
-
-.dropdown:hover .dropdown-menu {
+.custom-tooltip {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
-.dropdown-item {
-    padding: 10px 16px;
-    color: #112D4E;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: all 0.2s;
-    background: rgba(17,45,78,0.05);
-    text-align: start;
-    white-space: nowrap;
+.tooltip-event {
+    padding: 4px 0;
 }
 
-.dropdown-item:hover {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
+.event-title {
+    font-weight: 600;
+    color: #003087;
+    margin-bottom: 2px;
 }
 
-.dropdown-item.active {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
+.event-detail {
+    color: #666;
+    font-size: 0.85em;
 }
 
 @media (max-width: 768px) {
@@ -507,22 +368,7 @@ body {
         padding: 10px;
     }
 
-    .header-title-block {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .header-title-block h1 {
-        text-align: center;
-    }
-
-    .header-content {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
     .header-nav {
-        order: 2;
         width: 100%;
         justify-content: center;
         margin: 0;
@@ -532,62 +378,34 @@ body {
         border-radius: 6px;
     }
 
-    .header-nav-link {
-        font-size: 0.9em;
-    }
-
     .container {
         margin-top: 120px;
     }
 
     .controls {
         position: sticky;
-        left: 15px;
         top: 15px;
         z-index: 1001;
         background: #f5f6f7;
         padding: 10px 0;
-        margin-bottom: 15px;
     }
 
     .discipline-select {
         width: 100% !important;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
-    .discipline-select,
     .gender-switch {
         width: 100%;
         max-width: 400px;
         margin: 0 auto;
     }
 
-    .gender-btn {
-        padding: 12px 10px;
-        font-size: 0.9em;
-    }
-
-    .ranking-table {
-        min-width: 500px;
-    }
-
-    .ranking-table th:nth-child(2) {
-        padding-left: 12px !important;
-    }
-
-    .ranking-table th,
-    .ranking-table td {
-        padding: 8px 10px;
-    }
-
-    .ranking-table th:nth-child(3),
-    .ranking-table td:nth-child(3) {
+    /* Show only Rank, Name, and Total Points on mobile */
+    .el-table th:not(:nth-child(-n+2)):not(:last-child),
+    .el-table td:not(:nth-child(-n+2)):not(:last-child) {
         display: none;
-    }
-
-    .ranking-table th:first-child,
-    .ranking-table td:first-child {
-        min-width: 40px;
-        padding: 6px 2px !important;
     }
 
     .athlete-avatar {
@@ -599,72 +417,8 @@ body {
         font-size: 0.7em;
     }
 
-    .name-cell {
-        cursor: default;
-    }
-
-    .custom-tooltip {
+    .el-tooltip__popper {
         display: none !important;
-    }
-
-    .tooltip-item {
-        display: none !important;
-    }
-
-    .tooltip-avatar {
-        display: none;
-    }
-
-    .tooltip-header {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .tooltip-name {
-        font-size: 1.1em;
-    }
-
-    .tooltip-stats {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .tooltip-stat {
-        text-align: left;
-        justify-content: space-between;
-    }
-
-    .dropdown-menu {
-        position: static;
-        display: flex !important;
-        flex-direction: column;
-        box-shadow: none;
-        background: transparent;
-        padding: 8px 0;
-    }
-
-    .dropdown-item {
-        background: rgba(255,255,255,0.15);
-        color: white;
-        margin-bottom: 5px;
-    }
-
-    .dropdown-item.active {
-        background: rgba(255,255,255,0.3);
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: none !important;
-    }
-
-    #ranking-table-container .error-message {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        margin-top: 140px; /* Адаптация для мобильных */
     }
 }
 
@@ -687,66 +441,6 @@ body {
     }
 
     .container {
-        margin-top: 160px; /* Адаптация для маленьких экранов */
-    }
-
-    .tooltip-item {
-        display: none !important;
-    }
-
-    .tooltip-name {
-        font-size: 1em;
-    }
-
-    .dropdown-item {
-        font-size: 0.85em;
-        padding: 8px 12px;
-    }
-}
-
-
-/* Добавленные стили */
-.dropdown-section {
-    margin-bottom: 12px;
-}
-
-.dropdown-section-title {
-    font-weight: 600;
-    font-size: 0.9em;
-    color: #112D4E;
-    margin-bottom: 6px;
-    padding-left: 8px;
-}
-
-.discipline-select,
-.competition-select,
-.year-select {
-    width: 240px;
-    padding: 10px 15px;
-    border: 2px solid #112D4E;
-    border-radius: 6px;
-    font-size: 1em;
-    transition: all 0.3s;
-    margin-right: 10px;
-}
-
-.controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-    .discipline-select,
-    .competition-select,
-    .year-select {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .gender-switch {
-        width: 100%;
+        margin-top: 160px;
     }
 }

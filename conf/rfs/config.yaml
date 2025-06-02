@@ -9,7 +9,7 @@ input_paths:
   # - "data/rfs/surfing/shortboard/shortboard_men_*.csv"
 
 output:
-  # filename: processed/rankings/surfing/shortboard_men.csv
+  # filename: output/rankings/surfing/shortboard_men.csv
 
   translate_columns: false
   columns:
@@ -63,31 +63,31 @@ wildcard:
   last_years_period: 3    # За последние N лет
   min_best_place: 3       # Лучший результат за карьеру
 
-  ranking_file: processed/rankings/surfing/shortboard_men.csv
-  output_file: processed/wildcard/shortboard_men.csv
+  ranking_file: output/rankings/surfing/shortboard_men.csv
+  output_file: output/wildcard/shortboard_men.csv
 
-  # ranking_file: processed/rankings/surfing/shortboard_women.csv
-  # output_file: processed/wildcard/shortboard_women.csv
+  # ranking_file: output/rankings/surfing/shortboard_women.csv
+  # output_file: output/wildcard/shortboard_women.csv
 
-  # ranking_file: processed/rankings/surfing/longboard_women.csv
-  # output_file: processed/wildcard/longboard_women.csv
+  # ranking_file: output/rankings/surfing/longboard_women.csv
+  # output_file: output/wildcard/longboard_women.csv
 
-  # ranking_file: processed/rankings/surfing/longboard_men.csv
-  # output_file: processed/wildcard/longboard_men.csv
+  # ranking_file: output/rankings/surfing/longboard_men.csv
+  # output_file: output/wildcard/longboard_men.csv
 
 trends:
-  input_ranking_file: processed/rankings/surfing/shortboard_men.csv
-  output_general_file: processed/trends/general_shortboard_men_stats.csv
-  output_detailed_file: processed/trends/detailed_shortboard_men_stats.csv
+  input_ranking_file: output/rankings/surfing/shortboard_men.csv
+  output_general_file: output/trends/general_shortboard_men_stats.csv
+  output_detailed_file: output/trends/detailed_shortboard_men_stats.csv
 
-  # input_ranking_file: processed/rankings/surfing/longboard_men.csv
-  # output_general_file: processed/trends/general_longboard_men_stats.csv
-  # output_detailed_file: processed/trends/detailed_longboard_men_stats.csv
+  # input_ranking_file: output/rankings/surfing/longboard_men.csv
+  # output_general_file: output/trends/general_longboard_men_stats.csv
+  # output_detailed_file: output/trends/detailed_longboard_men_stats.csv
 
-  # input_ranking_file: processed/rankings/surfing/longboard_women.csv
-  # output_general_file: processed/trends/general_longboard_women_stats.csv
-  # output_detailed_file: processed/trends/detailed_longboard_women_stats.csv
+  # input_ranking_file: output/rankings/surfing/longboard_women.csv
+  # output_general_file: output/trends/general_longboard_women_stats.csv
+  # output_detailed_file: output/trends/detailed_longboard_women_stats.csv
 
-  # input_ranking_file: processed/rankings/surfing/shortboard_women.csv
-  # output_general_file: processed/trends/general_shortboard_women_stats.csv
-  # output_detailed_file: processed/trends/detailed_shortboard_women_stats.csv
+  # input_ranking_file: output/rankings/surfing/shortboard_women.csv
+  # output_general_file: output/trends/general_shortboard_women_stats.csv
+  # output_detailed_file: output/trends/detailed_shortboard_women_stats.csv
