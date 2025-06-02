@@ -91,7 +91,7 @@ const app = Vue.createApp({
                         year_total_points: athleteInYear.year_points,
                         events: athleteInYear.events
                     } : {};
-                }
+                };
 
                 return {
                     rank: athlete.rank,
@@ -106,8 +106,8 @@ const app = Vue.createApp({
                     avatarPath,
                     years: yearsData
                 };
-              });
-            };
+            });
+        },
         async updateTable() {
             const data = await this.loadData(this.currentCompetition, this.currentDiscipline, this.currentGender);
             this.headers = data.headers || [];
