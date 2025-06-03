@@ -1,7 +1,11 @@
-/* Custom styles to complement Bootstrap */
+/* Custom styles */
 body {
     background-color: #f8f9fa;
     padding-top: 70px;
+}
+
+.bg-primary-custom {
+    background-color: #112D4E !important;
 }
 
 .table-custom {
@@ -13,7 +17,7 @@ body {
 }
 
 .table-custom th {
-    background-color: #0d6efd;
+    background-color: #112D4E;
     color: white;
     vertical-align: middle;
     text-align: center;
@@ -43,14 +47,14 @@ body {
 }
 
 .year-points {
-    color: #0d6efd;
+    color: #112D4E;
     font-weight: 600;
     position: relative;
     text-align: center;
 }
 
 .total-points {
-    color: #0d6efd;
+    color: #112D4E;
     font-weight: 700;
     text-align: center;
 }
@@ -94,7 +98,6 @@ body {
     font-size: 0.8em;
 }
 
-/* Tooltip styles */
 .custom-tooltip {
     display: none;
     position: absolute;
@@ -114,7 +117,7 @@ body {
 
 .event-title {
     font-weight: 600;
-    color: #0d6efd;
+    color: #112D4E;
     margin-bottom: 3px;
 }
 
@@ -123,8 +126,15 @@ body {
     font-size: 0.85rem;
 }
 
-/* Active state for gender buttons */
+/* Активные элементы */
 .btn-outline-primary.active {
-    background-color: #0d6efd;
+    background-color: #112D4E;
+    border-color: #112D4E;
+    color: white;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #112D4E;
     color: white;
 }
