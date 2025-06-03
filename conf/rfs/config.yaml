@@ -10,17 +10,19 @@ input_paths:
 
 output:
   # filename: output/rankings/surfing/shortboard_men.csv
-
   translate_columns: false
   columns:
     - Rank
     - Name
     - Sport Rank
-    - Birthday
+    - Birth Year
     - Region
     - Category
     - YearScores
     - Total Points
+
+anonymization:
+  enabled: true
 
 sorting:
   enabled: true
