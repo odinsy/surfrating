@@ -141,22 +141,6 @@ async function loadData(competition, category, gender) {
     }
 }
 
-function updateCompetitionSelect(discipline) {
-    const competitionSelect = document.getElementById('competition-select');
-    competitionSelect.innerHTML = '';
-
-    const competitions = DISCIPLINE_COMPETITIONS[discipline];
-
-    for (const [name, value] of Object.entries(competitions)) {
-        const option = document.createElement('option');
-        option.value = value;
-        option.textContent = name;
-        competitionSelect.appendChild(option);
-    }
-
-    currentCompetition = Object.values(competitions)[0];
-}
-
 async function updateTable(category, gender) {
     const data = await loadData(currentCompetition, category, gender);
 
@@ -197,6 +181,35 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
+function updateCompetitionSelect(discipline) {
+    const competitionSelect = document.getElementById('competition-select');
+    competitionSelect.innerHTML = '';
+
+    const competitions = DISCIPLINE_COMPETITIONS[discipline];
+
+    for (const [name, value] of Object.entries(competitions)) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = name;
+        competitionSelect.appendChild(option);
+    }
+
+    currentCompetition = Object.values(competitions)[0];
+}
+
+function updateSelectedDiscipline(discipline) {
+    document.querySelectorAll('.discipline-option').forEach(option => {
+        option.classList.remove('selected');
+    });
+
+    const selectedOption = document.querySelector(`.discipline-option[data-discipline="${discipline}"]`);
+    if (selectedOption) {
+        selectedOption.classList.add('selected');
+        const optionTitle = selectedOption.querySelector('.option-title').textContent;
+        document.querySelector('.discipline-label').textContent = optionTitle;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const initialCategory = urlParams.get('category') || 'shortboard_men';
@@ -204,6 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector(`.gender-btn[data-gender="${gender}"]`).classList.add('active');
     updateCompetitionSelect(currentDiscipline);
+    updateSelectedDiscipline(currentDiscipline);
 
     document.getElementById('competition-select').addEventListener('change', (e) => {
         currentCompetition = e.target.value;
@@ -211,19 +225,18 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTable(currentDiscipline, gender);
     });
 
-    document.querySelectorAll('.discipline-dropdown .dropdown-item').forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
+    document.querySelectorAll('.discipline-option').forEach(item => {
+        item.addEventListener('click', function() {
             const discipline = this.dataset.discipline;
             currentDiscipline = discipline;
-
             updateCompetitionSelect(discipline);
-
             const gender = document.querySelector('.gender-btn.active').dataset.gender;
             updateTable(discipline, gender);
+            updateSelectedDiscipline(discipline);
         });
     });
 
+    // Обработчики событий для пола
     document.querySelectorAll('.gender-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));

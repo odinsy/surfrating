@@ -15,14 +15,46 @@
             <div class="header-controls">
                 <div class="header-title-block">
                 </div>
+                <div class="discipline-dropdown">
+                    <button class="discipline-toggle">
+                        <span class="discipline-label">Дисциплины</span>
+                        <svg class="discipline-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"></path>
+                        </svg>
+                    </button>
 
-                <div class="dropdown discipline-dropdown">
-                    <a href="#" class="header-nav-link discipline-dropdown-toggle">Рейтинг</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-discipline="shortboard">Короткая доска</a>
-                        <a href="#" class="dropdown-item" data-discipline="longboard">Длинная доска</a>
-                        <a href="#" class="dropdown-item" data-discipline="wakesurfing">Вейксерфинг</a>
-                        <a href="#" class="dropdown-item" data-discipline="wakeskim">Вейкским</a>
+                    <div class="discipline-menu">
+                        <div class="discipline-option" data-discipline="shortboard">
+                            <div class="option-icon surfboard"></div>
+                            <div class="option-text">
+                                <div class="option-title">Короткая доска</div>
+                                <div class="option-subtitle">Shortboard</div>
+                            </div>
+                        </div>
+
+                        <div class="discipline-option" data-discipline="longboard">
+                            <div class="option-icon surfboard"></div>
+                            <div class="option-text">
+                                <div class="option-title">Длинная доска</div>
+                                <div class="option-subtitle">Longboard</div>
+                            </div>
+                        </div>
+
+                        <div class="discipline-option" data-discipline="wakesurfing">
+                            <div class="option-icon wakesurf"></div>
+                            <div class="option-text">
+                                <div class="option-title">Вейксерфинг</div>
+                                <div class="option-subtitle">Wakesurfing</div>
+                            </div>
+                        </div>
+
+                        <div class="discipline-option" data-discipline="wakeskim">
+                            <div class="option-icon wakeskim"></div>
+                            <div class="option-text">
+                                <div class="option-title">Вейкским</div>
+                                <div class="option-subtitle">Wakeskim</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
