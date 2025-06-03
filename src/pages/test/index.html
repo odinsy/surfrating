@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полный рейтинг спортсменов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="global-header">
+        <div class="header-content">
+            <nav class="header-nav">
+            </nav>
+
+            <div class="header-controls">
+                <div class="header-title-block">
+                </div>
+
+                <div class="dropdown discipline-dropdown">
+                    <a href="#" class="header-nav-link discipline-dropdown-toggle">Дисциплины</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" data-discipline="shortboard">Короткая доска</a>
+                        <a href="#" class="dropdown-item" data-discipline="longboard">Длинная доска</a>
+                        <a href="#" class="dropdown-item" data-discipline="wakesurfing">Вейксерфинг</a>
+                        <a href="#" class="dropdown-item" data-discipline="wakeskim">Вейкским</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <select id="competition-select" class="discipline-select">
+            </select>
+
+            <div class="gender-switch">
+                <button class="gender-btn active" data-gender="men">Мужчины</button>
+                <button class="gender-btn" data-gender="women">Женщины</button>
+            </div>
+        </div>
+
+        <div id="ranking-table-container"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/transliteration@2.3.5/dist/browser/bundle.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
