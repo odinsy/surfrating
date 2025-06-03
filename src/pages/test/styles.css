@@ -41,6 +41,11 @@ body {
     text-align: left !important;
 }
 
+.name-cell:hover .athlete-name {
+    text-decoration: underline;
+    color: #112D4E;
+}
+
 .athlete-name {
     font-weight: 600;
 }
@@ -302,7 +307,6 @@ tr.top-10:hover {
     text-decoration: underline;
 }
 
-/* Адаптивность для тултипа */
 @media (max-width: 768px) {
     .athlete-tooltip {
         position: fixed;

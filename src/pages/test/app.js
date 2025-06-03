@@ -40,11 +40,11 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
-function showAthleteTooltip(tooltipId, rowElement) {
+function showAthleteTooltip(tooltipId, nameCell) {
     const tooltip = document.getElementById(tooltipId);
     if (!tooltip) return;
 
-    const rect = rowElement.getBoundingClientRect();
+    const rect = nameCell.getBoundingClientRect();
     tooltip.style.top = `${rect.bottom + window.scrollY}px`;
     tooltip.style.left = `${rect.left + window.scrollX}px`;
     tooltip.classList.add('visible');
@@ -135,11 +135,11 @@ function createAthleteRow(athlete, years) {
      const rowClass = isTop10 ? 'top-10' : '';
 
      return `
-         <tr class="${rowClass}"
-             onmouseenter="showAthleteTooltip('${tooltipId}', this)"
-             onmouseleave="hideAthleteTooltip('${tooltipId}')">
+         <tr class="${rowClass}">
              <td class="fw-bold">${athlete.rank}</td>
-             <td class="name-cell">
+             <td class="name-cell"
+                 onmouseenter="showAthleteTooltip('${tooltipId}', this)"
+                 onmouseleave="hideAthleteTooltip('${tooltipId}')">
                  <div class="avatar-wrapper">
                      <div class="athlete-avatar">
                          <img src="${avatarPath}" alt="${athlete.name}"
