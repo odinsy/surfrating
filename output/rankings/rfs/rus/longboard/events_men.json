@@ -1,81 +1,1014 @@
 {
   "events": [
     {
-      "year": "2017",
+      "event_year": "2017",
       "event_name": "Чемпионат России",
-      "location": "Зеленоградск",
+      "event_location": "Зеленоградск",
       "sport_type": "серфинг",
       "discipline": "длинная доска",
       "category": "мужчины",
       "total_participants": 14,
       "actual_participants": 14,
-      "dns_count": 0
+      "dns_count": 0,
+      "participants": [
+        {
+          "name": "Исаков Евгений",
+          "place": "1",
+          "region": "Калининградская область",
+          "birth_year": 1981,
+          "sport_rank": ""
+        },
+        {
+          "name": "Новожилов Данила",
+          "place": "2",
+          "region": "Санкт-Петербург",
+          "birth_year": 1988,
+          "sport_rank": ""
+        },
+        {
+          "name": "Мысовский Сергей",
+          "place": "3",
+          "region": "Санкт-Петербург",
+          "birth_year": 1986,
+          "sport_rank": ""
+        },
+        {
+          "name": "Титов Сергей",
+          "place": "4",
+          "region": "Санкт-Петербург",
+          "birth_year": 1987,
+          "sport_rank": ""
+        },
+        {
+          "name": "Блохин Иван",
+          "place": "5",
+          "region": "Калининград",
+          "birth_year": 1987,
+          "sport_rank": ""
+        },
+        {
+          "name": "Глазырин Игорь",
+          "place": "6",
+          "region": "Челябинская область",
+          "birth_year": 1990,
+          "sport_rank": ""
+        },
+        {
+          "name": "Федюнькин Юрий",
+          "place": "7",
+          "region": "Калининград",
+          "birth_year": 1990,
+          "sport_rank": ""
+        },
+        {
+          "name": "Шуев Николай",
+          "place": "8",
+          "region": "Чебоксары",
+          "birth_year": 1988,
+          "sport_rank": ""
+        },
+        {
+          "name": "Павликов Константин",
+          "place": "9",
+          "region": "Санкт-Петербург",
+          "birth_year": 1984,
+          "sport_rank": ""
+        },
+        {
+          "name": "Копров Павел",
+          "place": "10",
+          "region": "Санкт-Петербург",
+          "birth_year": 1990,
+          "sport_rank": ""
+        },
+        {
+          "name": "Волобуев Леонид",
+          "place": "11",
+          "region": "Санкт-Петербург",
+          "birth_year": 1988,
+          "sport_rank": ""
+        },
+        {
+          "name": "Анисимов",
+          "place": "12",
+          "region": "Москва",
+          "birth_year": 1984,
+          "sport_rank": ""
+        },
+        {
+          "name": "Иванов Никита",
+          "place": "13",
+          "region": "Санкт-Петербург",
+          "birth_year": 1986,
+          "sport_rank": ""
+        },
+        {
+          "name": "Какурин Эльдар",
+          "place": "14",
+          "region": "Москва",
+          "birth_year": 1983,
+          "sport_rank": ""
+        }
+      ],
+      "event_date": "26.07.2017"
     },
     {
-      "year": "2018",
+      "event_year": "2018",
       "event_name": "Чемпионат России",
-      "location": "Зеленоградск",
+      "event_location": "Зеленоградск",
       "sport_type": "серфинг",
       "discipline": "длинная доска",
       "category": "мужчины",
       "total_participants": 14,
       "actual_participants": 14,
-      "dns_count": 0
+      "dns_count": 0,
+      "participants": [
+        {
+          "name": "Илясов Дмитрий",
+          "place": "1",
+          "region": "Санкт-Петербург",
+          "birth_year": 1989,
+          "sport_rank": ""
+        },
+        {
+          "name": "Феликиди Георгий",
+          "place": "2",
+          "region": "Московская область",
+          "birth_year": 1983,
+          "sport_rank": ""
+        },
+        {
+          "name": "Исаков Евгений",
+          "place": "3",
+          "region": "Калининградская область",
+          "birth_year": 1981,
+          "sport_rank": ""
+        },
+        {
+          "name": "Мысовский Сергей",
+          "place": "4",
+          "region": "Санкт-Петербург",
+          "birth_year": 1986,
+          "sport_rank": ""
+        },
+        {
+          "name": "Саркисов Станислав",
+          "place": "5",
+          "region": "Московская область",
+          "birth_year": 1983,
+          "sport_rank": ""
+        },
+        {
+          "name": "Павликов Константин",
+          "place": "6",
+          "region": "Санкт-Петербург",
+          "birth_year": 1984,
+          "sport_rank": ""
+        },
+        {
+          "name": "Трофимов Владимир",
+          "place": "7",
+          "region": "Санкт-Петербург",
+          "birth_year": 1985,
+          "sport_rank": ""
+        },
+        {
+          "name": "Новожилов Данила",
+          "place": "8",
+          "region": "Санкт-Петербург",
+          "birth_year": 1988,
+          "sport_rank": ""
+        },
+        {
+          "name": "Титов Сергей",
+          "place": "9",
+          "region": "Санкт-Петербург",
+          "birth_year": 1987,
+          "sport_rank": ""
+        },
+        {
+          "name": "Расшиваев Сергей",
+          "place": "10",
+          "region": "Санкт-Петербург",
+          "birth_year": 1984,
+          "sport_rank": ""
+        },
+        {
+          "name": "Иванов Никита",
+          "place": "11",
+          "region": "Санкт-Петербург",
+          "birth_year": 1986,
+          "sport_rank": ""
+        },
+        {
+          "name": "Копров Павел",
+          "place": "12",
+          "region": "Санкт-Петербург",
+          "birth_year": 1990,
+          "sport_rank": ""
+        },
+        {
+          "name": "Тюкавин Максим",
+          "place": "13",
+          "region": "Калининград",
+          "birth_year": 1981,
+          "sport_rank": ""
+        },
+        {
+          "name": "Литвинов Леонид",
+          "place": "14",
+          "region": "Санкт-Петербург",
+          "birth_year": 1963,
+          "sport_rank": ""
+        }
+      ],
+      "event_date": "05.08.2018"
     },
     {
-      "year": "2019",
+      "event_year": "2019",
       "event_name": "Чемпионат России",
-      "location": "Зеленоградск",
+      "event_location": "Зеленоградск",
       "sport_type": "серфинг",
       "discipline": "длинная доска",
       "category": "мужчины",
       "total_participants": 17,
       "actual_participants": 17,
-      "dns_count": 0
+      "dns_count": 0,
+      "participants": [
+        {
+          "name": "Исаков Евгений",
+          "place": "1",
+          "region": "Калининградская область",
+          "birth_year": 1981,
+          "sport_rank": "КМС"
+        },
+        {
+          "name": "Илясов Дмитрий",
+          "place": "2",
+          "region": "Санкт-Петербург",
+          "birth_year": 1989,
+          "sport_rank": "КМС"
+        },
+        {
+          "name": "Фомин Максим",
+          "place": "3",
+          "region": "Санкт-Петербург",
+          "birth_year": 1982,
+          "sport_rank": ""
+        },
+        {
+          "name": "Старков Андрей",
+          "place": "4",
+          "region": "Москва",
+          "birth_year": 1985,
+          "sport_rank": ""
+        },
+        {
+          "name": "Филинов Даниил",
+          "place": "5",
+          "region": "Приморский край",
+          "birth_year": 1985,
+          "sport_rank": ""
+        },
+        {
+          "name": "Трофимов Владимир",
+          "place": "6",
+          "region": "Санкт-Петербург",
+          "birth_year": 1985,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Расшиваев Сергей",
+          "place": "7",
+          "region": "Санкт-Петербург",
+          "birth_year": 1984,
+          "sport_rank": "КМС"
+        },
+        {
+          "name": "Молотков Ростислав",
+          "place": "8",
+          "region": "Еврейская автономная область",
+          "birth_year": 1992,
+          "sport_rank": ""
+        },
+        {
+          "name": "Новожилов Данила",
+          "place": "9",
+          "region": "Санкт-Петербург",
+          "birth_year": 1988,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Мустафин Андрей",
+          "place": "10",
+          "region": "Москва",
+          "birth_year": 1987,
+          "sport_rank": ""
+        },
+        {
+          "name": "Перерва Вадим",
+          "place": "11",
+          "region": "Калининградская область",
+          "birth_year": 1989,
+          "sport_rank": ""
+        },
+        {
+          "name": "Саркисов Станислав",
+          "place": "12",
+          "region": "Московская область",
+          "birth_year": 1983,
+          "sport_rank": ""
+        },
+        {
+          "name": "Титов Сергей",
+          "place": "13",
+          "region": "Санкт-Петербург",
+          "birth_year": 1987,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Гречишкин Алексей",
+          "place": "14",
+          "region": "Москва",
+          "birth_year": 1985,
+          "sport_rank": ""
+        },
+        {
+          "name": "Вахрушев Владимир",
+          "place": "15",
+          "region": "Санкт-Петербург",
+          "birth_year": 1984,
+          "sport_rank": ""
+        },
+        {
+          "name": "Пилецкий Илья",
+          "place": "16",
+          "region": "Калининградская область",
+          "birth_year": 1983,
+          "sport_rank": ""
+        },
+        {
+          "name": "Литвинов Леонид",
+          "place": "17",
+          "region": "Санкт-Петербург",
+          "birth_year": 1963,
+          "sport_rank": "2"
+        }
+      ],
+      "event_date": "03.07.2019"
     },
     {
-      "year": "2021",
+      "event_year": "2021",
       "event_name": "Чемпионат России",
-      "location": "Находка",
+      "event_location": "Находка",
       "sport_type": "серфинг",
       "discipline": "длинная доска",
       "category": "мужчины",
       "total_participants": 21,
       "actual_participants": 21,
-      "dns_count": 0
+      "dns_count": 0,
+      "participants": [
+        {
+          "name": "Илясов Дмитрий Александрович",
+          "place": "1",
+          "region": "Санкт-Петербург",
+          "birth_year": 1989,
+          "sport_rank": "КМС"
+        },
+        {
+          "name": "Исаков Евгений Леонидович",
+          "place": "2",
+          "region": "Калининградская область",
+          "birth_year": 1981,
+          "sport_rank": "МС"
+        },
+        {
+          "name": "Тимухин Максим Александрович",
+          "place": "3",
+          "region": "Санкт-Петербург",
+          "birth_year": 1991,
+          "sport_rank": ""
+        },
+        {
+          "name": "Филинов Даниил Анатольевич",
+          "place": "4",
+          "region": "Приморский край",
+          "birth_year": 1983,
+          "sport_rank": ""
+        },
+        {
+          "name": "Феликиди Георгий Константинович",
+          "place": "5",
+          "region": "Московская область",
+          "birth_year": 1983,
+          "sport_rank": ""
+        },
+        {
+          "name": "Белоусов Борис Геннадьевич",
+          "place": "6",
+          "region": "Москва",
+          "birth_year": 1989,
+          "sport_rank": ""
+        },
+        {
+          "name": "Трофимов Владимир Олегович",
+          "place": "7",
+          "region": "Санкт-Петербург",
+          "birth_year": 1985,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Копров Павел Александрович",
+          "place": "8",
+          "region": "Санкт-Петербург",
+          "birth_year": 1990,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Мустафин Андрей Артурович",
+          "place": "9",
+          "region": "Красноярский край",
+          "birth_year": 1987,
+          "sport_rank": ""
+        },
+        {
+          "name": "Новожилов Данила Вадимович",
+          "place": "10",
+          "region": "Санкт-Петербург",
+          "birth_year": 1988,
+          "sport_rank": ""
+        },
+        {
+          "name": "Расшиваев Сергей Валерьевич",
+          "place": "11",
+          "region": "Санкт-Петербург",
+          "birth_year": 1984,
+          "sport_rank": "КМС"
+        },
+        {
+          "name": "Морозов Антон Александрович",
+          "place": "12",
+          "region": "Камчатский край",
+          "birth_year": 1982,
+          "sport_rank": ""
+        },
+        {
+          "name": "Коденко Роман Станиславович",
+          "place": "13",
+          "region": "Приморский край",
+          "birth_year": 1992,
+          "sport_rank": ""
+        },
+        {
+          "name": "Эгле Вячеслав Дмитриевич",
+          "place": "14",
+          "region": "Сахалинская область",
+          "birth_year": 1994,
+          "sport_rank": ""
+        },
+        {
+          "name": "Гальчук Александр Александрович",
+          "place": "15",
+          "region": "Приморский край",
+          "birth_year": 1987,
+          "sport_rank": ""
+        },
+        {
+          "name": "Федосеенко Александр Анатольевич",
+          "place": "16",
+          "region": "Приморский край",
+          "birth_year": 1992,
+          "sport_rank": ""
+        },
+        {
+          "name": "Степаненко Клим Игоревич",
+          "place": "17",
+          "region": "Приморский край",
+          "birth_year": 1994,
+          "sport_rank": ""
+        },
+        {
+          "name": "Коваленко Николай Николаевич",
+          "place": "18",
+          "region": "Свердловская область",
+          "birth_year": 1983,
+          "sport_rank": ""
+        },
+        {
+          "name": "Алявин Алексей Викторович",
+          "place": "19",
+          "region": "Приморский край",
+          "birth_year": 1987,
+          "sport_rank": ""
+        },
+        {
+          "name": "Крысенков Глеб Юрьевич",
+          "place": "20",
+          "region": "Санкт-Петербург",
+          "birth_year": 1989,
+          "sport_rank": ""
+        },
+        {
+          "name": "Марченко Иван Петрович",
+          "place": "21",
+          "region": "Приморский край",
+          "birth_year": 1984,
+          "sport_rank": ""
+        }
+      ],
+      "event_date": "09.09.2021"
     },
     {
-      "year": "2022",
+      "event_year": "2022",
       "event_name": "Чемпионат России",
-      "location": "Петропавловск-Камчатский",
+      "event_location": "Петропавловск-Камчатский",
       "sport_type": "серфинг",
       "discipline": "длинная доска",
       "category": "мужчины",
       "total_participants": 21,
       "actual_participants": 21,
-      "dns_count": 0
+      "dns_count": 0,
+      "participants": [
+        {
+          "name": "Исаков Евгений Леонидович",
+          "place": "1",
+          "region": "Калининградская область",
+          "birth_year": 1983,
+          "sport_rank": "МС"
+        },
+        {
+          "name": "Илясов Дмитрий Александрович",
+          "place": "2",
+          "region": "Санкт-Петербург",
+          "birth_year": 1989,
+          "sport_rank": "КМС"
+        },
+        {
+          "name": "Каптелов Петр Валерьевич",
+          "place": "3",
+          "region": "Калининградская область",
+          "birth_year": 1981,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Синцов Никита Витальевич",
+          "place": "4",
+          "region": "Москва",
+          "birth_year": 1992,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Фомин Максим Владимирович",
+          "place": "5",
+          "region": "Московская область",
+          "birth_year": 1982,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Вахрушев Владимир Ильич",
+          "place": "6",
+          "region": "Санкт-Петербург",
+          "birth_year": 1994,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Ременников Константин",
+          "place": "7",
+          "region": "Приморский край",
+          "birth_year": 1984,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Новожилов Данила Вадимович",
+          "place": "8",
+          "region": "Санкт-Петербург",
+          "birth_year": 1988,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Филинов Даниил Анатольевич",
+          "place": "9",
+          "region": "Приморский край",
+          "birth_year": 1985,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Морозов Антон Александрович",
+          "place": "10",
+          "region": "Камчатский край",
+          "birth_year": 1982,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Копров Павел Александрович",
+          "place": "11",
+          "region": "Санкт-Петербург",
+          "birth_year": 1990,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Костин Евгений Вячеславович",
+          "place": "12",
+          "region": "Приморский край",
+          "birth_year": 1990,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Трофимов Владимир Олегович",
+          "place": "13",
+          "region": "Санкт-Петербург",
+          "birth_year": 1985,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Старков Андрей Михайлович",
+          "place": "14",
+          "region": "Москва",
+          "birth_year": 1985,
+          "sport_rank": "КМС"
+        },
+        {
+          "name": "Лещев Алексей Сергеевич",
+          "place": "15",
+          "region": "Камчатский край",
+          "birth_year": 1991,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Тихонов Андрей Александрович",
+          "place": "16",
+          "region": "Калининградская область",
+          "birth_year": 1981,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Саркисов Станислав Сергеевич",
+          "place": "17",
+          "region": "Московская область",
+          "birth_year": 1983,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Марченко Иван Петрович",
+          "place": "18",
+          "region": "Приморский край",
+          "birth_year": 1984,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Федосеенко Александр Андреевич",
+          "place": "19",
+          "region": "Приморский край",
+          "birth_year": 1992,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Шеин Николай Георгиевич",
+          "place": "20",
+          "region": "Приморский край",
+          "birth_year": 1986,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Богданов Даниил Денисович",
+          "place": "21",
+          "region": "Калининградская область",
+          "birth_year": 2001,
+          "sport_rank": "3"
+        }
+      ],
+      "event_date": "19.09.2022"
     },
     {
-      "year": "2023",
+      "event_year": "2023",
       "event_name": "Чемпионат России",
-      "location": "Зеленоградск",
+      "event_location": "Зеленоградск",
       "sport_type": "серфинг",
       "discipline": "длинная доска",
       "category": "мужчины",
       "total_participants": 19,
       "actual_participants": 19,
-      "dns_count": 0
+      "dns_count": 0,
+      "participants": [
+        {
+          "name": "Филинов Даниил Анатольевич",
+          "place": "1",
+          "region": "Приморский край",
+          "birth_year": 1985,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Фомин Максим Владимирович",
+          "place": "2",
+          "region": "Московская область",
+          "birth_year": 1982,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Исаков Евгений Леонидович",
+          "place": "3",
+          "region": "Калининградская область",
+          "birth_year": 1983,
+          "sport_rank": "МС"
+        },
+        {
+          "name": "Вахрушев Владимир Ильич",
+          "place": "4",
+          "region": "Санкт-Петербург",
+          "birth_year": 1994,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Тихонов Андрей Александрович",
+          "place": "5",
+          "region": "Калининградская область",
+          "birth_year": 1981,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Новожилов Данила Вадимович",
+          "place": "6",
+          "region": "Санкт-Петербург",
+          "birth_year": 1988,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Копров Павел Александрович",
+          "place": "7",
+          "region": "Санкт-Петербург",
+          "birth_year": 1990,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Каптелов Петр Валерьевич",
+          "place": "8",
+          "region": "Калининградская область",
+          "birth_year": 1990,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Синица Петр Всеволодович",
+          "place": "9",
+          "region": "Калининградская область",
+          "birth_year": 1995,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Ременников Константин Сергеевич",
+          "place": "10",
+          "region": "Приморский край",
+          "birth_year": 1984,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Барсуков Сергей Витальевич",
+          "place": "11",
+          "region": "Приморский край",
+          "birth_year": 2005,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Крысенков Глеб Юрьевич",
+          "place": "12",
+          "region": "Санкт-Петербург",
+          "birth_year": 1989,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Михайлов Алексей Юрьевич",
+          "place": "13",
+          "region": "Калининградская область",
+          "birth_year": 1997,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Шушаков Роман Евгеньевич",
+          "place": "14",
+          "region": "Калининградская область",
+          "birth_year": 1995,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Кортелев Федор Анатольевич",
+          "place": "15",
+          "region": "Калининградская область",
+          "birth_year": 1992,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Богданов Даниил Денисович",
+          "place": "16",
+          "region": "Калининградская область",
+          "birth_year": 2001,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Зылев Даниил Сергеевич",
+          "place": "17",
+          "region": "Москва",
+          "birth_year": 1982,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Болдырев Артем Николаевич",
+          "place": "18",
+          "region": "Калининградская область",
+          "birth_year": 1981,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Реут Алексей Валерьевич",
+          "place": "19",
+          "region": "Калининградская область",
+          "birth_year": 1989,
+          "sport_rank": "3"
+        }
+      ],
+      "event_date": "08-19.10.2023"
     },
     {
-      "year": "2024",
+      "event_year": "2024",
       "event_name": "Чемпионат России",
-      "location": "Владивосток",
+      "event_location": "Владивосток",
       "sport_type": "серфинг",
       "discipline": "длинная доска",
       "category": "мужчины",
       "total_participants": 24,
       "actual_participants": 24,
-      "dns_count": 0
+      "dns_count": 0,
+      "participants": [
+        {
+          "name": "Илясов Дмитрий Александрович",
+          "place": "1",
+          "region": "Санкт-Петербург",
+          "birth_year": 1989,
+          "sport_rank": "МС"
+        },
+        {
+          "name": "Вахрушев Владимир Ильич",
+          "place": "2",
+          "region": "Санкт-Петербург",
+          "birth_year": 1994,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Крысенков Глеб Юрьевич",
+          "place": "3",
+          "region": "Санкт-Петербург",
+          "birth_year": 1990,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Исаков Евгений Леонидович",
+          "place": "4",
+          "region": "Калининградская область",
+          "birth_year": 1983,
+          "sport_rank": "МС"
+        },
+        {
+          "name": "Ременников Константин Сергеевич",
+          "place": "5",
+          "region": "Приморский край",
+          "birth_year": 1984,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Багдасарян Максим Левонович",
+          "place": "6",
+          "region": "Калининградская область",
+          "birth_year": 2008,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Филинов Даниил Анатольевич",
+          "place": "7",
+          "region": "Приморский край",
+          "birth_year": 1985,
+          "sport_rank": "КМС"
+        },
+        {
+          "name": "Гальчук Александр Александрович",
+          "place": "8",
+          "region": "Приморский край",
+          "birth_year": 1987,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Барсуков Сергей Витальевич",
+          "place": "9",
+          "region": "Приморский край",
+          "birth_year": 2005,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Шушаков Роман Евгеньевич",
+          "place": "10",
+          "region": "Калининградская область",
+          "birth_year": 1995,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Синица Петр Всеволодович",
+          "place": "11",
+          "region": "Калининградская область",
+          "birth_year": 1985,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Кравченко Алексей Александрович",
+          "place": "12",
+          "region": "Санкт-Петербург",
+          "birth_year": 1984,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Каптелов Петр Валерьевич",
+          "place": "13",
+          "region": "Калининградская область",
+          "birth_year": 1990,
+          "sport_rank": "1"
+        },
+        {
+          "name": "Левицкий Дионис Юрьевич",
+          "place": "14",
+          "region": "Приморский край",
+          "birth_year": 1991,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Копров Павел Александрович",
+          "place": "15",
+          "region": "Санкт-Петербург",
+          "birth_year": 1990,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Блискунов Дмитрий Александрович",
+          "place": "16",
+          "region": "Калининградская область",
+          "birth_year": 1990,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Чередниченко Андрей Борисович",
+          "place": "17",
+          "region": "Приморский край",
+          "birth_year": 1982,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Жарченко Владислав Викторович",
+          "place": "18",
+          "region": "Приморский край",
+          "birth_year": 1991,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Новожилов Данила Вадимович",
+          "place": "19",
+          "region": "Санкт-Петербург",
+          "birth_year": 1988,
+          "sport_rank": "2"
+        },
+        {
+          "name": "Дроздов Дмитрий Романович",
+          "place": "20",
+          "region": "Приморский край",
+          "birth_year": 1998,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Смирнов Михаил Геннадьевич",
+          "place": "21",
+          "region": "Санкт-Петербург",
+          "birth_year": 1982,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Ломаев Владимир Александрович",
+          "place": "22",
+          "region": "Санкт-Петербург",
+          "birth_year": 1993,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Артюхин Марк Алексеевич",
+          "place": "23",
+          "region": "Камчатский край",
+          "birth_year": 2007,
+          "sport_rank": "3"
+        },
+        {
+          "name": "Ткачук Дмитрий Сергеевич",
+          "place": "24",
+          "region": "Мурманская область",
+          "birth_year": 1986,
+          "sport_rank": "3"
+        }
+      ],
+      "event_date": "03-15.10.2024"
     }
-  ]
+  ],
+  "total_events": 7,
+  "total_participants": 130
 }
