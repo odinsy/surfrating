@@ -40,7 +40,14 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
+let hideTimer = null;
+
 function showAthleteTooltip(tooltipId, nameCell) {
+    if (hideTimer) {
+        clearTimeout(hideTimer);
+        hideTimer = null;
+    }
+
     const tooltip = document.getElementById(tooltipId);
     if (!tooltip) return;
 
@@ -48,12 +55,33 @@ function showAthleteTooltip(tooltipId, nameCell) {
     tooltip.style.top = `${rect.bottom + window.scrollY}px`;
     tooltip.style.left = `${rect.left + window.scrollX}px`;
     tooltip.classList.add('visible');
+
+    tooltip.addEventListener('mouseenter', () => {
+        if (hideTimer) {
+            clearTimeout(hideTimer);
+            hideTimer = null;
+        }
+    });
+
+    tooltip.addEventListener('mouseleave', () => {
+        hideAthleteTooltip(tooltipId);
+    });
+}
+
+function scheduleHideAthleteTooltip(tooltipId) {
+    hideTimer = setTimeout(() => {
+        hideAthleteTooltip(tooltipId);
+    }, 100);
 }
 
 function hideAthleteTooltip(tooltipId) {
     const tooltip = document.getElementById(tooltipId);
     if (tooltip) {
         tooltip.classList.remove('visible');
+    }
+    if (hideTimer) {
+        clearTimeout(hideTimer);
+        hideTimer = null;
     }
 }
 
@@ -139,7 +167,7 @@ function createAthleteRow(athlete, years) {
              <td class="fw-bold">${athlete.rank}</td>
              <td class="name-cell"
                  onmouseenter="showAthleteTooltip('${tooltipId}', this)"
-                 onmouseleave="hideAthleteTooltip('${tooltipId}')">
+                 onmouseleave="scheduleHideAthleteTooltip('${tooltipId}')">
                  <div class="avatar-wrapper">
                      <div class="athlete-avatar">
                          <img src="${avatarPath}" alt="${athlete.name}"
@@ -158,7 +186,7 @@ function createAthleteRow(athlete, years) {
          </tr>
          ${tooltipHTML}
      `;
- }
+}
 
 async function loadData(competition, category, gender) {
     const path = `${JSON_BASE_PATH}${competition}/${category}/${gender}.json?t=${Date.now()}`;

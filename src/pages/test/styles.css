@@ -222,12 +222,15 @@ tr.top-10:hover {
     padding: 20px;
     display: none;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateY(5px);
+    pointer-events: none;
 }
 
 .athlete-tooltip.visible {
-    display: block;
     opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .tooltip-header {
@@ -301,9 +304,11 @@ tr.top-10:hover {
     display: inline-flex;
     align-items: center;
     gap: 5px;
+    transition: color 0.2s;
 }
 
 .tooltip-social a:hover {
+    color: #3F72AF;
     text-decoration: underline;
 }
 
