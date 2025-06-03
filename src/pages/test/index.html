@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Полный рейтинг спортсменов</title>
+    <title>Рейтинг спортсменов</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,12 +12,8 @@
             <a href="//topheats.ru" class="header-brand">
                 <img src="../../img/th-white-logo-min.png" alt="TopHeats" class="header-logo">
             </a>
-            <nav class="header-nav">
-            </nav>
 
             <div class="header-controls">
-                <div class="header-title-block">
-                </div>
                 <div class="discipline-dropdown">
                     <button class="discipline-toggle">
                         <span class="discipline-label">Короткая доска</span>
@@ -27,21 +23,10 @@
                     </button>
 
                     <div class="discipline-menu">
-                        <div class="discipline-option selected" data-discipline="shortboard">
-                            Короткая доска
-                        </div>
-
-                        <div class="discipline-option" data-discipline="longboard">
-                            Длинная доска
-                        </div>
-
-                        <div class="discipline-option" data-discipline="wakesurfing">
-                            Вейксерфинг
-                        </div>
-
-                        <div class="discipline-option" data-discipline="wakeskim">
-                            Вейкским
-                        </div>
+                        <div class="discipline-option selected" data-discipline="shortboard">Короткая доска</div>
+                        <div class="discipline-option" data-discipline="longboard">Длинная доска</div>
+                        <div class="discipline-option" data-discipline="wakesurfing">Вейксерфинг</div>
+                        <div class="discipline-option" data-discipline="wakeskim">Вейкским</div>
                     </div>
                 </div>
             </div>
@@ -50,9 +35,7 @@
 
     <div class="container">
         <div class="controls">
-            <select id="competition-select" class="discipline-select">
-            </select>
-
+            <select id="competition-select" class="discipline-select"></select>
             <div class="gender-switch">
                 <button class="gender-btn active" data-gender="men">Мужчины</button>
                 <button class="gender-btn" data-gender="women">Женщины</button>

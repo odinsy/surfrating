@@ -19,7 +19,6 @@ body {
     margin-top: 60px;
 }
 
-/* ===== HEADER STRUCTURE ===== */
 .global-header {
     position: fixed;
     top: 0;
@@ -55,12 +54,6 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
-}
-
-.header-title-block {
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }
 
 /* Controls */
@@ -116,7 +109,6 @@ body {
     border-collapse: collapse;
     width: 100%;
     background: white;
-    position: relative;
 }
 
 .ranking-table th,
@@ -158,12 +150,6 @@ body {
 
 .ranking-table tr:hover {
     background-color: #e9ecef;
-}
-
-.ranking-table th:first-child {
-    color: white;
-    font-weight: 600;
-    font-size: 1em;
 }
 
 .name-cell {
@@ -277,96 +263,6 @@ body {
     display: flex;
 }
 
-.tooltip-item {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translate(-50%, 100%);
-    background: white;
-    width: 280px;
-    padding: 15px;
-    border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border: 1px solid #ddd;
-}
-
-.tooltip-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.tooltip-meta {
-    flex: 1;
-    padding-right: 15px;
-}
-
-.tooltip-name {
-    font-size: 1.3em;
-    font-weight: 700;
-    color: #112D4E;
-    margin-bottom: 4px;
-}
-
-.tooltip-region {
-    font-size: 0.95em;
-    color: #666;
-}
-
-.tooltip-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
-}
-
-.tooltip-stats {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 12px 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-.tooltip-stat {
-    flex: 1;
-    text-align: center;
-}
-
-.tooltip-value {
-    font-size: 1.1em;
-    color: #112D4E;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.tooltip-label {
-    font-size: 0.75em;
-    color: #666;
-}
-
-.tooltip-social {
-    text-align: center;
-    padding-top: 8px;
-}
-
-.tooltip-social a {
-    color: #112D4E;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9em;
-}
-
 /* ====================== */
 /* Стили для dropdown дисциплин */
 .discipline-dropdown {
@@ -459,54 +355,44 @@ body {
         flex-direction: column;
         gap: 15px;
         padding: 10px;
-    }
-
-    .header-title-block {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .header-title-block h1 {
         text-align: center;
     }
 
-    .header-content {
-        flex-wrap: wrap;
-        gap: 15px;
+    .header-brand {
+        justify-content: center;
+        width: 100%;
     }
 
-    .header-nav {
-        order: 2;
+    .header-controls {
         width: 100%;
         justify-content: center;
-        margin: 0;
-        gap: 15px;
-        background: rgba(255,255,255,0.1);
-        padding: 8px 15px;
-        border-radius: 4px;
     }
 
-    .header-nav-link {
-        font-size: 0.9em;
+    .discipline-dropdown {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .discipline-toggle {
+        width: 100%;
+        justify-content: center;
     }
 
     .container {
-        margin-top: 120px;
+        margin-top: 140px;
     }
 
     .controls {
-        position: sticky;
-        left: 15px;
-        top: 15px;
-        z-index: 1001;
-        background: #f5f6f7;
-        padding: 10px 0;
-        margin-bottom: 15px;
         flex-direction: column;
+        gap: 15px;
     }
 
-    .discipline-select {
+    .discipline-select,
+    .gender-switch {
         width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .gender-switch {
@@ -520,84 +406,22 @@ body {
 
     .ranking-table {
         min-width: 500px;
-    }
-
-    .ranking-table th:nth-child(2) {
-        padding-left: 12px !important;
-    }
-
-    .ranking-table th,
-    .ranking-table td {
-        padding: 8px 10px;
-    }
-
-    .ranking-table th:first-child,
-    .ranking-table td:first-child {
-        min-width: 40px;
-        padding: 6px 2px !important;
+        overflow-x: auto;
+        display: block;
     }
 
     .athlete-avatar {
         width: 32px;
         height: 32px;
     }
-
-    .tooltip-item {
-        width: 240px;
-        padding: 12px;
-    }
-
-    .tooltip-avatar {
-        width: 60px;
-        height: 60px;
-    }
-
-    .tooltip-name {
-        font-size: 1.1em;
-    }
-
-    .discipline-dropdown {
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    .discipline-toggle {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .container {
-        margin-top: 140px;
-    }
 }
 
 @media (max-width: 480px) {
-    .header-title-block h1 {
-        font-size: 1.2em;
-    }
-
     .header-logo {
         height: 30px;
     }
 
-    .header-nav {
-        gap: 12px;
-        padding: 6px 10px;
-    }
-
-    .header-nav-link {
-        font-size: 0.85em;
-    }
-
     .container {
         margin-top: 160px;
-    }
-
-    .tooltip-item {
-        width: 200px;
-    }
-
-    .tooltip-name {
-        font-size: 1em;
     }
 }
