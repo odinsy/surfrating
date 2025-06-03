@@ -17,7 +17,7 @@ function getYearsRange(data) {
 
 function createAthleteRow(athlete, years) {
     const bestResult = athlete.best_result
-        ? `${athlete.best_result.place} в ${athlete.best_result.year}`
+        ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
         : 'Нет данных';
 
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
