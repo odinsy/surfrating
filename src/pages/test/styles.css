@@ -8,6 +8,7 @@
 body {
     background: #f5f6f7;
     padding: 15px;
+    color: #333;
 }
 
 .container {
@@ -16,7 +17,6 @@ body {
     padding: 0 15px;
     width: 100%;
     margin-top: 60px;
-    overflow: visible;
 }
 
 /* ===== HEADER STRUCTURE ===== */
@@ -28,11 +28,11 @@ body {
     background: #112D4E;
     z-index: 1100;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #0a1f36;
 }
 
 .header-logo {
-    height: 60px;
+    height: 40px;
     width: auto;
 }
 
@@ -63,108 +63,6 @@ body {
     gap: 20px;
 }
 
-.header-title-block h1 {
-    color: white;
-    font-size: 1.5em;
-    margin: 0;
-    white-space: nowrap;
-}
-
-/* Header Navigation */
-.header-nav {
-    display: flex;
-    gap: 35px;
-    margin-right: 40px;
-    flex: 1;
-    align-items: center;
-    position: relative;
-}
-
-.header-nav-link {
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95em;
-    position: relative;
-    padding: 8px 0;
-    transition: all 0.3s;
-}
-
-.header-nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: #fff;
-    transition: width 0.3s;
-}
-
-.header-nav-link:hover {
-    color: white;
-}
-
-.header-nav-link:hover::after,
-.header-nav-link.active::after {
-    width: 100%;
-}
-
-.header-nav-link.active {
-    color: white;
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    padding: 12px;
-    z-index: 1001;
-    min-width: 220px;
-    margin-top: 8px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.dropdown-item {
-    padding: 10px 16px;
-    color: #112D4E;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: all 0.2s;
-    background: rgba(17,45,78,0.05);
-    text-align: start;
-    white-space: nowrap;
-}
-
-.dropdown-item:hover {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
-}
-
-.dropdown-item.active {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
-}
-
-
 /* Controls */
 .controls {
     display: flex;
@@ -172,47 +70,25 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .discipline-select {
     width: 240px;
     padding: 10px 15px;
-    border: 2px solid #112D4E;
-    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 1em;
-    transition: all 0.3s;
-}
-
-.discipline-selector {
-    position: relative;
-}
-
-.discipline-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: background 0.3s;
-}
-
-.discipline-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: white;
+    color: #333;
 }
 
 .gender-switch {
     display: flex;
-    gap: 8px;
+    gap: 0;
     background: #fff;
-    border-radius: 6px;
-    padding: 5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .gender-btn {
@@ -220,11 +96,11 @@ body {
     padding: 10px 15px;
     white-space: nowrap;
     border: none;
-    border-radius: 4px;
     background: transparent;
     cursor: pointer;
-    transition: all 0.2s;
     font-weight: 500;
+    color: #333;
+    transition: background 0.2s;
 }
 
 .gender-btn.active {
@@ -232,18 +108,20 @@ body {
     color: white;
 }
 
+.gender-btn:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
 .ranking-table {
-    border-collapse: separate;
-    overflow: hidden;
+    border-collapse: collapse;
     width: 100%;
     background: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     position: relative;
 }
 
 .ranking-table th,
 .ranking-table td {
-    padding: 10px 12px;
+    padding: 12px 15px;
     text-align: center;
     border-bottom: 1px solid #eee;
     vertical-align: middle;
@@ -253,9 +131,9 @@ body {
 .ranking-table td:first-child {
     width: 60px;
     min-width: 60px;
-    padding: 8px 4px !important;
+    padding: 10px 5px !important;
     color: #3F72AF;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1em;
 }
 
@@ -266,6 +144,7 @@ body {
     height: 48px;
     padding: 8px 12px !important;
     text-align: center;
+    border: none;
 }
 
 .ranking-table th:nth-child(2) {
@@ -273,44 +152,18 @@ body {
     padding-left: 16px !important;
 }
 
-.ranking-table tr:hover {
-    background: #f8f9ff;
+.ranking-table tr:nth-child(even) {
+    background-color: #f8f9fa;
 }
 
-.ranking-table tr.top-athlete {
-    background: #f0f4ff;
+.ranking-table tr:hover {
+    background-color: #e9ecef;
 }
 
 .ranking-table th:first-child {
     color: white;
     font-weight: 600;
     font-size: 1em;
-}
-
-.ranking-table thead tr th:first-child {
-    border-top-left-radius: 8px;
-}
-
-.ranking-table thead tr th:last-child {
-    border-top-right-radius: 8px;
-}
-
-.ranking-table tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 8px;
-}
-
-.ranking-table tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 8px;
-}
-
-#ranking-table-container .error-message {
-    text-align: center;
-    padding: 40px;
-    color: #666;
-    font-size: 1.2em;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .name-cell {
@@ -344,17 +197,17 @@ body {
     background: #ffffff;
     color: #112D4E;
     padding: 8px;
-    border-radius: 6px;
+    border-radius: 4px;
     min-width: 160px;
     z-index: 1002;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     transform: translateX(-50%);
     left: 50%;
     top: calc(100% + 8px);
     font-size: 0.9em;
 }
-/* Стили для структурированных тултипов */
+
 .tooltip-event {
     padding: 4px 0;
 }
@@ -374,13 +227,9 @@ body {
     font-size: 0.85em;
 }
 
-.best-tooltip[data-tooltip]:hover::after {
-    max-width: 200px;
-}
-
 .total-points {
     color: #3F72AF;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.1em;
     padding-right: 20px !important;
 }
@@ -393,12 +242,12 @@ body {
 
 .athlete-avatar {
     position: relative;
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     flex-shrink: 0;
     overflow: hidden;
-    background: #112D4E;
+    background: #e9ecef;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -419,18 +268,13 @@ body {
     height: 100%;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #495057;
     font-weight: 600;
     font-size: 0.8em;
 }
 
 .athlete-avatar img[data-error] + .avatar-fallback {
     display: flex;
-}
-
-.name-cell:hover .tooltip-item {
-    opacity: 1;
-    visibility: visible;
 }
 
 .tooltip-item {
@@ -440,16 +284,17 @@ body {
     transform: translate(-50%, 100%);
     background: white;
     width: 280px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.2s;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+    border: 1px solid #ddd;
 }
 
 .tooltip-header {
@@ -465,9 +310,9 @@ body {
 }
 
 .tooltip-name {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 700;
-    color: #1a237e;
+    color: #112D4E;
     margin-bottom: 4px;
 }
 
@@ -477,12 +322,11 @@ body {
 }
 
 .tooltip-avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 2px solid #fff;
 }
 
 .tooltip-stats {
@@ -509,12 +353,11 @@ body {
 .tooltip-label {
     font-size: 0.75em;
     color: #666;
-    opacity: 0.8;
 }
 
 .tooltip-social {
     text-align: center;
-    padding-top: 12px;
+    padding-top: 8px;
 }
 
 .tooltip-social a {
@@ -522,14 +365,95 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9em;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: opacity 0.3s;
-    position: relative;
-    padding-left: 28px;
 }
 
+/* ====================== */
+/* Стили для dropdown дисциплин */
+.discipline-dropdown {
+    position: relative;
+    margin-left: auto;
+    z-index: 1002;
+}
+
+.discipline-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 8px 16px;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.discipline-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.discipline-icon {
+    width: 16px;
+    height: 16px;
+    fill: white;
+    transition: transform 0.3s ease;
+}
+
+.discipline-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.2s ease;
+    z-index: 1001;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.discipline-dropdown:hover .discipline-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.discipline-dropdown:hover .discipline-icon {
+    transform: rotate(180deg);
+}
+
+.discipline-option {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+}
+
+.discipline-option:last-child {
+    border-bottom: none;
+}
+
+.discipline-option:hover {
+    background: #f1f3f5;
+}
+
+.discipline-option.selected {
+    background: #112D4E;
+    color: white;
+    font-weight: 600;
+}
+
+/* Медиа-запросы */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -559,7 +483,7 @@ body {
         gap: 15px;
         background: rgba(255,255,255,0.1);
         padding: 8px 15px;
-        border-radius: 6px;
+        border-radius: 4px;
     }
 
     .header-nav-link {
@@ -578,17 +502,15 @@ body {
         background: #f5f6f7;
         padding: 10px 0;
         margin-bottom: 15px;
+        flex-direction: column;
     }
 
     .discipline-select {
-        width: 100% !important;
+        width: 100%;
     }
 
-    .discipline-select,
     .gender-switch {
         width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
     }
 
     .gender-btn {
@@ -609,11 +531,6 @@ body {
         padding: 8px 10px;
     }
 
-    .ranking-table th:nth-child(3),
-    .ranking-table td:nth-child(3) {
-        display: none;
-    }
-
     .ranking-table th:first-child,
     .ranking-table td:first-child {
         min-width: 40px;
@@ -621,77 +538,24 @@ body {
     }
 
     .athlete-avatar {
-        width: 28px;
-        height: 28px;
-    }
-
-    .avatar-fallback {
-        font-size: 0.7em;
-    }
-
-    .name-cell {
-        cursor: default;
-    }
-
-    .custom-tooltip {
-        display: none !important;
+        width: 32px;
+        height: 32px;
     }
 
     .tooltip-item {
-        display: none !important;
+        width: 240px;
+        padding: 12px;
     }
 
     .tooltip-avatar {
-        display: none;
-    }
-
-    .tooltip-header {
-        flex-direction: column;
-        gap: 8px;
+        width: 60px;
+        height: 60px;
     }
 
     .tooltip-name {
         font-size: 1.1em;
     }
 
-    .tooltip-stats {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .tooltip-stat {
-        text-align: left;
-        justify-content: space-between;
-    }
-
-    .dropdown-menu {
-        position: static;
-        display: flex !important;
-        flex-direction: column;
-        box-shadow: none;
-        background: transparent;
-        padding: 8px 0;
-    }
-
-    .dropdown-item {
-        background: rgba(255,255,255,0.15);
-        color: white;
-        margin-bottom: 5px;
-    }
-
-    .dropdown-item.active {
-        background: rgba(255,255,255,0.3);
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: none !important;
-    }
-
-    #ranking-table-container .error-message {
-        padding: 20px;
-    }
-
-    /* Адаптация для нового dropdown дисциплин */
     .discipline-dropdown {
         width: 100%;
         margin-top: 15px;
@@ -699,31 +563,11 @@ body {
 
     .discipline-toggle {
         width: 100%;
-        justify-content: center;
+        justify-content: space-between;
     }
 
-    .discipline-menu {
-        position: static;
-        width: 100%;
-        margin-top: 10px;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-
-    .discipline-dropdown:hover .discipline-menu {
-        transform: none;
-    }
-
-    .discipline-icon {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
     .container {
-        margin-top: 140px; /* Адаптация для мобильных */
+        margin-top: 140px;
     }
 }
 
@@ -746,219 +590,14 @@ body {
     }
 
     .container {
-        margin-top: 160px; /* Адаптация для маленьких экранов */
+        margin-top: 160px;
     }
 
     .tooltip-item {
-        display: none !important;
+        width: 200px;
     }
 
     .tooltip-name {
         font-size: 1em;
     }
-
-    .dropdown-item {
-        font-size: 0.85em;
-        padding: 8px 12px;
-    }
-}
-
-/* ====================== */
-/* Стили для нового dropdown дисциплин */
-.discipline-dropdown {
-    position: relative;
-    margin-left: auto;
-    z-index: 1002;
-}
-
-.discipline-toggle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.12);
-    border: none;
-    border-radius: 30px;
-    padding: 12px 24px;
-    color: white;
-    font-size: 1.05rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.discipline-toggle:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
-.discipline-icon {
-    width: 20px;
-    height: 20px;
-    fill: white;
-    transition: transform 0.3s ease;
-}
-
-.discipline-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 320px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
-    margin-top: 12px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 1001;
-    overflow: hidden;
-}
-
-.discipline-dropdown:hover .discipline-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.discipline-dropdown:hover .discipline-icon {
-    transform: rotate(180deg);
-}
-
-.discipline-option {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 18px 24px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    border-bottom: 1px solid #f0f4f9;
-    position: relative;
-    overflow: hidden;
-}
-
-.discipline-option:last-child {
-    border-bottom: none;
-}
-
-.discipline-option:hover {
-    background: #f8fbff;
-}
-
-.discipline-option::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 4px;
-    background: #3F72AF;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-}
-
-.discipline-option:hover::before {
-    transform: translateX(0);
-}
-
-.option-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    background: linear-gradient(135deg, #eef6ff, #dcebff);
-    color: #112D4E;
-    font-size: 24px;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.discipline-option:hover .option-icon {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(63, 114, 175, 0.2);
-}
-
-.option-icon.surfboard::before {
-    content: "🏄";
-}
-
-.option-icon.longboard::before {
-    content: "🏄‍♂️";
-}
-
-.option-icon.wakesurf::before {
-    content: "🌊";
-}
-
-.option-icon.wakeskim::before {
-    content: "🚤";
-}
-
-.option-text {
-    flex: 1;
-    z-index: 1;
-}
-
-.option-title {
-    font-weight: 700;
-    color: #112D4E;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.option-subtitle {
-    color: #7a8ca5;
-    font-size: 0.9rem;
-    margin-top: 6px;
-}
-
-.discipline-option:hover .option-title {
-    color: #3F72AF;
-}
-
-/* Анимация при выборе */
-.discipline-option.selected {
-    background: linear-gradient(90deg, rgba(17, 45, 78, 0.05), transparent);
-}
-
-.discipline-option.selected .option-icon {
-    background: linear-gradient(135deg, #3F72AF, #112D4E);
-    color: white;
-}
-
-.discipline-option.selected .option-title {
-    color: #112D4E;
-    font-weight: 700;
-}
-
-/* Индикатор выбранной дисциплины */
-.discipline-indicator {
-    position: absolute;
-    top: 50%;
-    right: 24px;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #3F72AF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.discipline-indicator::before {
-    content: '✓';
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.discipline-option.selected .discipline-indicator {
-    opacity: 1;
 }

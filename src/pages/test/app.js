@@ -1,6 +1,7 @@
 const JSON_BASE_PATH = '../../data/rankings/';
 const transliterate = window.slugify;
 
+// Константы для соответствия дисциплин и соревнований
 const DISCIPLINE_COMPETITIONS = {
     shortboard: {
         'Чемпионат России': 'rfs/rus',
@@ -71,7 +72,7 @@ function createAthleteRow(athlete, years) {
     }).join('');
 
     return `
-        <tr class="${athlete.rank <= 10 ? 'top-athlete' : ''}">
+        <tr>
             <td>${athlete.rank}</td>
             <td class="name-cell">
                 <div class="avatar-wrapper">
@@ -194,18 +195,23 @@ function updateCompetitionSelect(discipline) {
         competitionSelect.appendChild(option);
     }
 
+    // Обновляем текущее соревнование
     currentCompetition = Object.values(competitions)[0];
 }
 
 function updateSelectedDiscipline(discipline) {
+    // Удаляем класс selected у всех опций
     document.querySelectorAll('.discipline-option').forEach(option => {
         option.classList.remove('selected');
     });
 
+    // Добавляем класс selected к выбранной опции
     const selectedOption = document.querySelector(`.discipline-option[data-discipline="${discipline}"]`);
     if (selectedOption) {
         selectedOption.classList.add('selected');
-        const optionTitle = selectedOption.querySelector('.option-title').textContent;
+
+        // Обновляем текст кнопки
+        const optionTitle = selectedOption.textContent;
         document.querySelector('.discipline-label').textContent = optionTitle;
     }
 }
@@ -215,23 +221,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialCategory = urlParams.get('category') || 'shortboard_men';
     const [category, gender] = initialCategory.split('_');
 
+    // Инициализация элементов управления
     document.querySelector(`.gender-btn[data-gender="${gender}"]`).classList.add('active');
+
+    // Инициализация селектора соревнований
     updateCompetitionSelect(currentDiscipline);
+
+    // Инициализация выбранной дисциплины
     updateSelectedDiscipline(currentDiscipline);
 
+    // Обработчики событий для выбора соревнования
     document.getElementById('competition-select').addEventListener('change', (e) => {
         currentCompetition = e.target.value;
         const gender = document.querySelector('.gender-btn.active').dataset.gender;
         updateTable(currentDiscipline, gender);
     });
 
+    // Обработчики событий для дисциплин в хедере
     document.querySelectorAll('.discipline-option').forEach(item => {
         item.addEventListener('click', function() {
             const discipline = this.dataset.discipline;
             currentDiscipline = discipline;
+
+            // Обновляем селектор соревнований
             updateCompetitionSelect(discipline);
+
+            // Обновляем таблицу
             const gender = document.querySelector('.gender-btn.active').dataset.gender;
             updateTable(discipline, gender);
+
+            // Обновляем визуальное выделение
             updateSelectedDiscipline(discipline);
         });
     });
