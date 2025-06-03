@@ -40,6 +40,7 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
         return
 
     event_year         = int(row['Год'])
+    event_date         = row['Дата'].strip()
     event_place        = row['Место'].strip().upper()
     event_category     = row.get('Категория', '')
     athlete_name       = ' '.join(row['ФИО'].split()[:2])
