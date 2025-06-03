@@ -7,23 +7,23 @@ def anonymize_athlete_data(athlete: Dict[str, Any]) -> Dict[str, Any]:
     name_parts = athlete['name'].split()
     first_name = name_parts[1] if len(name_parts) > 1 else ""
     last_name = name_parts[0] if name_parts else ""
-    birthday = str(athlete.get('birthday', ''))
+    birth_year = str(athlete.get('birth_year', ''))
 
-    hash_input = f"{last_name}_{first_name}_{birthday}".lower().encode('utf-8')
+    hash_input = f"{last_name}_{first_name}_{birth_year}".lower().encode('utf-8')
     hash_value = hashlib.sha256(hash_input).hexdigest()[:12]
 
     anonymized = athlete.copy()
     anonymized['name'] = f"athlete_{hash_value}"
 
     # Удаляем чувствительные данные
-    if 'birthday' in anonymized:
-        del anonymized['birthday']
+    if 'birth_year' in anonymized:
+        del anonymized['birth_year']
 
     return anonymized
 
 def apply_anonymization(data: Dict[str, Any], config: Dict) -> Dict[str, Any]:
     """Применяет анонимизацию ко всем спортсменам в данных, если включено в конфиге"""
-    if not config.get('anonymization', {}).get('enabled', True):
+    if not config.get('anonymization', {}).get('enabled', False):
         return data
 
     if 'overall_ranking' in data:

@@ -92,7 +92,7 @@ def process_athletes(data: Dict, config: Dict) -> List[Dict]:
 
         entry = {
             'name': name,
-            'birthday': info['birthday'],
+            'birth_year': info['birth_year'],
             'region': info['region'],
             'category': info['category'],
             'sport_rank': info['sport_rank'],
