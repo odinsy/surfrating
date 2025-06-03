@@ -154,3 +154,53 @@ tr.top-10 {
 tr.top-10:hover {
     background-color: #cbd5e8 !important;
 }
+
+* Центрирование ранга */
+.table-custom td:first-child {
+    text-align: center !important;
+}
+
+/* Выделение топ-10 мест */
+.table-custom > tbody > tr.top-10 {
+    background-color: #DBE2EF !important;
+}
+
+/* Стили для кнопок гендера */
+.btn-outline-primary {
+    color: #3F72AF;
+    border-color: #3F72AF;
+}
+
+.btn-outline-primary:hover:not(.active) {
+    background-color: #DBE2EF;
+    color: #112D4E;
+    border-color: #3F72AF;
+}
+
+.btn-outline-primary.active {
+    background-color: #112D4E;
+    border-color: #112D4E;
+    color: white;
+}
+
+/* Стили для селектора соревнований */
+.form-select:hover {
+    border-color: #3F72AF;
+}
+
+.form-select:focus {
+    border-color: #3F72AF;
+    box-shadow: 0 0 0 0.25rem rgba(63, 114, 175, 0.25);
+}
+
+/* Стили для выбранного элемента в селекторе */
+.form-select option:checked {
+    background-color: #DBE2EF;
+    color: #112D4E;
+    font-weight: bold;
+}
+
+/* Стили для пунктов в выпадающем списке при наведении */
+.form-select option:hover {
+    background-color: #DBE2EF !important;
+}

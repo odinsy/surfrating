@@ -40,9 +40,6 @@ function createAthleteRow(athlete, years) {
     const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
     const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
 
-    const isTop10 = athlete.rank <= 10;
-    const rowClass = isTop10 ? 'top-10' : '';
-
     const yearCells = years.map(year => {
         const yearData = athlete.years?.[year];
         const events = yearData?.events || [];
@@ -69,6 +66,9 @@ function createAthleteRow(athlete, years) {
             </td>
         `;
     }).join('');
+
+    const isTop10 = athlete.rank <= 10;
+    const rowClass = isTop10 ? 'top-10' : '';
 
     return `
         <tr class="${rowClass}">
