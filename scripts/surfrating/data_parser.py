@@ -81,7 +81,7 @@ def parse_files(config: Dict) -> Dict[str, Dict]:
     for pattern in config['input_paths']:
         for file_path in glob.glob(pattern):
             with open(file_path, 'r', encoding='utf-8') as f:
-                reader = csv.DictReader(f)
+                reader = csv.DictReader(f, delimiter='|')
                 _validate_csv_columns(reader, file_path)
                 for row in reader:
                     _process_row(row, athletes, config, event_participants)
