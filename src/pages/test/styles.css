@@ -212,7 +212,7 @@ tr.top-10:hover {
 
 /* Стили для тултипа спортсмена */
 .athlete-tooltip {
-    position: fixed;
+    position: fixed; /* Изменено на fixed для корректного позиционирования */
     width: 320px;
     background: white;
     border: 1px solid #dee2e6;
@@ -220,13 +220,10 @@ tr.top-10:hover {
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
     z-index: 1050;
     padding: 20px;
-    display: none;
     opacity: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    transform: translateY(5px);
+    transition: opacity 0.2s ease;
     pointer-events: none;
 }
-
 .athlete-tooltip.visible {
     opacity: 1;
     transform: translateY(0);
