@@ -16,6 +16,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.table-custom td:first-child {
+    text-align: center !important;
+}
+
 .table-custom th {
     background-color: #112D4E;
     color: white;
@@ -126,7 +130,11 @@ body {
     font-size: 0.85rem;
 }
 
-/* Активные элементы */
+.btn-outline-primary {
+    color: #3F72AF;
+    border-color: #3F72AF;
+}
+
 .btn-outline-primary.active {
     background-color: #112D4E;
     border-color: #112D4E;
@@ -137,4 +145,12 @@ body {
 .dropdown-item:active {
     background-color: #112D4E;
     color: white;
+}
+
+tr.top-10 {
+    background-color: #DBE2EF !important;
+}
+
+tr.top-10:hover {
+    background-color: #cbd5e8 !important;
 }
