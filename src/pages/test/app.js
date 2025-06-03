@@ -73,7 +73,7 @@ function createAthleteRow(athlete, years) {
     return `
         <tr class="${rowClass}">
             <td class="fw-bold">${athlete.rank}</td>
-            <td class="name-cell">
+            <td class="name-cell position-relative">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
                         <img src="${avatarPath}" alt="${athlete.name}"
@@ -83,6 +83,37 @@ function createAthleteRow(athlete, years) {
                     <div>
                         <div class="athlete-name">${athlete.name}</div>
                         <div class="athlete-region">${athlete.region}</div>
+                    </div>
+                </div>
+
+                <!-- Тултип спортсмена -->
+                <div class="athlete-tooltip">
+                    <div class="tooltip-header">
+                        <div class="tooltip-meta">
+                            <div class="tooltip-name">${athlete.name}</div>
+                            <div class="tooltip-region">${athlete.region}</div>
+                        </div>
+                        <img src="${avatarPath}" class="tooltip-avatar" alt="${athlete.name}"
+                             onerror="this.style.display='none'">
+                    </div>
+
+                    <div class="tooltip-stats">
+                        <div class="tooltip-stat">
+                            <div class="tooltip-value">#${athlete.rank}</div>
+                            <div class="tooltip-label">Ранк</div>
+                        </div>
+                        <div class="tooltip-stat">
+                            <div class="tooltip-value">${athlete.sport_rank || '—'}</div>
+                            <div class="tooltip-label">Разряд</div>
+                        </div>
+                        <div class="tooltip-stat">
+                            <div class="tooltip-value">${bestResult}</div>
+                            <div class="tooltip-label">Лучший результат</div>
+                        </div>
+                    </div>
+
+                    <div class="tooltip-social">
+                        <a href="https://topheats.ru" target="_blank">topheats.ru</a>
                     </div>
                 </div>
             </td>
@@ -135,7 +166,14 @@ async function updateTable(category, gender) {
 
 function showTooltip(id) {
     const tooltip = document.getElementById(id);
-    if (tooltip) tooltip.style.display = 'block';
+    if (tooltip) {
+        tooltip.style.display = 'block';
+
+        const parent = tooltip.parentElement;
+        const parentRect = parent.getBoundingClientRect();
+        tooltip.style.left = '50%';
+        tooltip.style.top = `${parentRect.bottom + 8}px`;
+    }
 }
 
 function hideTooltip(id) {
@@ -212,4 +250,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateTable(currentDiscipline, gender);
+
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.custom-tooltip').forEach(tooltip => {
+            tooltip.style.display = 'none';
+        });
+    });
 });
