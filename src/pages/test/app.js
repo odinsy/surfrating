@@ -30,6 +30,16 @@ function getYearsRange(data) {
     return Array.from(years).sort((a, b) => a - b);
 }
 
+function showTooltip(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'block';
+}
+
+function hideTooltip(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'none';
+}
+
 function createAthleteRow(athlete, years) {
     const bestResult = athlete.best_result
         ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
@@ -67,124 +77,30 @@ function createAthleteRow(athlete, years) {
         `;
     }).join('');
 
-    const tooltipId = `tooltip-${athlete.rank}`;
-    const tooltipHTML = `
-        <div class="athlete-tooltip" id="${tooltipId}">
-             <div class="tooltip-header">
-                 <div class="tooltip-meta">
-                     <div class="tooltip-name">${athlete.name}</div>
-                     <div class="tooltip-region">${athlete.region}</div>
-                 </div>
-                 <img src="${avatarPath}"
-                      class="tooltip-avatar"
-                      alt="${athlete.name}"
-                      onerror="this.style.display='none'">
-             </div>
+    const isTop10 = athlete.rank <= 10;
+    const rowClass = isTop10 ? 'top-10' : '';
 
-             <div class="tooltip-stats">
-                 <div class="tooltip-stat">
-                     <div class="tooltip-value">#${athlete.rank}</div>
-                     <div class="tooltip-label">Ранк</div>
-                 </div>
-                 <div class="tooltip-stat">
-                     <div class="tooltip-value">${athlete.sport_rank || '—'}</div>
-                     <div class="tooltip-label">Разряд</div>
-                 </div>
-                 <div class="tooltip-stat">
-                     <div class="tooltip-value">${bestResult}</div>
-                     <div class="tooltip-label">Лучший результат</div>
-                 </div>
-             </div>
-
-             <div class="tooltip-social">
-                 <a href="https://topheats.ru" target="_blank">
-                     topheats.ru
-                 </a>
-             </div>
-         </div>
-     `;
-
-     const isTop10 = athlete.rank <= 10;
-     const rowClass = isTop10 ? 'top-10' : '';
-
-     return `
-         <tr class="${rowClass}">
-             <td class="fw-bold">${athlete.rank}</td>
-             <td class="name-cell"
-                 onmouseenter="showAthleteTooltip('${tooltipId}', this)"
-                 onmouseleave="scheduleHideAthleteTooltip('${tooltipId}')">
-                 <div class="avatar-wrapper">
-                     <div class="athlete-avatar">
-                         <img src="${avatarPath}" alt="${athlete.name}"
-                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                         <div class="avatar-fallback">${initials}</div>
-                     </div>
-                     <div>
-                         <div class="athlete-name">${athlete.name}</div>
-                         <div class="athlete-region">${athlete.region}</div>
-                     </div>
-                 </div>
-             </td>
-             <td class="year-points">${bestResult}</td>
-             ${yearCells}
-             <td class="total-points fw-bold">${athlete.total_points}</td>
-         </tr>
-         ${tooltipHTML}
-     `;
-}
-
-let currentTooltipId = null;
-let hideTimer = null;
-
-function showTooltip(id) {
-    const tooltip = document.getElementById(id);
-    if (tooltip) tooltip.style.display = 'block';
-}
-
-function hideTooltip(id) {
-    const tooltip = document.getElementById(id);
-    if (tooltip) tooltip.style.display = 'none';
-}
-
-function showAthleteTooltip(tooltipId, nameCell) {
-    if (currentTooltipId && currentTooltipId !== tooltipId) {
-        hideAthleteTooltip(currentTooltipId);
-    }
-
-    const tooltip = document.getElementById(tooltipId);
-    if (!tooltip) return;
-
-    if (hideTimer) {
-        clearTimeout(hideTimer);
-        hideTimer = null;
-    }
-
-    const rect = nameCell.getBoundingClientRect();
-    tooltip.style.top = `${rect.bottom + window.scrollY}px`;
-    tooltip.style.left = `${rect.left + window.scrollX}px`;
-
-    tooltip.classList.add('visible');
-    currentTooltipId = tooltipId;
-}
-
-function scheduleHideAthleteTooltip(tooltipId) {
-    hideTimer = setTimeout(() => {
-        hideAthleteTooltip(tooltipId);
-    }, 100);
-}
-
-function hideAthleteTooltip(tooltipId) {
-    const tooltip = document.getElementById(tooltipId);
-    if (tooltip) {
-        tooltip.classList.remove('visible');
-    }
-    if (hideTimer) {
-        clearTimeout(hideTimer);
-        hideTimer = null;
-    }
-    if (currentTooltipId === tooltipId) {
-        currentTooltipId = null;
-    }
+    return `
+        <tr class="${rowClass}">
+            <td class="fw-bold">${athlete.rank}</td>
+            <td class="name-cell">
+                <div class="avatar-wrapper">
+                    <div class="athlete-avatar">
+                        <img src="${avatarPath}" alt="${athlete.name}"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="avatar-fallback">${initials}</div>
+                    </div>
+                    <div>
+                        <div class="athlete-name">${athlete.name}</div>
+                        <div class="athlete-region">${athlete.region}</div>
+                    </div>
+                </div>
+            </td>
+            <td class="year-points">${bestResult}</td>
+            ${yearCells}
+            <td class="total-points fw-bold">${athlete.total_points}</td>
+        </tr>
+    `;
 }
 
 async function loadData(competition, category, gender) {

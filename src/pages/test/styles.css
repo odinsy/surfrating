@@ -37,13 +37,8 @@ body {
 
 .name-cell {
     position: relative;
-    cursor: pointer;
+    cursor: default;
     text-align: left !important;
-}
-
-.name-cell:hover .athlete-name {
-    text-decoration: underline;
-    color: #112D4E;
 }
 
 .athlete-name {
@@ -160,7 +155,7 @@ tr.top-10:hover {
     background-color: #cbd5e8 !important;
 }
 
-* Центрирование ранга */
+/* Центрирование ранга */
 .table-custom td:first-child {
     text-align: center !important;
 }
@@ -208,115 +203,4 @@ tr.top-10:hover {
 /* Стили для пунктов в выпадающем списке при наведении */
 .form-select option:hover {
     background-color: #DBE2EF !important;
-}
-
-/* Стили для тултипа спортсмена */
-.athlete-tooltip {
-    position: fixed; /* Изменено на fixed для корректного позиционирования */
-    width: 320px;
-    background: white;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-    z-index: 1050;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-}
-.athlete-tooltip.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.tooltip-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-}
-
-.tooltip-meta {
-    flex: 1;
-    padding-right: 15px;
-}
-
-.tooltip-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #112D4E;
-    margin-bottom: 5px;
-}
-
-.tooltip-region {
-    color: #6c757d;
-    font-size: 0.9rem;
-}
-
-.tooltip-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.tooltip-stats {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
-    margin: 15px 0;
-}
-
-.tooltip-stat {
-    flex: 1;
-    text-align: center;
-}
-
-.tooltip-value {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #112D4E;
-    margin-bottom: 5px;
-}
-
-.tooltip-label {
-    font-size: 0.85rem;
-    color: #6c757d;
-}
-
-.tooltip-social {
-    text-align: center;
-    padding-top: 10px;
-}
-
-.tooltip-social a {
-    color: #112D4E;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: color 0.2s;
-}
-
-.tooltip-social a:hover {
-    color: #3F72AF;
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .athlete-tooltip {
-        position: fixed;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        width: 90%;
-        max-width: 300px;
-        z-index: 1100;
-    }
 }
