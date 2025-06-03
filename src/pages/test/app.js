@@ -4,7 +4,6 @@ const transliterate = window.slugify;
 const DISCIPLINE_COMPETITIONS = {
     shortboard: {
         'Чемпионат России': 'rfs/rus',
-        'Кубок России': 'rfs/cup',
         'Чемпионат Калининградской области': 'rfs/kaliningrad'
     },
     longboard: {
@@ -13,7 +12,6 @@ const DISCIPLINE_COMPETITIONS = {
     },
     wakesurfing: {
         'Чемпионат России': 'rfs/rus',
-        'Кубок России': 'rfs/cup'
     },
     wakeskim: {
         'Чемпионат России': 'rfs/rus'
