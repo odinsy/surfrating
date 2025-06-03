@@ -6,6 +6,7 @@
     "Birth Year",
     "Region",
     "Category",
+    "2021",
     "2022",
     "2023",
     "2024",
@@ -27,6 +28,18 @@
         "points": 10000
       },
       "years": {
+        "2021": {
+          "year_total_points": 7800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
         "2023": {
           "year_total_points": 6085,
           "events": [
@@ -64,11 +77,131 @@
           ]
         }
       },
-      "total_points": 21770
+      "total_points": 29570
+    },
+    {
+      "name": "Илясов Дмитрий",
+      "rank": 2,
+      "birth_year": 1989,
+      "region": "Санкт-Петербург",
+      "category": "мужчины",
+      "sport_rank": "МС",
+      "last_year": 2024,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2024",
+        "place": 1,
+        "points": 10000
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 7800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 27800
+    },
+    {
+      "name": "Филинов Даниил",
+      "rank": 3,
+      "birth_year": 1985,
+      "region": "Приморский край",
+      "category": "мужчины",
+      "sport_rank": "КМС",
+      "last_year": 2024,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
+        "place": 1,
+        "points": 10000
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 19
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 7,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 9,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 23750
     },
     {
       "name": "Вахрушев Владимир",
-      "rank": 2,
+      "rank": 4,
       "birth_year": 1994,
       "region": "Санкт-Петербург",
       "category": "мужчины",
@@ -121,39 +254,51 @@
       "total_points": 18230
     },
     {
-      "name": "Филинов Даниил",
-      "rank": 3,
-      "birth_year": 1985,
-      "region": "Приморский край",
+      "name": "Копров Павел",
+      "rank": 5,
+      "birth_year": 1990,
+      "region": "Санкт-Петербург",
       "category": "мужчины",
-      "sport_rank": "КМС",
+      "sport_rank": "2",
       "last_year": 2024,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2023",
-        "place": 1,
-        "points": 10000
+        "place": 7,
+        "points": 4745
       },
       "years": {
-        "2023": {
-          "year_total_points": 10000,
+        "2021": {
+          "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат России",
-              "place": 1,
-              "points": 10000,
+              "place": 8,
+              "points": 4745,
               "group": "main",
-              "participants_count": 19
+              "participants_count": 21
             }
           ]
         },
-        "2024": {
+        "2023": {
           "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
               "points": 4745,
+              "group": "main",
+              "participants_count": 19
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 15,
+              "points": 3320,
               "group": "main",
               "participants_count": 24
             }
@@ -164,7 +309,7 @@
           "events": [
             {
               "event_name": "Чемпионат России",
-              "place": 9,
+              "place": 11,
               "points": 3320,
               "group": "main",
               "participants_count": 21
@@ -172,53 +317,77 @@
           ]
         }
       },
-      "total_points": 18065
+      "total_points": 16130
     },
     {
-      "name": "Илясов Дмитрий",
-      "rank": 4,
-      "birth_year": 1989,
+      "name": "Новожилов Данила",
+      "rank": 6,
+      "birth_year": 1988,
       "region": "Санкт-Петербург",
       "category": "мужчины",
-      "sport_rank": "МС",
+      "sport_rank": "2",
       "last_year": 2024,
       "best_result": {
         "event_name": "Чемпионат России",
-        "event_year": "2024",
-        "place": 1,
-        "points": 10000
+        "event_year": "2023",
+        "place": 6,
+        "points": 4745
       },
       "years": {
-        "2024": {
-          "year_total_points": 10000,
+        "2021": {
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
-              "place": 1,
-              "points": 10000,
+              "place": 10,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 19
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 1900,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 19,
+              "points": 1900,
               "group": "main",
               "participants_count": 24
             }
           ]
         },
         "2022": {
-          "year_total_points": 7800,
+          "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат России",
-              "place": 2,
-              "points": 7800,
+              "place": 8,
+              "points": 4745,
               "group": "main",
               "participants_count": 21
             }
           ]
         }
       },
-      "total_points": 17800
+      "total_points": 14710
     },
     {
       "name": "Каптелов Петр",
-      "rank": 5,
+      "rank": 7,
       "birth_year": 1981,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -272,7 +441,7 @@
     },
     {
       "name": "Ременников Константин",
-      "rank": 6,
+      "rank": 8,
       "birth_year": 1984,
       "region": "Приморский край",
       "category": "мужчины",
@@ -326,7 +495,7 @@
     },
     {
       "name": "Фомин Максим",
-      "rank": 7,
+      "rank": 9,
       "birth_year": 1982,
       "region": "Московская область",
       "category": "мужчины",
@@ -367,114 +536,6 @@
       "total_points": 12545
     },
     {
-      "name": "Новожилов Данила",
-      "rank": 8,
-      "birth_year": 1988,
-      "region": "Санкт-Петербург",
-      "category": "мужчины",
-      "sport_rank": "2",
-      "last_year": 2024,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 6,
-        "points": 4745
-      },
-      "years": {
-        "2023": {
-          "year_total_points": 4745,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 19
-            }
-          ]
-        },
-        "2024": {
-          "year_total_points": 1900,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 19,
-              "points": 1900,
-              "group": "main",
-              "participants_count": 24
-            }
-          ]
-        },
-        "2022": {
-          "year_total_points": 4745,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 8,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 21
-            }
-          ]
-        }
-      },
-      "total_points": 11390
-    },
-    {
-      "name": "Копров Павел",
-      "rank": 9,
-      "birth_year": 1990,
-      "region": "Санкт-Петербург",
-      "category": "мужчины",
-      "sport_rank": "2",
-      "last_year": 2024,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 7,
-        "points": 4745
-      },
-      "years": {
-        "2023": {
-          "year_total_points": 4745,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 7,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 19
-            }
-          ]
-        },
-        "2024": {
-          "year_total_points": 3320,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 15,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 24
-            }
-          ]
-        },
-        "2022": {
-          "year_total_points": 3320,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 11,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 21
-            }
-          ]
-        }
-      },
-      "total_points": 11385
-    },
-    {
       "name": "Крысенков Глеб",
       "rank": 10,
       "birth_year": 1990,
@@ -489,6 +550,18 @@
         "points": 6085
       },
       "years": {
+        "2021": {
+          "year_total_points": 1900,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 20,
+              "points": 1900,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
         "2023": {
           "year_total_points": 3320,
           "events": [
@@ -514,7 +587,7 @@
           ]
         }
       },
-      "total_points": 9405
+      "total_points": 11305
     },
     {
       "name": "Тихонов Андрей",
@@ -559,8 +632,92 @@
       "total_points": 8065
     },
     {
-      "name": "Барсуков Сергей",
+      "name": "Трофимов Владимир",
       "rank": 12,
+      "birth_year": 1985,
+      "region": "Санкт-Петербург",
+      "category": "мужчины",
+      "sport_rank": "1",
+      "last_year": 2022,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 7,
+        "points": 4745
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 7,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 13,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 8065
+    },
+    {
+      "name": "Гальчук Александр",
+      "rank": 13,
+      "birth_year": 1987,
+      "region": "Приморский край",
+      "category": "мужчины",
+      "sport_rank": "3",
+      "last_year": 2024,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2024",
+        "place": 8,
+        "points": 4745
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 15,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 8,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 24
+            }
+          ]
+        }
+      },
+      "total_points": 8065
+    },
+    {
+      "name": "Барсуков Сергей",
+      "rank": 14,
       "birth_year": 2005,
       "region": "Приморский край",
       "category": "мужчины",
@@ -602,7 +759,7 @@
     },
     {
       "name": "Синица Петр",
-      "rank": 13,
+      "rank": 15,
       "birth_year": 1985,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -644,7 +801,7 @@
     },
     {
       "name": "Шушаков Роман",
-      "rank": 14,
+      "rank": 16,
       "birth_year": 1995,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -685,8 +842,80 @@
       "total_points": 6640
     },
     {
+      "name": "Морозов Антон",
+      "rank": 17,
+      "birth_year": 1982,
+      "region": "Камчатский край",
+      "category": "мужчины",
+      "sport_rank": "3",
+      "last_year": 2022,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2022",
+        "place": 10,
+        "points": 3320
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 12,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 10,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 6640
+    },
+    {
+      "name": "Тимухин Максим",
+      "rank": 18,
+      "birth_year": 1991,
+      "region": "Санкт-Петербург",
+      "category": "мужчины",
+      "sport_rank": "",
+      "last_year": 2021,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 3,
+        "points": 6085
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 6085,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 6085
+    },
+    {
       "name": "Синцов Никита",
-      "rank": 15,
+      "rank": 19,
       "birth_year": 1992,
       "region": "Москва",
       "category": "мужчины",
@@ -716,7 +945,7 @@
     },
     {
       "name": "Богданов Даниил",
-      "rank": 16,
+      "rank": 20,
       "birth_year": 2001,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -757,8 +986,80 @@
       "total_points": 5220
     },
     {
+      "name": "Федосеенко Александр",
+      "rank": 21,
+      "birth_year": 1992,
+      "region": "Приморский край",
+      "category": "мужчины",
+      "sport_rank": "2",
+      "last_year": 2022,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 16,
+        "points": 3320
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 16,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 1900,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 19,
+              "points": 1900,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 5220
+    },
+    {
+      "name": "Феликиди Георгий",
+      "rank": 22,
+      "birth_year": 1983,
+      "region": "Московская область",
+      "category": "мужчины",
+      "sport_rank": "",
+      "last_year": 2021,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 5,
+        "points": 4745
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 5,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 4745
+    },
+    {
       "name": "Багдасарян Максим",
-      "rank": 17,
+      "rank": 23,
       "birth_year": 2008,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -787,29 +1088,29 @@
       "total_points": 4745
     },
     {
-      "name": "Гальчук Александр",
-      "rank": 18,
-      "birth_year": 1987,
-      "region": "Приморский край",
+      "name": "Белоусов Борис",
+      "rank": 24,
+      "birth_year": 1989,
+      "region": "Москва",
       "category": "мужчины",
-      "sport_rank": "3",
-      "last_year": 2024,
+      "sport_rank": "",
+      "last_year": 2021,
       "best_result": {
         "event_name": "Чемпионат России",
-        "event_year": "2024",
-        "place": 8,
+        "event_year": "2021",
+        "place": 6,
         "points": 4745
       },
       "years": {
-        "2024": {
+        "2021": {
           "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат России",
-              "place": 8,
+              "place": 6,
               "points": 4745,
               "group": "main",
-              "participants_count": 24
+              "participants_count": 21
             }
           ]
         }
@@ -817,26 +1118,98 @@
       "total_points": 4745
     },
     {
-      "name": "Морозов Антон",
-      "rank": 19,
-      "birth_year": 1982,
-      "region": "Камчатский край",
+      "name": "Марченко Иван",
+      "rank": 25,
+      "birth_year": 1984,
+      "region": "Приморский край",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2022,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2022",
-        "place": 10,
+        "place": 18,
+        "points": 1900
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 1900,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 21,
+              "points": 1900,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 1900,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 18,
+              "points": 1900,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 3800
+    },
+    {
+      "name": "Мустафин Андрей",
+      "rank": 26,
+      "birth_year": 1987,
+      "region": "Красноярский край",
+      "category": "мужчины",
+      "sport_rank": "",
+      "last_year": 2021,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 9,
         "points": 3320
       },
       "years": {
-        "2022": {
+        "2021": {
           "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
-              "place": 10,
+              "place": 9,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 3320
+    },
+    {
+      "name": "Расшиваев Сергей",
+      "rank": 27,
+      "birth_year": 1984,
+      "region": "Санкт-Петербург",
+      "category": "мужчины",
+      "sport_rank": "КМС",
+      "last_year": 2021,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 11,
+        "points": 3320
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 11,
               "points": 3320,
               "group": "main",
               "participants_count": 21
@@ -848,7 +1221,7 @@
     },
     {
       "name": "Кравченко Алексей",
-      "rank": 20,
+      "rank": 28,
       "birth_year": 1984,
       "region": "Санкт-Петербург",
       "category": "мужчины",
@@ -878,7 +1251,7 @@
     },
     {
       "name": "Костин Евгений",
-      "rank": 21,
+      "rank": 29,
       "birth_year": 1990,
       "region": "Приморский край",
       "category": "мужчины",
@@ -908,7 +1281,7 @@
     },
     {
       "name": "Михайлов Алексей",
-      "rank": 22,
+      "rank": 30,
       "birth_year": 1997,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -937,21 +1310,21 @@
       "total_points": 3320
     },
     {
-      "name": "Трофимов Владимир",
-      "rank": 23,
-      "birth_year": 1985,
-      "region": "Санкт-Петербург",
+      "name": "Коденко Роман",
+      "rank": 31,
+      "birth_year": 1992,
+      "region": "Приморский край",
       "category": "мужчины",
-      "sport_rank": "1",
-      "last_year": 2022,
+      "sport_rank": "",
+      "last_year": 2021,
       "best_result": {
         "event_name": "Чемпионат России",
-        "event_year": "2022",
+        "event_year": "2021",
         "place": 13,
         "points": 3320
       },
       "years": {
-        "2022": {
+        "2021": {
           "year_total_points": 3320,
           "events": [
             {
@@ -968,7 +1341,7 @@
     },
     {
       "name": "Левицкий Дионис",
-      "rank": 24,
+      "rank": 32,
       "birth_year": 1991,
       "region": "Приморский край",
       "category": "мужчины",
@@ -998,7 +1371,7 @@
     },
     {
       "name": "Старков Андрей",
-      "rank": 25,
+      "rank": 33,
       "birth_year": 1985,
       "region": "Москва",
       "category": "мужчины",
@@ -1027,8 +1400,38 @@
       "total_points": 3320
     },
     {
+      "name": "Эгле Вячеслав",
+      "rank": 34,
+      "birth_year": 1994,
+      "region": "Сахалинская область",
+      "category": "мужчины",
+      "sport_rank": "",
+      "last_year": 2021,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 14,
+        "points": 3320
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 3320,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 14,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 3320
+    },
+    {
       "name": "Кортелев Федор",
-      "rank": 26,
+      "rank": 35,
       "birth_year": 1992,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -1058,7 +1461,7 @@
     },
     {
       "name": "Лещев Алексей",
-      "rank": 27,
+      "rank": 36,
       "birth_year": 1991,
       "region": "Камчатский край",
       "category": "мужчины",
@@ -1088,7 +1491,7 @@
     },
     {
       "name": "Блискунов Дмитрий",
-      "rank": 28,
+      "rank": 37,
       "birth_year": 1990,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -1118,7 +1521,7 @@
     },
     {
       "name": "Чередниченко Андрей",
-      "rank": 29,
+      "rank": 38,
       "birth_year": 1982,
       "region": "Приморский край",
       "category": "мужчины",
@@ -1148,7 +1551,7 @@
     },
     {
       "name": "Зылев Даниил",
-      "rank": 30,
+      "rank": 39,
       "birth_year": 1982,
       "region": "Москва",
       "category": "мужчины",
@@ -1178,7 +1581,7 @@
     },
     {
       "name": "Саркисов Станислав",
-      "rank": 31,
+      "rank": 40,
       "birth_year": 1983,
       "region": "Московская область",
       "category": "мужчины",
@@ -1207,8 +1610,38 @@
       "total_points": 1900
     },
     {
+      "name": "Степаненко Клим",
+      "rank": 41,
+      "birth_year": 1994,
+      "region": "Приморский край",
+      "category": "мужчины",
+      "sport_rank": "",
+      "last_year": 2021,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 17,
+        "points": 1900
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 1900,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 17,
+              "points": 1900,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 1900
+    },
+    {
       "name": "Жарченко Владислав",
-      "rank": 32,
+      "rank": 42,
       "birth_year": 1991,
       "region": "Приморский край",
       "category": "мужчины",
@@ -1238,7 +1671,7 @@
     },
     {
       "name": "Болдырев Артем",
-      "rank": 33,
+      "rank": 43,
       "birth_year": 1981,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -1267,21 +1700,21 @@
       "total_points": 1900
     },
     {
-      "name": "Марченко Иван",
-      "rank": 34,
-      "birth_year": 1984,
-      "region": "Приморский край",
+      "name": "Коваленко Николай",
+      "rank": 44,
+      "birth_year": 1983,
+      "region": "Свердловская область",
       "category": "мужчины",
-      "sport_rank": "3",
-      "last_year": 2022,
+      "sport_rank": "",
+      "last_year": 2021,
       "best_result": {
         "event_name": "Чемпионат России",
-        "event_year": "2022",
+        "event_year": "2021",
         "place": 18,
         "points": 1900
       },
       "years": {
-        "2022": {
+        "2021": {
           "year_total_points": 1900,
           "events": [
             {
@@ -1298,7 +1731,7 @@
     },
     {
       "name": "Реут Алексей",
-      "rank": 35,
+      "rank": 45,
       "birth_year": 1989,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -1327,21 +1760,21 @@
       "total_points": 1900
     },
     {
-      "name": "Федосеенко Александр",
-      "rank": 36,
-      "birth_year": 1992,
+      "name": "Алявин Алексей",
+      "rank": 46,
+      "birth_year": 1987,
       "region": "Приморский край",
       "category": "мужчины",
-      "sport_rank": "2",
-      "last_year": 2022,
+      "sport_rank": "",
+      "last_year": 2021,
       "best_result": {
         "event_name": "Чемпионат России",
-        "event_year": "2022",
+        "event_year": "2021",
         "place": 19,
         "points": 1900
       },
       "years": {
-        "2022": {
+        "2021": {
           "year_total_points": 1900,
           "events": [
             {
@@ -1358,7 +1791,7 @@
     },
     {
       "name": "Дроздов Дмитрий",
-      "rank": 37,
+      "rank": 47,
       "birth_year": 1998,
       "region": "Приморский край",
       "category": "мужчины",
@@ -1388,7 +1821,7 @@
     },
     {
       "name": "Шеин Николай",
-      "rank": 38,
+      "rank": 48,
       "birth_year": 1986,
       "region": "Приморский край",
       "category": "мужчины",
@@ -1418,7 +1851,7 @@
     },
     {
       "name": "Смирнов Михаил",
-      "rank": 39,
+      "rank": 49,
       "birth_year": 1982,
       "region": "Санкт-Петербург",
       "category": "мужчины",
@@ -1448,7 +1881,7 @@
     },
     {
       "name": "Ломаев Владимир",
-      "rank": 40,
+      "rank": 50,
       "birth_year": 1993,
       "region": "Санкт-Петербург",
       "category": "мужчины",
@@ -1478,7 +1911,7 @@
     },
     {
       "name": "Артюхин Марк",
-      "rank": 41,
+      "rank": 51,
       "birth_year": 2007,
       "region": "Камчатский край",
       "category": "мужчины",
@@ -1508,7 +1941,7 @@
     },
     {
       "name": "Ткачук Дмитрий",
-      "rank": 42,
+      "rank": 52,
       "birth_year": 1986,
       "region": "Мурманская область",
       "category": "мужчины",
@@ -1537,20 +1970,8 @@
       "total_points": 1900
     },
     {
-      "name": "Расшиваев Сергей",
-      "rank": 43,
-      "birth_year": 1984,
-      "region": "Санкт-Петербург",
-      "category": "мужчины",
-      "sport_rank": "КМС",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
       "name": "Молотков Ростислав",
-      "rank": 44,
+      "rank": 53,
       "birth_year": 1992,
       "region": "Еврейская автономная область",
       "category": "мужчины",
@@ -1561,20 +1982,8 @@
       "total_points": 0
     },
     {
-      "name": "Мустафин Андрей",
-      "rank": 45,
-      "birth_year": 1987,
-      "region": "Красноярский край",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
       "name": "Перерва Вадим",
-      "rank": 46,
+      "rank": 54,
       "birth_year": 1989,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -1586,7 +1995,7 @@
     },
     {
       "name": "Титов Сергей",
-      "rank": 47,
+      "rank": 55,
       "birth_year": 1987,
       "region": "Санкт-Петербург",
       "category": "мужчины",
@@ -1598,7 +2007,7 @@
     },
     {
       "name": "Гречишкин Алексей",
-      "rank": 48,
+      "rank": 56,
       "birth_year": 1985,
       "region": "Москва",
       "category": "мужчины",
@@ -1610,7 +2019,7 @@
     },
     {
       "name": "Пилецкий Илья",
-      "rank": 49,
+      "rank": 57,
       "birth_year": 1983,
       "region": "Калининградская область",
       "category": "мужчины",
@@ -1622,7 +2031,7 @@
     },
     {
       "name": "Литвинов Леонид",
-      "rank": 50,
+      "rank": 58,
       "birth_year": 1963,
       "region": "Санкт-Петербург",
       "category": "мужчины",
@@ -1634,102 +2043,6 @@
     },
     {
       "name": "Мысовский Сергей",
-      "rank": 51,
-      "birth_year": 1986,
-      "region": "Санкт-Петербург",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Блохин Иван",
-      "rank": 52,
-      "birth_year": 1987,
-      "region": "Калининград",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Глазырин Игорь",
-      "rank": 53,
-      "birth_year": 1990,
-      "region": "Челябинская область",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Федюнькин Юрий",
-      "rank": 54,
-      "birth_year": 1990,
-      "region": "Калининград",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Шуев Николай",
-      "rank": 55,
-      "birth_year": 1988,
-      "region": "Чебоксары",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Павликов Константин",
-      "rank": 56,
-      "birth_year": 1984,
-      "region": "Санкт-Петербург",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Волобуев Леонид",
-      "rank": 57,
-      "birth_year": 1988,
-      "region": "Санкт-Петербург",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Анисимов",
-      "rank": 58,
-      "birth_year": 1984,
-      "region": "Москва",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Иванов Никита",
       "rank": 59,
       "birth_year": 1986,
       "region": "Санкт-Петербург",
@@ -1741,10 +2054,10 @@
       "total_points": 0
     },
     {
-      "name": "Какурин Эльдар",
+      "name": "Блохин Иван",
       "rank": 60,
-      "birth_year": 1983,
-      "region": "Москва",
+      "birth_year": 1987,
+      "region": "Калининград",
       "category": "мужчины",
       "sport_rank": "",
       "last_year": 0,
@@ -1753,9 +2066,45 @@
       "total_points": 0
     },
     {
-      "name": "Тимухин Максим",
+      "name": "Глазырин Игорь",
       "rank": 61,
-      "birth_year": 1991,
+      "birth_year": 1990,
+      "region": "Челябинская область",
+      "category": "мужчины",
+      "sport_rank": "",
+      "last_year": 0,
+      "best_result": null,
+      "years": {},
+      "total_points": 0
+    },
+    {
+      "name": "Федюнькин Юрий",
+      "rank": 62,
+      "birth_year": 1990,
+      "region": "Калининград",
+      "category": "мужчины",
+      "sport_rank": "",
+      "last_year": 0,
+      "best_result": null,
+      "years": {},
+      "total_points": 0
+    },
+    {
+      "name": "Шуев Николай",
+      "rank": 63,
+      "birth_year": 1988,
+      "region": "Чебоксары",
+      "category": "мужчины",
+      "sport_rank": "",
+      "last_year": 0,
+      "best_result": null,
+      "years": {},
+      "total_points": 0
+    },
+    {
+      "name": "Павликов Константин",
+      "rank": 64,
+      "birth_year": 1984,
       "region": "Санкт-Петербург",
       "category": "мужчины",
       "sport_rank": "",
@@ -1765,10 +2114,10 @@
       "total_points": 0
     },
     {
-      "name": "Феликиди Георгий",
-      "rank": 62,
-      "birth_year": 1983,
-      "region": "Московская область",
+      "name": "Волобуев Леонид",
+      "rank": 65,
+      "birth_year": 1988,
+      "region": "Санкт-Петербург",
       "category": "мужчины",
       "sport_rank": "",
       "last_year": 0,
@@ -1777,9 +2126,9 @@
       "total_points": 0
     },
     {
-      "name": "Белоусов Борис",
-      "rank": 63,
-      "birth_year": 1989,
+      "name": "Анисимов",
+      "rank": 66,
+      "birth_year": 1984,
       "region": "Москва",
       "category": "мужчины",
       "sport_rank": "",
@@ -1789,46 +2138,10 @@
       "total_points": 0
     },
     {
-      "name": "Коденко Роман",
-      "rank": 64,
-      "birth_year": 1992,
-      "region": "Приморский край",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Эгле Вячеслав",
-      "rank": 65,
-      "birth_year": 1994,
-      "region": "Сахалинская область",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Степаненко Клим",
-      "rank": 66,
-      "birth_year": 1994,
-      "region": "Приморский край",
-      "category": "мужчины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Коваленко Николай",
+      "name": "Иванов Никита",
       "rank": 67,
-      "birth_year": 1983,
-      "region": "Свердловская область",
+      "birth_year": 1986,
+      "region": "Санкт-Петербург",
       "category": "мужчины",
       "sport_rank": "",
       "last_year": 0,
@@ -1837,10 +2150,10 @@
       "total_points": 0
     },
     {
-      "name": "Алявин Алексей",
+      "name": "Какурин Эльдар",
       "rank": 68,
-      "birth_year": 1987,
-      "region": "Приморский край",
+      "birth_year": 1983,
+      "region": "Москва",
       "category": "мужчины",
       "sport_rank": "",
       "last_year": 0,

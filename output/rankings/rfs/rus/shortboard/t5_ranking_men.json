@@ -10,7 +10,7 @@
           "region": "Камчатский край",
           "sport_rank": "МС",
           "year_points": 10000,
-          "total_points": 20000,
+          "total_points": 27800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -23,11 +23,28 @@
           "rank": 1
         },
         {
+          "name": "athlete_9b0f6743833c",
+          "region": "Санкт-Петербург",
+          "sport_rank": "КМС",
+          "year_points": 7800,
+          "total_points": 17800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 26
+            }
+          ],
+          "rank": 2
+        },
+        {
           "name": "athlete_f85bc927a032",
           "region": "Калининградская область",
           "sport_rank": "МС",
           "year_points": 6085,
-          "total_points": 17205,
+          "total_points": 20525,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -37,14 +54,14 @@
               "participants_count": 26
             }
           ],
-          "rank": 2
+          "rank": 3
         },
         {
           "name": "athlete_0afb72536f1b",
           "region": "Москва",
           "sport_rank": "2",
           "year_points": 4745,
-          "total_points": 15575,
+          "total_points": 18895,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -54,7 +71,7 @@
               "participants_count": 26
             }
           ],
-          "rank": 3
+          "rank": 4
         },
         {
           "name": "athlete_a755fe2f2711",
@@ -71,24 +88,79 @@
               "participants_count": 26
             }
           ],
-          "rank": 4
-        },
+          "rank": 5
+        }
+      ]
+    },
+    "2021": {
+      "athletes": [
         {
-          "name": "athlete_b12ff17ebaee",
+          "name": "athlete_9b0f6743833c",
           "region": "Санкт-Петербург",
-          "sport_rank": "1",
-          "year_points": 3320,
-          "total_points": 13750,
+          "sport_rank": "КМС",
+          "year_points": 10000,
+          "total_points": 17800,
           "events": [
             {
               "event_name": "Чемпионат России",
-              "place": 13,
-              "points": 3320,
+              "place": 1,
+              "points": 10000,
               "group": "main",
-              "participants_count": 26
+              "participants_count": 25
             }
           ],
-          "rank": 4
+          "rank": 1
+        },
+        {
+          "name": "athlete_3001f8a9b557",
+          "region": "Камчатский край",
+          "sport_rank": "МС",
+          "year_points": 7800,
+          "total_points": 27800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 25
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "name": "athlete_f85bc927a032",
+          "region": "Калининградская область",
+          "sport_rank": "МС",
+          "year_points": 3320,
+          "total_points": 20525,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 9,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 25
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "name": "athlete_0afb72536f1b",
+          "region": "Москва",
+          "sport_rank": "2",
+          "year_points": 3320,
+          "total_points": 18895,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 11,
+              "points": 3320,
+              "group": "main",
+              "participants_count": 25
+            }
+          ],
+          "rank": 3
         }
       ]
     },
@@ -99,7 +171,7 @@
           "region": "Камчатский край",
           "sport_rank": "МС",
           "year_points": 10000,
-          "total_points": 20000,
+          "total_points": 27800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -110,6 +182,23 @@
             }
           ],
           "rank": 1
+        },
+        {
+          "name": "athlete_0afb72536f1b",
+          "region": "Москва",
+          "sport_rank": "2",
+          "year_points": 4745,
+          "total_points": 18895,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 27
+            }
+          ],
+          "rank": 2
         },
         {
           "name": "athlete_a755fe2f2711",
@@ -129,45 +218,11 @@
           "rank": 2
         },
         {
-          "name": "athlete_0afb72536f1b",
-          "region": "Москва",
-          "sport_rank": "2",
-          "year_points": 4745,
-          "total_points": 15575,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 27
-            }
-          ],
-          "rank": 2
-        },
-        {
-          "name": "athlete_b12ff17ebaee",
-          "region": "Санкт-Петербург",
-          "sport_rank": "1",
-          "year_points": 4745,
-          "total_points": 13750,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 8,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 27
-            }
-          ],
-          "rank": 2
-        },
-        {
           "name": "athlete_f85bc927a032",
           "region": "Калининградская область",
           "sport_rank": "МС",
           "year_points": 3320,
-          "total_points": 17205,
+          "total_points": 20525,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -177,7 +232,7 @@
               "participants_count": 27
             }
           ],
-          "rank": 5
+          "rank": 4
         }
       ]
     },
@@ -205,7 +260,7 @@
           "region": "Калининградская область",
           "sport_rank": "МС",
           "year_points": 7800,
-          "total_points": 17205,
+          "total_points": 20525,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -222,7 +277,7 @@
           "region": "Москва",
           "sport_rank": "2",
           "year_points": 6085,
-          "total_points": 15575,
+          "total_points": 18895,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -233,23 +288,6 @@
             }
           ],
           "rank": 3
-        },
-        {
-          "name": "athlete_b12ff17ebaee",
-          "region": "Санкт-Петербург",
-          "sport_rank": "1",
-          "year_points": 5685,
-          "total_points": 13750,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 24
-            }
-          ],
-          "rank": 4
         }
       ]
     }
@@ -260,7 +298,7 @@
       "name": "athlete_3001f8a9b557",
       "region": "Камчатский край",
       "sport_rank": "МС",
-      "total_points": 20000,
+      "total_points": 27800,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2024",
@@ -270,11 +308,52 @@
       "last_year": 2024,
       "years_participated": [
         2022,
+        2021,
         2024
       ]
     },
     {
       "rank": 2,
+      "name": "athlete_f85bc927a032",
+      "region": "Калининградская область",
+      "sport_rank": "МС",
+      "total_points": 20525,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
+        "place": 2,
+        "points": 7800
+      },
+      "last_year": 2024,
+      "years_participated": [
+        2022,
+        2021,
+        2024,
+        2023
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "athlete_0afb72536f1b",
+      "region": "Москва",
+      "sport_rank": "2",
+      "total_points": 18895,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
+        "place": 3,
+        "points": 6085
+      },
+      "last_year": 2024,
+      "years_participated": [
+        2022,
+        2021,
+        2024,
+        2023
+      ]
+    },
+    {
+      "rank": 4,
       "name": "athlete_a755fe2f2711",
       "region": "Москва",
       "sport_rank": "2",
@@ -293,60 +372,21 @@
       ]
     },
     {
-      "rank": 3,
-      "name": "athlete_f85bc927a032",
-      "region": "Калининградская область",
-      "sport_rank": "МС",
-      "total_points": 17205,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 2,
-        "points": 7800
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2022,
-        2024,
-        2023
-      ]
-    },
-    {
-      "rank": 4,
-      "name": "athlete_0afb72536f1b",
-      "region": "Москва",
-      "sport_rank": "2",
-      "total_points": 15575,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 3,
-        "points": 6085
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2022,
-        2024,
-        2023
-      ]
-    },
-    {
       "rank": 5,
-      "name": "athlete_b12ff17ebaee",
+      "name": "athlete_9b0f6743833c",
       "region": "Санкт-Петербург",
-      "sport_rank": "1",
-      "total_points": 13750,
+      "sport_rank": "КМС",
+      "total_points": 17800,
       "best_result": {
         "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 4,
-        "points": 5685
+        "event_year": "2021",
+        "place": 1,
+        "points": 10000
       },
-      "last_year": 2024,
+      "last_year": 2022,
       "years_participated": [
         2022,
-        2024,
-        2023
+        2021
       ]
     }
   ]
