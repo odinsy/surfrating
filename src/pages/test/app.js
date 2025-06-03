@@ -30,61 +30,6 @@ function getYearsRange(data) {
     return Array.from(years).sort((a, b) => a - b);
 }
 
-function showTooltip(id) {
-    const tooltip = document.getElementById(id);
-    if (tooltip) tooltip.style.display = 'block';
-}
-
-function hideTooltip(id) {
-    const tooltip = document.getElementById(id);
-    if (tooltip) tooltip.style.display = 'none';
-}
-
-let hideTimer = null;
-
-function showAthleteTooltip(tooltipId, nameCell) {
-    if (hideTimer) {
-        clearTimeout(hideTimer);
-        hideTimer = null;
-    }
-
-    const tooltip = document.getElementById(tooltipId);
-    if (!tooltip) return;
-
-    const rect = nameCell.getBoundingClientRect();
-    tooltip.style.top = `${rect.bottom + window.scrollY}px`;
-    tooltip.style.left = `${rect.left + window.scrollX}px`;
-    tooltip.classList.add('visible');
-
-    tooltip.addEventListener('mouseenter', () => {
-        if (hideTimer) {
-            clearTimeout(hideTimer);
-            hideTimer = null;
-        }
-    });
-
-    tooltip.addEventListener('mouseleave', () => {
-        hideAthleteTooltip(tooltipId);
-    });
-}
-
-function scheduleHideAthleteTooltip(tooltipId) {
-    hideTimer = setTimeout(() => {
-        hideAthleteTooltip(tooltipId);
-    }, 100);
-}
-
-function hideAthleteTooltip(tooltipId) {
-    const tooltip = document.getElementById(tooltipId);
-    if (tooltip) {
-        tooltip.classList.remove('visible');
-    }
-    if (hideTimer) {
-        clearTimeout(hideTimer);
-        hideTimer = null;
-    }
-}
-
 function createAthleteRow(athlete, years) {
     const bestResult = athlete.best_result
         ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
@@ -123,8 +68,8 @@ function createAthleteRow(athlete, years) {
     }).join('');
 
     const tooltipId = `tooltip-${athlete.rank}`;
-     const tooltipHTML = `
-         <div class="athlete-tooltip" id="${tooltipId}">
+    const tooltipHTML = `
+        <div class="athlete-tooltip" id="${tooltipId}">
              <div class="tooltip-header">
                  <div class="tooltip-meta">
                      <div class="tooltip-name">${athlete.name}</div>
@@ -186,6 +131,60 @@ function createAthleteRow(athlete, years) {
          </tr>
          ${tooltipHTML}
      `;
+}
+
+let currentTooltipId = null;
+let hideTimer = null;
+
+function showTooltip(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'block';
+}
+
+function hideTooltip(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'none';
+}
+
+function showAthleteTooltip(tooltipId, nameCell) {
+    if (currentTooltipId && currentTooltipId !== tooltipId) {
+        hideAthleteTooltip(currentTooltipId);
+    }
+
+    const tooltip = document.getElementById(tooltipId);
+    if (!tooltip) return;
+
+    if (hideTimer) {
+        clearTimeout(hideTimer);
+        hideTimer = null;
+    }
+
+    const rect = nameCell.getBoundingClientRect();
+    tooltip.style.top = `${rect.bottom + window.scrollY}px`;
+    tooltip.style.left = `${rect.left + window.scrollX}px`;
+
+    tooltip.classList.add('visible');
+    currentTooltipId = tooltipId;
+}
+
+function scheduleHideAthleteTooltip(tooltipId) {
+    hideTimer = setTimeout(() => {
+        hideAthleteTooltip(tooltipId);
+    }, 100);
+}
+
+function hideAthleteTooltip(tooltipId) {
+    const tooltip = document.getElementById(tooltipId);
+    if (tooltip) {
+        tooltip.classList.remove('visible');
+    }
+    if (hideTimer) {
+        clearTimeout(hideTimer);
+        hideTimer = null;
+    }
+    if (currentTooltipId === tooltipId) {
+        currentTooltipId = null;
+    }
 }
 
 async function loadData(competition, category, gender) {

@@ -212,7 +212,7 @@ tr.top-10:hover {
 
 /* Стили для тултипа спортсмена */
 .athlete-tooltip {
-    position: absolute;
+    position: fixed;
     width: 320px;
     background: white;
     border: 1px solid #dee2e6;
