@@ -114,6 +114,58 @@ body {
     color: white;
 }
 
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 12px;
+    z-index: 1001;
+    min-width: 220px;
+    margin-top: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    color: #112D4E;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s;
+    background: rgba(17,45,78,0.05);
+    text-align: start;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background: #3F72AF;
+    color: white;
+    transform: translateX(4px);
+}
+
+.dropdown-item.active {
+    background: #3F72AF;
+    color: white;
+    transform: translateX(4px);
+}
+
+
+/* Controls */
 .controls {
     display: flex;
     flex-direction: row;
@@ -470,55 +522,6 @@ body {
     transition: opacity 0.3s;
     position: relative;
     padding-left: 28px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    padding: 12px;
-    z-index: 1001;
-    min-width: 220px;
-    margin-top: 8px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.dropdown-item {
-    padding: 10px 16px;
-    color: #112D4E;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: all 0.2s;
-    background: rgba(17,45,78,0.05);
-    text-align: start;
-    white-space: nowrap;
-}
-
-.dropdown-item:hover {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
-}
-
-.dropdown-item.active {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
