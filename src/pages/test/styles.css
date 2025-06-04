@@ -206,18 +206,30 @@ tr.top-10:hover {
     background-color: #DBE2EF !important;
 }
 
+.footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
 #last-updated {
-    font-weight: 600;
-    background-color: rgba(255,255,255,0.1);
-    padding: 2px 8px;
+    background-color: #e9ecef;
+    padding: 3px 8px;
     border-radius: 4px;
+    font-weight: 600;
+    color: #112D4E;
 }
 
 @media (max-width: 768px) {
-    .year-points {
-        font-size: 0.8rem;
+    .footer .container > div {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
-    .total-points {
-        font-size: 0.9rem;
+
+    #last-updated {
+        display: block;
+        margin-top: 5px;
     }
 }

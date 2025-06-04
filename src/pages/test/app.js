@@ -38,7 +38,7 @@ function hideTooltip(id) {
 
 function createAthleteRow(athlete, years, athleteYearData) {
     const bestResult = athlete.best_result
-        ? `${athlete.best_result.place} (${athlete.best_result.points}) в ${athlete.best_result.event_year}`
+        ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
         : 'Нет данных';
 
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
@@ -106,6 +106,8 @@ async function loadData(competition, category, gender) {
         const response = await fetch(path);
         const data = await response.json();
 
+        document.getElementById('last-updated').textContent = data.last_updated || '-';
+
         let athleteYearData = {};
         if (data.year_rankings) {
             for (const [year, yearData] of Object.entries(data.year_rankings)) {
@@ -126,6 +128,7 @@ async function loadData(competition, category, gender) {
         return data;
     } catch (error) {
         console.error('Error loading data:', error);
+        document.getElementById('last-updated').textContent = 'Ошибка загрузки';
         return { headers: [], athletes: [], overall_ranking: [] };
     }
 }

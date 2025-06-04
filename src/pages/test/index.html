@@ -14,9 +14,6 @@
                 <img src="../../img/th-white-logo-min.png" alt="TopHeats" height="40">
             </a>
             <div class="d-flex align-items-center ms-auto">
-                <div class="text-light me-3">
-                    Обновлено: <span id="last-updated">-</span>
-                </div>
                 <div class="dropdown">
                     <button class="btn btn-outline-light dropdown-toggle" type="button" id="disciplineDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <span id="disciplineLabel">Короткая доска</span>
@@ -47,6 +44,20 @@
 
         <div id="ranking-table-container" class="table-responsive"></div>
     </div>
+
+    <footer class="footer mt-auto py-3 bg-light border-top">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="text-muted">
+                    &copy; ${new Date().getFullYear()} TopHeats. Все права защищены.
+                </div>
+                <div>
+                    <span class="text-muted me-2">Обновлено:</span>
+                    <span id="last-updated" class="fw-bold">-</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
