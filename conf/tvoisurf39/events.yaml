@@ -1,0 +1,21 @@
+event_groups:
+  default:
+    coefficient: 1.0
+    events: []
+
+  main:
+    coefficient: 1.0
+    events:
+      - "Балтийский серф-контест 20250517"
+
+  regional:
+    coefficient: 0.7
+    events:
+      - "Балтийский кубок"
+
+  local:
+    coefficient: 0.5
+    events:
+      - "Локальные соревнования"
+
+  allowed_events: [main, regional]
