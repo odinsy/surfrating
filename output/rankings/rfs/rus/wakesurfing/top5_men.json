@@ -1,14 +1,15 @@
 {
   "discipline": "wakesurfing",
   "gender": "men",
-  "last_updated": "2025-06-03",
+  "last_updated": "2025-06-04",
   "year_rankings": {
     "2024": {
       "athletes": [
         {
-          "name": "athlete_6e106bda6dda",
+          "name": "Пантелеев Александр",
           "region": "Москва",
           "sport_rank": "1",
+          "birth_year": 1997,
           "year_points": 16085,
           "total_points": 16085,
           "events": [
@@ -30,11 +31,12 @@
           "rank": 1
         },
         {
-          "name": "athlete_5630607e1ed6",
+          "name": "Данилов Сергей",
           "region": "Московская область",
           "sport_rank": "MC",
+          "birth_year": 1978,
           "year_points": 15600,
-          "total_points": 21685,
+          "total_points": 19494,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -54,9 +56,10 @@
           "rank": 2
         },
         {
-          "name": "athlete_d3bee9092934",
+          "name": "Медведев Антон",
           "region": "Саратовская область",
           "sport_rank": "2",
+          "birth_year": 1989,
           "year_points": 10830,
           "total_points": 10830,
           "events": [
@@ -78,11 +81,12 @@
           "rank": 3
         },
         {
-          "name": "athlete_e9a79204fa19",
+          "name": "Корольков Станислав",
           "region": "Москва",
           "sport_rank": "КМС",
+          "birth_year": 1986,
           "year_points": 10000,
-          "total_points": 17800,
+          "total_points": 14992,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -95,11 +99,12 @@
           "rank": 4
         },
         {
-          "name": "athlete_c3ebe9783799",
+          "name": "Абросимов Геннадий",
           "region": "Самарская область",
           "sport_rank": "2",
+          "birth_year": 1993,
           "year_points": 9490,
-          "total_points": 12810,
+          "total_points": 11615,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -123,16 +128,17 @@
     "2022": {
       "athletes": [
         {
-          "name": "athlete_e9a79204fa19",
+          "name": "Корольков Станислав",
           "region": "Москва",
           "sport_rank": "КМС",
-          "year_points": 7800,
-          "total_points": 17800,
+          "birth_year": 1986,
+          "year_points": 4992,
+          "total_points": 14992,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 2,
-              "points": 7800,
+              "points": 4992,
               "group": "main",
               "participants_count": 23
             }
@@ -140,16 +146,17 @@
           "rank": 1
         },
         {
-          "name": "athlete_5630607e1ed6",
+          "name": "Данилов Сергей",
           "region": "Московская область",
           "sport_rank": "MC",
-          "year_points": 6085,
-          "total_points": 21685,
+          "birth_year": 1978,
+          "year_points": 3894,
+          "total_points": 19494,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 3,
-              "points": 6085,
+              "points": 3894,
               "group": "main",
               "participants_count": 23
             }
@@ -157,16 +164,17 @@
           "rank": 2
         },
         {
-          "name": "athlete_c3ebe9783799",
+          "name": "Абросимов Геннадий",
           "region": "Самарская область",
           "sport_rank": "2",
-          "year_points": 3320,
-          "total_points": 12810,
+          "birth_year": 1993,
+          "year_points": 2125,
+          "total_points": 11615,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 10,
-              "points": 3320,
+              "points": 2125,
               "group": "main",
               "participants_count": 23
             }
@@ -179,10 +187,11 @@
   "overall_ranking": [
     {
       "rank": 1,
-      "name": "athlete_5630607e1ed6",
+      "name": "Данилов Сергей",
       "region": "Московская область",
       "sport_rank": "MC",
-      "total_points": 21685,
+      "birth_year": 1978,
+      "total_points": 19494,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2024",
@@ -197,27 +206,10 @@
     },
     {
       "rank": 2,
-      "name": "athlete_e9a79204fa19",
-      "region": "Москва",
-      "sport_rank": "КМС",
-      "total_points": 17800,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2024",
-        "place": 1,
-        "points": 10000
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2024,
-        2022
-      ]
-    },
-    {
-      "rank": 3,
-      "name": "athlete_6e106bda6dda",
+      "name": "Пантелеев Александр",
       "region": "Москва",
       "sport_rank": "1",
+      "birth_year": 1997,
       "total_points": 16085,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
@@ -231,11 +223,31 @@
       ]
     },
     {
+      "rank": 3,
+      "name": "Корольков Станислав",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birth_year": 1986,
+      "total_points": 14992,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2024",
+        "place": 1,
+        "points": 10000
+      },
+      "last_year": 2024,
+      "years_participated": [
+        2024,
+        2022
+      ]
+    },
+    {
       "rank": 4,
-      "name": "athlete_c3ebe9783799",
+      "name": "Абросимов Геннадий",
       "region": "Самарская область",
       "sport_rank": "2",
-      "total_points": 12810,
+      "birth_year": 1993,
+      "total_points": 11615,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
@@ -250,9 +262,10 @@
     },
     {
       "rank": 5,
-      "name": "athlete_d3bee9092934",
+      "name": "Медведев Антон",
       "region": "Саратовская область",
       "sport_rank": "2",
+      "birth_year": 1989,
       "total_points": 10830,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
