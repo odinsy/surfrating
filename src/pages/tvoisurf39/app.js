@@ -3,10 +3,10 @@ const transliterate = window.slugify;
 
 const DISCIPLINE_COMPETITIONS = {
     longboard: {
-        'Балтийский серф-контест 20250517': 'tvoisurf39/cup',
+        'Балтийский серф-контест': 'tvoisurf39/cup',
     },
     shortboard: {
-        'Балтийский серф-контест 20250517': 'tvoisurf39/cup',
+        'Балтийский серф-контест': 'tvoisurf39/cup',
     }
 };
 
