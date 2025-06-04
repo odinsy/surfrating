@@ -23,7 +23,7 @@ let currentCompetition = 'rfs/rus';
 
 function getYearsRange(data) {
     if (!data.year_rankings) return [];
-    return Object.keys(data.year_rankings).sort((a, b) => b - a);
+    return Object.keys(data.year_rankings).sort((a, b) => a - b);
 }
 
 function showTooltip(id) {
