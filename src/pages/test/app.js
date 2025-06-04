@@ -1,219 +1,235 @@
 const JSON_BASE_PATH = '../../data/rankings/';
 const transliterate = window.slugify;
 
-const app = Vue.createApp({
-    data() {
-        return {
-            currentDiscipline: 'longboard',
-            currentCompetition: 'rfs/rus',
-            currentGender: 'men',
-            currentYear: 'all',
-            years: [],
-            headers: [],
-            tableData: [],
-            competitions: {
-                shortboard: [
-                    { value: 'rfs/rus', label: 'Чемпионат России' },
-                    { value: 'rfs/kaliningrad', label: 'Чемпионат Калининградской области' }
-                ],
-                longboard: [
-                    { value: 'rfs/rus', label: 'Чемпионат России' },
-                    { value: 'rfs/kaliningrad', label: 'Чемпионат Калининградской области' }
-                ],
-                wakesurfing: [
-                    { value: 'rfs/rus', label: 'Чемпионат России' },
-                    { value: 'rfs/federal', label: 'Чемпионат Федеральных округов' }
-                ],
-                wakeskim: [
-                    { value: 'rfs/rus', label: 'Чемпионат России' }
-                ]
-            }
-        };
+const DISCIPLINE_COMPETITIONS = {
+    shortboard: {
+        'Чемпионат России': 'rfs/rus',
+        'Чемпионат Калининградской области': 'rfs/kaliningrad'
     },
-    computed: {
-        currentCategory() {
-            return `${this.currentDiscipline}_${this.currentGender}`;
-        }
+    longboard: {
+        'Чемпионат России': 'rfs/rus',
+        'Чемпионат Калининградской области': 'rfs/kaliningrad'
     },
-    watch: {
-        currentDiscipline() {
-            this.updateTable();
-        },
-        currentCompetition() {
-            this.updateTable();
-        },
-        currentGender() {
-            this.updateTable();
-        },
-        currentYear() {
-            this.updateTable();
-        }
+    wakesurfing: {
+        'Чемпионат России': 'rfs/rus',
     },
-    methods: {
-        async loadData(competition, category, gender) {
-            const path = `${JSON_BASE_PATH}${competition}/${category}/ranking_${gender}.json?t=${Date.now()}`;
-            try {
-                const response = await fetch(path);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return await response.json();
-            } catch (error) {
-                console.error('Error loading data:', error);
-                return { headers: [], rankings: { year_rankings: {}, overall_ranking: [] } };
-            }
-        },
-        getYearsRange(data) {
-            if (!data.rankings?.year_rankings) return [];
-            const years = new Set(Object.keys(data.rankings.year_rankings));
-            return Array.from(years).sort((a, b) => a - b);
-        },
-        prepareTableData(data) {
-            return data.rankings.overall_ranking.map(athlete => {
-                const bestResult = athlete.best_result
-                    ? `${athlete.best_result.place} в ${athlete.best_result.year}`
-                    : 'Нет данных';
-                const [surname = '', formatedFirstName = ''] = athlete.name.split(/\s+/);
-                const firstName = formatedFirstName.replace(/[()]/g, '');
-                const initials = (surname[0] || '') + (firstName[0] || '');
-                const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-                const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
-
-                const yearsData = {};
-                if (this.currentYear === 'all') {
-                    data.rankings.year_rankings && Object.keys(data.rankings.year_rankings).forEach(year => {
-                        const athleteInYear = data.rankings.year_rankings[year].athletes.find(a => a.name === athlete.name);
-                        yearsData[year] = athleteInYear ? {
-                            year_total_points: athleteInYear.year_points,
-                            events: athleteInYear.events
-                        } : { year_total_points: 0, events: [] };
-                    });
-                } else {
-                    const athleteInYear = data.rankings.year_rankings?.[this.currentYear]?.athletes.find(a => a.name === athlete.name);
-                    yearsData[this.currentYear] = athleteInYear ? {
-                        year_total_points: athleteInYear.year_points,
-                        events: athleteInYear.events
-                    } : { year_total_points: 0, events: [] };
-                }
-
-                return {
-                    rank: athlete.rank,
-                    name: athlete.name,
-                    sport_rank: athlete.sport_rank,
-                    birthday: athlete.birthday,
-                    region: athlete.region,
-                    category: athlete.category,
-                    total_points: athlete.total_points || 0,
-                    best_result: bestResult,
-                    initials,
-                    avatarPath,
-                    years: yearsData
-                };
-            });
-        },
-        async updateTable() {
-            const data = await this.loadData(this.currentCompetition, this.currentDiscipline, this.currentGender);
-            // Add 'Best Result' to headers if not present
-            this.headers = data.headers.includes('Best Result')
-                ? data.headers
-                : [...data.headers.filter(h => h !== 'Total Points'), 'Best Result', 'Total Points'];
-            this.years = this.currentYear === 'all' ? this.getYearsRange(data) : [this.currentYear];
-            this.tableData = this.prepareTableData(data);
-        },
-        changeDiscipline(discipline) {
-            this.currentDiscipline = discipline;
-            this.currentCompetition = this.competitions[discipline][0].value;
-        },
-        changeGender(gender) {
-            this.currentGender = gender;
-        },
-        handleImageError(event) {
-            event.target.style.display = 'none';
-            event.target.nextElementSibling.style.display = 'flex';
-        },
-        headerToProp(header) {
-            if (this.isYearHeader(header)) return header;
-            const propMap = {
-                'Rank': 'rank',
-                'Name': 'name',
-                'Sport Rank': 'sport_rank',
-                'Birthday': 'birthday',
-                'Region': 'region',
-                'Category': 'category',
-                'Best Result': 'best_result',
-                'Total Points': 'total_points'
-            };
-            if (!propMap[header]) {
-                console.warn(`No property mapping found for header: ${header}`);
-                return undefined;
-            }
-            return propMap[header];
-        },
-        isYearHeader(header) {
-            return /^\d{4}$/.test(header);
-        },
-        getColumnWidth(header) {
-            if (header === 'Name') return '300';
-            if (header === 'Best Result') return '150';
-            if (header === 'Rank') return '60';
-            if (header === 'Total Points') return '120'; // Increased from 100
-            if (this.isYearHeader(header)) return '80'; // Increased from 100
-            return '120';
-        },
-        getTooltipContent(row) {
-            return `
-                <div class="tooltip-item">
-                    <div class="tooltip-header">
-                        <div class="tooltip-meta">
-                            <div class="tooltip-name">${row.name}</div>
-                            <div class="tooltip-region">${row.region}</div>
-                        </div>
-                        <img src="${row.avatarPath}" class="tooltip-avatar" alt="${row.name}">
-                    </div>
-                    <div class="tooltip-stats">
-                        <div class="tooltip-stat">
-                            <div class="tooltip-value">#${row.rank}</div>
-                            <div class="tooltip-label">Ранк</div>
-                        </div>
-                        <div class="tooltip-stat">
-                            <div class="tooltip-value">${row.sport_rank || '—'}</div>
-                            <div class="tooltip-label">Разряд</div>
-                        </div>
-                        <div class="tooltip-stat">
-                            <div class="tooltip-value">${row.bestResult}</div>
-                            <div class="tooltip-label">Лучший результат</div>
-                        </div>
-                    </div>
-                    <div class="tooltip-social">
-                        <a href="https://topheats.ru" target="_blank">topheats.ru</a>
-                    </div>
-                </div>
-            `;
-        },
-        getYearTooltipContent(row, year) {
-            const yearData = row.years?.[year];
-            const events = yearData?.events || [];
-            if (!events.length) return '';
-            return `
-                <div class="custom-tooltip">
-                    ${events.map(e => `
-                        <div class="tooltip-event">
-                            <div class="event-title">${e.name} ${year}</div>
-                            <div class="event-detail">Место: ${e.place}</div>
-                            <div class="event-detail">Очки: ${e.points}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
-    },
-    mounted() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const initialCategory = urlParams.get('category') || 'longboard_men';
-        const [discipline, gender] = initialCategory.split('_');
-        this.currentDiscipline = discipline;
-        this.currentGender = gender;
-        this.updateTable();
+    wakeskim: {
+        'Чемпионат России': 'rfs/rus'
     }
-});
+};
 
-app.use(ElementPlus);
-app.mount('#app');
+let currentDiscipline = 'shortboard';
+let currentCompetition = 'rfs/rus';
+
+function getYearsRange(data) {
+    if (!data.year_rankings) return [];
+    return Object.keys(data.year_rankings).sort((a, b) => a - b);
+}
+
+function showTooltip(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'block';
+}
+
+function hideTooltip(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'none';
+}
+
+function createAthleteRow(athlete, years, athleteYearData) {
+    const bestResult = athlete.best_result
+        ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
+        : 'Нет данных';
+
+    const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
+    const initials = (surname[0] || '') + (firstName[0] || '');
+    const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
+    const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
+
+    const yearCells = years.map(year => {
+        const yearData = athleteYearData[athlete.name]?.[year];
+        const events = yearData ? yearData.events : [];
+        const yearPoints = yearData ? yearData.year_points : null;
+
+        const tooltipId = `tooltip-${athlete.rank}-${year}`;
+        const tooltipHTML = events.length > 0
+            ? `<div class="custom-tooltip" id="${tooltipId}">
+                ${events.map(e => `
+                    <div class="tooltip-event mb-2">
+                        <div class="event-title">${e.event_name} ${year}</div>
+                        <div class="event-detail">Место: ${e.place}</div>
+                        <div class="event-detail">Очки: ${e.points}</div>
+                    </div>
+                `).join('')}
+               </div>`
+            : '';
+
+        return `
+            <td class="year-points"
+                onmouseenter="showTooltip('${tooltipId}')"
+                onmouseleave="hideTooltip('${tooltipId}')">
+                ${yearPoints !== null ? yearPoints : '—'}
+                ${tooltipHTML}
+            </td>
+        `;
+    }).join('');
+
+    const isTop10 = athlete.rank <= 10;
+    const rowClass = isTop10 ? 'top-10' : '';
+
+    return `
+        <tr class="${rowClass}">
+            <td class="fw-bold">${athlete.rank}</td>
+            <td class="name-cell">
+                <div class="avatar-wrapper">
+                    <div class="athlete-avatar">
+                        <img src="${avatarPath}" alt="${athlete.name}"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="avatar-fallback">${initials}</div>
+                    </div>
+                    <div>
+                        <div class="athlete-name">${athlete.name}</div>
+                        <div class="athlete-region">${athlete.region}</div>
+                    </div>
+                </div>
+            </td>
+            <td class="year-points">${bestResult}</td>
+            ${yearCells}
+            <td class="total-points fw-bold">${athlete.total_points}</td>
+        </tr>
+    `;
+}
+
+async function loadData(competition, category, gender) {
+    const path = `${JSON_BASE_PATH}${competition}/${category}/ranking_${gender}.json?t=${Date.now()}`;
+    try {
+        const response = await fetch(path);
+        const data = await response.json();
+
+        document.getElementById('last-updated').textContent = data.last_updated || '-';
+
+        let athleteYearData = {};
+        if (data.year_rankings) {
+            for (const [year, yearData] of Object.entries(data.year_rankings)) {
+                for (const athlete of yearData.athletes) {
+                    const key = athlete.name;
+                    if (!athleteYearData[key]) {
+                        athleteYearData[key] = {};
+                    }
+                    athleteYearData[key][year] = {
+                        year_points: athlete.year_points,
+                        events: athlete.events
+                    };
+                }
+            }
+        }
+        data.athleteYearData = athleteYearData;
+
+        return data;
+    } catch (error) {
+        console.error('Error loading data:', error);
+        document.getElementById('last-updated').textContent = 'Ошибка загрузки';
+        return { headers: [], athletes: [], overall_ranking: [] };
+    }
+}
+
+async function updateTable(category, gender) {
+    const data = await loadData(currentCompetition, category, gender);
+    const athletes = data.overall_ranking || [];
+    const years = getYearsRange(data);
+
+    if (athletes.length === 0) {
+        document.getElementById('ranking-table-container').innerHTML = '<p class="text-center py-4">Нет данных для отображения</p>';
+        return;
+    }
+
+    const tableHTML = `
+        <table class="table table-custom table-hover align-middle">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Лучший результат</th>
+                    ${years.map(year => `<th scope="col">${year}</th>`).join('')}
+                    <th scope="col">Всего</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData)).join('')}
+            </tbody>
+        </table>
+    `;
+
+    document.getElementById('ranking-table-container').innerHTML = tableHTML;
+}
+
+function updateCompetitionSelect(discipline) {
+    const competitionSelect = document.getElementById('competition-select');
+    competitionSelect.innerHTML = '';
+
+    const competitions = DISCIPLINE_COMPETITIONS[discipline];
+    for (const [name, value] of Object.entries(competitions)) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = name;
+        competitionSelect.appendChild(option);
+    }
+
+    currentCompetition = Object.values(competitions)[0];
+}
+
+function updateSelectedDiscipline(discipline) {
+    document.querySelectorAll('.discipline-option').forEach(option => {
+        option.classList.remove('active');
+    });
+
+    const selectedOption = document.querySelector(`.discipline-option[data-discipline="${discipline}"]`);
+    if (selectedOption) {
+        selectedOption.classList.add('active');
+        document.getElementById('disciplineLabel').textContent = selectedOption.textContent;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category') || 'shortboard_men';
+    const [category, gender] = initialCategory.split('_');
+
+    document.querySelectorAll('.gender-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.gender === gender) {
+            btn.classList.add('active');
+        }
+    });
+
+    updateCompetitionSelect(currentDiscipline);
+    updateSelectedDiscipline(currentDiscipline);
+
+    document.getElementById('competition-select').addEventListener('change', (e) => {
+        currentCompetition = e.target.value;
+        const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
+        updateTable(currentDiscipline, activeGender);
+    });
+
+    document.querySelectorAll('.discipline-option').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const discipline = this.dataset.discipline;
+            currentDiscipline = discipline;
+            updateCompetitionSelect(discipline);
+            const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
+            updateTable(discipline, activeGender);
+            updateSelectedDiscipline(discipline);
+        });
+    });
+
+    document.querySelectorAll('.gender-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            updateTable(currentDiscipline, this.dataset.gender);
+        });
+    });
+
+    updateTable(currentDiscipline, gender);
+});

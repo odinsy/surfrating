@@ -1,309 +1,66 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-}
-
+/* Custom styles */
 body {
-    background: #f5f6f7;
-    padding: 15px;
+    background-color: #f8f9fa;
+    padding-top: 70px;
 }
 
-/* ===== HEADER STRUCTURE ===== */
-.global-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #112D4E;
-    z-index: 1100;
-    padding: 15px 0; /* Увеличенный отступ */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.bg-primary-custom {
+    background-color: #112D4E !important;
 }
 
-.header-logo {
-    height: 60px; /* Увеличенная высота */
-    width: auto;
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.header-brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-controls {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.header-title-block {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.header-title-block h1 {
-    color: white;
-    font-size: 1.5em;
-    margin: 0;
-    white-space: nowrap;
-}
-
-/* Header Navigation */
-.header-nav {
-    display: flex;
-    gap: 35px;
-    margin-left: 40px;
-    flex: 1;
-    align-items: center;
-    position: relative;
-}
-
-.header-nav-link {
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95em;
-    position: relative;
-    padding: 8px 0;
-    transition: all 0.3s;
-}
-
-.header-nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: #fff;
-    transition: width 0.3s;
-}
-
-.header-nav-link:hover {
-    color: white;
-}
-
-.header-nav-link:hover::after,
-.header-nav-link.active::after {
+.table-custom {
+    --bs-table-bg: #fff;
+    --bs-table-striped-bg: #f8f9fa;
+    --bs-table-hover-bg: #e9f0ff;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
-.header-nav-link.active {
+.table-custom td:first-child {
+    text-align: center !important;
+}
+
+.table-custom th {
+    background-color: #112D4E;
     color: white;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 100%;
-    margin-top: 60px;
-    overflow: visible;
-}
-
-.controls {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 0px;
-}
-
-.discipline-select {
-    width: 240px;
-    padding: 10px 15px;
-    border: 2px solid #112D4E;
-    border-radius: 6px;
-    font-size: 1em;
-    transition: all 0.3s;
-}
-
-.gender-switch {
-    display: flex;
-    gap: 8px;
-    background: #fff;
-    border-radius: 6px;
-    padding: 5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    flex-grow: 1;
-}
-
-.gender-btn {
-    flex: 1;
-    padding: 10px 15px;
-    white-space: nowrap;
-}
-
-.gender-btn.active {
-    background: #112D4E;
-    color: white;
-}
-
-.ranking-table {
-    border-collapse: separate;
-    overflow: hidden;
-    width: 100%;
-    background: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    position: relative;
-}
-
-.ranking-table th,
-.ranking-table td {
-    padding: 10px 12px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
     vertical-align: middle;
+    text-align: center;
 }
 
-.ranking-table th:first-child,
-.ranking-table td:first-child {
+.table-custom th:first-child {
     width: 60px;
-    min-width: 60px;
-    padding: 8px 4px !important;
-    color: #3F72AF;
-    font-weight: 800;
-    font-size: 1em;
 }
 
-.ranking-table th {
-    background: #112D4E;
-    color: white;
-    font-weight: 600;
-    height: 48px;
-    padding: 8px 12px !important;
-    text-align: center;
-}
-
-.ranking-table th:nth-child(2) {
-    text-align: left !important;
-    padding-left: 16px !important;
-}
-
-.ranking-table tr:hover {
-    background: #f8f9ff;
-}
-
-.ranking-table tr.top-athlete {
-    background: #f0f4ff;
-}
-
-.ranking-table th:first-child {
-    color: white;
-    font-weight: 600;
-    font-size: 1em;
-}
-
-.ranking-table thead tr th:first-child {
-    border-top-left-radius: 8px;
-}
-
-.ranking-table thead tr th:last-child {
-    border-top-right-radius: 8px;
-}
-
-.ranking-table tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 8px;
-}
-
-.ranking-table tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 8px;
-}
-
-#ranking-table-container .error-message {
-    text-align: center;
-    padding: 40px;
-    color: #666;
-    font-size: 1.2em;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+.table-custom th:nth-child(2) {
+    text-align: left;
 }
 
 .name-cell {
     position: relative;
-    cursor: pointer;
+    cursor: default;
     text-align: left !important;
-    padding: 8px 12px !important;
 }
 
 .athlete-name {
-    font-size: 0.95em;
     font-weight: 600;
-    color: #333;
 }
 
 .athlete-region {
-    font-size: 0.85em;
-    color: #666;
-    margin-top: 4px;
+    font-size: 0.85rem;
+    color: #6c757d;
 }
 
 .year-points {
-    color: #3F72AF;
+    color: #112D4E;
     font-weight: 600;
     position: relative;
-}
-
-.custom-tooltip {
-    display: none;
-    position: absolute;
-    background: #ffffff;
-    color: #112D4E;
-    padding: 8px;
-    border-radius: 6px;
-    min-width: 160px;
-    z-index: 1002;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transform: translateX(-50%);
-    left: 50%;
-    top: calc(100% + 8px);
-    font-size: 0.9em;
-}
-/* Стили для структурированных тултипов */
-.tooltip-event {
-    padding: 4px 0;
-}
-
-.tooltip-event:last-child {
-    border-bottom: none;
-}
-
-.event-title {
-    font-weight: 600;
-    color: #3F72AF;
-    margin-bottom: 2px;
-}
-
-.event-detail {
-    color: #666;
-    font-size: 0.85em;
-}
-
-.best-tooltip[data-tooltip]:hover::after {
-    max-width: 200px;
+    text-align: center;
 }
 
 .total-points {
-    color: #3F72AF;
-    font-weight: 800;
-    font-size: 1.1em;
-    padding-right: 20px !important;
+    color: #112D4E;
+    font-weight: 700;
+    text-align: center;
 }
 
 .avatar-wrapper {
@@ -314,12 +71,12 @@ body {
 
 .athlete-avatar {
     position: relative;
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     flex-shrink: 0;
     overflow: hidden;
-    background: #112D4E;
+    background: #e9ecef;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,366 +97,139 @@ body {
     height: 100%;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #495057;
     font-weight: 600;
     font-size: 0.8em;
 }
 
-.athlete-avatar img[data-error] + .avatar-fallback {
-    display: flex;
-}
-
-.name-cell:hover .tooltip-item {
-    opacity: 1;
-    visibility: visible;
-}
-
-.tooltip-item {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translate(-50%, 100%);
-    background: white;
-    width: 240px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.tooltip-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.tooltip-meta {
-    flex: 1;
-    padding-right: 15px;
-}
-
-.tooltip-name {
-    font-size: 1.4em;
-    font-weight: 700;
-    color: #1a237e;
-    margin-bottom: 4px;
-}
-
-.tooltip-region {
-    font-size: 0.95em;
-    color: #666;
-}
-
-.tooltip-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.tooltip-stats {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 12px 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-.tooltip-stat {
-    flex: 1;
-    text-align: center;
-}
-
-.tooltip-value {
-    font-size: 1.1em;
-    color: #112D4E;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.tooltip-label {
-    font-size: 0.75em;
-    color: #666;
-    opacity: 0.8;
-}
-
-.tooltip-social {
-    text-align: center;
-    padding-top: 12px;
-}
-
-.tooltip-social a {
-    color: #112D4E;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9em;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: opacity 0.3s;
-    position: relative;
-    padding-left: 28px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
+.custom-tooltip {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    padding: 12px;
-    z-index: 1001;
-    min-width: 220px;
-    margin-top: 8px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.dropdown-item {
-    padding: 10px 16px;
-    color: #112D4E;
-    text-decoration: none;
-    font-weight: 500;
+    background: #ffffff;
+    color: #212529;
+    padding: 10px;
     border-radius: 4px;
-    transition: all 0.2s;
-    background: rgba(17,45,78,0.05);
-    text-align: start;
-    white-space: nowrap;
+    max-width: 300px;
+    min-width: 200px;
+    z-index: 1100;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    transform: translateX(-50%);
+    left: 50%;
+    top: calc(100% + 8px);
+    font-size: 0.9rem;
 }
 
-.dropdown-item:hover {
-    background: #3F72AF;
-    color: white;
-    transform: translateX(4px);
+.event-title {
+    font-weight: 600;
+    color: #112D4E;
+    margin-bottom: 3px;
 }
 
-.dropdown-item.active {
-    background: #3F72AF;
+.event-detail {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.btn-outline-primary {
+    color: #3F72AF;
+    border-color: #3F72AF;
+}
+
+.btn-outline-primary.active {
+    background-color: #112D4E;
+    border-color: #112D4E;
     color: white;
-    transform: translateX(4px);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #112D4E;
+    color: white;
+}
+
+tr.top-10 {
+    background-color: #DBE2EF !important;
+}
+
+tr.top-10:hover {
+    background-color: #cbd5e8 !important;
+}
+
+/* Центрирование ранга */
+.table-custom td:first-child {
+    text-align: center !important;
+}
+
+/* Выделение топ-10 мест */
+.table-custom > tbody > tr.top-10 {
+    background-color: #DBE2EF !important;
+}
+
+/* Стили для кнопок гендера */
+.btn-outline-primary {
+    color: #3F72AF;
+    border-color: #3F72AF;
+}
+
+.btn-outline-primary:hover:not(.active) {
+    background-color: #DBE2EF;
+    color: #112D4E;
+    border-color: #3F72AF;
+}
+
+.btn-outline-primary.active {
+    background-color: #112D4E;
+    border-color: #112D4E;
+    color: white;
+}
+
+/* Стили для селектора соревнований */
+.form-select:hover {
+    border-color: #3F72AF;
+}
+
+.form-select:focus {
+    border-color: #3F72AF;
+    box-shadow: 0 0 0 0.25rem rgba(63, 114, 175, 0.25);
+}
+
+/* Стили для выбранного элемента в селекторе */
+.form-select option:checked {
+    background-color: #DBE2EF;
+    color: #112D4E;
+    font-weight: bold;
+}
+
+/* Стили для пунктов в выпадающем списке при наведении */
+.form-select option:hover {
+    background-color: #DBE2EF !important;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+#last-updated {
+    background-color: #e9ecef;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #112D4E;
 }
 
 @media (max-width: 768px) {
-    .header-content {
+    .footer .container > div {
         flex-direction: column;
-        gap: 15px;
-        padding: 10px;
-    }
-
-    .header-title-block {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .header-title-block h1 {
         text-align: center;
+        gap: 10px;
     }
 
-    .header-content {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .header-nav {
-        order: 2;
-        width: 100%;
-        justify-content: center;
-        margin: 0;
-        gap: 15px;
-        background: rgba(255,255,255,0.1);
-        padding: 8px 15px;
-        border-radius: 6px;
-    }
-
-    .header-nav-link {
-        font-size: 0.9em;
-    }
-
-    .container {
-        margin-top: 120px;
-    }
-
-    .controls {
-        position: sticky;
-        left: 15px;
-        top: 15px;
-        z-index: 1001;
-        background: #f5f6f7;
-        padding: 10px 0;
-        margin-bottom: 15px;
-    }
-
-    .discipline-select {
-        width: 100% !important;
-    }
-
-    .discipline-select,
-    .gender-switch {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .gender-btn {
-        padding: 12px 10px;
-        font-size: 0.9em;
-    }
-
-    .ranking-table {
-        min-width: 500px;
-    }
-
-    .ranking-table th:nth-child(2) {
-        padding-left: 12px !important;
-    }
-
-    .ranking-table th,
-    .ranking-table td {
-        padding: 8px 10px;
-    }
-
-    .ranking-table th:nth-child(3),
-    .ranking-table td:nth-child(3) {
-        display: none;
-    }
-
-    .ranking-table th:first-child,
-    .ranking-table td:first-child {
-        min-width: 40px;
-        padding: 6px 2px !important;
-    }
-
-    .athlete-avatar {
-        width: 28px;
-        height: 28px;
-    }
-
-    .avatar-fallback {
-        font-size: 0.7em;
-    }
-
-    .name-cell {
-        cursor: default;
-    }
-
-    .custom-tooltip {
-        display: none !important;
-    }
-
-    .tooltip-item {
-        display: none !important;
-    }
-
-    .tooltip-avatar {
-        display: none;
-    }
-
-    .tooltip-header {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .tooltip-name {
-        font-size: 1.1em;
-    }
-
-    .tooltip-stats {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .tooltip-stat {
-        text-align: left;
-        justify-content: space-between;
-    }
-
-    .dropdown-menu {
-        position: static;
-        display: flex !important;
-        flex-direction: column;
-        box-shadow: none;
-        background: transparent;
-        padding: 8px 0;
-    }
-
-    .dropdown-item {
-        background: rgba(255,255,255,0.15);
-        color: white;
-        margin-bottom: 5px;
-    }
-
-    .dropdown-item.active {
-        background: rgba(255,255,255,0.3);
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: none !important;
-    }
-
-    #ranking-table-container .error-message {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        margin-top: 140px; /* Адаптация для мобильных */
-    }
-}
-
-@media (max-width: 480px) {
-    .header-title-block h1 {
-        font-size: 1.2em;
-    }
-
-    .header-logo {
-        height: 30px;
-    }
-
-    .header-nav {
-        gap: 12px;
-        padding: 6px 10px;
-    }
-
-    .header-nav-link {
-        font-size: 0.85em;
-    }
-
-    .container {
-        margin-top: 160px; /* Адаптация для маленьких экранов */
-    }
-
-    .tooltip-item {
-        display: none !important;
-    }
-
-    .tooltip-name {
-        font-size: 1em;
-    }
-
-    .dropdown-item {
-        font-size: 0.85em;
-        padding: 8px 12px;
+    #last-updated {
+        display: block;
+        margin-top: 5px;
     }
 }

@@ -3,7 +3,7 @@
     "Rank",
     "Name",
     "Sport Rank",
-    "Birthday",
+    "Birth Year",
     "Region",
     "Category",
     "2023",
@@ -14,14 +14,14 @@
     {
       "name": "Матвеева Анна",
       "rank": 1,
-      "birthday": 1985,
+      "birth_year": 1985,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "КМС",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 1,
         "points": 10000
       },
@@ -30,7 +30,7 @@
           "year_total_points": 7800,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 2,
               "points": 7800,
               "group": "main",
@@ -42,7 +42,7 @@
           "year_total_points": 10000,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 1,
               "points": 10000,
               "group": "main",
@@ -56,14 +56,14 @@
     {
       "name": "Тихонова Анна",
       "rank": 2,
-      "birthday": 1997,
+      "birth_year": 1997,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "КМС",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 1,
         "points": 10000
       },
@@ -72,7 +72,7 @@
           "year_total_points": 10000,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 1,
               "points": 10000,
               "group": "main",
@@ -84,7 +84,7 @@
           "year_total_points": 7800,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 2,
               "points": 7800,
               "group": "main",
@@ -98,14 +98,14 @@
     {
       "name": "Бланк Мария",
       "rank": 3,
-      "birthday": 1992,
+      "birth_year": 1992,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 3,
         "points": 6085
       },
@@ -114,7 +114,7 @@
           "year_total_points": 6085,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 3,
               "points": 6085,
               "group": "main",
@@ -126,7 +126,7 @@
           "year_total_points": 6085,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 3,
               "points": 6085,
               "group": "main",
@@ -140,14 +140,14 @@
     {
       "name": "Данькова Елизавета",
       "rank": 4,
-      "birthday": 2000,
+      "birth_year": 2000,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 4,
         "points": 5685
       },
@@ -156,7 +156,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -168,7 +168,7 @@
           "year_total_points": 5685,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 4,
               "points": 5685,
               "group": "main",
@@ -182,14 +182,14 @@
     {
       "name": "Герасимова Екатерина",
       "rank": 5,
-      "birthday": 1986,
+      "birth_year": 1986,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 5,
         "points": 4745
       },
@@ -198,7 +198,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -210,7 +210,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 6,
               "points": 4745,
               "group": "main",
@@ -224,14 +224,14 @@
     {
       "name": "Климова Наталья",
       "rank": 6,
-      "birthday": 0,
+      "birth_year": 0,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "без разряда",
       "last_year": 2023,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 4,
         "points": 5685
       },
@@ -240,7 +240,7 @@
           "year_total_points": 5685,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 4,
               "points": 5685,
               "group": "main",
@@ -254,14 +254,14 @@
     {
       "name": "Романовская Ева",
       "rank": 7,
-      "birthday": 2007,
+      "birth_year": 2007,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 5,
         "points": 4745
       },
@@ -270,7 +270,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -284,14 +284,14 @@
     {
       "name": "Климова Мария",
       "rank": 8,
-      "birthday": 0,
+      "birth_year": 0,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "3",
       "last_year": 2023,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 5,
         "points": 4745
       },
@@ -300,7 +300,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -314,14 +314,14 @@
     {
       "name": "Бороденкова Екатерина",
       "rank": 9,
-      "birthday": 0,
+      "birth_year": 0,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "без разряда",
       "last_year": 2023,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 5,
         "points": 4745
       },
@@ -330,7 +330,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -344,14 +344,14 @@
     {
       "name": "Иванова Екатерина",
       "rank": 10,
-      "birthday": 1992,
+      "birth_year": 1992,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 7,
         "points": 4745
       },
@@ -360,7 +360,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 7,
               "points": 4745,
               "group": "main",
@@ -374,14 +374,14 @@
     {
       "name": "Матвеева Мария",
       "rank": 11,
-      "birthday": 1982,
+      "birth_year": 1982,
       "region": "Калининградская область",
       "category": "женщины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 8,
         "points": 4745
       },
@@ -390,7 +390,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 8,
               "points": 4745,
               "group": "main",

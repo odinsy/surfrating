@@ -3,7 +3,7 @@
     "Rank",
     "Name",
     "Sport Rank",
-    "Birthday",
+    "Birth Year",
     "Region",
     "Category",
     "2023",
@@ -14,14 +14,14 @@
     {
       "name": "Кортелев Федор",
       "rank": 1,
-      "birthday": 1992,
+      "birth_year": 1992,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "2",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 2,
         "points": 7800
       },
@@ -30,7 +30,7 @@
           "year_total_points": 7800,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 2,
               "points": 7800,
               "group": "main",
@@ -42,7 +42,7 @@
           "year_total_points": 3320,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 10,
               "points": 3320,
               "group": "main",
@@ -56,14 +56,14 @@
     {
       "name": "Шушаков Роман",
       "rank": 2,
-      "birthday": 1995,
+      "birth_year": 1995,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "2",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 3,
         "points": 6085
       },
@@ -72,7 +72,7 @@
           "year_total_points": 6085,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 3,
               "points": 6085,
               "group": "main",
@@ -84,7 +84,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 8,
               "points": 4745,
               "group": "main",
@@ -98,14 +98,14 @@
     {
       "name": "Михайлов Алексей",
       "rank": 3,
-      "birthday": 1997,
+      "birth_year": 1997,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 4,
         "points": 5685
       },
@@ -114,7 +114,7 @@
           "year_total_points": 5685,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 4,
               "points": 5685,
               "group": "main",
@@ -126,7 +126,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -140,14 +140,14 @@
     {
       "name": "Синица Петр",
       "rank": 4,
-      "birthday": 1985,
+      "birth_year": 1985,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "2",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 1,
         "points": 10000
       },
@@ -156,7 +156,7 @@
           "year_total_points": 10000,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 1,
               "points": 10000,
               "group": "main",
@@ -170,14 +170,14 @@
     {
       "name": "Коптелов Петр",
       "rank": 5,
-      "birthday": 0,
+      "birth_year": 0,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "2",
       "last_year": 2023,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 1,
         "points": 10000
       },
@@ -186,7 +186,7 @@
           "year_total_points": 10000,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 1,
               "points": 10000,
               "group": "main",
@@ -200,14 +200,14 @@
     {
       "name": "Истомин Максим",
       "rank": 6,
-      "birthday": 1995,
+      "birth_year": 1995,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 5,
         "points": 4745
       },
@@ -216,7 +216,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -228,7 +228,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 6,
               "points": 4745,
               "group": "main",
@@ -242,14 +242,14 @@
     {
       "name": "Богдалов Данил",
       "rank": 7,
-      "birthday": 2001,
+      "birth_year": 2001,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 5,
         "points": 4745
       },
@@ -258,7 +258,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -270,7 +270,7 @@
           "year_total_points": 3320,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 9,
               "points": 3320,
               "group": "main",
@@ -284,14 +284,14 @@
     {
       "name": "Исаков Евгений",
       "rank": 8,
-      "birthday": 1983,
+      "birth_year": 1983,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "МС",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 2,
         "points": 7800
       },
@@ -300,7 +300,7 @@
           "year_total_points": 7800,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 2,
               "points": 7800,
               "group": "main",
@@ -314,14 +314,14 @@
     {
       "name": "Малыхин Виктор",
       "rank": 9,
-      "birthday": 1985,
+      "birth_year": 1985,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 5,
         "points": 4745
       },
@@ -330,7 +330,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -342,7 +342,7 @@
           "year_total_points": 1900,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 18,
               "points": 1900,
               "group": "main",
@@ -356,14 +356,14 @@
     {
       "name": "Багдасарян Максим",
       "rank": 10,
-      "birthday": 2008,
+      "birth_year": 2008,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 3,
         "points": 6085
       },
@@ -372,7 +372,7 @@
           "year_total_points": 6085,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 3,
               "points": 6085,
               "group": "main",
@@ -386,14 +386,14 @@
     {
       "name": "Перерва Вадим",
       "rank": 11,
-      "birthday": 1985,
+      "birth_year": 1985,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 4,
         "points": 5685
       },
@@ -402,7 +402,7 @@
           "year_total_points": 5685,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 4,
               "points": 5685,
               "group": "main",
@@ -416,14 +416,14 @@
     {
       "name": "Драпеза Олег",
       "rank": 12,
-      "birthday": 0,
+      "birth_year": 0,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2023,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2023",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2023",
         "place": 5,
         "points": 4745
       },
@@ -432,7 +432,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 5,
               "points": 4745,
               "group": "main",
@@ -446,14 +446,14 @@
     {
       "name": "Тихонов Андрей",
       "rank": 13,
-      "birthday": 1981,
+      "birth_year": 1981,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 7,
         "points": 4745
       },
@@ -462,7 +462,7 @@
           "year_total_points": 4745,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 7,
               "points": 4745,
               "group": "main",
@@ -476,14 +476,14 @@
     {
       "name": "Половиченко Илья",
       "rank": 14,
-      "birthday": 1984,
+      "birth_year": 1984,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 11,
         "points": 3320
       },
@@ -492,7 +492,7 @@
           "year_total_points": 3320,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 11,
               "points": 3320,
               "group": "main",
@@ -506,14 +506,14 @@
     {
       "name": "Андреев Александр",
       "rank": 15,
-      "birthday": 1982,
+      "birth_year": 1982,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 12,
         "points": 3320
       },
@@ -522,7 +522,7 @@
           "year_total_points": 3320,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 12,
               "points": 3320,
               "group": "main",
@@ -536,14 +536,14 @@
     {
       "name": "Реут Алексей",
       "rank": 16,
-      "birthday": 1989,
+      "birth_year": 1989,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 13,
         "points": 3320
       },
@@ -552,7 +552,7 @@
           "year_total_points": 3320,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 13,
               "points": 3320,
               "group": "main",
@@ -566,14 +566,14 @@
     {
       "name": "Блискунов Дмитрий",
       "rank": 17,
-      "birthday": 1990,
+      "birth_year": 1990,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 14,
         "points": 3320
       },
@@ -582,7 +582,7 @@
           "year_total_points": 3320,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 14,
               "points": 3320,
               "group": "main",
@@ -596,14 +596,14 @@
     {
       "name": "Дмитриев Илья",
       "rank": 18,
-      "birthday": 1988,
+      "birth_year": 1988,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 15,
         "points": 3320
       },
@@ -612,7 +612,7 @@
           "year_total_points": 3320,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 15,
               "points": 3320,
               "group": "main",
@@ -626,14 +626,14 @@
     {
       "name": "Корниенков Кирилл",
       "rank": 19,
-      "birthday": 1991,
+      "birth_year": 1991,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 16,
         "points": 3320
       },
@@ -642,7 +642,7 @@
           "year_total_points": 3320,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 16,
               "points": 3320,
               "group": "main",
@@ -656,14 +656,14 @@
     {
       "name": "Котов Денис",
       "rank": 20,
-      "birthday": 1987,
+      "birth_year": 1987,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 17,
         "points": 1900
       },
@@ -672,7 +672,7 @@
           "year_total_points": 1900,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 17,
               "points": 1900,
               "group": "main",
@@ -686,14 +686,14 @@
     {
       "name": "Орешкин Михаил",
       "rank": 21,
-      "birthday": 1998,
+      "birth_year": 1998,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": 19,
         "points": 1900
       },
@@ -702,7 +702,7 @@
           "year_total_points": 1900,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": 19,
               "points": 1900,
               "group": "main",
@@ -716,14 +716,14 @@
     {
       "name": "Чистяков Максим",
       "rank": 22,
-      "birthday": 1989,
+      "birth_year": 1989,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": "DNS",
         "points": 0
       },
@@ -732,7 +732,7 @@
           "year_total_points": 0,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": "DNS",
               "points": 0,
               "group": "main",
@@ -746,14 +746,14 @@
     {
       "name": "Воронков Александр",
       "rank": 23,
-      "birthday": 1986,
+      "birth_year": 1986,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": "DNS",
         "points": 0
       },
@@ -762,7 +762,7 @@
           "year_total_points": 0,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": "DNS",
               "points": 0,
               "group": "main",
@@ -776,14 +776,14 @@
     {
       "name": "Свинторжицкий Дмитрий",
       "rank": 24,
-      "birthday": 1990,
+      "birth_year": 1990,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "без разряда",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": "DNS",
         "points": 0
       },
@@ -792,7 +792,7 @@
           "year_total_points": 0,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": "DNS",
               "points": 0,
               "group": "main",
@@ -806,14 +806,14 @@
     {
       "name": "Болдырев Артем",
       "rank": 25,
-      "birthday": 1981,
+      "birth_year": 1981,
       "region": "Калининградская область",
       "category": "мужчины",
       "sport_rank": "3",
       "last_year": 2024,
       "best_result": {
-        "event": "Чемпионат Калининградской области",
-        "year": "2024",
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
         "place": "DNS",
         "points": 0
       },
@@ -822,7 +822,7 @@
           "year_total_points": 0,
           "events": [
             {
-              "name": "Чемпионат Калининградской области",
+              "event_name": "Чемпионат Калининградской области",
               "place": "DNS",
               "points": 0,
               "group": "main",
