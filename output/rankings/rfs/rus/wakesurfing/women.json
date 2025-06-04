@@ -12,8 +12,57 @@
   ],
   "athletes": [
     {
-      "name": "Романова Анастасия",
+      "name": "Туненко Александра",
       "rank": 1,
+      "birth_year": 1989,
+      "region": "Москва",
+      "category": "женщины",
+      "sport_rank": "МС",
+      "last_year": 2024,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2022",
+        "place": 1,
+        "points": 10000
+      },
+      "years": {
+        "2024": {
+          "year_total_points": 13885,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 18
+            },
+            {
+              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 6
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 21
+            }
+          ]
+        }
+      },
+      "total_points": 23885
+    },
+    {
+      "name": "Романова Анастасия",
+      "rank": 2,
       "birth_year": 1996,
       "region": "Москва",
       "category": "женщины",
@@ -59,48 +108,6 @@
         }
       },
       "total_points": 22545
-    },
-    {
-      "name": "Туценко Александра",
-      "rank": 2,
-      "birth_year": 1989,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "МС",
-      "last_year": 2024,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2022",
-        "place": 1,
-        "points": 10000
-      },
-      "years": {
-        "2024": {
-          "year_total_points": 6085,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 18
-            }
-          ]
-        },
-        "2022": {
-          "year_total_points": 10000,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 21
-            }
-          ]
-        }
-      },
-      "total_points": 16085
     },
     {
       "name": "Белова Светлана",
@@ -387,38 +394,8 @@
       "total_points": 8065
     },
     {
-      "name": "Тупенко Александра",
-      "rank": 10,
-      "birth_year": 1989,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "МС",
-      "last_year": 2024,
-      "best_result": {
-        "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
-        "event_year": "2024",
-        "place": 2,
-        "points": 7800
-      },
-      "years": {
-        "2024": {
-          "year_total_points": 7800,
-          "events": [
-            {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
-              "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 6
-            }
-          ]
-        }
-      },
-      "total_points": 7800
-    },
-    {
       "name": "Рыбак Елизавета",
-      "rank": 11,
+      "rank": 10,
       "birth_year": 1996,
       "region": "Москва",
       "category": "женщины",
@@ -448,7 +425,7 @@
     },
     {
       "name": "Нестерова Ольга",
-      "rank": 12,
+      "rank": 11,
       "birth_year": 1982,
       "region": "Самарская область",
       "category": "женщины",
@@ -490,7 +467,7 @@
     },
     {
       "name": "Горбунова Анна",
-      "rank": 13,
+      "rank": 12,
       "birth_year": 1986,
       "region": "Самарская область",
       "category": "женщины",
@@ -532,7 +509,7 @@
     },
     {
       "name": "Фурсова Татьяна",
-      "rank": 14,
+      "rank": 13,
       "birth_year": 1980,
       "region": "Самарская область",
       "category": "женщины",
@@ -574,7 +551,7 @@
     },
     {
       "name": "Лапина Алина",
-      "rank": 15,
+      "rank": 14,
       "birth_year": 1988,
       "region": "Москва",
       "category": "женщины",
@@ -604,7 +581,7 @@
     },
     {
       "name": "Терехова Анастасия",
-      "rank": 16,
+      "rank": 15,
       "birth_year": 1986,
       "region": "Москва",
       "category": "женщины",
@@ -634,7 +611,7 @@
     },
     {
       "name": "Васильева Ольга",
-      "rank": 17,
+      "rank": 16,
       "birth_year": 1978,
       "region": "Московская область",
       "category": "женщины",
@@ -664,7 +641,7 @@
     },
     {
       "name": "Скрипка Екатерина",
-      "rank": 18,
+      "rank": 17,
       "birth_year": 1994,
       "region": "Московская область",
       "category": "женщины",
@@ -694,7 +671,7 @@
     },
     {
       "name": "Погина Надежда",
-      "rank": 19,
+      "rank": 18,
       "birth_year": 1986,
       "region": "Московская область",
       "category": "женщины",
@@ -724,7 +701,7 @@
     },
     {
       "name": "Бондаренко Елена",
-      "rank": 20,
+      "rank": 19,
       "birth_year": 1985,
       "region": "Санкт-Петербург",
       "category": "женщины",
@@ -754,7 +731,7 @@
     },
     {
       "name": "Юхина Марина",
-      "rank": 21,
+      "rank": 20,
       "birth_year": 1992,
       "region": "Московская область",
       "category": "женщины",
@@ -784,7 +761,7 @@
     },
     {
       "name": "Ханецкая Анна",
-      "rank": 22,
+      "rank": 21,
       "birth_year": 1999,
       "region": "Московская область",
       "category": "женщины",
@@ -814,7 +791,7 @@
     },
     {
       "name": "Бланкет Мария",
-      "rank": 23,
+      "rank": 22,
       "birth_year": 2009,
       "region": "Московская область",
       "category": "женщины",
@@ -844,7 +821,7 @@
     },
     {
       "name": "Потапова Екатерина",
-      "rank": 24,
+      "rank": 23,
       "birth_year": 1993,
       "region": "Санкт-Петербург",
       "category": "женщины",
@@ -874,7 +851,7 @@
     },
     {
       "name": "Деревянова Юлия",
-      "rank": 25,
+      "rank": 24,
       "birth_year": 1988,
       "region": "Самарская область",
       "category": "женщины",
@@ -904,7 +881,7 @@
     },
     {
       "name": "Кравец Олеся",
-      "rank": 26,
+      "rank": 25,
       "birth_year": 1995,
       "region": "Самарская область",
       "category": "женщины",
@@ -934,7 +911,7 @@
     },
     {
       "name": "Епанешникова Алена",
-      "rank": 27,
+      "rank": 26,
       "birth_year": 1991,
       "region": "Москва",
       "category": "женщины",
@@ -964,7 +941,7 @@
     },
     {
       "name": "Насакина Надежда",
-      "rank": 28,
+      "rank": 27,
       "birth_year": 1983,
       "region": "Самарская область",
       "category": "женщины",
@@ -994,7 +971,7 @@
     },
     {
       "name": "Шадрина Кира",
-      "rank": 29,
+      "rank": 28,
       "birth_year": 1999,
       "region": "Московская область",
       "category": "женщины",
@@ -1024,7 +1001,7 @@
     },
     {
       "name": "Шаль Анна",
-      "rank": 30,
+      "rank": 29,
       "birth_year": 1993,
       "region": "Самарская область",
       "category": "женщины",
@@ -1054,7 +1031,7 @@
     },
     {
       "name": "Бланкет Надежда",
-      "rank": 31,
+      "rank": 30,
       "birth_year": 1983,
       "region": "Московская область",
       "category": "женщины",
@@ -1084,7 +1061,7 @@
     },
     {
       "name": "Гладенькова Елена",
-      "rank": 32,
+      "rank": 31,
       "birth_year": 1988,
       "region": "Самарская область",
       "category": "женщины",

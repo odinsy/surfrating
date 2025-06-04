@@ -31,6 +31,31 @@
           "rank": 1
         },
         {
+          "name": "Туненко Александра",
+          "region": "Москва",
+          "sport_rank": "МС",
+          "birth_year": 1989,
+          "year_points": 13885,
+          "total_points": 23885,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 18
+            },
+            {
+              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 6
+            }
+          ],
+          "rank": 2
+        },
+        {
           "name": "Белицкая Людмила",
           "region": "Москва",
           "sport_rank": "КМС",
@@ -53,7 +78,7 @@
               "participants_count": 6
             }
           ],
-          "rank": 2
+          "rank": 3
         },
         {
           "name": "Белова Светлана",
@@ -76,24 +101,6 @@
               "points": 5685,
               "group": "main",
               "participants_count": 6
-            }
-          ],
-          "rank": 3
-        },
-        {
-          "name": "Туценко Александра",
-          "region": "Москва",
-          "sport_rank": "МС",
-          "birth_year": 1989,
-          "year_points": 6085,
-          "total_points": 16085,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 18
             }
           ],
           "rank": 4
@@ -121,12 +128,12 @@
     "2022": {
       "athletes": [
         {
-          "name": "Туценко Александра",
+          "name": "Туненко Александра",
           "region": "Москва",
           "sport_rank": "МС",
           "birth_year": 1989,
           "year_points": 10000,
-          "total_points": 16085,
+          "total_points": 23885,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -198,14 +205,14 @@
   "overall_ranking": [
     {
       "rank": 1,
-      "name": "Романова Анастасия",
+      "name": "Туненко Александра",
       "region": "Москва",
-      "sport_rank": "КМС",
-      "birth_year": 1996,
-      "total_points": 22545,
+      "sport_rank": "МС",
+      "birth_year": 1989,
+      "total_points": 23885,
       "best_result": {
-        "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
-        "event_year": "2024",
+        "event_name": "Чемпионат России",
+        "event_year": "2022",
         "place": 1,
         "points": 10000
       },
@@ -217,14 +224,14 @@
     },
     {
       "rank": 2,
-      "name": "Туценко Александра",
+      "name": "Романова Анастасия",
       "region": "Москва",
-      "sport_rank": "МС",
-      "birth_year": 1989,
-      "total_points": 16085,
+      "sport_rank": "КМС",
+      "birth_year": 1996,
+      "total_points": 22545,
       "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2022",
+        "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+        "event_year": "2024",
         "place": 1,
         "points": 10000
       },
