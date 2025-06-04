@@ -22,12 +22,8 @@ let currentDiscipline = 'shortboard';
 let currentCompetition = 'rfs/rus';
 
 function getYearsRange(data) {
-    if (!data.athletes) return [];
-    const years = new Set();
-    data.athletes.forEach(athlete => {
-        if (athlete.years) Object.keys(athlete.years).forEach(year => years.add(year));
-    });
-    return Array.from(years).sort((a, b) => a - b);
+    if (!data.year_rankings) return [];
+    return Object.keys(data.year_rankings).sort((a, b) => b - a);
 }
 
 function showTooltip(id) {
@@ -40,9 +36,9 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
-function createAthleteRow(athlete, years) {
+function createAthleteRow(athlete, years, athleteYearData) {
     const bestResult = athlete.best_result
-        ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
+        ? `${athlete.best_result.place} (${athlete.best_result.points}) в ${athlete.best_result.event_year}`
         : 'Нет данных';
 
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
@@ -51,11 +47,12 @@ function createAthleteRow(athlete, years) {
     const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
 
     const yearCells = years.map(year => {
-        const yearData = athlete.years?.[year];
-        const events = yearData?.events || [];
-        const tooltipId = `tooltip-${athlete.rank}-${year}`;
+        const yearData = athleteYearData[athlete.name]?.[year];
+        const events = yearData ? yearData.events : [];
+        const yearPoints = yearData ? yearData.year_points : null;
 
-        const tooltipHTML = events.length
+        const tooltipId = `tooltip-${athlete.rank}-${year}`;
+        const tooltipHTML = events.length > 0
             ? `<div class="custom-tooltip" id="${tooltipId}">
                 ${events.map(e => `
                     <div class="tooltip-event mb-2">
@@ -71,7 +68,7 @@ function createAthleteRow(athlete, years) {
             <td class="year-points"
                 onmouseenter="showTooltip('${tooltipId}')"
                 onmouseleave="hideTooltip('${tooltipId}')">
-                ${yearData?.year_total_points || '—'}
+                ${yearPoints !== null ? yearPoints : '—'}
                 ${tooltipHTML}
             </td>
         `;
@@ -104,25 +101,45 @@ function createAthleteRow(athlete, years) {
 }
 
 async function loadData(competition, category, gender) {
-    const path = `${JSON_BASE_PATH}${competition}/${category}/${gender}.json?t=${Date.now()}`;
+    const path = `${JSON_BASE_PATH}${competition}/${category}/ranking_${gender}.json?t=${Date.now()}`;
     try {
         const response = await fetch(path);
-        return await response.json();
+        const data = await response.json();
+
+        let athleteYearData = {};
+        if (data.year_rankings) {
+            for (const [year, yearData] of Object.entries(data.year_rankings)) {
+                for (const athlete of yearData.athletes) {
+                    const key = athlete.name;
+                    if (!athleteYearData[key]) {
+                        athleteYearData[key] = {};
+                    }
+                    athleteYearData[key][year] = {
+                        year_points: athlete.year_points,
+                        events: athlete.events
+                    };
+                }
+            }
+        }
+        data.athleteYearData = athleteYearData;
+
+        return data;
     } catch (error) {
         console.error('Error loading data:', error);
-        return { headers: [], athletes: [] };
+        return { headers: [], athletes: [], overall_ranking: [] };
     }
 }
 
 async function updateTable(category, gender) {
     const data = await loadData(currentCompetition, category, gender);
+    const athletes = data.overall_ranking || [];
+    const years = getYearsRange(data);
 
-    if (!data || !data.athletes) {
+    if (athletes.length === 0) {
         document.getElementById('ranking-table-container').innerHTML = '<p class="text-center py-4">Нет данных для отображения</p>';
         return;
     }
 
-    const years = getYearsRange(data);
     const tableHTML = `
         <table class="table table-custom table-hover align-middle">
             <thead>
@@ -135,7 +152,7 @@ async function updateTable(category, gender) {
                 </tr>
             </thead>
             <tbody>
-                ${data.athletes.map(a => createAthleteRow(a, years)).join('')}
+                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData)).join('')}
             </tbody>
         </table>
     `;
