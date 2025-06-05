@@ -11,7 +11,7 @@
           "sport_rank": "КМС",
           "birth_year": 1986,
           "year_points": 10000,
-          "total_points": 26115,
+          "total_points": 31800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -29,7 +29,7 @@
           "sport_rank": "1",
           "birth_year": 1990,
           "year_points": 7800,
-          "total_points": 17800,
+          "total_points": 27800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -65,7 +65,7 @@
           "sport_rank": "КМС",
           "birth_year": 1984,
           "year_points": 4745,
-          "total_points": 21660,
+          "total_points": 27745,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -155,7 +155,7 @@
           "sport_rank": "КМС",
           "birth_year": 1984,
           "year_points": 10830,
-          "total_points": 21660,
+          "total_points": 27745,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -180,7 +180,7 @@
           "sport_rank": "КМС",
           "birth_year": 1986,
           "year_points": 10430,
-          "total_points": 26115,
+          "total_points": 31800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -201,6 +201,64 @@
         }
       ]
     },
+    "2019": {
+      "athletes": [
+        {
+          "name": "Наумова Ксения",
+          "region": "Московская область",
+          "sport_rank": "1",
+          "birth_year": 1990,
+          "year_points": 10000,
+          "total_points": 27800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 6
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "name": "Белякова Алена",
+          "region": "Самара",
+          "sport_rank": "КМС",
+          "birth_year": 1984,
+          "year_points": 6085,
+          "total_points": 27745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 6
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "name": "Федорова Анастасия",
+          "region": "Москва",
+          "sport_rank": "КМС",
+          "birth_year": 1986,
+          "year_points": 5685,
+          "total_points": 31800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 6
+            }
+          ],
+          "rank": 3
+        }
+      ]
+    },
     "2021": {
       "athletes": [
         {
@@ -209,7 +267,7 @@
           "sport_rank": "1",
           "birth_year": 1990,
           "year_points": 10000,
-          "total_points": 17800,
+          "total_points": 27800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -227,7 +285,7 @@
           "sport_rank": "КМС",
           "birth_year": 1984,
           "year_points": 6085,
-          "total_points": 21660,
+          "total_points": 27745,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -245,7 +303,7 @@
           "sport_rank": "КМС",
           "birth_year": 1986,
           "year_points": 5685,
-          "total_points": 26115,
+          "total_points": 31800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -285,7 +343,7 @@
       "region": "Москва",
       "sport_rank": "КМС",
       "birth_year": 1986,
-      "total_points": 26115,
+      "total_points": 31800,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2022",
@@ -296,11 +354,53 @@
       "years_participated": [
         2022,
         2024,
+        2019,
         2021
       ]
     },
     {
       "rank": 2,
+      "name": "Наумова Ксения",
+      "region": "Московская область",
+      "sport_rank": "1",
+      "birth_year": 1990,
+      "total_points": 27800,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 1,
+        "points": 10000
+      },
+      "last_year": 2022,
+      "years_participated": [
+        2022,
+        2019,
+        2021
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Белякова Алена",
+      "region": "Самара",
+      "sport_rank": "КМС",
+      "birth_year": 1984,
+      "total_points": 27745,
+      "best_result": {
+        "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+        "event_year": "2024",
+        "place": 3,
+        "points": 6085
+      },
+      "last_year": 2024,
+      "years_participated": [
+        2022,
+        2024,
+        2019,
+        2021
+      ]
+    },
+    {
+      "rank": 4,
       "name": "Смирнова Юлия",
       "region": "Москва",
       "sport_rank": "КМС",
@@ -320,27 +420,7 @@
       ]
     },
     {
-      "rank": 3,
-      "name": "Белякова Алена",
-      "region": "Самара",
-      "sport_rank": "КМС",
-      "birth_year": 1984,
-      "total_points": 21660,
-      "best_result": {
-        "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
-        "event_year": "2024",
-        "place": 3,
-        "points": 6085
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2022,
-        2024,
-        2021
-      ]
-    },
-    {
-      "rank": 4,
+      "rank": 5,
       "name": "Попова Екатерина",
       "region": "Москва",
       "sport_rank": "1",
@@ -356,25 +436,6 @@
       "years_participated": [
         2022,
         2024
-      ]
-    },
-    {
-      "rank": 5,
-      "name": "Наумова Ксения",
-      "region": "Московская область",
-      "sport_rank": "1",
-      "birth_year": 1990,
-      "total_points": 17800,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2021",
-        "place": 1,
-        "points": 10000
-      },
-      "last_year": 2022,
-      "years_participated": [
-        2022,
-        2021
       ]
     }
   ]

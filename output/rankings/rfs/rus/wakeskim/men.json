@@ -6,6 +6,7 @@
     "Birth Year",
     "Region",
     "Category",
+    "2019",
     "2021",
     "2022",
     "2024",
@@ -36,6 +37,18 @@
               "points": 10000,
               "group": "main",
               "participants_count": 13
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 4
             }
           ]
         },
@@ -71,7 +84,7 @@
           ]
         }
       },
-      "total_points": 33885
+      "total_points": 43885
     },
     {
       "name": "Иванов Виталий",
@@ -97,6 +110,18 @@
               "points": 5685,
               "group": "main",
               "participants_count": 13
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 6085,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 4
             }
           ]
         },
@@ -132,7 +157,7 @@
           ]
         }
       },
-      "total_points": 26030
+      "total_points": 32115
     },
     {
       "name": "Ревун Илья",
@@ -158,6 +183,18 @@
               "points": 7800,
               "group": "main",
               "participants_count": 13
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 7800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 4
             }
           ]
         },
@@ -193,7 +230,7 @@
           ]
         }
       },
-      "total_points": 23915
+      "total_points": 31715
     },
     {
       "name": "Кац Даниил",
@@ -324,8 +361,50 @@
       "total_points": 12170
     },
     {
-      "name": "Горданов Степан",
+      "name": "Шпильман Феликс",
       "rank": 7,
+      "birth_year": 1985,
+      "region": "Московская область",
+      "category": "мужчины",
+      "sport_rank": "2 разряд",
+      "last_year": 2021,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2019",
+        "place": 4,
+        "points": 5685
+      },
+      "years": {
+        "2019": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 4
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 6
+            }
+          ]
+        }
+      },
+      "total_points": 10430
+    },
+    {
+      "name": "Горданов Степан",
+      "rank": 8,
       "birth_year": 1992,
       "region": "Москва",
       "category": "мужчины",
@@ -367,7 +446,7 @@
     },
     {
       "name": "Соловьев Андрей",
-      "rank": 8,
+      "rank": 9,
       "birth_year": 1985,
       "region": "Приморский край",
       "category": "мужчины",
@@ -409,7 +488,7 @@
     },
     {
       "name": "Шамаханов Никита",
-      "rank": 9,
+      "rank": 10,
       "birth_year": 1992,
       "region": "Санкт-Петербург",
       "category": "мужчины",
@@ -451,7 +530,7 @@
     },
     {
       "name": "Коваленко Сергей",
-      "rank": 10,
+      "rank": 11,
       "birth_year": 1993,
       "region": "Волгоградская область",
       "category": "мужчины",
@@ -488,7 +567,7 @@
     },
     {
       "name": "Андронов Евгений",
-      "rank": 11,
+      "rank": 12,
       "birth_year": 1991,
       "region": "Московская область",
       "category": "мужчины",
@@ -525,7 +604,7 @@
     },
     {
       "name": "Бочкарев Александр",
-      "rank": 12,
+      "rank": 13,
       "birth_year": 1986,
       "region": "Самарская область",
       "category": "мужчины",
@@ -567,7 +646,7 @@
     },
     {
       "name": "Мокробородов Юрий",
-      "rank": 13,
+      "rank": 14,
       "birth_year": 1980,
       "region": "Московская область",
       "category": "мужчины",
@@ -589,36 +668,6 @@
               "points": 4745,
               "group": "main",
               "participants_count": 13
-            }
-          ]
-        }
-      },
-      "total_points": 4745
-    },
-    {
-      "name": "Шпильман Феликс",
-      "rank": 14,
-      "birth_year": 1985,
-      "region": "Московская область",
-      "category": "мужчины",
-      "sport_rank": "2 разряд",
-      "last_year": 2021,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2021",
-        "place": 6,
-        "points": 4745
-      },
-      "years": {
-        "2021": {
-          "year_total_points": 4745,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 6
             }
           ]
         }

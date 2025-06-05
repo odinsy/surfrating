@@ -11,7 +11,7 @@
           "sport_rank": "МС",
           "birth_year": 1978,
           "year_points": 10000,
-          "total_points": 33885,
+          "total_points": 43885,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -29,7 +29,7 @@
           "sport_rank": "КМС",
           "birth_year": 1979,
           "year_points": 7800,
-          "total_points": 23915,
+          "total_points": 31715,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -65,7 +65,7 @@
           "sport_rank": "КМС",
           "birth_year": 1985,
           "year_points": 5685,
-          "total_points": 26030,
+          "total_points": 32115,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -241,6 +241,82 @@
         }
       ]
     },
+    "2019": {
+      "athletes": [
+        {
+          "name": "Данилов Сергей",
+          "region": "Московская область",
+          "sport_rank": "МС",
+          "birth_year": 1978,
+          "year_points": 10000,
+          "total_points": 43885,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 4
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "name": "Ревун Илья",
+          "region": "Москва",
+          "sport_rank": "КМС",
+          "birth_year": 1979,
+          "year_points": 7800,
+          "total_points": 31715,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 4
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "name": "Иванов Виталий",
+          "region": "Москва",
+          "sport_rank": "КМС",
+          "birth_year": 1985,
+          "year_points": 6085,
+          "total_points": 32115,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 4
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "name": "Шпильман Феликс",
+          "region": "Московская область",
+          "sport_rank": "2 разряд",
+          "birth_year": 1985,
+          "year_points": 5685,
+          "total_points": 10430,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 4
+            }
+          ],
+          "rank": 4
+        }
+      ]
+    },
     "2024": {
       "athletes": [
         {
@@ -274,7 +350,7 @@
           "sport_rank": "МС",
           "birth_year": 1978,
           "year_points": 13885,
-          "total_points": 33885,
+          "total_points": 43885,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -299,7 +375,7 @@
           "sport_rank": "КМС",
           "birth_year": 1985,
           "year_points": 12545,
-          "total_points": 26030,
+          "total_points": 32115,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -324,7 +400,7 @@
           "sport_rank": "КМС",
           "birth_year": 1979,
           "year_points": 10430,
-          "total_points": 23915,
+          "total_points": 31715,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -626,7 +702,7 @@
           "sport_rank": "МС",
           "birth_year": 1978,
           "year_points": 10000,
-          "total_points": 33885,
+          "total_points": 43885,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -644,7 +720,7 @@
           "sport_rank": "КМС",
           "birth_year": 1985,
           "year_points": 7800,
-          "total_points": 26030,
+          "total_points": 32115,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -680,7 +756,7 @@
           "sport_rank": "КМС",
           "birth_year": 1979,
           "year_points": 5685,
-          "total_points": 23915,
+          "total_points": 31715,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -691,6 +767,24 @@
             }
           ],
           "rank": 4
+        },
+        {
+          "name": "Шпильман Феликс",
+          "region": "Московская область",
+          "sport_rank": "2 разряд",
+          "birth_year": 1985,
+          "year_points": 4745,
+          "total_points": 10430,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 6
+            }
+          ],
+          "rank": 5
         },
         {
           "name": "Соловьев Андрей",
@@ -709,24 +803,6 @@
             }
           ],
           "rank": 5
-        },
-        {
-          "name": "Шпильман Феликс",
-          "region": "Московская область",
-          "sport_rank": "2 разряд",
-          "birth_year": 1985,
-          "year_points": 4745,
-          "total_points": 4745,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 6
-            }
-          ],
-          "rank": 5
         }
       ]
     }
@@ -738,7 +814,7 @@
       "region": "Московская область",
       "sport_rank": "МС",
       "birth_year": 1978,
-      "total_points": 33885,
+      "total_points": 43885,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2022",
@@ -748,6 +824,7 @@
       "last_year": 2024,
       "years_participated": [
         2022,
+        2019,
         2024,
         2021
       ]
@@ -758,7 +835,7 @@
       "region": "Москва",
       "sport_rank": "КМС",
       "birth_year": 1985,
-      "total_points": 26030,
+      "total_points": 32115,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
@@ -768,6 +845,7 @@
       "last_year": 2024,
       "years_participated": [
         2022,
+        2019,
         2024,
         2021
       ]
@@ -778,7 +856,7 @@
       "region": "Москва",
       "sport_rank": "КМС",
       "birth_year": 1979,
-      "total_points": 23915,
+      "total_points": 31715,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2022",
@@ -788,6 +866,7 @@
       "last_year": 2024,
       "years_participated": [
         2022,
+        2019,
         2024,
         2021
       ]
@@ -850,6 +929,25 @@
     },
     {
       "rank": 7,
+      "name": "Шпильман Феликс",
+      "region": "Московская область",
+      "sport_rank": "2 разряд",
+      "birth_year": 1985,
+      "total_points": 10430,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2019",
+        "place": 4,
+        "points": 5685
+      },
+      "last_year": 2021,
+      "years_participated": [
+        2019,
+        2021
+      ]
+    },
+    {
+      "rank": 8,
       "name": "Горданов Степан",
       "region": "Москва",
       "sport_rank": "1",
@@ -868,7 +966,7 @@
       ]
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Соловьев Андрей",
       "region": "Приморский край",
       "sport_rank": "1",
@@ -887,7 +985,7 @@
       ]
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Шамаханов Никита",
       "region": "Санкт-Петербург",
       "sport_rank": "КМС",
@@ -906,7 +1004,7 @@
       ]
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Коваленко Сергей",
       "region": "Волгоградская область",
       "sport_rank": "3",
@@ -924,7 +1022,7 @@
       ]
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Андронов Евгений",
       "region": "Московская область",
       "sport_rank": "3",
@@ -942,7 +1040,7 @@
       ]
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Бочкарев Александр",
       "region": "Самарская область",
       "sport_rank": "2",
@@ -961,7 +1059,7 @@
       ]
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Мокробородов Юрий",
       "region": "Московская область",
       "sport_rank": "2",
@@ -976,24 +1074,6 @@
       "last_year": 2022,
       "years_participated": [
         2022
-      ]
-    },
-    {
-      "rank": 14,
-      "name": "Шпильман Феликс",
-      "region": "Московская область",
-      "sport_rank": "2 разряд",
-      "birth_year": 1985,
-      "total_points": 4745,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2021",
-        "place": 6,
-        "points": 4745
-      },
-      "last_year": 2021,
-      "years_participated": [
-        2021
       ]
     },
     {

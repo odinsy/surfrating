@@ -3,6 +3,82 @@
   "gender": "men",
   "last_updated": "2025-06-05",
   "year_rankings": {
+    "2018": {
+      "athletes": [
+        {
+          "name": "Авдеев Никита",
+          "region": "Камчатский край",
+          "sport_rank": "МС",
+          "birth_year": 2000,
+          "year_points": 10000,
+          "total_points": 47800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 20
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "name": "Расшиваев Сергей",
+          "region": "Санкт-Петербург",
+          "sport_rank": "3",
+          "birth_year": 1984,
+          "year_points": 7800,
+          "total_points": 34670,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 20
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "name": "Волков Егор",
+          "region": "Санкт-Петербург",
+          "sport_rank": "КМС",
+          "birth_year": 2000,
+          "year_points": 5685,
+          "total_points": 31285,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 20
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "name": "Исаков Евгений",
+          "region": "Калининградская область",
+          "sport_rank": "МС",
+          "birth_year": 1983,
+          "year_points": 4745,
+          "total_points": 33070,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 5,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 20
+            }
+          ],
+          "rank": 4
+        }
+      ]
+    },
     "2022": {
       "athletes": [
         {
@@ -11,7 +87,7 @@
           "sport_rank": "МС",
           "birth_year": 2000,
           "year_points": 10000,
-          "total_points": 27800,
+          "total_points": 47800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -29,7 +105,7 @@
           "sport_rank": "КМС",
           "birth_year": 2000,
           "year_points": 7800,
-          "total_points": 17800,
+          "total_points": 31285,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -47,7 +123,7 @@
           "sport_rank": "МС",
           "birth_year": 1983,
           "year_points": 6085,
-          "total_points": 20525,
+          "total_points": 33070,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -60,12 +136,30 @@
           "rank": 3
         },
         {
+          "name": "Расшиваев Сергей",
+          "region": "Санкт-Петербург",
+          "sport_rank": "3",
+          "birth_year": 1984,
+          "year_points": 4745,
+          "total_points": 34670,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 5,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 26
+            }
+          ],
+          "rank": 4
+        },
+        {
           "name": "Зылев Даниил",
           "region": "Москва",
           "sport_rank": "2",
           "birth_year": 1982,
           "year_points": 4745,
-          "total_points": 18895,
+          "total_points": 24980,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -76,24 +170,6 @@
             }
           ],
           "rank": 4
-        },
-        {
-          "name": "Какурин Эльдар",
-          "region": "Москва",
-          "sport_rank": "2",
-          "birth_year": 1983,
-          "year_points": 3120,
-          "total_points": 17665,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 14,
-              "points": 3120,
-              "group": "main",
-              "participants_count": 26
-            }
-          ],
-          "rank": 5
         }
       ]
     },
@@ -105,7 +181,7 @@
           "sport_rank": "КМС",
           "birth_year": 2000,
           "year_points": 10000,
-          "total_points": 17800,
+          "total_points": 31285,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -123,7 +199,7 @@
           "sport_rank": "МС",
           "birth_year": 2000,
           "year_points": 7800,
-          "total_points": 27800,
+          "total_points": 47800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -141,7 +217,7 @@
           "sport_rank": "МС",
           "birth_year": 1983,
           "year_points": 3320,
-          "total_points": 20525,
+          "total_points": 33070,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -159,7 +235,7 @@
           "sport_rank": "2",
           "birth_year": 1982,
           "year_points": 3320,
-          "total_points": 18895,
+          "total_points": 24980,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -170,6 +246,24 @@
             }
           ],
           "rank": 3
+        },
+        {
+          "name": "Расшиваев Сергей",
+          "region": "Санкт-Петербург",
+          "sport_rank": "3",
+          "birth_year": 1984,
+          "year_points": 3120,
+          "total_points": 34670,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 14,
+              "points": 3120,
+              "group": "main",
+              "participants_count": 25
+            }
+          ],
+          "rank": 5
         }
       ]
     },
@@ -181,7 +275,7 @@
           "sport_rank": "МС",
           "birth_year": 2000,
           "year_points": 10000,
-          "total_points": 27800,
+          "total_points": 47800,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -199,7 +293,7 @@
           "sport_rank": "2",
           "birth_year": 1982,
           "year_points": 4745,
-          "total_points": 18895,
+          "total_points": 24980,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -212,17 +306,17 @@
           "rank": 2
         },
         {
-          "name": "Какурин Эльдар",
-          "region": "Москва",
-          "sport_rank": "2",
-          "birth_year": 1983,
-          "year_points": 4545,
-          "total_points": 17665,
+          "name": "Расшиваев Сергей",
+          "region": "Санкт-Петербург",
+          "sport_rank": "3",
+          "birth_year": 1984,
+          "year_points": 3320,
+          "total_points": 34670,
           "events": [
             {
               "event_name": "Чемпионат России",
-              "place": 7,
-              "points": 4545,
+              "place": 12,
+              "points": 3320,
               "group": "main",
               "participants_count": 27
             }
@@ -235,7 +329,7 @@
           "sport_rank": "МС",
           "birth_year": 1983,
           "year_points": 3320,
-          "total_points": 20525,
+          "total_points": 33070,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -245,44 +339,44 @@
               "participants_count": 27
             }
           ],
-          "rank": 4
+          "rank": 3
         }
       ]
     },
-    "2023": {
+    "2019": {
       "athletes": [
         {
-          "name": "Какурин Эльдар",
-          "region": "Москва",
-          "sport_rank": "2",
-          "birth_year": 1983,
+          "name": "Авдеев Никита",
+          "region": "Камчатский край",
+          "sport_rank": "МС",
+          "birth_year": 2000,
           "year_points": 10000,
-          "total_points": 17665,
+          "total_points": 47800,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 1,
               "points": 10000,
               "group": "main",
-              "participants_count": 24
+              "participants_count": 21
             }
           ],
           "rank": 1
         },
         {
-          "name": "Исаков Евгений",
-          "region": "Калининградская область",
-          "sport_rank": "МС",
-          "birth_year": 1983,
+          "name": "Волков Егор",
+          "region": "Санкт-Петербург",
+          "sport_rank": "КМС",
+          "birth_year": 2000,
           "year_points": 7800,
-          "total_points": 20525,
+          "total_points": 31285,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 2,
               "points": 7800,
               "group": "main",
-              "participants_count": 24
+              "participants_count": 21
             }
           ],
           "rank": 2
@@ -293,7 +387,105 @@
           "sport_rank": "2",
           "birth_year": 1982,
           "year_points": 6085,
-          "total_points": 18895,
+          "total_points": 24980,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 21
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "name": "Расшиваев Сергей",
+          "region": "Санкт-Петербург",
+          "sport_rank": "3",
+          "birth_year": 1984,
+          "year_points": 5685,
+          "total_points": 34670,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 21
+            }
+          ],
+          "rank": 4
+        }
+      ]
+    },
+    "2017": {
+      "athletes": [
+        {
+          "name": "Расшиваев Сергей",
+          "region": "Санкт-Петербург",
+          "sport_rank": "3",
+          "birth_year": 1984,
+          "year_points": 10000,
+          "total_points": 34670,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 16
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "name": "Исаков Евгений",
+          "region": "Калининградская область",
+          "sport_rank": "МС",
+          "birth_year": 1983,
+          "year_points": 7800,
+          "total_points": 33070,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 16
+            }
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    "2023": {
+      "athletes": [
+        {
+          "name": "Исаков Евгений",
+          "region": "Калининградская область",
+          "sport_rank": "МС",
+          "birth_year": 1983,
+          "year_points": 7800,
+          "total_points": 33070,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 24
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "name": "Зылев Даниил",
+          "region": "Москва",
+          "sport_rank": "2",
+          "birth_year": 1982,
+          "year_points": 6085,
+          "total_points": 24980,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -303,7 +495,7 @@
               "participants_count": 24
             }
           ],
-          "rank": 3
+          "rank": 2
         }
       ]
     }
@@ -315,7 +507,7 @@
       "region": "Камчатский край",
       "sport_rank": "МС",
       "birth_year": 2000,
-      "total_points": 27800,
+      "total_points": 47800,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2024",
@@ -324,18 +516,43 @@
       },
       "last_year": 2024,
       "years_participated": [
+        2018,
         2022,
         2021,
-        2024
+        2024,
+        2019
       ]
     },
     {
       "rank": 2,
+      "name": "Расшиваев Сергей",
+      "region": "Санкт-Петербург",
+      "sport_rank": "3",
+      "birth_year": 1984,
+      "total_points": 34670,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2017",
+        "place": 1,
+        "points": 10000
+      },
+      "last_year": 2024,
+      "years_participated": [
+        2018,
+        2022,
+        2021,
+        2024,
+        2019,
+        2017
+      ]
+    },
+    {
+      "rank": 3,
       "name": "Исаков Евгений",
       "region": "Калининградская область",
       "sport_rank": "МС",
       "birth_year": 1983,
-      "total_points": 20525,
+      "total_points": 33070,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2023",
@@ -344,19 +561,42 @@
       },
       "last_year": 2024,
       "years_participated": [
+        2018,
         2022,
         2021,
         2024,
+        2017,
         2023
       ]
     },
     {
-      "rank": 3,
+      "rank": 4,
+      "name": "Волков Егор",
+      "region": "Санкт-Петербург",
+      "sport_rank": "КМС",
+      "birth_year": 2000,
+      "total_points": 31285,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 1,
+        "points": 10000
+      },
+      "last_year": 2022,
+      "years_participated": [
+        2018,
+        2022,
+        2021,
+        2019
+      ]
+    },
+    {
+      "rank": 5,
       "name": "Зылев Даниил",
       "region": "Москва",
       "sport_rank": "2",
       "birth_year": 1982,
-      "total_points": 18895,
+      "total_points": 24980,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2023",
@@ -368,45 +608,7 @@
         2022,
         2021,
         2024,
-        2023
-      ]
-    },
-    {
-      "rank": 4,
-      "name": "Волков Егор",
-      "region": "Санкт-Петербург",
-      "sport_rank": "КМС",
-      "birth_year": 2000,
-      "total_points": 17800,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2021",
-        "place": 1,
-        "points": 10000
-      },
-      "last_year": 2022,
-      "years_participated": [
-        2022,
-        2021
-      ]
-    },
-    {
-      "rank": 5,
-      "name": "Какурин Эльдар",
-      "region": "Москва",
-      "sport_rank": "2",
-      "birth_year": 1983,
-      "total_points": 17665,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 1,
-        "points": 10000
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2022,
-        2024,
+        2019,
         2023
       ]
     }
