@@ -204,7 +204,6 @@ function updateCompetitionDropdown(discipline) {
         competitionDropdownMenu.appendChild(li);
     }
 
-    // Установка первого соревнования как активного
     const firstOption = competitionDropdownMenu.querySelector('.competition-option');
     if (firstOption) {
         firstOption.classList.add('active');
@@ -218,10 +217,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialCategory = urlParams.get('category') || 'shortboard_men';
     const [discipline, gender] = initialCategory.split('_');
 
-    // Установка начальных значений
     currentDiscipline = discipline;
 
-    // Установка активной кнопки гендера
     document.querySelectorAll('.gender-btn').forEach(btn => {
         btn.classList.remove('active');
         if (btn.dataset.gender === gender) {
@@ -229,36 +226,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Инициализация выпадающего списка соревнований
     const competitionDropdown = document.getElementById('competitionDropdown');
     const competitionLabel = document.getElementById('competitionLabel');
     competitionLabel.textContent = COMPETITIONS[currentCompetition].name;
 
-    // Обработчик для селектора дисциплин
     document.getElementById('discipline-select').addEventListener('change', function(e) {
         currentDiscipline = e.target.value;
         const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
         updateTable(activeGender);
     });
 
-    // Обработчик для выбора соревнования
     document.querySelectorAll('.competition-option').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
             const competition = this.dataset.competition;
-
-            // Обновляем текущее соревнование
             currentCompetition = competition;
             competitionLabel.textContent = this.textContent;
-
-            // Обновляем список дисциплин
             updateDisciplineSelect(competition);
 
-            // Обновляем таблицу
+
             const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
             updateTable(activeGender);
 
-            // Обновляем активный элемент в выпадающем списке
             document.querySelectorAll('.competition-option').forEach(opt => {
                 opt.classList.remove('active');
             });
@@ -266,7 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Обработчик для кнопок гендера
     document.querySelectorAll('.gender-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
@@ -275,12 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Инициализация селектора дисциплин
     updateDisciplineSelect(currentCompetition);
-
-    // Устанавливаем начальное значение дисциплины
     document.getElementById('discipline-select').value = currentDiscipline;
-
-    // Первоначальная загрузка таблицы
     updateTable(gender);
 });
