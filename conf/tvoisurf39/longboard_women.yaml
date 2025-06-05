@@ -1,0 +1,12 @@
+---
+discipline: "longboard"
+gender: "women"
+
+input_paths:
+  - data/tvoisurf39/longboard/longboard_women_*.csv
+
+output:
+  filename: output/rankings/tvoisurf39/cup/longboard/women.csv
+  top5_filename: output/rankings/tvoisurf39/cup/longboard/t5_ranking_women.csv
+  ranking_json: output/rankings/tvoisurf39/cup/longboard/ranking_women.json
+  events_json: output/rankings/tvoisurf39/cup/longboard/events_women.json
