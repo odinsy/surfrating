@@ -1,25 +1,33 @@
 const JSON_BASE_PATH = '../../data/rankings/';
 const transliterate = window.slugify;
 
-const DISCIPLINE_COMPETITIONS = {
-    shortboard: {
-        'Чемпионат России': 'rfs/rus',
-        'Чемпионат Калининградской области': 'rfs/kaliningrad'
+const COMPETITIONS = {
+    'rfs/rus': {
+        name: 'Чемпионат России (РФС)',
+        disciplines: {
+            'shortboard': 'Короткая доска',
+            'longboard': 'Длинная доска',
+            'wakesurfing': 'Вейксерфинг',
+            'wakeskim': 'Вейкским'
+        }
     },
-    longboard: {
-        'Чемпионат России': 'rfs/rus',
-        'Чемпионат Калининградской области': 'rfs/kaliningrad'
+    'rfs/kaliningrad': {
+        name: 'Чемпионат Калининградской области (РФС)',
+        disciplines: {
+            'shortboard': 'Короткая доска',
+            'longboard': 'Длинная доска'
+        }
     },
-    wakesurfing: {
-        'Чемпионат России': 'rfs/rus',
-    },
-    wakeskim: {
-        'Чемпионат России': 'rfs/rus'
+    'tvoisurf39/cup': {
+        name: 'Балтийский серф-контест',
+        disciplines: {
+            'longboard': 'Длинная доска'
+        }
     }
 };
 
-let currentDiscipline = 'shortboard';
 let currentCompetition = 'rfs/rus';
+let currentDiscipline = 'shortboard';
 
 function getYearsRange(data) {
     if (!data.year_rankings) return [];
@@ -133,8 +141,8 @@ async function loadData(competition, category, gender) {
     }
 }
 
-async function updateTable(category, gender) {
-    const data = await loadData(currentCompetition, category, gender);
+async function updateTable(gender) {
+    const data = await loadData(currentCompetition, currentDiscipline, gender);
     const athletes = data.overall_ranking || [];
     const years = getYearsRange(data);
 
@@ -163,38 +171,57 @@ async function updateTable(category, gender) {
     document.getElementById('ranking-table-container').innerHTML = tableHTML;
 }
 
-function updateCompetitionSelect(discipline) {
-    const competitionSelect = document.getElementById('competition-select');
-    competitionSelect.innerHTML = '';
+function updateDisciplineSelect(competition) {
+    const disciplineSelect = document.getElementById('discipline-select');
+    disciplineSelect.innerHTML = '';
+
+    const disciplines = COMPETITIONS[competition].disciplines;
+    for (const [key, name] of Object.entries(disciplines)) {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = name;
+        disciplineSelect.appendChild(option);
+    }
+
+    if (Object.keys(disciplines).length > 0) {
+        currentDiscipline = Object.keys(disciplines)[0];
+    }
+}
+
+function updateCompetitionDropdown(discipline) {
+    const competitionDropdownMenu = document.querySelector('#competitionDropdown + .dropdown-menu');
+    competitionDropdownMenu.innerHTML = '';
 
     const competitions = DISCIPLINE_COMPETITIONS[discipline];
     for (const [name, value] of Object.entries(competitions)) {
-        const option = document.createElement('option');
-        option.value = value;
-        option.textContent = name;
-        competitionSelect.appendChild(option);
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.className = 'dropdown-item competition-option';
+        a.href = '#';
+        a.dataset.competition = value;
+        a.textContent = name;
+        li.appendChild(a);
+        competitionDropdownMenu.appendChild(li);
     }
 
-    currentCompetition = Object.values(competitions)[0];
-}
-
-function updateSelectedDiscipline(discipline) {
-    document.querySelectorAll('.discipline-option').forEach(option => {
-        option.classList.remove('active');
-    });
-
-    const selectedOption = document.querySelector(`.discipline-option[data-discipline="${discipline}"]`);
-    if (selectedOption) {
-        selectedOption.classList.add('active');
-        document.getElementById('disciplineLabel').textContent = selectedOption.textContent;
+    // Установка первого соревнования как активного
+    const firstOption = competitionDropdownMenu.querySelector('.competition-option');
+    if (firstOption) {
+        firstOption.classList.add('active');
+        document.getElementById('competitionLabel').textContent = firstOption.textContent;
+        currentCompetition = firstOption.dataset.competition;
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const initialCategory = urlParams.get('category') || 'shortboard_men';
-    const [category, gender] = initialCategory.split('_');
+    const [discipline, gender] = initialCategory.split('_');
 
+    // Установка начальных значений
+    currentDiscipline = discipline;
+
+    // Установка активной кнопки гендера
     document.querySelectorAll('.gender-btn').forEach(btn => {
         btn.classList.remove('active');
         if (btn.dataset.gender === gender) {
@@ -202,34 +229,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    updateCompetitionSelect(currentDiscipline);
-    updateSelectedDiscipline(currentDiscipline);
+    // Инициализация выпадающего списка соревнований
+    const competitionDropdown = document.getElementById('competitionDropdown');
+    const competitionLabel = document.getElementById('competitionLabel');
+    competitionLabel.textContent = COMPETITIONS[currentCompetition].name;
 
-    document.getElementById('competition-select').addEventListener('change', (e) => {
-        currentCompetition = e.target.value;
+    // Обработчик для селектора дисциплин
+    document.getElementById('discipline-select').addEventListener('change', function(e) {
+        currentDiscipline = e.target.value;
         const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
-        updateTable(currentDiscipline, activeGender);
+        updateTable(activeGender);
     });
 
-    document.querySelectorAll('.discipline-option').forEach(item => {
+    // Обработчик для выбора соревнования
+    document.querySelectorAll('.competition-option').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
-            const discipline = this.dataset.discipline;
-            currentDiscipline = discipline;
-            updateCompetitionSelect(discipline);
+            const competition = this.dataset.competition;
+
+            // Обновляем текущее соревнование
+            currentCompetition = competition;
+            competitionLabel.textContent = this.textContent;
+
+            // Обновляем список дисциплин
+            updateDisciplineSelect(competition);
+
+            // Обновляем таблицу
             const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
-            updateTable(discipline, activeGender);
-            updateSelectedDiscipline(discipline);
+            updateTable(activeGender);
+
+            // Обновляем активный элемент в выпадающем списке
+            document.querySelectorAll('.competition-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            this.classList.add('active');
         });
     });
 
+    // Обработчик для кнопок гендера
     document.querySelectorAll('.gender-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            updateTable(currentDiscipline, this.dataset.gender);
+            updateTable(this.dataset.gender);
         });
     });
 
-    updateTable(currentDiscipline, gender);
+    // Инициализация селектора дисциплин
+    updateDisciplineSelect(currentCompetition);
+
+    // Устанавливаем начальное значение дисциплины
+    document.getElementById('discipline-select').value = currentDiscipline;
+
+    // Первоначальная загрузка таблицы
+    updateTable(gender);
 });
