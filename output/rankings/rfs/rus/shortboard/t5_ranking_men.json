@@ -82,13 +82,13 @@
           "region": "Москва",
           "sport_rank": "2",
           "birth_year": 1983,
-          "year_points": 3320,
-          "total_points": 17865,
+          "year_points": 3120,
+          "total_points": 17665,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 14,
-              "points": 3320,
+              "points": 3120,
               "group": "main",
               "participants_count": 26
             }
@@ -217,7 +217,7 @@
           "sport_rank": "2",
           "birth_year": 1983,
           "year_points": 4545,
-          "total_points": 17865,
+          "total_points": 17665,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -257,7 +257,7 @@
           "sport_rank": "2",
           "birth_year": 1983,
           "year_points": 10000,
-          "total_points": 17865,
+          "total_points": 17665,
           "events": [
             {
               "event_name": "Чемпионат России",
@@ -373,26 +373,6 @@
     },
     {
       "rank": 4,
-      "name": "Какурин Эльдар",
-      "region": "Москва",
-      "sport_rank": "2",
-      "birth_year": 1983,
-      "total_points": 17865,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 1,
-        "points": 10000
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2022,
-        2024,
-        2023
-      ]
-    },
-    {
-      "rank": 5,
       "name": "Волков Егор",
       "region": "Санкт-Петербург",
       "sport_rank": "КМС",
@@ -408,6 +388,26 @@
       "years_participated": [
         2022,
         2021
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Какурин Эльдар",
+      "region": "Москва",
+      "sport_rank": "2",
+      "birth_year": 1983,
+      "total_points": 17665,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
+        "place": 1,
+        "points": 10000
+      },
+      "last_year": 2024,
+      "years_participated": [
+        2022,
+        2024,
+        2023
       ]
     }
   ]
