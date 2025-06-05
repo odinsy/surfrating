@@ -21,5 +21,5 @@ wake:
 wake_events:
 	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml
 
-balticsurf:
-	python3 ./scripts/surfrating/rating.py --config	conf/balticsurf/config.yaml conf/balticsurf/events.yaml $(conf_scoring_systems) $(conf_decay_system) conf/balticsurf/$(discipline)_$(category).yaml | column -t -s ','
+tvoisurf39:
+	python3 ./scripts/surfrating/rating.py --config	conf/tvoisurf39/config.yaml conf/tvoisurf39/events.yaml $(conf_scoring_systems) $(conf_decay_system) conf/tvoisurf39/$(discipline)_$(category).yaml | column -t -s ','
