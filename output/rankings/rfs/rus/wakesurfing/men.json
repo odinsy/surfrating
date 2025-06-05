@@ -13,69 +13,8 @@
   ],
   "athletes": [
     {
-      "name": "Данилов Сергей",
-      "rank": 1,
-      "birth_year": 1978,
-      "region": "Московская область",
-      "category": "мужчины",
-      "sport_rank": "MC",
-      "last_year": 2024,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2024",
-        "place": 2,
-        "points": 8000
-      },
-      "years": {
-        "2021": {
-          "year_total_points": 6000,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 4,
-              "points": 6000,
-              "group": "main",
-              "participants_count": 8
-            }
-          ]
-        },
-        "2024": {
-          "year_total_points": 16000,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 2,
-              "points": 8000,
-              "group": "main",
-              "participants_count": 15
-            },
-            {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
-              "place": 2,
-              "points": 8000,
-              "group": "main",
-              "participants_count": 9
-            }
-          ]
-        },
-        "2022": {
-          "year_total_points": 6500,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 3,
-              "points": 6500,
-              "group": "main",
-              "participants_count": 23
-            }
-          ]
-        }
-      },
-      "total_points": 28500
-    },
-    {
       "name": "Корольков Станислав",
-      "rank": 2,
+      "rank": 1,
       "birth_year": 1986,
       "region": "Москва",
       "category": "мужчины",
@@ -113,19 +52,80 @@
           ]
         },
         "2022": {
-          "year_total_points": 8000,
+          "year_total_points": 7800,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 2,
-              "points": 8000,
+              "points": 7800,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 28000
+      "total_points": 27800
+    },
+    {
+      "name": "Данилов Сергей",
+      "rank": 2,
+      "birth_year": 1978,
+      "region": "Московская область",
+      "category": "мужчины",
+      "sport_rank": "MC",
+      "last_year": 2024,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2024",
+        "place": 2,
+        "points": 7800
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 15600,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 15
+            },
+            {
+              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 9
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 6085,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 23
+            }
+          ]
+        }
+      },
+      "total_points": 27370
     },
     {
       "name": "Пантелеев Александр",
@@ -143,12 +143,12 @@
       },
       "years": {
         "2024": {
-          "year_total_points": 16500,
+          "year_total_points": 16085,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 3,
-              "points": 6500,
+              "points": 6085,
               "group": "main",
               "participants_count": 15
             },
@@ -162,7 +162,7 @@
           ]
         }
       },
-      "total_points": 16500
+      "total_points": 16085
     },
     {
       "name": "Соловьев Андрей",
@@ -176,93 +176,51 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 4,
-        "points": 6000
+        "points": 5685
       },
       "years": {
         "2021": {
-          "year_total_points": 5000,
+          "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 5,
-              "points": 5000,
+              "points": 4745,
               "group": "main",
               "participants_count": 8
             }
           ]
         },
         "2024": {
-          "year_total_points": 6000,
+          "year_total_points": 5685,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 4,
-              "points": 6000,
+              "points": 5685,
               "group": "main",
               "participants_count": 15
             }
           ]
         },
         "2022": {
-          "year_total_points": 4030,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 8,
-              "points": 4030,
+              "points": 4545,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 15030
-    },
-    {
-      "name": "Чуднов Артемий",
-      "rank": 5,
-      "birth_year": 1989,
-      "region": "Московская область",
-      "category": "мужчины",
-      "sport_rank": "КМС",
-      "last_year": 2022,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2021",
-        "place": 2,
-        "points": 8000
-      },
-      "years": {
-        "2021": {
-          "year_total_points": 8000,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 2,
-              "points": 8000,
-              "group": "main",
-              "participants_count": 8
-            }
-          ]
-        },
-        "2022": {
-          "year_total_points": 6000,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 4,
-              "points": 6000,
-              "group": "main",
-              "participants_count": 23
-            }
-          ]
-        }
-      },
-      "total_points": 14000
+      "total_points": 14975
     },
     {
       "name": "Иванов Виталий",
-      "rank": 6,
+      "rank": 5,
       "birth_year": 1985,
       "region": "Москва",
       "category": "мужчины",
@@ -272,47 +230,89 @@
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
         "place": 6,
-        "points": 4830
+        "points": 4745
       },
       "years": {
         "2021": {
-          "year_total_points": 4450,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
-              "points": 4450,
+              "points": 4545,
               "group": "main",
               "participants_count": 8
             }
           ]
         },
         "2024": {
-          "year_total_points": 4830,
+          "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
               "place": 6,
-              "points": 4830,
+              "points": 4745,
               "group": "main",
               "participants_count": 9
             }
           ]
         },
         "2022": {
-          "year_total_points": 4450,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
-              "points": 4450,
+              "points": 4545,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 13730
+      "total_points": 13835
+    },
+    {
+      "name": "Чуднов Артемий",
+      "rank": 6,
+      "birth_year": 1989,
+      "region": "Московская область",
+      "category": "мужчины",
+      "sport_rank": "КМС",
+      "last_year": 2022,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 2,
+        "points": 7800
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 7800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 23
+            }
+          ]
+        }
+      },
+      "total_points": 13485
     },
     {
       "name": "Абросимов Геннадий",
@@ -326,42 +326,42 @@
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
         "place": 5,
-        "points": 5000
+        "points": 4745
       },
       "years": {
         "2024": {
-          "year_total_points": 9450,
+          "year_total_points": 9290,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
-              "points": 4450,
+              "points": 4545,
               "group": "main",
               "participants_count": 15
             },
             {
               "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
               "place": 5,
-              "points": 5000,
+              "points": 4745,
               "group": "main",
               "participants_count": 9
             }
           ]
         },
         "2022": {
-          "year_total_points": 3420,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 10,
-              "points": 3420,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 12870
+      "total_points": 12610
     },
     {
       "name": "Медведев Антон",
@@ -375,30 +375,30 @@
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
         "place": 3,
-        "points": 6500
+        "points": 6085
       },
       "years": {
         "2024": {
-          "year_total_points": 11330,
+          "year_total_points": 10830,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 6,
-              "points": 4830,
+              "points": 4745,
               "group": "main",
               "participants_count": 15
             },
             {
               "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
               "place": 3,
-              "points": 6500,
+              "points": 6085,
               "group": "main",
               "participants_count": 9
             }
           ]
         }
       },
-      "total_points": 11330
+      "total_points": 10830
     },
     {
       "name": "Маркарьян Георгий",
@@ -431,50 +431,8 @@
       "total_points": 10000
     },
     {
-      "name": "Савичев Александр",
-      "rank": 10,
-      "birth_year": 1981,
-      "region": "Санкт-Петербург",
-      "category": "мужчины",
-      "sport_rank": "3",
-      "last_year": 2022,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2021",
-        "place": 6,
-        "points": 4830
-      },
-      "years": {
-        "2021": {
-          "year_total_points": 4830,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 6,
-              "points": 4830,
-              "group": "main",
-              "participants_count": 8
-            }
-          ]
-        },
-        "2022": {
-          "year_total_points": 4450,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 7,
-              "points": 4450,
-              "group": "main",
-              "participants_count": 23
-            }
-          ]
-        }
-      },
-      "total_points": 9280
-    },
-    {
       "name": "Сладков Александр",
-      "rank": 11,
+      "rank": 10,
       "birth_year": 1992,
       "region": "Московская область",
       "category": "мужчины",
@@ -484,35 +442,77 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 6,
-        "points": 4830
+        "points": 4745
       },
       "years": {
         "2021": {
-          "year_total_points": 4030,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 8,
-              "points": 4030,
+              "points": 4545,
               "group": "main",
               "participants_count": 8
             }
           ]
         },
         "2022": {
-          "year_total_points": 4830,
+          "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 6,
-              "points": 4830,
+              "points": 4745,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 8860
+      "total_points": 9290
+    },
+    {
+      "name": "Савичев Александр",
+      "rank": 11,
+      "birth_year": 1981,
+      "region": "Санкт-Петербург",
+      "category": "мужчины",
+      "sport_rank": "3",
+      "last_year": 2022,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 6,
+        "points": 4745
+      },
+      "years": {
+        "2021": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 4545,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 7,
+              "points": 4545,
+              "group": "main",
+              "participants_count": 23
+            }
+          ]
+        }
+      },
+      "total_points": 9290
     },
     {
       "name": "Короткий Степан",
@@ -526,35 +526,35 @@
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
         "place": 7,
-        "points": 4450
+        "points": 4545
       },
       "years": {
         "2024": {
-          "year_total_points": 4450,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
               "place": 7,
-              "points": 4450,
+              "points": 4545,
               "group": "main",
               "participants_count": 9
             }
           ]
         },
         "2022": {
-          "year_total_points": 3500,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 9,
-              "points": 3500,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 7950
+      "total_points": 7865
     },
     {
       "name": "Бахарев Максим",
@@ -568,35 +568,35 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 9,
-        "points": 3500
+        "points": 3320
       },
       "years": {
         "2024": {
-          "year_total_points": 3500,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 9,
-              "points": 3500,
+              "points": 3320,
               "group": "main",
               "participants_count": 15
             }
           ]
         },
         "2022": {
-          "year_total_points": 3330,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 11,
-              "points": 3330,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 6830
+      "total_points": 6640
     },
     {
       "name": "Сивоглазов Виктор",
@@ -610,28 +610,28 @@
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
         "place": 9,
-        "points": 3500
+        "points": 3320
       },
       "years": {
         "2024": {
-          "year_total_points": 3500,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
               "place": 9,
-              "points": 3500,
+              "points": 3320,
               "group": "main",
               "participants_count": 9
             }
           ]
         },
         "2022": {
-          "year_total_points": 3140,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 12,
-              "points": 3140,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
@@ -652,23 +652,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2021",
         "place": 3,
-        "points": 6500
+        "points": 6085
       },
       "years": {
         "2021": {
-          "year_total_points": 6500,
+          "year_total_points": 6085,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 3,
-              "points": 6500,
+              "points": 6085,
               "group": "main",
               "participants_count": 8
             }
           ]
         }
       },
-      "total_points": 6500
+      "total_points": 6085
     },
     {
       "name": "Кривощеков Никита",
@@ -682,23 +682,23 @@
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
         "place": 4,
-        "points": 6000
+        "points": 5685
       },
       "years": {
         "2024": {
-          "year_total_points": 6000,
+          "year_total_points": 5685,
           "events": [
             {
               "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
               "place": 4,
-              "points": 6000,
+              "points": 5685,
               "group": "main",
               "participants_count": 9
             }
           ]
         }
       },
-      "total_points": 6000
+      "total_points": 5685
     },
     {
       "name": "Горлов Анатолий",
@@ -712,16 +712,16 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 5,
-        "points": 5000
+        "points": 4745
       },
       "years": {
         "2024": {
-          "year_total_points": 5000,
+          "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 5,
-              "points": 5000,
+              "points": 4745,
               "group": "main",
               "participants_count": 15
             },
@@ -735,7 +735,7 @@
           ]
         }
       },
-      "total_points": 5000
+      "total_points": 4745
     },
     {
       "name": "Умаханов Руслан",
@@ -749,23 +749,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 5,
-        "points": 5000
+        "points": 4745
       },
       "years": {
         "2022": {
-          "year_total_points": 5000,
+          "year_total_points": 4745,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 5,
-              "points": 5000,
+              "points": 4745,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 5000
+      "total_points": 4745
     },
     {
       "name": "Антанеев Никита",
@@ -779,23 +779,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 7,
-        "points": 4450
+        "points": 4545
       },
       "years": {
         "2022": {
-          "year_total_points": 4450,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
-              "points": 4450,
+              "points": 4545,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 4450
+      "total_points": 4545
     },
     {
       "name": "Карпов Сергей",
@@ -809,16 +809,16 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 8,
-        "points": 4030
+        "points": 4545
       },
       "years": {
         "2024": {
-          "year_total_points": 4030,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 8,
-              "points": 4030,
+              "points": 4545,
               "group": "main",
               "participants_count": 15
             },
@@ -832,7 +832,7 @@
           ]
         }
       },
-      "total_points": 4030
+      "total_points": 4545
     },
     {
       "name": "Хапсваров Рашид",
@@ -846,23 +846,23 @@
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
         "event_year": "2024",
         "place": 8,
-        "points": 4030
+        "points": 4545
       },
       "years": {
         "2024": {
-          "year_total_points": 4030,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
               "place": 8,
-              "points": 4030,
+              "points": 4545,
               "group": "main",
               "participants_count": 9
             }
           ]
         }
       },
-      "total_points": 4030
+      "total_points": 4545
     },
     {
       "name": "Теймуров Артем",
@@ -876,23 +876,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 8,
-        "points": 4030
+        "points": 4545
       },
       "years": {
         "2022": {
-          "year_total_points": 4030,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 8,
-              "points": 4030,
+              "points": 4545,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 4030
+      "total_points": 4545
     },
     {
       "name": "Офицеров Андрей",
@@ -906,23 +906,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 8,
-        "points": 4030
+        "points": 4545
       },
       "years": {
         "2022": {
-          "year_total_points": 4030,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 8,
-              "points": 4030,
+              "points": 4545,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 4030
+      "total_points": 4545
     },
     {
       "name": "Осипов Денис",
@@ -936,23 +936,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 9,
-        "points": 3500
+        "points": 3320
       },
       "years": {
         "2022": {
-          "year_total_points": 3500,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 9,
-              "points": 3500,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 3500
+      "total_points": 3320
     },
     {
       "name": "Строганов Максим",
@@ -966,23 +966,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 9,
-        "points": 3500
+        "points": 3320
       },
       "years": {
         "2022": {
-          "year_total_points": 3500,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 9,
-              "points": 3500,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 3500
+      "total_points": 3320
     },
     {
       "name": "Ермилов Николай",
@@ -996,23 +996,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 10,
-        "points": 3420
+        "points": 3320
       },
       "years": {
         "2024": {
-          "year_total_points": 3420,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 10,
-              "points": 3420,
+              "points": 3320,
               "group": "main",
               "participants_count": 15
             }
           ]
         }
       },
-      "total_points": 3420
+      "total_points": 3320
     },
     {
       "name": "Сычев Павел",
@@ -1026,23 +1026,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 10,
-        "points": 3420
+        "points": 3320
       },
       "years": {
         "2022": {
-          "year_total_points": 3420,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 10,
-              "points": 3420,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 3420
+      "total_points": 3320
     },
     {
       "name": "Лепехин Дмитрий",
@@ -1056,23 +1056,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 10,
-        "points": 3420
+        "points": 3320
       },
       "years": {
         "2022": {
-          "year_total_points": 3420,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 10,
-              "points": 3420,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 3420
+      "total_points": 3320
     },
     {
       "name": "Турлычкин Дмитрий",
@@ -1086,23 +1086,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 11,
-        "points": 3330
+        "points": 3320
       },
       "years": {
         "2024": {
-          "year_total_points": 3330,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 11,
-              "points": 3330,
+              "points": 3320,
               "group": "main",
               "participants_count": 15
             }
           ]
         }
       },
-      "total_points": 3330
+      "total_points": 3320
     },
     {
       "name": "Кузьмин Илья",
@@ -1116,23 +1116,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 11,
-        "points": 3330
+        "points": 3320
       },
       "years": {
         "2022": {
-          "year_total_points": 3330,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 11,
-              "points": 3330,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 3330
+      "total_points": 3320
     },
     {
       "name": "Рудников Евгений",
@@ -1146,23 +1146,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 11,
-        "points": 3330
+        "points": 3320
       },
       "years": {
         "2022": {
-          "year_total_points": 3330,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 11,
-              "points": 3330,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 3330
+      "total_points": 3320
     },
     {
       "name": "Красников Дмитрий",
@@ -1176,23 +1176,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 12,
-        "points": 3140
+        "points": 3320
       },
       "years": {
         "2024": {
-          "year_total_points": 3140,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 12,
-              "points": 3140,
+              "points": 3320,
               "group": "main",
               "participants_count": 15
             }
           ]
         }
       },
-      "total_points": 3140
+      "total_points": 3320
     },
     {
       "name": "Батырев Александр",
@@ -1206,23 +1206,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 12,
-        "points": 3140
+        "points": 3320
       },
       "years": {
         "2022": {
-          "year_total_points": 3140,
+          "year_total_points": 3320,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 12,
-              "points": 3140,
+              "points": 3320,
               "group": "main",
               "participants_count": 23
             }
           ]
         }
       },
-      "total_points": 3140
+      "total_points": 3320
     },
     {
       "name": "Улиско Александр",
@@ -1236,23 +1236,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 13,
-        "points": 2950
+        "points": 3120
       },
       "years": {
         "2024": {
-          "year_total_points": 2950,
+          "year_total_points": 3120,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 13,
-              "points": 2950,
+              "points": 3120,
               "group": "main",
               "participants_count": 15
             }
           ]
         }
       },
-      "total_points": 2950
+      "total_points": 3120
     },
     {
       "name": "Рожнов Сергей",
@@ -1266,23 +1266,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 14,
-        "points": 2760
+        "points": 3120
       },
       "years": {
         "2024": {
-          "year_total_points": 2760,
+          "year_total_points": 3120,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 14,
-              "points": 2760,
+              "points": 3120,
               "group": "main",
               "participants_count": 15
             }
           ]
         }
       },
-      "total_points": 2760
+      "total_points": 3120
     },
     {
       "name": "Кириллов Владислав",
@@ -1296,23 +1296,23 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 15,
-        "points": 2580
+        "points": 3120
       },
       "years": {
         "2024": {
-          "year_total_points": 2580,
+          "year_total_points": 3120,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 15,
-              "points": 2580,
+              "points": 3120,
               "group": "main",
               "participants_count": 15
             }
           ]
         }
       },
-      "total_points": 2580
+      "total_points": 3120
     }
   ]
 }
