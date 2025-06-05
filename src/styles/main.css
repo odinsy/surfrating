@@ -4,14 +4,6 @@ body {
     padding-top: 70px;
 }
 
-.container {
-    padding-bottom: 2rem !important;
-}
-
-#ranking-table-container {
-    margin-bottom: 3rem;
-}
-
 .bg-primary-custom {
     background-color: #112D4E !important;
 }
@@ -218,7 +210,7 @@ tr.top-10:hover {
     background-color: #f8f9fa;
     padding: 1rem 0;
     font-size: 0.9rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 #last-updated {
@@ -230,22 +222,10 @@ tr.top-10:hover {
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding-bottom: 1.5rem !important;
-    }
-
     .footer .container > div {
         flex-direction: column;
         text-align: center;
         gap: 10px;
-    }
-
-    .footer {
-        margin-top: 3rem;
-    }
-
-    #ranking-table-container {
-        margin-bottom: 2rem;
     }
 
     #last-updated {
