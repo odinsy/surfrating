@@ -1,9 +1,9 @@
 # config.yaml
 
-scoring_system: wsl_cs
+scoring_system: wsl_csh
 current_year: 2024
 top_n: 100
-allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024]
+allowed_years: [2021, 2022, 2023, 2024]
 
 input_paths:
   # - "data/rfs/surfing/shortboard/shortboard_men_*.csv"
@@ -22,7 +22,7 @@ output:
     - Total Points
 
 anonymization:
-  enabled: true
+  enabled: false
 
 sorting:
   enabled: true
@@ -45,7 +45,7 @@ bonuses:
         max: "inf"
         factor: 1.0
 
-  rank:
+  sport_rank:
     enabled: false
     values:
       МС: 80

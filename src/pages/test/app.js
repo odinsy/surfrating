@@ -1,25 +1,34 @@
 const JSON_BASE_PATH = '../../data/rankings/';
+const AVATARS_ENABLED = false;
 const transliterate = window.slugify;
 
-const DISCIPLINE_COMPETITIONS = {
-    shortboard: {
-        'Чемпионат России': 'rfs/rus',
-        'Чемпионат Калининградской области': 'rfs/kaliningrad'
+const COMPETITIONS = {
+    'rfs/rus': {
+        name: 'Чемпионат России (РФС)',
+        disciplines: {
+            'shortboard': 'Короткая доска',
+            'longboard': 'Длинная доска',
+            'wakesurfing': 'Вейксерфинг',
+            'wakeskim': 'Вейкским'
+        }
     },
-    longboard: {
-        'Чемпионат России': 'rfs/rus',
-        'Чемпионат Калининградской области': 'rfs/kaliningrad'
+    'rfs/kaliningrad': {
+        name: 'Чемпионат Калининградской области (РФС)',
+        disciplines: {
+            'shortboard': 'Короткая доска',
+            'longboard': 'Длинная доска'
+        }
     },
-    wakesurfing: {
-        'Чемпионат России': 'rfs/rus',
-    },
-    wakeskim: {
-        'Чемпионат России': 'rfs/rus'
+    'tvoisurf39/cup': {
+        name: 'Балтийский серф-контест (Твой Сёрф 39)',
+        disciplines: {
+            'longboard': 'Длинная доска'
+        }
     }
 };
 
-let currentDiscipline = 'shortboard';
 let currentCompetition = 'rfs/rus';
+let currentDiscipline = 'shortboard';
 
 function getYearsRange(data) {
     if (!data.year_rankings) return [];
@@ -44,7 +53,23 @@ function createAthleteRow(athlete, years, athleteYearData) {
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
     const initials = (surname[0] || '') + (firstName[0] || '');
     const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-    const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
+
+    let avatarPath = '';
+    if (AVATARS_ENABLED) {
+        avatarPath = athlete.avatar_path
+            || `../../img/avatars/${avatarSlug}.jpg`;
+    }
+
+    let avatarHTML = '';
+    if (AVATARS_ENABLED) {
+        avatarHTML = `
+            <img src="${avatarPath}" alt="${athlete.name}"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="avatar-fallback">${initials}</div>
+        `;
+    } else {
+        avatarHTML = `<div class="avatar-fallback" style="display:flex">${initials}</div>`;
+    }
 
     const yearCells = years.map(year => {
         const yearData = athleteYearData[athlete.name]?.[year];
@@ -83,9 +108,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
             <td class="name-cell">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
-                        <img src="${avatarPath}" alt="${athlete.name}"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="avatar-fallback">${initials}</div>
+                        ${avatarHTML}
                     </div>
                     <div>
                         <div class="athlete-name">${athlete.name}</div>
@@ -133,8 +156,8 @@ async function loadData(competition, category, gender) {
     }
 }
 
-async function updateTable(category, gender) {
-    const data = await loadData(currentCompetition, category, gender);
+async function updateTable(gender) {
+    const data = await loadData(currentCompetition, currentDiscipline, gender);
     const athletes = data.overall_ranking || [];
     const years = getYearsRange(data);
 
@@ -163,37 +186,53 @@ async function updateTable(category, gender) {
     document.getElementById('ranking-table-container').innerHTML = tableHTML;
 }
 
-function updateCompetitionSelect(discipline) {
-    const competitionSelect = document.getElementById('competition-select');
-    competitionSelect.innerHTML = '';
+function updateDisciplineSelect(competition) {
+    const disciplineSelect = document.getElementById('discipline-select');
+    disciplineSelect.innerHTML = '';
+
+    const disciplines = COMPETITIONS[competition].disciplines;
+    for (const [key, name] of Object.entries(disciplines)) {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = name;
+        disciplineSelect.appendChild(option);
+    }
+
+    if (Object.keys(disciplines).length > 0) {
+        currentDiscipline = Object.keys(disciplines)[0];
+    }
+}
+
+function updateCompetitionDropdown(discipline) {
+    const competitionDropdownMenu = document.querySelector('#competitionDropdown + .dropdown-menu');
+    competitionDropdownMenu.innerHTML = '';
 
     const competitions = DISCIPLINE_COMPETITIONS[discipline];
     for (const [name, value] of Object.entries(competitions)) {
-        const option = document.createElement('option');
-        option.value = value;
-        option.textContent = name;
-        competitionSelect.appendChild(option);
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.className = 'dropdown-item competition-option';
+        a.href = '#';
+        a.dataset.competition = value;
+        a.textContent = name;
+        li.appendChild(a);
+        competitionDropdownMenu.appendChild(li);
     }
 
-    currentCompetition = Object.values(competitions)[0];
-}
-
-function updateSelectedDiscipline(discipline) {
-    document.querySelectorAll('.discipline-option').forEach(option => {
-        option.classList.remove('active');
-    });
-
-    const selectedOption = document.querySelector(`.discipline-option[data-discipline="${discipline}"]`);
-    if (selectedOption) {
-        selectedOption.classList.add('active');
-        document.getElementById('disciplineLabel').textContent = selectedOption.textContent;
+    const firstOption = competitionDropdownMenu.querySelector('.competition-option');
+    if (firstOption) {
+        firstOption.classList.add('active');
+        document.getElementById('competitionLabel').textContent = firstOption.textContent;
+        currentCompetition = firstOption.dataset.competition;
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const initialCategory = urlParams.get('category') || 'shortboard_men';
-    const [category, gender] = initialCategory.split('_');
+    const [discipline, gender] = initialCategory.split('_');
+
+    currentDiscipline = discipline;
 
     document.querySelectorAll('.gender-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -202,24 +241,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    updateCompetitionSelect(currentDiscipline);
-    updateSelectedDiscipline(currentDiscipline);
+    const competitionDropdown = document.getElementById('competitionDropdown');
+    const competitionLabel = document.getElementById('competitionLabel');
+    competitionLabel.textContent = COMPETITIONS[currentCompetition].name;
 
-    document.getElementById('competition-select').addEventListener('change', (e) => {
-        currentCompetition = e.target.value;
+    document.getElementById('discipline-select').addEventListener('change', function(e) {
+        currentDiscipline = e.target.value;
         const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
-        updateTable(currentDiscipline, activeGender);
+        updateTable(activeGender);
     });
 
-    document.querySelectorAll('.discipline-option').forEach(item => {
+    document.querySelectorAll('.competition-option').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
-            const discipline = this.dataset.discipline;
-            currentDiscipline = discipline;
-            updateCompetitionSelect(discipline);
+            const competition = this.dataset.competition;
+            currentCompetition = competition;
+            competitionLabel.textContent = this.textContent;
+            updateDisciplineSelect(competition);
+
+
             const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
-            updateTable(discipline, activeGender);
-            updateSelectedDiscipline(discipline);
+            updateTable(activeGender);
+
+            document.querySelectorAll('.competition-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            this.classList.add('active');
         });
     });
 
@@ -227,9 +274,11 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', function() {
             document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            updateTable(currentDiscipline, this.dataset.gender);
+            updateTable(this.dataset.gender);
         });
     });
 
-    updateTable(currentDiscipline, gender);
+    updateDisciplineSelect(currentCompetition);
+    document.getElementById('discipline-select').value = currentDiscipline;
+    updateTable(gender);
 });

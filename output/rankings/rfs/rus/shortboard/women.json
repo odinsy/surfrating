@@ -6,6 +6,9 @@
     "Birth Year",
     "Region",
     "Category",
+    "2017",
+    "2018",
+    "2019",
     "2021",
     "2022",
     "2023",
@@ -28,6 +31,30 @@
         "points": 10000
       },
       "years": {
+        "2018": {
+          "year_total_points": 7800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        },
+        "2019": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 5
+            }
+          ]
+        },
         "2021": {
           "year_total_points": 7800,
           "events": [
@@ -75,9 +102,21 @@
               "participants_count": 8
             }
           ]
+        },
+        "2017": {
+          "year_total_points": 6085,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 7
+            }
+          ]
         }
       },
-      "total_points": 37800
+      "total_points": 61685
     },
     {
       "name": "Тиманина Анжелика",
@@ -94,6 +133,18 @@
         "points": 7800
       },
       "years": {
+        "2018": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 5,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        },
         "2021": {
           "year_total_points": 6085,
           "events": [
@@ -141,13 +192,103 @@
               "participants_count": 8
             }
           ]
+        },
+        "2017": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 7
+            }
+          ]
         }
       },
-      "total_points": 25655
+      "total_points": 36085
+    },
+    {
+      "name": "Тимаревская Анастасия",
+      "rank": 3,
+      "birth_year": 1986,
+      "region": "Московская область",
+      "category": "женщины",
+      "sport_rank": "3",
+      "last_year": 2024,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2022",
+        "place": 3,
+        "points": 6085
+      },
+      "years": {
+        "2019": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 5
+            }
+          ]
+        },
+        "2021": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 5,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 9
+            }
+          ]
+        },
+        "2024": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 18
+            }
+          ]
+        },
+        "2022": {
+          "year_total_points": 6085,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 6
+            }
+          ]
+        },
+        "2023": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        }
+      },
+      "total_points": 27885
     },
     {
       "name": "Галимова Чулпан",
-      "rank": 3,
+      "rank": 4,
       "birth_year": 1987,
       "region": "Республика Татарстан",
       "category": "женщины",
@@ -197,85 +338,19 @@
           ]
         },
         "2023": {
-          "year_total_points": 4745,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
-              "points": 4745,
+              "points": 4545,
               "group": "main",
               "participants_count": 8
             }
           ]
         }
       },
-      "total_points": 22975
-    },
-    {
-      "name": "Тимаревская Анастасия",
-      "rank": 4,
-      "birth_year": 1986,
-      "region": "Московская область",
-      "category": "женщины",
-      "sport_rank": "3",
-      "last_year": 2024,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2022",
-        "place": 3,
-        "points": 6085
-      },
-      "years": {
-        "2021": {
-          "year_total_points": 4745,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 9
-            }
-          ]
-        },
-        "2024": {
-          "year_total_points": 5685,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 18
-            }
-          ]
-        },
-        "2022": {
-          "year_total_points": 6085,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 6
-            }
-          ]
-        },
-        "2023": {
-          "year_total_points": 5685,
-          "events": [
-            {
-              "event_name": "Чемпионат России",
-              "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 8
-            }
-          ]
-        }
-      },
-      "total_points": 22200
+      "total_points": 22775
     },
     {
       "name": "Тихолаз Ульяна",
@@ -398,8 +473,92 @@
       "total_points": 18630
     },
     {
-      "name": "Рудик Майи",
+      "name": "Кособукина Ирина",
       "rank": 7,
+      "birth_year": 1987,
+      "region": "Москва",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2018,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2017",
+        "place": 1,
+        "points": 10000
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        },
+        "2017": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 7
+            }
+          ]
+        }
+      },
+      "total_points": 15685
+    },
+    {
+      "name": "Ким Ольга",
+      "rank": 8,
+      "birth_year": 1988,
+      "region": "Санкт-Петербург",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2018,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2017",
+        "place": 2,
+        "points": 7800
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 4545,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 7,
+              "points": 4545,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        },
+        "2017": {
+          "year_total_points": 7800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 7
+            }
+          ]
+        }
+      },
+      "total_points": 12345
+    },
+    {
+      "name": "Рудик Майи",
+      "rank": 9,
       "birth_year": 1984,
       "region": "Москва",
       "category": "женщины",
@@ -409,51 +568,51 @@
         "event_name": "Чемпионат России",
         "event_year": "2023",
         "place": 7,
-        "points": 4745
+        "points": 4545
       },
       "years": {
         "2021": {
-          "year_total_points": 4745,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
-              "points": 4745,
+              "points": 4545,
               "group": "main",
               "participants_count": 9
             }
           ]
         },
         "2024": {
-          "year_total_points": 3320,
+          "year_total_points": 3120,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 16,
-              "points": 3320,
+              "points": 3120,
               "group": "main",
               "participants_count": 18
             }
           ]
         },
         "2023": {
-          "year_total_points": 4745,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
-              "points": 4745,
+              "points": 4545,
               "group": "main",
               "participants_count": 8
             }
           ]
         }
       },
-      "total_points": 12810
+      "total_points": 12210
     },
     {
       "name": "Большова Елена",
-      "rank": 8,
+      "rank": 10,
       "birth_year": 1983,
       "region": "Москва",
       "category": "женщины",
@@ -482,8 +641,80 @@
       "total_points": 10000
     },
     {
+      "name": "Мализия Полина",
+      "rank": 11,
+      "birth_year": 2000,
+      "region": "Москва",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2018,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2018",
+        "place": 1,
+        "points": 10000
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 10000,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 1,
+              "points": 10000,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        }
+      },
+      "total_points": 10000
+    },
+    {
+      "name": "Рудик Майя",
+      "rank": 12,
+      "birth_year": 1984,
+      "region": "Московская область",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2018,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2017",
+        "place": 6,
+        "points": 4745
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 4545,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 8,
+              "points": 4545,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        },
+        "2017": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 7
+            }
+          ]
+        }
+      },
+      "total_points": 9290
+    },
+    {
       "name": "Матвеева Анна",
-      "rank": 9,
+      "rank": 13,
       "birth_year": 1985,
       "region": "Калининградская область",
       "category": "женщины",
@@ -524,8 +755,188 @@
       "total_points": 8065
     },
     {
+      "name": "Больсова Елена",
+      "rank": 14,
+      "birth_year": 1983,
+      "region": "Москва",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2019,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2019",
+        "place": 2,
+        "points": 7800
+      },
+      "years": {
+        "2019": {
+          "year_total_points": 7800,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 2,
+              "points": 7800,
+              "group": "main",
+              "participants_count": 5
+            }
+          ]
+        }
+      },
+      "total_points": 7800
+    },
+    {
+      "name": "Шемна Ольга",
+      "rank": 15,
+      "birth_year": 1987,
+      "region": "Москва",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2019,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2019",
+        "place": 3,
+        "points": 6085
+      },
+      "years": {
+        "2019": {
+          "year_total_points": 6085,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 5
+            }
+          ]
+        }
+      },
+      "total_points": 6085
+    },
+    {
+      "name": "Боярова Полина",
+      "rank": 16,
+      "birth_year": 1985,
+      "region": "Москва",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2018,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2018",
+        "place": 3,
+        "points": 6085
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 6085,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 3,
+              "points": 6085,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        }
+      },
+      "total_points": 6085
+    },
+    {
+      "name": "Мысовская Дина",
+      "rank": 17,
+      "birth_year": 1984,
+      "region": "Санкт-Петербург",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2017,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2017",
+        "place": 4,
+        "points": 5685
+      },
+      "years": {
+        "2017": {
+          "year_total_points": 5685,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 4,
+              "points": 5685,
+              "group": "main",
+              "participants_count": 7
+            }
+          ]
+        }
+      },
+      "total_points": 5685
+    },
+    {
+      "name": "Максимова Елизавета",
+      "rank": 18,
+      "birth_year": 1988,
+      "region": "Москва",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2019,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2019",
+        "place": 5,
+        "points": 4745
+      },
+      "years": {
+        "2019": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 5,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 5
+            }
+          ]
+        }
+      },
+      "total_points": 4745
+    },
+    {
+      "name": "Юсова Анна",
+      "rank": 19,
+      "birth_year": 1985,
+      "region": "Калининградская область",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2018,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2018",
+        "place": 6,
+        "points": 4745
+      },
+      "years": {
+        "2018": {
+          "year_total_points": 4745,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 6,
+              "points": 4745,
+              "group": "main",
+              "participants_count": 8
+            }
+          ]
+        }
+      },
+      "total_points": 4745
+    },
+    {
       "name": "Пташко Ксения",
-      "rank": 10,
+      "rank": 20,
       "birth_year": 1986,
       "region": "Краснодарский край",
       "category": "женщины",
@@ -535,27 +946,57 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 7,
-        "points": 4745
+        "points": 4545
       },
       "years": {
         "2024": {
-          "year_total_points": 4745,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 7,
-              "points": 4745,
+              "points": 4545,
               "group": "main",
               "participants_count": 18
             }
           ]
         }
       },
-      "total_points": 4745
+      "total_points": 4545
+    },
+    {
+      "name": "Нарышкина Вероника",
+      "rank": 21,
+      "birth_year": 1988,
+      "region": "Москва",
+      "category": "женщины",
+      "sport_rank": "",
+      "last_year": 2017,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2017",
+        "place": 7,
+        "points": 4545
+      },
+      "years": {
+        "2017": {
+          "year_total_points": 4545,
+          "events": [
+            {
+              "event_name": "Чемпионат России",
+              "place": 7,
+              "points": 4545,
+              "group": "main",
+              "participants_count": 7
+            }
+          ]
+        }
+      },
+      "total_points": 4545
     },
     {
       "name": "Кутьина Анна",
-      "rank": 11,
+      "rank": 22,
       "birth_year": 1995,
       "region": "Севастополь",
       "category": "женщины",
@@ -565,27 +1006,27 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 8,
-        "points": 4745
+        "points": 4545
       },
       "years": {
         "2024": {
-          "year_total_points": 4745,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 8,
-              "points": 4745,
+              "points": 4545,
               "group": "main",
               "participants_count": 18
             }
           ]
         }
       },
-      "total_points": 4745
+      "total_points": 4545
     },
     {
       "name": "Чимытова Кристина",
-      "rank": 12,
+      "rank": 23,
       "birth_year": 1984,
       "region": "Камчатский край",
       "category": "женщины",
@@ -595,27 +1036,27 @@
         "event_name": "Чемпионат России",
         "event_year": "2021",
         "place": 8,
-        "points": 4745
+        "points": 4545
       },
       "years": {
         "2021": {
-          "year_total_points": 4745,
+          "year_total_points": 4545,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 8,
-              "points": 4745,
+              "points": 4545,
               "group": "main",
               "participants_count": 9
             }
           ]
         }
       },
-      "total_points": 4745
+      "total_points": 4545
     },
     {
       "name": "Горанько Эвелина",
-      "rank": 13,
+      "rank": 24,
       "birth_year": 2007,
       "region": "Камчатский край",
       "category": "женщины",
@@ -645,7 +1086,7 @@
     },
     {
       "name": "Шеина Ольга",
-      "rank": 14,
+      "rank": 25,
       "birth_year": 1987,
       "region": "Москва",
       "category": "женщины",
@@ -675,7 +1116,7 @@
     },
     {
       "name": "Кузьмина Маргарита",
-      "rank": 15,
+      "rank": 26,
       "birth_year": 1992,
       "region": "Краснодарский край",
       "category": "женщины",
@@ -705,7 +1146,7 @@
     },
     {
       "name": "Зубатова Ксения",
-      "rank": 16,
+      "rank": 27,
       "birth_year": 1998,
       "region": "Краснодарский край",
       "category": "женщины",
@@ -735,7 +1176,7 @@
     },
     {
       "name": "Романовская Ева",
-      "rank": 17,
+      "rank": 28,
       "birth_year": 2007,
       "region": "Калининградская область",
       "category": "женщины",
@@ -745,27 +1186,27 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 13,
-        "points": 3320
+        "points": 3120
       },
       "years": {
         "2024": {
-          "year_total_points": 3320,
+          "year_total_points": 3120,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 13,
-              "points": 3320,
+              "points": 3120,
               "group": "main",
               "participants_count": 18
             }
           ]
         }
       },
-      "total_points": 3320
+      "total_points": 3120
     },
     {
       "name": "Мавричева Дарья",
-      "rank": 18,
+      "rank": 29,
       "birth_year": 2007,
       "region": "Камчатский край",
       "category": "женщины",
@@ -775,27 +1216,27 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 14,
-        "points": 3320
+        "points": 3120
       },
       "years": {
         "2024": {
-          "year_total_points": 3320,
+          "year_total_points": 3120,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 14,
-              "points": 3320,
+              "points": 3120,
               "group": "main",
               "participants_count": 18
             }
           ]
         }
       },
-      "total_points": 3320
+      "total_points": 3120
     },
     {
       "name": "Пыжова Алена",
-      "rank": 19,
+      "rank": 30,
       "birth_year": 1988,
       "region": "Санкт-Петербург",
       "category": "женщины",
@@ -805,27 +1246,27 @@
         "event_name": "Чемпионат России",
         "event_year": "2024",
         "place": 15,
-        "points": 3320
+        "points": 3120
       },
       "years": {
         "2024": {
-          "year_total_points": 3320,
+          "year_total_points": 3120,
           "events": [
             {
               "event_name": "Чемпионат России",
               "place": 15,
-              "points": 3320,
+              "points": 3120,
               "group": "main",
               "participants_count": 18
             }
           ]
         }
       },
-      "total_points": 3320
+      "total_points": 3120
     },
     {
       "name": "Шабалина Людмила",
-      "rank": 20,
+      "rank": 31,
       "birth_year": 1991,
       "region": "Санкт-Петербург",
       "category": "женщины",
@@ -855,7 +1296,7 @@
     },
     {
       "name": "Любешкина Дарья",
-      "rank": 21,
+      "rank": 32,
       "birth_year": 1986,
       "region": "Краснодарский край",
       "category": "женщины",
@@ -885,7 +1326,7 @@
     },
     {
       "name": "Бланк Мария",
-      "rank": 22,
+      "rank": 33,
       "birth_year": 1992,
       "region": "Калининградская область",
       "category": "женщины",
@@ -911,138 +1352,6 @@
           ]
         }
       },
-      "total_points": 0
-    },
-    {
-      "name": "Мализия Полина",
-      "rank": 23,
-      "birth_year": 2000,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Боярова Полина",
-      "rank": 24,
-      "birth_year": 1985,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Кособукина Ирина",
-      "rank": 25,
-      "birth_year": 1987,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Юсова Анна",
-      "rank": 26,
-      "birth_year": 1985,
-      "region": "Калининградская область",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Ким Ольга",
-      "rank": 27,
-      "birth_year": 1988,
-      "region": "Санкт-Петербург",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Рудик Майя",
-      "rank": 28,
-      "birth_year": 1984,
-      "region": "Московская область",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Больсова Елена",
-      "rank": 29,
-      "birth_year": 1983,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Шемна Ольга",
-      "rank": 30,
-      "birth_year": 1987,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Максимова Елизавета",
-      "rank": 31,
-      "birth_year": 1988,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Мысовская Дина",
-      "rank": 32,
-      "birth_year": 1984,
-      "region": "Санкт-Петербург",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
-      "total_points": 0
-    },
-    {
-      "name": "Нарышкина Вероника",
-      "rank": 33,
-      "birth_year": 1988,
-      "region": "Москва",
-      "category": "женщины",
-      "sport_rank": "",
-      "last_year": 0,
-      "best_result": null,
-      "years": {},
       "total_points": 0
     }
   ]

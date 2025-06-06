@@ -42,9 +42,9 @@ def apply_participation_bonus(points: int, is_dns: bool, config: Dict) -> int:
         return points + config['bonuses']['participation']['points']
     return points
 
-def apply_rank_bonus(total: int, rank: str, config: Dict) -> int:
-    if config['bonuses']['rank']['enabled']:
-        return total + config['bonuses']['rank']['values'].get(rank, 0)
+def apply_sport_rank_bonus(total: int, sport_rank: str, config: Dict) -> int:
+    if config['bonuses']['sport_rank']['enabled']:
+        return total + config['bonuses']['sport_rank']['values'].get(rank, 0)
     return total
 
 def process_year_points(year: int, event_data: Dict, config: Dict) -> Dict:
@@ -134,7 +134,7 @@ def process_athletes(data: Dict, config: Dict) -> List[Dict]:
                 'points': best_event['points']
             }
 
-        total_points = apply_rank_bonus(total_points, entry['sport_rank'], config)
+        total_points = apply_sport_rank_bonus(total_points, entry['sport_rank'], config)
         entry['total_points'] = total_points
         results.append(entry)
 
