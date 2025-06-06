@@ -28,51 +28,10 @@ const COMPETITIONS = {
 
 let currentCompetition = 'rfs/rus';
 let currentDiscipline = 'shortboard';
-let currentYear = 'all';
-let sortDirection = 'desc'; // 'asc' или 'desc'
-let sortColumn = 'total'; // 'total', 'year' или 'best'
-
-function sortAthletes(athletes, athleteYearData) {
-    return [...athletes].sort((a, b) => {
-        let valueA, valueB;
-
-        if (sortColumn === 'total') {
-            valueA = a.total_points;
-            valueB = b.total_points;
-        } else if (sortColumn === 'year' && currentYear !== 'all') {
-            const aYearData = athleteYearData[a.name]?.[currentYear];
-            const bYearData = athleteYearData[b.name]?.[currentYear];
-            valueA = aYearData?.year_points ?? -1;
-            valueB = bYearData?.year_points ?? -1;
-        } else if (sortColumn === 'best') {
-            valueA = a.best_result?.place ?? Number.MAX_SAFE_INTEGER;
-            valueB = b.best_result?.place ?? Number.MAX_SAFE_INTEGER;
-        } else {
-            return a.rank - b.rank;
-        }
-
-        if (valueA === -1) valueA = sortDirection === 'asc' ? Number.MAX_SAFE_INTEGER : Number.MIN_SAFE_INTEGER;
-        if (valueB === -1) valueB = sortDirection === 'asc' ? Number.MAX_SAFE_INTEGER : Number.MIN_SAFE_INTEGER;
-
-        return sortDirection === 'asc' ? valueA - valueB : valueB - valueA;
-    });
-}
 
 function getYearsRange(data) {
     if (!data.year_rankings) return [];
     return Object.keys(data.year_rankings).sort((a, b) => a - b);
-}
-
-function updateYearSelect(years) {
-    const yearSelect = document.getElementById('year-select');
-    yearSelect.innerHTML = '<option value="all">Все года</option>';
-
-    years.sort((a, b) => b - a).forEach(year => {
-        const option = document.createElement('option');
-        option.value = year;
-        option.textContent = year;
-        yearSelect.appendChild(option);
-    });
 }
 
 function showTooltip(id) {
@@ -86,20 +45,14 @@ function hideTooltip(id) {
 }
 
 function createAthleteRow(athlete, years, athleteYearData) {
-    const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
-    const initials = (surname[0] || '') + (firstName[0] || '');
-    const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-    const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
-
     const bestResult = athlete.best_result
         ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
         : 'Нет данных';
 
-    const totalHeaderClass = sortColumn === 'total' ? `sorted ${sortDirection}` : '';
-    const bestHeaderClass = sortColumn === 'best' ? `sorted ${sortDirection}` : '';
-    const yearHeaderClass = sortColumn === 'year' && currentYear !== 'all'
-        ? `sorted ${sortDirection}`
-        : '';
+    const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
+    const initials = (surname[0] || '') + (firstName[0] || '');
+    const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
+    const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
 
     const yearCells = years.map(year => {
         const yearData = athleteYearData[athlete.name]?.[year];
@@ -131,9 +84,6 @@ function createAthleteRow(athlete, years, athleteYearData) {
 
     const isTop10 = athlete.rank <= 10;
     const rowClass = isTop10 ? 'top-10' : '';
-    const totalPointsDisplay = years.length === 1 && years[0] !== 'all'
-        ? (athleteYearData[athlete.name]?.[years[0]]?.year_points || '—')
-        : athlete.total_points;
 
     return `
         <tr class="${rowClass}">
@@ -151,9 +101,9 @@ function createAthleteRow(athlete, years, athleteYearData) {
                     </div>
                 </div>
             </td>
-            <td class="year-points ${bestHeaderClass}" data-sort="best">${bestResult}</td>
+            <td class="year-points">${bestResult}</td>
             ${yearCells}
-            <td class="total-points fw-bold ${totalHeaderClass}" data-sort="total">${totalPointsDisplay}</td>
+            <td class="total-points fw-bold">${athlete.total_points}</td>
         </tr>
     `;
 }
@@ -182,7 +132,7 @@ async function loadData(competition, category, gender) {
             }
         }
         data.athleteYearData = athleteYearData;
-        currentYear = 'all';
+
         return data;
     } catch (error) {
         console.error('Error loading data:', error);
@@ -193,11 +143,8 @@ async function loadData(competition, category, gender) {
 
 async function updateTable(gender) {
     const data = await loadData(currentCompetition, currentDiscipline, gender);
+    const athletes = data.overall_ranking || [];
     const years = getYearsRange(data);
-    updateYearSelect(years);
-    const displayYears = currentYear === 'all' ? years : [currentYear];
-    let athletes = data.overall_ranking || [];
-    athletes = sortAthletes(athletes, data.athleteYearData);
 
     if (athletes.length === 0) {
         document.getElementById('ranking-table-container').innerHTML = '<p class="text-center py-4">Нет данных для отображения</p>';
@@ -210,15 +157,13 @@ async function updateTable(gender) {
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Имя</th>
-                    <th scope="col" data-sort="best">Лучший результат</th>
-                    ${displayYears.map(year => `
-                        <th scope="col" data-sort="year">${year}</th>
-                    `).join('')}
-                    <th scope="col" data-sort="total">Всего</th>
+                    <th scope="col">Лучший результат</th>
+                    ${years.map(year => `<th scope="col">${year}</th>`).join('')}
+                    <th scope="col">Всего</th>
                 </tr>
             </thead>
             <tbody>
-                ${athletes.map(a => createAthleteRow(a, displayYears, data.athleteYearData)).join('')}
+                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData)).join('')}
             </tbody>
         </table>
     `;
@@ -287,29 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('discipline-select').addEventListener('change', function(e) {
         currentDiscipline = e.target.value;
-        const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
-        updateTable(activeGender);
-    });
-
-    document.getElementById('year-select').addEventListener('change', function(e) {
-        currentYear = e.target.value;
-        const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
-        updateTable(activeGender);
-    });
-
-    document.getElementById('ranking-table-container').addEventListener('click', function(e) {
-        const header = e.target.closest('th[data-sort], td[data-sort]');
-        if (!header) return;
-
-        const column = header.dataset.sort;
-
-        if (column === sortColumn) {
-            sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-        } else {
-            sortColumn = column;
-            sortDirection = 'desc';
-        }
-
         const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
         updateTable(activeGender);
     });
