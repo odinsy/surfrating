@@ -233,3 +233,41 @@ tr.top-10:hover {
         margin-top: 5px;
     }
 }
+
+/* data sorting */
+th[data-sort],
+td[data-sort] {
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+th[data-sort]:hover,
+td[data-sort]:hover {
+    background-color: rgba(17, 45, 78, 0.05);
+}
+
+.sorted::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.sorted.asc::after {
+    border-bottom: 5px solid #112D4E;
+}
+
+.sorted.desc::after {
+    border-top: 5px solid #112D4E;
+}
+
+.total-points.sorted,
+.year-points.sorted {
+    background-color: rgba(17, 45, 78, 0.1);
+}
