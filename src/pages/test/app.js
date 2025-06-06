@@ -28,10 +28,23 @@ const COMPETITIONS = {
 
 let currentCompetition = 'rfs/rus';
 let currentDiscipline = 'shortboard';
+let currentYear = 'all';
 
 function getYearsRange(data) {
     if (!data.year_rankings) return [];
     return Object.keys(data.year_rankings).sort((a, b) => a - b);
+}
+
+function updateYearSelect(years) {
+    const yearSelect = document.getElementById('year-select');
+    yearSelect.innerHTML = '<option value="all">Все года</option>';
+
+    years.sort((a, b) => b - a).forEach(year => {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        yearSelect.appendChild(option);
+    });
 }
 
 function showTooltip(id) {
@@ -84,6 +97,9 @@ function createAthleteRow(athlete, years, athleteYearData) {
 
     const isTop10 = athlete.rank <= 10;
     const rowClass = isTop10 ? 'top-10' : '';
+    const totalPointsDisplay = years.length === 1 && years[0] !== 'all'
+        ? (athleteYearData[athlete.name]?.[years[0]]?.year_points || '—')
+        : athlete.total_points;
 
     return `
         <tr class="${rowClass}">
@@ -103,7 +119,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
             </td>
             <td class="year-points">${bestResult}</td>
             ${yearCells}
-            <td class="total-points fw-bold">${athlete.total_points}</td>
+            <td class="total-points fw-bold">${totalPointsDisplay}</td>
         </tr>
     `;
 }
@@ -146,6 +162,9 @@ async function updateTable(gender) {
     const athletes = data.overall_ranking || [];
     const years = getYearsRange(data);
 
+    updateYearSelect(years);
+    const displayYears = currentYear === 'all' ? years : [currentYear];
+
     if (athletes.length === 0) {
         document.getElementById('ranking-table-container').innerHTML = '<p class="text-center py-4">Нет данных для отображения</p>';
         return;
@@ -158,12 +177,12 @@ async function updateTable(gender) {
                     <th scope="col">#</th>
                     <th scope="col">Имя</th>
                     <th scope="col">Лучший результат</th>
-                    ${years.map(year => `<th scope="col">${year}</th>`).join('')}
+                    ${displayYears.map(year => `<th scope="col">${year}</th>`).join('')}
                     <th scope="col">Всего</th>
                 </tr>
             </thead>
             <tbody>
-                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData)).join('')}
+                ${athletes.map(a => createAthleteRow(a, displayYears, data.athleteYearData)).join('')}
             </tbody>
         </table>
     `;
@@ -232,6 +251,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('discipline-select').addEventListener('change', function(e) {
         currentDiscipline = e.target.value;
+        const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
+        updateTable(activeGender);
+    });
+
+    document.getElementById('year-select').addEventListener('change', function(e) {
+        currentYear = e.target.value;
         const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
         updateTable(activeGender);
     });
