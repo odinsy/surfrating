@@ -148,7 +148,7 @@ async function loadData(competition, category, gender) {
             }
         }
         data.athleteYearData = athleteYearData;
-
+        currentYear = 'all';
         return data;
     } catch (error) {
         console.error('Error loading data:', error);
