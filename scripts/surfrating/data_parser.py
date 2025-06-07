@@ -54,7 +54,8 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
 
     athlete = athletes[athlete_name]
     athlete['years'][event_year][event_name] = {
-        'place': place
+        'place': place,
+        'group': event_group
     }
     athlete['regions'][event_year]     = athlete_region
     athlete['sport_ranks'][event_year] = athlete_sport_rank

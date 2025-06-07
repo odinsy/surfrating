@@ -68,40 +68,6 @@ def save_to_csv(results: List[Dict], headers: List[str], years: List[int], confi
             row = prepare_row_data(athlete, years)
             writer.writerow(row)
 
-def save_to_json(results: List[Dict], headers: List[str], config: Dict, output_filename: str = None) -> None:
-    output_path = _resolve_output_path(
-        output_filename,
-        config,
-        default_suffix='.json'
-    )
-
-    json_athletes = []
-    for athlete in results:
-        json_athlete = {
-            'name': athlete['name'],
-            'rank': athlete['rank'],
-            'birth_year': athlete['birth_year'],
-            'region': athlete['region'],
-            'category': athlete['category'],
-            'sport_rank': athlete['sport_rank'],
-            'last_year': athlete['last_year'],
-            'best_result': athlete.get('best_result', {}),
-            'years': {
-                year: {
-                    'year_total_points': data['year_total_points'],
-                    'events': data['events']
-                } for year, data in athlete['years'].items()
-            },
-            'total_points': athlete['total_points']
-        }
-        json_athletes.append(json_athlete)
-
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump({
-            'headers': headers,
-            'athletes': json_athletes
-        }, f, ensure_ascii=False, indent=2)
-
 def save_ranking_json(results: List[Dict], config: Dict, output_filename: str = None) -> None:
     output_path = _resolve_output_path(
         output_filename,
@@ -175,7 +141,6 @@ def generate_output(results: List[Dict], config: Dict) -> None:
     headers, years = prepare_headers_and_years(results, config)
 
     save_to_csv(results, headers, years, config)
-    save_to_json(results, headers, config)
     save_ranking_json(results, config)
     print_to_console(results, headers, years, config)
 
