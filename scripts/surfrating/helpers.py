@@ -1,6 +1,21 @@
 import string
 import hashlib
+import csv
+import pandas as pd
 from typing import Dict, Any
+
+def validate_csv_columns(reader, required_columns: list, file_path: str) -> None:
+    if reader.fieldnames is None:
+        raise ValueError(f"CSV file {file_path} has no header")
+    missing = [col for col in required_columns if col not in reader.fieldnames]
+    if missing:
+        raise ValueError(f"CSV file {file_path} is missing required columns: {', '.join(missing)}")
+
+def read_csv_file(file_path: str, required_columns: list) -> list:
+    with open(file_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='|')
+        validate_csv_columns(reader, required_columns, file_path)
+        return list(reader)
 
 def normalize_string(s: str) -> str:
     s = s.strip().lower()
@@ -22,3 +37,25 @@ def generate_event_id(event_name: str, event_date: str, discipline: str, categor
 
     base_string = f"{normalized_name}_{normalized_date}_{normalized_discipline}_{normalized_category}"
     return hashlib.md5(base_string.encode('utf-8')).hexdigest()[:8]
+
+def extract_year(date_str: str) -> int:
+    try:
+        date = pd.to_datetime(date_str, dayfirst=True, errors='coerce')
+        if not pd.isnull(date):
+            return date.year
+
+        match = re.search(r'\b\d{4}\b', date_str)
+        if match:
+            return int(match.group())
+
+        return 0
+    except Exception:
+        return 0
+
+def get_event_group(event_name: str, config: Dict) -> str:
+    for group_name, group_data in config['event_groups'].items():
+        patterns = group_data.get('events', [])
+        for pattern in patterns:
+            if pattern in event_name:
+                return group_name
+    return 'default'

@@ -4,33 +4,7 @@ import re
 import pandas as pd
 from collections import defaultdict
 from typing import Dict
-
-def extract_year(date_str: str) -> int:
-    try:
-        date = pd.to_datetime(date_str, dayfirst=True, errors='coerce')
-        if not pd.isnull(date):
-            return date.year
-
-        match = re.search(r'\b\d{4}\b', date_str)
-        if match:
-            return int(match.group())
-
-        return 0
-    except Exception:
-        return 0
-
-def get_event_group(event_name: str, config: Dict) -> str:
-    for group_name, group_data in config['event_groups'].items():
-        patterns = group_data.get('events', [])
-        for pattern in patterns:
-            if pattern in event_name:
-                return group_name
-    return 'default'
-
-def _validate_csv_columns(reader, file_path: str) -> None:
-    required = ['Год', 'Событие', 'ФИО', 'Год рождения', 'Регион', 'Разряд', 'Место']
-    if not all(col in reader.fieldnames for col in required):
-        raise ValueError(f"Invalid columns in {file_path}")
+from helpers import read_csv_file, extract_year, get_event_group
 
 def _process_row(row: dict, athletes: dict, config: Dict, event_participants: dict) -> None:
     event_name         = row['Событие'].strip()
@@ -42,7 +16,7 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
     event_year         = int(row['Год'])
     event_date         = row['Дата'].strip()
     event_category     = row.get('Категория', '')
-    place        = row['Место'].strip().upper()
+    place              = row['Место'].strip().upper()
     athlete_name       = ' '.join(row['ФИО'].split()[:2])
     athlete_region     = row['Регион'].strip()
     athlete_sport_rank = row['Разряд'].strip()
@@ -77,15 +51,29 @@ def parse_files(config: Dict) -> Dict[str, Dict]:
         'sport_ranks': defaultdict(str),
         'last_year': 0
     })
+
+    required_columns = [
+        'Год',
+        'Дата',
+        'Событие',
+        'ФИО',
+        'Год рождения',
+        'Регион',
+        'Разряд',
+        'Место'
+    ]
+
     event_participants = defaultdict(set)
 
     for pattern in config['input_paths']:
         for file_path in glob.glob(pattern):
-            with open(file_path, 'r', encoding='utf-8') as f:
-                reader = csv.DictReader(f, delimiter='|')
-                _validate_csv_columns(reader, file_path)
-                for row in reader:
+            try:
+                rows = read_csv_file(file_path, required_columns)
+                for row in rows:
                     _process_row(row, athletes, config, event_participants)
+            except ValueError as e:
+                print(f"Пропущен файл {file_path}: {str(e)}")
+                continue
 
     for athlete in athletes.values():
         for year, events_dict in athlete['years'].items():
