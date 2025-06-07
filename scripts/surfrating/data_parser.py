@@ -41,21 +41,20 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
 
     event_year         = int(row['Год'])
     event_date         = row['Дата'].strip()
-    event_place        = row['Место'].strip().upper()
     event_category     = row.get('Категория', '')
+    place        = row['Место'].strip().upper()
     athlete_name       = ' '.join(row['ФИО'].split()[:2])
     athlete_region     = row['Регион'].strip()
     athlete_sport_rank = row['Разряд'].strip()
     athlete_birth_year = extract_year(row['Год рождения'])
 
-    if event_place != 'DNS':
+    if place != 'DNS':
         event_key = (event_year, event_name)
         event_participants[event_key].add(athlete_name)
 
     athlete = athletes[athlete_name]
     athlete['years'][event_year][event_name] = {
-        'place': event_place,
-        'group': event_group
+        'place': place
     }
     athlete['regions'][event_year]     = athlete_region
     athlete['sport_ranks'][event_year] = athlete_sport_rank
