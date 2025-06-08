@@ -3,6 +3,7 @@ import hashlib
 import csv
 import re
 import pandas as pd
+from datetime import datetime
 from typing import Dict, Any
 
 def validate_csv_columns(reader, required_columns: list, file_path: str) -> None:
