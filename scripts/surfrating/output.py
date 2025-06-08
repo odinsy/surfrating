@@ -5,13 +5,9 @@ from collections import defaultdict
 from pathlib import Path
 from typing import List, Dict, Optional, Union
 from anonymization import apply_anonymization
+from helpers import generate_event_id
 
-def _resolve_output_path(
-    output_filename: Optional[str],
-    config: Dict,
-    key: Optional[str] = None,
-    default_suffix: Optional[str] = None
-) -> Path:
+def _resolve_output_path(output_filename: Optional[str], config: Dict, key: Optional[str] = None, default_suffix: Optional[str] = None) -> Path:
     """Обрабатывает пути для выходных файлов с учетом конфигурации"""
     if output_filename:
         path = Path(output_filename)
@@ -68,22 +64,31 @@ def save_to_csv(results: List[Dict], headers: List[str], years: List[int], confi
             row = prepare_row_data(athlete, years)
             writer.writerow(row)
 
-def save_ranking_json(results: List[Dict], config: Dict, output_filename: str = None) -> None:
-    output_path = _resolve_output_path(
-        output_filename,
-        config,
-        key='ranking_json'
-    )
+def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, output_filename: str = None) -> None:
+    output_path = _resolve_output_path(output_filename, config, key='ranking_json')
 
     transformed = {
         "discipline": config.get("discipline", "unknown"),
         "gender": config.get("gender", "unknown"),
         "last_updated": datetime.now().date().isoformat(),
+        "events": {},
         "year_rankings": {},
         "overall_ranking": []
     }
 
     year_athletes = defaultdict(list)
+
+    for event_id, event_data in events_info.items():
+        transformed["events"][f"{event_data['year']}_{event_id[:4]}"] = {
+            "id": event_id,
+            "name": event_data['name'],
+            "year": event_data['year'],
+            "discipline": event_data['discipline'],
+            "category": event_data['category'],
+            "group": event_data['group'],
+            "participants_count": event_data['participants_count']
+        }
+
     for athlete in results:
         overall_entry = {
             "rank": athlete["rank"],
@@ -134,14 +139,14 @@ def print_to_console(results: List[Dict], headers: List[str], years: List[int], 
         row = prepare_row_data(athlete, years)
         print(','.join(map(str, row)))
 
-def generate_output(results: List[Dict], config: Dict) -> None:
+def generate_output(results: List[Dict], config: Dict, events_info: Dict) -> None:
     for idx, athlete in enumerate(results, 1):
         athlete['rank'] = idx
 
     headers, years = prepare_headers_and_years(results, config)
 
     save_to_csv(results, headers, years, config)
-    save_ranking_json(results, config)
+    save_ranking_json(results, config, events_info)
     print_to_console(results, headers, years, config)
 
     if 'top5_filename' in config['output']:
@@ -150,5 +155,5 @@ def generate_output(results: List[Dict], config: Dict) -> None:
         json_path = Path(csv_path).with_suffix('.json')
 
         save_to_csv(top5, headers, years, config, csv_path)
-        save_ranking_json(top5, config, json_path)
+        save_ranking_json(top5, config, events_info, json_path)
         print_to_console(top5, headers, years, config)
