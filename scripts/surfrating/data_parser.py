@@ -4,7 +4,7 @@ import re
 import pandas as pd
 from collections import defaultdict
 from typing import Dict
-from helpers import read_csv_file, extract_year, get_event_group, generate_event_id
+from helpers import read_csv_file, extract_year, get_event_group, generate_event_id, generate_athlete_id
 
 def _process_row(row: dict, athletes: dict, config: Dict, event_participants: dict, events_info: dict) -> None:
     event_name       = row['Событие'].strip()
@@ -40,6 +40,7 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
 
     athlete = athletes[athlete_name]
     athlete['years'][event_year][event_name] = {
+        'event_id': event_id,
         'place': place,
         'group': event_group
     }

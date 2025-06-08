@@ -64,7 +64,7 @@ def save_to_csv(results: List[Dict], headers: List[str], years: List[int], confi
             row = prepare_row_data(athlete, years)
             writer.writerow(row)
 
-def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, output_filename: str = None) -> None:
+def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, all_results: List, output_filename: str = None) -> None:
     output_path = _resolve_output_path(output_filename, config, key='ranking_json')
 
     transformed = {
@@ -73,6 +73,7 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
         "last_updated": datetime.now().date().isoformat(),
         "events": {},
         "athletes": {},
+        "results": all_results,
         "year_rankings": {},
         "overall_ranking": []
     }
@@ -145,21 +146,25 @@ def print_to_console(results: List[Dict], headers: List[str], years: List[int], 
         row = prepare_row_data(athlete, years)
         print(','.join(map(str, row)))
 
-def generate_output(results: List[Dict], config: Dict, events_info: Dict) -> None:
+def generate_output(results: List[Dict], config: Dict, events_info: Dict, all_results: List) -> None:
     for idx, athlete in enumerate(results, 1):
         athlete['rank'] = idx
 
     headers, years = prepare_headers_and_years(results, config)
 
     save_to_csv(results, headers, years, config)
-    save_ranking_json(results, config, events_info)
+    save_ranking_json(results, config, events_info, all_results)
     print_to_console(results, headers, years, config)
 
     if 'top5_filename' in config['output']:
         top5 = results[:5]
+        top5_results = [
+            res for res in all_results
+            if res['athlete_id'] in {a['athlete_id'] for a in top5}
+        ]
         csv_path = config['output']['top5_filename']
         json_path = Path(csv_path).with_suffix('.json')
 
         save_to_csv(top5, headers, years, config, csv_path)
-        save_ranking_json(top5, config, events_info, json_path)
+        save_ranking_json(top5, config, events_info, top5_results, json_path)
         print_to_console(top5, headers, years, config)

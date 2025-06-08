@@ -23,15 +23,15 @@ def setup_arg_parser() -> argparse.Namespace:
 
 def main():
     try:
-        args              = setup_arg_parser()
-        config            = load_config(args.config)
-        data, events_info = parse_files(config)
-        results           = process_athletes(data, config)
+        args                 = setup_arg_parser()
+        config               = load_config(args.config)
+        data, events_info    = parse_files(config)
+        results, all_results = process_athletes(data, config)
 
         for idx, athlete in enumerate(results, 1):
             athlete["rank"] = idx
 
-        generate_output(results, config, events_info)
+        generate_output(results, config, events_info, all_results)
 
     except Exception as e:
         print(f"Ошибка: {str(e)}")
