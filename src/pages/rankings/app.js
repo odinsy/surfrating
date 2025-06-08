@@ -1,4 +1,5 @@
 const JSON_BASE_PATH = '../../data/rankings/';
+const AVATARS_ENABLED = false;
 const transliterate = window.slugify;
 
 const COMPETITIONS = {
@@ -52,7 +53,23 @@ function createAthleteRow(athlete, years, athleteYearData) {
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
     const initials = (surname[0] || '') + (firstName[0] || '');
     const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-    const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
+
+    let avatarPath = '';
+    if (AVATARS_ENABLED) {
+        avatarPath = athlete.avatar_path
+            || `../../img/avatars/${avatarSlug}.jpg`;
+    }
+
+    let avatarHTML = '';
+    if (AVATARS_ENABLED) {
+        avatarHTML = `
+            <img src="${avatarPath}" alt="${athlete.name}"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="avatar-fallback">${initials}</div>
+        `;
+    } else {
+        avatarHTML = `<div class="avatar-fallback" style="display:flex">${initials}</div>`;
+    }
 
     const yearCells = years.map(year => {
         const yearData = athleteYearData[athlete.name]?.[year];
@@ -91,9 +108,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
             <td class="name-cell">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
-                        <img src="${avatarPath}" alt="${athlete.name}"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="avatar-fallback">${initials}</div>
+                        ${avatarHTML}
                     </div>
                     <div>
                         <div class="athlete-name">${athlete.name}</div>
