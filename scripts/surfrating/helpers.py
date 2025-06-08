@@ -48,13 +48,8 @@ def extract_year(date_str: str) -> int:
         date = pd.to_datetime(date_str, dayfirst=True, errors='coerce')
         if not pd.isnull(date):
             return date.year
-
         match = re.search(r'\b\d{4}\b', date_str)
-        if match:
-            year = int(match.group())
-            if 1900 <= year <= datetime.now().year:
-                return year
-        return 0
+        return
     except Exception:
         return 0
 def get_event_group(event_name: str, config: Dict) -> str:

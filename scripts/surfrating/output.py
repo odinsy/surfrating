@@ -147,9 +147,6 @@ def print_to_console(results: List[Dict], headers: List[str], years: List[int], 
         print(','.join(map(str, row)))
 
 def generate_output(results: List[Dict], config: Dict, events_info: Dict, all_results: List) -> None:
-    for idx, athlete in enumerate(results, 1):
-        athlete['rank'] = idx
-
     headers, years = prepare_headers_and_years(results, config)
 
     save_to_csv(results, headers, years, config)

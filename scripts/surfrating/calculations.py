@@ -160,4 +160,7 @@ def process_athletes(data: Dict, config: Dict) -> Tuple[List[Dict], List[Dict]]:
     else:
         sorted_results = sorted(results, key=lambda x: -x['total_points'])
 
+    for rank, athlete in enumerate(sorted_results, 1):
+        athlete['rank'] = rank
+
     return sorted_results, all_results

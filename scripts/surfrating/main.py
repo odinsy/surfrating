@@ -28,9 +28,6 @@ def main():
         data, events_info    = parse_files(config)
         results, all_results = process_athletes(data, config)
 
-        for idx, athlete in enumerate(results, 1):
-            athlete["rank"] = idx
-
         generate_output(results, config, events_info, all_results)
 
     except Exception as e:
