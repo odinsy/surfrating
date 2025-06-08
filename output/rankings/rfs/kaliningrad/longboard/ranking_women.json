@@ -1,150 +1,298 @@
 {
   "discipline": "longboard",
   "gender": "women",
-  "last_updated": "2025-06-05",
+  "last_updated": "2025-06-08",
+  "events": {
+    "c291d90a": {
+      "id": "c291d90a",
+      "name": "Чемпионат Калининградской области",
+      "year": 2023,
+      "date": "2023.06.10",
+      "discipline": "длинная доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 8
+    },
+    "e2ad63b2": {
+      "id": "e2ad63b2",
+      "name": "Чемпионат Калининградской области",
+      "year": 2024,
+      "date": "2024.06.01-30",
+      "discipline": "длинная доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 8
+    }
+  },
+  "athletes": {
+    "cb76fb30": {
+      "name": "Матвеева Анна",
+      "region": "Калининградская область",
+      "sport_rank": "КМС",
+      "birth_year": 1985
+    },
+    "10fb67b6": {
+      "name": "Тихонова Анна",
+      "region": "Калининградская область",
+      "sport_rank": "КМС",
+      "birth_year": 1997
+    },
+    "f667db3b": {
+      "name": "Бланк Мария",
+      "region": "Калининградская область",
+      "sport_rank": "3",
+      "birth_year": 1992
+    },
+    "0054d720": {
+      "name": "Данькова Елизавета",
+      "region": "Калининградская область",
+      "sport_rank": "без разряда",
+      "birth_year": 2000
+    },
+    "d7307208": {
+      "name": "Герасимова Екатерина",
+      "region": "Калининградская область",
+      "sport_rank": "3",
+      "birth_year": 1986
+    },
+    "254abd8d": {
+      "name": "Климова Наталья",
+      "region": "Калининградская область",
+      "sport_rank": "без разряда",
+      "birth_year": 0
+    },
+    "8bfb6ee1": {
+      "name": "Романовская Ева",
+      "region": "Калининградская область",
+      "sport_rank": "3",
+      "birth_year": 2007
+    },
+    "fee42324": {
+      "name": "Климова Мария",
+      "region": "Калининградская область",
+      "sport_rank": "3",
+      "birth_year": 0
+    },
+    "4479fbbe": {
+      "name": "Бороденкова Екатерина",
+      "region": "Калининградская область",
+      "sport_rank": "без разряда",
+      "birth_year": 0
+    },
+    "61b162e3": {
+      "name": "Иванова Екатерина",
+      "region": "Калининградская область",
+      "sport_rank": "без разряда",
+      "birth_year": 1992
+    },
+    "4f8b5330": {
+      "name": "Матвеева Мария",
+      "region": "Калининградская область",
+      "sport_rank": "без разряда",
+      "birth_year": 1982
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "10fb67b6",
+      "event_id": "c291d90a",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "10fb67b6",
+      "event_id": "e2ad63b2",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "cb76fb30",
+      "event_id": "c291d90a",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "cb76fb30",
+      "event_id": "e2ad63b2",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "f667db3b",
+      "event_id": "c291d90a",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "f667db3b",
+      "event_id": "e2ad63b2",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "254abd8d",
+      "event_id": "c291d90a",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "fee42324",
+      "event_id": "c291d90a",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "d7307208",
+      "event_id": "c291d90a",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "d7307208",
+      "event_id": "e2ad63b2",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "4479fbbe",
+      "event_id": "c291d90a",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "0054d720",
+      "event_id": "c291d90a",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "0054d720",
+      "event_id": "e2ad63b2",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "8bfb6ee1",
+      "event_id": "e2ad63b2",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "61b162e3",
+      "event_id": "e2ad63b2",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "4f8b5330",
+      "event_id": "e2ad63b2",
+      "place": 8,
+      "points": 4545
+    }
+  ],
   "year_rankings": {
     "2023": {
       "athletes": [
         {
-          "name": "Тихонова Анна",
-          "region": "Калининградская область",
-          "sport_rank": "КМС",
-          "birth_year": 1997,
+          "athlete_id": "10fb67b6",
           "year_points": 10000,
           "total_points": 17800,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "c291d90a",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 8
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Матвеева Анна",
-          "region": "Калининградская область",
-          "sport_rank": "КМС",
-          "birth_year": 1985,
+          "athlete_id": "cb76fb30",
           "year_points": 7800,
           "total_points": 17800,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "c291d90a",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 8
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Бланк Мария",
-          "region": "Калининградская область",
-          "sport_rank": "3",
-          "birth_year": 1992,
+          "athlete_id": "f667db3b",
           "year_points": 6085,
           "total_points": 12170,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "c291d90a",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 8
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Климова Наталья",
-          "region": "Калининградская область",
-          "sport_rank": "без разряда",
-          "birth_year": 0,
+          "athlete_id": "254abd8d",
           "year_points": 5685,
           "total_points": 5685,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "c291d90a",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 8
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Данькова Елизавета",
-          "region": "Калининградская область",
-          "sport_rank": "без разряда",
-          "birth_year": 2000,
+          "athlete_id": "0054d720",
           "year_points": 4745,
           "total_points": 10430,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "c291d90a",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Герасимова Екатерина",
-          "region": "Калининградская область",
-          "sport_rank": "3",
-          "birth_year": 1986,
+          "athlete_id": "d7307208",
           "year_points": 4745,
           "total_points": 9490,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "c291d90a",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Климова Мария",
-          "region": "Калининградская область",
-          "sport_rank": "3",
-          "birth_year": 0,
+          "athlete_id": "fee42324",
           "year_points": 4745,
           "total_points": 4745,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "c291d90a",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Бороденкова Екатерина",
-          "region": "Калининградская область",
-          "sport_rank": "без разряда",
-          "birth_year": 0,
+          "athlete_id": "4479fbbe",
           "year_points": 4745,
           "total_points": 4745,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "c291d90a",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 5
@@ -154,145 +302,105 @@
     "2024": {
       "athletes": [
         {
-          "name": "Матвеева Анна",
-          "region": "Калининградская область",
-          "sport_rank": "КМС",
-          "birth_year": 1985,
+          "athlete_id": "cb76fb30",
           "year_points": 10000,
           "total_points": 17800,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "e2ad63b2",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 8
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Тихонова Анна",
-          "region": "Калининградская область",
-          "sport_rank": "КМС",
-          "birth_year": 1997,
+          "athlete_id": "10fb67b6",
           "year_points": 7800,
           "total_points": 17800,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "e2ad63b2",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 8
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Бланк Мария",
-          "region": "Калининградская область",
-          "sport_rank": "3",
-          "birth_year": 1992,
+          "athlete_id": "f667db3b",
           "year_points": 6085,
           "total_points": 12170,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "e2ad63b2",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 8
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Данькова Елизавета",
-          "region": "Калининградская область",
-          "sport_rank": "без разряда",
-          "birth_year": 2000,
+          "athlete_id": "0054d720",
           "year_points": 5685,
           "total_points": 10430,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "e2ad63b2",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 8
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Герасимова Екатерина",
-          "region": "Калининградская область",
-          "sport_rank": "3",
-          "birth_year": 1986,
+          "athlete_id": "d7307208",
           "year_points": 4745,
           "total_points": 9490,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "e2ad63b2",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Романовская Ева",
-          "region": "Калининградская область",
-          "sport_rank": "3",
-          "birth_year": 2007,
+          "athlete_id": "8bfb6ee1",
           "year_points": 4745,
           "total_points": 4745,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "e2ad63b2",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Иванова Екатерина",
-          "region": "Калининградская область",
-          "sport_rank": "без разряда",
-          "birth_year": 1992,
+          "athlete_id": "61b162e3",
           "year_points": 4545,
           "total_points": 4545,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "e2ad63b2",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 8
+              "points": 4545
             }
           ],
           "rank": 7
         },
         {
-          "name": "Матвеева Мария",
-          "region": "Калининградская область",
-          "sport_rank": "без разряда",
-          "birth_year": 1982,
+          "athlete_id": "4f8b5330",
           "year_points": 4545,
           "total_points": 4545,
           "events": [
             {
-              "event_name": "Чемпионат Калининградской области",
+              "event_id": "e2ad63b2",
               "place": 8,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 8
+              "points": 4545
             }
           ],
           "rank": 7
@@ -302,11 +410,8 @@
   },
   "overall_ranking": [
     {
+      "athlete_id": "cb76fb30",
       "rank": 1,
-      "name": "Матвеева Анна",
-      "region": "Калининградская область",
-      "sport_rank": "КМС",
-      "birth_year": 1985,
       "total_points": 17800,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -321,11 +426,8 @@
       ]
     },
     {
+      "athlete_id": "10fb67b6",
       "rank": 2,
-      "name": "Тихонова Анна",
-      "region": "Калининградская область",
-      "sport_rank": "КМС",
-      "birth_year": 1997,
       "total_points": 17800,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -340,11 +442,8 @@
       ]
     },
     {
+      "athlete_id": "f667db3b",
       "rank": 3,
-      "name": "Бланк Мария",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 1992,
       "total_points": 12170,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -359,11 +458,8 @@
       ]
     },
     {
+      "athlete_id": "0054d720",
       "rank": 4,
-      "name": "Данькова Елизавета",
-      "region": "Калининградская область",
-      "sport_rank": "без разряда",
-      "birth_year": 2000,
       "total_points": 10430,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -378,11 +474,8 @@
       ]
     },
     {
+      "athlete_id": "d7307208",
       "rank": 5,
-      "name": "Герасимова Екатерина",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 1986,
       "total_points": 9490,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -397,11 +490,8 @@
       ]
     },
     {
+      "athlete_id": "254abd8d",
       "rank": 6,
-      "name": "Климова Наталья",
-      "region": "Калининградская область",
-      "sport_rank": "без разряда",
-      "birth_year": 0,
       "total_points": 5685,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -415,11 +505,8 @@
       ]
     },
     {
+      "athlete_id": "8bfb6ee1",
       "rank": 7,
-      "name": "Романовская Ева",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 2007,
       "total_points": 4745,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -433,11 +520,8 @@
       ]
     },
     {
+      "athlete_id": "fee42324",
       "rank": 8,
-      "name": "Климова Мария",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 0,
       "total_points": 4745,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -451,11 +535,8 @@
       ]
     },
     {
+      "athlete_id": "4479fbbe",
       "rank": 9,
-      "name": "Бороденкова Екатерина",
-      "region": "Калининградская область",
-      "sport_rank": "без разряда",
-      "birth_year": 0,
       "total_points": 4745,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -469,11 +550,8 @@
       ]
     },
     {
+      "athlete_id": "61b162e3",
       "rank": 10,
-      "name": "Иванова Екатерина",
-      "region": "Калининградская область",
-      "sport_rank": "без разряда",
-      "birth_year": 1992,
       "total_points": 4545,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -487,11 +565,8 @@
       ]
     },
     {
+      "athlete_id": "4f8b5330",
       "rank": 11,
-      "name": "Матвеева Мария",
-      "region": "Калининградская область",
-      "sport_rank": "без разряда",
-      "birth_year": 1982,
       "total_points": 4545,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",

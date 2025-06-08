@@ -1,42 +1,294 @@
 {
   "discipline": "shortboard",
   "gender": "women",
-  "last_updated": "2025-06-06",
+  "last_updated": "2025-06-08",
+  "events": {
+    "f1722a39": {
+      "id": "f1722a39",
+      "name": "Чемпионат России",
+      "year": 2018,
+      "date": "2018.10.05",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 8
+    },
+    "b8af4c8d": {
+      "id": "b8af4c8d",
+      "name": "Чемпионат России",
+      "year": 2019,
+      "date": "2019.10.07",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 5
+    },
+    "7a85eafa": {
+      "id": "7a85eafa",
+      "name": "Чемпионат России",
+      "year": 2021,
+      "date": "2021.10.05",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 9
+    },
+    "e6504c2c": {
+      "id": "e6504c2c",
+      "name": "Чемпионат России",
+      "year": 2024,
+      "date": "2024.11.06-24",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 18
+    },
+    "2f21770f": {
+      "id": "2f21770f",
+      "name": "Чемпионат России",
+      "year": 2022,
+      "date": "2022.09.19",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 6
+    },
+    "ef45d6ac": {
+      "id": "ef45d6ac",
+      "name": "Чемпионат России",
+      "year": 2023,
+      "date": "2023.09.07-28",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 8
+    },
+    "e49daba8": {
+      "id": "e49daba8",
+      "name": "Чемпионат России",
+      "year": 2017,
+      "date": "2017.09.23",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 7
+    }
+  },
+  "athletes": {
+    "555bb6bd": {
+      "name": "Чудненко Анна",
+      "region": "Санкт-Петербург",
+      "sport_rank": "МС",
+      "birth_year": 1987
+    },
+    "3e04e4d8": {
+      "name": "Тиманина Анжелика",
+      "region": "Москва",
+      "sport_rank": "1",
+      "birth_year": 1989
+    },
+    "dde638ba": {
+      "name": "Тимаревская Анастасия",
+      "region": "Московская область",
+      "sport_rank": "3",
+      "birth_year": 1986
+    },
+    "b1dbec71": {
+      "name": "Галимова Чулпан",
+      "region": "Республика Татарстан",
+      "sport_rank": "КМС",
+      "birth_year": 1987
+    },
+    "91992551": {
+      "name": "Тихолаз Ульяна",
+      "region": "Санкт-Петербург",
+      "sport_rank": "1",
+      "birth_year": 1993
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "555bb6bd",
+      "event_id": "f1722a39",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "555bb6bd",
+      "event_id": "b8af4c8d",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "555bb6bd",
+      "event_id": "7a85eafa",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "555bb6bd",
+      "event_id": "e6504c2c",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "555bb6bd",
+      "event_id": "2f21770f",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "555bb6bd",
+      "event_id": "ef45d6ac",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "555bb6bd",
+      "event_id": "e49daba8",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "3e04e4d8",
+      "event_id": "f1722a39",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "3e04e4d8",
+      "event_id": "7a85eafa",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "3e04e4d8",
+      "event_id": "e6504c2c",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "3e04e4d8",
+      "event_id": "2f21770f",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "3e04e4d8",
+      "event_id": "ef45d6ac",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "3e04e4d8",
+      "event_id": "e49daba8",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "dde638ba",
+      "event_id": "b8af4c8d",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "dde638ba",
+      "event_id": "7a85eafa",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "dde638ba",
+      "event_id": "e6504c2c",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "dde638ba",
+      "event_id": "2f21770f",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "dde638ba",
+      "event_id": "ef45d6ac",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "b1dbec71",
+      "event_id": "7a85eafa",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "b1dbec71",
+      "event_id": "e6504c2c",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "b1dbec71",
+      "event_id": "2f21770f",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "b1dbec71",
+      "event_id": "ef45d6ac",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "91992551",
+      "event_id": "7a85eafa",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "91992551",
+      "event_id": "e6504c2c",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "91992551",
+      "event_id": "2f21770f",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "91992551",
+      "event_id": "ef45d6ac",
+      "place": 5,
+      "points": 4745
+    }
+  ],
   "year_rankings": {
     "2018": {
       "athletes": [
         {
-          "name": "Чудненко Анна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "МС",
-          "birth_year": 1987,
+          "athlete_id": "555bb6bd",
           "year_points": 7800,
           "total_points": 61685,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "f1722a39",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 8
+              "points": 7800
             }
           ],
           "rank": 1
         },
         {
-          "name": "Тиманина Анжелика",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1989,
+          "athlete_id": "3e04e4d8",
           "year_points": 4745,
           "total_points": 36085,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "f1722a39",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 2
@@ -46,37 +298,27 @@
     "2019": {
       "athletes": [
         {
-          "name": "Чудненко Анна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "МС",
-          "birth_year": 1987,
+          "athlete_id": "555bb6bd",
           "year_points": 10000,
           "total_points": 61685,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "b8af4c8d",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 5
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Тимаревская Анастасия",
-          "region": "Московская область",
-          "sport_rank": "3",
-          "birth_year": 1986,
+          "athlete_id": "dde638ba",
           "year_points": 5685,
           "total_points": 27885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "b8af4c8d",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 5
+              "points": 5685
             }
           ],
           "rank": 2
@@ -86,91 +328,66 @@
     "2021": {
       "athletes": [
         {
-          "name": "Чудненко Анна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "МС",
-          "birth_year": 1987,
+          "athlete_id": "555bb6bd",
           "year_points": 7800,
           "total_points": 61685,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "7a85eafa",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 9
+              "points": 7800
             }
           ],
           "rank": 1
         },
         {
-          "name": "Тиманина Анжелика",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1989,
+          "athlete_id": "3e04e4d8",
           "year_points": 6085,
           "total_points": 36085,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "7a85eafa",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 9
+              "points": 6085
             }
           ],
           "rank": 2
         },
         {
-          "name": "Галимова Чулпан",
-          "region": "Республика Татарстан",
-          "sport_rank": "КМС",
-          "birth_year": 1987,
+          "athlete_id": "b1dbec71",
           "year_points": 5685,
           "total_points": 22775,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "7a85eafa",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 9
+              "points": 5685
             }
           ],
           "rank": 3
         },
         {
-          "name": "Тимаревская Анастасия",
-          "region": "Московская область",
-          "sport_rank": "3",
-          "birth_year": 1986,
+          "athlete_id": "dde638ba",
           "year_points": 4745,
           "total_points": 27885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "7a85eafa",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 9
+              "points": 4745
             }
           ],
           "rank": 4
         },
         {
-          "name": "Тихолаз Ульяна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "1",
-          "birth_year": 1993,
+          "athlete_id": "91992551",
           "year_points": 4745,
           "total_points": 18980,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "7a85eafa",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 9
+              "points": 4745
             }
           ],
           "rank": 4
@@ -180,91 +397,66 @@
     "2024": {
       "athletes": [
         {
-          "name": "Чудненко Анна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "МС",
-          "birth_year": 1987,
+          "athlete_id": "555bb6bd",
           "year_points": 10000,
           "total_points": 61685,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "e6504c2c",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 18
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Тиманина Анжелика",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1989,
+          "athlete_id": "3e04e4d8",
           "year_points": 7800,
           "total_points": 36085,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "e6504c2c",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 18
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Тимаревская Анастасия",
-          "region": "Московская область",
-          "sport_rank": "3",
-          "birth_year": 1986,
+          "athlete_id": "dde638ba",
           "year_points": 5685,
           "total_points": 27885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "e6504c2c",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 18
+              "points": 5685
             }
           ],
           "rank": 3
         },
         {
-          "name": "Галимова Чулпан",
-          "region": "Республика Татарстан",
-          "sport_rank": "КМС",
-          "birth_year": 1987,
+          "athlete_id": "b1dbec71",
           "year_points": 4745,
           "total_points": 22775,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "e6504c2c",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 18
+              "points": 4745
             }
           ],
           "rank": 4
         },
         {
-          "name": "Тихолаз Ульяна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "1",
-          "birth_year": 1993,
+          "athlete_id": "91992551",
           "year_points": 4745,
           "total_points": 18980,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "e6504c2c",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 18
+              "points": 4745
             }
           ],
           "rank": 4
@@ -274,91 +466,66 @@
     "2022": {
       "athletes": [
         {
-          "name": "Чудненко Анна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "МС",
-          "birth_year": 1987,
+          "athlete_id": "555bb6bd",
           "year_points": 10000,
           "total_points": 61685,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2f21770f",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 6
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Галимова Чулпан",
-          "region": "Республика Татарстан",
-          "sport_rank": "КМС",
-          "birth_year": 1987,
+          "athlete_id": "b1dbec71",
           "year_points": 7800,
           "total_points": 22775,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2f21770f",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 6
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Тимаревская Анастасия",
-          "region": "Московская область",
-          "sport_rank": "3",
-          "birth_year": 1986,
+          "athlete_id": "dde638ba",
           "year_points": 6085,
           "total_points": 27885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2f21770f",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 6
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Тиманина Анжелика",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1989,
+          "athlete_id": "3e04e4d8",
           "year_points": 5685,
           "total_points": 36085,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2f21770f",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 6
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Тихолаз Ульяна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "1",
-          "birth_year": 1993,
+          "athlete_id": "91992551",
           "year_points": 4745,
           "total_points": 18980,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2f21770f",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 6
+              "points": 4745
             }
           ],
           "rank": 5
@@ -368,91 +535,66 @@
     "2023": {
       "athletes": [
         {
-          "name": "Чудненко Анна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "МС",
-          "birth_year": 1987,
+          "athlete_id": "555bb6bd",
           "year_points": 10000,
           "total_points": 61685,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "ef45d6ac",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 8
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Тиманина Анжелика",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1989,
+          "athlete_id": "3e04e4d8",
           "year_points": 6085,
           "total_points": 36085,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "ef45d6ac",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 8
+              "points": 6085
             }
           ],
           "rank": 2
         },
         {
-          "name": "Тимаревская Анастасия",
-          "region": "Московская область",
-          "sport_rank": "3",
-          "birth_year": 1986,
+          "athlete_id": "dde638ba",
           "year_points": 5685,
           "total_points": 27885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "ef45d6ac",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 8
+              "points": 5685
             }
           ],
           "rank": 3
         },
         {
-          "name": "Тихолаз Ульяна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "1",
-          "birth_year": 1993,
+          "athlete_id": "91992551",
           "year_points": 4745,
           "total_points": 18980,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "ef45d6ac",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 4
         },
         {
-          "name": "Галимова Чулпан",
-          "region": "Республика Татарстан",
-          "sport_rank": "КМС",
-          "birth_year": 1987,
+          "athlete_id": "b1dbec71",
           "year_points": 4545,
           "total_points": 22775,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "ef45d6ac",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 8
+              "points": 4545
             }
           ],
           "rank": 5
@@ -462,37 +604,27 @@
     "2017": {
       "athletes": [
         {
-          "name": "Чудненко Анна",
-          "region": "Санкт-Петербург",
-          "sport_rank": "МС",
-          "birth_year": 1987,
+          "athlete_id": "555bb6bd",
           "year_points": 6085,
           "total_points": 61685,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "e49daba8",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 7
+              "points": 6085
             }
           ],
           "rank": 1
         },
         {
-          "name": "Тиманина Анжелика",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1989,
+          "athlete_id": "3e04e4d8",
           "year_points": 5685,
           "total_points": 36085,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "e49daba8",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 7
+              "points": 5685
             }
           ],
           "rank": 2
@@ -502,11 +634,8 @@
   },
   "overall_ranking": [
     {
+      "athlete_id": "555bb6bd",
       "rank": 1,
-      "name": "Чудненко Анна",
-      "region": "Санкт-Петербург",
-      "sport_rank": "МС",
-      "birth_year": 1987,
       "total_points": 61685,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -526,11 +655,8 @@
       ]
     },
     {
+      "athlete_id": "3e04e4d8",
       "rank": 2,
-      "name": "Тиманина Анжелика",
-      "region": "Москва",
-      "sport_rank": "1",
-      "birth_year": 1989,
       "total_points": 36085,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -549,11 +675,8 @@
       ]
     },
     {
+      "athlete_id": "dde638ba",
       "rank": 3,
-      "name": "Тимаревская Анастасия",
-      "region": "Московская область",
-      "sport_rank": "3",
-      "birth_year": 1986,
       "total_points": 27885,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -571,11 +694,8 @@
       ]
     },
     {
+      "athlete_id": "b1dbec71",
       "rank": 4,
-      "name": "Галимова Чулпан",
-      "region": "Республика Татарстан",
-      "sport_rank": "КМС",
-      "birth_year": 1987,
       "total_points": 22775,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -592,11 +712,8 @@
       ]
     },
     {
+      "athlete_id": "91992551",
       "rank": 5,
-      "name": "Тихолаз Ульяна",
-      "region": "Санкт-Петербург",
-      "sport_rank": "1",
-      "birth_year": 1993,
       "total_points": 18980,
       "best_result": {
         "event_name": "Чемпионат России",

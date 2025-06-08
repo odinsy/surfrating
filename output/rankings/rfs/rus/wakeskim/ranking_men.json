@@ -1,240 +1,669 @@
 {
   "discipline": "wakeskim",
   "gender": "men",
-  "last_updated": "2025-06-05",
+  "last_updated": "2025-06-08",
+  "events": {
+    "aed6474b": {
+      "id": "aed6474b",
+      "name": "Чемпионат России",
+      "year": 2022,
+      "date": "05.09.2022",
+      "discipline": "вейкским",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 13
+    },
+    "5a958b4c": {
+      "id": "5a958b4c",
+      "name": "Чемпионат России",
+      "year": 2019,
+      "date": "29.06.2019",
+      "discipline": "вейкским",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 4
+    },
+    "50975df2": {
+      "id": "50975df2",
+      "name": "Чемпионат России",
+      "year": 2024,
+      "date": "15.08.2024",
+      "discipline": "вейкским",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 18
+    },
+    "1fb2d263": {
+      "id": "1fb2d263",
+      "name": "Чемпионат России",
+      "year": 2021,
+      "date": "19.06.2021",
+      "discipline": "вейкским",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 6
+    },
+    "f7750fd8": {
+      "id": "f7750fd8",
+      "name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+      "year": 2024,
+      "date": "22.09.2024",
+      "discipline": "вейкским",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 7
+    }
+  },
+  "athletes": {
+    "c523f3d0": {
+      "name": "Данилов Сергей",
+      "region": "Московская область",
+      "sport_rank": "МС",
+      "birth_year": 1978
+    },
+    "ac794a59": {
+      "name": "Иванов Виталий",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birth_year": 1985
+    },
+    "ba58672a": {
+      "name": "Ревун Илья",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birth_year": 1979
+    },
+    "51e44799": {
+      "name": "Кац Даниил",
+      "region": "Саратовская область",
+      "sport_rank": "2",
+      "birth_year": 2004
+    },
+    "5c16c139": {
+      "name": "Прошин Игорь",
+      "region": "Московская область",
+      "sport_rank": "2",
+      "birth_year": 1988
+    },
+    "2b27d735": {
+      "name": "Кулагин Степан",
+      "region": "Санкт-Петербург",
+      "sport_rank": "2",
+      "birth_year": 1988
+    },
+    "7dd3b743": {
+      "name": "Шпильман Феликс",
+      "region": "Московская область",
+      "sport_rank": "2 разряд",
+      "birth_year": 1985
+    },
+    "4ef4f175": {
+      "name": "Горданов Степан",
+      "region": "Москва",
+      "sport_rank": "1",
+      "birth_year": 1992
+    },
+    "595b3608": {
+      "name": "Соловьев Андрей",
+      "region": "Приморский край",
+      "sport_rank": "1",
+      "birth_year": 1985
+    },
+    "8b8464c6": {
+      "name": "Шамаханов Никита",
+      "region": "Санкт-Петербург",
+      "sport_rank": "КМС",
+      "birth_year": 1992
+    },
+    "9cd7b48a": {
+      "name": "Коваленко Сергей",
+      "region": "Волгоградская область",
+      "sport_rank": "3",
+      "birth_year": 1993
+    },
+    "52772bb9": {
+      "name": "Андронов Евгений",
+      "region": "Московская область",
+      "sport_rank": "3",
+      "birth_year": 1991
+    },
+    "f0469ac1": {
+      "name": "Бочкарев Александр",
+      "region": "Самарская область",
+      "sport_rank": "2",
+      "birth_year": 1986
+    },
+    "466af514": {
+      "name": "Мокробородов Юрий",
+      "region": "Московская область",
+      "sport_rank": "2",
+      "birth_year": 1980
+    },
+    "8c6b8ee9": {
+      "name": "Клименко Игорь",
+      "region": "Краснодарский край",
+      "sport_rank": "3",
+      "birth_year": 1989
+    },
+    "d50712ed": {
+      "name": "Перняйнен Вадим",
+      "region": "Санкт-Петербург",
+      "sport_rank": "3",
+      "birth_year": 1987
+    },
+    "3d1c89f4": {
+      "name": "Пернайцев Вадим",
+      "region": "Санкт-Петербург",
+      "sport_rank": "2",
+      "birth_year": 1987
+    },
+    "0e21da24": {
+      "name": "Мазин Вячеслав",
+      "region": "Москва",
+      "sport_rank": "2",
+      "birth_year": 1986
+    },
+    "ca3954d7": {
+      "name": "Петров Антон",
+      "region": "Московская область",
+      "sport_rank": "2",
+      "birth_year": 1984
+    },
+    "92ba1b9c": {
+      "name": "Вадим Андрей",
+      "region": "Самарская область",
+      "sport_rank": "3",
+      "birth_year": 1984
+    },
+    "4b4c9b05": {
+      "name": "Сладков Александр",
+      "region": "Московская область",
+      "sport_rank": "1",
+      "birth_year": 1990
+    },
+    "86722e7c": {
+      "name": "Костенко Виктор",
+      "region": "Саратовская область",
+      "sport_rank": "3",
+      "birth_year": 1984
+    },
+    "aaaa12ec": {
+      "name": "Акименко Александр",
+      "region": "Самарская область",
+      "sport_rank": "3",
+      "birth_year": 1992
+    },
+    "7fe824fc": {
+      "name": "Семёнов Александр",
+      "region": "Санкт-Петербург",
+      "sport_rank": "2",
+      "birth_year": 1985
+    },
+    "40313b4d": {
+      "name": "Красинков Дмитрий",
+      "region": "Самарская область",
+      "sport_rank": "3",
+      "birth_year": 1988
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "aed6474b",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "5a958b4c",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "50975df2",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "f7750fd8",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "1fb2d263",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "ba58672a",
+      "event_id": "aed6474b",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "ba58672a",
+      "event_id": "5a958b4c",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "ba58672a",
+      "event_id": "50975df2",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "ba58672a",
+      "event_id": "f7750fd8",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "ba58672a",
+      "event_id": "1fb2d263",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "2b27d735",
+      "event_id": "aed6474b",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "2b27d735",
+      "event_id": "1fb2d263",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "ac794a59",
+      "event_id": "aed6474b",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "ac794a59",
+      "event_id": "5a958b4c",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "ac794a59",
+      "event_id": "50975df2",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "ac794a59",
+      "event_id": "f7750fd8",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "ac794a59",
+      "event_id": "1fb2d263",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "466af514",
+      "event_id": "aed6474b",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "5c16c139",
+      "event_id": "aed6474b",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "5c16c139",
+      "event_id": "50975df2",
+      "place": 9,
+      "points": 3320
+    },
+    {
+      "athlete_id": "5c16c139",
+      "event_id": "f7750fd8",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "f0469ac1",
+      "event_id": "aed6474b",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "f0469ac1",
+      "event_id": "50975df2",
+      "place": 17,
+      "points": 1900
+    },
+    {
+      "athlete_id": "d50712ed",
+      "event_id": "aed6474b",
+      "place": 8,
+      "points": 4545
+    },
+    {
+      "athlete_id": "8b8464c6",
+      "event_id": "aed6474b",
+      "place": 9,
+      "points": 3320
+    },
+    {
+      "athlete_id": "8b8464c6",
+      "event_id": "50975df2",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "0e21da24",
+      "event_id": "aed6474b",
+      "place": 10,
+      "points": 3320
+    },
+    {
+      "athlete_id": "4ef4f175",
+      "event_id": "aed6474b",
+      "place": 11,
+      "points": 3320
+    },
+    {
+      "athlete_id": "4ef4f175",
+      "event_id": "50975df2",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "ca3954d7",
+      "event_id": "aed6474b",
+      "place": 12,
+      "points": 3320
+    },
+    {
+      "athlete_id": "4b4c9b05",
+      "event_id": "aed6474b",
+      "place": 13,
+      "points": 3120
+    },
+    {
+      "athlete_id": "7dd3b743",
+      "event_id": "5a958b4c",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "7dd3b743",
+      "event_id": "1fb2d263",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "51e44799",
+      "event_id": "50975df2",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "51e44799",
+      "event_id": "f7750fd8",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "595b3608",
+      "event_id": "50975df2",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "595b3608",
+      "event_id": "1fb2d263",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "8c6b8ee9",
+      "event_id": "50975df2",
+      "place": 8,
+      "points": 4545
+    },
+    {
+      "athlete_id": "3d1c89f4",
+      "event_id": "50975df2",
+      "place": 10,
+      "points": 3320
+    },
+    {
+      "athlete_id": "9cd7b48a",
+      "event_id": "50975df2",
+      "place": 11,
+      "points": 3320
+    },
+    {
+      "athlete_id": "9cd7b48a",
+      "event_id": "f7750fd8",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "52772bb9",
+      "event_id": "50975df2",
+      "place": 12,
+      "points": 3320
+    },
+    {
+      "athlete_id": "52772bb9",
+      "event_id": "f7750fd8",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "92ba1b9c",
+      "event_id": "50975df2",
+      "place": 13,
+      "points": 3120
+    },
+    {
+      "athlete_id": "86722e7c",
+      "event_id": "50975df2",
+      "place": 14,
+      "points": 3120
+    },
+    {
+      "athlete_id": "aaaa12ec",
+      "event_id": "50975df2",
+      "place": 15,
+      "points": 3120
+    },
+    {
+      "athlete_id": "7fe824fc",
+      "event_id": "50975df2",
+      "place": 16,
+      "points": 3120
+    },
+    {
+      "athlete_id": "40313b4d",
+      "event_id": "50975df2",
+      "place": 18,
+      "points": 1900
+    }
+  ],
   "year_rankings": {
     "2022": {
       "athletes": [
         {
-          "name": "Данилов Сергей",
-          "region": "Московская область",
-          "sport_rank": "МС",
-          "birth_year": 1978,
+          "athlete_id": "c523f3d0",
           "year_points": 10000,
           "total_points": 43885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 13
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Ревун Илья",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1979,
+          "athlete_id": "ba58672a",
           "year_points": 7800,
           "total_points": 31715,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 13
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Кулагин Степан",
-          "region": "Санкт-Петербург",
-          "sport_rank": "2",
-          "birth_year": 1988,
+          "athlete_id": "2b27d735",
           "year_points": 6085,
           "total_points": 12170,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 13
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Иванов Виталий",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1985,
+          "athlete_id": "ac794a59",
           "year_points": 5685,
           "total_points": 32115,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 13
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Прошин Игорь",
-          "region": "Московская область",
-          "sport_rank": "2",
-          "birth_year": 1988,
+          "athlete_id": "5c16c139",
           "year_points": 4745,
           "total_points": 12810,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 13
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Мокробородов Юрий",
-          "region": "Московская область",
-          "sport_rank": "2",
-          "birth_year": 1980,
+          "athlete_id": "466af514",
           "year_points": 4745,
           "total_points": 4745,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 13
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Бочкарев Александр",
-          "region": "Самарская область",
-          "sport_rank": "2",
-          "birth_year": 1986,
+          "athlete_id": "f0469ac1",
           "year_points": 4545,
           "total_points": 6445,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 13
+              "points": 4545
             }
           ],
           "rank": 7
         },
         {
-          "name": "Перняйнен Вадим",
-          "region": "Санкт-Петербург",
-          "sport_rank": "3",
-          "birth_year": 1987,
+          "athlete_id": "d50712ed",
           "year_points": 4545,
           "total_points": 4545,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 8,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 13
+              "points": 4545
             }
           ],
           "rank": 7
         },
         {
-          "name": "Горданов Степан",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1992,
+          "athlete_id": "4ef4f175",
           "year_points": 3320,
           "total_points": 9405,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 11,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 13
+              "points": 3320
             }
           ],
           "rank": 9
         },
         {
-          "name": "Шамаханов Никита",
-          "region": "Санкт-Петербург",
-          "sport_rank": "КМС",
-          "birth_year": 1992,
+          "athlete_id": "8b8464c6",
           "year_points": 3320,
           "total_points": 9005,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 9,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 13
+              "points": 3320
             }
           ],
           "rank": 9
         },
         {
-          "name": "Мазин Вячеслав",
-          "region": "Москва",
-          "sport_rank": "2",
-          "birth_year": 1986,
+          "athlete_id": "0e21da24",
           "year_points": 3320,
           "total_points": 3320,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 10,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 13
+              "points": 3320
             }
           ],
           "rank": 9
         },
         {
-          "name": "Петров Антон",
-          "region": "Московская область",
-          "sport_rank": "2",
-          "birth_year": 1984,
+          "athlete_id": "ca3954d7",
           "year_points": 3320,
           "total_points": 3320,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 12,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 13
+              "points": 3320
             }
           ],
           "rank": 9
         },
         {
-          "name": "Сладков Александр",
-          "region": "Московская область",
-          "sport_rank": "1",
-          "birth_year": 1990,
+          "athlete_id": "4b4c9b05",
           "year_points": 3120,
           "total_points": 3120,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "aed6474b",
               "place": 13,
-              "points": 3120,
-              "group": "main",
-              "participants_count": 13
+              "points": 3120
             }
           ],
           "rank": 13
@@ -244,73 +673,53 @@
     "2019": {
       "athletes": [
         {
-          "name": "Данилов Сергей",
-          "region": "Московская область",
-          "sport_rank": "МС",
-          "birth_year": 1978,
+          "athlete_id": "c523f3d0",
           "year_points": 10000,
           "total_points": 43885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "5a958b4c",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 4
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Ревун Илья",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1979,
+          "athlete_id": "ba58672a",
           "year_points": 7800,
           "total_points": 31715,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "5a958b4c",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 4
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Иванов Виталий",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1985,
+          "athlete_id": "ac794a59",
           "year_points": 6085,
           "total_points": 32115,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "5a958b4c",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 4
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Шпильман Феликс",
-          "region": "Московская область",
-          "sport_rank": "2 разряд",
-          "birth_year": 1985,
+          "athlete_id": "7dd3b743",
           "year_points": 5685,
           "total_points": 10430,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "5a958b4c",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 4
+              "points": 5685
             }
           ],
           "rank": 4
@@ -320,374 +729,270 @@
     "2024": {
       "athletes": [
         {
-          "name": "Кац Даниил",
-          "region": "Саратовская область",
-          "sport_rank": "2",
-          "birth_year": 2004,
+          "athlete_id": "51e44799",
           "year_points": 20000,
           "total_points": 20000,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 18
+              "points": 10000
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f7750fd8",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 7
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Данилов Сергей",
-          "region": "Московская область",
-          "sport_rank": "МС",
-          "birth_year": 1978,
+          "athlete_id": "c523f3d0",
           "year_points": 13885,
           "total_points": 43885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 18
+              "points": 7800
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f7750fd8",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 7
+              "points": 6085
             }
           ],
           "rank": 2
         },
         {
-          "name": "Иванов Виталий",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1985,
+          "athlete_id": "ac794a59",
           "year_points": 12545,
           "total_points": 32115,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 18
+              "points": 4745
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f7750fd8",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 7
+              "points": 7800
             }
           ],
           "rank": 3
         },
         {
-          "name": "Ревун Илья",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1979,
+          "athlete_id": "ba58672a",
           "year_points": 10430,
           "total_points": 31715,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 18
+              "points": 4745
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f7750fd8",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 7
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Прошин Игорь",
-          "region": "Московская область",
-          "sport_rank": "2",
-          "birth_year": 1988,
+          "athlete_id": "5c16c139",
           "year_points": 8065,
           "total_points": 12810,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 9,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 18
+              "points": 3320
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f7750fd8",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 7
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Коваленко Сергей",
-          "region": "Волгоградская область",
-          "sport_rank": "3",
-          "birth_year": 1993,
+          "athlete_id": "9cd7b48a",
           "year_points": 8065,
           "total_points": 8065,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 11,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 18
+              "points": 3320
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f7750fd8",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 7
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Андронов Евгений",
-          "region": "Московская область",
-          "sport_rank": "3",
-          "birth_year": 1991,
+          "athlete_id": "52772bb9",
           "year_points": 7865,
           "total_points": 7865,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 12,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 18
+              "points": 3320
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f7750fd8",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 7
+              "points": 4545
             }
           ],
           "rank": 7
         },
         {
-          "name": "Горданов Степан",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1992,
+          "athlete_id": "4ef4f175",
           "year_points": 6085,
           "total_points": 9405,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 18
+              "points": 6085
             }
           ],
           "rank": 8
         },
         {
-          "name": "Шамаханов Никита",
-          "region": "Санкт-Петербург",
-          "sport_rank": "КМС",
-          "birth_year": 1992,
+          "athlete_id": "8b8464c6",
           "year_points": 5685,
           "total_points": 9005,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 18
+              "points": 5685
             }
           ],
           "rank": 9
         },
         {
-          "name": "Соловьев Андрей",
-          "region": "Приморский край",
-          "sport_rank": "1",
-          "birth_year": 1985,
+          "athlete_id": "595b3608",
           "year_points": 4545,
           "total_points": 9290,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 18
+              "points": 4545
             }
           ],
           "rank": 10
         },
         {
-          "name": "Клименко Игорь",
-          "region": "Краснодарский край",
-          "sport_rank": "3",
-          "birth_year": 1989,
+          "athlete_id": "8c6b8ee9",
           "year_points": 4545,
           "total_points": 4545,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 8,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 18
+              "points": 4545
             }
           ],
           "rank": 10
         },
         {
-          "name": "Пернайцев Вадим",
-          "region": "Санкт-Петербург",
-          "sport_rank": "2",
-          "birth_year": 1987,
+          "athlete_id": "3d1c89f4",
           "year_points": 3320,
           "total_points": 3320,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 10,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 18
+              "points": 3320
             }
           ],
           "rank": 12
         },
         {
-          "name": "Вадим Андрей",
-          "region": "Самарская область",
-          "sport_rank": "3",
-          "birth_year": 1984,
+          "athlete_id": "92ba1b9c",
           "year_points": 3120,
           "total_points": 3120,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 13,
-              "points": 3120,
-              "group": "main",
-              "participants_count": 18
+              "points": 3120
             }
           ],
           "rank": 13
         },
         {
-          "name": "Костенко Виктор",
-          "region": "Саратовская область",
-          "sport_rank": "3",
-          "birth_year": 1984,
+          "athlete_id": "86722e7c",
           "year_points": 3120,
           "total_points": 3120,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 14,
-              "points": 3120,
-              "group": "main",
-              "participants_count": 18
+              "points": 3120
             }
           ],
           "rank": 13
         },
         {
-          "name": "Акименко Александр",
-          "region": "Самарская область",
-          "sport_rank": "3",
-          "birth_year": 1992,
+          "athlete_id": "aaaa12ec",
           "year_points": 3120,
           "total_points": 3120,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 15,
-              "points": 3120,
-              "group": "main",
-              "participants_count": 18
+              "points": 3120
             }
           ],
           "rank": 13
         },
         {
-          "name": "Семёнов Александр",
-          "region": "Санкт-Петербург",
-          "sport_rank": "2",
-          "birth_year": 1985,
+          "athlete_id": "7fe824fc",
           "year_points": 3120,
           "total_points": 3120,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 16,
-              "points": 3120,
-              "group": "main",
-              "participants_count": 18
+              "points": 3120
             }
           ],
           "rank": 13
         },
         {
-          "name": "Бочкарев Александр",
-          "region": "Самарская область",
-          "sport_rank": "2",
-          "birth_year": 1986,
+          "athlete_id": "f0469ac1",
           "year_points": 1900,
           "total_points": 6445,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 17,
-              "points": 1900,
-              "group": "main",
-              "participants_count": 18
+              "points": 1900
             }
           ],
           "rank": 17
         },
         {
-          "name": "Красинков Дмитрий",
-          "region": "Самарская область",
-          "sport_rank": "3",
-          "birth_year": 1988,
+          "athlete_id": "40313b4d",
           "year_points": 1900,
           "total_points": 1900,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "50975df2",
               "place": 18,
-              "points": 1900,
-              "group": "main",
-              "participants_count": 18
+              "points": 1900
             }
           ],
           "rank": 17
@@ -697,109 +1002,79 @@
     "2021": {
       "athletes": [
         {
-          "name": "Данилов Сергей",
-          "region": "Московская область",
-          "sport_rank": "МС",
-          "birth_year": 1978,
+          "athlete_id": "c523f3d0",
           "year_points": 10000,
           "total_points": 43885,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "1fb2d263",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 6
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Иванов Виталий",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1985,
+          "athlete_id": "ac794a59",
           "year_points": 7800,
           "total_points": 32115,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "1fb2d263",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 6
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Кулагин Степан",
-          "region": "Санкт-Петербург",
-          "sport_rank": "2",
-          "birth_year": 1988,
+          "athlete_id": "2b27d735",
           "year_points": 6085,
           "total_points": 12170,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "1fb2d263",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 6
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Ревун Илья",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1979,
+          "athlete_id": "ba58672a",
           "year_points": 5685,
           "total_points": 31715,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "1fb2d263",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 6
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Шпильман Феликс",
-          "region": "Московская область",
-          "sport_rank": "2 разряд",
-          "birth_year": 1985,
+          "athlete_id": "7dd3b743",
           "year_points": 4745,
           "total_points": 10430,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "1fb2d263",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 6
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Соловьев Андрей",
-          "region": "Приморский край",
-          "sport_rank": "1",
-          "birth_year": 1985,
+          "athlete_id": "595b3608",
           "year_points": 4745,
           "total_points": 9290,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "1fb2d263",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 6
+              "points": 4745
             }
           ],
           "rank": 5
@@ -809,11 +1084,8 @@
   },
   "overall_ranking": [
     {
+      "athlete_id": "c523f3d0",
       "rank": 1,
-      "name": "Данилов Сергей",
-      "region": "Московская область",
-      "sport_rank": "МС",
-      "birth_year": 1978,
       "total_points": 43885,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -830,11 +1102,8 @@
       ]
     },
     {
+      "athlete_id": "ac794a59",
       "rank": 2,
-      "name": "Иванов Виталий",
-      "region": "Москва",
-      "sport_rank": "КМС",
-      "birth_year": 1985,
       "total_points": 32115,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
@@ -851,11 +1120,8 @@
       ]
     },
     {
+      "athlete_id": "ba58672a",
       "rank": 3,
-      "name": "Ревун Илья",
-      "region": "Москва",
-      "sport_rank": "КМС",
-      "birth_year": 1979,
       "total_points": 31715,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -872,11 +1138,8 @@
       ]
     },
     {
+      "athlete_id": "51e44799",
       "rank": 4,
-      "name": "Кац Даниил",
-      "region": "Саратовская область",
-      "sport_rank": "2",
-      "birth_year": 2004,
       "total_points": 20000,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -890,11 +1153,8 @@
       ]
     },
     {
+      "athlete_id": "5c16c139",
       "rank": 5,
-      "name": "Прошин Игорь",
-      "region": "Московская область",
-      "sport_rank": "2",
-      "birth_year": 1988,
       "total_points": 12810,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
@@ -909,11 +1169,8 @@
       ]
     },
     {
+      "athlete_id": "2b27d735",
       "rank": 6,
-      "name": "Кулагин Степан",
-      "region": "Санкт-Петербург",
-      "sport_rank": "2",
-      "birth_year": 1988,
       "total_points": 12170,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -928,11 +1185,8 @@
       ]
     },
     {
+      "athlete_id": "7dd3b743",
       "rank": 7,
-      "name": "Шпильман Феликс",
-      "region": "Московская область",
-      "sport_rank": "2 разряд",
-      "birth_year": 1985,
       "total_points": 10430,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -947,11 +1201,8 @@
       ]
     },
     {
+      "athlete_id": "4ef4f175",
       "rank": 8,
-      "name": "Горданов Степан",
-      "region": "Москва",
-      "sport_rank": "1",
-      "birth_year": 1992,
       "total_points": 9405,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -966,11 +1217,8 @@
       ]
     },
     {
+      "athlete_id": "595b3608",
       "rank": 9,
-      "name": "Соловьев Андрей",
-      "region": "Приморский край",
-      "sport_rank": "1",
-      "birth_year": 1985,
       "total_points": 9290,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -985,11 +1233,8 @@
       ]
     },
     {
+      "athlete_id": "8b8464c6",
       "rank": 10,
-      "name": "Шамаханов Никита",
-      "region": "Санкт-Петербург",
-      "sport_rank": "КМС",
-      "birth_year": 1992,
       "total_points": 9005,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1004,11 +1249,8 @@
       ]
     },
     {
+      "athlete_id": "9cd7b48a",
       "rank": 11,
-      "name": "Коваленко Сергей",
-      "region": "Волгоградская область",
-      "sport_rank": "3",
-      "birth_year": 1993,
       "total_points": 8065,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
@@ -1022,11 +1264,8 @@
       ]
     },
     {
+      "athlete_id": "52772bb9",
       "rank": 12,
-      "name": "Андронов Евгений",
-      "region": "Московская область",
-      "sport_rank": "3",
-      "birth_year": 1991,
       "total_points": 7865,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
@@ -1040,11 +1279,8 @@
       ]
     },
     {
+      "athlete_id": "f0469ac1",
       "rank": 13,
-      "name": "Бочкарев Александр",
-      "region": "Самарская область",
-      "sport_rank": "2",
-      "birth_year": 1986,
       "total_points": 6445,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1059,11 +1295,8 @@
       ]
     },
     {
+      "athlete_id": "466af514",
       "rank": 14,
-      "name": "Мокробородов Юрий",
-      "region": "Московская область",
-      "sport_rank": "2",
-      "birth_year": 1980,
       "total_points": 4745,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1077,11 +1310,8 @@
       ]
     },
     {
+      "athlete_id": "8c6b8ee9",
       "rank": 15,
-      "name": "Клименко Игорь",
-      "region": "Краснодарский край",
-      "sport_rank": "3",
-      "birth_year": 1989,
       "total_points": 4545,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1095,11 +1325,8 @@
       ]
     },
     {
+      "athlete_id": "d50712ed",
       "rank": 16,
-      "name": "Перняйнен Вадим",
-      "region": "Санкт-Петербург",
-      "sport_rank": "3",
-      "birth_year": 1987,
       "total_points": 4545,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1113,11 +1340,8 @@
       ]
     },
     {
+      "athlete_id": "3d1c89f4",
       "rank": 17,
-      "name": "Пернайцев Вадим",
-      "region": "Санкт-Петербург",
-      "sport_rank": "2",
-      "birth_year": 1987,
       "total_points": 3320,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1131,11 +1355,8 @@
       ]
     },
     {
+      "athlete_id": "0e21da24",
       "rank": 18,
-      "name": "Мазин Вячеслав",
-      "region": "Москва",
-      "sport_rank": "2",
-      "birth_year": 1986,
       "total_points": 3320,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1149,11 +1370,8 @@
       ]
     },
     {
+      "athlete_id": "ca3954d7",
       "rank": 19,
-      "name": "Петров Антон",
-      "region": "Московская область",
-      "sport_rank": "2",
-      "birth_year": 1984,
       "total_points": 3320,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1167,11 +1385,8 @@
       ]
     },
     {
+      "athlete_id": "92ba1b9c",
       "rank": 20,
-      "name": "Вадим Андрей",
-      "region": "Самарская область",
-      "sport_rank": "3",
-      "birth_year": 1984,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1185,11 +1400,8 @@
       ]
     },
     {
+      "athlete_id": "4b4c9b05",
       "rank": 21,
-      "name": "Сладков Александр",
-      "region": "Московская область",
-      "sport_rank": "1",
-      "birth_year": 1990,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1203,11 +1415,8 @@
       ]
     },
     {
+      "athlete_id": "86722e7c",
       "rank": 22,
-      "name": "Костенко Виктор",
-      "region": "Саратовская область",
-      "sport_rank": "3",
-      "birth_year": 1984,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1221,11 +1430,8 @@
       ]
     },
     {
+      "athlete_id": "aaaa12ec",
       "rank": 23,
-      "name": "Акименко Александр",
-      "region": "Самарская область",
-      "sport_rank": "3",
-      "birth_year": 1992,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1239,11 +1445,8 @@
       ]
     },
     {
+      "athlete_id": "7fe824fc",
       "rank": 24,
-      "name": "Семёнов Александр",
-      "region": "Санкт-Петербург",
-      "sport_rank": "2",
-      "birth_year": 1985,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1257,11 +1460,8 @@
       ]
     },
     {
+      "athlete_id": "40313b4d",
       "rank": 25,
-      "name": "Красинков Дмитрий",
-      "region": "Самарская область",
-      "sport_rank": "3",
-      "birth_year": 1988,
       "total_points": 1900,
       "best_result": {
         "event_name": "Чемпионат России",
