@@ -90,10 +90,11 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, all_
     transformed["athletes"] = athletes_dict
 
     for event_id, event_data in events_info.items():
-        transformed["events"][f"{event_data['year']}_{event_id[:4]}"] = {
+        transformed["events"][event_id] = {
             "id": event_id,
             "name": event_data['name'],
             "year": event_data['year'],
+            "date": event_data['date'],
             "discipline": event_data['discipline'],
             "category": event_data['category'],
             "group": event_data['group'],

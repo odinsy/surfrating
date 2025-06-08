@@ -52,10 +52,10 @@ def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: s
     year_info = {'year_total_points': 0, 'events': []}
     event_results = []
 
-    for event_name, event_info in event_data.items():
+    for event_id, event_info in event_data.items():
         place              = event_info['place']
         group              = event_info['group']
-        event_id           = event_info.get('event_id', '')
+        event_name         = event_info['event_name']
         participants_count = event_info.get('participants_count', 0)
         is_dns             = (place == 'DNS')
 
@@ -66,6 +66,7 @@ def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: s
 
         year_info['year_total_points'] += points
         year_info['events'].append({
+            'event_id': event_id,
             'event_name': event_name,
             'place': int(place) if place.isdigit() else place,
             'points': points,
