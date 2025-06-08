@@ -5,7 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import List, Dict, Optional, Union
 from anonymization import apply_anonymization
-from helpers import generate_event_id
+from helpers import generate_event_id, generate_athlete_id
 
 def _resolve_output_path(output_filename: Optional[str], config: Dict, key: Optional[str] = None, default_suffix: Optional[str] = None) -> Path:
     """Обрабатывает пути для выходных файлов с учетом конфигурации"""
@@ -72,11 +72,21 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
         "gender": config.get("gender", "unknown"),
         "last_updated": datetime.now().date().isoformat(),
         "events": {},
+        "athletes": {},
         "year_rankings": {},
         "overall_ranking": []
     }
 
-    year_athletes = defaultdict(list)
+    athletes_dict = {}
+    for athlete in results:
+        athlete_id = generate_athlete_id(athlete['name'], athlete['birth_year'])
+        athletes_dict[athlete_id] = {
+            "name": athlete['name'],
+            "region": athlete['region'],
+            "sport_rank": athlete['sport_rank'],
+            "birth_year": athlete['birth_year']
+        }
+    transformed["athletes"] = athletes_dict
 
     for event_id, event_data in events_info.items():
         transformed["events"][f"{event_data['year']}_{event_id[:4]}"] = {
@@ -90,12 +100,10 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
         }
 
     for athlete in results:
+        athlete_id = generate_athlete_id(athlete['name'], athlete['birth_year'])
         overall_entry = {
+            "athlete_id": athlete_id,
             "rank": athlete["rank"],
-            "name": athlete["name"],
-            "region": athlete["region"],
-            "sport_rank": athlete["sport_rank"],
-            "birth_year": athlete["birth_year"],
             "total_points": athlete["total_points"],
             "best_result": athlete.get("best_result", {}),
             "last_year": athlete["last_year"],
@@ -103,12 +111,12 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
         }
         transformed["overall_ranking"].append(overall_entry)
 
+    year_athletes = defaultdict(list)
+    for athlete in results:
+        athlete_id = generate_athlete_id(athlete['name'], athlete['birth_year'])
         for year, year_data in athlete.get("years", {}).items():
             year_entry = {
-                "name": athlete["name"],
-                "region": athlete["region"],
-                "sport_rank": athlete["sport_rank"],
-                "birth_year": athlete["birth_year"],
+                "athlete_id": athlete_id,
                 "year_points": year_data["year_total_points"],
                 "total_points": athlete["total_points"],
                 "events": year_data["events"]
@@ -117,7 +125,6 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
 
     for year, athletes in year_athletes.items():
         athletes.sort(key=lambda x: x["year_points"], reverse=True)
-
         current_rank = 1
         prev_points = None
         for i, athlete in enumerate(athletes):
@@ -125,7 +132,6 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
                 current_rank = i + 1
             athlete["rank"] = current_rank
             prev_points = athlete["year_points"]
-
         transformed["year_rankings"][year] = {"athletes": athletes}
 
     transformed = apply_anonymization(transformed, config)
