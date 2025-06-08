@@ -41,17 +41,19 @@ def generate_event_id(event_name: str, event_date: str, discipline: str, categor
     return hashlib.md5(base_string.encode('utf-8')).hexdigest()[:8]
 
 def extract_year(date_str: str) -> int:
-    if not date_str or pd.isna(date_str):
-        return 0
-
     try:
         date = pd.to_datetime(date_str, dayfirst=True, errors='coerce')
         if not pd.isnull(date):
             return date.year
+
         match = re.search(r'\b\d{4}\b', date_str)
-        return
+        if match:
+            return int(match.group())
+
+        return 0
     except Exception:
         return 0
+
 def get_event_group(event_name: str, config: Dict) -> str:
     for group_name, group_data in config['event_groups'].items():
         patterns = group_data.get('events', [])

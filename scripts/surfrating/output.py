@@ -117,11 +117,19 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, all_
     for athlete in results:
         athlete_id = generate_athlete_id(athlete['name'], athlete['birth_year'])
         for year, year_data in athlete.get("years", {}).items():
+            optimized_events = []
+            for event in year_data["events"]:
+                optimized_events.append({
+                    "event_id": event["event_id"],
+                    "place": event["place"],
+                    "points": event["points"]
+                })
+
             year_entry = {
                 "athlete_id": athlete_id,
                 "year_points": year_data["year_total_points"],
                 "total_points": athlete["total_points"],
-                "events": year_data["events"]
+                "events": optimized_events
             }
             year_athletes[year].append(year_entry)
 
