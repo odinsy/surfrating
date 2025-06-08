@@ -128,7 +128,6 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, all_
             year_entry = {
                 "athlete_id": athlete_id,
                 "year_points": year_data["year_total_points"],
-                "total_points": athlete["total_points"],
                 "events": optimized_events
             }
             year_athletes[year].append(year_entry)
