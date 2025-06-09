@@ -1,96 +1,272 @@
 {
   "discipline": "wakeskim",
   "gender": "women",
-  "last_updated": "2025-06-05",
+  "last_updated": "2025-06-08",
+  "events": {
+    "b0ab1f06": {
+      "id": "b0ab1f06",
+      "name": "Чемпионат России",
+      "year": 2022,
+      "date": "05.09.2022",
+      "discipline": "вейкским",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 15
+    },
+    "c73ab6ff": {
+      "id": "c73ab6ff",
+      "name": "Чемпионат России",
+      "year": 2024,
+      "date": "15.08.2024",
+      "discipline": "вейкским",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 17
+    },
+    "f463a7fe": {
+      "id": "f463a7fe",
+      "name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+      "year": 2024,
+      "date": "22.09.2024",
+      "discipline": "вейкским",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 7
+    },
+    "9a7d697e": {
+      "id": "9a7d697e",
+      "name": "Чемпионат России",
+      "year": 2019,
+      "date": "29.06.2019",
+      "discipline": "вейкским",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 6
+    },
+    "24cb8b06": {
+      "id": "24cb8b06",
+      "name": "Чемпионат России",
+      "year": 2021,
+      "date": "19.06.2021",
+      "discipline": "вейкским",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 8
+    }
+  },
+  "athletes": {
+    "f3617432": {
+      "name": "Федорова Анастасия",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birth_year": 1986
+    },
+    "625837b0": {
+      "name": "Наумова Ксения",
+      "region": "Московская область",
+      "sport_rank": "1",
+      "birth_year": 1990
+    },
+    "8530f38b": {
+      "name": "Белякова Алена",
+      "region": "Самара",
+      "sport_rank": "КМС",
+      "birth_year": 1984
+    },
+    "3f666f6e": {
+      "name": "Смирнова Юлия",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birth_year": 1989
+    },
+    "9763a67b": {
+      "name": "Попова Екатерина",
+      "region": "Москва",
+      "sport_rank": "1",
+      "birth_year": 1987
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "f3617432",
+      "event_id": "b0ab1f06",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "f3617432",
+      "event_id": "c73ab6ff",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "f3617432",
+      "event_id": "f463a7fe",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "f3617432",
+      "event_id": "9a7d697e",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "f3617432",
+      "event_id": "24cb8b06",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "625837b0",
+      "event_id": "b0ab1f06",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "625837b0",
+      "event_id": "9a7d697e",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "625837b0",
+      "event_id": "24cb8b06",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "3f666f6e",
+      "event_id": "b0ab1f06",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "3f666f6e",
+      "event_id": "c73ab6ff",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "3f666f6e",
+      "event_id": "f463a7fe",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "3f666f6e",
+      "event_id": "24cb8b06",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "8530f38b",
+      "event_id": "b0ab1f06",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "8530f38b",
+      "event_id": "c73ab6ff",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "8530f38b",
+      "event_id": "f463a7fe",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "8530f38b",
+      "event_id": "9a7d697e",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "8530f38b",
+      "event_id": "24cb8b06",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "9763a67b",
+      "event_id": "b0ab1f06",
+      "place": 8,
+      "points": 4545
+    },
+    {
+      "athlete_id": "9763a67b",
+      "event_id": "c73ab6ff",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "9763a67b",
+      "event_id": "f463a7fe",
+      "place": 1,
+      "points": 10000
+    }
+  ],
   "year_rankings": {
     "2022": {
       "athletes": [
         {
-          "name": "Федорова Анастасия",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1986,
+          "athlete_id": "f3617432",
           "year_points": 10000,
-          "total_points": 31800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "b0ab1f06",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 15
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Наумова Ксения",
-          "region": "Московская область",
-          "sport_rank": "1",
-          "birth_year": 1990,
+          "athlete_id": "625837b0",
           "year_points": 7800,
-          "total_points": 27800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "b0ab1f06",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 15
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Смирнова Юлия",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1989,
+          "athlete_id": "3f666f6e",
           "year_points": 5685,
-          "total_points": 22575,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "b0ab1f06",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 15
+              "points": 5685
             }
           ],
           "rank": 3
         },
         {
-          "name": "Белякова Алена",
-          "region": "Самара",
-          "sport_rank": "КМС",
-          "birth_year": 1984,
+          "athlete_id": "8530f38b",
           "year_points": 4745,
-          "total_points": 27745,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "b0ab1f06",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 15
+              "points": 4745
             }
           ],
           "rank": 4
         },
         {
-          "name": "Попова Екатерина",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1987,
+          "athlete_id": "9763a67b",
           "year_points": 4545,
-          "total_points": 20630,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "b0ab1f06",
               "place": 8,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 15
+              "points": 4545
             }
           ],
           "rank": 5
@@ -100,101 +276,69 @@
     "2024": {
       "athletes": [
         {
-          "name": "Попова Екатерина",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1987,
+          "athlete_id": "9763a67b",
           "year_points": 16085,
-          "total_points": 20630,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "c73ab6ff",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 17
+              "points": 6085
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f463a7fe",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 7
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Смирнова Юлия",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1989,
+          "athlete_id": "3f666f6e",
           "year_points": 12345,
-          "total_points": 22575,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "c73ab6ff",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 17
+              "points": 4545
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f463a7fe",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 7
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Белякова Алена",
-          "region": "Самара",
-          "sport_rank": "КМС",
-          "birth_year": 1984,
+          "athlete_id": "8530f38b",
           "year_points": 10830,
-          "total_points": 27745,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "c73ab6ff",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 17
+              "points": 4745
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f463a7fe",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 7
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Федорова Анастасия",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1986,
+          "athlete_id": "f3617432",
           "year_points": 10430,
-          "total_points": 31800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "c73ab6ff",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 17
+              "points": 4745
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "f463a7fe",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 7
+              "points": 5685
             }
           ],
           "rank": 4
@@ -204,55 +348,37 @@
     "2019": {
       "athletes": [
         {
-          "name": "Наумова Ксения",
-          "region": "Московская область",
-          "sport_rank": "1",
-          "birth_year": 1990,
+          "athlete_id": "625837b0",
           "year_points": 10000,
-          "total_points": 27800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "9a7d697e",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 6
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Белякова Алена",
-          "region": "Самара",
-          "sport_rank": "КМС",
-          "birth_year": 1984,
+          "athlete_id": "8530f38b",
           "year_points": 6085,
-          "total_points": 27745,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "9a7d697e",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 6
+              "points": 6085
             }
           ],
           "rank": 2
         },
         {
-          "name": "Федорова Анастасия",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1986,
+          "athlete_id": "f3617432",
           "year_points": 5685,
-          "total_points": 31800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "9a7d697e",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 6
+              "points": 5685
             }
           ],
           "rank": 3
@@ -262,73 +388,49 @@
     "2021": {
       "athletes": [
         {
-          "name": "Наумова Ксения",
-          "region": "Московская область",
-          "sport_rank": "1",
-          "birth_year": 1990,
+          "athlete_id": "625837b0",
           "year_points": 10000,
-          "total_points": 27800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "24cb8b06",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 8
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Белякова Алена",
-          "region": "Самара",
-          "sport_rank": "КМС",
-          "birth_year": 1984,
+          "athlete_id": "8530f38b",
           "year_points": 6085,
-          "total_points": 27745,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "24cb8b06",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 8
+              "points": 6085
             }
           ],
           "rank": 2
         },
         {
-          "name": "Федорова Анастасия",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1986,
+          "athlete_id": "f3617432",
           "year_points": 5685,
-          "total_points": 31800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "24cb8b06",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 8
+              "points": 5685
             }
           ],
           "rank": 3
         },
         {
-          "name": "Смирнова Юлия",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1989,
+          "athlete_id": "3f666f6e",
           "year_points": 4545,
-          "total_points": 22575,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "24cb8b06",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 8
+              "points": 4545
             }
           ],
           "rank": 4
@@ -338,11 +440,8 @@
   },
   "overall_ranking": [
     {
+      "athlete_id": "f3617432",
       "rank": 1,
-      "name": "Федорова Анастасия",
-      "region": "Москва",
-      "sport_rank": "КМС",
-      "birth_year": 1986,
       "total_points": 31800,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -359,11 +458,8 @@
       ]
     },
     {
+      "athlete_id": "625837b0",
       "rank": 2,
-      "name": "Наумова Ксения",
-      "region": "Московская область",
-      "sport_rank": "1",
-      "birth_year": 1990,
       "total_points": 27800,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -379,11 +475,8 @@
       ]
     },
     {
+      "athlete_id": "8530f38b",
       "rank": 3,
-      "name": "Белякова Алена",
-      "region": "Самара",
-      "sport_rank": "КМС",
-      "birth_year": 1984,
       "total_points": 27745,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
@@ -400,11 +493,8 @@
       ]
     },
     {
+      "athlete_id": "3f666f6e",
       "rank": 4,
-      "name": "Смирнова Юлия",
-      "region": "Москва",
-      "sport_rank": "КМС",
-      "birth_year": 1989,
       "total_points": 22575,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
@@ -420,11 +510,8 @@
       ]
     },
     {
+      "athlete_id": "9763a67b",
       "rank": 5,
-      "name": "Попова Екатерина",
-      "region": "Москва",
-      "sport_rank": "1",
-      "birth_year": 1987,
       "total_points": 20630,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",

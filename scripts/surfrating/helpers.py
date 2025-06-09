@@ -3,6 +3,7 @@ import hashlib
 import csv
 import re
 import pandas as pd
+from datetime import datetime
 from typing import Dict, Any
 
 def validate_csv_columns(reader, required_columns: list, file_path: str) -> None:
@@ -40,9 +41,6 @@ def generate_event_id(event_name: str, event_date: str, discipline: str, categor
     return hashlib.md5(base_string.encode('utf-8')).hexdigest()[:8]
 
 def extract_year(date_str: str) -> int:
-    if not date_str or pd.isna(date_str):
-        return 0
-
     try:
         date = pd.to_datetime(date_str, dayfirst=True, errors='coerce')
         if not pd.isnull(date):
@@ -50,12 +48,12 @@ def extract_year(date_str: str) -> int:
 
         match = re.search(r'\b\d{4}\b', date_str)
         if match:
-            year = int(match.group())
-            if 1900 <= year <= datetime.now().year:
-                return year
+            return int(match.group())
+
         return 0
     except Exception:
         return 0
+
 def get_event_group(event_name: str, config: Dict) -> str:
     for group_name, group_data in config['event_groups'].items():
         patterns = group_data.get('events', [])

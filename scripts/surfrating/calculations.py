@@ -1,4 +1,5 @@
-from typing import Dict, List
+from typing import Dict, List, Tuple
+from helpers import generate_event_id, generate_athlete_id
 
 def calculate_base_points(place: str, group: str, config: Dict) -> int:
     system = config['scoring'][config['scoring_system']]
@@ -47,17 +48,16 @@ def apply_sport_rank_bonus(total: int, sport_rank: str, config: Dict) -> int:
         return total + config['bonuses']['sport_rank']['values'].get(rank, 0)
     return total
 
-def process_year_points(year: int, event_data: Dict, config: Dict) -> Dict:
-    year_info = {
-        'year_total_points': 0,
-        'events': []
-    }
+def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: str) -> Tuple[Dict, List]:
+    year_info = {'year_total_points': 0, 'events': []}
+    event_results = []
 
-    for event_name, event_info in event_data.items():
-        place = event_info['place']
-        group = event_info['group']
+    for event_id, event_info in event_data.items():
+        place              = event_info['place']
+        group              = event_info['group']
+        event_name         = event_info['event_name']
         participants_count = event_info.get('participants_count', 0)
-        is_dns = (place == 'DNS')
+        is_dns             = (place == 'DNS')
 
         points = calculate_base_points(place, group, config)
         points = apply_participant_factor(points, participants_count, config)
@@ -66,6 +66,7 @@ def process_year_points(year: int, event_data: Dict, config: Dict) -> Dict:
 
         year_info['year_total_points'] += points
         year_info['events'].append({
+            'event_id': event_id,
             'event_name': event_name,
             'place': int(place) if place.isdigit() else place,
             'points': points,
@@ -73,13 +74,22 @@ def process_year_points(year: int, event_data: Dict, config: Dict) -> Dict:
             'participants_count': participants_count
         })
 
-    return year_info
+        event_results.append({
+            'athlete_id': athlete_id,
+            'event_id': event_id,
+            'place': int(place) if place.isdigit() else place,
+            'points': points
+        })
 
-def process_athletes(data: Dict, config: Dict) -> List[Dict]:
+    return year_info, event_results
+
+def process_athletes(data: Dict, config: Dict) -> Tuple[List[Dict], List[Dict]]:
     allowed_years = config.get('allowed_years')
     results = []
+    all_results = []
 
     for name, info in data.items():
+        athlete_id = generate_athlete_id(name, info['birth_year'])
         filtered_years = {}
         if allowed_years:
             for year, year_events in info['years'].items():
@@ -99,16 +109,19 @@ def process_athletes(data: Dict, config: Dict) -> List[Dict]:
             'last_year': last_year,
             'years': {},
             'total_points': 0,
-            'best_result': None
+            'best_result': None,
+            'athlete_id': athlete_id
         }
-
         all_events = []
         total_points = 0
 
         for year, year_events in filtered_years.items():
-            year_info = process_year_points(int(year), year_events, config)
+            year_info, year_event_results = process_year_points(
+                int(year), year_events, config, athlete_id
+            )
             entry['years'][int(year)] = year_info
             total_points += year_info['year_total_points']
+            all_results.extend(year_event_results)
 
             for event in year_info['events']:
                 all_events.append({
@@ -139,11 +152,16 @@ def process_athletes(data: Dict, config: Dict) -> List[Dict]:
         results.append(entry)
 
     if config['sorting']['enabled']:
-        return sorted(results, key=lambda x: (
+        sorted_results = sorted(results, key=lambda x: (
             -x['total_points'],
             x['best_result']['place'] if x['best_result'] and isinstance(x['best_result']['place'], int) else 9999,
             -x['last_year'],
-            # Добавляем дополнительный ключ для стабильной сортировки
             -int(x['best_result']['event_year']) if x['best_result'] and x['best_result'].get('event_year') else 0
         ))
-    return sorted(results, key=lambda x: -x['total_points'])
+    else:
+        sorted_results = sorted(results, key=lambda x: -x['total_points'])
+
+    for rank, athlete in enumerate(sorted_results, 1):
+        athlete['rank'] = rank
+
+    return sorted_results, all_results

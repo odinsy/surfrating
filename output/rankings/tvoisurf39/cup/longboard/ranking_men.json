@@ -1,186 +1,262 @@
 {
   "discipline": "longboard",
   "gender": "men",
-  "last_updated": "2025-06-05",
+  "last_updated": "2025-06-09",
+  "events": {
+    "49cf3f0c": {
+      "id": "49cf3f0c",
+      "name": "Балтийский серф-контест #1",
+      "year": 2025,
+      "date": "2025.05.17",
+      "discipline": "длинная доска",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 9
+    }
+  },
+  "athletes": {
+    "dcf5ab78": {
+      "name": "Шушаков Роман",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "2a1c2137": {
+      "name": "Крысенков Глеб",
+      "region": "Санкт-Петербург",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "ece261fc": {
+      "name": "Синица Пётр",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "27cf674c": {
+      "name": "Кортелëв Фёдор",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "863f41e5": {
+      "name": "Перерва Вадим",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "1db906a3": {
+      "name": "Ломаев Владимир",
+      "region": "Санкт-Петербург",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "77d5d979": {
+      "name": "Черемискин Роман",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "512626fa": {
+      "name": "Андреев Александр",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "73d03c8f": {
+      "name": "Остапчук Иван",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "bc9e4f1b": {
+      "name": "Блискунов Дмитрий",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "dcf5ab78",
+      "event_id": "49cf3f0c",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "2a1c2137",
+      "event_id": "49cf3f0c",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "ece261fc",
+      "event_id": "49cf3f0c",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "27cf674c",
+      "event_id": "49cf3f0c",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "863f41e5",
+      "event_id": "49cf3f0c",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "1db906a3",
+      "event_id": "49cf3f0c",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "77d5d979",
+      "event_id": "49cf3f0c",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "512626fa",
+      "event_id": "49cf3f0c",
+      "place": 8,
+      "points": 4545
+    },
+    {
+      "athlete_id": "73d03c8f",
+      "event_id": "49cf3f0c",
+      "place": 9,
+      "points": 4545
+    },
+    {
+      "athlete_id": "bc9e4f1b",
+      "event_id": "49cf3f0c",
+      "place": "DNS",
+      "points": 0
+    }
+  ],
   "year_rankings": {
     "2025": {
       "athletes": [
         {
-          "name": "Шушаков Роман",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "dcf5ab78",
           "year_points": 10000,
-          "total_points": 10000,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 9
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Крысенков Глеб",
-          "region": "Санкт-Петербург",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "2a1c2137",
           "year_points": 7800,
-          "total_points": 7800,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 9
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Синица Пётр",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "ece261fc",
           "year_points": 6085,
-          "total_points": 6085,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 9
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Кортелëв Фёдор",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "27cf674c",
           "year_points": 5685,
-          "total_points": 5685,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 9
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Перерва Вадим",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "863f41e5",
           "year_points": 4745,
-          "total_points": 4745,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 9
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Ломаев Владимир",
-          "region": "Санкт-Петербург",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "1db906a3",
           "year_points": 4745,
-          "total_points": 4745,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 9
+              "points": 4745
             }
           ],
           "rank": 5
         },
         {
-          "name": "Черемискин Роман",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "77d5d979",
           "year_points": 4545,
-          "total_points": 4545,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 9
+              "points": 4545
             }
           ],
           "rank": 7
         },
         {
-          "name": "Андреев Александр",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "512626fa",
           "year_points": 4545,
-          "total_points": 4545,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 8,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 9
+              "points": 4545
             }
           ],
           "rank": 7
         },
         {
-          "name": "Остапчук Иван",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
-          "year_points": 3320,
-          "total_points": 3320,
+          "athlete_id": "73d03c8f",
+          "year_points": 4545,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": 9,
-              "points": 3320,
-              "group": "main",
-              "participants_count": 9
+              "points": 4545
             }
           ],
-          "rank": 9
+          "rank": 7
         },
         {
-          "name": "Блискунов Дмитрий",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "bc9e4f1b",
           "year_points": 0,
-          "total_points": 0,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "49cf3f0c",
               "place": "DNS",
-              "points": 0,
-              "group": "main",
-              "participants_count": 9
+              "points": 0
             }
           ],
           "rank": 10
@@ -190,11 +266,8 @@
   },
   "overall_ranking": [
     {
+      "athlete_id": "dcf5ab78",
       "rank": 1,
-      "name": "Шушаков Роман",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 10000,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -208,11 +281,8 @@
       ]
     },
     {
+      "athlete_id": "2a1c2137",
       "rank": 2,
-      "name": "Крысенков Глеб",
-      "region": "Санкт-Петербург",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 7800,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -226,11 +296,8 @@
       ]
     },
     {
+      "athlete_id": "ece261fc",
       "rank": 3,
-      "name": "Синица Пётр",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 6085,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -244,11 +311,8 @@
       ]
     },
     {
+      "athlete_id": "27cf674c",
       "rank": 4,
-      "name": "Кортелëв Фёдор",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 5685,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -262,11 +326,8 @@
       ]
     },
     {
+      "athlete_id": "863f41e5",
       "rank": 5,
-      "name": "Перерва Вадим",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 4745,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -280,11 +341,8 @@
       ]
     },
     {
+      "athlete_id": "1db906a3",
       "rank": 6,
-      "name": "Ломаев Владимир",
-      "region": "Санкт-Петербург",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 4745,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -298,11 +356,8 @@
       ]
     },
     {
+      "athlete_id": "77d5d979",
       "rank": 7,
-      "name": "Черемискин Роман",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 4545,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -316,11 +371,8 @@
       ]
     },
     {
+      "athlete_id": "512626fa",
       "rank": 8,
-      "name": "Андреев Александр",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 4545,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -334,17 +386,14 @@
       ]
     },
     {
+      "athlete_id": "73d03c8f",
       "rank": 9,
-      "name": "Остапчук Иван",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
-      "total_points": 3320,
+      "total_points": 4545,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
         "event_year": "2025",
         "place": 9,
-        "points": 3320
+        "points": 4545
       },
       "last_year": 2025,
       "years_participated": [
@@ -352,11 +401,8 @@
       ]
     },
     {
+      "athlete_id": "bc9e4f1b",
       "rank": 10,
-      "name": "Блискунов Дмитрий",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 0,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",

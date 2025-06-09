@@ -1,78 +1,220 @@
 {
   "discipline": "wakesurfing",
   "gender": "men",
-  "last_updated": "2025-06-05",
+  "last_updated": "2025-06-08",
+  "events": {
+    "2ad777de": {
+      "id": "2ad777de",
+      "name": "Чемпионат России",
+      "year": 2021,
+      "date": "20.06.2021",
+      "discipline": "вейксерфинг",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 8
+    },
+    "4b2551b8": {
+      "id": "4b2551b8",
+      "name": "Чемпионат России",
+      "year": 2024,
+      "date": "15.08.2024",
+      "discipline": "вейксерфинг",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 15
+    },
+    "745c404a": {
+      "id": "745c404a",
+      "name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+      "year": 2024,
+      "date": "22.09.2024",
+      "discipline": "вейксерфинг",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 9
+    },
+    "cd49f95e": {
+      "id": "cd49f95e",
+      "name": "Чемпионат России",
+      "year": 2022,
+      "date": "09.05.2022",
+      "discipline": "вейксерфинг",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 23
+    }
+  },
+  "athletes": {
+    "f09d7a66": {
+      "name": "Корольков Станислав",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birth_year": 1986
+    },
+    "c523f3d0": {
+      "name": "Данилов Сергей",
+      "region": "Московская область",
+      "sport_rank": "MC",
+      "birth_year": 1978
+    },
+    "23a98e5f": {
+      "name": "Пантелеев Александр",
+      "region": "Москва",
+      "sport_rank": "1",
+      "birth_year": 1997
+    },
+    "595b3608": {
+      "name": "Соловьев Андрей",
+      "region": "Приморский край",
+      "sport_rank": "1",
+      "birth_year": 1985
+    },
+    "ac794a59": {
+      "name": "Иванов Виталий",
+      "region": "Москва",
+      "sport_rank": "1",
+      "birth_year": 1985
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "f09d7a66",
+      "event_id": "2ad777de",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "f09d7a66",
+      "event_id": "4b2551b8",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "f09d7a66",
+      "event_id": "cd49f95e",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "2ad777de",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "4b2551b8",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "745c404a",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "c523f3d0",
+      "event_id": "cd49f95e",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "595b3608",
+      "event_id": "2ad777de",
+      "place": 5,
+      "points": 4745
+    },
+    {
+      "athlete_id": "595b3608",
+      "event_id": "4b2551b8",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "595b3608",
+      "event_id": "cd49f95e",
+      "place": 8,
+      "points": 4545
+    },
+    {
+      "athlete_id": "ac794a59",
+      "event_id": "2ad777de",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "ac794a59",
+      "event_id": "745c404a",
+      "place": 6,
+      "points": 4745
+    },
+    {
+      "athlete_id": "ac794a59",
+      "event_id": "cd49f95e",
+      "place": 7,
+      "points": 4545
+    },
+    {
+      "athlete_id": "23a98e5f",
+      "event_id": "4b2551b8",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "23a98e5f",
+      "event_id": "745c404a",
+      "place": 1,
+      "points": 10000
+    }
+  ],
   "year_rankings": {
     "2021": {
       "athletes": [
         {
-          "name": "Корольков Станислав",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1986,
+          "athlete_id": "f09d7a66",
           "year_points": 10000,
-          "total_points": 27800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2ad777de",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 8
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Данилов Сергей",
-          "region": "Московская область",
-          "sport_rank": "MC",
-          "birth_year": 1978,
+          "athlete_id": "c523f3d0",
           "year_points": 5685,
-          "total_points": 27370,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2ad777de",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 8
+              "points": 5685
             }
           ],
           "rank": 2
         },
         {
-          "name": "Соловьев Андрей",
-          "region": "Приморский край",
-          "sport_rank": "1",
-          "birth_year": 1985,
+          "athlete_id": "595b3608",
           "year_points": 4745,
-          "total_points": 14975,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2ad777de",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 8
+              "points": 4745
             }
           ],
           "rank": 3
         },
         {
-          "name": "Иванов Виталий",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1985,
+          "athlete_id": "ac794a59",
           "year_points": 4545,
-          "total_points": 13835,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "2ad777de",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 8
+              "points": 4545
             }
           ],
           "rank": 4
@@ -82,105 +224,71 @@
     "2024": {
       "athletes": [
         {
-          "name": "Пантелеев Александр",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1997,
+          "athlete_id": "23a98e5f",
           "year_points": 16085,
-          "total_points": 16085,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "4b2551b8",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 15
+              "points": 6085
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "745c404a",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 9
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Данилов Сергей",
-          "region": "Московская область",
-          "sport_rank": "MC",
-          "birth_year": 1978,
+          "athlete_id": "c523f3d0",
           "year_points": 15600,
-          "total_points": 27370,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "4b2551b8",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 15
+              "points": 7800
             },
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "745c404a",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 9
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Корольков Станислав",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1986,
+          "athlete_id": "f09d7a66",
           "year_points": 10000,
-          "total_points": 27800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "4b2551b8",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 15
+              "points": 10000
             }
           ],
           "rank": 3
         },
         {
-          "name": "Соловьев Андрей",
-          "region": "Приморский край",
-          "sport_rank": "1",
-          "birth_year": 1985,
+          "athlete_id": "595b3608",
           "year_points": 5685,
-          "total_points": 14975,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "4b2551b8",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 15
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Иванов Виталий",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1985,
+          "athlete_id": "ac794a59",
           "year_points": 4745,
-          "total_points": 13835,
           "events": [
             {
-              "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
+              "event_id": "745c404a",
               "place": 6,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 9
+              "points": 4745
             }
           ],
           "rank": 5
@@ -190,73 +298,49 @@
     "2022": {
       "athletes": [
         {
-          "name": "Корольков Станислав",
-          "region": "Москва",
-          "sport_rank": "КМС",
-          "birth_year": 1986,
+          "athlete_id": "f09d7a66",
           "year_points": 7800,
-          "total_points": 27800,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "cd49f95e",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 23
+              "points": 7800
             }
           ],
           "rank": 1
         },
         {
-          "name": "Данилов Сергей",
-          "region": "Московская область",
-          "sport_rank": "MC",
-          "birth_year": 1978,
+          "athlete_id": "c523f3d0",
           "year_points": 6085,
-          "total_points": 27370,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "cd49f95e",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 23
+              "points": 6085
             }
           ],
           "rank": 2
         },
         {
-          "name": "Соловьев Андрей",
-          "region": "Приморский край",
-          "sport_rank": "1",
-          "birth_year": 1985,
+          "athlete_id": "595b3608",
           "year_points": 4545,
-          "total_points": 14975,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "cd49f95e",
               "place": 8,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 23
+              "points": 4545
             }
           ],
           "rank": 3
         },
         {
-          "name": "Иванов Виталий",
-          "region": "Москва",
-          "sport_rank": "1",
-          "birth_year": 1985,
+          "athlete_id": "ac794a59",
           "year_points": 4545,
-          "total_points": 13835,
           "events": [
             {
-              "event_name": "Чемпионат России",
+              "event_id": "cd49f95e",
               "place": 7,
-              "points": 4545,
-              "group": "main",
-              "participants_count": 23
+              "points": 4545
             }
           ],
           "rank": 3
@@ -266,11 +350,8 @@
   },
   "overall_ranking": [
     {
+      "athlete_id": "f09d7a66",
       "rank": 1,
-      "name": "Корольков Станислав",
-      "region": "Москва",
-      "sport_rank": "КМС",
-      "birth_year": 1986,
       "total_points": 27800,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -286,11 +367,8 @@
       ]
     },
     {
+      "athlete_id": "c523f3d0",
       "rank": 2,
-      "name": "Данилов Сергей",
-      "region": "Московская область",
-      "sport_rank": "MC",
-      "birth_year": 1978,
       "total_points": 27370,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -306,11 +384,8 @@
       ]
     },
     {
+      "athlete_id": "23a98e5f",
       "rank": 3,
-      "name": "Пантелеев Александр",
-      "region": "Москва",
-      "sport_rank": "1",
-      "birth_year": 1997,
       "total_points": 16085,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",
@@ -324,11 +399,8 @@
       ]
     },
     {
+      "athlete_id": "595b3608",
       "rank": 4,
-      "name": "Соловьев Андрей",
-      "region": "Приморский край",
-      "sport_rank": "1",
-      "birth_year": 1985,
       "total_points": 14975,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -344,11 +416,8 @@
       ]
     },
     {
+      "athlete_id": "ac794a59",
       "rank": 5,
-      "name": "Иванов Виталий",
-      "region": "Москва",
-      "sport_rank": "1",
-      "birth_year": 1985,
       "total_points": 13835,
       "best_result": {
         "event_name": "Чемпионат федеральных округов (ЦФО,ЮФО,ПФО)",

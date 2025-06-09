@@ -1,96 +1,142 @@
 {
   "discipline": "longboard",
   "gender": "women",
-  "last_updated": "2025-06-05",
+  "last_updated": "2025-06-09",
+  "events": {
+    "5d565523": {
+      "id": "5d565523",
+      "name": "Балтийский серф-контест #1",
+      "year": 2025,
+      "date": "2025.05.17",
+      "discipline": "длинная доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 7
+    }
+  },
+  "athletes": {
+    "fbc8c1fc": {
+      "name": "Алиса Болгова",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "2293cc87": {
+      "name": "Данькова Елизавета",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "fee42324": {
+      "name": "Климова Мария",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "be4db209": {
+      "name": "Петрова Елизавета",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "3e56ea12": {
+      "name": "Гуслина Полина",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "fbc8c1fc",
+      "event_id": "5d565523",
+      "place": 1,
+      "points": 10000
+    },
+    {
+      "athlete_id": "2293cc87",
+      "event_id": "5d565523",
+      "place": 2,
+      "points": 7800
+    },
+    {
+      "athlete_id": "fee42324",
+      "event_id": "5d565523",
+      "place": 3,
+      "points": 6085
+    },
+    {
+      "athlete_id": "be4db209",
+      "event_id": "5d565523",
+      "place": 4,
+      "points": 5685
+    },
+    {
+      "athlete_id": "3e56ea12",
+      "event_id": "5d565523",
+      "place": 5,
+      "points": 4745
+    }
+  ],
   "year_rankings": {
     "2025": {
       "athletes": [
         {
-          "name": "Алиса Болгова",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "fbc8c1fc",
           "year_points": 10000,
-          "total_points": 10000,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "5d565523",
               "place": 1,
-              "points": 10000,
-              "group": "main",
-              "participants_count": 7
+              "points": 10000
             }
           ],
           "rank": 1
         },
         {
-          "name": "Данькова Елизавета",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "2293cc87",
           "year_points": 7800,
-          "total_points": 7800,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "5d565523",
               "place": 2,
-              "points": 7800,
-              "group": "main",
-              "participants_count": 7
+              "points": 7800
             }
           ],
           "rank": 2
         },
         {
-          "name": "Климова Мария",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "fee42324",
           "year_points": 6085,
-          "total_points": 6085,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "5d565523",
               "place": 3,
-              "points": 6085,
-              "group": "main",
-              "participants_count": 7
+              "points": 6085
             }
           ],
           "rank": 3
         },
         {
-          "name": "Петрова Елизавета",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "be4db209",
           "year_points": 5685,
-          "total_points": 5685,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "5d565523",
               "place": 4,
-              "points": 5685,
-              "group": "main",
-              "participants_count": 7
+              "points": 5685
             }
           ],
           "rank": 4
         },
         {
-          "name": "Гуслина Полина",
-          "region": "Калининградская область",
-          "sport_rank": "",
-          "birth_year": 0,
+          "athlete_id": "3e56ea12",
           "year_points": 4745,
-          "total_points": 4745,
           "events": [
             {
-              "event_name": "Балтийский серф-контест #1",
+              "event_id": "5d565523",
               "place": 5,
-              "points": 4745,
-              "group": "main",
-              "participants_count": 7
+              "points": 4745
             }
           ],
           "rank": 5
@@ -100,11 +146,8 @@
   },
   "overall_ranking": [
     {
+      "athlete_id": "fbc8c1fc",
       "rank": 1,
-      "name": "Алиса Болгова",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 10000,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -118,11 +161,8 @@
       ]
     },
     {
+      "athlete_id": "2293cc87",
       "rank": 2,
-      "name": "Данькова Елизавета",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 7800,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -136,11 +176,8 @@
       ]
     },
     {
+      "athlete_id": "fee42324",
       "rank": 3,
-      "name": "Климова Мария",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 6085,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -154,11 +191,8 @@
       ]
     },
     {
+      "athlete_id": "be4db209",
       "rank": 4,
-      "name": "Петрова Елизавета",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 5685,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -172,11 +206,8 @@
       ]
     },
     {
+      "athlete_id": "3e56ea12",
       "rank": 5,
-      "name": "Гуслина Полина",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0,
       "total_points": 4745,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",

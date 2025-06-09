@@ -5,7 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import List, Dict, Optional, Union
 from anonymization import apply_anonymization
-from helpers import generate_event_id
+from helpers import generate_event_id, generate_athlete_id
 
 def _resolve_output_path(output_filename: Optional[str], config: Dict, key: Optional[str] = None, default_suffix: Optional[str] = None) -> Path:
     """Обрабатывает пути для выходных файлов с учетом конфигурации"""
@@ -64,7 +64,7 @@ def save_to_csv(results: List[Dict], headers: List[str], years: List[int], confi
             row = prepare_row_data(athlete, years)
             writer.writerow(row)
 
-def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, output_filename: str = None) -> None:
+def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, all_results: List, output_filename: str = None) -> None:
     output_path = _resolve_output_path(output_filename, config, key='ranking_json')
 
     transformed = {
@@ -72,17 +72,29 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
         "gender": config.get("gender", "unknown"),
         "last_updated": datetime.now().date().isoformat(),
         "events": {},
+        "athletes": {},
+        "results": all_results,
         "year_rankings": {},
         "overall_ranking": []
     }
 
-    year_athletes = defaultdict(list)
+    athletes_dict = {}
+    for athlete in results:
+        athlete_id = generate_athlete_id(athlete['name'], athlete['birth_year'])
+        athletes_dict[athlete_id] = {
+            "name": athlete['name'],
+            "region": athlete['region'],
+            "sport_rank": athlete['sport_rank'],
+            "birth_year": athlete['birth_year']
+        }
+    transformed["athletes"] = athletes_dict
 
     for event_id, event_data in events_info.items():
-        transformed["events"][f"{event_data['year']}_{event_id[:4]}"] = {
+        transformed["events"][event_id] = {
             "id": event_id,
             "name": event_data['name'],
             "year": event_data['year'],
+            "date": event_data['date'],
             "discipline": event_data['discipline'],
             "category": event_data['category'],
             "group": event_data['group'],
@@ -90,12 +102,10 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
         }
 
     for athlete in results:
+        athlete_id = generate_athlete_id(athlete['name'], athlete['birth_year'])
         overall_entry = {
+            "athlete_id": athlete_id,
             "rank": athlete["rank"],
-            "name": athlete["name"],
-            "region": athlete["region"],
-            "sport_rank": athlete["sport_rank"],
-            "birth_year": athlete["birth_year"],
             "total_points": athlete["total_points"],
             "best_result": athlete.get("best_result", {}),
             "last_year": athlete["last_year"],
@@ -103,21 +113,27 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
         }
         transformed["overall_ranking"].append(overall_entry)
 
+    year_athletes = defaultdict(list)
+    for athlete in results:
+        athlete_id = generate_athlete_id(athlete['name'], athlete['birth_year'])
         for year, year_data in athlete.get("years", {}).items():
+            optimized_events = []
+            for event in year_data["events"]:
+                optimized_events.append({
+                    "event_id": event["event_id"],
+                    "place": event["place"],
+                    "points": event["points"]
+                })
+
             year_entry = {
-                "name": athlete["name"],
-                "region": athlete["region"],
-                "sport_rank": athlete["sport_rank"],
-                "birth_year": athlete["birth_year"],
+                "athlete_id": athlete_id,
                 "year_points": year_data["year_total_points"],
-                "total_points": athlete["total_points"],
-                "events": year_data["events"]
+                "events": optimized_events
             }
             year_athletes[year].append(year_entry)
 
     for year, athletes in year_athletes.items():
         athletes.sort(key=lambda x: x["year_points"], reverse=True)
-
         current_rank = 1
         prev_points = None
         for i, athlete in enumerate(athletes):
@@ -125,7 +141,6 @@ def save_ranking_json(results: List[Dict], config: Dict, events_info: Dict, outp
                 current_rank = i + 1
             athlete["rank"] = current_rank
             prev_points = athlete["year_points"]
-
         transformed["year_rankings"][year] = {"athletes": athletes}
 
     transformed = apply_anonymization(transformed, config)
@@ -139,21 +154,22 @@ def print_to_console(results: List[Dict], headers: List[str], years: List[int], 
         row = prepare_row_data(athlete, years)
         print(','.join(map(str, row)))
 
-def generate_output(results: List[Dict], config: Dict, events_info: Dict) -> None:
-    for idx, athlete in enumerate(results, 1):
-        athlete['rank'] = idx
-
+def generate_output(results: List[Dict], config: Dict, events_info: Dict, all_results: List) -> None:
     headers, years = prepare_headers_and_years(results, config)
 
     save_to_csv(results, headers, years, config)
-    save_ranking_json(results, config, events_info)
+    save_ranking_json(results, config, events_info, all_results)
     print_to_console(results, headers, years, config)
 
     if 'top5_filename' in config['output']:
         top5 = results[:5]
+        top5_results = [
+            res for res in all_results
+            if res['athlete_id'] in {a['athlete_id'] for a in top5}
+        ]
         csv_path = config['output']['top5_filename']
         json_path = Path(csv_path).with_suffix('.json')
 
         save_to_csv(top5, headers, years, config, csv_path)
-        save_ranking_json(top5, config, events_info, json_path)
+        save_ranking_json(top5, config, events_info, top5_results, json_path)
         print_to_console(top5, headers, years, config)

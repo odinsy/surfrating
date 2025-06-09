@@ -4,7 +4,7 @@ import re
 import pandas as pd
 from collections import defaultdict
 from typing import Dict
-from helpers import read_csv_file, extract_year, get_event_group, generate_event_id
+from helpers import read_csv_file, extract_year, get_event_group, generate_event_id, generate_athlete_id
 
 def _process_row(row: dict, athletes: dict, config: Dict, event_participants: dict, events_info: dict) -> None:
     event_name       = row['Событие'].strip()
@@ -19,6 +19,7 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
         events_info[event_id] = {
             'name': event_name,
             'year': event_year,
+            'date': event_date,
             'discipline': event_discipline,
             'category': event_category,
             'group': event_group,
@@ -35,11 +36,12 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
     athlete_birth_year = extract_year(row['Год рождения'])
 
     if place != 'DNS':
-        event_key = (event_year, event_name)
-        event_participants[event_key].add(athlete_name)
+        event_participants[event_id].add(athlete_name)
 
     athlete = athletes[athlete_name]
-    athlete['years'][event_year][event_name] = {
+    athlete['years'][event_year][event_id] = {
+        'event_id': event_id,
+        'event_name': event_name,
         'place': place,
         'group': event_group
     }
@@ -88,18 +90,16 @@ def parse_files(config: Dict) -> Dict[str, Dict]:
                 print(f"Пропущен файл {file_path}: {str(e)}")
                 continue
 
-    for event_id, event_data in events_info.items():
-        participants = set()
-        for (year, name), names_set in event_participants.items():
-            if year == event_data['year'] and name == event_data['name']:
-                participants |= names_set
-        event_data['participants_count'] = len(participants)
+    for event_id, participants in event_participants.items():
+        events_info[event_id]['participants_count'] = len(participants)
 
     for athlete in athletes.values():
         for year, events_dict in athlete['years'].items():
-            for event_name, event_info in events_dict.items():
-                key = (year, event_name)
-                event_info['participants_count'] = len(event_participants.get(key, set()))
+            for event_id, event_info in events_dict.items():
+                if event_id in events_info:
+                    event_info['participants_count'] = events_info[event_id]['participants_count']
+                else:
+                    event_info['participants_count'] = 0
 
     _finalize_athletes_data(athletes)
 
