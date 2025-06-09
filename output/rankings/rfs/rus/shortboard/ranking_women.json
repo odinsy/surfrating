@@ -1,7 +1,7 @@
 {
   "discipline": "shortboard",
   "gender": "women",
-  "last_updated": "2025-06-08",
+  "last_updated": "2025-06-09",
   "events": {
     "f1722a39": {
       "id": "f1722a39",
@@ -111,6 +111,12 @@
       "sport_rank": "КМС",
       "birth_year": 1997
     },
+    "1e70c3b5": {
+      "name": "Большова Елена",
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "birth_year": 1983
+    },
     "1a43a8c5": {
       "name": "Кособукина Ирина",
       "region": "Москва",
@@ -129,12 +135,6 @@
       "sport_rank": "КМС",
       "birth_year": 1984
     },
-    "1e70c3b5": {
-      "name": "Большова Елена",
-      "region": "Москва",
-      "sport_rank": "КМС",
-      "birth_year": 1983
-    },
     "3fe35eaf": {
       "name": "Мализия Полина",
       "region": "Москва",
@@ -152,12 +152,6 @@
       "region": "Калининградская область",
       "sport_rank": "КМС",
       "birth_year": 1985
-    },
-    "fc754514": {
-      "name": "Больсова Елена",
-      "region": "Москва",
-      "sport_rank": "",
-      "birth_year": 1983
     },
     "109344b4": {
       "name": "Шемна Ольга",
@@ -408,10 +402,16 @@
       "points": 4745
     },
     {
-      "athlete_id": "fc754514",
+      "athlete_id": "1e70c3b5",
       "event_id": "b8af4c8d",
       "place": 2,
       "points": 7800
+    },
+    {
+      "athlete_id": "1e70c3b5",
+      "event_id": "7a85eafa",
+      "place": 1,
+      "points": 10000
     },
     {
       "athlete_id": "109344b4",
@@ -454,12 +454,6 @@
       "event_id": "b8af4c8d",
       "place": 5,
       "points": 4745
-    },
-    {
-      "athlete_id": "1e70c3b5",
-      "event_id": "7a85eafa",
-      "place": 1,
-      "points": 10000
     },
     {
       "athlete_id": "b1dbec71",
@@ -764,7 +758,7 @@
           "rank": 1
         },
         {
-          "athlete_id": "fc754514",
+          "athlete_id": "1e70c3b5",
           "year_points": 7800,
           "events": [
             {
@@ -1537,8 +1531,24 @@
       ]
     },
     {
-      "athlete_id": "1a43a8c5",
+      "athlete_id": "1e70c3b5",
       "rank": 7,
+      "total_points": 17800,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2021",
+        "place": 1,
+        "points": 10000
+      },
+      "last_year": 2021,
+      "years_participated": [
+        2019,
+        2021
+      ]
+    },
+    {
+      "athlete_id": "1a43a8c5",
+      "rank": 8,
       "total_points": 15685,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1554,7 +1564,7 @@
     },
     {
       "athlete_id": "5cab2598",
-      "rank": 8,
+      "rank": 9,
       "total_points": 12345,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1570,7 +1580,7 @@
     },
     {
       "athlete_id": "ab80ec6b",
-      "rank": 9,
+      "rank": 10,
       "total_points": 12210,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1583,21 +1593,6 @@
         2021,
         2024,
         2023
-      ]
-    },
-    {
-      "athlete_id": "1e70c3b5",
-      "rank": 10,
-      "total_points": 10000,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2021",
-        "place": 1,
-        "points": 10000
-      },
-      "last_year": 2021,
-      "years_participated": [
-        2021
       ]
     },
     {
@@ -1648,23 +1643,8 @@
       ]
     },
     {
-      "athlete_id": "fc754514",
-      "rank": 14,
-      "total_points": 7800,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2019",
-        "place": 2,
-        "points": 7800
-      },
-      "last_year": 2019,
-      "years_participated": [
-        2019
-      ]
-    },
-    {
       "athlete_id": "109344b4",
-      "rank": 15,
+      "rank": 14,
       "total_points": 6085,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1679,7 +1659,7 @@
     },
     {
       "athlete_id": "c0134a28",
-      "rank": 16,
+      "rank": 15,
       "total_points": 6085,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1694,7 +1674,7 @@
     },
     {
       "athlete_id": "bb2fb588",
-      "rank": 17,
+      "rank": 16,
       "total_points": 5685,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1709,7 +1689,7 @@
     },
     {
       "athlete_id": "cf653869",
-      "rank": 18,
+      "rank": 17,
       "total_points": 4745,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1724,7 +1704,7 @@
     },
     {
       "athlete_id": "7fd95e02",
-      "rank": 19,
+      "rank": 18,
       "total_points": 4745,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1739,7 +1719,7 @@
     },
     {
       "athlete_id": "3fb2c031",
-      "rank": 20,
+      "rank": 19,
       "total_points": 4545,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1754,7 +1734,7 @@
     },
     {
       "athlete_id": "0d88b63a",
-      "rank": 21,
+      "rank": 20,
       "total_points": 4545,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1769,7 +1749,7 @@
     },
     {
       "athlete_id": "bed3a944",
-      "rank": 22,
+      "rank": 21,
       "total_points": 4545,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1784,7 +1764,7 @@
     },
     {
       "athlete_id": "35595575",
-      "rank": 23,
+      "rank": 22,
       "total_points": 4545,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1799,7 +1779,7 @@
     },
     {
       "athlete_id": "a917beb2",
-      "rank": 24,
+      "rank": 23,
       "total_points": 3320,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1814,7 +1794,7 @@
     },
     {
       "athlete_id": "0ccbc6e2",
-      "rank": 25,
+      "rank": 24,
       "total_points": 3320,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1829,7 +1809,7 @@
     },
     {
       "athlete_id": "7ad40cba",
-      "rank": 26,
+      "rank": 25,
       "total_points": 3320,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1844,7 +1824,7 @@
     },
     {
       "athlete_id": "bd10e2cf",
-      "rank": 27,
+      "rank": 26,
       "total_points": 3320,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1859,7 +1839,7 @@
     },
     {
       "athlete_id": "8bfb6ee1",
-      "rank": 28,
+      "rank": 27,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1874,7 +1854,7 @@
     },
     {
       "athlete_id": "03dc56a3",
-      "rank": 29,
+      "rank": 28,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1889,7 +1869,7 @@
     },
     {
       "athlete_id": "2f20bc1d",
-      "rank": 30,
+      "rank": 29,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1904,7 +1884,7 @@
     },
     {
       "athlete_id": "adab6584",
-      "rank": 31,
+      "rank": 30,
       "total_points": 1900,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1919,7 +1899,7 @@
     },
     {
       "athlete_id": "227257a2",
-      "rank": 32,
+      "rank": 31,
       "total_points": 1900,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -1934,7 +1914,7 @@
     },
     {
       "athlete_id": "f667db3b",
-      "rank": 33,
+      "rank": 32,
       "total_points": 0,
       "best_result": {
         "event_name": "Чемпионат России",
