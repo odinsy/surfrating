@@ -1,8 +1,8 @@
 const JSON_PATHS = {
-    'shortboard_men': './data/rankings/top5/shortboard_men.json',
-    'longboard_men': './data/rankings/top5/longboard_men.json',
-    'shortboard_women': './data/rankings/top5/shortboard_women.json',
-    'longboard_women': './data/rankings/top5/longboard_women.json'
+    'shortboard_men': './data/rankings/rfs/rus/shortboard/t5_ranking_men.json',
+    'shortboard_women': './data/rankings/rfs/rus/shortboard/t5_ranking_women.json',
+    'longboard_men': './data/rankings/rfs/rus/longboard/t5_ranking_men.json',
+    'longboard_women': './data/rankings/rfs/rus/longboard/t5_ranking_women.json'
 };
 
 async function loadJSON(category) {
