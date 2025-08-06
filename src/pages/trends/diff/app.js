@@ -1,4 +1,4 @@
-const JSON_BASE_PATH = '../../data/';
+const JSON_BASE_PATH = '../../../data/';
 
 document.addEventListener('DOMContentLoaded', function() {
     const margin = { top: 40, right: 30, bottom: 70, left: 100 };
