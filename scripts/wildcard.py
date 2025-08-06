@@ -80,7 +80,7 @@ def generate_output(results: List[Dict]):
                 'Rank': athlete['current_rank'],
                 'Name': athlete['name'],
                 'Region': athlete['region'],
-                'Best Place': athlete['best_place'] or '-',
+                # 'Best Place': athlete['best_place'] or '-',
                 'Total Points': athlete['total_points'] or '-',
                 'Last Year': athlete['last_year']
             })
