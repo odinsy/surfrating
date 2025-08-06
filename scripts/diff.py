@@ -1,8 +1,8 @@
 import pandas as pd
 import json
 
-df_10 = pd.read_csv('./tmp/0.8/shortboard/men-08.csv')
-df_08 = pd.read_csv('./tmp/1.0/shortboard/men-10.csv')
+df_10 = pd.read_csv('./tmp/1.0/shortboard/men-10.csv')
+df_08 = pd.read_csv('./tmp/0.8/shortboard/men-08.csv')
 top_20 = df_10.head(20)
 rank_dict_08 = dict(zip(df_08['Name'], df_08['Rank']))
 
