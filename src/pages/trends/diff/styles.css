@@ -56,10 +56,6 @@ h1 {
     fill: #F44336;
 }
 
-.bar-neutral {
-    fill: #2196F3;
-}
-
 .tooltip {
     position: absolute;
     padding: 12px;
@@ -75,8 +71,14 @@ h1 {
     z-index: 10;
 }
 
-.legend-box {
-    fill: white;
-    stroke: #ddd;
-    stroke-width: 1;
+.axis-label {
+    font-size: 14px;
+    fill: #555;
+}
+
+.chart-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-anchor: middle;
+    fill: #2c3e50;
 }

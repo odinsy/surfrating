@@ -21,5 +21,7 @@ for _, row in top_20.iterrows():
             'position_change': position_change
         })
 
+comparison_data.sort(key=lambda x: x['rank_10'])
+
 with open('./output/diff.json', 'w', encoding='utf-8') as f:
     json.dump(comparison_data, f, ensure_ascii=False)
