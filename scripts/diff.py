@@ -13,7 +13,7 @@ for _, row in top_20.iterrows():
     rank_08 = rank_dict_08.get(name)
 
     if rank_08 is not None:
-        position_change = rank_08 - rank_10
+        position_change = rank_10 - rank_08
         comparison_data.append({
             'name': name,
             'rank_10': rank_10,
