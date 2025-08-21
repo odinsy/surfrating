@@ -41,17 +41,11 @@
       "sport_rank": "МС",
       "birth_year": 1983
     },
-    "473f005c": {
-      "name": "Синица Петр",
+    "4fe3dad9": {
+      "name": "Каптелов Петр",
       "region": "Калининградская область",
       "sport_rank": "1",
-      "birth_year": 1985
-    },
-    "c86cbb4b": {
-      "name": "Багдасарян Максим",
-      "region": "Калининградская область",
-      "sport_rank": "2",
-      "birth_year": 2008
+      "birth_year": 0
     },
     "e91cc0df": {
       "name": "Шушаков Роман",
@@ -64,9 +58,33 @@
       "region": "Калининградская область",
       "sport_rank": "2",
       "birth_year": 1992
+    },
+    "473f005c": {
+      "name": "Синица Петр",
+      "region": "Калининградская область",
+      "sport_rank": "1",
+      "birth_year": 1985
     }
   },
   "results": [
+    {
+      "athlete_id": "4fe3dad9",
+      "event_id": "c9c7591e",
+      "place": 1,
+      "points": 6000
+    },
+    {
+      "athlete_id": "4fe3dad9",
+      "event_id": "43624834",
+      "place": 3,
+      "points": 3660
+    },
+    {
+      "athlete_id": "9db5218f",
+      "event_id": "c9c7591e",
+      "place": 2,
+      "points": 4680
+    },
     {
       "athlete_id": "9db5218f",
       "event_id": "43624834",
@@ -78,6 +96,12 @@
       "event_id": "3689ee74",
       "place": 10,
       "points": 1890
+    },
+    {
+      "athlete_id": "e91cc0df",
+      "event_id": "c9c7591e",
+      "place": 3,
+      "points": 3660
     },
     {
       "athlete_id": "e91cc0df",
@@ -102,18 +126,6 @@
       "event_id": "3689ee74",
       "place": 2,
       "points": 4680
-    },
-    {
-      "athlete_id": "c86cbb4b",
-      "event_id": "43624834",
-      "place": 2,
-      "points": 4680
-    },
-    {
-      "athlete_id": "c86cbb4b",
-      "event_id": "3689ee74",
-      "place": 3,
-      "points": 3660
     },
     {
       "athlete_id": "473f005c",
@@ -144,13 +156,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "c86cbb4b",
-          "year_points": 4680,
+          "athlete_id": "4fe3dad9",
+          "year_points": 3660,
           "events": [
             {
               "event_id": "43624834",
-              "place": 2,
-              "points": 4680
+              "place": 3,
+              "points": 3660
             }
           ],
           "rank": 2
@@ -220,18 +232,6 @@
           "rank": 2
         },
         {
-          "athlete_id": "c86cbb4b",
-          "year_points": 3660,
-          "events": [
-            {
-              "event_id": "3689ee74",
-              "place": 3,
-              "points": 3660
-            }
-          ],
-          "rank": 3
-        },
-        {
           "athlete_id": "e91cc0df",
           "year_points": 2400,
           "events": [
@@ -241,7 +241,7 @@
               "points": 2400
             }
           ],
-          "rank": 4
+          "rank": 3
         },
         {
           "athlete_id": "9db5218f",
@@ -253,7 +253,47 @@
               "points": 1890
             }
           ],
-          "rank": 5
+          "rank": 4
+        }
+      ]
+    },
+    "2023": {
+      "athletes": [
+        {
+          "athlete_id": "4fe3dad9",
+          "year_points": 6000,
+          "events": [
+            {
+              "event_id": "c9c7591e",
+              "place": 1,
+              "points": 6000
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "athlete_id": "9db5218f",
+          "year_points": 4680,
+          "events": [
+            {
+              "event_id": "c9c7591e",
+              "place": 2,
+              "points": 4680
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "athlete_id": "e91cc0df",
+          "year_points": 3660,
+          "events": [
+            {
+              "event_id": "c9c7591e",
+              "place": 3,
+              "points": 3660
+            }
+          ],
+          "rank": 3
         }
       ]
     }
@@ -276,62 +316,64 @@
       ]
     },
     {
-      "athlete_id": "473f005c",
+      "athlete_id": "4fe3dad9",
       "rank": 2,
-      "total_points": 8400,
+      "total_points": 9660,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
-        "event_year": "2024",
+        "event_year": "2023",
         "place": 1,
         "points": 6000
       },
       "last_year": 2025,
       "years_participated": [
-        2025,
-        2024
-      ]
-    },
-    {
-      "athlete_id": "c86cbb4b",
-      "rank": 3,
-      "total_points": 8340,
-      "best_result": {
-        "event_name": "Чемпионат Калининградской области",
-        "event_year": "2025",
-        "place": 2,
-        "points": 4680
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025,
-        2024
+        2023,
+        2025
       ]
     },
     {
       "athlete_id": "e91cc0df",
-      "rank": 4,
-      "total_points": 5760,
+      "rank": 3,
+      "total_points": 9420,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
-        "event_year": "2025",
-        "place": 4,
-        "points": 3360
+        "event_year": "2023",
+        "place": 3,
+        "points": 3660
       },
       "last_year": 2025,
       "years_participated": [
+        2023,
         2025,
         2024
       ]
     },
     {
       "athlete_id": "9db5218f",
-      "rank": 5,
-      "total_points": 4650,
+      "rank": 4,
+      "total_points": 9330,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
-        "event_year": "2025",
-        "place": 5,
-        "points": 2760
+        "event_year": "2023",
+        "place": 2,
+        "points": 4680
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2023,
+        2025,
+        2024
+      ]
+    },
+    {
+      "athlete_id": "473f005c",
+      "rank": 5,
+      "total_points": 8400,
+      "best_result": {
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2024",
+        "place": 1,
+        "points": 6000
       },
       "last_year": 2025,
       "years_participated": [
