@@ -12,6 +12,9 @@ rating_rfs_surf_main:
 rating_rfs_surf_kaliningrad:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/kaliningrad/$(discipline)_$(category).yaml | column -t -s ','
 
+rating_rfs_surf_spb:
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-spb.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/spb/$(discipline)_$(category).yaml | column -t -s ','
+
 rating_rfs_wake_main:
 	python3 ./scripts/surfrating/main.py --config conf/rfs/config.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml | column -t -s ','
 
