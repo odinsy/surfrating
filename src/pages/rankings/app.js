@@ -19,6 +19,12 @@ const COMPETITIONS = {
             'longboard': 'Длинная доска'
         }
     },
+    'rfs/spb': {
+        name: 'Чемпионат Санкт-Петербурга',
+        disciplines: {
+            'longboard': 'Длинная доска'
+        }
+    },
     'tvoisurf39/cup': {
         name: 'Балтийский серф-контест (Твой Сёрф 39)',
         disciplines: {
