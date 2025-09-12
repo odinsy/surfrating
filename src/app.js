@@ -12,7 +12,6 @@ async function loadJSON(category) {
 
         const data = await response.json();
 
-        // Получаем топ-5 из overall_ranking
         return data.overall_ranking.slice(0, 5).map(item => {
             const athlete = data.athletes[item.athlete_id];
             const bestResult = item.best_result;
