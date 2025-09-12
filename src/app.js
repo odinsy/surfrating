@@ -135,18 +135,18 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       ];
 
-      for (const category of categories) {
-          const [boardType, gender] = category.id.split('-');
-          const jsonKey = `${boardType}_${gender}`;
-          const data = await loadJSON(jsonKey);
-          if (data.length > 0) {
-              document.getElementById(category.id).innerHTML = createGroupHTML(
-                  data,
-                  category.title,
-                  category.link
-              );
-          }
-      }
+      // for (const category of categories) {
+      //     const [boardType, gender] = category.id.split('-');
+      //     const jsonKey = `${boardType}_${gender}`;
+      //     const data = await loadJSON(jsonKey);
+      //     if (data.length > 0) {
+      //         document.getElementById(category.id).innerHTML = createGroupHTML(
+      //             data,
+      //             category.title,
+      //             category.link
+      //         );
+      //     }
+      // }
   }
 
   init();
