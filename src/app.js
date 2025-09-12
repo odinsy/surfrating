@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return `
           <h2 class="group-title">${title}</h2>
           ${data.map(athlete => createAthleteItem(athlete)).join('')}
-          <a href="${link}" class="full-rankings-link">Полный рейтинг →</a>
+          // <a href="${link}" class="full-rankings-link">Полный рейтинг →</a>
       `;
   }
 
@@ -135,18 +135,18 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       ];
 
-      // for (const category of categories) {
-      //     const [boardType, gender] = category.id.split('-');
-      //     const jsonKey = `${boardType}_${gender}`;
-      //     const data = await loadJSON(jsonKey);
-      //     if (data.length > 0) {
-      //         document.getElementById(category.id).innerHTML = createGroupHTML(
-      //             data,
-      //             category.title,
-      //             category.link
-      //         );
-      //     }
-      // }
+      for (const category of categories) {
+          const [boardType, gender] = category.id.split('-');
+          const jsonKey = `${boardType}_${gender}`;
+          const data = await loadJSON(jsonKey);
+          if (data.length > 0) {
+              document.getElementById(category.id).innerHTML = createGroupHTML(
+                  data,
+                  category.title,
+                  category.link
+              );
+          }
+      }
   }
 
   init();
