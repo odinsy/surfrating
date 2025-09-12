@@ -11,58 +11,21 @@ async function loadJSON(category) {
         if (!response.ok) throw new Error('Ошибка сети');
 
         const data = await response.json();
-        const currentYear = new Date().getFullYear();
 
-        return data.athletes
-            .map(athlete => {
-                let bestResult = null;
+        // Получаем топ-5 из overall_ranking
+        return data.overall_ranking.slice(0, 5).map(item => {
+            const athlete = data.athletes[item.athlete_id];
+            const bestResult = item.best_result;
 
-                Object.entries(athlete.years || {}).forEach(([year, yearData]) => {
-                    const yearInt = parseInt(year);
-                    if (isNaN(yearInt)) return; // Пропускаем невалидные года
-
-                    const events = yearData.events || {};
-                    let yearBestPlace = Infinity;
-
-                    // Ищем лучшее место в году
-                    Object.values(events).forEach(event => {
-                        const parsedPlace = parseInt(event.place);
-                        if (!isNaN(parsedPlace)) {
-                            yearBestPlace = Math.min(yearBestPlace, parsedPlace);
-                        }
-                    });
-
-                    if (yearBestPlace === Infinity) return; // Год без валидных результатов
-
-                    // Обновляем лучший результат с учётом приоритета года
-                    if (!bestResult ||
-                        yearBestPlace < bestResult.place ||
-                        (yearBestPlace === bestResult.place && yearInt > bestResult.year)
-                    ) {
-                        bestResult = {
-                            place: yearBestPlace,
-                            year: yearInt
-                        };
-                    }
-                });
-
-                return {
-                    ...athlete,
-                    bestResult: bestResult || { place: '—', year: '—' }
-                };
-            })
-            .sort((a, b) => a.rank - b.rank)
-            .slice(0, 5)
-            .map(athlete => ({
-                Rank: athlete.rank,
+            return {
+                Rank: item.rank,
                 Name: athlete.name,
                 SportRank: athlete.sport_rank || '—',
                 Region: athlete.region,
-                TotalPoints: athlete.total_points,
-                BestResult: athlete.bestResult.year !== '—'
-                    ? `${athlete.bestResult.place} в ${athlete.bestResult.year}`
-                    : 'Нет данных'
-            }));
+                TotalPoints: item.total_points,
+                BestResult: bestResult ? `${bestResult.place} в ${bestResult.event_year}` : 'Нет данных'
+            };
+        });
     } catch (error) {
         console.error('Ошибка загрузки JSON:', error);
         return [];
