@@ -4,6 +4,7 @@ scoring_system: wsl_csh
 current_year: 2024
 top_n: 100
 allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024]
+# allowed_years: [2022, 2023, 2024]
 
 input_paths:
   # - "data/rfs/surfing/shortboard/shortboard_men_*.csv"
@@ -60,22 +61,22 @@ bonuses:
     points: 50
 
 wildcard:
-  top_n: 16               # Максимальный рейтинг для отбора
+  top_n: 10               # Максимальный рейтинг для отбора
   min_participations: 2   # Минимальное количество участий
   last_years_period: 3    # За последние N лет
   min_best_place: 3       # Лучший результат за карьеру
 
-  ranking_file: output/rankings/rfs/rus/longboard/men.csv
-  output_file: output/wildcard/longboard_men.csv
+  # ranking_file: output/rankings/rfs/rus/shortboard/ranking_men.json
+  # output_file: output/wildcard/shortboard_men.json
 
-  # ranking_file: output/rankings/surfing/shortboard_women.csv
-  # output_file: output/wildcard/shortboard_women.csv
+  # ranking_file: output/rankings/rfs/rus/shortboard/ranking_women.json
+  # output_file: output/wildcard/shortboard_women.json
 
-  # ranking_file: output/rankings/surfing/longboard_women.csv
-  # output_file: output/wildcard/longboard_women.csv
+  # ranking_file: output/rankings/rfs/rus/longboard/ranking_men.json
+  # output_file: output/wildcard/longboard_men.json
 
-  # ranking_file: output/rankings/surfing/longboard_men.csv
-  # output_file: output/wildcard/longboard_men.csv
+  # ranking_file: output/rankings/rfs/rus/longboard/ranking_women.json
+  # output_file: output/wildcard/longboard_women.json
 
 trends:
   input_ranking_file: output/rankings/surfing/shortboard_men.csv
