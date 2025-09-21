@@ -22,6 +22,7 @@ const COMPETITIONS = {
     'rfs/spb': {
         name: 'Чемпионат Санкт-Петербурга (РФС)',
         disciplines: {
+            'shortboard': 'Короткая доска',
             'longboard': 'Длинная доска'
         }
     },
