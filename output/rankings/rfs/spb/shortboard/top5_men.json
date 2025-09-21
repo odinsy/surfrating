@@ -43,14 +43,14 @@
       "sport_rank": "",
       "birth_year": 0
     },
-    "5501ec3a": {
-      "name": "Иванов Никита",
+    "40b89629": {
+      "name": "Вахрушев Владимир",
       "region": "Санкт-Петербург",
       "sport_rank": "",
       "birth_year": 0
     },
-    "c10e69e6": {
-      "name": "Чугаров Юрий",
+    "5501ec3a": {
+      "name": "Иванов Никита",
       "region": "Санкт-Петербург",
       "sport_rank": "",
       "birth_year": 0
@@ -82,6 +82,18 @@
       "points": 6000
     },
     {
+      "athlete_id": "40b89629",
+      "event_id": "461fbcc4",
+      "place": 4,
+      "points": 3360
+    },
+    {
+      "athlete_id": "40b89629",
+      "event_id": "aab02a5a",
+      "place": 9,
+      "points": 1890
+    },
+    {
       "athlete_id": "7331f2f7",
       "event_id": "461fbcc4",
       "place": 5,
@@ -92,18 +104,6 @@
       "event_id": "aab02a5a",
       "place": 6,
       "points": 2760
-    },
-    {
-      "athlete_id": "c10e69e6",
-      "event_id": "461fbcc4",
-      "place": 6,
-      "points": 2760
-    },
-    {
-      "athlete_id": "c10e69e6",
-      "event_id": "aab02a5a",
-      "place": 13,
-      "points": 1728
     },
     {
       "athlete_id": "5501ec3a",
@@ -140,6 +140,18 @@
           "rank": 2
         },
         {
+          "athlete_id": "40b89629",
+          "year_points": 3360,
+          "events": [
+            {
+              "event_id": "461fbcc4",
+              "place": 4,
+              "points": 3360
+            }
+          ],
+          "rank": 3
+        },
+        {
           "athlete_id": "7331f2f7",
           "year_points": 2760,
           "events": [
@@ -149,19 +161,7 @@
               "points": 2760
             }
           ],
-          "rank": 3
-        },
-        {
-          "athlete_id": "c10e69e6",
-          "year_points": 2760,
-          "events": [
-            {
-              "event_id": "461fbcc4",
-              "place": 6,
-              "points": 2760
-            }
-          ],
-          "rank": 3
+          "rank": 4
         }
       ]
     },
@@ -216,13 +216,13 @@
           "rank": 4
         },
         {
-          "athlete_id": "c10e69e6",
-          "year_points": 1728,
+          "athlete_id": "40b89629",
+          "year_points": 1890,
           "events": [
             {
               "event_id": "aab02a5a",
-              "place": 13,
-              "points": 1728
+              "place": 9,
+              "points": 1890
             }
           ],
           "rank": 5
@@ -280,8 +280,24 @@
       ]
     },
     {
-      "athlete_id": "5501ec3a",
+      "athlete_id": "40b89629",
       "rank": 4,
+      "total_points": 5250,
+      "best_result": {
+        "event_name": "Чемпионат Санкт-Петербурга",
+        "event_year": "2024",
+        "place": 4,
+        "points": 3360
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2024,
+        2025
+      ]
+    },
+    {
+      "athlete_id": "5501ec3a",
+      "rank": 5,
       "total_points": 4680,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -291,22 +307,6 @@
       },
       "last_year": 2025,
       "years_participated": [
-        2025
-      ]
-    },
-    {
-      "athlete_id": "c10e69e6",
-      "rank": 5,
-      "total_points": 4488,
-      "best_result": {
-        "event_name": "Чемпионат Санкт-Петербурга",
-        "event_year": "2024",
-        "place": 6,
-        "points": 2760
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2024,
         2025
       ]
     }
