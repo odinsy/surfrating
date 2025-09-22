@@ -1,4 +1,4 @@
-const JSON_BASE_PATH = '../../data/rankings/';
+const JSON_BASE_PATH = '../../../data/rankings/';
 const AVATARS_ENABLED = false;
 const transliterate = window.slugify;
 
@@ -23,12 +23,6 @@ const COMPETITIONS = {
         name: 'Чемпионат Санкт-Петербурга (РФС)',
         disciplines: {
             'shortboard': 'Короткая доска',
-            'longboard': 'Длинная доска'
-        }
-    },
-    'tvoisurf39/cup': {
-        name: 'Балтийский серф-контест (Твой Сёрф 39)',
-        disciplines: {
             'longboard': 'Длинная доска'
         }
     }
@@ -64,7 +58,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
     let avatarPath = '';
     if (AVATARS_ENABLED) {
         avatarPath = athlete.avatar_path
-            || `../../img/avatars/${avatarSlug}.jpg`;
+            || `../../../img/avatars/${avatarSlug}.jpg`;
     }
 
     let avatarHTML = '';

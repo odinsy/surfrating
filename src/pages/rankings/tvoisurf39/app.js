@@ -1,17 +1,18 @@
-const JSON_BASE_PATH = '../../data/rankings/';
+const JSON_BASE_PATH = '../../../data/rankings/';
+const AVATARS_ENABLED = false;
 const transliterate = window.slugify;
 
 const COMPETITIONS = {
     'tvoisurf39/cup': {
-        name: 'Балтийский серф-контест',
+        name: 'Балтийский серф-контест (Твой Сёрф 39)',
         disciplines: {
             'longboard': 'Длинная доска'
         }
     }
 };
 
-let currentCompetition = 'tvoisurf39/cup';
-let currentDiscipline = 'longboard';
+let currentCompetition = 'rfs/rus';
+let currentDiscipline = 'shortboard';
 
 function getYearsRange(data) {
     if (!data.year_rankings) return [];
@@ -36,14 +37,30 @@ function createAthleteRow(athlete, years, athleteYearData) {
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
     const initials = (surname[0] || '') + (firstName[0] || '');
     const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
-    const avatarPath = `../../img/avatars/${avatarSlug}.jpg`;
+
+    let avatarPath = '';
+    if (AVATARS_ENABLED) {
+        avatarPath = athlete.avatar_path
+            || `../../../img/avatars/${avatarSlug}.jpg`;
+    }
+
+    let avatarHTML = '';
+    if (AVATARS_ENABLED) {
+        avatarHTML = `
+            <img src="${avatarPath}" alt="${athlete.name}"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="avatar-fallback">${initials}</div>
+        `;
+    } else {
+        avatarHTML = `<div class="avatar-fallback" style="display:flex">${initials}</div>`;
+    }
 
     const yearCells = years.map(year => {
-        const yearData = athleteYearData[athlete.name]?.[year];
+        const yearData = athleteYearData[athlete.id]?.[year];
         const events = yearData ? yearData.events : [];
         const yearPoints = yearData ? yearData.year_points : null;
 
-        const tooltipId = `tooltip-${athlete.rank}-${year}`;
+        const tooltipId = `tooltip-${athlete.id}-${year}`;
         const tooltipHTML = events.length > 0
             ? `<div class="custom-tooltip" id="${tooltipId}">
                 ${events.map(e => `
@@ -97,40 +114,78 @@ async function loadData(competition, category, gender) {
     try {
         const response = await fetch(path);
         const data = await response.json();
-
-        document.getElementById('last-updated').textContent = data.last_updated || '-';
-
-        let athleteYearData = {};
-        if (data.year_rankings) {
-            for (const [year, yearData] of Object.entries(data.year_rankings)) {
-                for (const athlete of yearData.athletes) {
-                    const key = athlete.name;
-                    if (!athleteYearData[key]) {
-                        athleteYearData[key] = {};
-                    }
-                    athleteYearData[key][year] = {
-                        year_points: athlete.year_points,
-                        events: athlete.events
-                    };
-                }
-            }
-        }
-        data.athleteYearData = athleteYearData;
-
-        return data;
+        return normalizeData(data);
     } catch (error) {
         console.error('Error loading data:', error);
         document.getElementById('last-updated').textContent = 'Ошибка загрузки';
-        return { headers: [], athletes: [], overall_ranking: [] };
+        return {
+            overall_ranking: [],
+            athleteYearData: {},
+            years: [],
+            last_updated: 'Ошибка'
+        };
     }
+}
+
+function normalizeData(data) {
+    document.getElementById('last-updated').textContent = data.last_updated || '-';
+
+    const athletesMap = data.athletes || {};
+    const eventsMap = data.events || {};
+
+    const normalized = {
+        overall_ranking: [],
+        athleteYearData: {},
+        years: data.year_rankings ? Object.keys(data.year_rankings).sort() : [],
+        last_updated: data.last_updated
+    };
+
+    normalized.overall_ranking = (data.overall_ranking || []).map(item => {
+        const athlete = athletesMap[item.athlete_id] || {};
+        return {
+            id: item.athlete_id,
+            rank: item.rank,
+            total_points: item.total_points,
+            best_result: item.best_result,
+            name: athlete.name || 'Неизвестный спортсмен',
+            region: athlete.region || ''
+        };
+    });
+
+    if (data.year_rankings) {
+        Object.entries(data.year_rankings).forEach(([year, yearData]) => {
+            yearData.athletes.forEach(athleteYear => {
+                const athleteId = athleteYear.athlete_id;
+
+                if (!normalized.athleteYearData[athleteId]) {
+                    normalized.athleteYearData[athleteId] = {};
+                }
+
+                const eventsWithNames = athleteYear.events.map(event => {
+                    const eventInfo = eventsMap[event.event_id] || {};
+                    return {
+                        ...event,
+                        event_name: eventInfo.name || 'Неизвестное событие'
+                    };
+                });
+
+                normalized.athleteYearData[athleteId][year] = {
+                    year_points: athleteYear.year_points,
+                    events: eventsWithNames
+                };
+            });
+        });
+    }
+
+    return normalized;
 }
 
 async function updateTable(gender) {
     const data = await loadData(currentCompetition, currentDiscipline, gender);
-    const athletes = data.overall_ranking || [];
-    const years = getYearsRange(data);
+    const athletes = data.overall_ranking;
+    const years = data.years;
 
-    if (athletes.length === 0) {
+    if (!athletes || athletes.length === 0) {
         document.getElementById('ranking-table-container').innerHTML = '<p class="text-center py-4">Нет данных для отображения</p>';
         return;
     }
@@ -198,7 +253,7 @@ function updateCompetitionDropdown(discipline) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const initialCategory = urlParams.get('category') || 'longboard_men';
+    const initialCategory = urlParams.get('category') || 'shortboard_men';
     const [discipline, gender] = initialCategory.split('_');
 
     currentDiscipline = discipline;
