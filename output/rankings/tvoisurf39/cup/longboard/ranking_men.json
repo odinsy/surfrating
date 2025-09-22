@@ -61,14 +61,14 @@
       "sport_rank": "",
       "birth_year": 0
     },
-    "863f41e5": {
-      "name": "Перерва Вадим",
+    "b52a2d08": {
+      "name": "Пономарёв Илья",
       "region": "Калининградская область",
       "sport_rank": "",
       "birth_year": 0
     },
-    "b52a2d08": {
-      "name": "Пономарёв Илья",
+    "863f41e5": {
+      "name": "Перерва Вадим",
       "region": "Калининградская область",
       "sport_rank": "",
       "birth_year": 0
@@ -85,26 +85,26 @@
       "sport_rank": "",
       "birth_year": 0
     },
-    "77d5d979": {
-      "name": "Черемискин Роман",
-      "region": "Калининградская область",
-      "sport_rank": "",
-      "birth_year": 0
-    },
     "9fde73a2": {
       "name": "Болдырев Артём",
       "region": "Калининградская область",
       "sport_rank": "",
       "birth_year": 0
     },
-    "512626fa": {
-      "name": "Андреев Александр",
+    "63c0ee6d": {
+      "name": "Фукин Максим",
       "region": "Калининградская область",
       "sport_rank": "",
       "birth_year": 0
     },
-    "63c0ee6d": {
-      "name": "Фукин Максим",
+    "77d5d979": {
+      "name": "Черемискин Роман",
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "512626fa": {
+      "name": "Андреев Александр",
       "region": "Калининградская область",
       "sport_rank": "",
       "birth_year": 0
@@ -192,7 +192,7 @@
     {
       "athlete_id": "b52a2d08",
       "event_id": "e85a0234",
-      "place": 6,
+      "place": 5,
       "points": 500
     },
     {
@@ -204,13 +204,13 @@
     {
       "athlete_id": "9fde73a2",
       "event_id": "e85a0234",
-      "place": 8,
+      "place": 7,
       "points": 350
     },
     {
       "athlete_id": "63c0ee6d",
       "event_id": "e85a0234",
-      "place": 9,
+      "place": 7,
       "points": 350
     },
     {
@@ -222,13 +222,13 @@
     {
       "athlete_id": "bd80c4e5",
       "event_id": "e85a0234",
-      "place": 11,
+      "place": 10,
       "points": 295
     },
     {
       "athlete_id": "ee83149b",
       "event_id": "e85a0234",
-      "place": 12,
+      "place": 10,
       "points": 295
     },
     {
@@ -246,7 +246,7 @@
     {
       "athlete_id": "1db906a3",
       "event_id": "49cf3f0c",
-      "place": 6,
+      "place": 5,
       "points": 500
     },
     {
@@ -258,13 +258,13 @@
     {
       "athlete_id": "512626fa",
       "event_id": "49cf3f0c",
-      "place": 8,
+      "place": 7,
       "points": 350
     },
     {
       "athlete_id": "73d03c8f",
       "event_id": "49cf3f0c",
-      "place": 9,
+      "place": 7,
       "points": 350
     }
   ],
@@ -364,6 +364,18 @@
           "rank": 6
         },
         {
+          "athlete_id": "b52a2d08",
+          "year_points": 500,
+          "events": [
+            {
+              "event_id": "e85a0234",
+              "place": 5,
+              "points": 500
+            }
+          ],
+          "rank": 6
+        },
+        {
           "athlete_id": "863f41e5",
           "year_points": 500,
           "events": [
@@ -376,24 +388,12 @@
           "rank": 6
         },
         {
-          "athlete_id": "b52a2d08",
-          "year_points": 500,
-          "events": [
-            {
-              "event_id": "e85a0234",
-              "place": 6,
-              "points": 500
-            }
-          ],
-          "rank": 6
-        },
-        {
           "athlete_id": "1db906a3",
           "year_points": 500,
           "events": [
             {
               "event_id": "49cf3f0c",
-              "place": 6,
+              "place": 5,
               "points": 500
             }
           ],
@@ -401,6 +401,30 @@
         },
         {
           "athlete_id": "47193554",
+          "year_points": 350,
+          "events": [
+            {
+              "event_id": "e85a0234",
+              "place": 7,
+              "points": 350
+            }
+          ],
+          "rank": 10
+        },
+        {
+          "athlete_id": "9fde73a2",
+          "year_points": 350,
+          "events": [
+            {
+              "event_id": "e85a0234",
+              "place": 7,
+              "points": 350
+            }
+          ],
+          "rank": 10
+        },
+        {
+          "athlete_id": "63c0ee6d",
           "year_points": 350,
           "events": [
             {
@@ -424,36 +448,12 @@
           "rank": 10
         },
         {
-          "athlete_id": "9fde73a2",
-          "year_points": 350,
-          "events": [
-            {
-              "event_id": "e85a0234",
-              "place": 8,
-              "points": 350
-            }
-          ],
-          "rank": 10
-        },
-        {
           "athlete_id": "512626fa",
           "year_points": 350,
           "events": [
             {
               "event_id": "49cf3f0c",
-              "place": 8,
-              "points": 350
-            }
-          ],
-          "rank": 10
-        },
-        {
-          "athlete_id": "63c0ee6d",
-          "year_points": 350,
-          "events": [
-            {
-              "event_id": "e85a0234",
-              "place": 9,
+              "place": 7,
               "points": 350
             }
           ],
@@ -465,7 +465,7 @@
           "events": [
             {
               "event_id": "49cf3f0c",
-              "place": 9,
+              "place": 7,
               "points": 350
             }
           ],
@@ -489,7 +489,7 @@
           "events": [
             {
               "event_id": "e85a0234",
-              "place": 11,
+              "place": 10,
               "points": 295
             }
           ],
@@ -501,7 +501,7 @@
           "events": [
             {
               "event_id": "e85a0234",
-              "place": 12,
+              "place": 10,
               "points": 295
             }
           ],
@@ -602,11 +602,11 @@
       ]
     },
     {
-      "athlete_id": "863f41e5",
+      "athlete_id": "b52a2d08",
       "rank": 7,
       "total_points": 500,
       "best_result": {
-        "event_name": "Балтийский серф-контест #1",
+        "event_name": "Балтийский серф-контест #2",
         "event_year": "2025",
         "place": 5,
         "points": 500
@@ -617,13 +617,13 @@
       ]
     },
     {
-      "athlete_id": "b52a2d08",
+      "athlete_id": "863f41e5",
       "rank": 8,
       "total_points": 500,
       "best_result": {
-        "event_name": "Балтийский серф-контест #2",
+        "event_name": "Балтийский серф-контест #1",
         "event_year": "2025",
-        "place": 6,
+        "place": 5,
         "points": 500
       },
       "last_year": 2025,
@@ -638,7 +638,7 @@
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
         "event_year": "2025",
-        "place": 6,
+        "place": 5,
         "points": 500
       },
       "last_year": 2025,
@@ -662,8 +662,38 @@
       ]
     },
     {
-      "athlete_id": "77d5d979",
+      "athlete_id": "9fde73a2",
       "rank": 11,
+      "total_points": 350,
+      "best_result": {
+        "event_name": "Балтийский серф-контест #2",
+        "event_year": "2025",
+        "place": 7,
+        "points": 350
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "63c0ee6d",
+      "rank": 12,
+      "total_points": 350,
+      "best_result": {
+        "event_name": "Балтийский серф-контест #2",
+        "event_year": "2025",
+        "place": 7,
+        "points": 350
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "77d5d979",
+      "rank": 13,
       "total_points": 350,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
@@ -677,43 +707,13 @@
       ]
     },
     {
-      "athlete_id": "9fde73a2",
-      "rank": 12,
-      "total_points": 350,
-      "best_result": {
-        "event_name": "Балтийский серф-контест #2",
-        "event_year": "2025",
-        "place": 8,
-        "points": 350
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025
-      ]
-    },
-    {
       "athlete_id": "512626fa",
-      "rank": 13,
+      "rank": 14,
       "total_points": 350,
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
         "event_year": "2025",
-        "place": 8,
-        "points": 350
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025
-      ]
-    },
-    {
-      "athlete_id": "63c0ee6d",
-      "rank": 14,
-      "total_points": 350,
-      "best_result": {
-        "event_name": "Балтийский серф-контест #2",
-        "event_year": "2025",
-        "place": 9,
+        "place": 7,
         "points": 350
       },
       "last_year": 2025,
@@ -728,7 +728,7 @@
       "best_result": {
         "event_name": "Балтийский серф-контест #1",
         "event_year": "2025",
-        "place": 9,
+        "place": 7,
         "points": 350
       },
       "last_year": 2025,
@@ -758,7 +758,7 @@
       "best_result": {
         "event_name": "Балтийский серф-контест #2",
         "event_year": "2025",
-        "place": 11,
+        "place": 10,
         "points": 295
       },
       "last_year": 2025,
@@ -773,7 +773,7 @@
       "best_result": {
         "event_name": "Балтийский серф-контест #2",
         "event_year": "2025",
-        "place": 12,
+        "place": 10,
         "points": 295
       },
       "last_year": 2025,
