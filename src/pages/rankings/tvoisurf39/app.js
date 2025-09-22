@@ -11,8 +11,8 @@ const COMPETITIONS = {
     }
 };
 
-let currentCompetition = 'rfs/rus';
-let currentDiscipline = 'shortboard';
+let currentCompetition = 'tvoisurf39/cup';
+let currentDiscipline = 'longboard';
 
 function getYearsRange(data) {
     if (!data.year_rankings) return [];
