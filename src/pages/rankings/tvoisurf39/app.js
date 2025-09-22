@@ -16,8 +16,15 @@ let currentDiscipline = 'longboard';
 
 function shortenEventName(name) {
     return name
-        .replace('Балтийский серф-контест', 'БС')
-        .replace('контест', 'к');
+        .split(/\s+/)
+        .map(word => {
+            if (word.match(/[#0-9]/)) {
+                return word;
+            }
+            return word.charAt(0);
+        })
+        .join('')
+        .toUpperCase();
 }
 
 function showTooltip(id) {
@@ -99,7 +106,7 @@ function createAthleteRow(athlete, events, athleteEventData) {
                     </div>
                 </div>
             </td>
-            <td class="year-points">${bestResult}</td>
+            <td class="best-result">${bestResult}</td>
             ${eventCells}
             <td class="total-points fw-bold">${athlete.total_points}</td>
         </tr>
@@ -189,7 +196,9 @@ async function updateTable(gender) {
                     <th scope="col">#</th>
                     <th scope="col">Имя</th>
                     <th scope="col">Лучший результат</th>
-                    ${events.map(event => `<th scope="col">${shortenEventName(event.name)}</th>`).join('')}
+                    ${events.map(event => `
+                        <th scope="col" title="${event.name}">${shortenEventName(event.name)}</th>
+                    `).join('')}
                     <th scope="col">Всего</th>
                 </tr>
             </thead>
