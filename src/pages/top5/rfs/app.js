@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const [rawSurname, rawFirstName] = athlete.Name.split(/\s+/);
       const surnameSlug = transliterate(rawSurname || '');
       const firstNameChar = rawFirstName ? transliterate(rawFirstName)[0] : '';
-      const avatarPath = `../../img/avatars/${surnameSlug}${firstNameChar ? `-${firstNameChar}` : ''}.jpg`;
+      const avatarPath = `../../../img/avatars/${surnameSlug}${firstNameChar ? `-${firstNameChar}` : ''}.jpg`;
 
       return `
           <div class="athlete-item">
