@@ -80,7 +80,7 @@ function createAthleteRow(athlete, events, athleteEventData) {
             : '';
 
         return `
-            <td class="event-points"
+            <td class="year-points"
                 onmouseenter="showTooltip('${tooltipId}')"
                 onmouseleave="hideTooltip('${tooltipId}')">
                 ${points !== null ? points : '—'}
@@ -106,7 +106,7 @@ function createAthleteRow(athlete, events, athleteEventData) {
                     </div>
                 </div>
             </td>
-            <td class="best-result">${bestResult}</td>
+            <td class="year-points">${bestResult}</td>
             ${eventCells}
             <td class="total-points fw-bold">${athlete.total_points}</td>
         </tr>
