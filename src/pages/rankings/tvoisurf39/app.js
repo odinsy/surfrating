@@ -14,9 +14,10 @@ const COMPETITIONS = {
 let currentCompetition = 'tvoisurf39/cup';
 let currentDiscipline = 'longboard';
 
-function getYearsRange(data) {
-    if (!data.year_rankings) return [];
-    return Object.keys(data.year_rankings).sort((a, b) => a - b);
+function shortenEventName(name) {
+    return name
+        .replace('Балтийский серф-контест', 'БС')
+        .replace('контест', 'к');
 }
 
 function showTooltip(id) {
@@ -29,9 +30,9 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
-function createAthleteRow(athlete, years, athleteYearData) {
+function createAthleteRow(athlete, events, athleteEventData) {
     const bestResult = athlete.best_result
-        ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
+        ? `${athlete.best_result.place} на ${shortenEventName(athlete.best_result.event_name)}`
         : 'Нет данных';
 
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
@@ -55,29 +56,27 @@ function createAthleteRow(athlete, years, athleteYearData) {
         avatarHTML = `<div class="avatar-fallback" style="display:flex">${initials}</div>`;
     }
 
-    const yearCells = years.map(year => {
-        const yearData = athleteYearData[athlete.id]?.[year];
-        const events = yearData ? yearData.events : [];
-        const yearPoints = yearData ? yearData.year_points : null;
+    const eventCells = events.map(event => {
+        const eventData = athleteEventData[athlete.id]?.[event.id];
+        const points = eventData ? eventData.points : null;
+        const place = eventData ? eventData.place : null;
 
-        const tooltipId = `tooltip-${athlete.id}-${year}`;
-        const tooltipHTML = events.length > 0
+        const tooltipId = `tooltip-${athlete.id}-${event.id}`;
+        const tooltipHTML = eventData
             ? `<div class="custom-tooltip" id="${tooltipId}">
-                ${events.map(e => `
-                    <div class="tooltip-event mb-2">
-                        <div class="event-title">${e.event_name} ${year}</div>
-                        <div class="event-detail">Место: ${e.place}</div>
-                        <div class="event-detail">Очки: ${e.points}</div>
-                    </div>
-                `).join('')}
+                <div class="tooltip-event mb-2">
+                    <div class="event-title">${event.name}</div>
+                    <div class="event-detail">Место: ${place}</div>
+                    <div class="event-detail">Очки: ${points}</div>
+                </div>
                </div>`
             : '';
 
         return `
-            <td class="year-points"
+            <td class="event-points"
                 onmouseenter="showTooltip('${tooltipId}')"
                 onmouseleave="hideTooltip('${tooltipId}')">
-                ${yearPoints !== null ? yearPoints : '—'}
+                ${points !== null ? points : '—'}
                 ${tooltipHTML}
             </td>
         `;
@@ -92,9 +91,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
             <td class="name-cell">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
-                        <img src="${avatarPath}" alt="${athlete.name}"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="avatar-fallback">${initials}</div>
+                        ${avatarHTML}
                     </div>
                     <div>
                         <div class="athlete-name">${athlete.name}</div>
@@ -103,7 +100,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
                 </div>
             </td>
             <td class="year-points">${bestResult}</td>
-            ${yearCells}
+            ${eventCells}
             <td class="total-points fw-bold">${athlete.total_points}</td>
         </tr>
     `;
@@ -120,8 +117,8 @@ async function loadData(competition, category, gender) {
         document.getElementById('last-updated').textContent = 'Ошибка загрузки';
         return {
             overall_ranking: [],
-            athleteYearData: {},
-            years: [],
+            athleteEventData: {},
+            events: [],
             last_updated: 'Ошибка'
         };
     }
@@ -133,10 +130,16 @@ function normalizeData(data) {
     const athletesMap = data.athletes || {};
     const eventsMap = data.events || {};
 
+    // Получаем события текущего года
+    const currentYear = new Date().getFullYear();
+    const yearEvents = Object.values(eventsMap)
+        .filter(event => event.year === currentYear)
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
+
     const normalized = {
         overall_ranking: [],
-        athleteYearData: {},
-        years: data.year_rankings ? Object.keys(data.year_rankings).sort() : [],
+        athleteEventData: {},
+        events: yearEvents,
         last_updated: data.last_updated
     };
 
@@ -152,30 +155,19 @@ function normalizeData(data) {
         };
     });
 
-    if (data.year_rankings) {
-        Object.entries(data.year_rankings).forEach(([year, yearData]) => {
-            yearData.athletes.forEach(athleteYear => {
-                const athleteId = athleteYear.athlete_id;
-
-                if (!normalized.athleteYearData[athleteId]) {
-                    normalized.athleteYearData[athleteId] = {};
-                }
-
-                const eventsWithNames = athleteYear.events.map(event => {
-                    const eventInfo = eventsMap[event.event_id] || {};
-                    return {
-                        ...event,
-                        event_name: eventInfo.name || 'Неизвестное событие'
-                    };
-                });
-
-                normalized.athleteYearData[athleteId][year] = {
-                    year_points: athleteYear.year_points,
-                    events: eventsWithNames
-                };
-            });
-        });
-    }
+    // Заполняем данные по событиям
+    (data.results || []).forEach(result => {
+        const event = eventsMap[result.event_id];
+        if (event && event.year === currentYear) {
+            if (!normalized.athleteEventData[result.athlete_id]) {
+                normalized.athleteEventData[result.athlete_id] = {};
+            }
+            normalized.athleteEventData[result.athlete_id][result.event_id] = {
+                points: result.points,
+                place: result.place
+            };
+        }
+    });
 
     return normalized;
 }
@@ -183,7 +175,7 @@ function normalizeData(data) {
 async function updateTable(gender) {
     const data = await loadData(currentCompetition, currentDiscipline, gender);
     const athletes = data.overall_ranking;
-    const years = data.years;
+    const events = data.events;
 
     if (!athletes || athletes.length === 0) {
         document.getElementById('ranking-table-container').innerHTML = '<p class="text-center py-4">Нет данных для отображения</p>';
@@ -197,12 +189,12 @@ async function updateTable(gender) {
                     <th scope="col">#</th>
                     <th scope="col">Имя</th>
                     <th scope="col">Лучший результат</th>
-                    ${years.map(year => `<th scope="col">${year}</th>`).join('')}
+                    ${events.map(event => `<th scope="col">${shortenEventName(event.name)}</th>`).join('')}
                     <th scope="col">Всего</th>
                 </tr>
             </thead>
             <tbody>
-                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData)).join('')}
+                ${athletes.map(a => createAthleteRow(a, events, data.athleteEventData)).join('')}
             </tbody>
         </table>
     `;
@@ -227,33 +219,9 @@ function updateDisciplineSelect(competition) {
     }
 }
 
-function updateCompetitionDropdown(discipline) {
-    const competitionDropdownMenu = document.querySelector('#competitionDropdown + .dropdown-menu');
-    competitionDropdownMenu.innerHTML = '';
-
-    const competitions = DISCIPLINE_COMPETITIONS[discipline];
-    for (const [name, value] of Object.entries(competitions)) {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.className = 'dropdown-item competition-option';
-        a.href = '#';
-        a.dataset.competition = value;
-        a.textContent = name;
-        li.appendChild(a);
-        competitionDropdownMenu.appendChild(li);
-    }
-
-    const firstOption = competitionDropdownMenu.querySelector('.competition-option');
-    if (firstOption) {
-        firstOption.classList.add('active');
-        document.getElementById('competitionLabel').textContent = firstOption.textContent;
-        currentCompetition = firstOption.dataset.competition;
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const initialCategory = urlParams.get('category') || 'shortboard_men';
+    const initialCategory = urlParams.get('category') || 'longboard_men';
     const [discipline, gender] = initialCategory.split('_');
 
     currentDiscipline = discipline;
@@ -265,7 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const competitionDropdown = document.getElementById('competitionDropdown');
     const competitionLabel = document.getElementById('competitionLabel');
     competitionLabel.textContent = COMPETITIONS[currentCompetition].name;
 
@@ -282,7 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
             currentCompetition = competition;
             competitionLabel.textContent = this.textContent;
             updateDisciplineSelect(competition);
-
 
             const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
             updateTable(activeGender);
