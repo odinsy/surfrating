@@ -18,11 +18,11 @@ rating_rfs_surf_spb:
 rating_rfs_wake_main:
 	python3 ./scripts/surfrating/main.py --config conf/rfs/config.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml | column -t -s ','
 
-wake_events:
-	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml
-
 tvoysurf39:
 	python3 ./scripts/surfrating/main.py --config	conf/tvoysurf39/config.yaml conf/tvoysurf39/events.yaml conf/base/scoring/wsl/scoring-wsl-jr1000.yaml conf/tvoysurf39/$(discipline)_$(category).yaml | column -t -s ','
+
+wake_events:
+	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml
 
 events:
 	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/surfing/rus/$(discipline)_$(category).yaml
