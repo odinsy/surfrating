@@ -6,40 +6,11 @@ import re
 import argparse
 from pathlib import Path
 from collections import defaultdict
-from config_loader import load_config
-from helpers import extract_year
-
-import csv
-import glob
-import json
-import re
-import argparse
-from pathlib import Path
-from collections import defaultdict
 import yaml
 
-def extract_year(year_str):
-    if not year_str:
-        return None
-    try:
-        year = int(year_str)
-        if 1900 <= year <= 2100:
-            return year
-    except (ValueError, TypeError):
-        pass
-    match = re.search(r'\b(19|20)\d{2}\b', str(year_str))
-    if match:
-        return int(match.group(0))
-    return None
-
-def load_config(config_paths: list) -> dict:
-    config = {}
-    for path in config_paths:
-        with open(path, 'r', encoding='utf-8') as f:
-            file_config = yaml.safe_load(f)
-            if file_config:
-                config.update(file_config)
-    return config
+from typing import Dict
+from helpers import generate_athlete_id, extract_year
+from config_loader import load_config
 
 def parse_events(input_paths: list) -> dict:
     events_info = defaultdict(lambda: {
@@ -105,7 +76,7 @@ def parse_events(input_paths: list) -> dict:
                         'name': row['ФИО'].strip(),
                         'place': place,
                         'region': row['Регион'].strip(),
-                        'birth_year': extract_year(row['Год рождения']),
+                        'birth_year': extract_year(row['Год рождения']), # Используем из helpers
                         'sport_rank': row.get('Разряд', '').strip()
                     }
 
@@ -158,12 +129,29 @@ def save_events_json(events_info: dict, output_path: str) -> None:
         key=lambda x: (int(x['event_year']), x['event_name'])
     )
 
+    unique_athlete_ids = set()
+    participants_without_birth_year = 0
+    for event in events_info.values():
+        for participant in event['participants']:
+            name = participant.get('name')
+            birth_year = participant.get('birth_year')
+
+            if not birth_year: # Проверяет на None, 0, '', [], {}
+                participants_without_birth_year += 1
+
+            if name and birth_year:
+                athlete_id = generate_athlete_id(name, birth_year)
+                unique_athlete_ids.add(athlete_id)
+
+    total_unique_participants = len(unique_athlete_ids)
+
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump({
             "events": events_list,
             "total_events": len(events_list),
-            "total_participants": sum(e['total_participants'] for e in events_list)
+            "total_unique_participants": total_unique_participants, # Добавляем новое поле
+            "participants_without_birth_year": participants_without_birth_year # Добавляем новое поле
         }, f, ensure_ascii=False, indent=2)
     print(f"Results saved to {output_path}")
 
@@ -173,6 +161,7 @@ def main():
     args = parser.parse_args()
 
     config_paths = args.config
+    # Теперь используем load_config из helpers
     config = load_config(config_paths)
 
     input_paths = config.get('input_paths', [])
