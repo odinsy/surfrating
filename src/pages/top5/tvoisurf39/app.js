@@ -1,6 +1,6 @@
 const JSON_PATHS = {
-    'longboard_men': '../../../data/rankings/tvoisurf39/cup/longboard/t5_ranking_men.json',
-    'longboard_women': '../../../data/rankings/tvoisurf39/cup/longboard/t5_ranking_women.json'
+    'longboard_men': '../../../data/rankings/tvoysurf39/cup/longboard/t5_ranking_men.json',
+    'longboard_women': '../../../data/rankings/tvoysurf39/cup/longboard/t5_ranking_women.json'
 };
 
 async function loadJSON(category) {

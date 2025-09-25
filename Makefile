@@ -21,8 +21,8 @@ rating_rfs_wake_main:
 wake_events:
 	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml
 
-tvoisurf39:
-	python3 ./scripts/surfrating/main.py --config	conf/tvoisurf39/config.yaml conf/tvoisurf39/events.yaml conf/base/scoring/wsl/scoring-wsl-jr1000.yaml conf/tvoisurf39/$(discipline)_$(category).yaml | column -t -s ','
+tvoysurf39:
+	python3 ./scripts/surfrating/main.py --config	conf/tvoysurf39/config.yaml conf/tvoysurf39/events.yaml conf/base/scoring/wsl/scoring-wsl-jr1000.yaml conf/tvoysurf39/$(discipline)_$(category).yaml | column -t -s ','
 
 events:
 	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/surfing/rus/$(discipline)_$(category).yaml

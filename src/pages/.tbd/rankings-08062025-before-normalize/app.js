@@ -19,7 +19,7 @@ const COMPETITIONS = {
             'longboard': 'Длинная доска'
         }
     },
-    'tvoisurf39/cup': {
+    'tvoysurf39/cup': {
         name: 'Балтийский серф-контест (Твой Сёрф 39)',
         disciplines: {
             'longboard': 'Длинная доска'

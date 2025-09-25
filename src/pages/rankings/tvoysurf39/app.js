@@ -3,7 +3,7 @@ const AVATARS_ENABLED = false;
 const transliterate = window.slugify;
 
 const COMPETITIONS = {
-    'tvoisurf39/cup': {
+    'tvoysurf39/cup': {
         name: 'Балтийский серф-контест (Твой Сёрф 39)',
         disciplines: {
             'longboard': 'Длинная доска'
@@ -11,7 +11,7 @@ const COMPETITIONS = {
     }
 };
 
-let currentCompetition = 'tvoisurf39/cup';
+let currentCompetition = 'tvoysurf39/cup';
 let currentDiscipline = 'longboard';
 
 function shortenEventName(name) {
