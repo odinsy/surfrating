@@ -2,6 +2,8 @@
 discipline: "longboard"
 gender: "women"
 
+allowed_years: [2023, 2024, 2025]
+
 input_paths:
   - data/rfs/surfing/rus/longboard/longboard_women_*.csv
 
