@@ -6,9 +6,17 @@ current_year: 2025
 allowed_years: [2024, 2025]
 
 input_paths:
-  - data/rfs/surfing/rus/longboard/longboard_women_*.csv
-  - data/rfs/surfing/spb/longboard/longboard-women-*.csv
-  - data/rfs/surfing/kaliningrad/longboard/longboard-women-*.csv
+  - data/rfs/surfing/rus/longboard/longboard_women_2024.csv
+  - data/rfs/surfing/rus/longboard/longboard_women_2025.csv
+  - data/rfs/surfing/dfo/longboard/longboard-women-2025.csv
+  - data/rfs/surfing/spb/longboard/longboard-women-2025.csv
+  - data/rfs/surfing/kgd/longboard/longboard-women-2025.csv
+  - data/rfs/surfing/vdk/longboard/longboard-women-2025.csv
+  - data/rfs/surfing/krd/longboard/longboard-women-2025.csv
+
+  # - data/rfs/surfing/rus/longboard/longboard_women_*.csv
+  # - data/rfs/surfing/spb/longboard/longboard-women-*.csv
+  # - data/rfs/surfing/kgd/longboard/longboard-women-*.csv
 
 output:
   filename: output/rankings/rfs/rus/longboard/women.csv

@@ -15,22 +15,26 @@ event_groups:
       - "Russian Championship"
 
   cross_regional:
-    scoring_system: "wsl_qs6000"
+    scoring_system: "wsl_qs5000"
     coefficient: 1.0
     events:
       - "Чемпионат федеральных округов"
       - "Чемпионат Дальневосточного федерального округа"
+      - "Чемпионат ДФО"
       - "Первенство Дальневосточного федерального округа"
+      - "Первенство ДФО"
 
   regional:
-    scoring_system: "wsl_qs4000"
+    scoring_system: "wsl_qs2000"
     coefficient: 1.0
     events:
-      - "Чемпионат Калининградской области"
       - "Чемпионат Санкт-Петербурга"
+      - "Чемпионат Калининградской области"
+      - "Чемпионат Приморского края"
+      - "Чемпионат Краснодарского края"
 
   local:
-    scoring_system: "wsl_qs2000"
+    scoring_system: "wsl_qs1000"
     coefficient: 1.0
     events:
       - "Кубок Санкт-Петербурга"

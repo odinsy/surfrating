@@ -54,7 +54,16 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
 def _finalize_athletes_data(athletes: dict) -> None:
     for athlete in athletes.values():
         athlete['region'] = max(athlete['regions'].items(), key=lambda x: x[0])[1] if athlete['regions'] else ''
-        athlete['sport_rank'] = max(athlete['sport_ranks'].items(), key=lambda x: x[0])[1] if athlete['sport_ranks'] else ''
+        athlete['sport_rank'] = get_latest_sport_rank(athlete['sport_ranks'])
+
+def get_latest_sport_rank(sport_ranks: dict) -> str:
+    if not sport_ranks:
+        return ''
+
+    latest_year = max(sport_ranks.keys())
+    latest_rank = sport_ranks[latest_year].strip()
+
+    return latest_rank
 
 def parse_files(config: Dict) -> Dict[str, Dict]:
     events_info = {}
