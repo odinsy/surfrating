@@ -21,7 +21,16 @@ def process_scoring_systems(config: Dict) -> None:
 
 def process_event_groups(config: Dict) -> None:
     event_groups = config.get('event_groups', {})
-    event_groups.setdefault('default', {'coefficient': 1.0, 'events': []})
+    event_groups.setdefault('default', {
+        'coefficient': 1.0,
+        'scoring_system': config.get('scoring_system', 'default'),
+        'events': []
+    })
+
+    for group_name, group_data in event_groups.items():
+        if 'scoring_system' not in group_data:
+            group_data['scoring_system'] = config.get('scoring_system', 'default')
+
     config['event_groups'] = event_groups
     config.setdefault('allowed_events', [])
 

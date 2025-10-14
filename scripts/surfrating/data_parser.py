@@ -8,11 +8,11 @@ from helpers import read_csv_file, extract_year, get_event_group, generate_event
 
 def _process_row(row: dict, athletes: dict, config: Dict, event_participants: dict, events_info: dict) -> None:
     event_name       = row['Событие'].strip()
+    event_group      = get_event_group(event_name, config)
     event_year       = int(row['Год'])
     event_date       = row['Дата'].strip()
     event_discipline = row['Дисциплина'].strip()
     event_category   = row['Категория'].strip()
-    event_group      = get_event_group(event_name, config)
     event_id         = generate_event_id(event_name, event_date, event_discipline, event_category)
 
     if event_id not in events_info:

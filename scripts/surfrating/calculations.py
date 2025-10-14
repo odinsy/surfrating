@@ -2,8 +2,11 @@ from typing import Dict, List, Tuple
 from helpers import generate_event_id, generate_athlete_id
 
 def calculate_base_points(place: str, group: str, config: Dict) -> int:
-    system = config['scoring'][config['scoring_system']]
-    coeff = config['event_groups'][group]['coefficient']
+    group_config        = config['event_groups'][group]
+    scoring_system_name = group_config.get('scoring_system', config['scoring_system'])
+    system              = config['scoring'][scoring_system_name]
+
+    coeff = group_config['coefficient']
 
     if place == 'DNS':
         return round(system.get('DNS', 0) * coeff)
