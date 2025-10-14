@@ -1,27 +1,6 @@
 from typing import Dict, List, Tuple
-from helpers import generate_event_id, generate_athlete_id
-
-def calculate_base_points(place: str, group: str, config: Dict) -> int:
-    group_config        = config['event_groups'][group]
-    scoring_system_name = group_config.get('scoring_system', config['scoring_system'])
-    system              = config['scoring'][scoring_system_name]
-
-    coeff = group_config['coefficient']
-
-    if place == 'DNS':
-        return round(system.get('DNS', 0) * coeff)
-
-    try:
-        place_num = int(place)
-    except ValueError:
-        return 0
-
-    for k, v in system.items():
-        if isinstance(k, tuple) and k[0] <= place_num <= k[1]:
-            return round(v * coeff)
-        elif place_num == k:
-            return round(v * coeff)
-    return 0
+from helpers import generate_athlete_id
+from scoring import calculate_base_points
 
 def apply_participant_factor(points: int, participants_count: int, config: Dict) -> int:
     if not config['bonuses']['participant_factor']['enabled']:
@@ -48,7 +27,7 @@ def apply_participation_bonus(points: int, is_dns: bool, config: Dict) -> int:
 
 def apply_sport_rank_bonus(total: int, sport_rank: str, config: Dict) -> int:
     if config['bonuses']['sport_rank']['enabled']:
-        return total + config['bonuses']['sport_rank']['values'].get(rank, 0)
+        return total + config['bonuses']['sport_rank']['values'].get(sport_rank, 0)
     return total
 
 def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: str) -> Tuple[Dict, List]:
@@ -56,13 +35,16 @@ def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: s
     event_results = []
 
     for event_id, event_info in event_data.items():
-        place              = event_info['place']
-        group              = event_info['group']
-        event_name         = event_info['event_name']
+        place = event_info['place']
+        group = event_info['group']
+        event_name = event_info['event_name']
         participants_count = event_info.get('participants_count', 0)
-        is_dns             = (place == 'DNS')
+        is_dns = (place == 'DNS')
 
-        points = calculate_base_points(place, group, config)
+        round_name = event_info.get('round_name')
+        round_place = event_info.get('round_place', place)
+
+        points = calculate_base_points(place, group, config, round_name, round_place)
         points = apply_participant_factor(points, participants_count, config)
         points = apply_decay(points, year, config)
         points = apply_participation_bonus(points, is_dns, config)
@@ -74,17 +56,42 @@ def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: s
             'place': int(place) if place.isdigit() else place,
             'points': points,
             'group': group,
-            'participants_count': participants_count
+            'participants_count': participants_count,
+            'round_name': round_name,
+            'round_place': round_place
         })
 
         event_results.append({
             'athlete_id': athlete_id,
             'event_id': event_id,
             'place': int(place) if place.isdigit() else place,
-            'points': points
+            'points': points,
+            'round_name': round_name,
+            'round_place': round_place
         })
 
     return year_info, event_results
+
+def find_best_result(events: List[Dict]) -> Dict:
+    if not events:
+        return None
+
+    numeric_events = [e for e in events if isinstance(e['place'], int)]
+
+    if numeric_events:
+        best_event = min(
+            numeric_events,
+            key=lambda x: (x['place'], -x['event_year'], -x['points'])
+        )
+    else:
+        best_event = max(events, key=lambda x: x['points'])
+
+    return {
+        'event_name': best_event['event_name'],
+        'event_year': str(best_event['event_year']),
+        'place': best_event['place'],
+        'points': best_event['points']
+    }
 
 def process_athletes(data: Dict, config: Dict) -> Tuple[List[Dict], List[Dict]]:
     allowed_years = config.get('allowed_years')
@@ -93,6 +100,7 @@ def process_athletes(data: Dict, config: Dict) -> Tuple[List[Dict], List[Dict]]:
 
     for name, info in data.items():
         athlete_id = generate_athlete_id(name, info['birth_year'])
+
         filtered_years = {}
         if allowed_years:
             for year, year_events in info['years'].items():
@@ -115,6 +123,7 @@ def process_athletes(data: Dict, config: Dict) -> Tuple[List[Dict], List[Dict]]:
             'best_result': None,
             'athlete_id': athlete_id
         }
+
         all_events = []
         total_points = 0
 
@@ -132,25 +141,8 @@ def process_athletes(data: Dict, config: Dict) -> Tuple[List[Dict], List[Dict]]:
                     'event_year': int(year)
                 })
 
-        if all_events:
-            numeric_events = [e for e in all_events if isinstance(e['place'], int)]
-
-            if numeric_events:
-                best_event = min(
-                    numeric_events,
-                    key=lambda x: (x['place'], -x['event_year'], -x['points'])
-                )
-            else:
-                best_event = max(all_events, key=lambda x: x['points'])
-
-            entry['best_result'] = {
-                'event_name': best_event['event_name'],
-                'event_year': str(best_event['event_year']),
-                'place': best_event['place'],
-                'points': best_event['points']
-            }
-
-        total_points = apply_sport_rank_bonus(total_points, entry['sport_rank'], config)
+        entry['best_result']  = find_best_result(all_events)
+        total_points          = apply_sport_rank_bonus(total_points, entry['sport_rank'], config)
         entry['total_points'] = total_points
         results.append(entry)
 

@@ -11,13 +11,30 @@ def deep_merge(source: Dict, overrides: Dict) -> Dict:
     return merged
 
 def process_scoring_systems(config: Dict) -> None:
-    for system in config.get('scoring', {}).values():
-        new_keys = {}
-        for k in list(system.keys()):
-            if '-' in str(k):
-                min_max = tuple(map(int, k.split('-')))
-                new_keys[min_max] = system.pop(k)
-        system.update(new_keys)
+    for system_name, system_config in config.get('scoring', {}).items():
+        if 'place_based' in system_config:
+            process_range_keys(system_config['place_based'])
+
+        if 'round_based' in system_config:
+            for round_config in system_config['round_based'].values():
+                process_range_keys(round_config)
+
+def process_range_keys(config_dict: Dict) -> None:
+    new_keys = {}
+    keys_to_remove = []
+
+    for k in config_dict.keys():
+        if isinstance(k, str) and '-' in k:
+            try:
+                min_val, max_val = map(int, k.split('-'))
+                new_keys[(min_val, max_val)] = config_dict[k]
+                keys_to_remove.append(k)
+            except ValueError:
+                print(f"Ошибка при обработке диапазона '{k}'")
+
+    for k in keys_to_remove:
+        del config_dict[k]
+    config_dict.update(new_keys)
 
 def process_event_groups(config: Dict) -> None:
     event_groups = config.get('event_groups', {})
