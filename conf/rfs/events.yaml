@@ -1,29 +1,39 @@
+allowed_events: [main, cross_regional, regional, local]
+
 event_groups:
   default:
+    scoring_system: "default"
     coefficient: 1.0
     events: []
 
   main:
+    scoring_system: "wsl_csh"
     coefficient: 1.0
     events:
       - "Чемпионат России"
       - "Чемпионат РФ"
       - "Russian Championship"
+
+  cross_regional:
+    scoring_system: "wsl_qs6000"
+    coefficient: 1.0
+    events:
       - "Чемпионат федеральных округов"
+      - "Чемпионат Дальневосточного федерального округа"
+      - "Первенство Дальневосточного федерального округа"
+
+  regional:
+    scoring_system: "wsl_qs4000"
+    coefficient: 1.0
+    events:
       - "Чемпионат Калининградской области"
       - "Чемпионат Санкт-Петербурга"
 
-  regional:
-    coefficient: 0.7
-    events:
-      - "Кубок Ленинградской области"
-      - "Региональный этап"
-
   local:
-    coefficient: 0.5
+    scoring_system: "wsl_qs2000"
+    coefficient: 1.0
     events:
       - "Кубок Санкт-Петербурга"
+      - "Кубок Владивостока"
       - "Открытый чемпионат Сочи"
       - "Локальные соревнования"
-
-  allowed_events: [main, regional]

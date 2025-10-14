@@ -1,0 +1,11 @@
+---
+discipline: "longboard"
+gender: "men"
+
+input_paths:
+  - data/rfs/surfing/vl/longboard/longboard-men-*.csv
+
+output:
+  filename: output/rankings/rfs/vl/longboard/men.csv
+  top5_filename: output/rankings/rfs/vl/longboard/top5_men.csv
+  ranking_json: output/rankings/rfs/vl/longboard/ranking_men.json
