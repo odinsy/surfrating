@@ -32,16 +32,6 @@
       "category": "женщины",
       "group": "main",
       "participants_count": 17
-    },
-    "441cd5e4": {
-      "id": "441cd5e4",
-      "name": "Чемпионат Дальневосточного федерального округа",
-      "year": 2025,
-      "date": "2025.07.03",
-      "discipline": "длинная доска",
-      "category": "женщины",
-      "group": "cross_regional",
-      "participants_count": 8
     }
   },
   "athletes": {
@@ -51,17 +41,17 @@
       "sport_rank": "МС",
       "birth_year": 1997
     },
-    "a2bd8e77": {
-      "name": "Вяткина Анна",
-      "region": "Сахалинская область",
-      "sport_rank": "",
-      "birth_year": 0
-    },
     "cb76fb30": {
       "name": "Матвеева Анна",
       "region": "Калининградская область",
       "sport_rank": "КМС",
       "birth_year": 1985
+    },
+    "a8cee8ed": {
+      "name": "Вяткина Анна",
+      "region": "Сахалинская область",
+      "sport_rank": "1",
+      "birth_year": 1997
     },
     "f667db3b": {
       "name": "Бланк Мария",
@@ -142,7 +132,7 @@
       "round_place": "5"
     },
     {
-      "athlete_id": "a2bd8e77",
+      "athlete_id": "a8cee8ed",
       "event_id": "7d4dab12",
       "place": 5,
       "points": 4745,
@@ -150,7 +140,7 @@
       "round_place": "5"
     },
     {
-      "athlete_id": "a2bd8e77",
+      "athlete_id": "a8cee8ed",
       "event_id": "12c5656f",
       "place": 3,
       "points": 6085,
@@ -158,20 +148,12 @@
       "round_place": "3"
     },
     {
-      "athlete_id": "a2bd8e77",
+      "athlete_id": "a8cee8ed",
       "event_id": "8c44e76b",
       "place": 2,
       "points": 7800,
       "round_name": null,
       "round_place": "2"
-    },
-    {
-      "athlete_id": "a2bd8e77",
-      "event_id": "441cd5e4",
-      "place": 1,
-      "points": 4000,
-      "round_name": null,
-      "round_place": "1"
     },
     {
       "athlete_id": "f667db3b",
@@ -230,7 +212,7 @@
           "rank": 3
         },
         {
-          "athlete_id": "a2bd8e77",
+          "athlete_id": "a8cee8ed",
           "year_points": 4745,
           "events": [
             {
@@ -270,7 +252,7 @@
           "rank": 2
         },
         {
-          "athlete_id": "a2bd8e77",
+          "athlete_id": "a8cee8ed",
           "year_points": 6085,
           "events": [
             {
@@ -310,23 +292,6 @@
     "2025": {
       "athletes": [
         {
-          "athlete_id": "a2bd8e77",
-          "year_points": 11800,
-          "events": [
-            {
-              "event_id": "8c44e76b",
-              "place": 2,
-              "points": 7800
-            },
-            {
-              "event_id": "441cd5e4",
-              "place": 1,
-              "points": 4000
-            }
-          ],
-          "rank": 1
-        },
-        {
           "athlete_id": "f667db3b",
           "year_points": 10000,
           "events": [
@@ -334,6 +299,18 @@
               "event_id": "8c44e76b",
               "place": 1,
               "points": 10000
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "athlete_id": "a8cee8ed",
+          "year_points": 7800,
+          "events": [
+            {
+              "event_id": "8c44e76b",
+              "place": 2,
+              "points": 7800
             }
           ],
           "rank": 2
@@ -384,14 +361,14 @@
       ]
     },
     {
-      "athlete_id": "a2bd8e77",
+      "athlete_id": "cb76fb30",
       "rank": 2,
-      "total_points": 22630,
+      "total_points": 19170,
       "best_result": {
-        "event_name": "Чемпионат Дальневосточного федерального округа",
-        "event_year": "2025",
-        "place": 1,
-        "points": 4000
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
+        "place": 2,
+        "points": 7800
       },
       "last_year": 2025,
       "years_participated": [
@@ -401,12 +378,12 @@
       ]
     },
     {
-      "athlete_id": "cb76fb30",
+      "athlete_id": "a8cee8ed",
       "rank": 3,
-      "total_points": 19170,
+      "total_points": 18630,
       "best_result": {
         "event_name": "Чемпионат России",
-        "event_year": "2023",
+        "event_year": "2025",
         "place": 2,
         "points": 7800
       },
