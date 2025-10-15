@@ -1,4 +1,4 @@
-const JSON_BASE_PATH = '../../data/rankings/';
+const JSON_BASE_PATH = '../../../data/rankings/';
 const AVATARS_ENABLED = false;
 const transliterate = window.slugify;
 
@@ -19,9 +19,10 @@ const COMPETITIONS = {
             'longboard': 'Длинная доска'
         }
     },
-    'tvoysurf39/cup': {
-        name: 'Балтийский серф-контест (Твой Сёрф 39)',
+    'rfs/spb': {
+        name: 'Чемпионат Санкт-Петербурга (РФС)',
         disciplines: {
+            'shortboard': 'Короткая доска',
             'longboard': 'Длинная доска'
         }
     }
@@ -47,8 +48,17 @@ function hideTooltip(id) {
 
 function createAthleteRow(athlete, years, athleteYearData) {
     const bestResult = athlete.best_result
-        ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
-        : 'Нет данных';
+        ? `
+            <div class="best-result-compact">
+                <div class="best-result-main">
+                    ${athlete.best_result.place} место
+                </div>
+                <div class="best-result-details">
+                    ${athlete.best_result.event_name} ${athlete.best_result.event_year}
+                </div>
+            </div>
+          `
+        : '<div class="text-muted">Нет данных</div>';
 
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
     const initials = (surname[0] || '') + (firstName[0] || '');
@@ -57,7 +67,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
     let avatarPath = '';
     if (AVATARS_ENABLED) {
         avatarPath = athlete.avatar_path
-            || `../../img/avatars/${avatarSlug}.jpg`;
+            || `../../../img/avatars/${avatarSlug}.jpg`;
     }
 
     let avatarHTML = '';
@@ -108,9 +118,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
             <td class="name-cell">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
-                        <img src="${avatarPath}" alt="${athlete.name}"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="avatar-fallback">${initials}</div>
+                        ${avatarHTML}
                     </div>
                     <div>
                         <div class="athlete-name">${athlete.name}</div>
@@ -118,7 +126,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
                     </div>
                 </div>
             </td>
-            <td class="year-points">${bestResult}</td>
+            <td class="best-result-cell">${bestResult}</td>
             ${yearCells}
             <td class="total-points fw-bold">${athlete.total_points}</td>
         </tr>
@@ -158,11 +166,21 @@ function normalizeData(data) {
 
     normalized.overall_ranking = (data.overall_ranking || []).map(item => {
         const athlete = athletesMap[item.athlete_id] || {};
+
+        let bestResult = item.best_result;
+        if (bestResult && bestResult.event_id) {
+            const eventInfo = eventsMap[bestResult.event_id] || {};
+            bestResult = {
+                ...bestResult,
+                event_name: eventInfo.name || 'Неизвестное событие'
+            };
+        }
+
         return {
             id: item.athlete_id,
             rank: item.rank,
             total_points: item.total_points,
-            best_result: item.best_result,
+            best_result: bestResult,
             name: athlete.name || 'Неизвестный спортсмен',
             region: athlete.region || ''
         };
