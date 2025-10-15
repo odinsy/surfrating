@@ -282,10 +282,10 @@
     {
       "athlete_id": "4344f68f",
       "event_id": "842ed31f",
-      "place": 7,
-      "points": 4545,
+      "place": 5,
+      "points": 4745,
       "round_name": null,
-      "round_place": "7"
+      "round_place": "5"
     },
     {
       "athlete_id": "392cd3cb",
@@ -458,10 +458,10 @@
     {
       "athlete_id": "bceb97e0",
       "event_id": "842ed31f",
-      "place": 5,
-      "points": 4745,
+      "place": 7,
+      "points": 4545,
       "round_name": null,
-      "round_place": "5"
+      "round_place": "7"
     },
     {
       "athlete_id": "2fc677f1",
@@ -828,6 +828,18 @@
           "rank": 4
         },
         {
+          "athlete_id": "4344f68f",
+          "year_points": 4745,
+          "events": [
+            {
+              "event_id": "842ed31f",
+              "place": 5,
+              "points": 4745
+            }
+          ],
+          "rank": 5
+        },
+        {
           "athlete_id": "c86cbb4b",
           "year_points": 4745,
           "events": [
@@ -841,18 +853,6 @@
         },
         {
           "athlete_id": "bceb97e0",
-          "year_points": 4745,
-          "events": [
-            {
-              "event_id": "842ed31f",
-              "place": 5,
-              "points": 4745
-            }
-          ],
-          "rank": 5
-        },
-        {
-          "athlete_id": "4344f68f",
           "year_points": 4545,
           "events": [
             {
@@ -1617,7 +1617,7 @@
     {
       "athlete_id": "4344f68f",
       "rank": 5,
-      "total_points": 14545,
+      "total_points": 14745,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2023",
@@ -1734,12 +1734,12 @@
     {
       "athlete_id": "bceb97e0",
       "rank": 12,
-      "total_points": 8065,
+      "total_points": 7865,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2024",
-        "place": 5,
-        "points": 4745
+        "place": 7,
+        "points": 4545
       },
       "last_year": 2024,
       "years_participated": [
