@@ -6,7 +6,7 @@ current_year: 2024
 allowed_years: [2022, 2023, 2024]
 
 input_paths:
-  - data/rfs/surfing/rus/shortboard/shortboard_women_*.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_women_*.csv
 
 output:
   filename: output/rankings/rfs/rus/shortboard/women.csv
