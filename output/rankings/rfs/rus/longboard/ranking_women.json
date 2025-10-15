@@ -1,7 +1,7 @@
 {
   "discipline": "longboard",
   "gender": "women",
-  "last_updated": "2025-10-14",
+  "last_updated": "2025-10-15",
   "events": {
     "12c5656f": {
       "id": "12c5656f",
@@ -84,7 +84,7 @@
     "a2bd8e77": {
       "name": "Вяткина Анна",
       "region": "Южно-Сахалинск",
-      "sport_rank": "3",
+      "sport_rank": "",
       "birth_year": 0
     },
     "10fb67b6": {
@@ -102,31 +102,25 @@
     "37b095a9": {
       "name": "Морозова Александра",
       "region": "Санкт-Петербург",
-      "sport_rank": "3",
+      "sport_rank": "",
       "birth_year": 0
     },
     "c06b5709": {
       "name": "Горба Мария",
       "region": "Санкт-Петербург",
-      "sport_rank": "3",
+      "sport_rank": "",
       "birth_year": 0
     },
     "ba000db6": {
       "name": "Пыжова Алена",
       "region": "Санкт-Петербург",
-      "sport_rank": "3",
+      "sport_rank": "",
       "birth_year": 0
     },
     "75dee8ca": {
       "name": "Коровина Виктория",
       "region": "Владивосток",
-      "sport_rank": "3",
-      "birth_year": 0
-    },
-    "3be5ce81": {
-      "name": "Филинова Галина",
-      "region": "Владивосток",
-      "sport_rank": "2",
+      "sport_rank": "",
       "birth_year": 0
     },
     "34ebbcb9": {
@@ -141,10 +135,16 @@
       "sport_rank": "2",
       "birth_year": 1986
     },
+    "3be5ce81": {
+      "name": "Филинова Галина",
+      "region": "Владивосток",
+      "sport_rank": "",
+      "birth_year": 0
+    },
     "71cf082a": {
       "name": "Силивончик Анастасия",
       "region": "Владивосток",
-      "sport_rank": "2",
+      "sport_rank": "",
       "birth_year": 0
     },
     "d7307208": {
@@ -156,13 +156,13 @@
     "31ffbc90": {
       "name": "Смирнова Вероника",
       "region": "Санкт-Петербург",
-      "sport_rank": "3",
+      "sport_rank": "",
       "birth_year": 0
     },
     "b97d6edf": {
       "name": "Кузьмина Полина",
       "region": "Санкт-Петербург",
-      "sport_rank": "3",
+      "sport_rank": "",
       "birth_year": 0
     },
     "25650f9d": {
@@ -192,7 +192,7 @@
     "b7076033": {
       "name": "Кабаргина Кира",
       "region": "Владивосток",
-      "sport_rank": "3",
+      "sport_rank": "",
       "birth_year": 0
     },
     "6d82da4a": {
@@ -225,12 +225,6 @@
       "sport_rank": "2",
       "birth_year": 2007
     },
-    "611e5b94": {
-      "name": "Силютина Алина",
-      "region": "Владивосток",
-      "sport_rank": "",
-      "birth_year": 1996
-    },
     "adab6584": {
       "name": "Шабалина Людмила",
       "region": "Санкт-Петербург",
@@ -243,6 +237,18 @@
       "sport_rank": "3",
       "birth_year": 1994
     },
+    "611e5b94": {
+      "name": "Силютина Алина",
+      "region": "Владивосток",
+      "sport_rank": "",
+      "birth_year": 1996
+    },
+    "be14897c": {
+      "name": "Ясинская Анна",
+      "region": "Владивосток",
+      "sport_rank": "",
+      "birth_year": 0
+    },
     "124c22e2": {
       "name": "Недзельницкая Дарина",
       "region": "",
@@ -253,12 +259,6 @@
       "name": "Грищенко Ева",
       "region": "",
       "sport_rank": "",
-      "birth_year": 0
-    },
-    "be14897c": {
-      "name": "Ясинская Анна",
-      "region": "Владивосток",
-      "sport_rank": "3",
       "birth_year": 0
     },
     "6a643221": {
@@ -469,7 +469,7 @@
       "athlete_id": "a2bd8e77",
       "event_id": "441cd5e4",
       "place": 1,
-      "points": 5000,
+      "points": 4000,
       "round_name": null,
       "round_place": "1"
     },
@@ -757,7 +757,7 @@
       "athlete_id": "3be5ce81",
       "event_id": "441cd5e4",
       "place": 2,
-      "points": 3900,
+      "points": 3120,
       "round_name": null,
       "round_place": "2"
     },
@@ -917,7 +917,7 @@
       "athlete_id": "124c22e2",
       "event_id": "441cd5e4",
       "place": 3,
-      "points": 3042,
+      "points": 2440,
       "round_name": null,
       "round_place": "3"
     },
@@ -925,7 +925,7 @@
       "athlete_id": "164fc509",
       "event_id": "441cd5e4",
       "place": 4,
-      "points": 2792,
+      "points": 2240,
       "round_name": null,
       "round_place": "4"
     },
@@ -933,7 +933,7 @@
       "athlete_id": "6a643221",
       "event_id": "441cd5e4",
       "place": 5,
-      "points": 2282,
+      "points": 1900,
       "round_name": null,
       "round_place": "5"
     },
@@ -941,7 +941,7 @@
       "athlete_id": "611e5b94",
       "event_id": "441cd5e4",
       "place": 5,
-      "points": 2282,
+      "points": 1900,
       "round_name": null,
       "round_place": "5"
     },
@@ -957,7 +957,7 @@
       "athlete_id": "a693eae8",
       "event_id": "441cd5e4",
       "place": 5,
-      "points": 2282,
+      "points": 1900,
       "round_name": null,
       "round_place": "5"
     },
@@ -965,7 +965,7 @@
       "athlete_id": "73291888",
       "event_id": "441cd5e4",
       "place": 5,
-      "points": 2282,
+      "points": 1900,
       "round_name": null,
       "round_place": "5"
     },
@@ -1318,24 +1318,24 @@
           "rank": 17
         },
         {
-          "athlete_id": "3be5ce81",
-          "year_points": 1900,
-          "events": [
-            {
-              "event_id": "12c5656f",
-              "place": 22,
-              "points": 1900
-            }
-          ],
-          "rank": 17
-        },
-        {
           "athlete_id": "34ebbcb9",
           "year_points": 1900,
           "events": [
             {
               "event_id": "12c5656f",
               "place": 17,
+              "points": 1900
+            }
+          ],
+          "rank": 17
+        },
+        {
+          "athlete_id": "3be5ce81",
+          "year_points": 1900,
+          "events": [
+            {
+              "event_id": "12c5656f",
+              "place": 22,
               "points": 1900
             }
           ],
@@ -1419,7 +1419,7 @@
       "athletes": [
         {
           "athlete_id": "a2bd8e77",
-          "year_points": 12800,
+          "year_points": 11800,
           "events": [
             {
               "event_id": "8c44e76b",
@@ -1429,7 +1429,7 @@
             {
               "event_id": "441cd5e4",
               "place": 1,
-              "points": 5000
+              "points": 4000
             }
           ],
           "rank": 1
@@ -1554,23 +1554,6 @@
           "rank": 8
         },
         {
-          "athlete_id": "3be5ce81",
-          "year_points": 5120,
-          "events": [
-            {
-              "event_id": "441cd5e4",
-              "place": 2,
-              "points": 3900
-            },
-            {
-              "event_id": "d5b280d4",
-              "place": 3,
-              "points": 1220
-            }
-          ],
-          "rank": 9
-        },
-        {
           "athlete_id": "34ebbcb9",
           "year_points": 4745,
           "events": [
@@ -1580,7 +1563,7 @@
               "points": 4745
             }
           ],
-          "rank": 10
+          "rank": 9
         },
         {
           "athlete_id": "7ad40cba",
@@ -1597,7 +1580,7 @@
               "points": 1560
             }
           ],
-          "rank": 11
+          "rank": 10
         },
         {
           "athlete_id": "ba000db6",
@@ -1614,7 +1597,7 @@
               "points": 1220
             }
           ],
-          "rank": 12
+          "rank": 11
         },
         {
           "athlete_id": "a79ed587",
@@ -1631,7 +1614,24 @@
               "points": 1220
             }
           ],
-          "rank": 12
+          "rank": 11
+        },
+        {
+          "athlete_id": "3be5ce81",
+          "year_points": 4340,
+          "events": [
+            {
+              "event_id": "441cd5e4",
+              "place": 2,
+              "points": 3120
+            },
+            {
+              "event_id": "d5b280d4",
+              "place": 3,
+              "points": 1220
+            }
+          ],
+          "rank": 13
         },
         {
           "athlete_id": "d7307208",
@@ -1698,12 +1698,12 @@
         },
         {
           "athlete_id": "611e5b94",
-          "year_points": 3232,
+          "year_points": 2850,
           "events": [
             {
               "event_id": "441cd5e4",
               "place": 5,
-              "points": 2282
+              "points": 1900
             },
             {
               "event_id": "d5b280d4",
@@ -1715,60 +1715,60 @@
         },
         {
           "athlete_id": "124c22e2",
-          "year_points": 3042,
+          "year_points": 2440,
           "events": [
             {
               "event_id": "441cd5e4",
               "place": 3,
-              "points": 3042
+              "points": 2440
             }
           ],
           "rank": 19
         },
         {
           "athlete_id": "164fc509",
-          "year_points": 2792,
+          "year_points": 2240,
           "events": [
             {
               "event_id": "441cd5e4",
               "place": 4,
-              "points": 2792
+              "points": 2240
             }
           ],
           "rank": 20
         },
         {
           "athlete_id": "6a643221",
-          "year_points": 2282,
+          "year_points": 1900,
           "events": [
             {
               "event_id": "441cd5e4",
               "place": 5,
-              "points": 2282
+              "points": 1900
             }
           ],
           "rank": 21
         },
         {
           "athlete_id": "a693eae8",
-          "year_points": 2282,
+          "year_points": 1900,
           "events": [
             {
               "event_id": "441cd5e4",
               "place": 5,
-              "points": 2282
+              "points": 1900
             }
           ],
           "rank": 21
         },
         {
           "athlete_id": "73291888",
-          "year_points": 2282,
+          "year_points": 1900,
           "events": [
             {
               "event_id": "441cd5e4",
               "place": 5,
-              "points": 2282
+              "points": 1900
             }
           ],
           "rank": 21
@@ -1783,7 +1783,7 @@
               "points": 1900
             }
           ],
-          "rank": 24
+          "rank": 21
         },
         {
           "athlete_id": "71cf082a",
@@ -2060,12 +2060,12 @@
     {
       "athlete_id": "a2bd8e77",
       "rank": 2,
-      "total_points": 18885,
+      "total_points": 17885,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
         "event_year": "2025",
         "place": 1,
-        "points": 5000
+        "points": 4000
       },
       "last_year": 2025,
       "years_participated": [
@@ -2170,24 +2170,8 @@
       ]
     },
     {
-      "athlete_id": "3be5ce81",
-      "rank": 9,
-      "total_points": 7020,
-      "best_result": {
-        "event_name": "Чемпионат Дальневосточного федерального округа",
-        "event_year": "2025",
-        "place": 2,
-        "points": 3900
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2024,
-        2025
-      ]
-    },
-    {
       "athlete_id": "34ebbcb9",
-      "rank": 10,
+      "rank": 9,
       "total_points": 6645,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -2203,7 +2187,7 @@
     },
     {
       "athlete_id": "227257a2",
-      "rank": 11,
+      "rank": 10,
       "total_points": 6545,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -2213,6 +2197,22 @@
       },
       "last_year": 2025,
       "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "3be5ce81",
+      "rank": 11,
+      "total_points": 6240,
+      "best_result": {
+        "event_name": "Чемпионат Дальневосточного федерального округа",
+        "event_year": "2025",
+        "place": 2,
+        "points": 3120
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2024,
         2025
       ]
     },
@@ -2433,23 +2433,8 @@
       ]
     },
     {
-      "athlete_id": "611e5b94",
-      "rank": 26,
-      "total_points": 3232,
-      "best_result": {
-        "event_name": "Чемпионат Дальневосточного федерального округа",
-        "event_year": "2025",
-        "place": 5,
-        "points": 2282
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025
-      ]
-    },
-    {
       "athlete_id": "adab6584",
-      "rank": 27,
+      "rank": 26,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -2464,7 +2449,7 @@
     },
     {
       "athlete_id": "662216cf",
-      "rank": 28,
+      "rank": 27,
       "total_points": 3120,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -2478,29 +2463,14 @@
       ]
     },
     {
-      "athlete_id": "124c22e2",
-      "rank": 29,
-      "total_points": 3042,
+      "athlete_id": "611e5b94",
+      "rank": 28,
+      "total_points": 2850,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
         "event_year": "2025",
-        "place": 3,
-        "points": 3042
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025
-      ]
-    },
-    {
-      "athlete_id": "164fc509",
-      "rank": 30,
-      "total_points": 2792,
-      "best_result": {
-        "event_name": "Чемпионат Дальневосточного федерального округа",
-        "event_year": "2025",
-        "place": 4,
-        "points": 2792
+        "place": 5,
+        "points": 1900
       },
       "last_year": 2025,
       "years_participated": [
@@ -2509,7 +2479,7 @@
     },
     {
       "athlete_id": "be14897c",
-      "rank": 31,
+      "rank": 29,
       "total_points": 2740,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -2524,14 +2494,44 @@
       ]
     },
     {
+      "athlete_id": "124c22e2",
+      "rank": 30,
+      "total_points": 2440,
+      "best_result": {
+        "event_name": "Чемпионат Дальневосточного федерального округа",
+        "event_year": "2025",
+        "place": 3,
+        "points": 2440
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "164fc509",
+      "rank": 31,
+      "total_points": 2240,
+      "best_result": {
+        "event_name": "Чемпионат Дальневосточного федерального округа",
+        "event_year": "2025",
+        "place": 4,
+        "points": 2240
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
       "athlete_id": "6a643221",
       "rank": 32,
-      "total_points": 2282,
+      "total_points": 1900,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
         "event_year": "2025",
         "place": 5,
-        "points": 2282
+        "points": 1900
       },
       "last_year": 2025,
       "years_participated": [
@@ -2541,12 +2541,12 @@
     {
       "athlete_id": "a693eae8",
       "rank": 33,
-      "total_points": 2282,
+      "total_points": 1900,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
         "event_year": "2025",
         "place": 5,
-        "points": 2282
+        "points": 1900
       },
       "last_year": 2025,
       "years_participated": [
@@ -2556,12 +2556,12 @@
     {
       "athlete_id": "73291888",
       "rank": 34,
-      "total_points": 2282,
+      "total_points": 1900,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
         "event_year": "2025",
         "place": 5,
-        "points": 2282
+        "points": 1900
       },
       "last_year": 2025,
       "years_participated": [
