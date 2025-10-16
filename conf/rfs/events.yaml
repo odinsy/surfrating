@@ -15,7 +15,7 @@ event_groups:
       - "Russian Championship"
 
   cross_regional:
-    scoring_system: "wsl_qs3000"
+    scoring_system: "wsl_qs4000"
     coefficient: 1.0
     events:
       - "Чемпионат федеральных округов"
@@ -25,7 +25,7 @@ event_groups:
       - "Первенство ДФО"
 
   regional:
-    scoring_system: "wsl_qs1000"
+    scoring_system: "wsl_qs2000"
     coefficient: 1.0
     events:
       - "Чемпионат Санкт-Петербурга"
