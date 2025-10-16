@@ -3,16 +3,6 @@
   "gender": "men",
   "last_updated": "2025-10-16",
   "events": {
-    "e9bd861c": {
-      "id": "e9bd861c",
-      "name": "Чемпионат России",
-      "year": 2023,
-      "date": "2023.10.08-19",
-      "discipline": "длинная доска",
-      "category": "мужчины",
-      "group": "main",
-      "participants_count": 19
-    },
     "842ed31f": {
       "id": "842ed31f",
       "name": "Чемпионат России",
@@ -128,26 +118,18 @@
   },
   "results": [
     {
-      "athlete_id": "37f66977",
+      "athlete_id": "333f4604",
       "event_id": "842ed31f",
-      "place": 4,
-      "points": 5685,
-      "round_name": null,
-      "round_place": "4"
-    },
-    {
-      "athlete_id": "37f66977",
-      "event_id": "0d0ca571",
-      "place": 4,
-      "points": 5685,
-      "round_name": null,
-      "round_place": "4"
-    },
-    {
-      "athlete_id": "37f66977",
-      "event_id": "43624834",
       "place": 1,
-      "points": 1000,
+      "points": 10000,
+      "round_name": null,
+      "round_place": "1"
+    },
+    {
+      "athlete_id": "333f4604",
+      "event_id": "0d0ca571",
+      "place": 1,
+      "points": 10000,
       "round_name": null,
       "round_place": "1"
     },
@@ -200,18 +182,26 @@
       "round_place": "2"
     },
     {
-      "athlete_id": "333f4604",
+      "athlete_id": "37f66977",
       "event_id": "842ed31f",
-      "place": 1,
-      "points": 10000,
+      "place": 4,
+      "points": 5685,
       "round_name": null,
-      "round_place": "1"
+      "round_place": "4"
     },
     {
-      "athlete_id": "333f4604",
+      "athlete_id": "37f66977",
       "event_id": "0d0ca571",
+      "place": 4,
+      "points": 5685,
+      "round_name": null,
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "37f66977",
+      "event_id": "43624834",
       "place": 1,
-      "points": 10000,
+      "points": 1000,
       "round_name": null,
       "round_place": "1"
     },

@@ -3,16 +3,6 @@
   "gender": "men",
   "last_updated": "2025-10-16",
   "events": {
-    "e9bd861c": {
-      "id": "e9bd861c",
-      "name": "Чемпионат России",
-      "year": 2023,
-      "date": "2023.10.08-19",
-      "discipline": "длинная доска",
-      "category": "мужчины",
-      "group": "main",
-      "participants_count": 19
-    },
     "842ed31f": {
       "id": "842ed31f",
       "name": "Чемпионат России",
@@ -365,17 +355,17 @@
       "sport_rank": "",
       "birth_year": 0
     },
-    "58170959": {
-      "name": "Болдырев Артем",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 1981
-    },
     "b61b2527": {
       "name": "Екимовский Ярослав",
       "region": "Санкт-Петербург",
       "sport_rank": "",
       "birth_year": 0
+    },
+    "58170959": {
+      "name": "Болдырев Артем",
+      "region": "Калининградская область",
+      "sport_rank": "3",
+      "birth_year": 1981
     },
     "2321d9aa": {
       "name": "Титовец Константин",
@@ -514,84 +504,22 @@
       "region": "Санкт-Петербург",
       "sport_rank": "",
       "birth_year": 0
-    },
-    "392cd3cb": {
-      "name": "Фомин Максим",
-      "region": "Московская область",
-      "sport_rank": "3",
-      "birth_year": 1982
-    },
-    "bef2628a": {
-      "name": "Тихонов Андрей",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 1981
-    },
-    "3bb4d6bb": {
-      "name": "Михайлов Алексей",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 1997
-    },
-    "a8114407": {
-      "name": "Богданов Даниил",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 2001
-    },
-    "b832dcd8": {
-      "name": "Зылев Даниил",
-      "region": "Москва",
-      "sport_rank": "3",
-      "birth_year": 1982
     }
   },
   "results": [
     {
-      "athlete_id": "4344f68f",
+      "athlete_id": "333f4604",
       "event_id": "842ed31f",
-      "place": 5,
-      "points": 4745,
-      "round_name": null,
-      "round_place": "5"
-    },
-    {
-      "athlete_id": "4344f68f",
-      "event_id": "7c45e7e9",
-      "place": 2,
-      "points": 2340,
-      "round_name": null,
-      "round_place": "2"
-    },
-    {
-      "athlete_id": "4344f68f",
-      "event_id": "2e75bb22",
       "place": 1,
-      "points": 1000,
+      "points": 10000,
       "round_name": null,
       "round_place": "1"
     },
     {
-      "athlete_id": "37f66977",
-      "event_id": "842ed31f",
-      "place": 4,
-      "points": 5685,
-      "round_name": null,
-      "round_place": "4"
-    },
-    {
-      "athlete_id": "37f66977",
+      "athlete_id": "333f4604",
       "event_id": "0d0ca571",
-      "place": 4,
-      "points": 5685,
-      "round_name": null,
-      "round_place": "4"
-    },
-    {
-      "athlete_id": "37f66977",
-      "event_id": "43624834",
       "place": 1,
-      "points": 1000,
+      "points": 10000,
       "round_name": null,
       "round_place": "1"
     },
@@ -620,15 +548,143 @@
       "round_place": "1"
     },
     {
-      "athlete_id": "b7b49dea",
+      "athlete_id": "501c15a5",
       "event_id": "842ed31f",
-      "place": 19,
-      "points": 1900,
+      "place": 3,
+      "points": 6085,
       "round_name": null,
-      "round_place": "19"
+      "round_place": "3"
     },
     {
-      "athlete_id": "b7b49dea",
+      "athlete_id": "501c15a5",
+      "event_id": "0d0ca571",
+      "place": 2,
+      "points": 7800,
+      "round_name": null,
+      "round_place": "2"
+    },
+    {
+      "athlete_id": "501c15a5",
+      "event_id": "cea8c7a9",
+      "place": 2,
+      "points": 800,
+      "round_name": null,
+      "round_place": "2"
+    },
+    {
+      "athlete_id": "37f66977",
+      "event_id": "842ed31f",
+      "place": 4,
+      "points": 5685,
+      "round_name": null,
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "37f66977",
+      "event_id": "0d0ca571",
+      "place": 4,
+      "points": 5685,
+      "round_name": null,
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "37f66977",
+      "event_id": "43624834",
+      "place": 1,
+      "points": 1000,
+      "round_name": null,
+      "round_place": "1"
+    },
+    {
+      "athlete_id": "4344f68f",
+      "event_id": "842ed31f",
+      "place": 5,
+      "points": 4745,
+      "round_name": null,
+      "round_place": "5"
+    },
+    {
+      "athlete_id": "4344f68f",
+      "event_id": "7c45e7e9",
+      "place": 2,
+      "points": 2340,
+      "round_name": null,
+      "round_place": "2"
+    },
+    {
+      "athlete_id": "4344f68f",
+      "event_id": "2e75bb22",
+      "place": 1,
+      "points": 1000,
+      "round_name": null,
+      "round_place": "1"
+    },
+    {
+      "athlete_id": "c86cbb4b",
+      "event_id": "842ed31f",
+      "place": 6,
+      "points": 4745,
+      "round_name": null,
+      "round_place": "6"
+    },
+    {
+      "athlete_id": "c86cbb4b",
+      "event_id": "0d0ca571",
+      "place": 3,
+      "points": 6085,
+      "round_name": null,
+      "round_place": "3"
+    },
+    {
+      "athlete_id": "c86cbb4b",
+      "event_id": "43624834",
+      "place": 2,
+      "points": 800,
+      "round_name": null,
+      "round_place": "2"
+    },
+    {
+      "athlete_id": "bceb97e0",
+      "event_id": "842ed31f",
+      "place": 7,
+      "points": 4545,
+      "round_name": null,
+      "round_place": "7"
+    },
+    {
+      "athlete_id": "bceb97e0",
+      "event_id": "7c45e7e9",
+      "place": 1,
+      "points": 3000,
+      "round_name": null,
+      "round_place": "1"
+    },
+    {
+      "athlete_id": "bbb0fada",
+      "event_id": "842ed31f",
+      "place": 8,
+      "points": 4545,
+      "round_name": null,
+      "round_place": "8"
+    },
+    {
+      "athlete_id": "2fc677f1",
+      "event_id": "842ed31f",
+      "place": 9,
+      "points": 3320,
+      "round_name": null,
+      "round_place": "9"
+    },
+    {
+      "athlete_id": "e91cc0df",
+      "event_id": "842ed31f",
+      "place": 10,
+      "points": 3320,
+      "round_name": null,
+      "round_place": "10"
+    },
+    {
+      "athlete_id": "e91cc0df",
       "event_id": "0d0ca571",
       "place": 5,
       "points": 4745,
@@ -636,23 +692,23 @@
       "round_place": "5"
     },
     {
-      "athlete_id": "b7b49dea",
-      "event_id": "cea8c7a9",
-      "place": 5,
-      "points": 500,
+      "athlete_id": "e91cc0df",
+      "event_id": "43624834",
+      "place": 4,
+      "points": 600,
       "round_name": null,
-      "round_place": "5"
+      "round_place": "4"
     },
     {
-      "athlete_id": "a59b6ff4",
+      "athlete_id": "473f005c",
       "event_id": "842ed31f",
-      "place": 15,
-      "points": 3120,
+      "place": 11,
+      "points": 3320,
       "round_name": null,
-      "round_place": "15"
+      "round_place": "11"
     },
     {
-      "athlete_id": "a59b6ff4",
+      "athlete_id": "473f005c",
       "event_id": "0d0ca571",
       "place": 13,
       "points": 3120,
@@ -660,7 +716,23 @@
       "round_place": "13"
     },
     {
-      "athlete_id": "a59b6ff4",
+      "athlete_id": "473f005c",
+      "event_id": "43624834",
+      "place": 7,
+      "points": 445,
+      "round_name": null,
+      "round_place": "7"
+    },
+    {
+      "athlete_id": "64cba874",
+      "event_id": "842ed31f",
+      "place": 12,
+      "points": 3320,
+      "round_name": null,
+      "round_place": "12"
+    },
+    {
+      "athlete_id": "64cba874",
       "event_id": "cea8c7a9",
       "place": 7,
       "points": 445,
@@ -692,212 +764,36 @@
       "round_place": "3"
     },
     {
-      "athlete_id": "473f005c",
-      "event_id": "842ed31f",
-      "place": 11,
-      "points": 3320,
-      "round_name": null,
-      "round_place": "11"
-    },
-    {
-      "athlete_id": "473f005c",
-      "event_id": "0d0ca571",
-      "place": 13,
-      "points": 3120,
-      "round_name": null,
-      "round_place": "13"
-    },
-    {
-      "athlete_id": "473f005c",
-      "event_id": "43624834",
-      "place": 7,
-      "points": 445,
-      "round_name": null,
-      "round_place": "7"
-    },
-    {
-      "athlete_id": "bceb97e0",
-      "event_id": "842ed31f",
-      "place": 7,
-      "points": 4545,
-      "round_name": null,
-      "round_place": "7"
-    },
-    {
-      "athlete_id": "bceb97e0",
-      "event_id": "7c45e7e9",
-      "place": 1,
-      "points": 3000,
-      "round_name": null,
-      "round_place": "1"
-    },
-    {
-      "athlete_id": "2fc677f1",
-      "event_id": "842ed31f",
-      "place": 9,
-      "points": 3320,
-      "round_name": null,
-      "round_place": "9"
-    },
-    {
-      "athlete_id": "501c15a5",
-      "event_id": "842ed31f",
-      "place": 3,
-      "points": 6085,
-      "round_name": null,
-      "round_place": "3"
-    },
-    {
-      "athlete_id": "501c15a5",
-      "event_id": "0d0ca571",
-      "place": 2,
-      "points": 7800,
-      "round_name": null,
-      "round_place": "2"
-    },
-    {
-      "athlete_id": "501c15a5",
-      "event_id": "cea8c7a9",
-      "place": 2,
-      "points": 800,
-      "round_name": null,
-      "round_place": "2"
-    },
-    {
-      "athlete_id": "e91cc0df",
-      "event_id": "842ed31f",
-      "place": 10,
-      "points": 3320,
-      "round_name": null,
-      "round_place": "10"
-    },
-    {
-      "athlete_id": "e91cc0df",
-      "event_id": "0d0ca571",
-      "place": 5,
-      "points": 4745,
-      "round_name": null,
-      "round_place": "5"
-    },
-    {
-      "athlete_id": "e91cc0df",
-      "event_id": "43624834",
-      "place": 4,
-      "points": 600,
-      "round_name": null,
-      "round_place": "4"
-    },
-    {
-      "athlete_id": "9db5218f",
-      "event_id": "0d0ca571",
-      "place": 13,
-      "points": 3120,
-      "round_name": null,
-      "round_place": "13"
-    },
-    {
-      "athlete_id": "9db5218f",
-      "event_id": "43624834",
-      "place": 5,
-      "points": 500,
-      "round_name": null,
-      "round_place": "5"
-    },
-    {
-      "athlete_id": "58170959",
-      "event_id": "43624834",
-      "place": 5,
-      "points": 500,
-      "round_name": null,
-      "round_place": "5"
-    },
-    {
-      "athlete_id": "482f678d",
-      "event_id": "0d0ca571",
-      "place": 17,
-      "points": 1900,
-      "round_name": null,
-      "round_place": "17"
-    },
-    {
-      "athlete_id": "482f678d",
-      "event_id": "43624834",
-      "place": 7,
-      "points": 445,
-      "round_name": null,
-      "round_place": "7"
-    },
-    {
-      "athlete_id": "333f4604",
-      "event_id": "842ed31f",
-      "place": 1,
-      "points": 10000,
-      "round_name": null,
-      "round_place": "1"
-    },
-    {
-      "athlete_id": "333f4604",
-      "event_id": "0d0ca571",
-      "place": 1,
-      "points": 10000,
-      "round_name": null,
-      "round_place": "1"
-    },
-    {
-      "athlete_id": "c86cbb4b",
-      "event_id": "842ed31f",
-      "place": 6,
-      "points": 4745,
-      "round_name": null,
-      "round_place": "6"
-    },
-    {
-      "athlete_id": "c86cbb4b",
-      "event_id": "0d0ca571",
-      "place": 3,
-      "points": 6085,
-      "round_name": null,
-      "round_place": "3"
-    },
-    {
-      "athlete_id": "c86cbb4b",
-      "event_id": "43624834",
-      "place": 2,
-      "points": 800,
-      "round_name": null,
-      "round_place": "2"
-    },
-    {
-      "athlete_id": "bbb0fada",
-      "event_id": "842ed31f",
-      "place": 8,
-      "points": 4545,
-      "round_name": null,
-      "round_place": "8"
-    },
-    {
-      "athlete_id": "64cba874",
-      "event_id": "842ed31f",
-      "place": 12,
-      "points": 3320,
-      "round_name": null,
-      "round_place": "12"
-    },
-    {
-      "athlete_id": "64cba874",
-      "event_id": "cea8c7a9",
-      "place": 7,
-      "points": 445,
-      "round_name": null,
-      "round_place": "7"
-    },
-    {
       "athlete_id": "77e87b93",
       "event_id": "842ed31f",
       "place": 14,
       "points": 3120,
       "round_name": null,
       "round_place": "14"
+    },
+    {
+      "athlete_id": "a59b6ff4",
+      "event_id": "842ed31f",
+      "place": 15,
+      "points": 3120,
+      "round_name": null,
+      "round_place": "15"
+    },
+    {
+      "athlete_id": "a59b6ff4",
+      "event_id": "0d0ca571",
+      "place": 13,
+      "points": 3120,
+      "round_name": null,
+      "round_place": "13"
+    },
+    {
+      "athlete_id": "a59b6ff4",
+      "event_id": "cea8c7a9",
+      "place": 7,
+      "points": 445,
+      "round_name": null,
+      "round_place": "7"
     },
     {
       "athlete_id": "d7fcc4fc",
@@ -954,6 +850,30 @@
       "points": 650,
       "round_name": null,
       "round_place": "3"
+    },
+    {
+      "athlete_id": "b7b49dea",
+      "event_id": "842ed31f",
+      "place": 19,
+      "points": 1900,
+      "round_name": null,
+      "round_place": "19"
+    },
+    {
+      "athlete_id": "b7b49dea",
+      "event_id": "0d0ca571",
+      "place": 5,
+      "points": 4745,
+      "round_name": null,
+      "round_place": "5"
+    },
+    {
+      "athlete_id": "b7b49dea",
+      "event_id": "cea8c7a9",
+      "place": 5,
+      "points": 500,
+      "round_name": null,
+      "round_place": "5"
     },
     {
       "athlete_id": "f4970149",
@@ -1076,6 +996,22 @@
       "round_place": "3"
     },
     {
+      "athlete_id": "9db5218f",
+      "event_id": "0d0ca571",
+      "place": 13,
+      "points": 3120,
+      "round_name": null,
+      "round_place": "13"
+    },
+    {
+      "athlete_id": "9db5218f",
+      "event_id": "43624834",
+      "place": 5,
+      "points": 500,
+      "round_name": null,
+      "round_place": "5"
+    },
+    {
       "athlete_id": "7fa843eb",
       "event_id": "0d0ca571",
       "place": 13,
@@ -1114,6 +1050,22 @@
       "points": 1900,
       "round_name": null,
       "round_place": "17"
+    },
+    {
+      "athlete_id": "482f678d",
+      "event_id": "0d0ca571",
+      "place": 17,
+      "points": 1900,
+      "round_name": null,
+      "round_place": "17"
+    },
+    {
+      "athlete_id": "482f678d",
+      "event_id": "43624834",
+      "place": 7,
+      "points": 445,
+      "round_name": null,
+      "round_place": "7"
     },
     {
       "athlete_id": "a03c2703",
@@ -1226,6 +1178,14 @@
       "points": 350,
       "round_name": null,
       "round_place": "13"
+    },
+    {
+      "athlete_id": "58170959",
+      "event_id": "43624834",
+      "place": 5,
+      "points": 500,
+      "round_name": null,
+      "round_place": "5"
     },
     {
       "athlete_id": "6ec34f02",
@@ -2239,11 +2199,11 @@
           "rank": 36
         },
         {
-          "athlete_id": "58170959",
+          "athlete_id": "b61b2527",
           "year_points": 500,
           "events": [
             {
-              "event_id": "43624834",
+              "event_id": "cea8c7a9",
               "place": 5,
               "points": 500
             }
@@ -2251,11 +2211,11 @@
           "rank": 38
         },
         {
-          "athlete_id": "b61b2527",
+          "athlete_id": "58170959",
           "year_points": 500,
           "events": [
             {
-              "event_id": "cea8c7a9",
+              "event_id": "43624834",
               "place": 5,
               "points": 500
             }
@@ -3260,11 +3220,11 @@
       ]
     },
     {
-      "athlete_id": "58170959",
+      "athlete_id": "b61b2527",
       "rank": 46,
       "total_points": 500,
       "best_result": {
-        "event_name": "Чемпионат Калининградской области",
+        "event_name": "Чемпионат Санкт-Петербурга",
         "event_year": "2025",
         "place": 5,
         "points": 500
@@ -3275,11 +3235,11 @@
       ]
     },
     {
-      "athlete_id": "b61b2527",
+      "athlete_id": "58170959",
       "rank": 47,
       "total_points": 500,
       "best_result": {
-        "event_name": "Чемпионат Санкт-Петербурга",
+        "event_name": "Чемпионат Калининградской области",
         "event_year": "2025",
         "place": 5,
         "points": 500
@@ -3633,46 +3593,6 @@
       "years_participated": [
         2025
       ]
-    },
-    {
-      "athlete_id": "392cd3cb",
-      "rank": 71,
-      "total_points": 0,
-      "best_result": null,
-      "last_year": 0,
-      "years_participated": []
-    },
-    {
-      "athlete_id": "bef2628a",
-      "rank": 72,
-      "total_points": 0,
-      "best_result": null,
-      "last_year": 0,
-      "years_participated": []
-    },
-    {
-      "athlete_id": "3bb4d6bb",
-      "rank": 73,
-      "total_points": 0,
-      "best_result": null,
-      "last_year": 0,
-      "years_participated": []
-    },
-    {
-      "athlete_id": "a8114407",
-      "rank": 74,
-      "total_points": 0,
-      "best_result": null,
-      "last_year": 0,
-      "years_participated": []
-    },
-    {
-      "athlete_id": "b832dcd8",
-      "rank": 75,
-      "total_points": 0,
-      "best_result": null,
-      "last_year": 0,
-      "years_participated": []
     }
   ]
 }
