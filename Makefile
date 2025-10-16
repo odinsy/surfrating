@@ -4,10 +4,13 @@ discipline := longboard
 category := men
 # conf_decay_system := conf/base/decay/decay-disabled.yaml
 # conf_years_system := conf/base/years/last3.yaml
-conf_scoring_systems := conf/base/scoring/default.yaml conf/base/scoring/wsl/scoring-wsl-cs.yaml conf/base/scoring/wsl/scoring-wsl-qs1000.yaml conf/base/scoring/wsl/scoring-wsl-qs2000.yaml conf/base/scoring/wsl/scoring-wsl-qs3000.yaml conf/base/scoring/wsl/scoring-wsl-qs4000.yaml conf/base/scoring/wsl/scoring-wsl-qs5000.yaml conf/base/scoring/wsl/scoring-wsl-qs6000.yaml
+conf_scoring_systems := conf/base/scoring/default.yaml conf/base/scoring/scoring-isa.yaml conf/base/scoring/wsl/scoring-wsl-cs.yaml conf/base/scoring/wsl/scoring-wsl-qs1000.yaml conf/base/scoring/wsl/scoring-wsl-qs2000.yaml conf/base/scoring/wsl/scoring-wsl-qs3000.yaml conf/base/scoring/wsl/scoring-wsl-qs4000.yaml conf/base/scoring/wsl/scoring-wsl-qs5000.yaml conf/base/scoring/wsl/scoring-wsl-qs6000.yaml
 
 rating_rfs_surf_main:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/surfing/rus/$(discipline)_$(category).yaml | column -t -s ','
+
+rating_rfs_surf_main_isa:
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events-isa.yaml conf/rfs/surfing/rus/$(discipline)_$(category)_isa.yaml | column -t -s ','
 
 rating_rfs_surf_kgd:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-kgd.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/kgd/$(discipline)_$(category).yaml | column -t -s ','
