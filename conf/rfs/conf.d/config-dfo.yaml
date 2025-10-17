@@ -1,9 +1,9 @@
 # config.yaml
 
-scoring_system: wsl_qs2000
+scoring_system: wsl_qs4000
 current_year: 2025
 top_n: 100
-allowed_years: [2023, 2024, 2025]
+allowed_years: [2024, 2025]
 
 input_paths:
   # - "data/rfs/surfing/shortboard/shortboard_men_*.csv"
