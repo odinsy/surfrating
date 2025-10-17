@@ -12,7 +12,7 @@ const COMPETITIONS = {
             'wakeskim': 'Вейкским'
         }
     },
-    'rfs/kaliningrad': {
+    'rfs/kgd': {
         name: 'Чемпионат Калининградской области (РФС)',
         disciplines: {
             'shortboard': 'Короткая доска',

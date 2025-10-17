@@ -21,6 +21,9 @@ rating_rfs_surf_spb:
 rating_rfs_surf_vdk:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-vdk.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/vdk/$(discipline)_$(category).yaml | column -t -s ','
 
+rating_rfs_surf_krd:
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-krd.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/krd/$(discipline)_$(category).yaml | column -t -s ','
+
 rating_rfs_surf_dfo:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-dfo.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/dfo/$(discipline)_$(category).yaml | column -t -s ','
 
