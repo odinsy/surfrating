@@ -14,6 +14,11 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
     event_discipline = row['Дисциплина'].strip()
     event_category   = row['Категория'].strip()
     event_id         = generate_event_id(event_name, event_date, event_discipline, event_category)
+    round_name       = row.get('round_name', '').strip()
+    round_place      = row.get('round_place', '').strip()
+    heat_number      = row.get('heat_number', '').strip()
+
+    # print(f"DEBUG: В _process_row: round_name = '{round_name}', round_place = '{round_place}'")
 
     if event_id not in events_info:
         events_info[event_id] = {
@@ -29,9 +34,9 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
     if config.get('allowed_events') and event_group not in config['allowed_events']:
         return
 
-    place              = row['Место'].strip().upper()
-    athlete_name       = ' '.join(row['ФИО'].split()[:2])
-    athlete_region     = row['Регион'].strip()
+    place = row['Место'].strip().upper()
+    athlete_name = ' '.join(row['ФИО'].split()[:2])
+    athlete_region = row['Регион'].strip()
     athlete_sport_rank = row['Разряд'].strip()
     athlete_birth_year = extract_year(row['Год рождения'])
 
@@ -43,13 +48,16 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
         'event_id': event_id,
         'event_name': event_name,
         'place': place,
-        'group': event_group
+        'group': event_group,
+        'round_name': round_name,
+        'round_place': round_place,
+        'heat_number': heat_number
     }
-    athlete['regions'][event_year]     = athlete_region
+    athlete['regions'][event_year] = athlete_region
     athlete['sport_ranks'][event_year] = athlete_sport_rank
-    athlete['birth_year']              = athlete_birth_year
-    athlete['category']                = event_category
-    athlete['last_year']               = max(athlete['last_year'], event_year)
+    athlete['birth_year'] = athlete_birth_year
+    athlete['category'] = event_category
+    athlete['last_year'] = max(athlete['last_year'], event_year)
 
 def _finalize_athletes_data(athletes: dict) -> None:
     for athlete in athletes.values():
