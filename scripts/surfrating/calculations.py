@@ -94,7 +94,7 @@ def find_best_result(events: List[Dict]) -> Dict:
     top_events = sorted(
         numeric_events,
         key=lambda x: (-x['points'], x['place'], -x['event_year'])
-    )[:3]
+    )
 
     return {
         'event_name': best_event['event_name'],
