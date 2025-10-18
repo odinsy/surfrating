@@ -3,7 +3,7 @@ discipline: "longboard"
 gender: "men"
 
 input_paths:
-  - data/rfs/surfing/vdk/longboard/longboard-men-2025.csv
+  - data/rfs/surfing/vdk/longboard/longboard-men-*.csv
 
 output:
   filename: output/rankings/rfs/vdk/longboard/men.csv

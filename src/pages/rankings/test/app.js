@@ -12,6 +12,13 @@ const COMPETITIONS = {
             'wakeskim': 'Вейкским'
         }
     },
+    'rfs/spb': {
+        name: 'Чемпионат Санкт-Петербурга (РФС)',
+        disciplines: {
+            'shortboard': 'Короткая доска',
+            'longboard': 'Длинная доска'
+        }
+    },
     'rfs/kgd': {
         name: 'Чемпионат Калининградской области (РФС)',
         disciplines: {
@@ -19,13 +26,18 @@ const COMPETITIONS = {
             'longboard': 'Длинная доска'
         }
     },
-    'rfs/spb': {
-        name: 'Чемпионат Санкт-Петербурга (РФС)',
+    'rfs/vdk': {
+        name: 'Чемпионат Приморского края (РФС)',
         disciplines: {
-            'shortboard': 'Короткая доска',
             'longboard': 'Длинная доска'
         }
-    }
+    },
+    'rfs/krd': {
+        name: 'Чемпионат Краснодарского края (РФС)',
+        disciplines: {
+            'longboard': 'Длинная доска'
+        }
+    },
 };
 
 let currentCompetition = 'rfs/rus';
