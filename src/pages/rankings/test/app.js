@@ -36,6 +36,7 @@ const COMPETITIONS = {
         name: 'Чемпионат Приморского края (РФС)',
         disciplines: {
             'longboard': 'Длинная доска'
+            'shortboard': 'Короткая доска'
         }
     },
     'rfs/krd': {
