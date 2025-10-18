@@ -12,6 +12,12 @@ const COMPETITIONS = {
             'wakeskim': 'Вейкским'
         }
     },
+    'rfs/dfo': {
+        name: 'Чемпионат ДФО (РФС)',
+        disciplines: {
+            'longboard': 'Длинная доска'
+        }
+    },
     'rfs/spb': {
         name: 'Чемпионат Санкт-Петербурга (РФС)',
         disciplines: {
