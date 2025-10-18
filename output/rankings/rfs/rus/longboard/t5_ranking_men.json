@@ -1,7 +1,7 @@
 {
   "discipline": "longboard",
   "gender": "men",
-  "last_updated": "2025-10-17",
+  "last_updated": "2025-10-18",
   "events": {
     "e9bd861c": {
       "id": "e9bd861c",
@@ -93,15 +93,15 @@
       "group": "regional",
       "participants_count": 12
     },
-    "70cbd9da": {
-      "id": "70cbd9da",
+    "e1f3d067": {
+      "id": "e1f3d067",
       "name": "Чемпионат Приморского края",
       "year": 2024,
-      "date": "2024.08.29",
+      "date": "2024.07.01",
       "discipline": "длинная доска",
       "category": "мужчины",
       "group": "regional",
-      "participants_count": 2
+      "participants_count": 9
     },
     "2e75bb22": {
       "id": "2e75bb22",
@@ -195,7 +195,7 @@
     },
     {
       "athlete_id": "4344f68f",
-      "event_id": "70cbd9da",
+      "event_id": "e1f3d067",
       "place": 1,
       "points": 2000,
       "round_name": "final",
@@ -443,7 +443,7 @@
               "points": 4745
             },
             {
-              "event_id": "70cbd9da",
+              "event_id": "e1f3d067",
               "place": 1,
               "points": 2000
             }
@@ -598,7 +598,31 @@
         "event_name": "Чемпионат России",
         "event_year": "2025",
         "place": 1,
-        "points": 10000
+        "points": 10000,
+        "event_group": "main",
+        "participants_count": 20,
+        "top_events": [
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2025",
+            "place": 1,
+            "points": 10000
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2024",
+            "place": 1,
+            "points": 10000
+          },
+          {
+            "event_name": "Чемпионат Санкт-Петербурга",
+            "event_year": "2024",
+            "place": 1,
+            "points": 2000
+          }
+        ],
+        "events_count": 3,
+        "avg_points": 7333
       },
       "last_year": 2025,
       "years_participated": [
@@ -611,10 +635,34 @@
       "rank": 2,
       "total_points": 21865,
       "best_result": {
-        "event_name": "Чемпионат Приморского края",
-        "event_year": "2025",
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
         "place": 1,
-        "points": 2000
+        "points": 10000,
+        "event_group": "main",
+        "participants_count": 19,
+        "top_events": [
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2023",
+            "place": 1,
+            "points": 10000
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2024",
+            "place": 5,
+            "points": 4745
+          },
+          {
+            "event_name": "Чемпионат Дальневосточного федерального округа",
+            "event_year": "2025",
+            "place": 2,
+            "points": 3120
+          }
+        ],
+        "events_count": 5,
+        "avg_points": 4373
       },
       "last_year": 2025,
       "years_participated": [
@@ -628,10 +676,34 @@
       "rank": 3,
       "total_points": 21590,
       "best_result": {
-        "event_name": "Чемпионат Санкт-Петербурга",
-        "event_year": "2025",
-        "place": 1,
-        "points": 2000
+        "event_name": "Чемпионат России",
+        "event_year": "2024",
+        "place": 2,
+        "points": 7800,
+        "event_group": "main",
+        "participants_count": 24,
+        "top_events": [
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2024",
+            "place": 2,
+            "points": 7800
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2023",
+            "place": 4,
+            "points": 5685
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2025",
+            "place": 7,
+            "points": 4545
+          }
+        ],
+        "events_count": 5,
+        "avg_points": 4318
       },
       "last_year": 2025,
       "years_participated": [
@@ -645,10 +717,34 @@
       "rank": 4,
       "total_points": 21015,
       "best_result": {
-        "event_name": "Чемпионат Калининградской области",
-        "event_year": "2025",
-        "place": 1,
-        "points": 2000
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
+        "place": 3,
+        "points": 6085,
+        "event_group": "main",
+        "participants_count": 19,
+        "top_events": [
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2023",
+            "place": 3,
+            "points": 6085
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2025",
+            "place": 4,
+            "points": 5685
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2024",
+            "place": 4,
+            "points": 5685
+          }
+        ],
+        "events_count": 5,
+        "avg_points": 4203
       },
       "last_year": 2025,
       "years_participated": [
@@ -665,7 +761,31 @@
         "event_name": "Чемпионат России",
         "event_year": "2025",
         "place": 2,
-        "points": 7800
+        "points": 7800,
+        "event_group": "main",
+        "participants_count": 20,
+        "top_events": [
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2025",
+            "place": 2,
+            "points": 7800
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2024",
+            "place": 3,
+            "points": 6085
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2023",
+            "place": 12,
+            "points": 3320
+          }
+        ],
+        "events_count": 5,
+        "avg_points": 3997
       },
       "last_year": 2025,
       "years_participated": [

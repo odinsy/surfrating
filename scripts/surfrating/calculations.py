@@ -73,24 +73,47 @@ def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: s
     return year_info, event_results
 
 def find_best_result(events: List[Dict]) -> Dict:
+    """Находит лучший результат среди всех событий на основе очков"""
     if not events:
         return None
 
     numeric_events = [e for e in events if isinstance(e['place'], int)]
 
-    if numeric_events:
-        best_event = min(
-            numeric_events,
-            key=lambda x: (x['place'], -x['event_year'], -x['points'])
+    if not numeric_events:
+        return None
+
+    best_event = max(
+        numeric_events,
+        key=lambda x: (
+            x['points'],
+            -x['place'],
+            x['event_year']
         )
-    else:
-        best_event = max(events, key=lambda x: x['points'])
+    )
+
+    top_events = sorted(
+        numeric_events,
+        key=lambda x: (-x['points'], x['place'], -x['event_year'])
+    )[:3]
 
     return {
         'event_name': best_event['event_name'],
         'event_year': str(best_event['event_year']),
         'place': best_event['place'],
-        'points': best_event['points']
+        'points': best_event['points'],
+        'event_group': best_event.get('group', ''),
+        'participants_count': best_event.get('participants_count', 0),
+        'top_events': [
+            {
+                'event_name': e['event_name'],
+                'event_year': str(e['event_year']),
+                'place': e['place'],
+                'points': e['points']
+            }
+            for e in top_events
+        ],
+        'events_count': len(numeric_events),
+        'avg_points': sum(e['points'] for e in numeric_events) // len(numeric_events) if numeric_events else 0
     }
 
 def process_athletes(data: Dict, config: Dict) -> Tuple[List[Dict], List[Dict]]:
@@ -149,9 +172,10 @@ def process_athletes(data: Dict, config: Dict) -> Tuple[List[Dict], List[Dict]]:
     if config['sorting']['enabled']:
         sorted_results = sorted(results, key=lambda x: (
             -x['total_points'],
+            -x['best_result']['points'] if x['best_result'] else 0,
             x['best_result']['place'] if x['best_result'] and isinstance(x['best_result']['place'], int) else 9999,
-            -x['last_year'],
-            -int(x['best_result']['event_year']) if x['best_result'] and x['best_result'].get('event_year') else 0
+            -int(x['best_result']['event_year']) if x['best_result'] and x['best_result'].get('event_year') else 0,
+            -x['last_year']
         ))
     else:
         sorted_results = sorted(results, key=lambda x: -x['total_points'])
