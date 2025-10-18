@@ -493,12 +493,6 @@
       "sport_rank": "",
       "birth_year": 0
     },
-    "77996f33": {
-      "name": "Ремеников Константин",
-      "region": "Приморский край",
-      "sport_rank": "",
-      "birth_year": 1984
-    },
     "187a27d3": {
       "name": "Зиповски Алексей",
       "region": "Краснодарский край",
@@ -1090,6 +1084,14 @@
       "points": 4000,
       "round_name": "final",
       "round_place": "1"
+    },
+    {
+      "athlete_id": "bceb97e0",
+      "event_id": "e1f3d067",
+      "place": 3,
+      "points": 1220,
+      "round_name": "final",
+      "round_place": "3"
     },
     {
       "athlete_id": "bceb97e0",
@@ -2124,14 +2126,6 @@
       "round_place": "3"
     },
     {
-      "athlete_id": "77996f33",
-      "event_id": "e1f3d067",
-      "place": 3,
-      "points": 1220,
-      "round_name": "final",
-      "round_place": "3"
-    },
-    {
       "athlete_id": "b2980087",
       "event_id": "e1f3d067",
       "place": 9,
@@ -2377,6 +2371,28 @@
           "rank": 1
         },
         {
+          "athlete_id": "bceb97e0",
+          "year_points": 9765,
+          "events": [
+            {
+              "event_id": "842ed31f",
+              "place": 7,
+              "points": 4545
+            },
+            {
+              "event_id": "4cd00904",
+              "place": 1,
+              "points": 4000
+            },
+            {
+              "event_id": "e1f3d067",
+              "place": 3,
+              "points": 1220
+            }
+          ],
+          "rank": 2
+        },
+        {
           "athlete_id": "521ae689",
           "year_points": 9360,
           "events": [
@@ -2389,23 +2405,6 @@
               "event_id": "9f13247d",
               "place": 2,
               "points": 1560
-            }
-          ],
-          "rank": 2
-        },
-        {
-          "athlete_id": "bceb97e0",
-          "year_points": 8545,
-          "events": [
-            {
-              "event_id": "842ed31f",
-              "place": 7,
-              "points": 4545
-            },
-            {
-              "event_id": "4cd00904",
-              "place": 1,
-              "points": 4000
             }
           ],
           "rank": 3
@@ -2857,18 +2856,6 @@
           "rank": 31
         },
         {
-          "athlete_id": "77996f33",
-          "year_points": 1220,
-          "events": [
-            {
-              "event_id": "e1f3d067",
-              "place": 3,
-              "points": 1220
-            }
-          ],
-          "rank": 32
-        },
-        {
           "athlete_id": "187a27d3",
           "year_points": 1220,
           "events": [
@@ -2890,7 +2877,7 @@
               "points": 1120
             }
           ],
-          "rank": 34
+          "rank": 33
         },
         {
           "athlete_id": "2feeabf4",
@@ -2902,7 +2889,7 @@
               "points": 1120
             }
           ],
-          "rank": 34
+          "rank": 33
         },
         {
           "athlete_id": "0dbab7e4",
@@ -2914,7 +2901,7 @@
               "points": 1060
             }
           ],
-          "rank": 36
+          "rank": 35
         },
         {
           "athlete_id": "8c1ebb75",
@@ -2926,7 +2913,7 @@
               "points": 1060
             }
           ],
-          "rank": 36
+          "rank": 35
         },
         {
           "athlete_id": "7cbf6214",
@@ -2938,7 +2925,7 @@
               "points": 1060
             }
           ],
-          "rank": 36
+          "rank": 35
         },
         {
           "athlete_id": "3bb4d6bb",
@@ -2950,7 +2937,7 @@
               "points": 950
             }
           ],
-          "rank": 39
+          "rank": 38
         },
         {
           "athlete_id": "1244e52e",
@@ -2962,7 +2949,7 @@
               "points": 950
             }
           ],
-          "rank": 39
+          "rank": 38
         },
         {
           "athlete_id": "cc2c5992",
@@ -2974,7 +2961,7 @@
               "points": 950
             }
           ],
-          "rank": 39
+          "rank": 38
         },
         {
           "athlete_id": "05e197b1",
@@ -2986,7 +2973,7 @@
               "points": 840
             }
           ],
-          "rank": 42
+          "rank": 41
         },
         {
           "athlete_id": "bef2628a",
@@ -2998,7 +2985,7 @@
               "points": 840
             }
           ],
-          "rank": 42
+          "rank": 41
         },
         {
           "athlete_id": "d600cdbd",
@@ -3010,7 +2997,7 @@
               "points": 840
             }
           ],
-          "rank": 42
+          "rank": 41
         },
         {
           "athlete_id": "b63c25c3",
@@ -3022,7 +3009,7 @@
               "points": 640
             }
           ],
-          "rank": 45
+          "rank": 44
         },
         {
           "athlete_id": "0a52db3b",
@@ -3034,7 +3021,7 @@
               "points": 640
             }
           ],
-          "rank": 45
+          "rank": 44
         },
         {
           "athlete_id": "9db5218f",
@@ -3046,7 +3033,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "482f678d",
@@ -3058,7 +3045,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "faebdd1c",
@@ -3070,7 +3057,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "b61b2527",
@@ -3082,7 +3069,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "3c79db90",
@@ -3094,7 +3081,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "6ec34f02",
@@ -3106,7 +3093,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "b3cbc24e",
@@ -3118,7 +3105,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "a2302efb",
@@ -3130,7 +3117,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "6570fb7c",
@@ -3142,7 +3129,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "b5b585bd",
@@ -3154,7 +3141,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "e3c1a24d",
@@ -3166,7 +3153,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "e9f9196b",
@@ -3178,7 +3165,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "5c143f06",
@@ -3190,7 +3177,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "30845f33",
@@ -3202,7 +3189,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "37cc86d4",
@@ -3214,7 +3201,7 @@
               "points": 630
             }
           ],
-          "rank": 47
+          "rank": 46
         },
         {
           "athlete_id": "10cef3a5",
@@ -3226,7 +3213,7 @@
               "points": 532
             }
           ],
-          "rank": 62
+          "rank": 61
         },
         {
           "athlete_id": "044bbd5a",
@@ -3238,7 +3225,7 @@
               "points": 530
             }
           ],
-          "rank": 63
+          "rank": 62
         },
         {
           "athlete_id": "b2980087",
@@ -3250,7 +3237,7 @@
               "points": 530
             }
           ],
-          "rank": 63
+          "rank": 62
         },
         {
           "athlete_id": "a8fd59ed",
@@ -3262,7 +3249,7 @@
               "points": 530
             }
           ],
-          "rank": 63
+          "rank": 62
         },
         {
           "athlete_id": "cc27e856",
@@ -3274,7 +3261,7 @@
               "points": 530
             }
           ],
-          "rank": 63
+          "rank": 62
         },
         {
           "athlete_id": "0ab928c8",
@@ -3286,7 +3273,7 @@
               "points": 530
             }
           ],
-          "rank": 63
+          "rank": 62
         },
         {
           "athlete_id": "58170959",
@@ -3298,7 +3285,7 @@
               "points": 0
             }
           ],
-          "rank": 68
+          "rank": 67
         },
         {
           "athlete_id": "c726b7c0",
@@ -3310,7 +3297,7 @@
               "points": 0
             }
           ],
-          "rank": 68
+          "rank": 67
         },
         {
           "athlete_id": "261937c0",
@@ -3322,7 +3309,7 @@
               "points": 0
             }
           ],
-          "rank": 68
+          "rank": 67
         },
         {
           "athlete_id": "fc2cd55b",
@@ -3334,7 +3321,7 @@
               "points": 0
             }
           ],
-          "rank": 68
+          "rank": 67
         }
       ]
     },
@@ -4694,7 +4681,7 @@
     {
       "athlete_id": "bceb97e0",
       "rank": 6,
-      "total_points": 15865,
+      "total_points": 17085,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2024",
@@ -4726,10 +4713,16 @@
             "event_year": "2023",
             "place": 10,
             "points": 3320
+          },
+          {
+            "event_name": "Чемпионат Приморского края",
+            "event_year": "2024",
+            "place": 3,
+            "points": 1220
           }
         ],
-        "events_count": 4,
-        "avg_points": 3966
+        "events_count": 5,
+        "avg_points": 3417
       },
       "last_year": 2025,
       "years_participated": [
@@ -6607,35 +6600,8 @@
       ]
     },
     {
-      "athlete_id": "77996f33",
-      "rank": 59,
-      "total_points": 1220,
-      "best_result": {
-        "event_name": "Чемпионат Приморского края",
-        "event_year": "2024",
-        "place": 3,
-        "points": 1220,
-        "event_group": "regional",
-        "participants_count": 9,
-        "top_events": [
-          {
-            "event_name": "Чемпионат Приморского края",
-            "event_year": "2024",
-            "place": 3,
-            "points": 1220
-          }
-        ],
-        "events_count": 1,
-        "avg_points": 1220
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2024
-      ]
-    },
-    {
       "athlete_id": "187a27d3",
-      "rank": 60,
+      "rank": 59,
       "total_points": 1220,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -6662,7 +6628,7 @@
     },
     {
       "athlete_id": "a2302efb",
-      "rank": 61,
+      "rank": 60,
       "total_points": 1160,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -6696,7 +6662,7 @@
     },
     {
       "athlete_id": "b99b5bb2",
-      "rank": 62,
+      "rank": 61,
       "total_points": 1120,
       "best_result": {
         "event_name": "Чемпионат Мурманской области",
@@ -6723,7 +6689,7 @@
     },
     {
       "athlete_id": "53cce913",
-      "rank": 63,
+      "rank": 62,
       "total_points": 1120,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -6750,7 +6716,7 @@
     },
     {
       "athlete_id": "2feeabf4",
-      "rank": 64,
+      "rank": 63,
       "total_points": 1120,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -6777,7 +6743,7 @@
     },
     {
       "athlete_id": "0dbab7e4",
-      "rank": 65,
+      "rank": 64,
       "total_points": 1060,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
@@ -6804,7 +6770,7 @@
     },
     {
       "athlete_id": "8c1ebb75",
-      "rank": 66,
+      "rank": 65,
       "total_points": 1060,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
@@ -6831,7 +6797,7 @@
     },
     {
       "athlete_id": "7cbf6214",
-      "rank": 67,
+      "rank": 66,
       "total_points": 1060,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
@@ -6858,7 +6824,7 @@
     },
     {
       "athlete_id": "2321d9aa",
-      "rank": 68,
+      "rank": 67,
       "total_points": 950,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -6885,7 +6851,7 @@
     },
     {
       "athlete_id": "783598df",
-      "rank": 69,
+      "rank": 68,
       "total_points": 950,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -6912,7 +6878,7 @@
     },
     {
       "athlete_id": "f6ddc7b2",
-      "rank": 70,
+      "rank": 69,
       "total_points": 950,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -6939,7 +6905,7 @@
     },
     {
       "athlete_id": "d047568d",
-      "rank": 71,
+      "rank": 70,
       "total_points": 950,
       "best_result": {
         "event_name": "Чемпионат Мурманской области",
@@ -6966,7 +6932,7 @@
     },
     {
       "athlete_id": "eada9074",
-      "rank": 72,
+      "rank": 71,
       "total_points": 950,
       "best_result": {
         "event_name": "Чемпионат Мурманской области",
@@ -6993,7 +6959,7 @@
     },
     {
       "athlete_id": "cc2c5992",
-      "rank": 73,
+      "rank": 72,
       "total_points": 950,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -7020,7 +6986,7 @@
     },
     {
       "athlete_id": "268da331",
-      "rank": 74,
+      "rank": 73,
       "total_points": 840,
       "best_result": {
         "event_name": "Чемпионат Мурманской области",
@@ -7047,7 +7013,7 @@
     },
     {
       "athlete_id": "d600cdbd",
-      "rank": 75,
+      "rank": 74,
       "total_points": 840,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -7074,7 +7040,7 @@
     },
     {
       "athlete_id": "b63c25c3",
-      "rank": 76,
+      "rank": 75,
       "total_points": 640,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
@@ -7101,7 +7067,7 @@
     },
     {
       "athlete_id": "0a52db3b",
-      "rank": 77,
+      "rank": 76,
       "total_points": 640,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
@@ -7128,7 +7094,7 @@
     },
     {
       "athlete_id": "e003ee38",
-      "rank": 78,
+      "rank": 77,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -7155,7 +7121,7 @@
     },
     {
       "athlete_id": "21c6108e",
-      "rank": 79,
+      "rank": 78,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -7182,7 +7148,7 @@
     },
     {
       "athlete_id": "8db0bd9a",
-      "rank": 80,
+      "rank": 79,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -7209,7 +7175,7 @@
     },
     {
       "athlete_id": "5bcbe138",
-      "rank": 81,
+      "rank": 80,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -7236,7 +7202,7 @@
     },
     {
       "athlete_id": "3080c446",
-      "rank": 82,
+      "rank": 81,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -7263,7 +7229,7 @@
     },
     {
       "athlete_id": "341234a3",
-      "rank": 83,
+      "rank": 82,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -7290,7 +7256,7 @@
     },
     {
       "athlete_id": "0b4a4620",
-      "rank": 84,
+      "rank": 83,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -7317,7 +7283,7 @@
     },
     {
       "athlete_id": "614484cf",
-      "rank": 85,
+      "rank": 84,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -7344,7 +7310,7 @@
     },
     {
       "athlete_id": "6570fb7c",
-      "rank": 86,
+      "rank": 85,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -7371,7 +7337,7 @@
     },
     {
       "athlete_id": "b5b585bd",
-      "rank": 87,
+      "rank": 86,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -7398,7 +7364,7 @@
     },
     {
       "athlete_id": "e3c1a24d",
-      "rank": 88,
+      "rank": 87,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -7425,7 +7391,7 @@
     },
     {
       "athlete_id": "e9f9196b",
-      "rank": 89,
+      "rank": 88,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -7452,7 +7418,7 @@
     },
     {
       "athlete_id": "5c143f06",
-      "rank": 90,
+      "rank": 89,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Краснодарского края",
@@ -7479,7 +7445,7 @@
     },
     {
       "athlete_id": "30845f33",
-      "rank": 91,
+      "rank": 90,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -7506,7 +7472,7 @@
     },
     {
       "athlete_id": "37cc86d4",
-      "rank": 92,
+      "rank": 91,
       "total_points": 630,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -7533,7 +7499,7 @@
     },
     {
       "athlete_id": "10cef3a5",
-      "rank": 93,
+      "rank": 92,
       "total_points": 532,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
@@ -7560,7 +7526,7 @@
     },
     {
       "athlete_id": "b2980087",
-      "rank": 94,
+      "rank": 93,
       "total_points": 530,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -7587,7 +7553,7 @@
     },
     {
       "athlete_id": "f11e6961",
-      "rank": 95,
+      "rank": 94,
       "total_points": 530,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -7614,7 +7580,7 @@
     },
     {
       "athlete_id": "c87b7870",
-      "rank": 96,
+      "rank": 95,
       "total_points": 530,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -7641,7 +7607,7 @@
     },
     {
       "athlete_id": "8a9e2404",
-      "rank": 97,
+      "rank": 96,
       "total_points": 530,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -7668,7 +7634,7 @@
     },
     {
       "athlete_id": "71d1295e",
-      "rank": 98,
+      "rank": 97,
       "total_points": 530,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -7695,7 +7661,7 @@
     },
     {
       "athlete_id": "a8fd59ed",
-      "rank": 99,
+      "rank": 98,
       "total_points": 530,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -7722,7 +7688,7 @@
     },
     {
       "athlete_id": "cc27e856",
-      "rank": 100,
+      "rank": 99,
       "total_points": 530,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -7749,7 +7715,7 @@
     },
     {
       "athlete_id": "0ab928c8",
-      "rank": 101,
+      "rank": 100,
       "total_points": 530,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -7776,7 +7742,7 @@
     },
     {
       "athlete_id": "c726b7c0",
-      "rank": 102,
+      "rank": 101,
       "total_points": 0,
       "best_result": null,
       "last_year": 2024,
@@ -7786,7 +7752,7 @@
     },
     {
       "athlete_id": "261937c0",
-      "rank": 103,
+      "rank": 102,
       "total_points": 0,
       "best_result": null,
       "last_year": 2024,
@@ -7796,7 +7762,7 @@
     },
     {
       "athlete_id": "fc2cd55b",
-      "rank": 104,
+      "rank": 103,
       "total_points": 0,
       "best_result": null,
       "last_year": 2024,
