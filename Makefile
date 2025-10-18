@@ -27,6 +27,9 @@ rating_rfs_surf_krd:
 rating_rfs_surf_dfo:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-dfo.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/dfo/$(discipline)_$(category).yaml | column -t -s ','
 
+rating_rfs_surf_dfo_all:
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-dfo.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/dfo/$(discipline)_$(category)_all.yaml | column -t -s ','
+
 rating_rfs_wake_main:
 	python3 ./scripts/surfrating/main.py --config conf/rfs/config.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml | column -t -s ','
 

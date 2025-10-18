@@ -22,6 +22,26 @@
       "category": "женщины",
       "group": "cross_regional",
       "participants_count": 8
+    },
+    "e3d73042": {
+      "id": "e3d73042",
+      "name": "Чемпионат Приморского края",
+      "year": 2024,
+      "date": "2024.07.01",
+      "discipline": "длинная доска",
+      "category": "женщины",
+      "group": "regional",
+      "participants_count": 8
+    },
+    "d5b280d4": {
+      "id": "d5b280d4",
+      "name": "Чемпионат Приморского края",
+      "year": 2025,
+      "date": "2025.08.29",
+      "discipline": "длинная доска",
+      "category": "женщины",
+      "group": "regional",
+      "participants_count": 8
     }
   },
   "athletes": {
@@ -31,15 +51,15 @@
       "sport_rank": "",
       "birth_year": 0
     },
+    "62160e64": {
+      "name": "Филинова Галина",
+      "region": "Приморский край",
+      "sport_rank": "",
+      "birth_year": 1986
+    },
     "b679c7e6": {
       "name": "Горанько Эвелина",
       "region": "Камчатский край",
-      "sport_rank": "",
-      "birth_year": 0
-    },
-    "3be5ce81": {
-      "name": "Филинова Галина",
-      "region": "Приморский край",
       "sport_rank": "",
       "birth_year": 0
     },
@@ -49,11 +69,11 @@
       "sport_rank": "",
       "birth_year": 0
     },
-    "124c22e2": {
-      "name": "Недзельницкая Дарина",
-      "region": "",
+    "f36db936": {
+      "name": "Якубовская Нина",
+      "region": "Приморский край",
       "sport_rank": "",
-      "birth_year": 0
+      "birth_year": 1989
     }
   },
   "results": [
@@ -90,7 +110,23 @@
       "round_place": "1"
     },
     {
-      "athlete_id": "3be5ce81",
+      "athlete_id": "f36db936",
+      "event_id": "f713d7b0",
+      "place": 5,
+      "points": 1900,
+      "round_name": "semifinal",
+      "round_place": "3"
+    },
+    {
+      "athlete_id": "f36db936",
+      "event_id": "e3d73042",
+      "place": 4,
+      "points": 1120,
+      "round_name": "final",
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "62160e64",
       "event_id": "441cd5e4",
       "place": 2,
       "points": 3120,
@@ -98,12 +134,20 @@
       "round_place": "2"
     },
     {
-      "athlete_id": "124c22e2",
-      "event_id": "441cd5e4",
+      "athlete_id": "62160e64",
+      "event_id": "d5b280d4",
       "place": 3,
-      "points": 2440,
+      "points": 1220,
       "round_name": "final",
       "round_place": "3"
+    },
+    {
+      "athlete_id": "62160e64",
+      "event_id": "e3d73042",
+      "place": 1,
+      "points": 2000,
+      "round_name": "final",
+      "round_place": "1"
     }
   ],
   "year_rankings": {
@@ -134,6 +178,23 @@
           "rank": 2
         },
         {
+          "athlete_id": "f36db936",
+          "year_points": 3020,
+          "events": [
+            {
+              "event_id": "f713d7b0",
+              "place": 5,
+              "points": 1900
+            },
+            {
+              "event_id": "e3d73042",
+              "place": 4,
+              "points": 1120
+            }
+          ],
+          "rank": 3
+        },
+        {
           "athlete_id": "a2bd8e77",
           "year_points": 2440,
           "events": [
@@ -143,12 +204,41 @@
               "points": 2440
             }
           ],
-          "rank": 3
+          "rank": 4
+        },
+        {
+          "athlete_id": "62160e64",
+          "year_points": 2000,
+          "events": [
+            {
+              "event_id": "e3d73042",
+              "place": 1,
+              "points": 2000
+            }
+          ],
+          "rank": 5
         }
       ]
     },
     "2025": {
       "athletes": [
+        {
+          "athlete_id": "62160e64",
+          "year_points": 4340,
+          "events": [
+            {
+              "event_id": "441cd5e4",
+              "place": 2,
+              "points": 3120
+            },
+            {
+              "event_id": "d5b280d4",
+              "place": 3,
+              "points": 1220
+            }
+          ],
+          "rank": 1
+        },
         {
           "athlete_id": "a2bd8e77",
           "year_points": 4000,
@@ -159,31 +249,7 @@
               "points": 4000
             }
           ],
-          "rank": 1
-        },
-        {
-          "athlete_id": "3be5ce81",
-          "year_points": 3120,
-          "events": [
-            {
-              "event_id": "441cd5e4",
-              "place": 2,
-              "points": 3120
-            }
-          ],
           "rank": 2
-        },
-        {
-          "athlete_id": "124c22e2",
-          "year_points": 2440,
-          "events": [
-            {
-              "event_id": "441cd5e4",
-              "place": 3,
-              "points": 2440
-            }
-          ],
-          "rank": 3
         }
       ]
     }
@@ -206,8 +272,24 @@
       ]
     },
     {
-      "athlete_id": "b679c7e6",
+      "athlete_id": "62160e64",
       "rank": 2,
+      "total_points": 6340,
+      "best_result": {
+        "event_name": "Чемпионат Приморского края",
+        "event_year": "2024",
+        "place": 1,
+        "points": 2000
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025,
+        2024
+      ]
+    },
+    {
+      "athlete_id": "b679c7e6",
+      "rank": 3,
       "total_points": 4000,
       "best_result": {
         "event_name": "Чемпионат Дальневосточного федерального округа",
@@ -218,21 +300,6 @@
       "last_year": 2024,
       "years_participated": [
         2024
-      ]
-    },
-    {
-      "athlete_id": "3be5ce81",
-      "rank": 3,
-      "total_points": 3120,
-      "best_result": {
-        "event_name": "Чемпионат Дальневосточного федерального округа",
-        "event_year": "2025",
-        "place": 2,
-        "points": 3120
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025
       ]
     },
     {
@@ -251,18 +318,18 @@
       ]
     },
     {
-      "athlete_id": "124c22e2",
+      "athlete_id": "f36db936",
       "rank": 5,
-      "total_points": 2440,
+      "total_points": 3020,
       "best_result": {
-        "event_name": "Чемпионат Дальневосточного федерального округа",
-        "event_year": "2025",
-        "place": 3,
-        "points": 2440
+        "event_name": "Чемпионат Приморского края",
+        "event_year": "2024",
+        "place": 4,
+        "points": 1120
       },
-      "last_year": 2025,
+      "last_year": 2024,
       "years_participated": [
-        2025
+        2024
       ]
     }
   ]
