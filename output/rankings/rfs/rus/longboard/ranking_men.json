@@ -409,17 +409,17 @@
       "sport_rank": "",
       "birth_year": 1990
     },
-    "8271ec6c": {
-      "name": "Шерстнев Анатолий",
-      "region": "Самарская область",
-      "sport_rank": "3",
-      "birth_year": 0
-    },
     "b832dcd8": {
       "name": "Зылев Даниил",
       "region": "Москва",
       "sport_rank": "3",
       "birth_year": 1982
+    },
+    "a940b973": {
+      "name": "Шерстнев Анатолий",
+      "region": "Самарская область",
+      "sport_rank": "3",
+      "birth_year": 1991
     },
     "1244e52e": {
       "name": "Василенко Денис",
@@ -982,7 +982,7 @@
     {
       "athlete_id": "a59b6ff4",
       "event_id": "0d0ca571",
-      "place": 13,
+      "place": 15,
       "points": 3120,
       "round_name": "quarterfinal",
       "round_place": "4"
@@ -1014,7 +1014,7 @@
     {
       "athlete_id": "cda95159",
       "event_id": "0d0ca571",
-      "place": 9,
+      "place": 10,
       "points": 3320,
       "round_name": "quarterfinal",
       "round_place": "3"
@@ -1054,7 +1054,7 @@
     {
       "athlete_id": "473f005c",
       "event_id": "0d0ca571",
-      "place": 13,
+      "place": 12,
       "points": 3120,
       "round_name": "quarterfinal",
       "round_place": "4"
@@ -1214,7 +1214,7 @@
     {
       "athlete_id": "e91cc0df",
       "event_id": "0d0ca571",
-      "place": 5,
+      "place": 6,
       "points": 4745,
       "round_name": "semifinal",
       "round_place": "3"
@@ -1238,7 +1238,7 @@
     {
       "athlete_id": "9db5218f",
       "event_id": "0d0ca571",
-      "place": 13,
+      "place": 14,
       "points": 3120,
       "round_name": "quarterfinal",
       "round_place": "4"
@@ -1310,7 +1310,7 @@
     {
       "athlete_id": "482f678d",
       "event_id": "0d0ca571",
-      "place": 17,
+      "place": 18,
       "points": 1900,
       "round_name": "r32",
       "round_place": "3"
@@ -1630,7 +1630,7 @@
     {
       "athlete_id": "d4c71793",
       "event_id": "0d0ca571",
-      "place": 7,
+      "place": 8,
       "points": 4545,
       "round_name": "semifinal",
       "round_place": "4"
@@ -1642,54 +1642,6 @@
       "points": 630,
       "round_name": "quarterfinal",
       "round_place": "3"
-    },
-    {
-      "athlete_id": "044bbd5a",
-      "event_id": "0d0ca571",
-      "place": 9,
-      "points": 3320,
-      "round_name": "quarterfinal",
-      "round_place": "3"
-    },
-    {
-      "athlete_id": "044bbd5a",
-      "event_id": "cea8c7a9",
-      "place": 4,
-      "points": 1120,
-      "round_name": "final",
-      "round_place": "4"
-    },
-    {
-      "athlete_id": "044bbd5a",
-      "event_id": "9f13247d",
-      "place": 13,
-      "points": 530,
-      "round_name": "quarterfinal",
-      "round_place": "4"
-    },
-    {
-      "athlete_id": "05e197b1",
-      "event_id": "0d0ca571",
-      "place": 9,
-      "points": 3320,
-      "round_name": "quarterfinal",
-      "round_place": "3"
-    },
-    {
-      "athlete_id": "05e197b1",
-      "event_id": "63ddffdf",
-      "place": 1,
-      "points": 2000,
-      "round_name": "final",
-      "round_place": "1"
-    },
-    {
-      "athlete_id": "05e197b1",
-      "event_id": "535910a0",
-      "place": 7,
-      "points": 840,
-      "round_name": "semifinal",
-      "round_place": "4"
     },
     {
       "athlete_id": "893afcbc",
@@ -1716,9 +1668,57 @@
       "round_place": "1"
     },
     {
-      "athlete_id": "7fa843eb",
+      "athlete_id": "044bbd5a",
+      "event_id": "0d0ca571",
+      "place": 11,
+      "points": 3320,
+      "round_name": "quarterfinal",
+      "round_place": "3"
+    },
+    {
+      "athlete_id": "044bbd5a",
+      "event_id": "cea8c7a9",
+      "place": 4,
+      "points": 1120,
+      "round_name": "final",
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "044bbd5a",
+      "event_id": "9f13247d",
+      "place": 13,
+      "points": 530,
+      "round_name": "quarterfinal",
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "05e197b1",
       "event_id": "0d0ca571",
       "place": 13,
+      "points": 3320,
+      "round_name": "quarterfinal",
+      "round_place": "3"
+    },
+    {
+      "athlete_id": "05e197b1",
+      "event_id": "63ddffdf",
+      "place": 1,
+      "points": 2000,
+      "round_name": "final",
+      "round_place": "1"
+    },
+    {
+      "athlete_id": "05e197b1",
+      "event_id": "535910a0",
+      "place": 7,
+      "points": 840,
+      "round_name": "semifinal",
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "7fa843eb",
+      "event_id": "0d0ca571",
+      "place": 16,
       "points": 3120,
       "round_name": "quarterfinal",
       "round_place": "4"
@@ -1732,9 +1732,17 @@
       "round_place": "2"
     },
     {
+      "athlete_id": "a940b973",
+      "event_id": "0d0ca571",
+      "place": 19,
+      "points": 1900,
+      "round_name": "r32",
+      "round_place": "3"
+    },
+    {
       "athlete_id": "faebdd1c",
       "event_id": "0d0ca571",
-      "place": 17,
+      "place": 20,
       "points": 1900,
       "round_name": "r32",
       "round_place": "3"
@@ -1753,14 +1761,6 @@
       "place": 9,
       "points": 630,
       "round_name": "quarterfinal",
-      "round_place": "3"
-    },
-    {
-      "athlete_id": "8271ec6c",
-      "event_id": "0d0ca571",
-      "place": 17,
-      "points": 1900,
-      "round_name": "r32",
       "round_place": "3"
     },
     {
@@ -3426,7 +3426,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 5,
+              "place": 6,
               "points": 4745
             },
             {
@@ -3460,7 +3460,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 9,
+              "place": 13,
               "points": 3320
             },
             {
@@ -3477,7 +3477,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 7,
+              "place": 8,
               "points": 4545
             },
             {
@@ -3511,7 +3511,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 13,
+              "place": 16,
               "points": 3120
             },
             {
@@ -3528,7 +3528,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 9,
+              "place": 10,
               "points": 3320
             },
             {
@@ -3562,7 +3562,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 9,
+              "place": 11,
               "points": 3320
             },
             {
@@ -3579,7 +3579,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 13,
+              "place": 14,
               "points": 3120
             },
             {
@@ -3608,7 +3608,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 13,
+              "place": 12,
               "points": 3120
             },
             {
@@ -3625,7 +3625,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 13,
+              "place": 15,
               "points": 3120
             },
             {
@@ -3642,7 +3642,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 17,
+              "place": 20,
               "points": 1900
             },
             {
@@ -3659,7 +3659,7 @@
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 17,
+              "place": 18,
               "points": 1900
             },
             {
@@ -3748,12 +3748,12 @@
           "rank": 25
         },
         {
-          "athlete_id": "8271ec6c",
+          "athlete_id": "a940b973",
           "year_points": 1900,
           "events": [
             {
               "event_id": "0d0ca571",
-              "place": 17,
+              "place": 19,
               "points": 1900
             }
           ],
@@ -4731,7 +4731,7 @@
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2025",
-        "place": 5,
+        "place": 6,
         "points": 4745,
         "event_group": "main",
         "participants_count": 20,
@@ -4739,7 +4739,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 5,
+            "place": 6,
             "points": 4745
           },
           {
@@ -4833,7 +4833,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 13,
+            "place": 12,
             "points": 3120
           }
         ],
@@ -4868,7 +4868,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 13,
+            "place": 15,
             "points": 3120
           },
           {
@@ -4909,7 +4909,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 9,
+            "place": 10,
             "points": 3320
           },
           {
@@ -4976,7 +4976,7 @@
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2025",
-        "place": 13,
+        "place": 14,
         "points": 3120,
         "event_group": "main",
         "participants_count": 20,
@@ -4984,7 +4984,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 13,
+            "place": 14,
             "points": 3120
           },
           {
@@ -5123,7 +5123,7 @@
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2025",
-        "place": 9,
+        "place": 13,
         "points": 3320,
         "event_group": "main",
         "participants_count": 20,
@@ -5131,7 +5131,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 9,
+            "place": 13,
             "points": 3320
           },
           {
@@ -5197,7 +5197,7 @@
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2025",
-        "place": 17,
+        "place": 18,
         "points": 1900,
         "event_group": "main",
         "participants_count": 20,
@@ -5205,7 +5205,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 17,
+            "place": 18,
             "points": 1900
           },
           {
@@ -5238,7 +5238,7 @@
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2025",
-        "place": 7,
+        "place": 8,
         "points": 4545,
         "event_group": "main",
         "participants_count": 20,
@@ -5246,7 +5246,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 7,
+            "place": 8,
             "points": 4545
           },
           {
@@ -5351,7 +5351,7 @@
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2025",
-        "place": 9,
+        "place": 11,
         "points": 3320,
         "event_group": "main",
         "participants_count": 20,
@@ -5359,7 +5359,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 9,
+            "place": 11,
             "points": 3320
           },
           {
@@ -5391,7 +5391,7 @@
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2025",
-        "place": 13,
+        "place": 16,
         "points": 3120,
         "event_group": "main",
         "participants_count": 20,
@@ -5399,7 +5399,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 13,
+            "place": 16,
             "points": 3120
           },
           {
@@ -5646,7 +5646,7 @@
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2025",
-        "place": 17,
+        "place": 20,
         "points": 1900,
         "event_group": "main",
         "participants_count": 20,
@@ -5654,7 +5654,7 @@
           {
             "event_name": "Чемпионат России",
             "event_year": "2025",
-            "place": 17,
+            "place": 20,
             "points": 1900
           },
           {
@@ -6056,35 +6056,8 @@
       ]
     },
     {
-      "athlete_id": "8271ec6c",
-      "rank": 45,
-      "total_points": 1900,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2025",
-        "place": 17,
-        "points": 1900,
-        "event_group": "main",
-        "participants_count": 20,
-        "top_events": [
-          {
-            "event_name": "Чемпионат России",
-            "event_year": "2025",
-            "place": 17,
-            "points": 1900
-          }
-        ],
-        "events_count": 1,
-        "avg_points": 1900
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025
-      ]
-    },
-    {
       "athlete_id": "b832dcd8",
-      "rank": 46,
+      "rank": 45,
       "total_points": 1900,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -6107,6 +6080,33 @@
       "last_year": 2023,
       "years_participated": [
         2023
+      ]
+    },
+    {
+      "athlete_id": "a940b973",
+      "rank": 46,
+      "total_points": 1900,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2025",
+        "place": 19,
+        "points": 1900,
+        "event_group": "main",
+        "participants_count": 20,
+        "top_events": [
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2025",
+            "place": 19,
+            "points": 1900
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 1900
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
       ]
     },
     {
