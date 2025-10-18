@@ -63,11 +63,11 @@ bonuses:
 wildcard:
   top_n: 16               # Максимальный рейтинг для отбора
   min_participations: 1   # Минимальное количество участий
-  last_years_period: 2    # За последние N лет
-  min_best_place: 4       # Лучший результат за карьеру (4 - финал, 5-8 - полуфинал)
+  last_years_period: 3    # За последние N лет
+  min_best_place: 3       # Лучший результат за карьеру (4 - финал, 5-8 - полуфинал)
 
-  # ranking_file: output/rankings/rfs/rus/shortboard/ranking_men.json
-  # output_file: output/wildcard/shortboard_men.json
+  ranking_file: output/rankings/rfs/rus/shortboard/ranking_men.json
+  output_file: output/wildcard/shortboard_men.json
 
   # ranking_file: output/rankings/rfs/rus/shortboard/ranking_women.json
   # output_file: output/wildcard/shortboard_women.json
@@ -75,8 +75,8 @@ wildcard:
   # ranking_file: output/rankings/rfs/rus/longboard/ranking_men.json
   # output_file: output/wildcard/longboard_men.json
 
-  ranking_file: output/rankings/rfs/rus/longboard/ranking_women.json
-  output_file: output/wildcard/longboard_women.json
+  # ranking_file: output/rankings/rfs/rus/longboard/ranking_women.json
+  # output_file: output/wildcard/longboard_women.json
 
 trends:
   input_ranking_file: output/rankings/surfing/shortboard_men.csv
