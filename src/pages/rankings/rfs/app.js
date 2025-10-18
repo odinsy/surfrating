@@ -22,8 +22,8 @@ const COMPETITIONS = {
     'rfs/kgd': {
         name: 'Чемпионат Калининградской области (РФС)',
         disciplines: {
-            'shortboard': 'Короткая доска',
-            'longboard': 'Длинная доска'
+            'longboard': 'Длинная доска',
+            'shortboard': 'Короткая доска'
         }
     },
     'rfs/vdk': {
