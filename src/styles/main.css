@@ -211,6 +211,7 @@ tr.top-10:hover {
     padding: 1rem 0;
     font-size: 0.9rem;
     margin-top: 2rem;
+    position: relative;
 }
 
 #last-updated {
@@ -228,12 +229,29 @@ tr.top-10:hover {
         gap: 10px;
     }
 
+    .container {
+        padding-bottom: 20px;
+    }
+
+    .best-result-cell {
+        max-width: 120px;
+        min-width: 100px;
+    }
+
+    .best-result-main {
+        font-size: 0.85rem;
+    }
+
+    .best-result-details {
+        font-size: 0.7rem;
+        -webkit-line-clamp: 1;
+    }
+
     #last-updated {
         display: block;
         margin-top: 5px;
     }
 }
-
 
 /* Стили для компактного отображения лучшего результата */
 .best-result-cell {
@@ -260,21 +278,4 @@ tr.top-10:hover {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
-
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-    .best-result-cell {
-        max-width: 120px;
-        min-width: 100px;
-    }
-
-    .best-result-main {
-        font-size: 0.85rem;
-    }
-
-    .best-result-details {
-        font-size: 0.7rem;
-        -webkit-line-clamp: 1;
-    }
 }
