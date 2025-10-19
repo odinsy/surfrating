@@ -2,36 +2,10 @@
 
 body {
     background-color: #f8f9fa;
-    /* Заменяем старый padding-top на значение, равное высоте navbar */
-    /* Обычно стандартный navbar ~56px, но у вас внутри img 40px + padding */
-    /* Давайте установим 60px, но если элементы всё равно под navbar - увеличьте */
-    padding-top: 70px; /* <-- Вот это изменение */
+    padding-top: 65px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-/* Убираем mt-3 pt-3 из .container, если используем padding-top у body */
-/* .container.mt-3.pt-3 { ... } больше не нужно, если используем padding-top */
-.container.mt-3.pt-3 {
-    /* flex: 1 0 auto; */ /* Оставьте, если нужно растягивание */
-    /* margin-top: 80px; */ /* <-- УБРАТЬ ЭТО */
-}
-
-/* Убираем медиа-запрос для .container, если используем padding-top у body */
-/* @media (max-width: 768px) { ... } */ /* <-- УБРАТЬ ЭТОТ БЛОК */
-
-.dropdown-menu {
-    max-height: 70vh;
-    overflow-y: auto;
-}
-
-.dropdown-menu.show {
-    z-index: 1080;
-}
-
-.navbar {
-    z-index: 1030;
 }
 
 .bg-primary-custom {
