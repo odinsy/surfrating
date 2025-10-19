@@ -13,15 +13,19 @@
             <a class="navbar-brand" href="//topheats.ru">
                 <img src="../../../img/th-white-logo-min.png" alt="TopHeats" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Переключить навигацию">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarContent">
-                <div class="d-flex align-items-center ms-auto">
-                    <div class="dropdown me-2">
-                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="competitionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span id="competitionLabel">Чемпионат России</span>
-                        </button>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="competitionDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="competitionLabel" class="text-truncate" style="max-width: 200px;">Чемпионат России</span>
+                        </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="competitionDropdown">
                             <li><a class="dropdown-item competition-option active" href="#" data-competition="rfs/rus">Чемпионат России (РФС)</a></li>
                             <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/dfo">Чемпионат ДФО (РФС)</a></li>
@@ -30,8 +34,8 @@
                             <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/vdk">Чемпионат Приморского края (РФС)</a></li>
                             <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/krd">Чемпионат Краснодарского края (РФС)</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
