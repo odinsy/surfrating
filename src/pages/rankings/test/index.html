@@ -8,64 +8,29 @@
     <link rel="stylesheet" href="../../../styles/main-test.css">
 </head>
 <body>
-    <!-- Navbar с использованием Bootstrap Collapse -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color: #112D4E;">
         <div class="container">
-            <!-- Кнопка бургера для мобильных, появляется на md и меньше -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Логотип всегда виден -->
             <a class="navbar-brand" href="//topheats.ru">
                 <img src="../../../img/th-white-logo-min.png" alt="TopHeats" height="40">
             </a>
-
-            <!-- Содержимое, которое скрывается/показывается -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Левая часть collapse (если нужно что-то слева от центра) -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Пусто или можно добавить элементы слева -->
-                </ul>
-
-                <!-- Центральная часть collapse -->
-                <div class="d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-3 w-100 justify-content-center">
-                    <!-- Навигационный элемент для селектора дисциплины -->
-                    <div class="nav-item w-100 w-lg-auto">
-                        <select id="discipline-select" class="form-select form-select-sm bg-light">
-                            <!-- Опции будут добавлены через JS -->
-                        </select>
-                    </div>
-
-                    <!-- Навигационный элемент для кнопок гендера -->
-                    <div class="nav-item">
-                        <div class="btn-group btn-group-sm" role="group">
-                            <button type="button" class="btn btn-outline-light btn-sm gender-btn active" data-gender="men">Мужчины</button>
-                            <button type="button" class="btn btn-outline-light btn-sm gender-btn" data-gender="women">Женщины</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Правая часть collapse -->
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="competitionDropdownLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span id="competitionLabel">Чемпионат России</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="competitionDropdownLink">
-                            <li><a class="dropdown-item competition-option active" href="#" data-competition="rfs/rus">Чемпионат России (РФС)</a></li>
-                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/dfo">Чемпионат ДФО (РФС)</a></li>
-                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/spb">Чемпионат Санкт-Петербурга (РФС)</a></li>
-                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/kgd">Чемпионат Калининградской области (РФС)</a></li>
-                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/vdk">Чемпионат Приморского края (РФС)</a></li>
-                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/krd">Чемпионат Краснодарского края (РФС)</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div> <!-- Конец collapse -->
-        </div> <!-- Конец container -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="ratingsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Рейтинги
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="ratingsDropdown">
+                        <li><a class="dropdown-item competition-option active" href="#" data-competition="rfs/rus">Чемпионат России (РФС)</a></li>
+                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/dfo">Чемпионат ДФО (РФС)</a></li>
+                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/spb">Чемпионат Санкт-Петербурга (РФС)</a></li>
+                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/kgd">Чемпионат Калининградской области (РФС)</a></li>
+                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/vdk">Чемпионат Приморского края (РФС)</a></li>
+                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/krd">Чемпионат Краснодарского края (РФС)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </nav>
-
+  
     <div class="container mt-5 pt-4">
         <div id="ranking-table-container" class="table-responsive"></div>
     </div>
