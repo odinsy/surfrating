@@ -2,6 +2,13 @@
 body {
     background-color: #f8f9fa;
     padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container.mt-3.pt-3 {
+    flex: 1 0 auto;
 }
 
 .bg-primary-custom {
@@ -184,7 +191,6 @@ tr.top-10:hover {
     color: white;
 }
 
-/* Стили для селектора соревнований */
 .form-select:hover {
     border-color: #3F72AF;
 }
@@ -194,14 +200,12 @@ tr.top-10:hover {
     box-shadow: 0 0 0 0.25rem rgba(63, 114, 175, 0.25);
 }
 
-/* Стили для выбранного элемента в селекторе */
 .form-select option:checked {
     background-color: #DBE2EF;
     color: #112D4E;
     font-weight: bold;
 }
 
-/* Стили для пунктов в выпадающем списке при наведении */
 .form-select option:hover {
     background-color: #DBE2EF !important;
 }
@@ -210,8 +214,7 @@ tr.top-10:hover {
     background-color: #f8f9fa;
     padding: 1rem 0;
     font-size: 0.9rem;
-    margin-top: 2rem;
-    position: relative;
+    flex-shrink: 0;
 }
 
 #last-updated {
