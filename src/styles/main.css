@@ -11,6 +11,19 @@ body {
     flex: 1 0 auto;
 }
 
+.dropdown-menu {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.dropdown-menu.show {
+    z-index: 1080;
+}
+
+.navbar {
+    z-index: 1030;
+}
+
 .bg-primary-custom {
     background-color: #112D4E !important;
 }
@@ -30,7 +43,7 @@ body {
 .table-custom th {
     background-color: #112D4E;
     color: white;
-    vertical-align: middle;
+    vertical-align: middle;dropdown-menu
     text-align: center;
 }
 
@@ -217,46 +230,6 @@ tr.top-10:hover {
     flex-shrink: 0;
 }
 
-#last-updated {
-    background-color: #e9ecef;
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-weight: 600;
-    color: #112D4E;
-}
-
-@media (max-width: 768px) {
-    .footer .container > div {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .container {
-        padding-bottom: 20px;
-    }
-
-    .best-result-cell {
-        max-width: 120px;
-        min-width: 100px;
-    }
-
-    .best-result-main {
-        font-size: 0.85rem;
-    }
-
-    .best-result-details {
-        font-size: 0.7rem;
-        -webkit-line-clamp: 1;
-    }
-
-    #last-updated {
-        display: block;
-        margin-top: 5px;
-    }
-}
-
-/* Стили для компактного отображения лучшего результата */
 .best-result-cell {
     max-width: 200px;
     min-width: 150px;
@@ -281,4 +254,48 @@ tr.top-10:hover {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+#last-updated {
+    background-color: #e9ecef;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #112D4E;
+}
+
+@media (max-width: 768px) {
+    .footer .container > div {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .container {
+        padding-bottom: 20px;
+    }
+
+    .dropdown-menu {
+        max-height: 60vh;
+        font-size: 0.9rem;
+    }
+
+    .best-result-cell {
+        max-width: 120px;
+        min-width: 100px;
+    }
+
+    .best-result-main {
+        font-size: 0.85rem;
+    }
+
+    .best-result-details {
+        font-size: 0.7rem;
+        -webkit-line-clamp: 1;
+    }
+
+    #last-updated {
+        display: block;
+        margin-top: 5px;
+    }
 }
