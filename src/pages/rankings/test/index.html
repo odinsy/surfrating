@@ -4,66 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рейтинг спортсменов</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../styles/main-test.css">
+    <!-- Иконки Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Встроенные стили для улучшения UX/UI */
+        body {
+            padding-top: 70px; /* Увеличил отступ под навигацию */
+            background-color: #f5f7fa; /* Более мягкий фон */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar-brand img {
+            filter: brightness(0) invert(1); /* Если лого не белое */
+        }
+        .header-controls {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 70px; /* Высота навбара */
+            z-index: 1020;
+            margin-bottom: 1rem;
+        }
+        .table-responsive {
+            border-radius: 0.5rem; /* Скругление для таблицы */
+            overflow: hidden;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+        .table th {
+            border-top: none;
+            border-bottom-width: 2px;
+        }
+        .table td, .table th {
+            vertical-align: middle;
+        }
+        .loading-indicator {
+            text-align: center;
+            padding: 2rem;
+            color: #6c757d;
+        }
+        .error-message {
+            text-align: center;
+            padding: 2rem;
+            color: #dc3545;
+        }
+        .footer {
+            margin-top: auto; /* Пушим футер вниз */
+            background-color: #e9ecef;
+        }
+        @media (max-width: 768px) {
+            .header-controls {
+                top: 70px;
+                padding: 0.75rem 0;
+            }
+            body {
+                padding-top: 70px;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Навигационная панель -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color: #112D4E;">
-        <div class="container">
-            <a class="navbar-brand" href="//topheats.ru">
-                <img src="../../../img/th-white-logo-min.png" alt="TopHeats" height="30">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="//topheats.ru">
+                <img src="../../../img/th-white-logo-min.png" alt="TopHeats" height="40" class="me-2">
+                <span class="d-none d-md-inline">TopHeats</span>
             </a>
-            <div class="d-flex align-items-center ms-auto">
-                <div class="dropdown me-2">
-                    <button class="btn btn-outline-light dropdown-toggle" type="button" id="competitionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span id="competitionLabel">Чемпионат России</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="competitionDropdown">
-                        <li><a class="dropdown-item competition-option active" href="#" data-competition="rfs/rus">Чемпионат России (РФС)</a></li>
-                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/dfo">Чемпионат ДФО (РФС)</a></li>
-                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/spb">Чемпионат Санкт-Петербурга (РФС)</a></li>
-                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/kgd">Чемпионат Калининградской области (РФС)</a></li>
-                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/vdk">Чемпионат Приморского края (РФС)</a></li>
-                        <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/krd">Чемпионат Краснодарского края (РФС)</a></li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="competitionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-trophy me-1"></i>
+                            <span id="competitionLabel">Чемпионат России</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="competitionDropdown">
+                            <li><a class="dropdown-item competition-option active" href="#" data-competition="rfs/rus"><i class="bi bi-check-circle-fill me-2 text-success d-none"></i>Чемпионат России (РФС)</a></li>
+                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/dfo">Чемпионат ДФО (РФС)</a></li>
+                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/spb">Чемпионат Санкт-Петербурга (РФС)</a></li>
+                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/kgd">Чемпионат Калининградской области (РФС)</a></li>
+                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/vdk">Чемпионат Приморского края (РФС)</a></li>
+                            <li><a class="dropdown-item competition-option" href="#" data-competition="rfs/krd">Чемпионат Краснодарского края (РФС)</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-3 pt-3">
-        <div class="row mb-3">
-            <div class="col-md-6 mb-2">
-                <select id="discipline-select" class="form-select">
-                </select>
-            </div>
-            <div class="col-md-6">
-                <div class="btn-group w-100" role="group">
-                    <button type="button" class="btn btn-outline-primary gender-btn active" data-gender="men">Мужчины</button>
-                    <button type="button" class="btn btn-outline-primary gender-btn" data-gender="women">Женщины</button>
+    <!-- Блок с элементами управления -->
+    <div class="header-controls">
+        <div class="container-fluid px-4">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-5 col-lg-4">
+                    <label for="discipline-select" class="form-label fw-bold">Дисциплина</label>
+                    <select id="discipline-select" class="form-select">
+                        <!-- Опции будут добавлены скриптом -->
+                    </select>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <label class="form-label fw-bold">Пол</label>
+                    <div class="btn-group w-100" role="group" aria-label="Выбор пола">
+                        <input type="radio" class="btn-check gender-btn" name="gender" id="gender-men" value="men" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="gender-men">Мужчины</label>
+
+                        <input type="radio" class="btn-check gender-btn" name="gender" id="gender-women" value="women" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="gender-women">Женщины</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 ms-auto text-end">
+                    <small class="text-muted d-block mb-1">Обновлено:</small>
+                    <span id="last-updated" class="fw-semibold text-body">-</span>
                 </div>
             </div>
         </div>
-
-        <div id="ranking-table-container" class="table-responsive"></div>
     </div>
 
-    <footer class="footer mt-auto py-3 bg-light border-top">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="text-muted">
+    <!-- Основной контент -->
+    <main class="container-fluid px-4 pb-4 flex-grow-1">
+        <div id="ranking-table-container">
+            <!-- Сюда будет загружена таблица -->
+            <div class="loading-indicator">
+                <i class="bi bi-arrow-repeat fs-1 text-secondary"></i>
+                <p class="mt-2">Загрузка данных...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer py-3">
+        <div class="container-fluid px-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="text-body-secondary mb-2 mb-md-0">
                     &copy; TopHeats. Все права защищены.
                 </div>
-                <div>
-                    <span class="text-muted me-2">Обновлено:</span>
-                    <span id="last-updated" class="fw-bold">-</span>
+                <div class="text-body-secondary">
+                    <a href="#" class="text-decoration-none">Помощь</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="text-decoration-none">О проекте</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/ZbuYVXUwKJ8Y6uHwK+Tc1v0A6VZkdRpV4H0h6fY" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbO6oWCTHabIBhLlJd0fD+H6JZmhl8gMK8NxJLTf9YYVj9uNh5JySWg9zBd8cW" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/transliteration@2.3.5/dist/browser/bundle.umd.min.js"></script>
     <script src="app.js"></script>
 </body>
