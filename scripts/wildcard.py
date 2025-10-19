@@ -1,4 +1,4 @@
-import csv
+import json
 import yaml
 from pathlib import Path
 from typing import List, Dict
@@ -10,92 +10,102 @@ def load_config(config_path: str = 'config.yaml') -> Dict:
 CONFIG = load_config()
 
 def parse_ranking(file_path: str) -> List[Dict]:
-    athletes = []
     with open(file_path, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            # Обработка Best Place
-            best_place = row['Best Place'].strip()
-            best_place = int(best_place) if best_place.isdigit() else None
+        data = json.load(f)
 
-            # Сбор лет участия
-            participation_years = []
-            for header, value in row.items():
-                if header.isdigit() and value.strip().isdigit() and int(value) > 0:
-                    participation_years.append(int(header))
+    athletes = []
+    for athlete_data in data['overall_ranking']:
+        athlete_id = athlete_data['athlete_id']
+        athlete_info = data['athletes'][athlete_id]
 
-            athletes.append({
-                'rank': int(row['Rank']),
-                'name': row['Name'],
-                'region': row['Region'],
-                'best_place': best_place,
-                'last_year': max(participation_years) if participation_years else 0,
-                'participations': len(participation_years),
-                'current_rank': int(row['Rank']),
-                'total_points': int(row['Total Points']),
-                'participation_years': participation_years  # Добавлено ключевое поле
-            })
+        # Вычисляем лучшее место из всех результатов (только числовые значения)
+        best_place = None
+        for result in data['results']:
+            if result['athlete_id'] == athlete_id:
+                place = result['place']
+                # Пропускаем нечисловые значения (DNS, DNF и т.д.)
+                if isinstance(place, int):
+                    if best_place is None or place < best_place:
+                        best_place = place
+
+        athletes.append({
+            'rank': int(athlete_data['rank']),
+            'name': athlete_info['name'],
+            'region': athlete_info['region'],
+            'best_place': best_place,
+            'last_year': int(athlete_data['last_year']),
+            'participations': len(athlete_data['years_participated']),
+            'current_rank': int(athlete_data['rank']),
+            'total_points': int(athlete_data['total_points']),
+            'participation_years': [int(year) for year in athlete_data['years_participated']]
+        })
+
     return athletes
 
 def filter_athletes(athletes: List[Dict]) -> List[Dict]:
-    current_year = CONFIG['current_year']
+    current_year = int(CONFIG['current_year'])
     cfg = CONFIG['wildcard']
 
     filtered = []
     for athlete in athletes:
         # Проверка топ-N
-        if athlete['current_rank'] > cfg['top_n']:
+        if athlete['current_rank'] > int(cfg['top_n']):
             continue
 
         # Проверка участий за последние N лет
         valid_years = range(
-            current_year - cfg['last_years_period'] + 1,
+            current_year - int(cfg['last_years_period']) + 1,
             current_year + 1
         )
         actual_parts = sum(1 for y in valid_years if y in athlete['participation_years'])
-        if actual_parts < cfg['min_participations']:
+        if actual_parts < int(cfg['min_participations']):
             continue
 
-        # Проверка лучшего места
+        # Проверка лучшего места (только если есть числовой результат)
         if (athlete['best_place'] is None or
-            athlete['best_place'] > cfg['min_best_place']):
+            athlete['best_place'] > int(cfg['min_best_place'])):
             continue
 
         filtered.append(athlete)
 
+    # Сортировка по лучшему месту и последнему году участия
     return sorted(filtered, key=lambda x: (x['best_place'] or 9999, -x['last_year']))
 
 def generate_output(results: List[Dict]):
     output_path = Path(CONFIG['wildcard']['output_file'])
     output_path.parent.mkdir(exist_ok=True)
 
-    headers = ['Wildcard', 'Rank', 'Name', 'Region', 'Best Place', 'Total Points', 'Last Year']
-
-    with open(output_path, 'w', encoding='utf-8', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=headers)
-        writer.writeheader()
-        for i, athlete in enumerate(results, 1):
-            writer.writerow({
-                'Wildcard': i,
-                'Rank': athlete['current_rank'],
-                'Name': athlete['name'],
-                'Region': athlete['region'],
-                'Best Place': athlete['best_place'] or '-',
-                'Total Points': athlete['total_points'] or '-',
-                'Last Year': athlete['last_year']
-            })
-
-    print(','.join(headers))
+    # Подготовка данных для JSON
+    output_data = []
     for i, athlete in enumerate(results, 1):
-        print(','.join(map(str, [
-            i,
-            athlete['current_rank'],
-            athlete['name'],
-            athlete['region'],
-            athlete['best_place'] or '-',
-            athlete['total_points'],
-            athlete['last_year']
-        ])))
+        output_data.append({
+            'Wildcard': i,
+            'Rank': athlete['current_rank'],
+            'Name': athlete['name'],
+            'Region': athlete['region'],
+            'Best Place': athlete['best_place'] or '-',
+            'Total Points': athlete['total_points'],
+            'Last Year': athlete['last_year']
+        })
+
+    # Запись в JSON файл
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, ensure_ascii=False, indent=2)
+
+    # Вывод в консоль в CSV-формате
+    headers = ['Wildcard', 'Rank', 'Name', 'Region', 'Best Place', 'Total Points', 'Last Year']
+    print(','.join(headers))
+    for item in output_data:
+        row = [
+            item['Wildcard'],
+            item['Rank'],
+            f'"{item["Name"]}"',
+            f'"{item["Region"]}"',
+            item['Best Place'],
+            item['Total Points'],
+            item['Last Year']
+        ]
+        print(','.join(map(str, row)))
 
 if __name__ == '__main__':
     try:
@@ -105,4 +115,6 @@ if __name__ == '__main__':
         generate_output(filtered)
     except Exception as e:
         print(f"Error: {str(e)}")
+        import traceback
+        traceback.print_exc()
         exit(1)

@@ -233,3 +233,48 @@ tr.top-10:hover {
         margin-top: 5px;
     }
 }
+
+
+/* Стили для компактного отображения лучшего результата */
+.best-result-cell {
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.best-result-compact {
+    line-height: 1.2;
+}
+
+.best-result-main {
+    font-weight: 600;
+    color: #112D4E;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.best-result-details {
+    font-size: 0.75rem;
+    color: #6c757d;
+    line-height: 1.1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .best-result-cell {
+        max-width: 120px;
+        min-width: 100px;
+    }
+
+    .best-result-main {
+        font-size: 0.85rem;
+    }
+
+    .best-result-details {
+        font-size: 0.7rem;
+        -webkit-line-clamp: 1;
+    }
+}

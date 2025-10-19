@@ -1,0 +1,44 @@
+allowed_events: [main, cross_regional, regional, local]
+
+event_groups:
+  default:
+    scoring_system: "default"
+    coefficient: 1.0
+    events: []
+
+  main:
+    scoring_system: "isa_1000"
+    coefficient: 1.0
+    events:
+      - "Чемпионат России"
+      - "Чемпионат РФ"
+      - "Russian Championship"
+
+  cross_regional:
+    scoring_system: "isa_1000"
+    coefficient: 1.0
+    events:
+      - "Чемпионат федеральных округов"
+      - "Чемпионат Дальневосточного федерального округа"
+      - "Чемпионат ДФО"
+      - "Первенство Дальневосточного федерального округа"
+      - "Первенство ДФО"
+
+  regional:
+    scoring_system: "isa_1000"
+    coefficient: 1.0
+    events:
+      - "Чемпионат Санкт-Петербурга"
+      - "Чемпионат Калининградской области"
+      - "Чемпионат Приморского края"
+      - "Чемпионат Краснодарского края"
+      - "Чемпионат Мурманской области"
+
+  local:
+    scoring_system: "isa_1000"
+    coefficient: 1.0
+    events:
+      - "Кубок Санкт-Петербурга"
+      - "Кубок Владивостока"
+      - "Открытый чемпионат Сочи"
+      - "Локальные соревнования"

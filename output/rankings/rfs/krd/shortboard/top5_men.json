@@ -1,0 +1,234 @@
+{
+  "discipline": "shortboard",
+  "gender": "men",
+  "last_updated": "2025-10-17",
+  "events": {
+    "898a01d1": {
+      "id": "898a01d1",
+      "name": "Чемпионат Краснодарского края",
+      "year": 2025,
+      "date": "2025.04.12",
+      "discipline": "короткая доска",
+      "category": "мужчины",
+      "group": "regional",
+      "participants_count": 14
+    }
+  },
+  "athletes": {
+    "b3fd2e1c": {
+      "name": "Яковлев Денис",
+      "region": "Краснодарский край",
+      "sport_rank": "2",
+      "birth_year": 1979
+    },
+    "4df39633": {
+      "name": "Кривенцов",
+      "region": "Краснодарский край",
+      "sport_rank": "",
+      "birth_year": 0
+    },
+    "9507dd7c": {
+      "name": "Крылов Тимофей",
+      "region": "Краснодарский край",
+      "sport_rank": "2",
+      "birth_year": 2001
+    },
+    "187a27d3": {
+      "name": "Зиповски Алексей",
+      "region": "Краснодарский край",
+      "sport_rank": "3",
+      "birth_year": 1983
+    },
+    "136b266e": {
+      "name": "Ильин Александр",
+      "region": "Краснодарский край",
+      "sport_rank": "3",
+      "birth_year": 1982
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "b3fd2e1c",
+      "event_id": "898a01d1",
+      "place": 1,
+      "points": 2000,
+      "round_name": "final",
+      "round_place": "1"
+    },
+    {
+      "athlete_id": "4df39633",
+      "event_id": "898a01d1",
+      "place": 2,
+      "points": 1560,
+      "round_name": "final",
+      "round_place": "2"
+    },
+    {
+      "athlete_id": "9507dd7c",
+      "event_id": "898a01d1",
+      "place": 3,
+      "points": 1220,
+      "round_name": "final",
+      "round_place": "3"
+    },
+    {
+      "athlete_id": "187a27d3",
+      "event_id": "898a01d1",
+      "place": 4,
+      "points": 1120,
+      "round_name": "final",
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "136b266e",
+      "event_id": "898a01d1",
+      "place": 5,
+      "points": 950,
+      "round_name": "semifinal",
+      "round_place": "3"
+    }
+  ],
+  "year_rankings": {
+    "2025": {
+      "athletes": [
+        {
+          "athlete_id": "b3fd2e1c",
+          "year_points": 2000,
+          "events": [
+            {
+              "event_id": "898a01d1",
+              "place": 1,
+              "points": 2000
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "athlete_id": "4df39633",
+          "year_points": 1560,
+          "events": [
+            {
+              "event_id": "898a01d1",
+              "place": 2,
+              "points": 1560
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "athlete_id": "9507dd7c",
+          "year_points": 1220,
+          "events": [
+            {
+              "event_id": "898a01d1",
+              "place": 3,
+              "points": 1220
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "athlete_id": "187a27d3",
+          "year_points": 1120,
+          "events": [
+            {
+              "event_id": "898a01d1",
+              "place": 4,
+              "points": 1120
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "athlete_id": "136b266e",
+          "year_points": 950,
+          "events": [
+            {
+              "event_id": "898a01d1",
+              "place": 5,
+              "points": 950
+            }
+          ],
+          "rank": 5
+        }
+      ]
+    }
+  },
+  "overall_ranking": [
+    {
+      "athlete_id": "b3fd2e1c",
+      "rank": 1,
+      "total_points": 2000,
+      "best_result": {
+        "event_name": "Чемпионат Краснодарского края",
+        "event_year": "2025",
+        "place": 1,
+        "points": 2000
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "4df39633",
+      "rank": 2,
+      "total_points": 1560,
+      "best_result": {
+        "event_name": "Чемпионат Краснодарского края",
+        "event_year": "2025",
+        "place": 2,
+        "points": 1560
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "9507dd7c",
+      "rank": 3,
+      "total_points": 1220,
+      "best_result": {
+        "event_name": "Чемпионат Краснодарского края",
+        "event_year": "2025",
+        "place": 3,
+        "points": 1220
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "187a27d3",
+      "rank": 4,
+      "total_points": 1120,
+      "best_result": {
+        "event_name": "Чемпионат Краснодарского края",
+        "event_year": "2025",
+        "place": 4,
+        "points": 1120
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "136b266e",
+      "rank": 5,
+      "total_points": 950,
+      "best_result": {
+        "event_name": "Чемпионат Краснодарского края",
+        "event_year": "2025",
+        "place": 5,
+        "points": 950
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    }
+  ]
+}

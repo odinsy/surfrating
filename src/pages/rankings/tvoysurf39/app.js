@@ -1,0 +1,283 @@
+const JSON_BASE_PATH = '../../../data/rankings/';
+const AVATARS_ENABLED = false;
+const transliterate = window.slugify;
+
+const COMPETITIONS = {
+    'tvoysurf39/cup': {
+        name: 'Балтийский серф-контест (Твой Сёрф 39)',
+        disciplines: {
+            'longboard': 'Длинная доска'
+        }
+    }
+};
+
+let currentCompetition = 'tvoysurf39/cup';
+let currentDiscipline = 'longboard';
+
+function shortenEventName(name) {
+    return name
+        .split(/\s+/)
+        .map(word => {
+            if (word.match(/[#0-9]/)) {
+                return word;
+            }
+            return word.charAt(0);
+        })
+        .join('')
+        .toUpperCase();
+}
+
+function showTooltip(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'block';
+}
+
+function hideTooltip(id) {
+    const tooltip = document.getElementById(id);
+    if (tooltip) tooltip.style.display = 'none';
+}
+
+function createAthleteRow(athlete, events, athleteEventData) {
+    const bestResult = athlete.best_result
+        ? `${athlete.best_result.place} на ${shortenEventName(athlete.best_result.event_name)}`
+        : 'Нет данных';
+
+    const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
+    const initials = (surname[0] || '') + (firstName[0] || '');
+    const avatarSlug = transliterate(surname) + (firstName ? '-' + transliterate(firstName[0]) : '');
+
+    let avatarPath = '';
+    if (AVATARS_ENABLED) {
+        avatarPath = athlete.avatar_path
+            || `../../../img/avatars/${avatarSlug}.jpg`;
+    }
+
+    let avatarHTML = '';
+    if (AVATARS_ENABLED) {
+        avatarHTML = `
+            <img src="${avatarPath}" alt="${athlete.name}"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="avatar-fallback">${initials}</div>
+        `;
+    } else {
+        avatarHTML = `<div class="avatar-fallback" style="display:flex">${initials}</div>`;
+    }
+
+    const eventCells = events.map(event => {
+        const eventData = athleteEventData[athlete.id]?.[event.id];
+        const points = eventData ? eventData.points : null;
+        const place = eventData ? eventData.place : null;
+
+        const tooltipId = `tooltip-${athlete.id}-${event.id}`;
+        const tooltipHTML = eventData
+            ? `<div class="custom-tooltip" id="${tooltipId}">
+                <div class="tooltip-event mb-2">
+                    <div class="event-title">${event.name}</div>
+                    <div class="event-detail">Место: ${place}</div>
+                    <div class="event-detail">Очки: ${points}</div>
+                </div>
+               </div>`
+            : '';
+
+        return `
+            <td class="year-points"
+                onmouseenter="showTooltip('${tooltipId}')"
+                onmouseleave="hideTooltip('${tooltipId}')">
+                ${points !== null ? points : '—'}
+                ${tooltipHTML}
+            </td>
+        `;
+    }).join('');
+
+    const isTop10 = athlete.rank <= 10;
+    const rowClass = isTop10 ? 'top-10' : '';
+
+    return `
+        <tr class="${rowClass}">
+            <td class="fw-bold">${athlete.rank}</td>
+            <td class="name-cell">
+                <div class="avatar-wrapper">
+                    <div class="athlete-avatar">
+                        ${avatarHTML}
+                    </div>
+                    <div>
+                        <div class="athlete-name">${athlete.name}</div>
+                        <div class="athlete-region">${athlete.region}</div>
+                    </div>
+                </div>
+            </td>
+            <td class="year-points">${bestResult}</td>
+            ${eventCells}
+            <td class="total-points fw-bold">${athlete.total_points}</td>
+        </tr>
+    `;
+}
+
+async function loadData(competition, category, gender) {
+    const path = `${JSON_BASE_PATH}${competition}/${category}/ranking_${gender}.json?t=${Date.now()}`;
+    try {
+        const response = await fetch(path);
+        const data = await response.json();
+        return normalizeData(data);
+    } catch (error) {
+        console.error('Error loading data:', error);
+        document.getElementById('last-updated').textContent = 'Ошибка загрузки';
+        return {
+            overall_ranking: [],
+            athleteEventData: {},
+            events: [],
+            last_updated: 'Ошибка'
+        };
+    }
+}
+
+function normalizeData(data) {
+    document.getElementById('last-updated').textContent = data.last_updated || '-';
+
+    const athletesMap = data.athletes || {};
+    const eventsMap = data.events || {};
+
+    // Получаем события текущего года
+    const currentYear = new Date().getFullYear();
+    const yearEvents = Object.values(eventsMap)
+        .filter(event => event.year === currentYear)
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    const normalized = {
+        overall_ranking: [],
+        athleteEventData: {},
+        events: yearEvents,
+        last_updated: data.last_updated
+    };
+
+    normalized.overall_ranking = (data.overall_ranking || []).map(item => {
+        const athlete = athletesMap[item.athlete_id] || {};
+        return {
+            id: item.athlete_id,
+            rank: item.rank,
+            total_points: item.total_points,
+            best_result: item.best_result,
+            name: athlete.name || 'Неизвестный спортсмен',
+            region: athlete.region || ''
+        };
+    });
+
+    // Заполняем данные по событиям
+    (data.results || []).forEach(result => {
+        const event = eventsMap[result.event_id];
+        if (event && event.year === currentYear) {
+            if (!normalized.athleteEventData[result.athlete_id]) {
+                normalized.athleteEventData[result.athlete_id] = {};
+            }
+            normalized.athleteEventData[result.athlete_id][result.event_id] = {
+                points: result.points,
+                place: result.place
+            };
+        }
+    });
+
+    return normalized;
+}
+
+async function updateTable(gender) {
+    const data = await loadData(currentCompetition, currentDiscipline, gender);
+    const athletes = data.overall_ranking;
+    const events = data.events;
+
+    if (!athletes || athletes.length === 0) {
+        document.getElementById('ranking-table-container').innerHTML = '<p class="text-center py-4">Нет данных для отображения</p>';
+        return;
+    }
+
+    const tableHTML = `
+        <table class="table table-custom table-hover align-middle">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Лучший результат</th>
+                    ${events.map(event => `
+                        <th scope="col" title="${event.name}">${shortenEventName(event.name)}</th>
+                    `).join('')}
+                    <th scope="col">Всего</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${athletes.map(a => createAthleteRow(a, events, data.athleteEventData)).join('')}
+            </tbody>
+        </table>
+    `;
+
+    document.getElementById('ranking-table-container').innerHTML = tableHTML;
+}
+
+function updateDisciplineSelect(competition) {
+    const disciplineSelect = document.getElementById('discipline-select');
+    disciplineSelect.innerHTML = '';
+
+    const disciplines = COMPETITIONS[competition].disciplines;
+    for (const [key, name] of Object.entries(disciplines)) {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = name;
+        disciplineSelect.appendChild(option);
+    }
+
+    if (Object.keys(disciplines).length > 0) {
+        currentDiscipline = Object.keys(disciplines)[0];
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category') || 'longboard_men';
+    const [discipline, gender] = initialCategory.split('_');
+
+    currentDiscipline = discipline;
+
+    document.querySelectorAll('.gender-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.gender === gender) {
+            btn.classList.add('active');
+        }
+    });
+
+    const competitionLabel = document.getElementById('competitionLabel');
+    competitionLabel.textContent = COMPETITIONS[currentCompetition].name;
+
+    document.getElementById('discipline-select').addEventListener('change', function(e) {
+        currentDiscipline = e.target.value;
+        const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
+        updateTable(activeGender);
+    });
+
+    document.querySelectorAll('.competition-option').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const competition = this.dataset.competition;
+            currentCompetition = competition;
+            competitionLabel.textContent = this.textContent;
+            updateDisciplineSelect(competition);
+
+            const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
+            updateTable(activeGender);
+
+            document.querySelectorAll('.competition-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+
+    document.querySelectorAll('.gender-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            updateTable(this.dataset.gender);
+        });
+    });
+
+    updateDisciplineSelect(currentCompetition);
+    document.getElementById('discipline-select').value = currentDiscipline;
+    updateTable(gender);
+});

@@ -4,21 +4,27 @@ import re
 import pandas as pd
 from collections import defaultdict
 from typing import Dict
-from helpers import read_csv_file, extract_year, get_event_group, generate_event_id
+from helpers import read_csv_file, extract_year, get_event_group, generate_event_id, generate_athlete_id
 
 def _process_row(row: dict, athletes: dict, config: Dict, event_participants: dict, events_info: dict) -> None:
     event_name       = row['Событие'].strip()
+    event_group      = get_event_group(event_name, config)
     event_year       = int(row['Год'])
     event_date       = row['Дата'].strip()
     event_discipline = row['Дисциплина'].strip()
     event_category   = row['Категория'].strip()
-    event_group      = get_event_group(event_name, config)
     event_id         = generate_event_id(event_name, event_date, event_discipline, event_category)
+    round_name       = row.get('round_name', '').strip()
+    round_place      = row.get('round_place', '').strip()
+    heat_number      = row.get('heat_number', '').strip()
+
+    # print(f"DEBUG: В _process_row: round_name = '{round_name}', round_place = '{round_place}'")
 
     if event_id not in events_info:
         events_info[event_id] = {
             'name': event_name,
             'year': event_year,
+            'date': event_date,
             'discipline': event_discipline,
             'category': event_category,
             'group': event_group,
@@ -28,31 +34,44 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
     if config.get('allowed_events') and event_group not in config['allowed_events']:
         return
 
-    place              = row['Место'].strip().upper()
-    athlete_name       = ' '.join(row['ФИО'].split()[:2])
-    athlete_region     = row['Регион'].strip()
+    place = row['Место'].strip().upper()
+    athlete_name = ' '.join(row['ФИО'].split()[:2])
+    athlete_region = row['Регион'].strip()
     athlete_sport_rank = row['Разряд'].strip()
     athlete_birth_year = extract_year(row['Год рождения'])
 
     if place != 'DNS':
-        event_key = (event_year, event_name)
-        event_participants[event_key].add(athlete_name)
+        event_participants[event_id].add(athlete_name)
 
     athlete = athletes[athlete_name]
-    athlete['years'][event_year][event_name] = {
+    athlete['years'][event_year][event_id] = {
+        'event_id': event_id,
+        'event_name': event_name,
         'place': place,
-        'group': event_group
+        'group': event_group,
+        'round_name': round_name,
+        'round_place': round_place,
+        'heat_number': heat_number
     }
-    athlete['regions'][event_year]     = athlete_region
+    athlete['regions'][event_year] = athlete_region
     athlete['sport_ranks'][event_year] = athlete_sport_rank
-    athlete['birth_year']              = athlete_birth_year
-    athlete['category']                = event_category
-    athlete['last_year']               = max(athlete['last_year'], event_year)
+    athlete['birth_year'] = athlete_birth_year
+    athlete['category'] = event_category
+    athlete['last_year'] = max(athlete['last_year'], event_year)
 
 def _finalize_athletes_data(athletes: dict) -> None:
     for athlete in athletes.values():
         athlete['region'] = max(athlete['regions'].items(), key=lambda x: x[0])[1] if athlete['regions'] else ''
-        athlete['sport_rank'] = max(athlete['sport_ranks'].items(), key=lambda x: x[0])[1] if athlete['sport_ranks'] else ''
+        athlete['sport_rank'] = get_latest_sport_rank(athlete['sport_ranks'])
+
+def get_latest_sport_rank(sport_ranks: dict) -> str:
+    if not sport_ranks:
+        return ''
+
+    latest_year = max(sport_ranks.keys())
+    latest_rank = sport_ranks[latest_year].strip()
+
+    return latest_rank
 
 def parse_files(config: Dict) -> Dict[str, Dict]:
     events_info = {}
@@ -88,18 +107,16 @@ def parse_files(config: Dict) -> Dict[str, Dict]:
                 print(f"Пропущен файл {file_path}: {str(e)}")
                 continue
 
-    for event_id, event_data in events_info.items():
-        participants = set()
-        for (year, name), names_set in event_participants.items():
-            if year == event_data['year'] and name == event_data['name']:
-                participants |= names_set
-        event_data['participants_count'] = len(participants)
+    for event_id, participants in event_participants.items():
+        events_info[event_id]['participants_count'] = len(participants)
 
     for athlete in athletes.values():
         for year, events_dict in athlete['years'].items():
-            for event_name, event_info in events_dict.items():
-                key = (year, event_name)
-                event_info['participants_count'] = len(event_participants.get(key, set()))
+            for event_id, event_info in events_dict.items():
+                if event_id in events_info:
+                    event_info['participants_count'] = events_info[event_id]['participants_count']
+                else:
+                    event_info['participants_count'] = 0
 
     _finalize_athletes_data(athletes)
 

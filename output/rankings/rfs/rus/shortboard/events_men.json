@@ -123,7 +123,8 @@
           "birth_year": 1984,
           "sport_rank": ""
         }
-      ]
+      ],
+      "event_date": "2017.09.23"
     },
     {
       "event_year": "2018",
@@ -276,7 +277,8 @@
           "birth_year": 1978,
           "sport_rank": ""
         }
-      ]
+      ],
+      "event_date": "2018.10.05"
     },
     {
       "event_year": "2019",
@@ -436,7 +438,8 @@
           "birth_year": 1987,
           "sport_rank": ""
         }
-      ]
+      ],
+      "event_date": "2019.10.07"
     },
     {
       "event_year": "2021",
@@ -624,7 +627,8 @@
           "birth_year": 1997,
           "sport_rank": ""
         }
-      ]
+      ],
+      "event_date": "2021.10.05"
     },
     {
       "event_year": "2022",
@@ -819,7 +823,8 @@
           "birth_year": 1984,
           "sport_rank": "3"
         }
-      ]
+      ],
+      "event_date": "2022.09.19"
     },
     {
       "event_year": "2023",
@@ -1000,7 +1005,8 @@
           "birth_year": 1987,
           "sport_rank": "3"
         }
-      ]
+      ],
+      "event_date": "2023.09.07-28"
     },
     {
       "event_year": "2024",
@@ -1265,9 +1271,11 @@
           "birth_year": 1992,
           "sport_rank": "3"
         }
-      ]
+      ],
+      "event_date": "2024.11.06-24"
     }
   ],
   "total_events": 7,
-  "total_participants": 168
+  "total_unique_participants": 114,
+  "participants_without_birth_year": 0
 }
