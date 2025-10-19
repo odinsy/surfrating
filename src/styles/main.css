@@ -1,43 +1,29 @@
 /* Custom styles */
-
-/* Убираем старый padding-top у body */
 body {
     background-color: #f8f9fa;
-    /* padding-top: 60px; */
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Добавляем фиксированный margin-top для контейнера, чтобы отодвинуть его от navbar */
 .container.mt-3.pt-3 {
-    /* flex: 1 0 auto; */
-    margin-top: 80px; /* Устанавливаем фиксированное расстояние от navbar */
+    flex: 1 0 auto;
 }
-
-/* Для мобильных устройств, если navbar становится выше */
-@media (max-width: 768px) {
-    .container.mt-3.pt-3 {
-        margin-top: 100px; /* Увеличиваем отступ на мобильных, если navbar высокий */
-    }
-}
-
-/* Убедимся, что navbar всегда поверх других элементов */
-.navbar {
-    z-index: 1030;
-}
-
-/* Остальные стили остаются без изменений, но убираем лишние */
 
 .dropdown-menu {
     max-height: 70vh;
     overflow-y: auto;
-    /* Добавляем ограничение ширины, чтобы избежать проблем */
-    max-width: 95vw; /* Не шире 95% ширины экрана */
+    max-width: 100vw;
+    width: auto;
 }
 
 .dropdown-menu.show {
     z-index: 1080;
+}
+
+.navbar {
+    z-index: 1030;
 }
 
 .bg-primary-custom {
@@ -294,6 +280,7 @@ tr.top-10:hover {
     .dropdown-menu {
         max-height: 60vh;
         font-size: 0.9rem;
+        max-width: 95vw;
     }
 
     .best-result-cell {
