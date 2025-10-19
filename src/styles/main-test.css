@@ -1,28 +1,30 @@
 /* Custom styles */
-
 body {
     background-color: #f8f9fa;
-    padding-top: 60px;
+    /* padding-top убран */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 0; /* Убедимся, что padding-top 0 */
 }
 
-.navbar-nav .dropdown-menu {
+/* Отступ для основного контента под фиксированный navbar */
+.container.mt-5.pt-4 {
+    flex: 1 0 auto;
+    /* Добавлен минимальный отступ сверху, если navbar высокий */
+}
+
+.dropdown-menu {
     max-height: 70vh;
     overflow-y: auto;
 }
 
-.navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.85) !important;
-    padding: 0.5rem 1rem;
+.dropdown-menu.show {
+    z-index: 1080;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-    color: white !important;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 0.375rem;
+.navbar {
+    z-index: 1030;
 }
 
 .bg-primary-custom {
@@ -265,35 +267,84 @@ tr.top-10:hover {
     color: #112D4E;
 }
 
+/* --- Новые стили для переработанного navbar --- */
+.navbar .form-select-sm,
+.navbar .btn-group-sm > .btn {
+    /* Уменьшен размер шрифта для мобильных */
+    font-size: 0.875rem;
+}
+
+.navbar .form-select-sm {
+    /* Стилизация селектора внутри navbar */
+    background-color: rgba(255, 255, 255, 0.15); /* Легкий фон */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar .form-select-sm option {
+    background-color: #112D4E; /* Фон опций соответствует теме navbar */
+    color: white;
+}
+
+.navbar .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.navbar .btn-outline-light.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.navbar .btn-outline-light:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+/* Убедимся, что dropdown меню соревнований имеет высокий z-index */
+.navbar .dropdown-menu {
+    z-index: 1080; /* Должен быть выше navbar z-index */
+    max-height: 70vh;
+    overflow-y: auto;
+    /* Добавим небольшой отступ от края экрана при открытии на мобильных */
+    margin-top: 0.125rem;
+}
+
+/* Улучшенная стилизация для мобильных */
+@media (max-width: 991.98px) { /* lg breakpoint */
+    .navbar-collapse {
+        /* Добавим фон для фона collapse */
+        background-color: #112D4E;
+        padding: 1rem;
+        border-radius: 0.375rem; /* md-3 */
+        margin-top: 0.5rem;
+        /* Убедимся, что collapse всегда выше других элементов при открытии */
+        z-index: 1070; /* Выше чем navbar, но ниже dropdown */
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-item .dropdown-toggle {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar .nav-item {
+        width: 100%; /* Сделаем nav-item на всю ширину на мобильных */
+    }
+
+    .navbar .form-select-sm,
+    .navbar .btn-group-sm {
+        width: 100%; /* Сделаем селектор и кнопки на всю ширину внутри nav-item */
+    }
+}
+
 @media (max-width: 768px) {
     .footer .container > div {
         flex-direction: column;
         text-align: center;
         gap: 10px;
-    }
-
-    .navbar-collapse {
-        margin-top: 10px;
-    }
-
-    .navbar-nav .dropdown-menu {
-        background-color: #1a3a5a;
-        border: none;
-    }
-
-    .navbar-nav .dropdown-item {
-        color: rgba(255, 255, 255, 0.85);
-    }
-
-    .navbar-nav .dropdown-item:hover,
-    .navbar-nav .dropdown-item:focus {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: white;
-    }
-
-    .navbar-nav .dropdown-item.active {
-        background-color: #3F72AF;
-        color: white;
     }
 
     .container {
