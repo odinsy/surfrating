@@ -8,6 +8,10 @@ body {
     min-height: 100vh;
 }
 
+.container.mt-3.pt-3 {
+    flex: 1 0 auto;
+}
+
 .bg-primary-custom {
     background-color: #112D4E !important;
 }
@@ -160,17 +164,14 @@ tr.top-10:hover {
     background-color: #cbd5e8 !important;
 }
 
-/* Центрирование ранга */
 .table-custom td:first-child {
     text-align: center !important;
 }
 
-/* Выделение топ-10 мест */
 .table-custom > tbody > tr.top-10 {
     background-color: #DBE2EF !important;
 }
 
-/* Стили для кнопок гендера */
 .btn-outline-primary {
     color: #3F72AF;
     border-color: #3F72AF;
@@ -207,12 +208,6 @@ tr.top-10:hover {
     background-color: #DBE2EF !important;
 }
 
-.footer {
-    background-color: #f8f9fa;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-}
 
 .best-result-cell {
     max-width: 200px;
@@ -238,6 +233,13 @@ tr.top-10:hover {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    flex-shrink: 0;
 }
 
 #last-updated {
