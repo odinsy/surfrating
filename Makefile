@@ -2,6 +2,7 @@ default: rating
 
 discipline := longboard
 category := men
+org := rus
 # conf_decay_system := conf/base/decay/decay-disabled.yaml
 # conf_years_system := conf/base/years/last3.yaml
 conf_scoring_systems := conf/base/scoring/default.yaml conf/base/scoring/scoring-isa.yaml conf/base/scoring/wsl/scoring-wsl-cs.yaml conf/base/scoring/wsl/scoring-wsl-qs1000.yaml conf/base/scoring/wsl/scoring-wsl-qs2000.yaml conf/base/scoring/wsl/scoring-wsl-qs3000.yaml conf/base/scoring/wsl/scoring-wsl-qs4000.yaml conf/base/scoring/wsl/scoring-wsl-qs5000.yaml conf/base/scoring/wsl/scoring-wsl-qs6000.yaml
@@ -40,4 +41,4 @@ wake_events:
 	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/wakesurfing/rus/$(discipline)_$(category).yaml
 
 events:
-	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/surfing/rus/$(discipline)_$(category).yaml
+	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/surfing/$(org)/$(discipline)_$(category).yaml
