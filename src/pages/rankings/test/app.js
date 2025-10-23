@@ -1,4 +1,5 @@
 const JSON_BASE_PATH = '../../../data/rankings/';
+const TRENDS_BASE_PATH = '../../../data/trends/';
 const AVATARS_ENABLED = false;
 const transliterate = window.slugify;
 
@@ -65,19 +66,58 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
-function createAthleteRow(athlete, years, athleteYearData) {
+// Функция для рендеринга тренда
+function renderTrend(trendInfo) {
+    if (!trendInfo) return '<div class="trend-cell">—</div>';
+
+    const { trend, rank_change } = trendInfo;
+
+    switch (trend) {
+        case 'up':
+            return `
+                <div class="trend-up" title="Улучшил позицию на ${rank_change}">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 4L14 10H2L8 4Z"/>
+                    </svg>
+                    <span>+${rank_change}</span>
+                </div>
+            `;
+        case 'down':
+            return `
+                <div class="trend-down" title="Ухудшил позицию на ${Math.abs(rank_change)}">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 12L2 6H14L8 12Z"/>
+                    </svg>
+                    <span>${rank_change}</span>
+                </div>
+            `;
+        case 'stable':
+            return `
+                <div class="trend-stable" title="Позиция не изменилась">
+                    <span>—</span>
+                </div>
+            `;
+        case 'new':
+            return `
+                <div class="trend-new" title="Новый спортсмен в рейтинге">
+                    <span>NEW</span>
+                </div>
+            `;
+        case 'dropped':
+            return `
+                <div class="trend-dropped" title="Выбыл из рейтинга">
+                    <span>OUT</span>
+                </div>
+            `;
+        default:
+            return '<div class="trend-cell">—</div>';
+    }
+}
+
+function createAthleteRow(athlete, years, athleteYearData, trendsData) {
     const bestResult = athlete.best_result
-        ? `
-            <div class="best-result-compact">
-                <div class="best-result-main">
-                    ${athlete.best_result.place} место
-                </div>
-                <div class="best-result-details">
-                    ${athlete.best_result.event_name} ${athlete.best_result.event_year}
-                </div>
-            </div>
-          `
-        : '<div class="text-muted">Нет данных</div>';
+        ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
+        : 'Нет данных';
 
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
     const initials = (surname[0] || '') + (firstName[0] || '');
@@ -99,6 +139,12 @@ function createAthleteRow(athlete, years, athleteYearData) {
     } else {
         avatarHTML = `<div class="avatar-fallback" style="display:flex">${initials}</div>`;
     }
+
+    // Получить данные тренда для спортсмена
+    const trendInfo = trendsData ? trendsData.comparison_data.find(item => item.athlete_id === athlete.id) : null;
+
+    // Создать HTML для тренда
+    const trendHTML = renderTrend(trendInfo);
 
     const yearCells = years.map(year => {
         const yearData = athleteYearData[athlete.id]?.[year];
@@ -134,6 +180,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
     return `
         <tr class="${rowClass}">
             <td class="fw-bold">${athlete.rank}</td>
+            <td class="trend-cell">${trendHTML}</td>
             <td class="name-cell">
                 <div class="avatar-wrapper">
                     <div class="athlete-avatar">
@@ -145,7 +192,7 @@ function createAthleteRow(athlete, years, athleteYearData) {
                     </div>
                 </div>
             </td>
-            <td class="best-result-cell">${bestResult}</td>
+            <td class="year-points">${bestResult}</td>
             ${yearCells}
             <td class="total-points fw-bold">${athlete.total_points}</td>
         </tr>
@@ -170,6 +217,18 @@ async function loadData(competition, category, gender) {
     }
 }
 
+// Функция для загрузки трендов
+async function loadTrends(competition, category, gender) {
+    const path = `${TRENDS_BASE_PATH}${competition}/${category}/trends_${gender}.json?t=${Date.now()}`;
+    try {
+        const response = await fetch(path);
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading trends:', error);
+        return null;
+    }
+}
+
 function normalizeData(data) {
     document.getElementById('last-updated').textContent = data.last_updated || '-';
 
@@ -185,21 +244,11 @@ function normalizeData(data) {
 
     normalized.overall_ranking = (data.overall_ranking || []).map(item => {
         const athlete = athletesMap[item.athlete_id] || {};
-
-        let bestResult = item.best_result;
-        if (bestResult && bestResult.event_id) {
-            const eventInfo = eventsMap[bestResult.event_id] || {};
-            bestResult = {
-                ...bestResult,
-                event_name: eventInfo.name || 'Неизвестное событие'
-            };
-        }
-
         return {
             id: item.athlete_id,
             rank: item.rank,
             total_points: item.total_points,
-            best_result: bestResult,
+            best_result: item.best_result,
             name: athlete.name || 'Неизвестный спортсмен',
             region: athlete.region || ''
         };
@@ -235,6 +284,8 @@ function normalizeData(data) {
 
 async function updateTable(gender) {
     const data = await loadData(currentCompetition, currentDiscipline, gender);
+    const trendsData = await loadTrends(currentCompetition, currentDiscipline, gender);
+
     const athletes = data.overall_ranking;
     const years = data.years;
 
@@ -248,6 +299,12 @@ async function updateTable(gender) {
             <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col" class="trend-column">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="trend-icon">
+                            <path d="M8 4L14 10H2L8 4Z"/>
+                        </svg>
+                        Тренд
+                    </th>
                     <th scope="col">Имя</th>
                     <th scope="col">Лучший результат</th>
                     ${years.map(year => `<th scope="col">${year}</th>`).join('')}
@@ -255,7 +312,7 @@ async function updateTable(gender) {
                 </tr>
             </thead>
             <tbody>
-                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData)).join('')}
+                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData, trendsData)).join('')}
             </tbody>
         </table>
     `;
@@ -335,7 +392,6 @@ document.addEventListener('DOMContentLoaded', () => {
             currentCompetition = competition;
             competitionLabel.textContent = this.textContent;
             updateDisciplineSelect(competition);
-
 
             const activeGender = document.querySelector('.gender-btn.active').dataset.gender;
             updateTable(activeGender);
