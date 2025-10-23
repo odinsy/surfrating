@@ -192,15 +192,14 @@ function createAthleteRow(athlete, years, athleteYearData, trendsData) {
                 </div>
             </td>
             <td class="year-points">${bestResult}</td>
-            ${yearCells}
-            <td class="total-points fw-bold">${athlete.total_points}</td>
-            <!-- Новые ячейки с трендами -->
             <td class="rank-change ${trendType || ''}">
                 ${formatTrendChange(rankChange, 'rank')}
             </td>
             <td class="points-change ${trendType || ''}">
                 ${formatTrendChange(pointsChange, 'points')}
             </td>
+            ${yearCells}
+            <td class="total-points fw-bold">${athlete.total_points}</td>
         </tr>
     `;
 }
