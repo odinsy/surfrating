@@ -139,10 +139,7 @@ function createAthleteRow(athlete, years, athleteYearData, trendsData) {
         avatarHTML = `<div class="avatar-fallback" style="display:flex">${initials}</div>`;
     }
 
-    // Получить данные тренда для спортсмена
     const trendInfo = trendsData ? trendsData.comparison_data.find(item => item.athlete_id === athlete.id) : null;
-
-    // Создать HTML для тренда
     const trendHTML = renderTrend(trendInfo);
 
     const yearCells = years.map(year => {
@@ -302,7 +299,9 @@ async function updateTable(gender) {
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="trend-icon">
                             <path d="M8 4L14 10H2L8 4Z"/>
                         </svg>
-                        Тренд
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="trend-icon">
+                            <path d="M8 12L2 6H14L8 12Z"/>
+                        </svg>
                     </th>
                     <th scope="col">Имя</th>
                     <th scope="col">Лучший результат</th>
