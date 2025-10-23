@@ -304,10 +304,10 @@ async function updateTable(gender) {
                     <th scope="col">#</th>
                     <th scope="col">Имя</th>
                     <th scope="col">Лучший результат</th>
-                    ${years.map(year => `<th scope="col">${year}</th>`).join('')}
-                    <th scope="col">Всего</th>
                     <th scope="col">Изменение позиции</th>
                     <th scope="col">Изменение очков</th>
+                    ${years.map(year => `<th scope="col">${year}</th>`).join('')}
+                    <th scope="col">Всего</th>
                 </tr>
             </thead>
             <tbody>
