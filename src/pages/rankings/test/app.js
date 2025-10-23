@@ -66,7 +66,6 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
-// Функция для рендеринга тренда
 function renderTrend(trendInfo) {
     if (!trendInfo) return '<div class="trend-cell">—</div>';
 
@@ -79,7 +78,7 @@ function renderTrend(trendInfo) {
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                         <path d="M8 4L14 10H2L8 4Z"/>
                     </svg>
-                    <span>+${rank_change}</span>
+                    <span>${rank_change}</span>
                 </div>
             `;
         case 'down':
@@ -88,7 +87,7 @@ function renderTrend(trendInfo) {
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                         <path d="M8 12L2 6H14L8 12Z"/>
                     </svg>
-                    <span>${rank_change}</span>
+                    <span>${Math.abs(rank_change)}</span>
                 </div>
             `;
         case 'stable':
