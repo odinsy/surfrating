@@ -1,4 +1,5 @@
 const JSON_BASE_PATH = '../../../data/rankings/';
+const TRENDS_BASE_PATH = '../../../data/rankings/';
 const AVATARS_ENABLED = false;
 const transliterate = window.slugify;
 
@@ -65,19 +66,59 @@ function hideTooltip(id) {
     if (tooltip) tooltip.style.display = 'none';
 }
 
-function createAthleteRow(athlete, years, athleteYearData) {
+async function loadTrendsData(competition, category, gender) {
+    const path = `${TRENDS_BASE_PATH}${competition}/${category}/trends_${gender}.json?t=${Date.now()}`;
+    try {
+        const response = await fetch(path);
+        if (!response.ok) return null;
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error loading trends data:', error);
+        return null;
+    }
+}
+
+function formatTrendChange(change, type) {
+    if (change === null || change === undefined) return '—';
+
+    const absChange = Math.abs(change);
+    let symbol = '';
+    let cssClass = '';
+
+    if (type === 'rank') {
+        if (change > 0) {
+            symbol = '↑';
+            cssClass = 'trend-up';
+        } else if (change < 0) {
+            symbol = '↓';
+            cssClass = 'trend-down';
+        } else {
+            symbol = '→';
+            cssClass = 'trend-stable';
+        }
+        return `<span class="${cssClass}">${symbol} ${absChange}</span>`;
+    } else if (type === 'points') {
+        if (change > 0) {
+            symbol = '+';
+            cssClass = 'trend-up';
+        } else if (change < 0) {
+            symbol = '-';
+            cssClass = 'trend-down';
+        } else {
+            symbol = '';
+            cssClass = 'trend-stable';
+        }
+        return `<span class="${cssClass}">${symbol}${absChange}</span>`;
+    }
+
+    return change;
+}
+
+function createAthleteRow(athlete, years, athleteYearData, trendsData) {
     const bestResult = athlete.best_result
-        ? `
-            <div class="best-result-compact">
-                <div class="best-result-main">
-                    ${athlete.best_result.place} место
-                </div>
-                <div class="best-result-details">
-                    ${athlete.best_result.event_name} ${athlete.best_result.event_year}
-                </div>
-            </div>
-          `
-        : '<div class="text-muted">Нет данных</div>';
+        ? `${athlete.best_result.place} в ${athlete.best_result.event_year}`
+        : 'Нет данных';
 
     const [surname = '', firstName = ''] = athlete.name.split(/\s+/);
     const initials = (surname[0] || '') + (firstName[0] || '');
@@ -128,6 +169,11 @@ function createAthleteRow(athlete, years, athleteYearData) {
         `;
     }).join('');
 
+    const athleteTrends = trendsData?.comparison_data?.find(item => item.athlete_id === athlete.id);
+    const rankChange = athleteTrends?.rank_change;
+    const pointsChange = athleteTrends?.points_change;
+    const trendType = athleteTrends?.trend;
+
     const isTop10 = athlete.rank <= 10;
     const rowClass = isTop10 ? 'top-10' : '';
 
@@ -145,9 +191,16 @@ function createAthleteRow(athlete, years, athleteYearData) {
                     </div>
                 </div>
             </td>
-            <td class="best-result-cell">${bestResult}</td>
+            <td class="year-points">${bestResult}</td>
             ${yearCells}
             <td class="total-points fw-bold">${athlete.total_points}</td>
+            <!-- Новые ячейки с трендами -->
+            <td class="rank-change ${trendType || ''}">
+                ${formatTrendChange(rankChange, 'rank')}
+            </td>
+            <td class="points-change ${trendType || ''}">
+                ${formatTrendChange(pointsChange, 'points')}
+            </td>
         </tr>
     `;
 }
@@ -155,9 +208,18 @@ function createAthleteRow(athlete, years, athleteYearData) {
 async function loadData(competition, category, gender) {
     const path = `${JSON_BASE_PATH}${competition}/${category}/ranking_${gender}.json?t=${Date.now()}`;
     try {
-        const response = await fetch(path);
-        const data = await response.json();
-        return normalizeData(data);
+        const [dataResponse, trendsResponse] = await Promise.all([
+            fetch(path),
+            loadTrendsData(competition, category, gender)
+        ]);
+
+        const data = await dataResponse.json();
+        const trendsData = trendsResponse;
+
+        return {
+            ...normalizeData(data),
+            trendsData: trendsData
+        };
     } catch (error) {
         console.error('Error loading data:', error);
         document.getElementById('last-updated').textContent = 'Ошибка загрузки';
@@ -165,7 +227,8 @@ async function loadData(competition, category, gender) {
             overall_ranking: [],
             athleteYearData: {},
             years: [],
-            last_updated: 'Ошибка'
+            last_updated: 'Ошибка',
+            trendsData: null
         };
     }
 }
@@ -185,21 +248,11 @@ function normalizeData(data) {
 
     normalized.overall_ranking = (data.overall_ranking || []).map(item => {
         const athlete = athletesMap[item.athlete_id] || {};
-
-        let bestResult = item.best_result;
-        if (bestResult && bestResult.event_id) {
-            const eventInfo = eventsMap[bestResult.event_id] || {};
-            bestResult = {
-                ...bestResult,
-                event_name: eventInfo.name || 'Неизвестное событие'
-            };
-        }
-
         return {
             id: item.athlete_id,
             rank: item.rank,
             total_points: item.total_points,
-            best_result: bestResult,
+            best_result: item.best_result,
             name: athlete.name || 'Неизвестный спортсмен',
             region: athlete.region || ''
         };
@@ -237,6 +290,7 @@ async function updateTable(gender) {
     const data = await loadData(currentCompetition, currentDiscipline, gender);
     const athletes = data.overall_ranking;
     const years = data.years;
+    const trendsData = data.trendsData;
 
     if (!athletes || athletes.length === 0) {
         document.getElementById('ranking-table-container').innerHTML = '<p class="text-center py-4">Нет данных для отображения</p>';
@@ -252,10 +306,12 @@ async function updateTable(gender) {
                     <th scope="col">Лучший результат</th>
                     ${years.map(year => `<th scope="col">${year}</th>`).join('')}
                     <th scope="col">Всего</th>
+                    <th scope="col">Изменение позиции</th>
+                    <th scope="col">Изменение очков</th>
                 </tr>
             </thead>
             <tbody>
-                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData)).join('')}
+                ${athletes.map(a => createAthleteRow(a, years, data.athleteYearData, trendsData)).join('')}
             </tbody>
         </table>
     `;

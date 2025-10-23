@@ -1,0 +1,41 @@
+.trend-up {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.trend-down {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.trend-stable {
+    color: #6c757d;
+}
+
+.trend-new {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.rank-change, .points-change {
+    text-align: center;
+    font-weight: 500;
+}
+
+tr.trend-up {
+    background-color: rgba(40, 167, 69, 0.05);
+}
+
+tr.trend-down {
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+tr.trend-new {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+    .rank-change, .points-change {
+        font-size: 0.875rem;
+    }
+}

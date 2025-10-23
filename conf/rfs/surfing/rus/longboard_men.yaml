@@ -2,10 +2,13 @@
 discipline: "longboard"
 gender: "men"
 
+# current_year: 2024
+# allowed_years: [2022, 2023, 2024]
 current_year: 2025
 allowed_years: [2023, 2024, 2025]
 
 input_paths:
+  # - data/rfs/surfing/_rus/longboard/longboard_men_2022.csv
   - data/rfs/surfing/_rus/longboard/longboard_men_2023.csv
   - data/rfs/surfing/_rus/longboard/longboard_men_2024.csv
   - data/rfs/surfing/_rus/longboard/longboard_men_2025.csv
