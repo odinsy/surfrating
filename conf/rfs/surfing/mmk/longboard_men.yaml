@@ -1,0 +1,12 @@
+---
+discipline: "longboard"
+gender: "men"
+
+input_paths:
+  - data/rfs/surfing/mmk/longboard/longboard-men-*.csv
+
+output:
+  filename: output/rankings/rfs/mmk/longboard/men.csv
+  top5_filename: output/rankings/rfs/mmk/longboard/top5_men.csv
+  ranking_json: output/rankings/rfs/mmk/longboard/ranking_men.json
+  events_json: output/rankings/rfs/mmk/longboard/events_men.json

@@ -6,6 +6,7 @@ input_paths:
   - data/rfs/surfing/dfo/longboard/longboard-men-*.csv
   - data/rfs/surfing/vdk/longboard/longboard-men-2024.csv
   - data/rfs/surfing/vdk/longboard/longboard-men-2025.csv
+  - data/rfs/surfing/ptk/longboard/longboard-men-*.csv
 
 output:
   filename: output/rankings/rfs/dfo/longboard/men.csv
