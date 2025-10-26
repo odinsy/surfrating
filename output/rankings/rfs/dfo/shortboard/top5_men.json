@@ -1,0 +1,294 @@
+{
+  "discipline": "shortboard",
+  "gender": "men",
+  "last_updated": "2025-10-26",
+  "events": {
+    "b76cfefc": {
+      "id": "b76cfefc",
+      "name": "Чемпионат Дальневосточного федерального округа",
+      "year": 2025,
+      "date": "2025.07.03",
+      "discipline": "короткая доска",
+      "category": "мужчины",
+      "group": "cross_regional",
+      "participants_count": 8
+    }
+  },
+  "athletes": {
+    "20057644": {
+      "name": "Суворов Алексей",
+      "region": "Приморский край",
+      "sport_rank": "2",
+      "birth_year": 1989
+    },
+    "8974cb53": {
+      "name": "Чемодуров Юрий",
+      "region": "Сахалинская область",
+      "sport_rank": "2",
+      "birth_year": 1990
+    },
+    "63d0d0e9": {
+      "name": "Рада Николай",
+      "region": "Сахалинская область",
+      "sport_rank": "3",
+      "birth_year": 1985
+    },
+    "9507c7d4": {
+      "name": "Корытко Константин",
+      "region": "Сахалинская область",
+      "sport_rank": "3",
+      "birth_year": 1988
+    },
+    "a03c2703": {
+      "name": "Эгле Вячеслав",
+      "region": "Сахалинская область",
+      "sport_rank": "2",
+      "birth_year": 1994
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "20057644",
+      "event_id": "b76cfefc",
+      "place": 1,
+      "points": 3000,
+      "round_name": "final",
+      "round_place": "1"
+    },
+    {
+      "athlete_id": "8974cb53",
+      "event_id": "b76cfefc",
+      "place": 2,
+      "points": 2340,
+      "round_name": "final",
+      "round_place": "2"
+    },
+    {
+      "athlete_id": "63d0d0e9",
+      "event_id": "b76cfefc",
+      "place": 3,
+      "points": 1825,
+      "round_name": "final",
+      "round_place": "3"
+    },
+    {
+      "athlete_id": "9507c7d4",
+      "event_id": "b76cfefc",
+      "place": 4,
+      "points": 1675,
+      "round_name": "final",
+      "round_place": "4"
+    },
+    {
+      "athlete_id": "a03c2703",
+      "event_id": "b76cfefc",
+      "place": 5,
+      "points": 1423,
+      "round_name": "semifinal",
+      "round_place": "3"
+    }
+  ],
+  "year_rankings": {
+    "2025": {
+      "athletes": [
+        {
+          "athlete_id": "20057644",
+          "year_points": 3000,
+          "events": [
+            {
+              "event_id": "b76cfefc",
+              "place": 1,
+              "points": 3000
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "athlete_id": "8974cb53",
+          "year_points": 2340,
+          "events": [
+            {
+              "event_id": "b76cfefc",
+              "place": 2,
+              "points": 2340
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "athlete_id": "63d0d0e9",
+          "year_points": 1825,
+          "events": [
+            {
+              "event_id": "b76cfefc",
+              "place": 3,
+              "points": 1825
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "athlete_id": "9507c7d4",
+          "year_points": 1675,
+          "events": [
+            {
+              "event_id": "b76cfefc",
+              "place": 4,
+              "points": 1675
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "athlete_id": "a03c2703",
+          "year_points": 1423,
+          "events": [
+            {
+              "event_id": "b76cfefc",
+              "place": 5,
+              "points": 1423
+            }
+          ],
+          "rank": 5
+        }
+      ]
+    }
+  },
+  "overall_ranking": [
+    {
+      "athlete_id": "20057644",
+      "rank": 1,
+      "total_points": 3000,
+      "best_result": {
+        "event_name": "Чемпионат Дальневосточного федерального округа",
+        "event_year": "2025",
+        "place": 1,
+        "points": 3000,
+        "event_group": "cross_regional",
+        "participants_count": 8,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Дальневосточного федерального округа",
+            "event_year": "2025",
+            "place": 1,
+            "points": 3000
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 3000
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "8974cb53",
+      "rank": 2,
+      "total_points": 2340,
+      "best_result": {
+        "event_name": "Чемпионат Дальневосточного федерального округа",
+        "event_year": "2025",
+        "place": 2,
+        "points": 2340,
+        "event_group": "cross_regional",
+        "participants_count": 8,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Дальневосточного федерального округа",
+            "event_year": "2025",
+            "place": 2,
+            "points": 2340
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 2340
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "63d0d0e9",
+      "rank": 3,
+      "total_points": 1825,
+      "best_result": {
+        "event_name": "Чемпионат Дальневосточного федерального округа",
+        "event_year": "2025",
+        "place": 3,
+        "points": 1825,
+        "event_group": "cross_regional",
+        "participants_count": 8,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Дальневосточного федерального округа",
+            "event_year": "2025",
+            "place": 3,
+            "points": 1825
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 1825
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "9507c7d4",
+      "rank": 4,
+      "total_points": 1675,
+      "best_result": {
+        "event_name": "Чемпионат Дальневосточного федерального округа",
+        "event_year": "2025",
+        "place": 4,
+        "points": 1675,
+        "event_group": "cross_regional",
+        "participants_count": 8,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Дальневосточного федерального округа",
+            "event_year": "2025",
+            "place": 4,
+            "points": 1675
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 1675
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "a03c2703",
+      "rank": 5,
+      "total_points": 1423,
+      "best_result": {
+        "event_name": "Чемпионат Дальневосточного федерального округа",
+        "event_year": "2025",
+        "place": 5,
+        "points": 1423,
+        "event_group": "cross_regional",
+        "participants_count": 8,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Дальневосточного федерального округа",
+            "event_year": "2025",
+            "place": 5,
+            "points": 1423
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 1423
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    }
+  ]
+}
