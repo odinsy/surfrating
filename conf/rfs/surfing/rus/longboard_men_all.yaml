@@ -4,7 +4,8 @@ gender: "men"
 
 current_year: 2025
 # allowed_years: [2025]
-allowed_years: [2023, 2024, 2025]
+allowed_years: [2024, 2025]
+# allowed_years: [2023, 2024, 2025]
 
 input_paths:
   - data/rfs/surfing/_rus/longboard/longboard_men_2023.csv
@@ -27,8 +28,8 @@ input_paths:
   - data/rfs/surfing/vdk/longboard/longboard-men-2024.csv
   - data/rfs/surfing/vdk/longboard/longboard-men-2025.csv
 
-  # - data/rfs/surfing/dfo/longboard/longboard-men-2024.csv
-  # - data/rfs/surfing/dfo/longboard/longboard-men-2025.csv
+  - data/rfs/surfing/dfo/longboard/longboard-men-2024.csv
+  - data/rfs/surfing/dfo/longboard/longboard-men-2025.csv
 
 output:
   filename: output/rankings/rfs/rus/longboard/men.csv
