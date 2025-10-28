@@ -28,8 +28,8 @@ input_paths:
   - data/rfs/surfing/vdk/longboard/longboard-men-2024.csv
   - data/rfs/surfing/vdk/longboard/longboard-men-2025.csv
 
-  - data/rfs/surfing/dfo/longboard/longboard-men-2024.csv
-  - data/rfs/surfing/dfo/longboard/longboard-men-2025.csv
+  # - data/rfs/surfing/dfo/longboard/longboard-men-2024.csv
+  # - data/rfs/surfing/dfo/longboard/longboard-men-2025.csv
 
 output:
   filename: output/rankings/rfs/rus/longboard/men.csv
