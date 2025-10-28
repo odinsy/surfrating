@@ -3,24 +3,32 @@ discipline: "longboard"
 gender: "women"
 
 current_year: 2025
+# allowed_years: [2025]
 allowed_years: [2023, 2024, 2025]
 
 input_paths:
   - data/rfs/surfing/_rus/longboard/longboard_women_2023.csv
   - data/rfs/surfing/_rus/longboard/longboard_women_2024.csv
   - data/rfs/surfing/_rus/longboard/longboard_women_2025.csv
-  - data/rfs/surfing/dfo/longboard/longboard-women-2024.csv
-  - data/rfs/surfing/dfo/longboard/longboard-women-2025.csv
+
   - data/rfs/surfing/kgd/longboard/longboard-women-2024.csv
   - data/rfs/surfing/kgd/longboard/longboard-women-2025.csv
+
   - data/rfs/surfing/krd/longboard/longboard-women-2024.csv
   - data/rfs/surfing/krd/longboard/longboard-women-2025.csv
+
   - data/rfs/surfing/mmk/longboard/longboard-women-2025.csv
-  # - data/rfs/surfing/ptk/longboard/longboard-women-2025.csv
+
+  # - data/rfs/surfing/ptk/longboard/longboard-women-2024.csv
+
   - data/rfs/surfing/spb/longboard/longboard-women-2024.csv
   - data/rfs/surfing/spb/longboard/longboard-women-2025.csv
+
   - data/rfs/surfing/vdk/longboard/longboard-women-2024.csv
   - data/rfs/surfing/vdk/longboard/longboard-women-2025.csv
+
+  # - data/rfs/surfing/dfo/longboard/longboard-women-2024.csv
+  # - data/rfs/surfing/dfo/longboard/longboard-women-2025.csv
 
 output:
   filename: output/rankings/rfs/rus/longboard/women.csv
