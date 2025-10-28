@@ -1,7 +1,7 @@
 {
   "discipline": "longboard",
   "gender": "men",
-  "last_updated": "2025-10-25",
+  "last_updated": "2025-10-28",
   "events": {
     "e9bd861c": {
       "id": "e9bd861c",
@@ -32,26 +32,6 @@
       "category": "мужчины",
       "group": "main",
       "participants_count": 20
-    },
-    "4cd00904": {
-      "id": "4cd00904",
-      "name": "Чемпионат Дальневосточного федерального округа",
-      "year": 2024,
-      "date": "2024.06.24",
-      "discipline": "длинная доска",
-      "category": "мужчины",
-      "group": "cross_regional",
-      "participants_count": 15
-    },
-    "7c45e7e9": {
-      "id": "7c45e7e9",
-      "name": "Чемпионат Дальневосточного федерального округа",
-      "year": 2025,
-      "date": "2025.07.03",
-      "discipline": "длинная доска",
-      "category": "мужчины",
-      "group": "cross_regional",
-      "participants_count": 9
     },
     "3689ee74": {
       "id": "3689ee74",
@@ -103,6 +83,16 @@
       "group": "regional",
       "participants_count": 7
     },
+    "1eb0a491": {
+      "id": "1eb0a491",
+      "name": "Чемпионат Камчатского края",
+      "year": 2024,
+      "date": "2024.06.12-16",
+      "discipline": "длинная доска",
+      "category": "мужчины",
+      "group": "regional",
+      "participants_count": 8
+    },
     "9f13247d": {
       "id": "9f13247d",
       "name": "Чемпионат Санкт-Петербурга",
@@ -151,12 +141,6 @@
       "sport_rank": "МС",
       "birth_year": 1989
     },
-    "4344f68f": {
-      "name": "Филинов Даниил",
-      "region": "Приморский край",
-      "sport_rank": "",
-      "birth_year": 1985
-    },
     "521ae689": {
       "name": "Вахрушев Владимир",
       "region": "Санкт-Петербург",
@@ -174,6 +158,12 @@
       "region": "Санкт-Петербург",
       "sport_rank": "1",
       "birth_year": 1990
+    },
+    "4344f68f": {
+      "name": "Филинов Даниил",
+      "region": "Приморский край",
+      "sport_rank": "",
+      "birth_year": 1985
     }
   },
   "results": [
@@ -200,14 +190,6 @@
       "points": 2000,
       "round_name": "final",
       "round_place": "1"
-    },
-    {
-      "athlete_id": "4344f68f",
-      "event_id": "7c45e7e9",
-      "place": 2,
-      "points": 3120,
-      "round_name": "final",
-      "round_place": "2"
     },
     {
       "athlete_id": "4344f68f",
@@ -519,13 +501,8 @@
         },
         {
           "athlete_id": "4344f68f",
-          "year_points": 5120,
+          "year_points": 2000,
           "events": [
-            {
-              "event_id": "7c45e7e9",
-              "place": 2,
-              "points": 3120
-            },
             {
               "event_id": "2e75bb22",
               "place": 1,
@@ -631,61 +608,8 @@
       ]
     },
     {
-      "athlete_id": "4344f68f",
-      "rank": 2,
-      "total_points": 21865,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 1,
-        "points": 10000,
-        "event_group": "main",
-        "participants_count": 19,
-        "top_events": [
-          {
-            "event_name": "Чемпионат России",
-            "event_year": "2023",
-            "place": 1,
-            "points": 10000
-          },
-          {
-            "event_name": "Чемпионат России",
-            "event_year": "2024",
-            "place": 5,
-            "points": 4745
-          },
-          {
-            "event_name": "Чемпионат Дальневосточного федерального округа",
-            "event_year": "2025",
-            "place": 2,
-            "points": 3120
-          },
-          {
-            "event_name": "Чемпионат Приморского края",
-            "event_year": "2025",
-            "place": 1,
-            "points": 2000
-          },
-          {
-            "event_name": "Чемпионат Приморского края",
-            "event_year": "2024",
-            "place": 1,
-            "points": 2000
-          }
-        ],
-        "events_count": 5,
-        "avg_points": 4373
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2023,
-        2024,
-        2025
-      ]
-    },
-    {
       "athlete_id": "521ae689",
-      "rank": 3,
+      "rank": 2,
       "total_points": 21590,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -738,7 +662,7 @@
     },
     {
       "athlete_id": "37f66977",
-      "rank": 4,
+      "rank": 3,
       "total_points": 21015,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -791,7 +715,7 @@
     },
     {
       "athlete_id": "501c15a5",
-      "rank": 5,
+      "rank": 4,
       "total_points": 19985,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -834,6 +758,53 @@
         ],
         "events_count": 5,
         "avg_points": 3997
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2023,
+        2024,
+        2025
+      ]
+    },
+    {
+      "athlete_id": "4344f68f",
+      "rank": 5,
+      "total_points": 18745,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
+        "place": 1,
+        "points": 10000,
+        "event_group": "main",
+        "participants_count": 19,
+        "top_events": [
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2023",
+            "place": 1,
+            "points": 10000
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2024",
+            "place": 5,
+            "points": 4745
+          },
+          {
+            "event_name": "Чемпионат Приморского края",
+            "event_year": "2025",
+            "place": 1,
+            "points": 2000
+          },
+          {
+            "event_name": "Чемпионат Приморского края",
+            "event_year": "2024",
+            "place": 1,
+            "points": 2000
+          }
+        ],
+        "events_count": 4,
+        "avg_points": 4686
       },
       "last_year": 2025,
       "years_participated": [
