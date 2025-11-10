@@ -1,10 +1,10 @@
 # config.yaml
 
-scoring_system: wsl_csh
-current_year: 2025
+scoring_system: wsl_qs1000
+current_year: 2024
 top_n: 100
 # allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024]
-# allowed_years: [2022, 2023, 2024]
+allowed_years: [2021, 2022, 2023, 2024]
 
 input_paths:
   # - "data/rfs/surfing/shortboard/shortboard_men_*.csv"
@@ -61,13 +61,14 @@ bonuses:
     points: 50
 
 wildcard:
-  top_n: 16               # Максимальный рейтинг для отбора
-  min_participations: 1   # Минимальное количество участий
-  last_years_period: 3    # За последние N лет
-  min_best_place: 3       # Лучший результат за карьеру (4 - финал, 5-8 - полуфинал)
-
   ranking_file: output/rankings/rfs/rus/shortboard/ranking_men.json
   output_file: output/wildcard/shortboard_men.json
+
+  top_n: 64               # Максимальный рейтинг для отбора
+  min_participations: 1   # Минимальное количество участий
+  last_years_period: 4    # За последние N лет
+  max_best_place: 1
+  min_best_place: 4
 
   # ranking_file: output/rankings/rfs/rus/shortboard/ranking_women.json
   # output_file: output/wildcard/shortboard_women.json
