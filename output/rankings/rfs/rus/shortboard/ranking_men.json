@@ -1,18 +1,8 @@
 {
   "discipline": "shortboard",
   "gender": "men",
-  "last_updated": "2025-11-10",
+  "last_updated": "2025-11-11",
   "events": {
-    "ac396e20": {
-      "id": "ac396e20",
-      "name": "Всероссийская Спартакиада",
-      "year": 2022,
-      "date": "2022.09.10",
-      "discipline": "короткая доска",
-      "category": "мужчины",
-      "group": "main",
-      "participants_count": 17
-    },
     "ad01dda3": {
       "id": "ad01dda3",
       "name": "Чемпионат России",
@@ -72,6 +62,16 @@
       "category": "мужчины",
       "group": "main",
       "participants_count": 16
+    },
+    "ac396e20": {
+      "id": "ac396e20",
+      "name": "Всероссийская Спартакиада",
+      "year": 2022,
+      "date": "2022.09.10",
+      "discipline": "короткая доска",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 17
     },
     "ba37612e": {
       "id": "ba37612e",
@@ -177,8 +177,8 @@
     },
     "4c0dd27a": {
       "name": "Шеин Николай",
-      "region": "Приморский край",
-      "sport_rank": "3",
+      "region": "Магаданская область",
+      "sport_rank": "",
       "birth_year": 1986
     },
     "401fd82a": {
@@ -695,7 +695,7 @@
   "results": [
     {
       "athlete_id": "ea72f302",
-      "event_id": "ac396e20",
+      "event_id": "009220a3",
       "place": 1,
       "points": 1000,
       "round_name": "",
@@ -703,7 +703,7 @@
     },
     {
       "athlete_id": "ea72f302",
-      "event_id": "009220a3",
+      "event_id": "ac396e20",
       "place": 1,
       "points": 1000,
       "round_name": "",
@@ -726,66 +726,18 @@
       "round_place": ""
     },
     {
-      "athlete_id": "70d1824d",
-      "event_id": "ac396e20",
-      "place": 2,
-      "points": 800,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "70d1824d",
-      "event_id": "009220a3",
-      "place": 2,
-      "points": 800,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "70d1824d",
-      "event_id": "4191f7f3",
-      "place": 1,
-      "points": 1000,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6b449396",
-      "event_id": "ac396e20",
-      "place": 3,
-      "points": 650,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6b449396",
-      "event_id": "009220a3",
-      "place": 4,
-      "points": 600,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6b449396",
-      "event_id": "4191f7f3",
-      "place": 3,
-      "points": 650,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "b5929aff",
-      "event_id": "ac396e20",
-      "place": 4,
-      "points": 600,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
       "athlete_id": "b5929aff",
       "event_id": "009220a3",
       "place": 5,
       "points": 500,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "b5929aff",
+      "event_id": "ac396e20",
+      "place": 4,
+      "points": 600,
       "round_name": "",
       "round_place": ""
     },
@@ -806,10 +758,26 @@
       "round_place": ""
     },
     {
-      "athlete_id": "37f66977",
+      "athlete_id": "70d1824d",
+      "event_id": "009220a3",
+      "place": 2,
+      "points": 800,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "70d1824d",
       "event_id": "ac396e20",
-      "place": 5,
-      "points": 500,
+      "place": 2,
+      "points": 800,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "70d1824d",
+      "event_id": "4191f7f3",
+      "place": 1,
+      "points": 1000,
       "round_name": "",
       "round_place": ""
     },
@@ -818,6 +786,14 @@
       "event_id": "009220a3",
       "place": 3,
       "points": 650,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "37f66977",
+      "event_id": "ac396e20",
+      "place": 5,
+      "points": 500,
       "round_name": "",
       "round_place": ""
     },
@@ -842,310 +818,6 @@
       "event_id": "ba37612e",
       "place": 2,
       "points": 800,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6271e9af",
-      "event_id": "ac396e20",
-      "place": 6,
-      "points": 483,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6271e9af",
-      "event_id": "009220a3",
-      "place": 8,
-      "points": 403,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6271e9af",
-      "event_id": "4191f7f3",
-      "place": 6,
-      "points": 483,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6271e9af",
-      "event_id": "afb55946",
-      "place": "DNS",
-      "points": 0,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6271e9af",
-      "event_id": "ba37612e",
-      "place": 8,
-      "points": 403,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "4c0dd27a",
-      "event_id": "ac396e20",
-      "place": 7,
-      "points": 445,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "4c0dd27a",
-      "event_id": "009220a3",
-      "place": 22,
-      "points": 168,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "b832dcd8",
-      "event_id": "ac396e20",
-      "place": 8,
-      "points": 403,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "b832dcd8",
-      "event_id": "009220a3",
-      "place": 6,
-      "points": 483,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "b832dcd8",
-      "event_id": "4191f7f3",
-      "place": 11,
-      "points": 333,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "b832dcd8",
-      "event_id": "afb55946",
-      "place": 6,
-      "points": 483,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "b832dcd8",
-      "event_id": "ba37612e",
-      "place": 3,
-      "points": 650,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "401fd82a",
-      "event_id": "ac396e20",
-      "place": 9,
-      "points": 350,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "401fd82a",
-      "event_id": "009220a3",
-      "place": 15,
-      "points": 258,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "3b3fa5ed",
-      "event_id": "ac396e20",
-      "place": 10,
-      "points": 342,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "3b3fa5ed",
-      "event_id": "009220a3",
-      "place": 10,
-      "points": 342,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "3b3fa5ed",
-      "event_id": "4191f7f3",
-      "place": 15,
-      "points": 258,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "3b3fa5ed",
-      "event_id": "afb55946",
-      "place": "DNS",
-      "points": 0,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "3b3fa5ed",
-      "event_id": "ba37612e",
-      "place": 11,
-      "points": 333,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "4dcd3b30",
-      "event_id": "ac396e20",
-      "place": 11,
-      "points": 333,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "4dcd3b30",
-      "event_id": "009220a3",
-      "place": 17,
-      "points": 200,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "4dcd3b30",
-      "event_id": "4191f7f3",
-      "place": 17,
-      "points": 200,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "4dcd3b30",
-      "event_id": "afb55946",
-      "place": 13,
-      "points": 295,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "4dcd3b30",
-      "event_id": "ba37612e",
-      "place": 6,
-      "points": 483,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "cc2c5992",
-      "event_id": "ac396e20",
-      "place": 12,
-      "points": 314,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "41608f88",
-      "event_id": "ac396e20",
-      "place": 13,
-      "points": 295,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "41608f88",
-      "event_id": "009220a3",
-      "place": 14,
-      "points": 276,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "41608f88",
-      "event_id": "afb55946",
-      "place": 7,
-      "points": 445,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "41608f88",
-      "event_id": "ba37612e",
-      "place": 1,
-      "points": 1000,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "47209e7a",
-      "event_id": "ac396e20",
-      "place": 14,
-      "points": 276,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "47209e7a",
-      "event_id": "009220a3",
-      "place": 12,
-      "points": 314,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "5b05163f",
-      "event_id": "ac396e20",
-      "place": 15,
-      "points": 258,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "5b05163f",
-      "event_id": "009220a3",
-      "place": 13,
-      "points": 295,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "5b05163f",
-      "event_id": "4191f7f3",
-      "place": 10,
-      "points": 342,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "5b05163f",
-      "event_id": "afb55946",
-      "place": 8,
-      "points": 403,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "5b05163f",
-      "event_id": "ba37612e",
-      "place": 4,
-      "points": 600,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "6e758725",
-      "event_id": "ac396e20",
-      "place": 16,
-      "points": 239,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "02181a02",
-      "event_id": "ac396e20",
-      "place": 17,
-      "points": 200,
       "round_name": "",
       "round_place": ""
     },
@@ -1174,6 +846,110 @@
       "round_place": ""
     },
     {
+      "athlete_id": "6b449396",
+      "event_id": "009220a3",
+      "place": 4,
+      "points": 600,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "6b449396",
+      "event_id": "ac396e20",
+      "place": 3,
+      "points": 650,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "6b449396",
+      "event_id": "4191f7f3",
+      "place": 3,
+      "points": 650,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "b832dcd8",
+      "event_id": "009220a3",
+      "place": 6,
+      "points": 483,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "b832dcd8",
+      "event_id": "ac396e20",
+      "place": 8,
+      "points": 403,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "b832dcd8",
+      "event_id": "4191f7f3",
+      "place": 11,
+      "points": 333,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "b832dcd8",
+      "event_id": "afb55946",
+      "place": 6,
+      "points": 483,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "b832dcd8",
+      "event_id": "ba37612e",
+      "place": 3,
+      "points": 650,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "6271e9af",
+      "event_id": "009220a3",
+      "place": 8,
+      "points": 403,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "6271e9af",
+      "event_id": "ac396e20",
+      "place": 6,
+      "points": 483,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "6271e9af",
+      "event_id": "4191f7f3",
+      "place": 6,
+      "points": 483,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "6271e9af",
+      "event_id": "afb55946",
+      "place": "DNS",
+      "points": 0,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "6271e9af",
+      "event_id": "ba37612e",
+      "place": 8,
+      "points": 403,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
       "athlete_id": "333f4604",
       "event_id": "009220a3",
       "place": 9,
@@ -1182,10 +958,154 @@
       "round_place": ""
     },
     {
+      "athlete_id": "3b3fa5ed",
+      "event_id": "009220a3",
+      "place": 10,
+      "points": 342,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "3b3fa5ed",
+      "event_id": "ac396e20",
+      "place": 10,
+      "points": 342,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "3b3fa5ed",
+      "event_id": "4191f7f3",
+      "place": 15,
+      "points": 258,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "3b3fa5ed",
+      "event_id": "afb55946",
+      "place": "DNS",
+      "points": 0,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "3b3fa5ed",
+      "event_id": "ba37612e",
+      "place": 11,
+      "points": 333,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
       "athlete_id": "89e8cb68",
       "event_id": "009220a3",
       "place": 11,
       "points": 333,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "47209e7a",
+      "event_id": "009220a3",
+      "place": 12,
+      "points": 314,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "47209e7a",
+      "event_id": "ac396e20",
+      "place": 14,
+      "points": 276,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "5b05163f",
+      "event_id": "009220a3",
+      "place": 13,
+      "points": 295,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "5b05163f",
+      "event_id": "ac396e20",
+      "place": 15,
+      "points": 258,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "5b05163f",
+      "event_id": "4191f7f3",
+      "place": 10,
+      "points": 342,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "5b05163f",
+      "event_id": "afb55946",
+      "place": 8,
+      "points": 403,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "5b05163f",
+      "event_id": "ba37612e",
+      "place": 4,
+      "points": 600,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "41608f88",
+      "event_id": "009220a3",
+      "place": 14,
+      "points": 276,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "41608f88",
+      "event_id": "ac396e20",
+      "place": 13,
+      "points": 295,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "41608f88",
+      "event_id": "afb55946",
+      "place": 7,
+      "points": 445,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "41608f88",
+      "event_id": "ba37612e",
+      "place": 1,
+      "points": 1000,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "401fd82a",
+      "event_id": "009220a3",
+      "place": 15,
+      "points": 258,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "401fd82a",
+      "event_id": "ac396e20",
+      "place": 9,
+      "points": 350,
       "round_name": "",
       "round_place": ""
     },
@@ -1202,6 +1122,46 @@
       "event_id": "ba37612e",
       "place": 22,
       "points": 168,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "4dcd3b30",
+      "event_id": "009220a3",
+      "place": 17,
+      "points": 200,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "4dcd3b30",
+      "event_id": "ac396e20",
+      "place": 11,
+      "points": 333,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "4dcd3b30",
+      "event_id": "4191f7f3",
+      "place": 17,
+      "points": 200,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "4dcd3b30",
+      "event_id": "afb55946",
+      "place": 13,
+      "points": 295,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "4dcd3b30",
+      "event_id": "ba37612e",
+      "place": 6,
+      "points": 483,
       "round_name": "",
       "round_place": ""
     },
@@ -1242,6 +1202,22 @@
       "event_id": "009220a3",
       "place": 21,
       "points": 174,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "4c0dd27a",
+      "event_id": "009220a3",
+      "place": 22,
+      "points": 168,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "4c0dd27a",
+      "event_id": "ac396e20",
+      "place": 7,
+      "points": 445,
       "round_name": "",
       "round_place": ""
     },
@@ -1662,6 +1638,30 @@
       "round_place": ""
     },
     {
+      "athlete_id": "cc2c5992",
+      "event_id": "ac396e20",
+      "place": 12,
+      "points": 314,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "6e758725",
+      "event_id": "ac396e20",
+      "place": 16,
+      "points": 239,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "02181a02",
+      "event_id": "ac396e20",
+      "place": 17,
+      "points": 200,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
       "athlete_id": "2fc677f1",
       "event_id": "ba37612e",
       "place": 10,
@@ -1726,12 +1726,12 @@
           "year_points": 2000,
           "events": [
             {
-              "event_id": "ac396e20",
+              "event_id": "009220a3",
               "place": 1,
               "points": 1000
             },
             {
-              "event_id": "009220a3",
+              "event_id": "ac396e20",
               "place": 1,
               "points": 1000
             }
@@ -1743,12 +1743,12 @@
           "year_points": 1600,
           "events": [
             {
-              "event_id": "ac396e20",
+              "event_id": "009220a3",
               "place": 2,
               "points": 800
             },
             {
-              "event_id": "009220a3",
+              "event_id": "ac396e20",
               "place": 2,
               "points": 800
             }
@@ -1760,14 +1760,14 @@
           "year_points": 1250,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 3,
-              "points": 650
-            },
-            {
               "event_id": "009220a3",
               "place": 4,
               "points": 600
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 3,
+              "points": 650
             }
           ],
           "rank": 3
@@ -1777,14 +1777,14 @@
           "year_points": 1150,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 5,
-              "points": 500
-            },
-            {
               "event_id": "009220a3",
               "place": 3,
               "points": 650
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 5,
+              "points": 500
             }
           ],
           "rank": 4
@@ -1794,14 +1794,14 @@
           "year_points": 1100,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 4,
-              "points": 600
-            },
-            {
               "event_id": "009220a3",
               "place": 5,
               "points": 500
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 4,
+              "points": 600
             }
           ],
           "rank": 5
@@ -1811,14 +1811,14 @@
           "year_points": 886,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 8,
-              "points": 403
-            },
-            {
               "event_id": "009220a3",
               "place": 6,
               "points": 483
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 8,
+              "points": 403
             }
           ],
           "rank": 6
@@ -1828,14 +1828,14 @@
           "year_points": 886,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 6,
-              "points": 483
-            },
-            {
               "event_id": "009220a3",
               "place": 8,
               "points": 403
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 6,
+              "points": 483
             }
           ],
           "rank": 6
@@ -1845,12 +1845,12 @@
           "year_points": 684,
           "events": [
             {
-              "event_id": "ac396e20",
+              "event_id": "009220a3",
               "place": 10,
               "points": 342
             },
             {
-              "event_id": "009220a3",
+              "event_id": "ac396e20",
               "place": 10,
               "points": 342
             }
@@ -1862,14 +1862,14 @@
           "year_points": 613,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 7,
-              "points": 445
-            },
-            {
               "event_id": "009220a3",
               "place": 22,
               "points": 168
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 7,
+              "points": 445
             }
           ],
           "rank": 9
@@ -1879,14 +1879,14 @@
           "year_points": 608,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 9,
-              "points": 350
-            },
-            {
               "event_id": "009220a3",
               "place": 15,
               "points": 258
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 9,
+              "points": 350
             }
           ],
           "rank": 10
@@ -1896,14 +1896,14 @@
           "year_points": 590,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 14,
-              "points": 276
-            },
-            {
               "event_id": "009220a3",
               "place": 12,
               "points": 314
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 14,
+              "points": 276
             }
           ],
           "rank": 11
@@ -1913,14 +1913,14 @@
           "year_points": 571,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 13,
-              "points": 295
-            },
-            {
               "event_id": "009220a3",
               "place": 14,
               "points": 276
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 13,
+              "points": 295
             }
           ],
           "rank": 12
@@ -1930,14 +1930,14 @@
           "year_points": 553,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 15,
-              "points": 258
-            },
-            {
               "event_id": "009220a3",
               "place": 13,
               "points": 295
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 15,
+              "points": 258
             }
           ],
           "rank": 13
@@ -1947,14 +1947,14 @@
           "year_points": 533,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 11,
-              "points": 333
-            },
-            {
               "event_id": "009220a3",
               "place": 17,
               "points": 200
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 11,
+              "points": 333
             }
           ],
           "rank": 14
@@ -3194,13 +3194,13 @@
             "points": 1000
           },
           {
-            "event_name": "Всероссийская Спартакиада",
+            "event_name": "Чемпионат России",
             "event_year": "2022",
             "place": 1,
             "points": 1000
           },
           {
-            "event_name": "Чемпионат России",
+            "event_name": "Всероссийская Спартакиада",
             "event_year": "2022",
             "place": 1,
             "points": 1000
@@ -3295,13 +3295,13 @@
             "points": 1000
           },
           {
-            "event_name": "Всероссийская Спартакиада",
+            "event_name": "Чемпионат России",
             "event_year": "2022",
             "place": 2,
             "points": 800
           },
           {
-            "event_name": "Чемпионат России",
+            "event_name": "Всероссийская Спартакиада",
             "event_year": "2022",
             "place": 2,
             "points": 800
@@ -3665,21 +3665,21 @@
       "rank": 11,
       "total_points": 1275,
       "best_result": {
-        "event_name": "Всероссийская Спартакиада",
+        "event_name": "Чемпионат России",
         "event_year": "2022",
         "place": 10,
         "points": 342,
         "event_group": "main",
-        "participants_count": 17,
+        "participants_count": 26,
         "top_events": [
           {
-            "event_name": "Всероссийская Спартакиада",
+            "event_name": "Чемпионат России",
             "event_year": "2022",
             "place": 10,
             "points": 342
           },
           {
-            "event_name": "Чемпионат России",
+            "event_name": "Всероссийская Спартакиада",
             "event_year": "2022",
             "place": 10,
             "points": 342

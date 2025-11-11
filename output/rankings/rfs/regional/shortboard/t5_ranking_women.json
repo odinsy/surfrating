@@ -1,0 +1,334 @@
+{
+  "discipline": "shortboard",
+  "gender": "women",
+  "last_updated": "2025-11-11",
+  "events": {
+    "9e427ae0": {
+      "id": "9e427ae0",
+      "name": "Чемпионат Краснодарского края",
+      "year": 2024,
+      "date": "2024.04.21-22",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "regional",
+      "participants_count": 7
+    },
+    "ef3cdbf3": {
+      "id": "ef3cdbf3",
+      "name": "Чемпионат Краснодарского края",
+      "year": 2025,
+      "date": "2025.04.12",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "regional",
+      "participants_count": 6
+    },
+    "e3b06c5b": {
+      "id": "e3b06c5b",
+      "name": "Чемпионат Санкт-Петербурга",
+      "year": 2024,
+      "date": "2024.09.20",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "regional",
+      "participants_count": 6
+    },
+    "e8a98cfd": {
+      "id": "e8a98cfd",
+      "name": "Чемпионат Санкт-Петербурга",
+      "year": 2025,
+      "date": "2025.09.20",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "regional",
+      "participants_count": 6
+    },
+    "53c12248": {
+      "id": "53c12248",
+      "name": "Чемпионат ДФО",
+      "year": 2025,
+      "date": "2025.07.03",
+      "discipline": "короткая доска",
+      "category": "женщины",
+      "group": "cross_regional",
+      "participants_count": 6
+    }
+  },
+  "athletes": {
+    "3fb2c031": {
+      "name": "Пташко Ксения",
+      "region": "Краснодарский край",
+      "sport_rank": "б/р",
+      "birth_year": 1986
+    },
+    "dde638ba": {
+      "name": "Тимаревская Анастасия",
+      "region": "Санкт-Петербург",
+      "sport_rank": "",
+      "birth_year": 1986
+    },
+    "a8cee8ed": {
+      "name": "Вяткина Анна",
+      "region": "Сахалинская область",
+      "sport_rank": "1",
+      "birth_year": 1997
+    },
+    "7ad40cba": {
+      "name": "Кузьмина Маргарита",
+      "region": "Краснодарский край",
+      "sport_rank": "2",
+      "birth_year": 1992
+    },
+    "dbdf97d5": {
+      "name": "Терентьева Анастасия",
+      "region": "Санкт-Петербург",
+      "sport_rank": "",
+      "birth_year": 1994
+    }
+  },
+  "results": [
+    {
+      "athlete_id": "3fb2c031",
+      "event_id": "ef3cdbf3",
+      "place": 1,
+      "points": 1000,
+      "round_name": "final",
+      "round_place": "1"
+    },
+    {
+      "athlete_id": "7ad40cba",
+      "event_id": "ef3cdbf3",
+      "place": 2,
+      "points": 800,
+      "round_name": "final",
+      "round_place": "2"
+    },
+    {
+      "athlete_id": "dbdf97d5",
+      "event_id": "e8a98cfd",
+      "place": 2,
+      "points": 800,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "dde638ba",
+      "event_id": "e8a98cfd",
+      "place": 1,
+      "points": 1000,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "a8cee8ed",
+      "event_id": "53c12248",
+      "place": 1,
+      "points": 1000,
+      "round_name": "final",
+      "round_place": "1"
+    }
+  ],
+  "year_rankings": {
+    "2025": {
+      "athletes": [
+        {
+          "athlete_id": "3fb2c031",
+          "year_points": 1000,
+          "events": [
+            {
+              "event_id": "ef3cdbf3",
+              "place": 1,
+              "points": 1000
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "athlete_id": "dde638ba",
+          "year_points": 1000,
+          "events": [
+            {
+              "event_id": "e8a98cfd",
+              "place": 1,
+              "points": 1000
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "athlete_id": "a8cee8ed",
+          "year_points": 1000,
+          "events": [
+            {
+              "event_id": "53c12248",
+              "place": 1,
+              "points": 1000
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "athlete_id": "7ad40cba",
+          "year_points": 800,
+          "events": [
+            {
+              "event_id": "ef3cdbf3",
+              "place": 2,
+              "points": 800
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "athlete_id": "dbdf97d5",
+          "year_points": 800,
+          "events": [
+            {
+              "event_id": "e8a98cfd",
+              "place": 2,
+              "points": 800
+            }
+          ],
+          "rank": 4
+        }
+      ]
+    }
+  },
+  "overall_ranking": [
+    {
+      "athlete_id": "3fb2c031",
+      "rank": 1,
+      "total_points": 1000,
+      "best_result": {
+        "event_name": "Чемпионат Краснодарского края",
+        "event_year": "2025",
+        "place": 1,
+        "points": 1000,
+        "event_group": "regional",
+        "participants_count": 6,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Краснодарского края",
+            "event_year": "2025",
+            "place": 1,
+            "points": 1000
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 1000
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "dde638ba",
+      "rank": 2,
+      "total_points": 1000,
+      "best_result": {
+        "event_name": "Чемпионат Санкт-Петербурга",
+        "event_year": "2025",
+        "place": 1,
+        "points": 1000,
+        "event_group": "regional",
+        "participants_count": 6,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Санкт-Петербурга",
+            "event_year": "2025",
+            "place": 1,
+            "points": 1000
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 1000
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "a8cee8ed",
+      "rank": 3,
+      "total_points": 1000,
+      "best_result": {
+        "event_name": "Чемпионат ДФО",
+        "event_year": "2025",
+        "place": 1,
+        "points": 1000,
+        "event_group": "cross_regional",
+        "participants_count": 6,
+        "top_events": [
+          {
+            "event_name": "Чемпионат ДФО",
+            "event_year": "2025",
+            "place": 1,
+            "points": 1000
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 1000
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "7ad40cba",
+      "rank": 4,
+      "total_points": 800,
+      "best_result": {
+        "event_name": "Чемпионат Краснодарского края",
+        "event_year": "2025",
+        "place": 2,
+        "points": 800,
+        "event_group": "regional",
+        "participants_count": 6,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Краснодарского края",
+            "event_year": "2025",
+            "place": 2,
+            "points": 800
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 800
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "dbdf97d5",
+      "rank": 5,
+      "total_points": 800,
+      "best_result": {
+        "event_name": "Чемпионат Санкт-Петербурга",
+        "event_year": "2025",
+        "place": 2,
+        "points": 800,
+        "event_group": "regional",
+        "participants_count": 6,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Санкт-Петербурга",
+            "event_year": "2025",
+            "place": 2,
+            "points": 800
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 800
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    }
+  ]
+}

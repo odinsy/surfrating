@@ -1,18 +1,8 @@
 {
   "discipline": "shortboard",
   "gender": "men",
-  "last_updated": "2025-11-10",
+  "last_updated": "2025-11-11",
   "events": {
-    "ac396e20": {
-      "id": "ac396e20",
-      "name": "Всероссийская Спартакиада",
-      "year": 2022,
-      "date": "2022.09.10",
-      "discipline": "короткая доска",
-      "category": "мужчины",
-      "group": "main",
-      "participants_count": 17
-    },
     "ad01dda3": {
       "id": "ad01dda3",
       "name": "Чемпионат России",
@@ -73,6 +63,16 @@
       "group": "main",
       "participants_count": 16
     },
+    "ac396e20": {
+      "id": "ac396e20",
+      "name": "Всероссийская Спартакиада",
+      "year": 2022,
+      "date": "2022.09.10",
+      "discipline": "короткая доска",
+      "category": "мужчины",
+      "group": "main",
+      "participants_count": 17
+    },
     "ba37612e": {
       "id": "ba37612e",
       "name": "Чемпионат России",
@@ -119,7 +119,7 @@
   "results": [
     {
       "athlete_id": "ea72f302",
-      "event_id": "ac396e20",
+      "event_id": "009220a3",
       "place": 1,
       "points": 1000,
       "round_name": "",
@@ -127,7 +127,7 @@
     },
     {
       "athlete_id": "ea72f302",
-      "event_id": "009220a3",
+      "event_id": "ac396e20",
       "place": 1,
       "points": 1000,
       "round_name": "",
@@ -151,7 +151,7 @@
     },
     {
       "athlete_id": "70d1824d",
-      "event_id": "ac396e20",
+      "event_id": "009220a3",
       "place": 2,
       "points": 800,
       "round_name": "",
@@ -159,7 +159,7 @@
     },
     {
       "athlete_id": "70d1824d",
-      "event_id": "009220a3",
+      "event_id": "ac396e20",
       "place": 2,
       "points": 800,
       "round_name": "",
@@ -175,17 +175,17 @@
     },
     {
       "athlete_id": "37f66977",
-      "event_id": "ac396e20",
-      "place": 5,
-      "points": 500,
+      "event_id": "009220a3",
+      "place": 3,
+      "points": 650,
       "round_name": "",
       "round_place": ""
     },
     {
       "athlete_id": "37f66977",
-      "event_id": "009220a3",
-      "place": 3,
-      "points": 650,
+      "event_id": "ac396e20",
+      "place": 5,
+      "points": 500,
       "round_name": "",
       "round_place": ""
     },
@@ -215,17 +215,17 @@
     },
     {
       "athlete_id": "b832dcd8",
-      "event_id": "ac396e20",
-      "place": 8,
-      "points": 403,
+      "event_id": "009220a3",
+      "place": 6,
+      "points": 483,
       "round_name": "",
       "round_place": ""
     },
     {
       "athlete_id": "b832dcd8",
-      "event_id": "009220a3",
-      "place": 6,
-      "points": 483,
+      "event_id": "ac396e20",
+      "place": 8,
+      "points": 403,
       "round_name": "",
       "round_place": ""
     },
@@ -255,17 +255,17 @@
     },
     {
       "athlete_id": "41608f88",
-      "event_id": "ac396e20",
-      "place": 13,
-      "points": 295,
+      "event_id": "009220a3",
+      "place": 14,
+      "points": 276,
       "round_name": "",
       "round_place": ""
     },
     {
       "athlete_id": "41608f88",
-      "event_id": "009220a3",
-      "place": 14,
-      "points": 276,
+      "event_id": "ac396e20",
+      "place": 13,
+      "points": 295,
       "round_name": "",
       "round_place": ""
     },
@@ -294,12 +294,12 @@
           "year_points": 2000,
           "events": [
             {
-              "event_id": "ac396e20",
+              "event_id": "009220a3",
               "place": 1,
               "points": 1000
             },
             {
-              "event_id": "009220a3",
+              "event_id": "ac396e20",
               "place": 1,
               "points": 1000
             }
@@ -311,12 +311,12 @@
           "year_points": 1600,
           "events": [
             {
-              "event_id": "ac396e20",
+              "event_id": "009220a3",
               "place": 2,
               "points": 800
             },
             {
-              "event_id": "009220a3",
+              "event_id": "ac396e20",
               "place": 2,
               "points": 800
             }
@@ -328,14 +328,14 @@
           "year_points": 1150,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 5,
-              "points": 500
-            },
-            {
               "event_id": "009220a3",
               "place": 3,
               "points": 650
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 5,
+              "points": 500
             }
           ],
           "rank": 3
@@ -345,14 +345,14 @@
           "year_points": 886,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 8,
-              "points": 403
-            },
-            {
               "event_id": "009220a3",
               "place": 6,
               "points": 483
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 8,
+              "points": 403
             }
           ],
           "rank": 4
@@ -362,14 +362,14 @@
           "year_points": 571,
           "events": [
             {
-              "event_id": "ac396e20",
-              "place": 13,
-              "points": 295
-            },
-            {
               "event_id": "009220a3",
               "place": 14,
               "points": 276
+            },
+            {
+              "event_id": "ac396e20",
+              "place": 13,
+              "points": 295
             }
           ],
           "rank": 5
@@ -541,13 +541,13 @@
             "points": 1000
           },
           {
-            "event_name": "Всероссийская Спартакиада",
+            "event_name": "Чемпионат России",
             "event_year": "2022",
             "place": 1,
             "points": 1000
           },
           {
-            "event_name": "Чемпионат России",
+            "event_name": "Всероссийская Спартакиада",
             "event_year": "2022",
             "place": 1,
             "points": 1000
@@ -642,13 +642,13 @@
             "points": 1000
           },
           {
-            "event_name": "Всероссийская Спартакиада",
+            "event_name": "Чемпионат России",
             "event_year": "2022",
             "place": 2,
             "points": 800
           },
           {
-            "event_name": "Чемпионат России",
+            "event_name": "Всероссийская Спартакиада",
             "event_year": "2022",
             "place": 2,
             "points": 800
