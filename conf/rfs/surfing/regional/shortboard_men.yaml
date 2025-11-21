@@ -1,0 +1,42 @@
+---
+discipline: "shortboard"
+gender: "men"
+
+current_year: 2025
+allowed_years: [2025]
+
+input_paths:
+  - data/rfs/surfing/kgd/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/kgd/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/krd/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/krd/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/mmk/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/ptk/shortboard/shortboard-men-2024.csv
+
+  - data/rfs/surfing/spb/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/spb/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/vdk/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/vdk/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/dfo/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/dfo/shortboard/shortboard-men-2025.csv
+
+output:
+  filename: output/rankings/rfs/regional/shortboard/men.csv
+  top5_filename: output/rankings/rfs/regional/shortboard/t5_ranking_men.csv
+  ranking_json: output/rankings/rfs/regional/shortboard/ranking_men.json
+  events_json: output/rankings/rfs/regional/shortboard/events_men.json
+
+wildcard:
+  ranking_file: output/rankings/rfs/regional/shortboard/ranking_men.json
+  output_file: output/wildcard/shortboard_men.json
+
+  top_n: 64               # Максимальный рейтинг для отбора
+  min_participations: 1   # Минимальное количество участий
+  last_years_period: 1    # За последние N лет
+  max_best_place: 1
+  min_best_place: 32
