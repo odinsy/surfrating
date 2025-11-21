@@ -2,11 +2,17 @@
 discipline: "shortboard"
 gender: "men"
 
-current_year: 2024
-allowed_years: [2021, 2022, 2023, 2024]
+current_year: 2025
+# allowed_years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+allowed_years: [2022, 2023, 2024, 2025]
 
 input_paths:
-  - data/rfs/surfing/_rus/shortboard/shortboard_men_*.csv
+  # - data/rfs/surfing/_rus/shortboard/shortboard_men_*.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_men_2022.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_men_2022_spartakiad.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_men_2023.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_men_2024.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_men_2025.csv
 
 output:
   filename: output/rankings/rfs/rus/shortboard/men.csv
@@ -22,4 +28,4 @@ wildcard:
   min_participations: 1   # Минимальное количество участий
   last_years_period: 4    # За последние N лет
   max_best_place: 1
-  min_best_place: 4
+  min_best_place: 16
