@@ -80,17 +80,17 @@ wildcard:
   # output_file: output/wildcard/longboard_women.json
 
 trends:
-  input_ranking_file: output/rankings/surfing/shortboard_men.csv
-  output_general_file: output/trends/general_shortboard_men_stats.csv
-  output_detailed_file: output/trends/detailed_shortboard_men_stats.csv
+  # input_ranking_file: output/rankings/surfing/shortboard_women.csv
+  # output_general_file: output/trends/general_shortboard_men_stats.csv
+  # output_detailed_file: output/trends/detailed_shortboard_men_stats.csv
 
   # input_ranking_file: output/rankings/surfing/longboard_men.csv
   # output_general_file: output/trends/general_longboard_men_stats.csv
   # output_detailed_file: output/trends/detailed_longboard_men_stats.csv
 
-  # input_ranking_file: output/rankings/surfing/longboard_women.csv
-  # output_general_file: output/trends/general_longboard_women_stats.csv
-  # output_detailed_file: output/trends/detailed_longboard_women_stats.csv
+  input_ranking_file: output/rankings/rfs/rus/shortboard/women.csv
+  output_general_file: output/trends/general_shortboard_women_stats.csv
+  output_detailed_file: output/trends/detailed_shortboard_women_stats.csv
 
   # input_ranking_file: output/rankings/surfing/shortboard_women.csv
   # output_general_file: output/trends/general_shortboard_women_stats.csv
