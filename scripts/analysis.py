@@ -18,7 +18,7 @@ def normalize_region(region):
 
 def load_data(config):
     df = pd.read_csv(config["input_ranking_file"])
-    df['BirthYear'] = pd.to_numeric(df['Birthday'], errors='coerce')
+    df['BirthYear'] = pd.to_numeric(df['Birth Year'], errors='coerce')
     return df
 
 def get_active_athletes(df, years):
@@ -113,7 +113,7 @@ def calculate_detailed_stats(df, athletes, years, stats):
 def main():
     config = load_config()
     df = load_data(config)
-    years = [2017, 2018, 2019, 2021, 2022, 2023, 2024]
+    years = [2022, 2023, 2024, 2025]
 
     athletes = get_active_athletes(df, years)
     general_stats = calculate_general_stats(athletes, years)
