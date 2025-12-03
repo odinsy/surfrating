@@ -12,6 +12,9 @@ def deep_merge(source: Dict, overrides: Dict) -> Dict:
 
 def process_scoring_systems(config: Dict) -> None:
     for system_name, system_config in config.get('scoring', {}).items():
+        if 'mode' not in system_config:
+            system_config['mode'] = 'mixed'
+
         if 'place_based' in system_config:
             process_range_keys(system_config['place_based'])
 
@@ -41,12 +44,15 @@ def process_event_groups(config: Dict) -> None:
     event_groups.setdefault('default', {
         'coefficient': 1.0,
         'scoring_system': config.get('scoring_system', 'default'),
+        'scoring_mode': config.get('scoring_mode', 'mixed'),
         'events': []
     })
 
     for group_name, group_data in event_groups.items():
         if 'scoring_system' not in group_data:
             group_data['scoring_system'] = config.get('scoring_system', 'default')
+        if 'scoring_mode' not in group_data:
+            group_data['scoring_mode'] = config.get('scoring_mode', 'mixed')
 
     config['event_groups'] = event_groups
     config.setdefault('allowed_events', [])

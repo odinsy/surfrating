@@ -41,22 +41,16 @@ def generate_event_id(event_name: str, event_date: str, discipline: str, categor
     return hashlib.md5(base_string.encode('utf-8')).hexdigest()[:8]
 
 def extract_year(date_str: str) -> int:
-    """
-    Извлекает год из строки с датой.
-    Возвращает 0 только если действительно не удалось извлечь год.
-    """
     if not date_str or not date_str.strip():
         return 0
 
     date_str = date_str.strip()
 
     try:
-        # Пробуем распарсить как дату
         date = pd.to_datetime(date_str, dayfirst=True, errors='coerce')
         if not pd.isnull(date):
             return date.year
 
-        # Ищем год в строке (4 цифры подряд)
         match = re.search(r'\b(19|20)\d{2}\b', date_str)
         if match:
             return int(match.group())
