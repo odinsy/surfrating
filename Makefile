@@ -54,3 +54,9 @@ wake_events:
 
 events:
 	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/surfing/$(org)/$(discipline)_$(category).yaml
+
+diff:
+	python3 scripts/differ.py --old tmp/shortboard_2021_2024_men.json --new tmp/shortboard_2022_2025_men.json --output output/trends/rfs/rus/shortboard/trends_men --format json
+	python3 scripts/differ.py --old tmp/shortboard_2021_2024_women.json --new tmp/shortboard_2022_2025_women.json --output output/trends/rfs/rus/shortboard/trends_women --format json
+	python3 scripts/differ.py --old tmp/longboard_2021_2024_men.json --new tmp/longboard_2022_2025_men.json --output output/trends/rfs/rus/longboard/trends_men --format json
+	python3 scripts/differ.py --old tmp/longboard_2021_2024_women.json --new tmp/longboard_2022_2025_women.json --output output/trends/rfs/rus/longboard/trends_women --format json
