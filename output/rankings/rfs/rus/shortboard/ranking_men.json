@@ -439,6 +439,24 @@
       "sport_rank": "1",
       "birth_year": 1991
     },
+    "f96f36e7": {
+      "name": "Гончаров Матвей",
+      "region": "Санкт-Петербург",
+      "sport_rank": "3",
+      "birth_year": 2009
+    },
+    "17df018d": {
+      "name": "Морозов Мирон",
+      "region": "Камчатский край",
+      "sport_rank": "3",
+      "birth_year": 2007
+    },
+    "755699d3": {
+      "name": "Петухов Илья",
+      "region": "Санкт-Петербург",
+      "sport_rank": "3",
+      "birth_year": 2009
+    },
     "c1a3ec25": {
       "name": "Коновалов Александр",
       "region": "Мурманская область",
@@ -462,24 +480,6 @@
       "region": "Краснодарский край",
       "sport_rank": "3",
       "birth_year": 1992
-    },
-    "f96f36e7": {
-      "name": "Гончаров Матвей",
-      "region": "Санкт-Петербург",
-      "sport_rank": "3",
-      "birth_year": 2009
-    },
-    "17df018d": {
-      "name": "Морозов Мирон",
-      "region": "Камчатский край",
-      "sport_rank": "3",
-      "birth_year": 2007
-    },
-    "755699d3": {
-      "name": "Петухов Илья",
-      "region": "Санкт-Петербург",
-      "sport_rank": "3",
-      "birth_year": 2009
     }
   },
   "results": [
@@ -504,16 +504,16 @@
       "event_id": "afb55946",
       "place": 1,
       "points": 10000,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "round_place": "1"
     },
     {
       "athlete_id": "ea72f302",
       "event_id": "cf2df3bf",
       "place": 2,
       "points": 7800,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "round_place": "2"
     },
     {
       "athlete_id": "70d1824d",
@@ -536,8 +536,8 @@
       "event_id": "cf2df3bf",
       "place": 1,
       "points": 10000,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "round_place": "1"
     },
     {
       "athlete_id": "37f66977",
@@ -568,16 +568,16 @@
       "event_id": "afb55946",
       "place": 10,
       "points": 3320,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "37f66977",
       "event_id": "cf2df3bf",
       "place": 7,
       "points": 4545,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "6b449396",
@@ -616,16 +616,16 @@
       "event_id": "afb55946",
       "place": 12,
       "points": 3320,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "b5929aff",
       "event_id": "cf2df3bf",
       "place": 8,
       "points": 4545,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "b832dcd8",
@@ -656,16 +656,16 @@
       "event_id": "afb55946",
       "place": 6,
       "points": 4745,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "b832dcd8",
       "event_id": "cf2df3bf",
       "place": 13,
       "points": 3120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "4344f68f",
@@ -748,6 +748,14 @@
       "round_place": ""
     },
     {
+      "athlete_id": "3b3fa5ed",
+      "event_id": "cf2df3bf",
+      "place": "DNS",
+      "points": 0,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
       "athlete_id": "89e8cb68",
       "event_id": "009220a3",
       "place": 11,
@@ -800,16 +808,16 @@
       "event_id": "afb55946",
       "place": 8,
       "points": 4545,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "5b05163f",
       "event_id": "cf2df3bf",
       "place": 9,
       "points": 3320,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "41608f88",
@@ -840,16 +848,16 @@
       "event_id": "afb55946",
       "place": 7,
       "points": 4545,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "41608f88",
       "event_id": "cf2df3bf",
       "place": 3,
       "points": 6085,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "round_place": "3"
     },
     {
       "athlete_id": "401fd82a",
@@ -912,16 +920,16 @@
       "event_id": "afb55946",
       "place": 13,
       "points": 3120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "4dcd3b30",
       "event_id": "cf2df3bf",
       "place": 11,
       "points": 3320,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "8a6a7453",
@@ -960,8 +968,8 @@
       "event_id": "cf2df3bf",
       "place": 18,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r24",
+      "round_place": "3"
     },
     {
       "athlete_id": "4c0dd27a",
@@ -989,7 +997,7 @@
     },
     {
       "athlete_id": "78015942",
-      "event_id": "afb55946",
+      "event_id": "cf2df3bf",
       "place": "DNS",
       "points": 0,
       "round_name": "",
@@ -1016,8 +1024,8 @@
       "event_id": "cf2df3bf",
       "place": 24,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r24",
+      "round_place": "4"
     },
     {
       "athlete_id": "b5b585bd",
@@ -1088,16 +1096,16 @@
       "event_id": "afb55946",
       "place": 9,
       "points": 3320,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "3c79db90",
       "event_id": "cf2df3bf",
       "place": 21,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r24",
+      "round_place": "4"
     },
     {
       "athlete_id": "473f005c",
@@ -1160,16 +1168,16 @@
       "event_id": "afb55946",
       "place": 19,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "DNS"
     },
     {
       "athlete_id": "8974cb53",
       "event_id": "cf2df3bf",
       "place": 16,
       "points": 3120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "76e36928",
@@ -1208,8 +1216,8 @@
       "event_id": "cf2df3bf",
       "place": 12,
       "points": 3320,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "9507c7d4",
@@ -1240,8 +1248,8 @@
       "event_id": "afb55946",
       "place": 25,
       "points": 1700,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "4"
     },
     {
       "athlete_id": "54808984",
@@ -1256,192 +1264,192 @@
       "event_id": "afb55946",
       "place": 2,
       "points": 7800,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "round_place": "2"
     },
     {
       "athlete_id": "b3fd2e1c",
       "event_id": "cf2df3bf",
       "place": 4,
       "points": 5685,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "round_place": "4"
     },
     {
       "athlete_id": "c86cbb4b",
       "event_id": "afb55946",
       "place": 3,
       "points": 6085,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "round_place": "3"
     },
     {
       "athlete_id": "c86cbb4b",
       "event_id": "cf2df3bf",
       "place": 6,
       "points": 4745,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "281bca1d",
       "event_id": "afb55946",
       "place": 4,
       "points": 5685,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "round_place": "4"
     },
     {
       "athlete_id": "281bca1d",
       "event_id": "cf2df3bf",
       "place": 5,
       "points": 4745,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "dcd1875d",
       "event_id": "afb55946",
       "place": 5,
       "points": 4745,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "07ac4565",
       "event_id": "afb55946",
       "place": 11,
       "points": 3320,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "9507dd7c",
       "event_id": "afb55946",
       "place": 14,
       "points": 3120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "3"
     },
     {
       "athlete_id": "6e088094",
       "event_id": "afb55946",
       "place": 15,
       "points": 3120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "3"
     },
     {
       "athlete_id": "6e088094",
       "event_id": "cf2df3bf",
       "place": 10,
       "points": 3320,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "d132c6f2",
       "event_id": "afb55946",
       "place": 16,
       "points": 3120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "3"
     },
     {
       "athlete_id": "136b266e",
       "event_id": "afb55946",
       "place": 17,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "DNS"
     },
     {
       "athlete_id": "c535a4af",
       "event_id": "afb55946",
       "place": 18,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "3"
     },
     {
       "athlete_id": "05e197b1",
       "event_id": "afb55946",
       "place": 20,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "3"
     },
     {
       "athlete_id": "05e197b1",
       "event_id": "cf2df3bf",
       "place": 17,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r24",
+      "round_place": "3"
     },
     {
       "athlete_id": "4fd73489",
       "event_id": "afb55946",
       "place": 21,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "DNS"
     },
     {
       "athlete_id": "1244e52e",
       "event_id": "afb55946",
       "place": 22,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "3"
     },
     {
       "athlete_id": "1244e52e",
       "event_id": "cf2df3bf",
       "place": 22,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r24",
+      "round_place": "4"
     },
     {
       "athlete_id": "a44e36c5",
       "event_id": "afb55946",
       "place": 23,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "3"
     },
     {
       "athlete_id": "9a23e8f5",
       "event_id": "afb55946",
       "place": 24,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "3"
     },
     {
       "athlete_id": "c6dac83b",
       "event_id": "afb55946",
       "place": 26,
       "points": 1700,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "4"
     },
     {
       "athlete_id": "faebdd1c",
       "event_id": "afb55946",
       "place": 27,
       "points": 1700,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r32",
+      "round_place": "4"
     },
     {
       "athlete_id": "faebdd1c",
       "event_id": "cf2df3bf",
       "place": 19,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r24",
+      "round_place": "3"
     },
     {
       "athlete_id": "c1a3ec25",
@@ -1480,44 +1488,44 @@
       "event_id": "cf2df3bf",
       "place": 14,
       "points": 3120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "4"
     },
     {
       "athlete_id": "9f403538",
       "event_id": "cf2df3bf",
       "place": 15,
       "points": 3120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "quarterfinal",
+      "round_place": "3"
     },
     {
       "athlete_id": "58cbad5c",
       "event_id": "cf2df3bf",
       "place": 20,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r24",
+      "round_place": "3"
     },
     {
       "athlete_id": "85c53f81",
       "event_id": "cf2df3bf",
       "place": 23,
       "points": 1900,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r24",
+      "round_place": "4"
     },
     {
       "athlete_id": "e9f9196b",
       "event_id": "cf2df3bf",
       "place": 25,
       "points": 1700,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "r25",
+      "round_place": "3"
     },
     {
       "athlete_id": "f96f36e7",
-      "event_id": "afb55946",
+      "event_id": "cf2df3bf",
       "place": "DNS",
       "points": 0,
       "round_name": "",
@@ -1525,7 +1533,7 @@
     },
     {
       "athlete_id": "17df018d",
-      "event_id": "afb55946",
+      "event_id": "cf2df3bf",
       "place": "DNS",
       "points": 0,
       "round_name": "",
@@ -1533,7 +1541,7 @@
     },
     {
       "athlete_id": "755699d3",
-      "event_id": "afb55946",
+      "event_id": "cf2df3bf",
       "place": "DNS",
       "points": 0,
       "round_name": "",
@@ -2350,18 +2358,6 @@
           "rank": 28
         },
         {
-          "athlete_id": "78015942",
-          "year_points": 0,
-          "events": [
-            {
-              "event_id": "afb55946",
-              "place": "DNS",
-              "points": 0
-            }
-          ],
-          "rank": 28
-        },
-        {
           "athlete_id": "c1a3ec25",
           "year_points": 0,
           "events": [
@@ -2399,42 +2395,6 @@
         },
         {
           "athlete_id": "0ea9d7e9",
-          "year_points": 0,
-          "events": [
-            {
-              "event_id": "afb55946",
-              "place": "DNS",
-              "points": 0
-            }
-          ],
-          "rank": 28
-        },
-        {
-          "athlete_id": "f96f36e7",
-          "year_points": 0,
-          "events": [
-            {
-              "event_id": "afb55946",
-              "place": "DNS",
-              "points": 0
-            }
-          ],
-          "rank": 28
-        },
-        {
-          "athlete_id": "17df018d",
-          "year_points": 0,
-          "events": [
-            {
-              "event_id": "afb55946",
-              "place": "DNS",
-              "points": 0
-            }
-          ],
-          "rank": 28
-        },
-        {
-          "athlete_id": "755699d3",
           "year_points": 0,
           "events": [
             {
@@ -2748,6 +2708,66 @@
             }
           ],
           "rank": 25
+        },
+        {
+          "athlete_id": "3b3fa5ed",
+          "year_points": 0,
+          "events": [
+            {
+              "event_id": "cf2df3bf",
+              "place": "DNS",
+              "points": 0
+            }
+          ],
+          "rank": 26
+        },
+        {
+          "athlete_id": "78015942",
+          "year_points": 0,
+          "events": [
+            {
+              "event_id": "cf2df3bf",
+              "place": "DNS",
+              "points": 0
+            }
+          ],
+          "rank": 26
+        },
+        {
+          "athlete_id": "f96f36e7",
+          "year_points": 0,
+          "events": [
+            {
+              "event_id": "cf2df3bf",
+              "place": "DNS",
+              "points": 0
+            }
+          ],
+          "rank": 26
+        },
+        {
+          "athlete_id": "17df018d",
+          "year_points": 0,
+          "events": [
+            {
+              "event_id": "cf2df3bf",
+              "place": "DNS",
+              "points": 0
+            }
+          ],
+          "rank": 26
+        },
+        {
+          "athlete_id": "755699d3",
+          "year_points": 0,
+          "events": [
+            {
+              "event_id": "cf2df3bf",
+              "place": "DNS",
+              "points": 0
+            }
+          ],
+          "rank": 26
         }
       ]
     },
@@ -3700,11 +3720,12 @@
         "events_count": 3,
         "avg_points": 3320
       },
-      "last_year": 2024,
+      "last_year": 2025,
       "years_participated": [
         2022,
         2023,
-        2024
+        2024,
+        2025
       ]
     },
     {
@@ -5063,10 +5084,10 @@
         "events_count": 1,
         "avg_points": 1900
       },
-      "last_year": 2024,
+      "last_year": 2025,
       "years_participated": [
         2022,
-        2024
+        2025
       ]
     },
     {
@@ -5151,37 +5172,37 @@
       ]
     },
     {
-      "athlete_id": "c1a3ec25",
+      "athlete_id": "f96f36e7",
       "rank": 65,
       "total_points": 0,
       "best_result": null,
-      "last_year": 2024,
+      "last_year": 2025,
       "years_participated": [
-        2024
+        2025
       ]
     },
     {
-      "athlete_id": "893afcbc",
+      "athlete_id": "17df018d",
       "rank": 66,
       "total_points": 0,
       "best_result": null,
-      "last_year": 2024,
+      "last_year": 2025,
       "years_participated": [
-        2024
+        2025
       ]
     },
     {
-      "athlete_id": "187a27d3",
+      "athlete_id": "755699d3",
       "rank": 67,
       "total_points": 0,
       "best_result": null,
-      "last_year": 2024,
+      "last_year": 2025,
       "years_participated": [
-        2024
+        2025
       ]
     },
     {
-      "athlete_id": "0ea9d7e9",
+      "athlete_id": "c1a3ec25",
       "rank": 68,
       "total_points": 0,
       "best_result": null,
@@ -5191,7 +5212,7 @@
       ]
     },
     {
-      "athlete_id": "f96f36e7",
+      "athlete_id": "893afcbc",
       "rank": 69,
       "total_points": 0,
       "best_result": null,
@@ -5201,7 +5222,7 @@
       ]
     },
     {
-      "athlete_id": "17df018d",
+      "athlete_id": "187a27d3",
       "rank": 70,
       "total_points": 0,
       "best_result": null,
@@ -5211,7 +5232,7 @@
       ]
     },
     {
-      "athlete_id": "755699d3",
+      "athlete_id": "0ea9d7e9",
       "rank": 71,
       "total_points": 0,
       "best_result": null,
