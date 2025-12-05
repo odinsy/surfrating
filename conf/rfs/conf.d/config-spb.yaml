@@ -1,6 +1,7 @@
 # config.yaml
 
 scoring_system: wsl_qs2000
+scoring_mode: place_based # place_based , round_based , mixed
 current_year: 2025
 top_n: 100
 allowed_years: [2024, 2025]
