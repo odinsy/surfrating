@@ -1,7 +1,7 @@
 {
   "discipline": "longboard",
   "gender": "men",
-  "last_updated": "2025-10-26",
+  "last_updated": "2025-12-05",
   "events": {
     "c9c7591e": {
       "id": "c9c7591e",
@@ -89,23 +89,17 @@
       "sport_rank": "3",
       "birth_year": 2001
     },
-    "cc27e856": {
-      "name": "Малыхин Виктор",
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "birth_year": 1985
-    },
     "482f678d": {
       "name": "Реут Алексей",
       "region": "Калининградская область",
       "sport_rank": "3",
       "birth_year": 1989
     },
-    "d7fcc4fc": {
-      "name": "Блискунов Дмитрий",
+    "cc27e856": {
+      "name": "Малыхин Виктор",
       "region": "Калининградская область",
-      "sport_rank": "б/р",
-      "birth_year": 1990
+      "sport_rank": "3",
+      "birth_year": 1985
     },
     "6ec34f02": {
       "name": "Половиченко Илья",
@@ -124,6 +118,12 @@
       "region": "Калининградская область",
       "sport_rank": "б/р",
       "birth_year": 1985
+    },
+    "d7fcc4fc": {
+      "name": "Блискунов Дмитрий",
+      "region": "Калининградская область",
+      "sport_rank": "б/р",
+      "birth_year": 1990
     },
     "58170959": {
       "name": "Болдырев Артем",
@@ -229,7 +229,7 @@
       "athlete_id": "9db5218f",
       "event_id": "3689ee74",
       "place": 10,
-      "points": 630,
+      "points": 604,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -253,7 +253,7 @@
       "athlete_id": "e91cc0df",
       "event_id": "3689ee74",
       "place": 8,
-      "points": 840,
+      "points": 806,
       "round_name": "semifinal",
       "round_place": "4"
     },
@@ -285,7 +285,7 @@
       "athlete_id": "cc2c5992",
       "event_id": "3689ee74",
       "place": 6,
-      "points": 950,
+      "points": 900,
       "round_name": "semifinal",
       "round_place": "3"
     },
@@ -301,7 +301,7 @@
       "athlete_id": "cc27e856",
       "event_id": "3689ee74",
       "place": 18,
-      "points": 530,
+      "points": 314,
       "round_name": "quarterfinal",
       "round_place": "4"
     },
@@ -405,7 +405,7 @@
       "athlete_id": "482f678d",
       "event_id": "3689ee74",
       "place": 13,
-      "points": 630,
+      "points": 530,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -421,7 +421,7 @@
       "athlete_id": "d7fcc4fc",
       "event_id": "3689ee74",
       "place": 14,
-      "points": 630,
+      "points": 480,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -437,7 +437,7 @@
       "athlete_id": "6ec34f02",
       "event_id": "3689ee74",
       "place": 11,
-      "points": 630,
+      "points": 580,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -453,7 +453,7 @@
       "athlete_id": "b3cbc24e",
       "event_id": "3689ee74",
       "place": 12,
-      "points": 630,
+      "points": 560,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -485,7 +485,7 @@
       "athlete_id": "30845f33",
       "event_id": "3689ee74",
       "place": 15,
-      "points": 630,
+      "points": 420,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -493,7 +493,7 @@
       "athlete_id": "37cc86d4",
       "event_id": "3689ee74",
       "place": 16,
-      "points": 630,
+      "points": 380,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -501,7 +501,7 @@
       "athlete_id": "a8fd59ed",
       "event_id": "3689ee74",
       "place": 17,
-      "points": 530,
+      "points": 320,
       "round_name": "quarterfinal",
       "round_place": "4"
     },
@@ -509,7 +509,7 @@
       "athlete_id": "0ab928c8",
       "event_id": "3689ee74",
       "place": 19,
-      "points": 530,
+      "points": 308,
       "round_name": "quarterfinal",
       "round_place": "4"
     },
@@ -638,18 +638,6 @@
           "rank": 7
         },
         {
-          "athlete_id": "d7fcc4fc",
-          "year_points": 630,
-          "events": [
-            {
-              "event_id": "43624834",
-              "place": 9,
-              "points": 630
-            }
-          ],
-          "rank": 9
-        },
-        {
           "athlete_id": "6ec34f02",
           "year_points": 630,
           "events": [
@@ -663,6 +651,18 @@
         },
         {
           "athlete_id": "b3cbc24e",
+          "year_points": 630,
+          "events": [
+            {
+              "event_id": "43624834",
+              "place": 9,
+              "points": 630
+            }
+          ],
+          "rank": 9
+        },
+        {
+          "athlete_id": "d7fcc4fc",
           "year_points": 630,
           "events": [
             {
@@ -751,27 +751,15 @@
         },
         {
           "athlete_id": "cc2c5992",
-          "year_points": 950,
+          "year_points": 900,
           "events": [
             {
               "event_id": "3689ee74",
               "place": 6,
-              "points": 950
+              "points": 900
             }
           ],
-          "rank": 5
-        },
-        {
-          "athlete_id": "e91cc0df",
-          "year_points": 840,
-          "events": [
-            {
-              "event_id": "3689ee74",
-              "place": 8,
-              "points": 840
-            }
-          ],
-          "rank": 7
+          "rank": 6
         },
         {
           "athlete_id": "bef2628a",
@@ -786,16 +774,16 @@
           "rank": 7
         },
         {
-          "athlete_id": "9db5218f",
-          "year_points": 630,
+          "athlete_id": "e91cc0df",
+          "year_points": 806,
           "events": [
             {
               "event_id": "3689ee74",
-              "place": 10,
-              "points": 630
+              "place": 8,
+              "points": 806
             }
           ],
-          "rank": 9
+          "rank": 8
         },
         {
           "athlete_id": "b5b585bd",
@@ -810,112 +798,124 @@
           "rank": 9
         },
         {
-          "athlete_id": "482f678d",
-          "year_points": 630,
+          "athlete_id": "9db5218f",
+          "year_points": 604,
           "events": [
             {
               "event_id": "3689ee74",
-              "place": 13,
-              "points": 630
+              "place": 10,
+              "points": 604
             }
           ],
-          "rank": 9
-        },
-        {
-          "athlete_id": "d7fcc4fc",
-          "year_points": 630,
-          "events": [
-            {
-              "event_id": "3689ee74",
-              "place": 14,
-              "points": 630
-            }
-          ],
-          "rank": 9
+          "rank": 10
         },
         {
           "athlete_id": "6ec34f02",
-          "year_points": 630,
+          "year_points": 580,
           "events": [
             {
               "event_id": "3689ee74",
               "place": 11,
-              "points": 630
+              "points": 580
             }
           ],
-          "rank": 9
+          "rank": 11
         },
         {
           "athlete_id": "b3cbc24e",
-          "year_points": 630,
+          "year_points": 560,
           "events": [
             {
               "event_id": "3689ee74",
               "place": 12,
-              "points": 630
+              "points": 560
             }
           ],
-          "rank": 9
+          "rank": 12
+        },
+        {
+          "athlete_id": "482f678d",
+          "year_points": 530,
+          "events": [
+            {
+              "event_id": "3689ee74",
+              "place": 13,
+              "points": 530
+            }
+          ],
+          "rank": 13
+        },
+        {
+          "athlete_id": "d7fcc4fc",
+          "year_points": 480,
+          "events": [
+            {
+              "event_id": "3689ee74",
+              "place": 14,
+              "points": 480
+            }
+          ],
+          "rank": 14
         },
         {
           "athlete_id": "30845f33",
-          "year_points": 630,
+          "year_points": 420,
           "events": [
             {
               "event_id": "3689ee74",
               "place": 15,
-              "points": 630
+              "points": 420
             }
           ],
-          "rank": 9
+          "rank": 15
         },
         {
           "athlete_id": "37cc86d4",
-          "year_points": 630,
+          "year_points": 380,
           "events": [
             {
               "event_id": "3689ee74",
               "place": 16,
-              "points": 630
+              "points": 380
             }
           ],
-          "rank": 9
-        },
-        {
-          "athlete_id": "cc27e856",
-          "year_points": 530,
-          "events": [
-            {
-              "event_id": "3689ee74",
-              "place": 18,
-              "points": 530
-            }
-          ],
-          "rank": 17
+          "rank": 16
         },
         {
           "athlete_id": "a8fd59ed",
-          "year_points": 530,
+          "year_points": 320,
           "events": [
             {
               "event_id": "3689ee74",
               "place": 17,
-              "points": 530
+              "points": 320
             }
           ],
           "rank": 17
         },
         {
+          "athlete_id": "cc27e856",
+          "year_points": 314,
+          "events": [
+            {
+              "event_id": "3689ee74",
+              "place": 18,
+              "points": 314
+            }
+          ],
+          "rank": 18
+        },
+        {
           "athlete_id": "0ab928c8",
-          "year_points": 530,
+          "year_points": 308,
           "events": [
             {
               "event_id": "3689ee74",
               "place": 19,
-              "points": 530
+              "points": 308
             }
           ],
-          "rank": 17
+          "rank": 19
         },
         {
           "athlete_id": "58170959",
@@ -1140,7 +1140,7 @@
     {
       "athlete_id": "e91cc0df",
       "rank": 3,
-      "total_points": 3180,
+      "total_points": 3146,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2023",
@@ -1165,11 +1165,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 8,
-            "points": 840
+            "points": 806
           }
         ],
         "events_count": 3,
-        "avg_points": 1060
+        "avg_points": 1048
       },
       "last_year": 2025,
       "years_participated": [
@@ -1181,7 +1181,7 @@
     {
       "athlete_id": "9db5218f",
       "rank": 4,
-      "total_points": 3140,
+      "total_points": 3114,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2023",
@@ -1206,11 +1206,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 10,
-            "points": 630
+            "points": 604
           }
         ],
         "events_count": 3,
-        "avg_points": 1046
+        "avg_points": 1038
       },
       "last_year": 2025,
       "years_participated": [
@@ -1324,7 +1324,7 @@
     {
       "athlete_id": "cc2c5992",
       "rank": 8,
-      "total_points": 1900,
+      "total_points": 1850,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2023",
@@ -1343,11 +1343,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 6,
-            "points": 950
+            "points": 900
           }
         ],
         "events_count": 2,
-        "avg_points": 950
+        "avg_points": 925
       },
       "last_year": 2024,
       "years_participated": [
@@ -1390,43 +1390,9 @@
       ]
     },
     {
-      "athlete_id": "cc27e856",
-      "rank": 10,
-      "total_points": 1480,
-      "best_result": {
-        "event_name": "Чемпионат Калининградской области",
-        "event_year": "2023",
-        "place": 5,
-        "points": 950,
-        "event_group": "regional",
-        "participants_count": 8,
-        "top_events": [
-          {
-            "event_name": "Чемпионат Калининградской области",
-            "event_year": "2023",
-            "place": 5,
-            "points": 950
-          },
-          {
-            "event_name": "Чемпионат Калининградской области",
-            "event_year": "2024",
-            "place": 18,
-            "points": 530
-          }
-        ],
-        "events_count": 2,
-        "avg_points": 740
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2023,
-        2024
-      ]
-    },
-    {
       "athlete_id": "482f678d",
-      "rank": 11,
-      "total_points": 1470,
+      "rank": 10,
+      "total_points": 1370,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2025",
@@ -1445,11 +1411,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 13,
-            "points": 630
+            "points": 530
           }
         ],
         "events_count": 2,
-        "avg_points": 735
+        "avg_points": 685
       },
       "last_year": 2025,
       "years_participated": [
@@ -1458,43 +1424,43 @@
       ]
     },
     {
-      "athlete_id": "d7fcc4fc",
-      "rank": 12,
-      "total_points": 1260,
+      "athlete_id": "cc27e856",
+      "rank": 11,
+      "total_points": 1264,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
-        "event_year": "2025",
-        "place": 9,
-        "points": 630,
+        "event_year": "2023",
+        "place": 5,
+        "points": 950,
         "event_group": "regional",
-        "participants_count": 12,
+        "participants_count": 8,
         "top_events": [
           {
             "event_name": "Чемпионат Калининградской области",
-            "event_year": "2025",
-            "place": 9,
-            "points": 630
+            "event_year": "2023",
+            "place": 5,
+            "points": 950
           },
           {
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
-            "place": 14,
-            "points": 630
+            "place": 18,
+            "points": 314
           }
         ],
         "events_count": 2,
-        "avg_points": 630
+        "avg_points": 632
       },
-      "last_year": 2025,
+      "last_year": 2024,
       "years_participated": [
-        2025,
+        2023,
         2024
       ]
     },
     {
       "athlete_id": "6ec34f02",
-      "rank": 13,
-      "total_points": 1260,
+      "rank": 12,
+      "total_points": 1210,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2025",
@@ -1513,11 +1479,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 11,
-            "points": 630
+            "points": 580
           }
         ],
         "events_count": 2,
-        "avg_points": 630
+        "avg_points": 605
       },
       "last_year": 2025,
       "years_participated": [
@@ -1527,8 +1493,8 @@
     },
     {
       "athlete_id": "b3cbc24e",
-      "rank": 14,
-      "total_points": 1260,
+      "rank": 13,
+      "total_points": 1190,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2025",
@@ -1547,11 +1513,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 12,
-            "points": 630
+            "points": 560
           }
         ],
         "events_count": 2,
-        "avg_points": 630
+        "avg_points": 595
       },
       "last_year": 2025,
       "years_participated": [
@@ -1561,7 +1527,7 @@
     },
     {
       "athlete_id": "53cce913",
-      "rank": 15,
+      "rank": 14,
       "total_points": 1120,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
@@ -1583,6 +1549,40 @@
       },
       "last_year": 2024,
       "years_participated": [
+        2024
+      ]
+    },
+    {
+      "athlete_id": "d7fcc4fc",
+      "rank": 15,
+      "total_points": 1110,
+      "best_result": {
+        "event_name": "Чемпионат Калининградской области",
+        "event_year": "2025",
+        "place": 9,
+        "points": 630,
+        "event_group": "regional",
+        "participants_count": 12,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Калининградской области",
+            "event_year": "2025",
+            "place": 9,
+            "points": 630
+          },
+          {
+            "event_name": "Чемпионат Калининградской области",
+            "event_year": "2024",
+            "place": 14,
+            "points": 480
+          }
+        ],
+        "events_count": 2,
+        "avg_points": 555
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025,
         2024
       ]
     },
@@ -1698,12 +1698,12 @@
     {
       "athlete_id": "30845f33",
       "rank": 20,
-      "total_points": 630,
+      "total_points": 420,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2024",
         "place": 15,
-        "points": 630,
+        "points": 420,
         "event_group": "regional",
         "participants_count": 19,
         "top_events": [
@@ -1711,11 +1711,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 15,
-            "points": 630
+            "points": 420
           }
         ],
         "events_count": 1,
-        "avg_points": 630
+        "avg_points": 420
       },
       "last_year": 2024,
       "years_participated": [
@@ -1725,12 +1725,12 @@
     {
       "athlete_id": "37cc86d4",
       "rank": 21,
-      "total_points": 630,
+      "total_points": 380,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2024",
         "place": 16,
-        "points": 630,
+        "points": 380,
         "event_group": "regional",
         "participants_count": 19,
         "top_events": [
@@ -1738,11 +1738,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 16,
-            "points": 630
+            "points": 380
           }
         ],
         "events_count": 1,
-        "avg_points": 630
+        "avg_points": 380
       },
       "last_year": 2024,
       "years_participated": [
@@ -1752,12 +1752,12 @@
     {
       "athlete_id": "a8fd59ed",
       "rank": 22,
-      "total_points": 530,
+      "total_points": 320,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2024",
         "place": 17,
-        "points": 530,
+        "points": 320,
         "event_group": "regional",
         "participants_count": 19,
         "top_events": [
@@ -1765,11 +1765,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 17,
-            "points": 530
+            "points": 320
           }
         ],
         "events_count": 1,
-        "avg_points": 530
+        "avg_points": 320
       },
       "last_year": 2024,
       "years_participated": [
@@ -1779,12 +1779,12 @@
     {
       "athlete_id": "0ab928c8",
       "rank": 23,
-      "total_points": 530,
+      "total_points": 308,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2024",
         "place": 19,
-        "points": 530,
+        "points": 308,
         "event_group": "regional",
         "participants_count": 19,
         "top_events": [
@@ -1792,11 +1792,11 @@
             "event_name": "Чемпионат Калининградской области",
             "event_year": "2024",
             "place": 19,
-            "points": 530
+            "points": 308
           }
         ],
         "events_count": 1,
-        "avg_points": 530
+        "avg_points": 308
       },
       "last_year": 2024,
       "years_participated": [
