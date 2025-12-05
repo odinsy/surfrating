@@ -42,6 +42,7 @@ const COMPETITIONS = {
     'rfs/krd': {
         name: 'Чемпионат Краснодарского края (РФС)',
         disciplines: {
+            'shortboard': 'Короткая доска',
             'longboard': 'Длинная доска'
         }
     },
