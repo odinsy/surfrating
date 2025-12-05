@@ -2,18 +2,22 @@
 discipline: "shortboard"
 gender: "women"
 
+# allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025]
+# input_paths:
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_*.csv
+
 # current_year: 2024
 # allowed_years: [2021, 2022, 2023, 2024]
+# input_paths:
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2021.csv
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2022.csv
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2022_spartakiad.csv
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2023.csv
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2024.csv
+
 current_year: 2025
 allowed_years: [2022, 2023, 2024, 2025]
-# allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025]
-
 input_paths:
-  # - data/rfs/surfing/_rus/shortboard/shortboard_women_*.csv
-  # - data/rfs/surfing/_rus/shortboard/shortboard_women_2017.csv
-  # - data/rfs/surfing/_rus/shortboard/shortboard_women_2018.csv
-  # - data/rfs/surfing/_rus/shortboard/shortboard_women_2019.csv
-  # - data/rfs/surfing/_rus/shortboard/shortboard_women_2021.csv
   - data/rfs/surfing/_rus/shortboard/shortboard_women_2022.csv
   - data/rfs/surfing/_rus/shortboard/shortboard_women_2022_spartakiad.csv
   - data/rfs/surfing/_rus/shortboard/shortboard_women_2023.csv

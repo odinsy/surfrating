@@ -1,12 +1,12 @@
 {
-  "generated_at": "2025-12-05T11:38:02.844653",
+  "generated_at": "2025-12-05T12:13:26.230332",
   "summary": {
     "total_athletes": 48,
     "new_athletes": 6,
     "dropped_athletes": 10,
-    "improved_rank": 29,
+    "improved_rank": 28,
     "declined_rank": 13,
-    "stable_rank": 0,
+    "stable_rank": 1,
     "biggest_improvement": {
       "name": "Реут Алексей",
       "change": 22
@@ -90,40 +90,40 @@
       "athlete_id": "cda95159",
       "name": "Каптелов Петр",
       "current_rank": 6,
-      "current_points": 15850,
+      "current_points": 17070,
       "region": "Калининградская область",
       "sport_rank": "1",
       "trend": "up",
-      "rank_change": 2,
+      "rank_change": 1,
       "points_change": 3320,
-      "previous_rank": 8,
-      "previous_points": 12530
+      "previous_rank": 7,
+      "previous_points": 13750
     },
     {
       "athlete_id": "b7b49dea",
       "name": "Новожилов Данила",
       "current_rank": 7,
-      "current_points": 15735,
+      "current_points": 15935,
       "region": "Санкт-Петербург",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -2,
+      "rank_change": -1,
       "points_change": 1425,
-      "previous_rank": 5,
-      "previous_points": 14310
+      "previous_rank": 6,
+      "previous_points": 14510
     },
     {
       "athlete_id": "a59b6ff4",
       "name": "Копров Павел",
       "current_rank": 8,
-      "current_points": 12885,
+      "current_points": 14105,
       "region": "Санкт-Петербург",
       "sport_rank": "1",
       "trend": "down",
-      "rank_change": -2,
+      "rank_change": -3,
       "points_change": -1425,
-      "previous_rank": 6,
-      "previous_points": 14310
+      "previous_rank": 5,
+      "previous_points": 15530
     },
     {
       "athlete_id": "392cd3cb",
@@ -133,9 +133,9 @@
       "region": "Московская область",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -2,
+      "rank_change": -1,
       "points_change": 0,
-      "previous_rank": 7,
+      "previous_rank": 8,
       "previous_points": 12545
     },
     {
@@ -181,12 +181,12 @@
       "athlete_id": "473f005c",
       "name": "Синица Петр",
       "current_rank": 13,
-      "current_points": 9760,
+      "current_points": 9960,
       "region": "Калининградская область",
       "sport_rank": "1",
       "trend": "up",
       "rank_change": 2,
-      "points_change": 3120,
+      "points_change": 3320,
       "previous_rank": 15,
       "previous_points": 6640
     },
@@ -237,9 +237,9 @@
       "region": "Калининградская область",
       "sport_rank": "3",
       "trend": "up",
-      "rank_change": 17,
+      "rank_change": 18,
       "points_change": 3120,
-      "previous_rank": 34,
+      "previous_rank": 35,
       "previous_points": 3120
     },
     {
@@ -256,14 +256,27 @@
       "previous_points": 5685
     },
     {
-      "athlete_id": "b5b585bd",
-      "name": "Богдалов Данил",
+      "athlete_id": "d7fcc4fc",
+      "name": "Блискунов Дмитрий",
       "current_rank": 19,
       "current_points": 5020,
       "region": "Калининградская область",
-      "sport_rank": "",
+      "sport_rank": "3",
       "trend": "up",
-      "rank_change": 1,
+      "rank_change": 18,
+      "points_change": 1900,
+      "previous_rank": 37,
+      "previous_points": 3120
+    },
+    {
+      "athlete_id": "b5b585bd",
+      "name": "Богдалов Данил",
+      "current_rank": 20,
+      "current_points": 5020,
+      "region": "Калининградская область",
+      "sport_rank": "",
+      "trend": "stable",
+      "rank_change": 0,
       "points_change": 0,
       "previous_rank": 20,
       "previous_points": 5020
@@ -271,7 +284,7 @@
     {
       "athlete_id": "3af2c846",
       "name": "Бутусов Владимир",
-      "current_rank": 20,
+      "current_rank": 21,
       "current_points": 4545,
       "region": "Санкт-Петербург",
       "sport_rank": "3",
@@ -282,28 +295,15 @@
     {
       "athlete_id": "bbb0fada",
       "name": "Гальчук Александр",
-      "current_rank": 21,
+      "current_rank": 22,
       "current_points": 4545,
       "region": "Приморский край",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -8,
+      "rank_change": -9,
       "points_change": -3120,
       "previous_rank": 13,
       "previous_points": 7665
-    },
-    {
-      "athlete_id": "d7fcc4fc",
-      "name": "Блискунов Дмитрий",
-      "current_rank": 22,
-      "current_points": 3800,
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "trend": "up",
-      "rank_change": 15,
-      "points_change": 1900,
-      "previous_rank": 37,
-      "previous_points": 1900
     },
     {
       "athlete_id": "482f678d",
@@ -372,7 +372,7 @@
       "athlete_id": "05e197b1",
       "name": "Черепенников Антон",
       "current_rank": 28,
-      "current_points": 3320,
+      "current_points": 3120,
       "region": "Краснодарский край",
       "sport_rank": "1",
       "trend": "new",
@@ -393,12 +393,12 @@
       "previous_points": 3120
     },
     {
-      "athlete_id": "6271e9af",
-      "name": "Старков Андрей",
+      "athlete_id": "77e87b93",
+      "name": "Левицкий Дионис",
       "current_rank": 30,
       "current_points": 3120,
-      "region": "Москва",
-      "sport_rank": "КМС",
+      "region": "Приморский край",
+      "sport_rank": "3",
       "trend": "up",
       "rank_change": 2,
       "points_change": 0,
@@ -406,41 +406,41 @@
       "previous_points": 3120
     },
     {
+      "athlete_id": "6271e9af",
+      "name": "Старков Андрей",
+      "current_rank": 31,
+      "current_points": 3120,
+      "region": "Москва",
+      "sport_rank": "КМС",
+      "trend": "up",
+      "rank_change": 2,
+      "points_change": 0,
+      "previous_rank": 33,
+      "previous_points": 3120
+    },
+    {
       "athlete_id": "b7ab9e20",
       "name": "Лещев Алексей",
-      "current_rank": 31,
+      "current_rank": 32,
       "current_points": 3120,
       "region": "Камчатский край",
       "sport_rank": "3",
       "trend": "up",
       "rank_change": 4,
       "points_change": 0,
-      "previous_rank": 35,
+      "previous_rank": 36,
       "previous_points": 3120
     },
     {
       "athlete_id": "c1a3ec25",
       "name": "Коновалов Александр",
-      "current_rank": 32,
+      "current_rank": 33,
       "current_points": 3120,
       "region": "Мурманская область",
       "sport_rank": "3",
       "trend": "new",
       "rank_change": null,
       "points_change": null
-    },
-    {
-      "athlete_id": "77e87b93",
-      "name": "Левицкий Дионис",
-      "current_rank": 33,
-      "current_points": 1900,
-      "region": "Приморский край",
-      "sport_rank": "3",
-      "trend": "up",
-      "rank_change": 3,
-      "points_change": 0,
-      "previous_rank": 36,
-      "previous_points": 1900
     },
     {
       "athlete_id": "ef86758b",
@@ -556,8 +556,8 @@
       "points_change": null
     },
     {
-      "athlete_id": "4c0dd27a",
-      "name": "Шеин Николай",
+      "athlete_id": "f4970149",
+      "name": "Дроздов Дмитрий",
       "current_rank": 43,
       "current_points": 1900,
       "region": "Приморский край",
@@ -569,69 +569,69 @@
       "previous_points": 1900
     },
     {
-      "athlete_id": "f4970149",
-      "name": "Дроздов Дмитрий",
+      "athlete_id": "4c0dd27a",
+      "name": "Шеин Николай",
       "current_rank": 44,
-      "current_points": 1700,
+      "current_points": 1900,
       "region": "Приморский край",
       "sport_rank": "3",
       "trend": "up",
       "rank_change": 4,
       "points_change": 0,
       "previous_rank": 48,
-      "previous_points": 1700
+      "previous_points": 1900
     },
     {
       "athlete_id": "a0bc9a5b",
       "name": "Смирнов Михаил",
       "current_rank": 45,
-      "current_points": 1700,
+      "current_points": 1900,
       "region": "Санкт-Петербург",
       "sport_rank": "3",
       "trend": "up",
       "rank_change": 4,
       "points_change": 0,
       "previous_rank": 49,
-      "previous_points": 1700
+      "previous_points": 1900
     },
     {
       "athlete_id": "14204fa6",
       "name": "Ломаев Владимир",
       "current_rank": 46,
-      "current_points": 1700,
+      "current_points": 1900,
       "region": "Санкт-Петербург",
       "sport_rank": "3",
       "trend": "up",
       "rank_change": 4,
       "points_change": 0,
       "previous_rank": 50,
-      "previous_points": 1700
+      "previous_points": 1900
     },
     {
       "athlete_id": "e71c9c39",
       "name": "Артюхин Марк",
       "current_rank": 47,
-      "current_points": 1700,
+      "current_points": 1900,
       "region": "Камчатский край",
       "sport_rank": "3",
       "trend": "up",
       "rank_change": 4,
       "points_change": 0,
       "previous_rank": 51,
-      "previous_points": 1700
+      "previous_points": 1900
     },
     {
       "athlete_id": "9e012ac4",
       "name": "Ткачук Дмитрий",
       "current_rank": 48,
-      "current_points": 1700,
+      "current_points": 1900,
       "region": "Мурманская область",
       "sport_rank": "3",
       "trend": "up",
       "rank_change": 4,
       "points_change": 0,
       "previous_rank": 52,
-      "previous_points": 1700
+      "previous_points": 1900
     },
     {
       "athlete_id": "d2371c96",
@@ -714,7 +714,7 @@
     {
       "athlete_id": "a03c2703",
       "name": "Эгле Вячеслав",
-      "previous_rank": 33,
+      "previous_rank": 34,
       "previous_points": 3120,
       "current_rank": null,
       "current_points": 0,

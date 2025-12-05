@@ -1,23 +1,23 @@
 {
-  "generated_at": "2025-12-05T11:38:13.966715",
+  "generated_at": "2025-12-05T12:13:26.259424",
   "summary": {
     "total_athletes": 45,
     "new_athletes": 7,
     "dropped_athletes": 4,
-    "improved_rank": 13,
+    "improved_rank": 12,
     "declined_rank": 23,
-    "stable_rank": 2,
+    "stable_rank": 3,
     "biggest_improvement": {
       "name": "Горба Мария",
-      "change": 23
+      "change": 24
     },
     "biggest_decline": {
       "name": "Куллен Оксана",
-      "change": -15
+      "change": -16
     },
     "most_points_gained": {
-      "name": "Тихонова Анна",
-      "change": 29745
+      "name": "Бланк Мария",
+      "change": 10000
     }
   },
   "comparison_data": [
@@ -30,9 +30,9 @@
       "sport_rank": "МС",
       "trend": "stable",
       "rank_change": 0,
-      "points_change": 29745,
+      "points_change": 4745,
       "previous_rank": 1,
-      "previous_points": 2800
+      "previous_points": 27800
     },
     {
       "athlete_id": "cb76fb30",
@@ -43,9 +43,9 @@
       "sport_rank": "КМС",
       "trend": "up",
       "rank_change": 1,
-      "points_change": 22855,
+      "points_change": 5685,
       "previous_rank": 3,
-      "previous_points": 2000
+      "previous_points": 19170
     },
     {
       "athlete_id": "a8cee8ed",
@@ -56,9 +56,9 @@
       "sport_rank": "1",
       "trend": "up",
       "rank_change": 2,
-      "points_change": 17480,
+      "points_change": 7800,
       "previous_rank": 5,
-      "previous_points": 1150
+      "previous_points": 10830
     },
     {
       "athlete_id": "f667db3b",
@@ -68,10 +68,10 @@
       "region": "Калининградская область",
       "sport_rank": "1",
       "trend": "up",
-      "rank_change": 8,
-      "points_change": 17000,
-      "previous_rank": 12,
-      "previous_points": 800
+      "rank_change": 9,
+      "points_change": 10000,
+      "previous_rank": 13,
+      "previous_points": 7800
     },
     {
       "athlete_id": "25650f9d",
@@ -82,9 +82,9 @@
       "sport_rank": "1",
       "trend": "down",
       "rank_change": -3,
-      "points_change": 12780,
+      "points_change": -10000,
       "previous_rank": 2,
-      "previous_points": 2595
+      "previous_points": 25375
     },
     {
       "athlete_id": "d61311a5",
@@ -95,9 +95,9 @@
       "sport_rank": "КМС",
       "trend": "up",
       "rank_change": 3,
-      "points_change": 9000,
+      "points_change": 0,
       "previous_rank": 9,
-      "previous_points": 1000
+      "previous_points": 10000
     },
     {
       "athlete_id": "34ebbcb9",
@@ -108,9 +108,9 @@
       "sport_rank": "2",
       "trend": "up",
       "rank_change": 10,
-      "points_change": 9415,
+      "points_change": 4745,
       "previous_rank": 17,
-      "previous_points": 550
+      "previous_points": 5220
     },
     {
       "athlete_id": "2f20bc1d",
@@ -121,9 +121,9 @@
       "sport_rank": "2",
       "trend": "up",
       "rank_change": 8,
-      "points_change": 9115,
+      "points_change": 3320,
       "previous_rank": 16,
-      "previous_points": 645
+      "previous_points": 6440
     },
     {
       "athlete_id": "1c702d39",
@@ -134,61 +134,61 @@
       "sport_rank": "2",
       "trend": "up",
       "rank_change": 16,
-      "points_change": 9055,
+      "points_change": 6085,
       "previous_rank": 25,
-      "previous_points": 350
+      "previous_points": 3320
+    },
+    {
+      "athlete_id": "ee8f1f48",
+      "name": "Кузьмина Полина",
+      "current_rank": 10,
+      "current_points": 8140,
+      "region": "Санкт-Петербург",
+      "sport_rank": "3",
+      "trend": "up",
+      "rank_change": 8,
+      "points_change": 3320,
+      "previous_rank": 18,
+      "previous_points": 4820
     },
     {
       "athlete_id": "91992551",
       "name": "Тихолаз Ульяна",
-      "current_rank": 10,
+      "current_rank": 11,
       "current_points": 8065,
       "region": "Санкт-Петербург",
       "sport_rank": "2",
       "trend": "stable",
       "rank_change": 0,
-      "points_change": 7215,
-      "previous_rank": 10,
-      "previous_points": 850
+      "points_change": 0,
+      "previous_rank": 11,
+      "previous_points": 8065
     },
     {
       "athlete_id": "611e5b94",
       "name": "Силютина Алина",
-      "current_rank": 11,
+      "current_rank": 12,
       "current_points": 7865,
       "region": "Приморский край",
       "sport_rank": "3",
-      "trend": "up",
-      "rank_change": 3,
-      "points_change": 7078,
-      "previous_rank": 14,
-      "previous_points": 787
+      "trend": "stable",
+      "rank_change": 0,
+      "points_change": 0,
+      "previous_rank": 12,
+      "previous_points": 7865
     },
     {
       "athlete_id": "c622baf3",
       "name": "Филинова Галина",
-      "current_rank": 12,
+      "current_rank": 13,
       "current_points": 7585,
       "region": "Приморский край",
       "sport_rank": "2",
       "trend": "up",
       "rank_change": 1,
-      "points_change": 6785,
-      "previous_rank": 13,
-      "previous_points": 800
-    },
-    {
-      "athlete_id": "ee8f1f48",
-      "name": "Кузьмина Полина",
-      "current_rank": 13,
-      "current_points": 6720,
-      "region": "Санкт-Петербург",
-      "sport_rank": "3",
-      "trend": "up",
-      "rank_change": 10,
-      "points_change": 6294,
-      "previous_rank": 23,
-      "previous_points": 426
+      "points_change": 0,
+      "previous_rank": 14,
+      "previous_points": 7585
     },
     {
       "athlete_id": "ab80ec6b",
@@ -199,9 +199,9 @@
       "sport_rank": "КМС",
       "trend": "down",
       "rank_change": -10,
-      "points_change": 5140,
+      "points_change": -7800,
       "previous_rank": 4,
-      "previous_points": 1500
+      "previous_points": 14440
     },
     {
       "athlete_id": "270ad3b1",
@@ -211,10 +211,10 @@
       "region": "Санкт-Петербург",
       "sport_rank": "2",
       "trend": "up",
-      "rank_change": 23,
-      "points_change": 6245,
-      "previous_rank": 38,
-      "previous_points": 200
+      "rank_change": 24,
+      "points_change": 4545,
+      "previous_rank": 39,
+      "previous_points": 1900
     },
     {
       "athlete_id": "b1dbec71",
@@ -225,9 +225,9 @@
       "sport_rank": "1",
       "trend": "down",
       "rank_change": -10,
-      "points_change": 4935,
+      "points_change": -4745,
       "previous_rank": 6,
-      "previous_points": 1150
+      "previous_points": 10830
     },
     {
       "athlete_id": "3c857c20",
@@ -237,10 +237,10 @@
       "region": "Приморский край",
       "sport_rank": "3",
       "trend": "up",
-      "rank_change": 23,
-      "points_change": 5020,
-      "previous_rank": 40,
-      "previous_points": 200
+      "rank_change": 24,
+      "points_change": 3320,
+      "previous_rank": 41,
+      "previous_points": 1900
     },
     {
       "athlete_id": "d7307208",
@@ -250,10 +250,10 @@
       "region": "Калининградская область",
       "sport_rank": "3",
       "trend": "up",
-      "rank_change": 19,
-      "points_change": 4820,
-      "previous_rank": 37,
-      "previous_points": 200
+      "rank_change": 20,
+      "points_change": 3120,
+      "previous_rank": 38,
+      "previous_points": 1900
     },
     {
       "athlete_id": "0754bdf2",
@@ -264,9 +264,9 @@
       "sport_rank": "МС",
       "trend": "down",
       "rank_change": -12,
-      "points_change": 3595,
+      "points_change": -6085,
       "previous_rank": 7,
-      "previous_points": 1150
+      "previous_points": 10830
     },
     {
       "athlete_id": "5242cd6a",
@@ -276,10 +276,10 @@
       "region": "Калининградская область",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -2,
-      "points_change": 4245,
-      "previous_rank": 18,
-      "previous_points": 500
+      "rank_change": -1,
+      "points_change": 0,
+      "previous_rank": 19,
+      "previous_points": 4745
     },
     {
       "athlete_id": "35595575",
@@ -290,9 +290,9 @@
       "sport_rank": "3",
       "trend": "down",
       "rank_change": -13,
-      "points_change": 3662,
+      "points_change": -5685,
       "previous_rank": 8,
-      "previous_points": 1083
+      "previous_points": 10430
     },
     {
       "athlete_id": "ec3c4445",
@@ -302,10 +302,10 @@
       "region": "Приморский край",
       "sport_rank": "2",
       "trend": "down",
-      "rank_change": -2,
-      "points_change": 4100,
-      "previous_rank": 20,
-      "previous_points": 445
+      "rank_change": -1,
+      "points_change": 0,
+      "previous_rank": 21,
+      "previous_points": 4545
     },
     {
       "athlete_id": "227257a2",
@@ -326,10 +326,10 @@
       "region": "Санкт-Петербург",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -3,
-      "points_change": 4100,
-      "previous_rank": 21,
-      "previous_points": 445
+      "rank_change": -2,
+      "points_change": 0,
+      "previous_rank": 22,
+      "previous_points": 4545
     },
     {
       "athlete_id": "4bbc305b",
@@ -339,10 +339,10 @@
       "region": "Москва",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -3,
-      "points_change": 4100,
-      "previous_rank": 22,
-      "previous_points": 445
+      "rank_change": -2,
+      "points_change": 0,
+      "previous_rank": 23,
+      "previous_points": 4545
     },
     {
       "athlete_id": "b8d910eb",
@@ -352,10 +352,10 @@
       "region": "Сахалинская область",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -15,
-      "points_change": 3697,
-      "previous_rank": 11,
-      "previous_points": 848
+      "rank_change": -16,
+      "points_change": -4545,
+      "previous_rank": 10,
+      "previous_points": 9090
     },
     {
       "athlete_id": "4ec89763",
@@ -366,9 +366,9 @@
       "sport_rank": "3",
       "trend": "down",
       "rank_change": -1,
-      "points_change": 2970,
+      "points_change": 0,
       "previous_rank": 26,
-      "previous_points": 350
+      "previous_points": 3320
     },
     {
       "athlete_id": "a79ed587",
@@ -389,10 +389,10 @@
       "region": "Приморский край",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -2,
-      "points_change": 2970,
-      "previous_rank": 27,
-      "previous_points": 350
+      "rank_change": -1,
+      "points_change": 0,
+      "previous_rank": 28,
+      "previous_points": 3320
     },
     {
       "athlete_id": "ce22d9b5",
@@ -403,9 +403,9 @@
       "sport_rank": "3",
       "trend": "down",
       "rank_change": -15,
-      "points_change": 2637,
+      "points_change": -3320,
       "previous_rank": 15,
-      "previous_points": 683
+      "previous_points": 6640
     },
     {
       "athlete_id": "a917beb2",
@@ -415,10 +415,10 @@
       "region": "Камчатский край",
       "sport_rank": "2",
       "trend": "down",
-      "rank_change": -3,
-      "points_change": 2970,
-      "previous_rank": 28,
-      "previous_points": 350
+      "rank_change": -1,
+      "points_change": 0,
+      "previous_rank": 30,
+      "previous_points": 3320
     },
     {
       "athlete_id": "dc0a254b",
@@ -429,15 +429,15 @@
       "sport_rank": "3",
       "trend": "down",
       "rank_change": -1,
-      "points_change": 3006,
+      "points_change": 0,
       "previous_rank": 31,
-      "previous_points": 314
+      "previous_points": 3320
     },
     {
       "athlete_id": "24a6a8e3",
       "name": "Фурсова Татьяна",
       "current_rank": 33,
-      "current_points": 3320,
+      "current_points": 3120,
       "region": "Самарская область",
       "sport_rank": "1",
       "trend": "new",
@@ -445,9 +445,22 @@
       "points_change": null
     },
     {
+      "athlete_id": "0b1456fd",
+      "name": "Бороденкова Екатерина",
+      "current_rank": 34,
+      "current_points": 3120,
+      "region": "Калининградская область",
+      "sport_rank": "3",
+      "trend": "down",
+      "rank_change": -2,
+      "points_change": 0,
+      "previous_rank": 32,
+      "previous_points": 3120
+    },
+    {
       "athlete_id": "7ad40cba",
       "name": "Кузьмина Маргарита",
-      "current_rank": 34,
+      "current_rank": 35,
       "current_points": 3120,
       "region": "Краснодарский край",
       "sport_rank": "2",
@@ -458,33 +471,33 @@
     {
       "athlete_id": "0054d720",
       "name": "Данькова Елизавета",
-      "current_rank": 35,
+      "current_rank": 36,
       "current_points": 3120,
       "region": "Калининградская область",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -2,
-      "points_change": 2825,
+      "rank_change": -3,
+      "points_change": 0,
       "previous_rank": 33,
-      "previous_points": 295
+      "previous_points": 3120
     },
     {
       "athlete_id": "adab6584",
       "name": "Шабалина Людмила",
-      "current_rank": 36,
+      "current_rank": 37,
       "current_points": 3120,
       "region": "Санкт-Петербург",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -2,
-      "points_change": 2825,
+      "rank_change": -3,
+      "points_change": 0,
       "previous_rank": 34,
-      "previous_points": 295
+      "previous_points": 3120
     },
     {
       "athlete_id": "eac94d4f",
       "name": "Еремина Ирина",
-      "current_rank": 37,
+      "current_rank": 38,
       "current_points": 3120,
       "region": "Санкт-Петербург",
       "sport_rank": "3",
@@ -495,28 +508,15 @@
     {
       "athlete_id": "662216cf",
       "name": "Александровская Анна",
-      "current_rank": 38,
+      "current_rank": 39,
       "current_points": 3120,
       "region": "Мурманская область",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -3,
-      "points_change": 2825,
+      "rank_change": -4,
+      "points_change": 0,
       "previous_rank": 35,
-      "previous_points": 295
-    },
-    {
-      "athlete_id": "0b1456fd",
-      "name": "Бороденкова Екатерина",
-      "current_rank": 39,
-      "current_points": 1900,
-      "region": "Калининградская область",
-      "sport_rank": "3",
-      "trend": "down",
-      "rank_change": -7,
-      "points_change": 1605,
-      "previous_rank": 32,
-      "previous_points": 295
+      "previous_points": 3120
     },
     {
       "athlete_id": "ac230926",
@@ -538,48 +538,48 @@
       "sport_rank": "2",
       "trend": "down",
       "rank_change": -5,
-      "points_change": 1700,
+      "points_change": 0,
       "previous_rank": 36,
-      "previous_points": 200
+      "previous_points": 1900
     },
     {
-      "athlete_id": "f36db936",
-      "name": "Якубовская Нина",
+      "athlete_id": "10d08b42",
+      "name": "Ясинская Анна",
       "current_rank": 42,
       "current_points": 1900,
       "region": "Приморский край",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -3,
-      "points_change": 1700,
-      "previous_rank": 39,
-      "previous_points": 200
+      "rank_change": -5,
+      "points_change": 0,
+      "previous_rank": 37,
+      "previous_points": 1900
     },
     {
-      "athlete_id": "870c60eb",
-      "name": "Петрова Анна",
+      "athlete_id": "f36db936",
+      "name": "Якубовская Нина",
       "current_rank": 43,
       "current_points": 1900,
       "region": "Приморский край",
       "sport_rank": "3",
       "trend": "down",
-      "rank_change": -2,
-      "points_change": 1700,
-      "previous_rank": 41,
-      "previous_points": 200
+      "rank_change": -3,
+      "points_change": 0,
+      "previous_rank": 40,
+      "previous_points": 1900
     },
     {
-      "athlete_id": "10d08b42",
-      "name": "Ясинская Анна",
+      "athlete_id": "870c60eb",
+      "name": "Петрова Анна",
       "current_rank": 44,
       "current_points": 1700,
       "region": "Приморский край",
       "sport_rank": "3",
       "trend": "down",
       "rank_change": -2,
-      "points_change": 1550,
+      "points_change": 0,
       "previous_rank": 42,
-      "previous_points": 150
+      "previous_points": 1700
     },
     {
       "athlete_id": "e0323418",
@@ -595,53 +595,53 @@
     {
       "athlete_id": "45e71152",
       "name": "Зикратова Ела",
-      "previous_rank": 19,
-      "previous_points": 483,
+      "previous_rank": 20,
+      "previous_points": 4745,
       "current_rank": null,
       "current_points": 0,
       "region": "Камчатский край",
       "sport_rank": "",
       "rank_change": null,
-      "points_change": -483,
+      "points_change": -4745,
       "trend": "dropped"
     },
     {
       "athlete_id": "21b6319a",
       "name": "Туринцева Илона",
       "previous_rank": 24,
-      "previous_points": 403,
+      "previous_points": 4545,
       "current_rank": null,
       "current_points": 0,
       "region": "Москва",
       "sport_rank": "",
       "rank_change": null,
-      "points_change": -403,
+      "points_change": -4545,
       "trend": "dropped"
     },
     {
       "athlete_id": "bed3a944",
       "name": "Кутьина Анна",
-      "previous_rank": 29,
-      "previous_points": 342,
+      "previous_rank": 27,
+      "previous_points": 3320,
       "current_rank": null,
       "current_points": 0,
       "region": "Москва",
       "sport_rank": "",
       "rank_change": null,
-      "points_change": -342,
+      "points_change": -3320,
       "trend": "dropped"
     },
     {
       "athlete_id": "d19722fe",
       "name": "Дударева Наталья",
-      "previous_rank": 30,
-      "previous_points": 333,
+      "previous_rank": 29,
+      "previous_points": 3320,
       "current_rank": null,
       "current_points": 0,
       "region": "Алтайский край",
       "sport_rank": "",
       "rank_change": null,
-      "points_change": -333,
+      "points_change": -3320,
       "trend": "dropped"
     }
   ]
