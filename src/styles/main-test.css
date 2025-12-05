@@ -43,6 +43,10 @@ body {
     text-align: left;
 }
 
+.table-custom th:nth-child(3) {
+    text-align: left;
+}
+
 .name-cell {
     position: relative;
     cursor: default;
