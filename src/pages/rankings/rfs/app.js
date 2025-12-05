@@ -15,7 +15,8 @@ const COMPETITIONS = {
     'rfs/dfo': {
         name: 'Чемпионат ДФО (РФС)',
         disciplines: {
-            'longboard': 'Длинная доска'
+            'longboard': 'Длинная доска',
+            'shortboard': 'Короткая доска'
         }
     },
     'rfs/spb': {
