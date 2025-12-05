@@ -1,7 +1,7 @@
 {
   "discipline": "shortboard",
   "gender": "men",
-  "last_updated": "2025-10-18",
+  "last_updated": "2025-12-05",
   "events": {
     "461fbcc4": {
       "id": "461fbcc4",
@@ -25,23 +25,23 @@
     }
   },
   "athletes": {
-    "89e7b14a": {
+    "b5929aff": {
       "name": "Расшиваев Сергей",
       "region": "Санкт-Петербург",
       "sport_rank": "",
-      "birth_year": 0
+      "birth_year": 1984
     },
-    "699c10d5": {
+    "5b05163f": {
       "name": "Павликов Константин",
       "region": "Санкт-Петербург",
       "sport_rank": "",
-      "birth_year": 0
+      "birth_year": 1984
     },
-    "7331f2f7": {
+    "07ac4565": {
       "name": "Забула Дмитрий",
       "region": "Санкт-Петербург",
       "sport_rank": "",
-      "birth_year": 0
+      "birth_year": 1982
     },
     "40b89629": {
       "name": "Вахрушев Владимир",
@@ -58,7 +58,7 @@
   },
   "results": [
     {
-      "athlete_id": "699c10d5",
+      "athlete_id": "5b05163f",
       "event_id": "461fbcc4",
       "place": 1,
       "points": 2000,
@@ -66,7 +66,7 @@
       "round_place": ""
     },
     {
-      "athlete_id": "699c10d5",
+      "athlete_id": "5b05163f",
       "event_id": "aab02a5a",
       "place": 3,
       "points": 1220,
@@ -74,7 +74,7 @@
       "round_place": ""
     },
     {
-      "athlete_id": "89e7b14a",
+      "athlete_id": "b5929aff",
       "event_id": "461fbcc4",
       "place": 2,
       "points": 1560,
@@ -82,7 +82,7 @@
       "round_place": ""
     },
     {
-      "athlete_id": "89e7b14a",
+      "athlete_id": "b5929aff",
       "event_id": "aab02a5a",
       "place": 1,
       "points": 2000,
@@ -106,7 +106,7 @@
       "round_place": ""
     },
     {
-      "athlete_id": "7331f2f7",
+      "athlete_id": "07ac4565",
       "event_id": "461fbcc4",
       "place": 5,
       "points": 950,
@@ -114,10 +114,10 @@
       "round_place": ""
     },
     {
-      "athlete_id": "7331f2f7",
+      "athlete_id": "07ac4565",
       "event_id": "aab02a5a",
       "place": 6,
-      "points": 950,
+      "points": 900,
       "round_name": "",
       "round_place": ""
     },
@@ -134,7 +134,7 @@
     "2024": {
       "athletes": [
         {
-          "athlete_id": "699c10d5",
+          "athlete_id": "5b05163f",
           "year_points": 2000,
           "events": [
             {
@@ -146,7 +146,7 @@
           "rank": 1
         },
         {
-          "athlete_id": "89e7b14a",
+          "athlete_id": "b5929aff",
           "year_points": 1560,
           "events": [
             {
@@ -170,7 +170,7 @@
           "rank": 3
         },
         {
-          "athlete_id": "7331f2f7",
+          "athlete_id": "07ac4565",
           "year_points": 950,
           "events": [
             {
@@ -186,7 +186,7 @@
     "2025": {
       "athletes": [
         {
-          "athlete_id": "89e7b14a",
+          "athlete_id": "b5929aff",
           "year_points": 2000,
           "events": [
             {
@@ -210,7 +210,7 @@
           "rank": 2
         },
         {
-          "athlete_id": "699c10d5",
+          "athlete_id": "5b05163f",
           "year_points": 1220,
           "events": [
             {
@@ -222,13 +222,13 @@
           "rank": 3
         },
         {
-          "athlete_id": "7331f2f7",
-          "year_points": 950,
+          "athlete_id": "07ac4565",
+          "year_points": 900,
           "events": [
             {
               "event_id": "aab02a5a",
               "place": 6,
-              "points": 950
+              "points": 900
             }
           ],
           "rank": 4
@@ -250,7 +250,7 @@
   },
   "overall_ranking": [
     {
-      "athlete_id": "89e7b14a",
+      "athlete_id": "b5929aff",
       "rank": 1,
       "total_points": 3560,
       "best_result": {
@@ -284,7 +284,7 @@
       ]
     },
     {
-      "athlete_id": "699c10d5",
+      "athlete_id": "5b05163f",
       "rank": 2,
       "total_points": 3220,
       "best_result": {
@@ -318,9 +318,9 @@
       ]
     },
     {
-      "athlete_id": "7331f2f7",
+      "athlete_id": "07ac4565",
       "rank": 3,
-      "total_points": 1900,
+      "total_points": 1850,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
         "event_year": "2024",
@@ -339,11 +339,11 @@
             "event_name": "Чемпионат Санкт-Петербурга",
             "event_year": "2025",
             "place": 6,
-            "points": 950
+            "points": 900
           }
         ],
         "events_count": 2,
-        "avg_points": 950
+        "avg_points": 925
       },
       "last_year": 2025,
       "years_participated": [
