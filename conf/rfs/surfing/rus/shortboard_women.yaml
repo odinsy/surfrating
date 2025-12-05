@@ -2,14 +2,40 @@
 discipline: "shortboard"
 gender: "women"
 
-current_year: 2024
-allowed_years: [2022, 2023, 2024]
+# allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025]
+# input_paths:
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_*.csv
 
+# current_year: 2024
+# allowed_years: [2021, 2022, 2023, 2024]
+# input_paths:
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2021.csv
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2022.csv
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2022_spartakiad.csv
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2023.csv
+#   - data/rfs/surfing/_rus/shortboard/shortboard_women_2024.csv
+
+current_year: 2025
+allowed_years: [2022, 2023, 2024, 2025]
 input_paths:
-  - data/rfs/surfing/_rus/shortboard/shortboard_women_*.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_women_2022.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_women_2022_spartakiad.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_women_2023.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_women_2024.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_women_2025.csv
 
 output:
   filename: output/rankings/rfs/rus/shortboard/women.csv
   top5_filename: output/rankings/rfs/rus/shortboard/t5_ranking_women.csv
   ranking_json: output/rankings/rfs/rus/shortboard/ranking_women.json
   events_json: output/rankings/rfs/rus/shortboard/events_women.json
+
+wildcard:
+  ranking_file: output/rankings/rfs/rus/shortboard/ranking_women.json
+  output_file: output/wildcard/shortboard_women.json
+
+  top_n: 64               # Максимальный рейтинг для отбора
+  min_participations: 1   # Минимальное количество участий
+  last_years_period: 4    # За последние N лет
+  max_best_place: 1
+  min_best_place: 16

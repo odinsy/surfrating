@@ -19,8 +19,7 @@ def normalize_round_name(round_name: str) -> str:
 
 def calculate_round_based_points(round_place: str, round_name: str, system: Dict) -> Optional[int]:
     round_based_system = system.get('round_based', {})
-
-    round_name = normalize_round_name(round_name)
+    round_name         = normalize_round_name(round_name)
 
     if round_name not in round_based_system:
         # print(f"DEBUG: Раунд '{round_name}' не найден в round_based системе")
@@ -74,25 +73,57 @@ def calculate_base_points(place: str, group: str, config: Dict, round_name: str 
     system              = config['scoring'][scoring_system_name]
     coeff               = group_config['coefficient']
 
-    print(f"DEBUG: scoring_system_name = {scoring_system_name}")
-    # print(f"DEBUG: system keys = {list(system.keys())}")
+    scoring_mode = group_config.get(
+        'scoring_mode',
+        system.get('mode', 'mixed')
+    )
+
+    print(f"DEBUG: scoring_mode = {scoring_mode}")
     print(f"DEBUG: round_name = {round_name}, round_place = {round_place}")
-    # print(f"DEBUG: 'round_based' in system = {'round_based' in system}")
 
     if place == 'DNS':
         dns_points = round(system.get('DNS', 0) * coeff)
         print(f"DEBUG: DNS -> {dns_points} очков")
         return dns_points
 
-    if round_name and round_place and 'round_based' in system:
-        print(f"DEBUG: Используем round-based: раунд '{round_name}', место в раунде '{round_place}'")
-        points = calculate_round_based_points(round_place, round_name, system)
-        if points is not None:
-            final_points = round(points * coeff)
-            print(f"DEBUG: Round-based результат: {points} * {coeff} = {final_points}")
-            return final_points
+    if scoring_mode == 'round_based':
+        if round_name and round_place and 'round_based' in system:
+            print(f"DEBUG: Используем round_based режим")
+            points = calculate_round_based_points(round_place, round_name, system)
+            if points is not None:
+                final_points = round(points * coeff)
+                print(f"DEBUG: Round-based результат: {points} * {coeff} = {final_points}")
+                return final_points
+            else:
+                print(f"DEBUG: Round-based не дал результатов, возвращаем 0")
+                return 0
         else:
-            print(f"DEBUG: Round-based не дал результатов, переключаемся на place-based")
+            print(f"DEBUG: Нет данных о раунде в round_based режиме, возвращаем 0")
+            return 0
 
-    print(f"DEBUG: Используем place-based с местом '{place}'")
-    return calculate_place_based_points(place, system, coeff)
+    elif scoring_mode == 'place_based':
+        print(f"DEBUG: Используем place_based режим с местом '{place}'")
+        return calculate_place_based_points(place, system, coeff)
+
+    elif scoring_mode == 'mixed':
+        if round_name and round_place and 'round_based' in system:
+            print(f"DEBUG: Используем mixed: сначала round-based")
+            points = calculate_round_based_points(round_place, round_name, system)
+            if points is not None:
+                final_points = round(points * coeff)
+                print(f"DEBUG: Round-based результат: {points} * {coeff} = {final_points}")
+                return final_points
+            else:
+                print(f"DEBUG: Round-based не дал результатов, переключаемся на place-based")
+
+        print(f"DEBUG: Используем place-based с местом '{place}'")
+        return calculate_place_based_points(place, system, coeff)
+
+    else:
+        print(f"WARNING: Неизвестный scoring_mode '{scoring_mode}', используем mixed")
+        if round_name and round_place and 'round_based' in system:
+            points = calculate_round_based_points(round_place, round_name, system)
+            if points is not None:
+                return round(points * coeff)
+
+        return calculate_place_based_points(place, system, coeff)

@@ -1,0 +1,38 @@
+---
+discipline: "shortboard"
+gender: "men"
+
+current_year: 2025
+# allowed_years: [2025]
+allowed_years: [2024, 2025]
+# allowed_years: [2023, 2024, 2025]
+
+input_paths:
+  - data/rfs/surfing/_rus/shortboard/shortboard_men_2023.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_men_2024.csv
+  - data/rfs/surfing/_rus/shortboard/shortboard_men_2025.csv
+
+  - data/rfs/surfing/kgd/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/kgd/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/krd/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/krd/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/mmk/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/ptk/shortboard/shortboard-men-2024.csv
+
+  - data/rfs/surfing/spb/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/spb/shortboard/shortboard-men-2025.csv
+
+  - data/rfs/surfing/vdk/shortboard/shortboard-men-2024.csv
+  - data/rfs/surfing/vdk/shortboard/shortboard-men-2025.csv
+
+  # - data/rfs/surfing/dfo/shortboard/shortboard-men-2024.csv
+  # - data/rfs/surfing/dfo/shortboard/shortboard-men-2025.csv
+
+output:
+  filename: output/rankings/rfs/rus/shortboard/men.csv
+  top5_filename: output/rankings/rfs/rus/shortboard/t5_ranking_men.csv
+  ranking_json: output/rankings/rfs/rus/shortboard/ranking_men.json
+  events_json: output/rankings/rfs/rus/shortboard/events_men.json

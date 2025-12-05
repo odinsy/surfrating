@@ -1,10 +1,11 @@
 # config.yaml
 
-scoring_system: wsl_csh
+scoring_system: wsl_qs1000
+scoring_mode: place_based # place_based , round_based , mixed
 current_year: 2025
 top_n: 100
 # allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024]
-# allowed_years: [2022, 2023, 2024]
+allowed_years: [2021, 2022, 2023, 2024]
 
 input_paths:
   # - "data/rfs/surfing/shortboard/shortboard_men_*.csv"
@@ -61,13 +62,14 @@ bonuses:
     points: 50
 
 wildcard:
-  top_n: 16               # Максимальный рейтинг для отбора
-  min_participations: 1   # Минимальное количество участий
-  last_years_period: 3    # За последние N лет
-  min_best_place: 3       # Лучший результат за карьеру (4 - финал, 5-8 - полуфинал)
-
   ranking_file: output/rankings/rfs/rus/shortboard/ranking_men.json
   output_file: output/wildcard/shortboard_men.json
+
+  top_n: 64               # Максимальный рейтинг для отбора
+  min_participations: 1   # Минимальное количество участий
+  last_years_period: 4    # За последние N лет
+  max_best_place: 1
+  min_best_place: 4
 
   # ranking_file: output/rankings/rfs/rus/shortboard/ranking_women.json
   # output_file: output/wildcard/shortboard_women.json
@@ -79,17 +81,17 @@ wildcard:
   # output_file: output/wildcard/longboard_women.json
 
 trends:
-  input_ranking_file: output/rankings/surfing/shortboard_men.csv
-  output_general_file: output/trends/general_shortboard_men_stats.csv
-  output_detailed_file: output/trends/detailed_shortboard_men_stats.csv
+  # input_ranking_file: output/rankings/surfing/shortboard_women.csv
+  # output_general_file: output/trends/general_shortboard_men_stats.csv
+  # output_detailed_file: output/trends/detailed_shortboard_men_stats.csv
 
   # input_ranking_file: output/rankings/surfing/longboard_men.csv
   # output_general_file: output/trends/general_longboard_men_stats.csv
   # output_detailed_file: output/trends/detailed_longboard_men_stats.csv
 
-  # input_ranking_file: output/rankings/surfing/longboard_women.csv
-  # output_general_file: output/trends/general_longboard_women_stats.csv
-  # output_detailed_file: output/trends/detailed_longboard_women_stats.csv
+  input_ranking_file: output/rankings/rfs/rus/shortboard/women.csv
+  output_general_file: output/trends/general_shortboard_women_stats.csv
+  output_detailed_file: output/trends/detailed_shortboard_women_stats.csv
 
   # input_ranking_file: output/rankings/surfing/shortboard_women.csv
   # output_general_file: output/trends/general_shortboard_women_stats.csv

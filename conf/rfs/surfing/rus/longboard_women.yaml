@@ -2,28 +2,25 @@
 discipline: "longboard"
 gender: "women"
 
-current_year: 2025
-allowed_years: [2023, 2024, 2025]
+# allowed_years: [2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025]
+# input_paths:
+#   - data/rfs/surfing/_rus/longboard/longboard_women_*.csv
 
+# current_year: 2024
+# allowed_years: [2021, 2022, 2023, 2024]
+# input_paths:
+#   - data/rfs/surfing/_rus/longboard/longboard_women_2021.csv
+#   - data/rfs/surfing/_rus/longboard/longboard_women_2022.csv
+#   - data/rfs/surfing/_rus/longboard/longboard_women_2023.csv
+#   - data/rfs/surfing/_rus/longboard/longboard_women_2024.csv
+
+current_year: 2025
+allowed_years: [2022, 2023, 2024, 2025]
 input_paths:
+  - data/rfs/surfing/_rus/longboard/longboard_women_2022.csv
   - data/rfs/surfing/_rus/longboard/longboard_women_2023.csv
   - data/rfs/surfing/_rus/longboard/longboard_women_2024.csv
   - data/rfs/surfing/_rus/longboard/longboard_women_2025.csv
-  # - data/rfs/surfing/dfo/longboard/longboard-women-2024.csv
-  # - data/rfs/surfing/dfo/longboard/longboard-women-2025.csv
-  # - data/rfs/surfing/spb/longboard/longboard-women-2024.csv
-  # - data/rfs/surfing/spb/longboard/longboard-women-2025.csv
-  # - data/rfs/surfing/kgd/longboard/longboard-women-2024.csv
-  # - data/rfs/surfing/kgd/longboard/longboard-women-2025.csv
-  # - data/rfs/surfing/vdk/longboard/longboard-women-2024.csv
-  # - data/rfs/surfing/vdk/longboard/longboard-women-2025.csv
-  # - data/rfs/surfing/krd/longboard/longboard-women-2024.csv
-  # - data/rfs/surfing/krd/longboard/longboard-women-2025.csv
-  # - data/rfs/surfing/mmk/longboard/longboard-women-2025.csv
-
-  # - data/rfs/surfing/_rus/longboard/longboard_women_*.csv
-  # - data/rfs/surfing/spb/longboard/longboard-women-*.csv
-  # - data/rfs/surfing/kgd/longboard/longboard-women-*.csv
 
 output:
   filename: output/rankings/rfs/rus/longboard/women.csv

@@ -1,0 +1,12 @@
+---
+discipline: "shortboard"
+gender: "women"
+
+input_paths:
+  - data/rfs/surfing/dfo/shortboard/shortboard-women-*.csv
+
+output:
+  filename: output/rankings/rfs/dfo/shortboard/women.csv
+  top5_filename: output/rankings/rfs/dfo/shortboard/top5_women.csv
+  ranking_json: output/rankings/rfs/dfo/shortboard/ranking_women.json
+  events_json: output/rankings/rfs/dfo/shortboard/events_women.json

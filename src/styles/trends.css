@@ -1,0 +1,38 @@
+.trend-column {
+    width: 80px;
+    text-align: center;
+}
+
+.trend-icon {
+    margin-right: 4px;
+    vertical-align: -2px;
+}
+
+.trend-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.trend-up {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.trend-down {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.trend-stable {
+    color: #6c757d;
+}
+
+.trend-new {
+    color: #17a2b8;
+    font-weight: bold;
+}
+
+.trend-dropped {
+    color: #6c757d;
+    text-decoration: line-through;
+}

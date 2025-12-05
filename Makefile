@@ -10,8 +10,14 @@ conf_scoring_systems := conf/base/scoring/default.yaml conf/base/scoring/scoring
 rating_rfs_surf_main:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/surfing/rus/$(discipline)_$(category).yaml | column -t -s ','
 
+rating_rfs_surf_main_all:
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/surfing/rus/$(discipline)_$(category)_all.yaml | column -t -s ','
+
 rating_rfs_surf_main_isa:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events-isa.yaml conf/rfs/surfing/rus/$(discipline)_$(category)_isa.yaml | column -t -s ','
+
+rating_rfs_surf_regional:
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/surfing/regional/$(discipline)_$(category).yaml | column -t -s ','
 
 rating_rfs_surf_kgd:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-kgd.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/kgd/$(discipline)_$(category).yaml | column -t -s ','
@@ -24,6 +30,12 @@ rating_rfs_surf_vdk:
 
 rating_rfs_surf_krd:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-krd.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/krd/$(discipline)_$(category).yaml | column -t -s ','
+
+rating_rfs_surf_ptk:
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-ptk.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/ptk/$(discipline)_$(category).yaml | column -t -s ','
+
+rating_rfs_surf_mmk:
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-mmk.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/mmk/$(discipline)_$(category).yaml | column -t -s ','
 
 rating_rfs_surf_dfo:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/conf.d/config-dfo.yaml $(conf_scoring_systems) $(conf_decay_system) $(conf_years_system) conf/rfs/events.yaml conf/rfs/surfing/dfo/$(discipline)_$(category).yaml | column -t -s ','
@@ -42,3 +54,9 @@ wake_events:
 
 events:
 	python3 ./scripts/surfrating/events_parser.py --config conf/rfs/config.yaml conf/rfs/surfing/$(org)/$(discipline)_$(category).yaml
+
+diff:
+	python3 scripts/differ.py --old tmp/shortboard_2021_2024_men.json --new tmp/shortboard_2022_2025_men.json --output output/trends/rfs/rus/shortboard/trends_men --format json
+	python3 scripts/differ.py --old tmp/shortboard_2021_2024_women.json --new tmp/shortboard_2022_2025_women.json --output output/trends/rfs/rus/shortboard/trends_women --format json
+	python3 scripts/differ.py --old tmp/longboard_2021_2024_men.json --new tmp/longboard_2022_2025_men.json --output output/trends/rfs/rus/longboard/trends_men --format json
+	python3 scripts/differ.py --old tmp/longboard_2021_2024_women.json --new tmp/longboard_2022_2025_women.json --output output/trends/rfs/rus/longboard/trends_women --format json

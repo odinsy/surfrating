@@ -1,8 +1,18 @@
 {
   "discipline": "longboard",
   "gender": "women",
-  "last_updated": "2025-10-19",
+  "last_updated": "2025-12-05",
   "events": {
+    "5d3e35e2": {
+      "id": "5d3e35e2",
+      "name": "Чемпионат России",
+      "year": 2022,
+      "date": "2022.09.19",
+      "discipline": "длинная доска",
+      "category": "женщины",
+      "group": "main",
+      "participants_count": 12
+    },
     "7d4dab12": {
       "id": "7d4dab12",
       "name": "Чемпионат России",
@@ -69,6 +79,14 @@
   "results": [
     {
       "athlete_id": "10fb67b6",
+      "event_id": "5d3e35e2",
+      "place": 2,
+      "points": 7800,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "10fb67b6",
       "event_id": "7d4dab12",
       "place": 1,
       "points": 10000,
@@ -93,6 +111,14 @@
     },
     {
       "athlete_id": "cb76fb30",
+      "event_id": "5d3e35e2",
+      "place": 4,
+      "points": 5685,
+      "round_name": "",
+      "round_place": ""
+    },
+    {
+      "athlete_id": "cb76fb30",
       "event_id": "7d4dab12",
       "place": 2,
       "points": 7800,
@@ -114,6 +140,14 @@
       "points": 5685,
       "round_name": "final",
       "round_place": "4"
+    },
+    {
+      "athlete_id": "25650f9d",
+      "event_id": "5d3e35e2",
+      "place": 7,
+      "points": 4545,
+      "round_name": "",
+      "round_place": ""
     },
     {
       "athlete_id": "25650f9d",
@@ -173,6 +207,46 @@
     }
   ],
   "year_rankings": {
+    "2022": {
+      "athletes": [
+        {
+          "athlete_id": "10fb67b6",
+          "year_points": 7800,
+          "events": [
+            {
+              "event_id": "5d3e35e2",
+              "place": 2,
+              "points": 7800
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "athlete_id": "cb76fb30",
+          "year_points": 5685,
+          "events": [
+            {
+              "event_id": "5d3e35e2",
+              "place": 4,
+              "points": 5685
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "athlete_id": "25650f9d",
+          "year_points": 4545,
+          "events": [
+            {
+              "event_id": "5d3e35e2",
+              "place": 7,
+              "points": 4545
+            }
+          ],
+          "rank": 3
+        }
+      ]
+    },
     "2023": {
       "athletes": [
         {
@@ -346,7 +420,7 @@
     {
       "athlete_id": "10fb67b6",
       "rank": 1,
-      "total_points": 24745,
+      "total_points": 32545,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2024",
@@ -369,16 +443,23 @@
           },
           {
             "event_name": "Чемпионат России",
+            "event_year": "2022",
+            "place": 2,
+            "points": 7800
+          },
+          {
+            "event_name": "Чемпионат России",
             "event_year": "2025",
             "place": 5,
             "points": 4745
           }
         ],
-        "events_count": 3,
-        "avg_points": 8248
+        "events_count": 4,
+        "avg_points": 8136
       },
       "last_year": 2025,
       "years_participated": [
+        2022,
         2023,
         2024,
         2025
@@ -387,7 +468,7 @@
     {
       "athlete_id": "cb76fb30",
       "rank": 2,
-      "total_points": 19170,
+      "total_points": 24855,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2023",
@@ -413,13 +494,20 @@
             "event_year": "2024",
             "place": 4,
             "points": 5685
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2022",
+            "place": 4,
+            "points": 5685
           }
         ],
-        "events_count": 3,
-        "avg_points": 6390
+        "events_count": 4,
+        "avg_points": 6213
       },
       "last_year": 2025,
       "years_participated": [
+        2022,
         2023,
         2024,
         2025
@@ -503,7 +591,7 @@
     {
       "athlete_id": "25650f9d",
       "rank": 5,
-      "total_points": 10830,
+      "total_points": 15375,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2023",
@@ -523,13 +611,20 @@
             "event_year": "2024",
             "place": 5,
             "points": 4745
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2022",
+            "place": 7,
+            "points": 4545
           }
         ],
-        "events_count": 2,
-        "avg_points": 5415
+        "events_count": 3,
+        "avg_points": 5125
       },
       "last_year": 2024,
       "years_participated": [
+        2022,
         2023,
         2024
       ]
