@@ -1,7 +1,7 @@
 {
   "discipline": "longboard",
   "gender": "women",
-  "last_updated": "2025-10-18",
+  "last_updated": "2025-12-05",
   "events": {
     "e3d73042": {
       "id": "e3d73042",
@@ -101,7 +101,7 @@
       "athlete_id": "10d08b42",
       "event_id": "d5b280d4",
       "place": 7,
-      "points": 630,
+      "points": 840,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -125,7 +125,7 @@
       "athlete_id": "004ce545",
       "event_id": "e3d73042",
       "place": 8,
-      "points": 840,
+      "points": 806,
       "round_name": "semifinal",
       "round_place": "4"
     },
@@ -191,15 +191,15 @@
         },
         {
           "athlete_id": "004ce545",
-          "year_points": 840,
+          "year_points": 806,
           "events": [
             {
               "event_id": "e3d73042",
               "place": 8,
-              "points": 840
+              "points": 806
             }
           ],
-          "rank": 4
+          "rank": 5
         }
       ]
     },
@@ -255,12 +255,12 @@
         },
         {
           "athlete_id": "10d08b42",
-          "year_points": 630,
+          "year_points": 840,
           "events": [
             {
               "event_id": "d5b280d4",
               "place": 7,
-              "points": 630
+              "points": 840
             }
           ],
           "rank": 5
@@ -374,7 +374,7 @@
     {
       "athlete_id": "004ce545",
       "rank": 4,
-      "total_points": 1960,
+      "total_points": 1926,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
         "event_year": "2025",
@@ -393,11 +393,11 @@
             "event_name": "Чемпионат Приморского края",
             "event_year": "2024",
             "place": 8,
-            "points": 840
+            "points": 806
           }
         ],
         "events_count": 2,
-        "avg_points": 980
+        "avg_points": 963
       },
       "last_year": 2025,
       "years_participated": [
@@ -408,7 +408,7 @@
     {
       "athlete_id": "10d08b42",
       "rank": 5,
-      "total_points": 1580,
+      "total_points": 1790,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
         "event_year": "2024",
@@ -427,11 +427,11 @@
             "event_name": "Чемпионат Приморского края",
             "event_year": "2025",
             "place": 7,
-            "points": 630
+            "points": 840
           }
         ],
         "events_count": 2,
-        "avg_points": 790
+        "avg_points": 895
       },
       "last_year": 2025,
       "years_participated": [
