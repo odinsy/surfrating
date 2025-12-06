@@ -13,6 +13,15 @@ const COMPETITIONS = {
             'wakeskim': 'Вейкским'
         }
     },
+    'rfs/rus-exp': {
+        name: 'Чемпионат России (РФС) - test',
+        disciplines: {
+            'shortboard': 'Короткая доска',
+            'longboard': 'Длинная доска',
+            'wakesurfing': 'Вейксерфинг',
+            'wakeskim': 'Вейкским'
+        }
+    },
     'rfs/dfo': {
         name: 'Чемпионат ДФО (РФС)',
         disciplines: {
