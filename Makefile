@@ -11,10 +11,10 @@ rating_rfs_surf_main:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/surfing/rus/$(discipline)_$(category).yaml | column -t -s ','
 
 rating_rfs_surf_main_all:
-	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/surfing/rus/$(discipline)_$(category)_all.yaml | column -t -s ','
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/surfing/rus-exp/$(discipline)_$(category)_all.yaml | column -t -s ','
 
 rating_rfs_surf_main_isa:
-	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events-isa.yaml conf/rfs/surfing/rus/$(discipline)_$(category)_isa.yaml | column -t -s ','
+	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events-isa.yaml conf/rfs/surfing/rus-exp/$(discipline)_$(category)_isa.yaml | column -t -s ','
 
 rating_rfs_surf_regional:
 	python3 ./scripts/surfrating/main.py --config	conf/rfs/config.yaml $(conf_scoring_systems) conf/rfs/events.yaml conf/rfs/surfing/regional/$(discipline)_$(category).yaml | column -t -s ','
