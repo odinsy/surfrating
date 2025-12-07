@@ -42,9 +42,9 @@ def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: s
         is_dns = (place == 'DNS')
 
         round_name = event_info.get('round_name')
-        round_place = event_info.get('round_place', place)
+        heat_place = event_info.get('heat_place', place)
 
-        points = calculate_base_points(place, group, config, round_name, round_place)
+        points = calculate_base_points(place, group, config, round_name, heat_place)
         points = apply_participant_factor(points, participants_count, config)
         points = apply_decay(points, year, config)
         points = apply_participation_bonus(points, is_dns, config)
@@ -58,7 +58,7 @@ def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: s
             'group': group,
             'participants_count': participants_count,
             'round_name': round_name,
-            'round_place': round_place
+            'heat_place': heat_place
         })
 
         event_results.append({
@@ -67,7 +67,7 @@ def process_year_points(year: int, event_data: Dict, config: Dict, athlete_id: s
             'place': int(place) if place.isdigit() else place,
             'points': points,
             'round_name': round_name,
-            'round_place': round_place
+            'heat_place': heat_place
         })
 
     return year_info, event_results

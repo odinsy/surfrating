@@ -17,7 +17,7 @@ def normalize_round_name(round_name: str) -> str:
 
     return round_aliases.get(round_name, round_name)
 
-def calculate_round_based_points(round_place: str, round_name: str, system: Dict) -> Optional[int]:
+def calculate_round_based_points(heat_place: str, round_name: str, system: Dict) -> Optional[int]:
     round_based_system = system.get('round_based', {})
     round_name         = normalize_round_name(round_name)
 
@@ -28,9 +28,9 @@ def calculate_round_based_points(round_place: str, round_name: str, system: Dict
     round_system = round_based_system[round_name]
 
     try:
-        place_num = int(round_place)
+        place_num = int(heat_place)
     except ValueError:
-        # print(f"DEBUG: Некорректное место в раунде: '{round_place}'")
+        # print(f"DEBUG: Некорректное место в раунде: '{heat_place}'")
         return None
 
     for k, v in round_system.items():
@@ -67,7 +67,7 @@ def calculate_place_based_points(place: str, system: Dict, coeff: float) -> int:
     print(f"DEBUG: Не найдены очки для общего места {place_num}")
     return 0
 
-def calculate_base_points(place: str, group: str, config: Dict, round_name: str = None, round_place: str = None) -> int:
+def calculate_base_points(place: str, group: str, config: Dict, round_name: str = None, heat_place: str = None) -> int:
     group_config        = config['event_groups'][group]
     scoring_system_name = group_config.get('scoring_system', config['scoring_system'])
     system              = config['scoring'][scoring_system_name]
@@ -79,7 +79,7 @@ def calculate_base_points(place: str, group: str, config: Dict, round_name: str 
     )
 
     print(f"DEBUG: scoring_mode = {scoring_mode}")
-    print(f"DEBUG: round_name = {round_name}, round_place = {round_place}")
+    print(f"DEBUG: round_name = {round_name}, heat_place = {heat_place}")
 
     if place == 'DNS':
         dns_points = round(system.get('DNS', 0) * coeff)
@@ -87,9 +87,9 @@ def calculate_base_points(place: str, group: str, config: Dict, round_name: str 
         return dns_points
 
     if scoring_mode == 'round_based':
-        if round_name and round_place and 'round_based' in system:
+        if round_name and heat_place and 'round_based' in system:
             print(f"DEBUG: Используем round_based режим")
-            points = calculate_round_based_points(round_place, round_name, system)
+            points = calculate_round_based_points(heat_place, round_name, system)
             if points is not None:
                 final_points = round(points * coeff)
                 print(f"DEBUG: Round-based результат: {points} * {coeff} = {final_points}")
@@ -106,9 +106,9 @@ def calculate_base_points(place: str, group: str, config: Dict, round_name: str 
         return calculate_place_based_points(place, system, coeff)
 
     elif scoring_mode == 'mixed':
-        if round_name and round_place and 'round_based' in system:
+        if round_name and heat_place and 'round_based' in system:
             print(f"DEBUG: Используем mixed: сначала round-based")
-            points = calculate_round_based_points(round_place, round_name, system)
+            points = calculate_round_based_points(heat_place, round_name, system)
             if points is not None:
                 final_points = round(points * coeff)
                 print(f"DEBUG: Round-based результат: {points} * {coeff} = {final_points}")
@@ -121,8 +121,8 @@ def calculate_base_points(place: str, group: str, config: Dict, round_name: str 
 
     else:
         print(f"WARNING: Неизвестный scoring_mode '{scoring_mode}', используем mixed")
-        if round_name and round_place and 'round_based' in system:
-            points = calculate_round_based_points(round_place, round_name, system)
+        if round_name and heat_place and 'round_based' in system:
+            points = calculate_round_based_points(heat_place, round_name, system)
             if points is not None:
                 return round(points * coeff)
 

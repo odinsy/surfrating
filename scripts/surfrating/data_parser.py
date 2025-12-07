@@ -15,10 +15,10 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
     event_category   = row['Категория'].strip()
     event_id         = generate_event_id(event_name, event_date, event_discipline, event_category)
     round_name       = row.get('round_name', '').strip()
-    round_place      = row.get('round_place', '').strip()
+    heat_place      = row.get('heat_place', '').strip()
     heat_number      = row.get('heat_number', '').strip()
 
-    # print(f"DEBUG: В _process_row: round_name = '{round_name}', round_place = '{round_place}'")
+    # print(f"DEBUG: В _process_row: round_name = '{round_name}', heat_place = '{heat_place}'")
 
     if event_id not in events_info:
         events_info[event_id] = {
@@ -50,7 +50,7 @@ def _process_row(row: dict, athletes: dict, config: Dict, event_participants: di
         'place': place,
         'group': event_group,
         'round_name': round_name,
-        'round_place': round_place,
+        'heat_place': heat_place,
         'heat_number': heat_number
     }
     athlete['regions'][event_year] = athlete_region
