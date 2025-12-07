@@ -1,7 +1,7 @@
 {
   "discipline": "shortboard",
   "gender": "men",
-  "last_updated": "2025-10-25",
+  "last_updated": "2025-12-05",
   "events": {
     "f99fa5fd": {
       "id": "f99fa5fd",
@@ -141,7 +141,7 @@
       "athlete_id": "70256c16",
       "event_id": "f99fa5fd",
       "place": 6,
-      "points": 840,
+      "points": 900,
       "round_name": "semifinal",
       "round_place": "4"
     },
@@ -149,7 +149,7 @@
       "athlete_id": "61fb3610",
       "event_id": "f99fa5fd",
       "place": 8,
-      "points": 840,
+      "points": 806,
       "round_name": "semifinal",
       "round_place": "4"
     },
@@ -165,7 +165,7 @@
       "athlete_id": "d455ad60",
       "event_id": "f99fa5fd",
       "place": 10,
-      "points": 630,
+      "points": 604,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -173,7 +173,7 @@
       "athlete_id": "baf36325",
       "event_id": "f99fa5fd",
       "place": 11,
-      "points": 630,
+      "points": 580,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -181,7 +181,7 @@
       "athlete_id": "922e0175",
       "event_id": "f99fa5fd",
       "place": 12,
-      "points": 630,
+      "points": 560,
       "round_name": "quarterfinal",
       "round_place": "3"
     }
@@ -263,27 +263,27 @@
         },
         {
           "athlete_id": "70256c16",
-          "year_points": 840,
+          "year_points": 900,
           "events": [
             {
               "event_id": "f99fa5fd",
               "place": 6,
-              "points": 840
+              "points": 900
             }
           ],
           "rank": 7
         },
         {
           "athlete_id": "61fb3610",
-          "year_points": 840,
+          "year_points": 806,
           "events": [
             {
               "event_id": "f99fa5fd",
               "place": 8,
-              "points": 840
+              "points": 806
             }
           ],
-          "rank": 7
+          "rank": 8
         },
         {
           "athlete_id": "2bb0f60c",
@@ -299,39 +299,39 @@
         },
         {
           "athlete_id": "d455ad60",
-          "year_points": 630,
+          "year_points": 604,
           "events": [
             {
               "event_id": "f99fa5fd",
               "place": 10,
-              "points": 630
+              "points": 604
             }
           ],
-          "rank": 9
+          "rank": 10
         },
         {
           "athlete_id": "baf36325",
-          "year_points": 630,
+          "year_points": 580,
           "events": [
             {
               "event_id": "f99fa5fd",
               "place": 11,
-              "points": 630
+              "points": 580
             }
           ],
-          "rank": 9
+          "rank": 11
         },
         {
           "athlete_id": "922e0175",
-          "year_points": 630,
+          "year_points": 560,
           "events": [
             {
               "event_id": "f99fa5fd",
               "place": 12,
-              "points": 630
+              "points": 560
             }
           ],
-          "rank": 9
+          "rank": 12
         }
       ]
     }
@@ -502,12 +502,12 @@
     {
       "athlete_id": "70256c16",
       "rank": 7,
-      "total_points": 840,
+      "total_points": 900,
       "best_result": {
         "event_name": "Чемпионат Камчатского края",
         "event_year": "2024",
         "place": 6,
-        "points": 840,
+        "points": 900,
         "event_group": "regional",
         "participants_count": 12,
         "top_events": [
@@ -515,11 +515,11 @@
             "event_name": "Чемпионат Камчатского края",
             "event_year": "2024",
             "place": 6,
-            "points": 840
+            "points": 900
           }
         ],
         "events_count": 1,
-        "avg_points": 840
+        "avg_points": 900
       },
       "last_year": 2024,
       "years_participated": [
@@ -529,12 +529,12 @@
     {
       "athlete_id": "61fb3610",
       "rank": 8,
-      "total_points": 840,
+      "total_points": 806,
       "best_result": {
         "event_name": "Чемпионат Камчатского края",
         "event_year": "2024",
         "place": 8,
-        "points": 840,
+        "points": 806,
         "event_group": "regional",
         "participants_count": 12,
         "top_events": [
@@ -542,11 +542,11 @@
             "event_name": "Чемпионат Камчатского края",
             "event_year": "2024",
             "place": 8,
-            "points": 840
+            "points": 806
           }
         ],
         "events_count": 1,
-        "avg_points": 840
+        "avg_points": 806
       },
       "last_year": 2024,
       "years_participated": [
@@ -583,12 +583,12 @@
     {
       "athlete_id": "d455ad60",
       "rank": 10,
-      "total_points": 630,
+      "total_points": 604,
       "best_result": {
         "event_name": "Чемпионат Камчатского края",
         "event_year": "2024",
         "place": 10,
-        "points": 630,
+        "points": 604,
         "event_group": "regional",
         "participants_count": 12,
         "top_events": [
@@ -596,11 +596,11 @@
             "event_name": "Чемпионат Камчатского края",
             "event_year": "2024",
             "place": 10,
-            "points": 630
+            "points": 604
           }
         ],
         "events_count": 1,
-        "avg_points": 630
+        "avg_points": 604
       },
       "last_year": 2024,
       "years_participated": [
@@ -610,12 +610,12 @@
     {
       "athlete_id": "baf36325",
       "rank": 11,
-      "total_points": 630,
+      "total_points": 580,
       "best_result": {
         "event_name": "Чемпионат Камчатского края",
         "event_year": "2024",
         "place": 11,
-        "points": 630,
+        "points": 580,
         "event_group": "regional",
         "participants_count": 12,
         "top_events": [
@@ -623,11 +623,11 @@
             "event_name": "Чемпионат Камчатского края",
             "event_year": "2024",
             "place": 11,
-            "points": 630
+            "points": 580
           }
         ],
         "events_count": 1,
-        "avg_points": 630
+        "avg_points": 580
       },
       "last_year": 2024,
       "years_participated": [
@@ -637,12 +637,12 @@
     {
       "athlete_id": "922e0175",
       "rank": 12,
-      "total_points": 630,
+      "total_points": 560,
       "best_result": {
         "event_name": "Чемпионат Камчатского края",
         "event_year": "2024",
         "place": 12,
-        "points": 630,
+        "points": 560,
         "event_group": "regional",
         "participants_count": 12,
         "top_events": [
@@ -650,11 +650,11 @@
             "event_name": "Чемпионат Камчатского края",
             "event_year": "2024",
             "place": 12,
-            "points": 630
+            "points": 560
           }
         ],
         "events_count": 1,
-        "avg_points": 630
+        "avg_points": 560
       },
       "last_year": 2024,
       "years_participated": [

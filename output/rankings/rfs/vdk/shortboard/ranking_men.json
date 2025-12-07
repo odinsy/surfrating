@@ -1,7 +1,7 @@
 {
   "discipline": "shortboard",
   "gender": "men",
-  "last_updated": "2025-10-18",
+  "last_updated": "2025-12-05",
   "events": {
     "d5e2f6b1": {
       "id": "d5e2f6b1",
@@ -79,17 +79,17 @@
       "sport_rank": "",
       "birth_year": 1994
     },
-    "8e88d109": {
-      "name": "Марченко Иван",
-      "region": "Приморский край",
-      "sport_rank": "",
-      "birth_year": 1984
-    },
     "16989f50": {
       "name": "Щуренко Кирилл",
       "region": "Приморский край",
       "sport_rank": "",
       "birth_year": 0
+    },
+    "8e88d109": {
+      "name": "Марченко Иван",
+      "region": "Приморский край",
+      "sport_rank": "",
+      "birth_year": 1984
     },
     "77e87b93": {
       "name": "Левицкий Дионис",
@@ -187,7 +187,7 @@
       "athlete_id": "78015942",
       "event_id": "d5e2f6b1",
       "place": 6,
-      "points": 950,
+      "points": 900,
       "round_name": "semifinal",
       "round_place": "3"
     },
@@ -195,7 +195,7 @@
       "athlete_id": "78015942",
       "event_id": "10172544",
       "place": 7,
-      "points": 630,
+      "points": 840,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -211,7 +211,7 @@
       "athlete_id": "fa6e526c",
       "event_id": "d5e2f6b1",
       "place": 8,
-      "points": 840,
+      "points": 806,
       "round_name": "semifinal",
       "round_place": "4"
     },
@@ -219,7 +219,7 @@
       "athlete_id": "fa6e526c",
       "event_id": "10172544",
       "place": 7,
-      "points": 630,
+      "points": 840,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -235,7 +235,7 @@
       "athlete_id": "983c5be5",
       "event_id": "d5e2f6b1",
       "place": 10,
-      "points": 630,
+      "points": 604,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -243,7 +243,7 @@
       "athlete_id": "77c81753",
       "event_id": "d5e2f6b1",
       "place": 11,
-      "points": 630,
+      "points": 580,
       "round_name": "quarterfinal",
       "round_place": "3"
     },
@@ -259,7 +259,7 @@
       "athlete_id": "783598df",
       "event_id": "10172544",
       "place": 6,
-      "points": 950,
+      "points": 900,
       "round_name": "semifinal",
       "round_place": "3"
     },
@@ -267,7 +267,7 @@
       "athlete_id": "16989f50",
       "event_id": "10172544",
       "place": 7,
-      "points": 630,
+      "points": 840,
       "round_name": "quarterfinal",
       "round_place": "3"
     }
@@ -324,18 +324,6 @@
           "rank": 4
         },
         {
-          "athlete_id": "78015942",
-          "year_points": 950,
-          "events": [
-            {
-              "event_id": "d5e2f6b1",
-              "place": 6,
-              "points": 950
-            }
-          ],
-          "rank": 5
-        },
-        {
           "athlete_id": "0d7afbd9",
           "year_points": 950,
           "events": [
@@ -348,16 +336,16 @@
           "rank": 5
         },
         {
-          "athlete_id": "fa6e526c",
-          "year_points": 840,
+          "athlete_id": "78015942",
+          "year_points": 900,
           "events": [
             {
               "event_id": "d5e2f6b1",
-              "place": 8,
-              "points": 840
+              "place": 6,
+              "points": 900
             }
           ],
-          "rank": 7
+          "rank": 6
         },
         {
           "athlete_id": "8e88d109",
@@ -370,6 +358,18 @@
             }
           ],
           "rank": 7
+        },
+        {
+          "athlete_id": "fa6e526c",
+          "year_points": 806,
+          "events": [
+            {
+              "event_id": "d5e2f6b1",
+              "place": 8,
+              "points": 806
+            }
+          ],
+          "rank": 8
         },
         {
           "athlete_id": "77e87b93",
@@ -385,27 +385,27 @@
         },
         {
           "athlete_id": "983c5be5",
-          "year_points": 630,
+          "year_points": 604,
           "events": [
             {
               "event_id": "d5e2f6b1",
               "place": 10,
-              "points": 630
+              "points": 604
             }
           ],
-          "rank": 9
+          "rank": 10
         },
         {
           "athlete_id": "77c81753",
-          "year_points": 630,
+          "year_points": 580,
           "events": [
             {
               "event_id": "d5e2f6b1",
               "place": 11,
-              "points": 630
+              "points": 580
             }
           ],
-          "rank": 9
+          "rank": 11
         }
       ]
     },
@@ -473,48 +473,48 @@
         },
         {
           "athlete_id": "783598df",
-          "year_points": 950,
+          "year_points": 900,
           "events": [
             {
               "event_id": "10172544",
               "place": 6,
-              "points": 950
+              "points": 900
             }
           ],
-          "rank": 5
+          "rank": 6
         },
         {
           "athlete_id": "78015942",
-          "year_points": 630,
+          "year_points": 840,
           "events": [
             {
               "event_id": "10172544",
               "place": 7,
-              "points": 630
+              "points": 840
             }
           ],
           "rank": 7
         },
         {
           "athlete_id": "fa6e526c",
-          "year_points": 630,
+          "year_points": 840,
           "events": [
             {
               "event_id": "10172544",
               "place": 7,
-              "points": 630
+              "points": 840
             }
           ],
           "rank": 7
         },
         {
           "athlete_id": "16989f50",
-          "year_points": 630,
+          "year_points": 840,
           "events": [
             {
               "event_id": "10172544",
               "place": 7,
-              "points": 630
+              "points": 840
             }
           ],
           "rank": 7
@@ -662,12 +662,12 @@
     {
       "athlete_id": "78015942",
       "rank": 5,
-      "total_points": 1580,
+      "total_points": 1740,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
         "event_year": "2024",
         "place": 6,
-        "points": 950,
+        "points": 900,
         "event_group": "regional",
         "participants_count": 11,
         "top_events": [
@@ -675,17 +675,17 @@
             "event_name": "Чемпионат Приморского края",
             "event_year": "2024",
             "place": 6,
-            "points": 950
+            "points": 900
           },
           {
             "event_name": "Чемпионат Приморского края",
             "event_year": "2025",
             "place": 7,
-            "points": 630
+            "points": 840
           }
         ],
         "events_count": 2,
-        "avg_points": 790
+        "avg_points": 870
       },
       "last_year": 2025,
       "years_participated": [
@@ -696,30 +696,30 @@
     {
       "athlete_id": "fa6e526c",
       "rank": 6,
-      "total_points": 1470,
+      "total_points": 1646,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
-        "event_year": "2024",
-        "place": 8,
+        "event_year": "2025",
+        "place": 7,
         "points": 840,
         "event_group": "regional",
-        "participants_count": 11,
+        "participants_count": 9,
         "top_events": [
-          {
-            "event_name": "Чемпионат Приморского края",
-            "event_year": "2024",
-            "place": 8,
-            "points": 840
-          },
           {
             "event_name": "Чемпионат Приморского края",
             "event_year": "2025",
             "place": 7,
-            "points": 630
+            "points": 840
+          },
+          {
+            "event_name": "Чемпионат Приморского края",
+            "event_year": "2024",
+            "place": 8,
+            "points": 806
           }
         ],
         "events_count": 2,
-        "avg_points": 735
+        "avg_points": 823
       },
       "last_year": 2025,
       "years_participated": [
@@ -784,12 +784,12 @@
     {
       "athlete_id": "783598df",
       "rank": 9,
-      "total_points": 950,
+      "total_points": 900,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
         "event_year": "2025",
         "place": 6,
-        "points": 950,
+        "points": 900,
         "event_group": "regional",
         "participants_count": 9,
         "top_events": [
@@ -797,11 +797,38 @@
             "event_name": "Чемпионат Приморского края",
             "event_year": "2025",
             "place": 6,
-            "points": 950
+            "points": 900
           }
         ],
         "events_count": 1,
-        "avg_points": 950
+        "avg_points": 900
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2025
+      ]
+    },
+    {
+      "athlete_id": "16989f50",
+      "rank": 10,
+      "total_points": 840,
+      "best_result": {
+        "event_name": "Чемпионат Приморского края",
+        "event_year": "2025",
+        "place": 7,
+        "points": 840,
+        "event_group": "regional",
+        "participants_count": 9,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Приморского края",
+            "event_year": "2025",
+            "place": 7,
+            "points": 840
+          }
+        ],
+        "events_count": 1,
+        "avg_points": 840
       },
       "last_year": 2025,
       "years_participated": [
@@ -810,7 +837,7 @@
     },
     {
       "athlete_id": "8e88d109",
-      "rank": 10,
+      "rank": 11,
       "total_points": 840,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
@@ -833,33 +860,6 @@
       "last_year": 2024,
       "years_participated": [
         2024
-      ]
-    },
-    {
-      "athlete_id": "16989f50",
-      "rank": 11,
-      "total_points": 630,
-      "best_result": {
-        "event_name": "Чемпионат Приморского края",
-        "event_year": "2025",
-        "place": 7,
-        "points": 630,
-        "event_group": "regional",
-        "participants_count": 9,
-        "top_events": [
-          {
-            "event_name": "Чемпионат Приморского края",
-            "event_year": "2025",
-            "place": 7,
-            "points": 630
-          }
-        ],
-        "events_count": 1,
-        "avg_points": 630
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025
       ]
     },
     {
@@ -892,12 +892,12 @@
     {
       "athlete_id": "983c5be5",
       "rank": 13,
-      "total_points": 630,
+      "total_points": 604,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
         "event_year": "2024",
         "place": 10,
-        "points": 630,
+        "points": 604,
         "event_group": "regional",
         "participants_count": 11,
         "top_events": [
@@ -905,11 +905,11 @@
             "event_name": "Чемпионат Приморского края",
             "event_year": "2024",
             "place": 10,
-            "points": 630
+            "points": 604
           }
         ],
         "events_count": 1,
-        "avg_points": 630
+        "avg_points": 604
       },
       "last_year": 2024,
       "years_participated": [
@@ -919,12 +919,12 @@
     {
       "athlete_id": "77c81753",
       "rank": 14,
-      "total_points": 630,
+      "total_points": 580,
       "best_result": {
         "event_name": "Чемпионат Приморского края",
         "event_year": "2024",
         "place": 11,
-        "points": 630,
+        "points": 580,
         "event_group": "regional",
         "participants_count": 11,
         "top_events": [
@@ -932,11 +932,11 @@
             "event_name": "Чемпионат Приморского края",
             "event_year": "2024",
             "place": 11,
-            "points": 630
+            "points": 580
           }
         ],
         "events_count": 1,
-        "avg_points": 630
+        "avg_points": 580
       },
       "last_year": 2024,
       "years_participated": [

@@ -7,7 +7,7 @@ event_groups:
     events: []
 
   main:
-    scoring_system: "wsl_qs10000"
+    scoring_system: "th10000"
     coefficient: 1.0
     events:
       - "Чемпионат России"
@@ -16,7 +16,7 @@ event_groups:
       - "Всероссийская Спартакиада"
 
   cross_regional:
-    scoring_system: "wsl_qs4000"
+    scoring_system: "th2000"
     coefficient: 1.0
     events:
       - "Чемпионат федеральных округов"
@@ -26,7 +26,7 @@ event_groups:
       - "Первенство ДФО"
 
   regional:
-    scoring_system: "wsl_qs2000"
+    scoring_system: "th1000"
     coefficient: 1.0
     events:
       - "Чемпионат Санкт-Петербурга"
@@ -38,7 +38,7 @@ event_groups:
       - "Чемпионат Сахалинской области"
 
   local:
-    scoring_system: "wsl_qs1000"
+    scoring_system: "th1000"
     coefficient: 1.0
     events:
       - "Кубок Санкт-Петербурга"
