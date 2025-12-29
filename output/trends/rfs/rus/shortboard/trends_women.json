@@ -1,15 +1,15 @@
 {
-  "generated_at": "2025-12-05T22:14:19.256337",
+  "generated_at": "2025-12-29T13:54:36.871943",
   "summary": {
-    "total_athletes": 26,
+    "total_athletes": 27,
     "new_athletes": 5,
     "dropped_athletes": 2,
-    "improved_rank": 8,
-    "declined_rank": 7,
-    "stable_rank": 6,
+    "improved_rank": 10,
+    "declined_rank": 8,
+    "stable_rank": 4,
     "biggest_improvement": {
       "name": "Романовская Ева",
-      "change": 5
+      "change": 6
     },
     "biggest_decline": {
       "name": "Кутьина Анна",
@@ -64,40 +64,40 @@
       "athlete_id": "3e04e4d8",
       "name": "Тиманина Анжелика",
       "current_rank": 4,
-      "current_points": 23482,
+      "current_points": 24032,
       "region": "Москва",
       "sport_rank": "1",
       "trend": "down",
       "rank_change": -2,
       "points_change": -6084,
       "previous_rank": 2,
-      "previous_points": 29566
+      "previous_points": 30116
     },
     {
       "athlete_id": "91992551",
       "name": "Тихолаз Ульяна",
       "current_rank": 5,
-      "current_points": 21998,
+      "current_points": 21996,
       "region": "Санкт-Петербург",
       "sport_rank": "1",
       "trend": "up",
       "rank_change": 1,
       "points_change": 274,
       "previous_rank": 6,
-      "previous_points": 21724
+      "previous_points": 21722
     },
     {
       "athlete_id": "b1dbec71",
       "name": "Галимова Чулпан",
       "current_rank": 6,
-      "current_points": 20354,
+      "current_points": 20392,
       "region": "Республика Татарстан",
       "sport_rank": "КМС",
       "trend": "down",
       "rank_change": -2,
       "points_change": -5584,
       "previous_rank": 4,
-      "previous_points": 25938
+      "previous_points": 25976
     },
     {
       "athlete_id": "cb76fb30",
@@ -168,14 +168,14 @@
       "athlete_id": "ab80ec6b",
       "name": "Рудик Майи",
       "current_rank": 12,
-      "current_points": 5934,
+      "current_points": 5896,
       "region": "Москва",
       "sport_rank": "3",
       "trend": "down",
       "rank_change": -3,
       "points_change": -4014,
       "previous_rank": 9,
-      "previous_points": 9948
+      "previous_points": 9910
     },
     {
       "athlete_id": "8bfb6ee1",
@@ -185,9 +185,9 @@
       "region": "Калининградская область",
       "sport_rank": "3",
       "trend": "up",
-      "rank_change": 5,
+      "rank_change": 6,
       "points_change": 3016,
-      "previous_rank": 18,
+      "previous_rank": 19,
       "previous_points": 2880
     },
     {
@@ -209,9 +209,9 @@
       "region": "Краснодарский край",
       "sport_rank": "2",
       "trend": "up",
-      "rank_change": 2,
+      "rank_change": 3,
       "points_change": 2240,
-      "previous_rank": 17,
+      "previous_rank": 18,
       "previous_points": 3016
     },
     {
@@ -221,10 +221,10 @@
       "current_points": 5004,
       "region": "Краснодарский край",
       "sport_rank": "2",
-      "trend": "stable",
-      "rank_change": 0,
+      "trend": "up",
+      "rank_change": 1,
       "points_change": 1920,
-      "previous_rank": 16,
+      "previous_rank": 17,
       "previous_points": 3084
     },
     {
@@ -269,16 +269,29 @@
       "current_points": 3840,
       "region": "Санкт-Петербург",
       "sport_rank": "2",
-      "trend": "stable",
-      "rank_change": 0,
+      "trend": "up",
+      "rank_change": 1,
       "points_change": 1600,
-      "previous_rank": 20,
+      "previous_rank": 21,
       "previous_points": 2240
+    },
+    {
+      "athlete_id": "eb94dac2",
+      "name": "Зикратова Элла",
+      "current_rank": 21,
+      "current_points": 3150,
+      "region": "Камчатский край",
+      "sport_rank": "",
+      "trend": "down",
+      "rank_change": -6,
+      "points_change": 0,
+      "previous_rank": 15,
+      "previous_points": 3150
     },
     {
       "athlete_id": "a9c92ff6",
       "name": "Жукова Алена",
-      "current_rank": 21,
+      "current_rank": 22,
       "current_points": 3084,
       "region": "Санкт-Петербург",
       "sport_rank": "3",
@@ -289,46 +302,46 @@
     {
       "athlete_id": "f667db3b",
       "name": "Бланк Мария",
-      "current_rank": 22,
+      "current_rank": 23,
       "current_points": 2880,
       "region": "Калининградская область",
       "sport_rank": "1",
       "trend": "up",
       "rank_change": 1,
       "points_change": 2880,
-      "previous_rank": 23,
+      "previous_rank": 24,
       "previous_points": 0
     },
     {
       "athlete_id": "03dc56a3",
       "name": "Мавричева Дарья",
-      "current_rank": 23,
+      "current_rank": 24,
       "current_points": 2560,
       "region": "Камчатский край",
       "sport_rank": "3",
       "trend": "down",
       "rank_change": -4,
       "points_change": 0,
-      "previous_rank": 19,
+      "previous_rank": 20,
       "previous_points": 2560
     },
     {
       "athlete_id": "adab6584",
       "name": "Шабалина Людмила",
-      "current_rank": 24,
+      "current_rank": 25,
       "current_points": 1600,
       "region": "Санкт-Петербург",
       "sport_rank": "3",
       "trend": "down",
       "rank_change": -3,
       "points_change": 0,
-      "previous_rank": 21,
+      "previous_rank": 22,
       "previous_points": 1600
     },
     {
       "athlete_id": "dbdf97d5",
       "name": "Терентьева Анастасия",
-      "current_rank": 25,
+      "current_rank": 26,
       "current_points": 1580,
       "region": "Санкт-Петербург",
       "sport_rank": "2",
@@ -339,14 +352,14 @@
     {
       "athlete_id": "227257a2",
       "name": "Любешкина Дарья",
-      "current_rank": 26,
+      "current_rank": 27,
       "current_points": 1580,
       "region": "Краснодарский край",
       "sport_rank": "1",
       "trend": "down",
       "rank_change": -4,
       "points_change": 0,
-      "previous_rank": 22,
+      "previous_rank": 23,
       "previous_points": 1580
     },
     {
@@ -365,7 +378,7 @@
     {
       "athlete_id": "0ccbc6e2",
       "name": "Шеина Ольга",
-      "previous_rank": 15,
+      "previous_rank": 16,
       "previous_points": 3150,
       "current_rank": null,
       "current_points": 0,
