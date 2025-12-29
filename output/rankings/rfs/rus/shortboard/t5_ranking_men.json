@@ -21,7 +21,7 @@
       "discipline": "короткая доска",
       "category": "мужчины",
       "group": "main",
-      "participants_count": 17
+      "participants_count": 19
     },
     "ba37612e": {
       "id": "ba37612e",
@@ -61,6 +61,12 @@
       "sport_rank": "МС",
       "birth_year": 2000
     },
+    "41608f88": {
+      "name": "Какурин Эльдар",
+      "region": "Москва",
+      "sport_rank": "2",
+      "birth_year": 1983
+    },
     "70d1824d": {
       "name": "Волков Егор",
       "region": "Санкт-Петербург",
@@ -71,12 +77,6 @@
       "name": "Исаков Евгений",
       "region": "Калининградская область",
       "sport_rank": "МС",
-      "birth_year": 1983
-    },
-    "41608f88": {
-      "name": "Какурин Эльдар",
-      "region": "Москва",
-      "sport_rank": "2",
       "birth_year": 1983
     },
     "b832dcd8": {
@@ -186,16 +186,16 @@
     {
       "athlete_id": "b832dcd8",
       "event_id": "009220a3",
-      "place": 6,
-      "points": 4290,
+      "place": 5,
+      "points": 4564,
       "round_name": "",
       "heat_place": ""
     },
     {
       "athlete_id": "b832dcd8",
       "event_id": "ac396e20",
-      "place": 8,
-      "points": 3976,
+      "place": 7,
+      "points": 4014,
       "round_name": "",
       "heat_place": ""
     },
@@ -226,16 +226,16 @@
     {
       "athlete_id": "41608f88",
       "event_id": "009220a3",
-      "place": 14,
-      "points": 2560,
+      "place": 13,
+      "points": 2880,
       "round_name": "",
       "heat_place": ""
     },
     {
       "athlete_id": "41608f88",
       "event_id": "ac396e20",
-      "place": 13,
-      "points": 2880,
+      "place": 9,
+      "points": 3150,
       "round_name": "",
       "heat_place": ""
     },
@@ -320,34 +320,34 @@
         },
         {
           "athlete_id": "b832dcd8",
-          "year_points": 8266,
+          "year_points": 8578,
           "events": [
             {
               "event_id": "009220a3",
-              "place": 6,
-              "points": 4290
+              "place": 5,
+              "points": 4564
             },
             {
               "event_id": "ac396e20",
-              "place": 8,
-              "points": 3976
+              "place": 7,
+              "points": 4014
             }
           ],
           "rank": 4
         },
         {
           "athlete_id": "41608f88",
-          "year_points": 5440,
+          "year_points": 6030,
           "events": [
             {
               "event_id": "009220a3",
-              "place": 14,
-              "points": 2560
+              "place": 13,
+              "points": 2880
             },
             {
               "event_id": "ac396e20",
-              "place": 13,
-              "points": 2880
+              "place": 9,
+              "points": 3150
             }
           ],
           "rank": 5
@@ -560,8 +560,62 @@
       ]
     },
     {
-      "athlete_id": "70d1824d",
+      "athlete_id": "41608f88",
       "rank": 2,
+      "total_points": 26128,
+      "best_result": {
+        "event_name": "Чемпионат России",
+        "event_year": "2023",
+        "place": 1,
+        "points": 10000,
+        "event_group": "main",
+        "participants_count": 24,
+        "top_events": [
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2023",
+            "place": 1,
+            "points": 10000
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2025",
+            "place": 3,
+            "points": 6084
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2024",
+            "place": 7,
+            "points": 4014
+          },
+          {
+            "event_name": "Всероссийская Спартакиада",
+            "event_year": "2022",
+            "place": 9,
+            "points": 3150
+          },
+          {
+            "event_name": "Чемпионат России",
+            "event_year": "2022",
+            "place": 13,
+            "points": 2880
+          }
+        ],
+        "events_count": 5,
+        "avg_points": 5225
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    {
+      "athlete_id": "70d1824d",
+      "rank": 3,
       "total_points": 25600,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -601,7 +655,7 @@
     },
     {
       "athlete_id": "37f66977",
-      "rank": 3,
+      "rank": 4,
       "total_points": 25546,
       "best_result": {
         "event_name": "Чемпионат России",
@@ -654,63 +708,9 @@
       ]
     },
     {
-      "athlete_id": "41608f88",
-      "rank": 4,
-      "total_points": 25538,
-      "best_result": {
-        "event_name": "Чемпионат России",
-        "event_year": "2023",
-        "place": 1,
-        "points": 10000,
-        "event_group": "main",
-        "participants_count": 24,
-        "top_events": [
-          {
-            "event_name": "Чемпионат России",
-            "event_year": "2023",
-            "place": 1,
-            "points": 10000
-          },
-          {
-            "event_name": "Чемпионат России",
-            "event_year": "2025",
-            "place": 3,
-            "points": 6084
-          },
-          {
-            "event_name": "Чемпионат России",
-            "event_year": "2024",
-            "place": 7,
-            "points": 4014
-          },
-          {
-            "event_name": "Всероссийская Спартакиада",
-            "event_year": "2022",
-            "place": 13,
-            "points": 2880
-          },
-          {
-            "event_name": "Чемпионат России",
-            "event_year": "2022",
-            "place": 14,
-            "points": 2560
-          }
-        ],
-        "events_count": 5,
-        "avg_points": 5107
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2022,
-        2023,
-        2024,
-        2025
-      ]
-    },
-    {
       "athlete_id": "b832dcd8",
       "rank": 5,
-      "total_points": 21520,
+      "total_points": 21832,
       "best_result": {
         "event_name": "Чемпионат России",
         "event_year": "2023",
@@ -727,21 +727,21 @@
           },
           {
             "event_name": "Чемпионат России",
-            "event_year": "2024",
-            "place": 6,
-            "points": 4290
+            "event_year": "2022",
+            "place": 5,
+            "points": 4564
           },
           {
             "event_name": "Чемпионат России",
-            "event_year": "2022",
+            "event_year": "2024",
             "place": 6,
             "points": 4290
           },
           {
             "event_name": "Всероссийская Спартакиада",
             "event_year": "2022",
-            "place": 8,
-            "points": 3976
+            "place": 7,
+            "points": 4014
           },
           {
             "event_name": "Чемпионат России",
@@ -751,7 +751,7 @@
           }
         ],
         "events_count": 5,
-        "avg_points": 4304
+        "avg_points": 4366
       },
       "last_year": 2025,
       "years_participated": [
