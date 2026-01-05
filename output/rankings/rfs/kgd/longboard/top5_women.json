@@ -1,7 +1,7 @@
 {
   "discipline": "longboard",
   "gender": "women",
-  "last_updated": "2025-12-05",
+  "last_updated": "2026-01-05",
   "events": {
     "c291d90a": {
       "id": "c291d90a",
@@ -73,7 +73,7 @@
       "place": 1,
       "points": 2000,
       "round_name": "",
-      "round_place": ""
+      "heat_place": ""
     },
     {
       "athlete_id": "10fb67b6",
@@ -81,7 +81,7 @@
       "place": 2,
       "points": 1560,
       "round_name": "final",
-      "round_place": "2"
+      "heat_place": "2"
     },
     {
       "athlete_id": "10fb67b6",
@@ -89,7 +89,7 @@
       "place": 3,
       "points": 1220,
       "round_name": "final",
-      "round_place": "3"
+      "heat_place": "3"
     },
     {
       "athlete_id": "cb76fb30",
@@ -97,7 +97,7 @@
       "place": 2,
       "points": 1560,
       "round_name": "",
-      "round_place": ""
+      "heat_place": ""
     },
     {
       "athlete_id": "cb76fb30",
@@ -105,7 +105,7 @@
       "place": 1,
       "points": 2000,
       "round_name": "final",
-      "round_place": "1"
+      "heat_place": "1"
     },
     {
       "athlete_id": "cb76fb30",
@@ -113,7 +113,7 @@
       "place": 1,
       "points": 2000,
       "round_name": "final",
-      "round_place": "1"
+      "heat_place": "1"
     },
     {
       "athlete_id": "f667db3b",
@@ -121,7 +121,7 @@
       "place": 3,
       "points": 1220,
       "round_name": "",
-      "round_place": ""
+      "heat_place": ""
     },
     {
       "athlete_id": "f667db3b",
@@ -129,7 +129,7 @@
       "place": 3,
       "points": 1220,
       "round_name": "final",
-      "round_place": "3"
+      "heat_place": "3"
     },
     {
       "athlete_id": "f667db3b",
@@ -137,7 +137,7 @@
       "place": 2,
       "points": 1560,
       "round_name": "final",
-      "round_place": "2"
+      "heat_place": "2"
     },
     {
       "athlete_id": "d7307208",
@@ -145,15 +145,15 @@
       "place": 5,
       "points": 950,
       "round_name": "",
-      "round_place": ""
+      "heat_place": ""
     },
     {
       "athlete_id": "d7307208",
       "event_id": "e2ad63b2",
-      "place": 6,
-      "points": 900,
+      "place": 5,
+      "points": 950,
       "round_name": "semifinal",
-      "round_place": "3"
+      "heat_place": "3"
     },
     {
       "athlete_id": "d7307208",
@@ -161,7 +161,7 @@
       "place": 5,
       "points": 950,
       "round_name": "semifinal",
-      "round_place": "3"
+      "heat_place": "3"
     },
     {
       "athlete_id": "0054d720",
@@ -169,7 +169,7 @@
       "place": 5,
       "points": 950,
       "round_name": "",
-      "round_place": ""
+      "heat_place": ""
     },
     {
       "athlete_id": "0054d720",
@@ -177,7 +177,7 @@
       "place": 4,
       "points": 1120,
       "round_name": "final",
-      "round_place": "4"
+      "heat_place": "4"
     },
     {
       "athlete_id": "0054d720",
@@ -185,7 +185,7 @@
       "place": 7,
       "points": 840,
       "round_name": "quarterfinal",
-      "round_place": "3"
+      "heat_place": "3"
     }
   ],
   "year_rankings": {
@@ -305,12 +305,12 @@
         },
         {
           "athlete_id": "d7307208",
-          "year_points": 900,
+          "year_points": 950,
           "events": [
             {
               "event_id": "e2ad63b2",
-              "place": 6,
-              "points": 900
+              "place": 5,
+              "points": 950
             }
           ],
           "rank": 5
@@ -550,7 +550,7 @@
     {
       "athlete_id": "d7307208",
       "rank": 5,
-      "total_points": 2800,
+      "total_points": 2850,
       "best_result": {
         "event_name": "Чемпионат Калининградской области",
         "event_year": "2025",
@@ -567,19 +567,19 @@
           },
           {
             "event_name": "Чемпионат Калининградской области",
-            "event_year": "2023",
+            "event_year": "2024",
             "place": 5,
             "points": 950
           },
           {
             "event_name": "Чемпионат Калининградской области",
-            "event_year": "2024",
-            "place": 6,
-            "points": 900
+            "event_year": "2023",
+            "place": 5,
+            "points": 950
           }
         ],
         "events_count": 3,
-        "avg_points": 933
+        "avg_points": 950
       },
       "last_year": 2025,
       "years_participated": [
