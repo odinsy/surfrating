@@ -1,7 +1,7 @@
 {
   "discipline": "shortboard",
   "gender": "women",
-  "last_updated": "2025-12-05",
+  "last_updated": "2026-01-05",
   "events": {
     "e3b06c5b": {
       "id": "e3b06c5b",
@@ -30,6 +30,12 @@
       "region": "Санкт-Петербург",
       "sport_rank": "",
       "birth_year": 1988
+    },
+    "eae0df87": {
+      "name": "Афанасьева Людмила",
+      "region": "Санкт-Петербург",
+      "sport_rank": "",
+      "birth_year": 1991
     },
     "dde638ba": {
       "name": "Тимаревская Анастасия",
@@ -61,26 +67,14 @@
       "sport_rank": "",
       "birth_year": 1984
     },
-    "adab6584": {
-      "name": "Шабалина Людмила",
-      "region": "Санкт-Петербург",
-      "sport_rank": "",
-      "birth_year": 1991
-    },
-    "b51ac353": {
-      "name": "Афанасьева Людмила",
+    "0a00c85f": {
+      "name": "Близниченко Виктория",
       "region": "Санкт-Петербург",
       "sport_rank": "",
       "birth_year": 0
     },
     "c282e15c": {
       "name": "Новицкая Дарья",
-      "region": "Санкт-Петербург",
-      "sport_rank": "",
-      "birth_year": 0
-    },
-    "0a00c85f": {
-      "name": "Близниченко Виктория",
       "region": "Санкт-Петербург",
       "sport_rank": "",
       "birth_year": 0
@@ -98,96 +92,96 @@
       "event_id": "e3b06c5b",
       "place": 1,
       "points": 2000,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "heat_place": "1"
     },
     {
       "athlete_id": "a9c92ff6",
       "event_id": "e3b06c5b",
       "place": 2,
       "points": 1560,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "heat_place": "2"
     },
     {
-      "athlete_id": "adab6584",
+      "athlete_id": "eae0df87",
       "event_id": "e3b06c5b",
       "place": 3,
       "points": 1220,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "heat_place": "3"
+    },
+    {
+      "athlete_id": "eae0df87",
+      "event_id": "e8a98cfd",
+      "place": 5,
+      "points": 950,
+      "round_name": "semifinal",
+      "heat_place": "3"
     },
     {
       "athlete_id": "2f20bc1d",
       "event_id": "e3b06c5b",
       "place": 4,
       "points": 1120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "heat_place": "4"
     },
     {
       "athlete_id": "2f20bc1d",
       "event_id": "e8a98cfd",
       "place": 4,
       "points": 1120,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "heat_place": "4"
     },
     {
       "athlete_id": "c282e15c",
       "event_id": "e3b06c5b",
       "place": 5,
       "points": 950,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "semifinal",
+      "heat_place": "3"
     },
     {
       "athlete_id": "959ba4c7",
       "event_id": "e3b06c5b",
-      "place": 6,
-      "points": 900,
-      "round_name": "",
-      "round_place": ""
+      "place": 5,
+      "points": 950,
+      "round_name": "semifinal",
+      "heat_place": "3"
     },
     {
       "athlete_id": "dde638ba",
       "event_id": "e8a98cfd",
       "place": 1,
       "points": 2000,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "heat_place": "1"
     },
     {
       "athlete_id": "dbdf97d5",
       "event_id": "e8a98cfd",
       "place": 2,
       "points": 1560,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "heat_place": "2"
     },
     {
       "athlete_id": "ab80ec6b",
       "event_id": "e8a98cfd",
       "place": 3,
       "points": 1220,
-      "round_name": "",
-      "round_place": ""
-    },
-    {
-      "athlete_id": "b51ac353",
-      "event_id": "e8a98cfd",
-      "place": 5,
-      "points": 950,
-      "round_name": "",
-      "round_place": ""
+      "round_name": "final",
+      "heat_place": "3"
     },
     {
       "athlete_id": "0a00c85f",
       "event_id": "e8a98cfd",
-      "place": 6,
-      "points": 900,
-      "round_name": "",
-      "round_place": ""
+      "place": 5,
+      "points": 950,
+      "round_name": "semifinal",
+      "heat_place": "3"
     }
   ],
   "year_rankings": {
@@ -218,7 +212,7 @@
           "rank": 2
         },
         {
-          "athlete_id": "adab6584",
+          "athlete_id": "eae0df87",
           "year_points": 1220,
           "events": [
             {
@@ -255,15 +249,15 @@
         },
         {
           "athlete_id": "959ba4c7",
-          "year_points": 900,
+          "year_points": 950,
           "events": [
             {
               "event_id": "e3b06c5b",
-              "place": 6,
-              "points": 900
+              "place": 5,
+              "points": 950
             }
           ],
-          "rank": 6
+          "rank": 5
         }
       ]
     },
@@ -318,7 +312,7 @@
           "rank": 4
         },
         {
-          "athlete_id": "b51ac353",
+          "athlete_id": "eae0df87",
           "year_points": 950,
           "events": [
             {
@@ -331,15 +325,15 @@
         },
         {
           "athlete_id": "0a00c85f",
-          "year_points": 900,
+          "year_points": 950,
           "events": [
             {
               "event_id": "e8a98cfd",
-              "place": 6,
-              "points": 900
+              "place": 5,
+              "points": 950
             }
           ],
-          "rank": 6
+          "rank": 5
         }
       ]
     }
@@ -380,8 +374,42 @@
       ]
     },
     {
-      "athlete_id": "dde638ba",
+      "athlete_id": "eae0df87",
       "rank": 2,
+      "total_points": 2170,
+      "best_result": {
+        "event_name": "Чемпионат Санкт-Петербурга",
+        "event_year": "2024",
+        "place": 3,
+        "points": 1220,
+        "event_group": "regional",
+        "participants_count": 6,
+        "top_events": [
+          {
+            "event_name": "Чемпионат Санкт-Петербурга",
+            "event_year": "2024",
+            "place": 3,
+            "points": 1220
+          },
+          {
+            "event_name": "Чемпионат Санкт-Петербурга",
+            "event_year": "2025",
+            "place": 5,
+            "points": 950
+          }
+        ],
+        "events_count": 2,
+        "avg_points": 1085
+      },
+      "last_year": 2025,
+      "years_participated": [
+        2024,
+        2025
+      ]
+    },
+    {
+      "athlete_id": "dde638ba",
+      "rank": 3,
       "total_points": 2000,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -408,7 +436,7 @@
     },
     {
       "athlete_id": "91992551",
-      "rank": 3,
+      "rank": 4,
       "total_points": 2000,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -435,7 +463,7 @@
     },
     {
       "athlete_id": "dbdf97d5",
-      "rank": 4,
+      "rank": 5,
       "total_points": 1560,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -462,7 +490,7 @@
     },
     {
       "athlete_id": "a9c92ff6",
-      "rank": 5,
+      "rank": 6,
       "total_points": 1560,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -489,7 +517,7 @@
     },
     {
       "athlete_id": "ab80ec6b",
-      "rank": 6,
+      "rank": 7,
       "total_points": 1220,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
@@ -515,34 +543,7 @@
       ]
     },
     {
-      "athlete_id": "adab6584",
-      "rank": 7,
-      "total_points": 1220,
-      "best_result": {
-        "event_name": "Чемпионат Санкт-Петербурга",
-        "event_year": "2024",
-        "place": 3,
-        "points": 1220,
-        "event_group": "regional",
-        "participants_count": 6,
-        "top_events": [
-          {
-            "event_name": "Чемпионат Санкт-Петербурга",
-            "event_year": "2024",
-            "place": 3,
-            "points": 1220
-          }
-        ],
-        "events_count": 1,
-        "avg_points": 1220
-      },
-      "last_year": 2024,
-      "years_participated": [
-        2024
-      ]
-    },
-    {
-      "athlete_id": "b51ac353",
+      "athlete_id": "0a00c85f",
       "rank": 8,
       "total_points": 950,
       "best_result": {
@@ -596,53 +597,26 @@
       ]
     },
     {
-      "athlete_id": "0a00c85f",
-      "rank": 10,
-      "total_points": 900,
-      "best_result": {
-        "event_name": "Чемпионат Санкт-Петербурга",
-        "event_year": "2025",
-        "place": 6,
-        "points": 900,
-        "event_group": "regional",
-        "participants_count": 6,
-        "top_events": [
-          {
-            "event_name": "Чемпионат Санкт-Петербурга",
-            "event_year": "2025",
-            "place": 6,
-            "points": 900
-          }
-        ],
-        "events_count": 1,
-        "avg_points": 900
-      },
-      "last_year": 2025,
-      "years_participated": [
-        2025
-      ]
-    },
-    {
       "athlete_id": "959ba4c7",
-      "rank": 11,
-      "total_points": 900,
+      "rank": 10,
+      "total_points": 950,
       "best_result": {
         "event_name": "Чемпионат Санкт-Петербурга",
         "event_year": "2024",
-        "place": 6,
-        "points": 900,
+        "place": 5,
+        "points": 950,
         "event_group": "regional",
         "participants_count": 6,
         "top_events": [
           {
             "event_name": "Чемпионат Санкт-Петербурга",
             "event_year": "2024",
-            "place": 6,
-            "points": 900
+            "place": 5,
+            "points": 950
           }
         ],
         "events_count": 1,
-        "avg_points": 900
+        "avg_points": 950
       },
       "last_year": 2024,
       "years_participated": [
