@@ -86,7 +86,7 @@
 
 ---
 
-**GitHub-репозиторий:** [https://github.com/odinsy/topheats-rating]  
+**GitHub-репозиторий:** [https://github.com/odinsy/surfra]  
 
 ---
 

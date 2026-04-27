@@ -115,22 +115,22 @@ document.addEventListener('DOMContentLoaded', function() {
           {
               id: 'shortboard-men',
               title: 'Короткая доска, Мужчины',
-              link: 'https://odinsy.github.io/topheats-rating/src/pages/rankings/index.html?category=shortboard_men'
+              link: 'https://odinsy.github.io/surfra/src/pages/rankings/index.html?category=shortboard_men'
           },
           {
               id: 'longboard-men',
               title: 'Длинная доска, Мужчины',
-              link: 'https://odinsy.github.io/topheats-rating/src/pages/rankings/index.html?category=longboard_men'
+              link: 'https://odinsy.github.io/surfra/src/pages/rankings/index.html?category=longboard_men'
           },
           {
               id: 'shortboard-women',
               title: 'Короткая доска, Женщины',
-              link: 'https://odinsy.github.io/topheats-rating/src/pages/rankings/index.html?category=shortboard_women'
+              link: 'https://odinsy.github.io/surfra/src/pages/rankings/index.html?category=shortboard_women'
           },
           {
               id: 'longboard-women',
               title: 'Длинная доска, Женщины',
-              link: 'https://odinsy.github.io/topheats-rating/src/pages/rankings/index.html?category=longboard_women'
+              link: 'https://odinsy.github.io/surfra/src/pages/rankings/index.html?category=longboard_women'
           }
       ];
 

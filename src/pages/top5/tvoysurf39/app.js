@@ -113,12 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
           {
               id: 'longboard-men',
               title: 'Длинная доска, Мужчины',
-              link: 'https://odinsy.github.io/topheats-rating/src/pages/rankings/index.html?category=longboard_men'
+              link: 'https://odinsy.github.io/surfra/src/pages/rankings/index.html?category=longboard_men'
           },
           {
               id: 'longboard-women',
               title: 'Длинная доска, Женщины',
-              link: 'https://odinsy.github.io/topheats-rating/src/pages/rankings/index.html?category=longboard_women'
+              link: 'https://odinsy.github.io/surfra/src/pages/rankings/index.html?category=longboard_women'
           }
       ];
 
