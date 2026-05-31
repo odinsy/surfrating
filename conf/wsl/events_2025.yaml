@@ -1,0 +1,20 @@
+allowed_events:
+  - ct2025
+
+event_groups:
+  default:
+    coefficient: 1.0
+    events: []
+
+  ct2025:
+    coefficient: 1.0
+    events:
+      - "Pipe Pro"
+      - "Portugal Pro"
+      - "El Salvador Pro"
+      - "Bells Beach"
+      - "Margaret River"
+      - "Trestles Pro"
+      - "Rio Pro"
+      - "J-Bay Open"
+      - "Tahiti Pro"
