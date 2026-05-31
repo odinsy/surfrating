@@ -1,0 +1,22 @@
+scoring_system: wsl_ct2024
+scoring_mode: place_based
+current_year: 2022
+top_n: 100
+allowed_years: [2022]
+input_paths: []
+output:
+  translate_columns: false
+  columns: [Rank, Name, Total Points]
+anonymization:
+  enabled: false
+sorting:
+  enabled: true
+bonuses:
+  decay:
+    enabled: false
+  participant_factor:
+    enabled: false
+  sport_rank:
+    enabled: false
+  participation:
+    enabled: false
