@@ -1,0 +1,18 @@
+allowed_events:
+  - ct2021
+
+event_groups:
+  default:
+    coefficient: 1.0
+    events: []
+
+  ct2021:
+    coefficient: 1.0
+    events:
+      - "Pipe Masters"
+      - "Margaret River"
+      - "Rottnest Search"
+      - "Newcastle Cup"
+      - "Narrabeen"
+      - "Surf Ranch"
+      - "Mexico Pro"

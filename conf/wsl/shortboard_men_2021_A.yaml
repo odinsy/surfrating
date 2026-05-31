@@ -1,0 +1,9 @@
+---
+discipline: "shortboard"
+gender: "men"
+input_paths:
+  - data/wsl/2021/systemA/shortboard_men_*.csv
+output:
+  filename: output/rankings/wsl/2021/A/men.csv
+  ranking_json: output/rankings/wsl/2021/A/ranking_men.json
+  events_json: output/rankings/wsl/2021/A/events_men.json
