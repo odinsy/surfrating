@@ -1,0 +1,15 @@
+event_groups:
+  default:
+    coefficient: 1.0
+    events: []
+
+  ct2026:
+    coefficient: 1.0
+    events:
+      - "Bells Beach"
+      - "Margaret River"
+      - "Gold Coast"
+      - "New Zealand"
+
+allowed_events:
+  - ct2026
